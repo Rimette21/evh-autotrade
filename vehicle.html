@@ -1,0 +1,118 @@
+vehicle.html
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Détail véhicule — E.V.H. AUTOTRADE</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f9fafb;
+      color: #111;
+      line-height: 1.6;
+    }
+    header {
+      background: #1a1f25;
+      color: white;
+      padding: 1rem 2rem;
+    }
+    .container {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+    }
+    .hero-img {
+      width: 100%;
+      border-radius: 12px;
+      margin: 1.5rem 0;
+    }
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #1a1f25;
+    }
+    .price {
+      font-size: 1.5rem;
+      color: #e53e3e;
+      margin: 1rem 0;
+    }
+    ul {
+      padding-left: 1.5rem;
+      margin: 1.5rem 0;
+    }
+    li {
+      margin-bottom: 0.5rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 2rem;
+      color: #3182ce;
+      text-decoration: none;
+    }
+    .back:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html" style="color:white; text-decoration:none;">← Retour au catalogue</a>
+  </header>
+
+  <div class="container">
+    <div id="vehicle-detail">
+      <p>Chargement du véhicule...</p>
+    </div>
+  </div>
+
+  <script>
+    // Récupère l'ID depuis l'URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const vehicleId = urlParams.get('id');
+
+    if (!vehicleId) {
+      document.getElementById('vehicle-detail').innerHTML = '<p>Erreur : aucun véhicule sélectionné.</p>';
+    } else {
+      const jsonUrl = `data/details/${vehicleId}.json`;
+      fetch(jsonUrl)
+        .then(res => {
+          if (!res.ok) throw new Error('Fichier non trouvé');
+          return res.json();
+        })
+        .then(data => {
+          const mileage = new Intl.NumberFormat('fr-FR').format(data.mileage);
+          document.getElementById('vehicle-detail').innerHTML = `
+            <h1>${data.name}</h1>
+            <div class="price">${data.priceFCR}</div>
+            <p><strong>Kilométrage :</strong> ${mileage} km</p>
+            <p><strong>Immatriculation :</strong> ${data.regyear}</p>
+            <img src="${data.images.hero}" alt="${data.name}" class="hero-img" onerror="this.src='https://via.placeholder.com/600x400?text=Image+non+disponible'">
+            
+            <h2>Caractéristiques</h2>
+            <ul>
+              ${data.caracteristiques.map(f => `<li>${f}</li>`).join('')}
+            </ul>
+
+            <p><strong>Garantie :</strong> ${data.garantie}</p>
+            <p><strong>Disponibilité :</strong> ${data.disponibilite}</p>
+            <p><strong>Localisation :</strong> ${data.localisation}</p>
+
+            <a href="index.html" class="back">← Retour au catalogue</a>
+          `;
+        })
+        .catch(err => {
+          document.getElementById('vehicle-detail').innerHTML = `
+            <div style="background:#fff3f3; color:#d32f2f; padding:1.5rem; border-radius:8px;">
+              <h2>Véhicule non trouvé</h2>
+              <p>ID : ${vehicleId}</p>
+              <p>Le fichier n’existe pas ou a été supprimé.</p>
+              <a href="index.html" class="back">← Retour au catalogue</a>
+            </div>
+          `;
+        });
+    }
+  </script>
+</body>
+</html>
