@@ -5,9 +5,7 @@
     "priceFCR": "30 950 €",
     "mileage": 23000,
     "regyear": "2024-01",
-    "images": {
-      "hero": "https://raw.githubusercontent.com/Rimette21/evh-autotrade/main/images/EVH9387237_BYDTANG_droit.png"
-    },
+    "images": { "hero": "images/EVH9387237_BYDTANG_droit.png" },
     "features": [
       "100% électrique",
       "Autonomie 600 km",
@@ -24,9 +22,7 @@
     "priceFCR": "23 900 €",
     "mileage": 1200,
     "regyear": "2024-01",
-    "images": {
-      "hero": "https://raw.githubusercontent.com/Rimette21/evh-autotrade/main/images/EVH9391855_CHERRY_DEVANT.png"
-    },
+    "images": { "hero": "images/EVH9391855_CHERRY_DEVANT.png" },
     "features": [
       "Moteur hybride rechargeable",
       "Autonomie électrique 120 km",
@@ -43,9 +39,7 @@
     "priceFCR": "29 550 €",
     "mileage": 50,
     "regyear": "2025-09",
-    "images": {
-      "hero": "https://raw.githubusercontent.com/Rimette21/evh-autotrade/main/images/EVH9382121_TOYOTA_COTE%20DROIT.png"
-    },
+    "images": { "hero": "images/EVH9382121_TOYOTA_COTE DROIT.png" },
     "features": [
       "100% électrique",
       "Autonomie 550 km",
@@ -63,9 +57,7 @@
     "priceFCR": "31 150 €",
     "mileage": 1000,
     "regyear": "2025-09",
-    "images": {
-      "hero": "https://raw.githubusercontent.com/Rimette21/evh-autotrade/main/images/EVH9397463_TOYOTA_DROIT.png"
-    },
+    "images": { "hero": "images/EVH9397463_TOYOTA_DROIT.png" },
     "features": [
       "100% électrique",
       "Autonomie 630 km",
@@ -83,9 +75,7 @@
     "priceFCR": "32 200 €",
     "mileage": 4000,
     "regyear": "2025-06",
-    "images": {
-      "hero": "https://raw.githubusercontent.com/Rimette21/evh-autotrade/main/images/EVH9330983_BMW_DEVANT.png"
-    },
+    "images": { "hero": "images/EVH9330983_BMW_DEVANT.png" },
     "features": [
       "100% électrique",
       "Autonomie 510 km",
@@ -102,9 +92,7 @@
     "priceFCR": "21 490 €",
     "mileage": 13000,
     "regyear": "2024-05",
-    "images": {
-      "hero": "https://raw.githubusercontent.com/Rimette21/evh-autotrade/main/images/EVH9336933_JETOUR_DEVANT.png"
-    },
+    "images": { "hero": "images/EVH9336933_JETOUR_DEVANT.png" },
     "features": [
       "Moteur hybride rechargeable",
       "Autonomie électrique 100 km",
@@ -121,9 +109,7 @@
     "priceFCR": "26 590 €",
     "mileage": 900,
     "regyear": "2025-09",
-    "images": {
-      "hero": "https://raw.githubusercontent.com/Rimette21/evh-autotrade/main/images/EVH9403325_HAVAL_DROIT.jpg"
-    },
+    "images": { "hero": "images/EVH9403325_HAVAL_DROIT.jpg" },
     "features": [
       "Moteur hybride rechargeable",
       "Autonomie électrique 110 km",
@@ -135,4 +121,3 @@
     ]
   }
 ]
-
