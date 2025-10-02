@@ -93,6 +93,54 @@
       background: #c53030;
     }
 
+    /* Section "Nos Avantages" */
+    .advantages-section {
+      padding: 3rem 2rem;
+      background: #fff;
+      text-align: center;
+    }
+    .advantages-section h2 {
+      font-size: 2.5rem;
+      color: #1a1f25;
+      margin-bottom: 1rem;
+    }
+    .advantages-section p {
+      font-size: 1.1rem;
+      color: #666;
+      max-width: 800px;
+      margin: 0 auto 2rem;
+    }
+    .advantages-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    .advantage-card {
+      background: #f9fafb;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+    .advantage-card:hover {
+      transform: translateY(-6px);
+    }
+    .advantage-icon {
+      font-size: 3rem;
+      color: #e53e3e;
+      margin-bottom: 1rem;
+    }
+    .advantage-title {
+      font-size: 1.5rem;
+      color: #1a1f25;
+      margin-bottom: 1rem;
+    }
+    .advantage-desc {
+      font-size: 0.95rem;
+      color: #444;
+      line-height: 1.5;
+    }
+
     /* Grille des véhicules */
     .container {
       max-width: 100%;
@@ -205,6 +253,12 @@
       .logo-text .autotrade {
         font-size: 1.5rem;
       }
+      .advantages-section h2 {
+        font-size: 2rem;
+      }
+      .advantages-section p {
+        font-size: 1rem;
+      }
       .card {
         min-width: 260px;
       }
@@ -239,6 +293,29 @@
   <div class="banner">
     <div class="banner-content">
       <a href="#vehicles-grid" class="btn">Découvrez notre catalogue</a>
+    </div>
+  </div>
+
+  <!-- Section "Nos Avantages" -->
+  <div class="advantages-section">
+    <h2>Nos <span style="color: #e53e3e;">Avantages</span></h2>
+    <p>Découvrez pourquoi EVH AUTO TRADE est votre partenaire de confiance pour l'acquisition de SUV hybrides et électriques.</p>
+    <div class="advantages-grid">
+      <div class="advantage-card">
+        <div class="advantage-icon">✅</div>
+        <h3 class="advantage-title">Importation directe</h3>
+        <p class="advantage-desc">Prix réduits grâce à notre réseau d'importation directe sans intermédiaires.</p>
+      </div>
+      <div class="advantage-card">
+        <div class="advantage-icon">🛡️</div>
+        <h3 class="advantage-title">Véhicules neufs garantis</h3>
+        <p class="advantage-desc">Tous nos SUV sont neufs avec une garantie constructeur de 2 ans minimum.</p>
+      </div>
+      <div class="advantage-card">
+        <div class="advantage-icon">🚚</div>
+        <h3 class="advantage-title">Livraison rapide</h3>
+        <p class="advantage-desc">Livraison en moins de 45 jours partout en Afrique et en Europe.</p>
+      </div>
     </div>
   </div>
 
