@@ -5,246 +5,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Détail véhicule — E.V.H. AUTOTRADE</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Open Sans', sans-serif;
-      background: #e5b34a; /* Fond jaune doré */
-      color: #333;
-      line-height: 1.6;
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: 'Open Sans', sans-serif; background:#e5b34a; color:#333; line-height:1.6; }
+    header { background:#1a1f25; color:#fff; padding:0.75rem 2rem; display:flex; justify-content:space-between; align-items:center; box-shadow:0 2px 8px rgba(0,0,0,.1); }
+    .logo-container { display:flex; align-items:center; gap:1rem; }
+    .logo img { height:60px; }
+    .logo-text { display:flex; align-items:center; gap:.25rem; }
+    .logo-text .evh { font-size:1.5rem; font-weight:800; letter-spacing:1px; color:#fff; }
+    .logo-text .autotrade { font-size:1.5rem; font-weight:800; color:#e53e3e; }
+    nav ul { display:flex; list-style:none; gap:1.5rem; }
+    nav a { color:#fff; text-decoration:none; font-weight:500; font-size:.95rem; }
+
+    .container { max-width:1200px; margin:2rem auto; padding:0 1.5rem; }
+    .back-link { display:inline-block; color:#1a1f25; text-decoration:none; font-weight:600; margin-bottom:1rem; }
+    .back-link:hover { text-decoration:underline; }
+
+    .vehicle-header { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:2rem; }
+    .vehicle-title { flex:1; }
+    .vehicle-title h1 { font-size:1.8rem; color:#1a1f25; margin-bottom:.5rem; }
+    .vehicle-price { font-size:1.4rem; color:#e53e3e; font-weight:bold; margin-left:2rem; }
+    .vehicle-meta { font-size:.95rem; color:#666; margin-top:.5rem; }
+
+    .content-grid { display:grid; grid-template-columns:1fr 1fr; gap:2rem; }
+    .image-section, .specs-section, .equip-section, .button-section, .features-section {
+      background:#fff; border-radius:12px; padding:1.5rem; box-shadow:0 2px 8px rgba(0,0,0,.1);
     }
-    header {
-      background: #1a1f25;
-      color: white;
-      padding: 0.75rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    .logo-container {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-    .logo img {
-      height: 60px;
-    }
-    .logo-text {
-      display: flex;
-      align-items: center;
-      gap: 0.25rem;
-    }
-    .logo-text .evh {
-      font-size: 1.5rem;
-      font-weight: 800;
-      letter-spacing: 1px;
-      color: white;
-    }
-    .logo-text .autotrade {
-      font-size: 1.5rem;
-      font-weight: 800;
-      color: #e53e3e;
-    }
-    nav ul {
-      display: flex;
-      list-style: none;
-      gap: 1.5rem;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 0.95rem;
-    }
-    .container {
-      max-width: 1200px;
-      margin: 2rem auto;
-      padding: 0 1.5rem;
-    }
-    .back-link {
-      display: inline-block;
-      color: #1a1f25;
-      text-decoration: none;
-      font-weight: 600;
-      margin-bottom: 1rem;
-    }
-    .back-link:hover {
-      text-decoration: underline;
-    }
-    .vehicle-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      margin-bottom: 2rem;
-    }
-    .vehicle-title {
-      flex: 1;
-    }
-    .vehicle-title h1 {
-      font-size: 1.8rem;
-      color: #1a1f25;
-      margin-bottom: 0.5rem;
-    }
-    .vehicle-price {
-      font-size: 1.4rem;
-      color: #e53e3e;
-      font-weight: bold;
-      margin-left: 2rem;
-    }
-    .vehicle-meta {
-      font-size: 0.95rem;
-      color: #666;
-      margin-top: 0.5rem;
-    }
-    .content-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-    }
-    .image-section {
-      background: white;
-      border-radius: 12px;
-      padding: 1.5rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    .hero-img {
-      width: 100%;
-      max-height: 400px;
-      object-fit: cover;
-      border-radius: 8px;
-      margin-bottom: 1rem;
-    }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-      gap: 0.75rem;
-    }
-    .gallery img {
-      width: 100%;
-      height: 100px;
-      object-fit: cover;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-    .specs-section {
-      background: white;
-      border-radius: 12px;
-      padding: 1.5rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    .specs-section h2 {
-      color: #1a1f25;
-      margin-bottom: 1rem;
-      font-size: 1.4rem;
-    }
-    .specs-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-    }
-    .spec-item {
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.95rem;
-    }
-    .equip-section {
-      background: white;
-      border-radius: 12px;
-      padding: 1.5rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      margin-top: 1.5rem;
-    }
-    .equip-section h2 {
-      color: #1a1f25;
-      margin-bottom: 1rem;
-      font-size: 1.4rem;
-    }
-    .equip-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-    }
-    .equip-list {
-      list-style-type: none;
-      padding-left: 0;
-    }
-    .equip-list li {
-      margin-bottom: 0.4rem;
-      padding-left: 1.2rem;
-      position: relative;
-    }
-    .equip-list li:before {
-      content: "•";
-      color: #e53e3e;
-      position: absolute;
-      left: 0;
-      font-weight: bold;
-    }
-    .button-section {
-      background: white;
-      border-radius: 12px;
-      padding: 1.5rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      margin-top: 1.5rem;
-      text-align: center;
-    }
-    .btn-devise {
-      display: block;
-      width: 100%;
-      background: #e53e3e;
-      color: white;
-      text-align: center;
-      padding: 0.75rem;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1.1rem;
-      transition: background 0.3s;
-    }
-    .btn-devise:hover {
-      background: #c53030;
-    }
-    .features-section {
-      background: white;
-      border-radius: 12px;
-      padding: 1.5rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      margin-top: 1.5rem;
-    }
-    .features-section h2 {
-      color: #1a1f25;
-      margin-bottom: 1rem;
-      font-size: 1.4rem;
-    }
-    .features-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-    }
-    .feature-item {
-      display: flex;
-      align-items: center;
-      font-size: 0.95rem;
-    }
-    .feature-icon {
-      margin-right: 0.5rem;
-      color: #e53e3e;
-    }
-    @media (max-width: 768px) {
-      .content-grid {
-        grid-template-columns: 1fr;
-      }
-      .vehicle-header {
-        flex-direction: column;
-        gap: 1rem;
-      }
-      .vehicle-price {
-        margin-left: 0;
-        margin-top: 1rem;
-      }
-      .specs-grid, .equip-grid, .features-grid {
-        grid-template-columns: 1fr;
-      }
+    .hero-img { width:100%; max-height:400px; object-fit:cover; border-radius:8px; margin-bottom:1rem; }
+    .gallery { display:grid; grid-template-columns:repeat(auto-fill, minmax(150px, 1fr)); gap:.75rem; }
+    .gallery img { width:100%; height:100px; object-fit:cover; border-radius:6px; cursor:pointer; }
+
+    .specs-section h2, .equip-section h2, .features-section h2 { color:#1a1f25; margin-bottom:1rem; font-size:1.4rem; }
+    .specs-grid { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+    .spec-item { display:flex; justify-content:space-between; font-size:.95rem; }
+
+    .equip-grid { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+    .equip-list { list-style:none; padding-left:0; }
+    .equip-list li { margin-bottom:.4rem; padding-left:1.2rem; position:relative; }
+    .equip-list li::before { content:"•"; color:#e53e3e; position:absolute; left:0; font-weight:bold; }
+
+    .button-section { text-align:center; }
+    .btn-devise { display:block; width:100%; background:#e53e3e; color:#fff; text-align:center; padding:.75rem; border-radius:8px; text-decoration:none; font-weight:600; font-size:1.1rem; transition:background .3s; }
+    .btn-devise:hover { background:#c53030; }
+
+    .features-grid { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+    .feature-item { display:flex; align-items:center; font-size:.95rem; }
+    .feature-icon { margin-right:.5rem; color:#e53e3e; }
+
+    @media (max-width:768px){
+      .content-grid { grid-template-columns:1fr; }
+      .vehicle-header { flex-direction:column; gap:1rem; }
+      .vehicle-price { margin-left:0; margin-top:1rem; }
+      .specs-grid, .equip-grid, .features-grid { grid-template-columns:1fr; }
     }
   </style>
 </head>
@@ -252,7 +63,8 @@
   <header>
     <div class="logo-container">
       <div class="logo">
-        <img src="/images/EVH_logo.png" alt="E.V.H. AUTOTRADE">
+        <!-- chemin RELATIF (GitHub Pages projet) -->
+        <img src="images/EVH_logo.png" alt="E.V.H. AUTOTRADE">
       </div>
       <div class="logo-text">
         <span class="evh">E.V.H.</span>
@@ -273,150 +85,166 @@
 
   <div class="container">
     <a href="index.html" class="back-link">← Retour au catalogue</a>
-
-    <div id="vehicle-detail">
-      <p>Chargement du véhicule...</p>
-    </div>
+    <div id="vehicle-detail"><p>Chargement du véhicule...</p></div>
   </div>
 
   <script>
-    const urlParams = new URLSearchParams(window.location.search);
-    const vehicleId = urlParams.get('id');
+    // --- helpers ---
+    const placeholderHero = 'https://via.placeholder.com/1200x800?text=Image+indisponible';
+    const placeholderThumb = 'https://via.placeholder.com/300x200?text=Miniature';
 
-    if (!vehicleId) {
-      document.getElementById('vehicle-detail').innerHTML = `
+    const fixPath = (p) => {
+      if (!p) return p;
+      if (/^https?:\/\//i.test(p)) return p;    // URL absolue OK
+      return p.replace(/^\//, '');              // supprime / initial -> relatif au projet
+    };
+
+    const fmt = (n) => {
+      const num = Number(n ?? 0);
+      try { return num.toLocaleString('fr-FR'); } catch { return String(num); }
+    };
+
+    const getYear = (reg) => (reg || '').split('-')[0] || '';
+
+    // --- main ---
+    const id = new URLSearchParams(location.search).get('id');
+    const mount = document.getElementById('vehicle-detail');
+
+    if (!id) {
+      mount.innerHTML = `
         <div style="background:#fff3f3; color:#d32f2f; padding:2rem; border-radius:12px; text-align:center;">
           <h2>Erreur</h2>
           <p>Aucun véhicule sélectionné.</p>
           <a href="index.html" style="color:#e53e3e; text-decoration:none; font-weight:600;">← Retour au catalogue</a>
-        </div>
-      `;
+        </div>`;
     } else {
-      const jsonUrl = `data/details/${vehicleId}.json`;
-      fetch(jsonUrl)
-        .then(res => {
-          if (!res.ok) throw new Error('Fichier non trouvé');
-          return res.json();
-        })
-        .then(data => {
-          const mileage = new Intl.NumberFormat('fr-FR').format(data.mileage);
+      (async () => {
+        try {
+          const url = `data/details/${encodeURIComponent(id)}.json`;
+          const res = await fetch(url, { cache: 'no-store' });
+          if (!res.ok) throw new Error(`HTTP ${res.status} sur ${url}`);
+          const data = await res.json();
 
-          const renderList = (items) => {
-            if (!items || items.length === 0) return '';
-            return items.map(item => `<li>${item}</li>`).join('');
-          };
+          // fallback FR/EN pour les clés
+          const features = data.features || data.caracteristiques || [];
+          const equip = data.equipment || data.equipements || {};
+          const gallery = Array.isArray(data.images?.gallery) ? data.images.gallery.map(fixPath) : [];
+          const hero = fixPath(data.images?.hero) || placeholderHero;
 
+          // type carburant simple (déduit des features)
+          const joined = features.join(' ').toLowerCase();
+          const fuel = joined.includes('hybride') ? 'PHEV' : 'BEV';
+
+          // specs -> tableau clé/valeur (aplatit les objets imbriqués)
           const specs = data.specifications || {};
-          let specsHtml = '';
-          if (Object.keys(specs).length > 0) {
-            const specItems = [];
-            for (const [key, value] of Object.entries(specs)) {
-              if (typeof value === 'object') {
-                for (const [subKey, subValue] of Object.entries(value)) {
-                  specItems.push({label: subKey, value: subValue});
-                }
-              } else {
-                specItems.push({label: key, value});
-              }
+          const specItems = [];
+          for (const [k, v] of Object.entries(specs)) {
+            if (v && typeof v === 'object' && !Array.isArray(v)) {
+              for (const [sk, sv] of Object.entries(v)) specItems.push({ label: sk, value: sv });
+            } else {
+              specItems.push({ label: k, value: v });
             }
-            specsHtml = `
-              <div class="specs-grid">
-                ${specItems.map(item => `
-                  <div class="spec-item">
-                    <span>${item.label}:</span>
-                    <strong>${item.value}</strong>
-                  </div>
-                `).join('')}
-              </div>
-            `;
           }
 
-          const equipInterieur = data.equipements?.interieur || [];
-          const equipSecurite = data.equipements?.securite || [];
-          const equipConnectivite = data.equipements?.connectivite || [];
-          const allEquipments = [...equipInterieur, ...equipSecurite, ...equipConnectivite];
+          const allEquip = [
+            ...(equip.interieur || equip.interior || []),
+            ...(equip.securite || equip.safety || []),
+            ...(equip.connectivite || equip.connectivity || [])
+          ];
 
-          const featuresHtml = `
-            <div class="features-grid">
-              <div class="feature-item">
-                <span class="feature-icon">📅</span>
-                <span>Année: ${data.regyear.split('-')[0]}</span>
-              </div>
-              <div class="feature-item">
-                <span class="feature-icon">⛽</span>
-                <span>Carburant: ${data.features.find(f => f.includes("hybride")) ? "PHEV" : "BEV"}</span>
-              </div>
-              <div class="feature-item">
-                <span class="feature-icon">🔋</span>
-                <span>Batterie: ${specs.capaciteBatterie || 'Non spécifié'}</span>
-              </div>
-              <div class="feature-item">
-                <span class="feature-icon">📏</span>
-                <span>Kilométrage: ${mileage} km</span>
-              </div>
-            </div>
-          `;
+          const half = Math.ceil(allEquip.length / 2);
 
-          document.getElementById('vehicle-detail').innerHTML = `
+          mount.innerHTML = `
             <div class="vehicle-header">
               <div class="vehicle-title">
-                <h1>${data.name}</h1>
-                <div class="vehicle-meta">Modèle ${data.regyear.split('-')[0]} - Réf: ${data.id}</div>
+                <h1>${data.name || ''}</h1>
+                <div class="vehicle-meta">Modèle ${getYear(data.regyear)} - Réf: ${data.id || ''}</div>
               </div>
-              <div class="vehicle-price">Prix FCR (HT) : ${data.priceFCR}</div>
+              <div class="vehicle-price">Prix FCR (HT) : ${data.priceFCR || ''}</div>
             </div>
 
             <div class="content-grid">
               <div class="image-section">
-                <img src="${data.images.hero}" alt="${data.name}" class="hero-img" onerror="this.src='/images/placeholder.jpg'">
+                <img src="${hero}" alt="${data.name || 'Véhicule'}" class="hero-img"
+                     onerror="this.src='${placeholderHero}'">
                 <div class="gallery">
-                  ${data.images.gallery && data.images.gallery.length > 0 ? 
-                    data.images.gallery.map(url => `
-                      <img src="${url}" alt="Vue du véhicule" onclick="window.open('${url}', '_blank')">
-                    `).join('')
-                  : '<p>Aucune image supplémentaire disponible.</p>'}
+                  ${
+                    gallery.length
+                      ? gallery.map(u => `
+                          <img src="${u}" alt="Vue du véhicule"
+                               onerror="this.src='${placeholderThumb}'"
+                               onclick="window.open('${u}','_blank')">
+                        `).join('')
+                      : '<p>Aucune image supplémentaire disponible.</p>'
+                  }
                 </div>
               </div>
 
               <div class="specs-section">
                 <h2>Spécifications techniques</h2>
-                ${specsHtml}
+                ${
+                  specItems.length
+                    ? `<div class="specs-grid">
+                        ${specItems.map(it => `
+                          <div class="spec-item">
+                            <span>${it.label}:</span>
+                            <strong>${it.value ?? ''}</strong>
+                          </div>`).join('')}
+                      </div>`
+                    : '<p>Non spécifiées.</p>'
+                }
               </div>
             </div>
 
             <div class="features-section">
               <h2>Caractéristiques principales</h2>
-              ${featuresHtml}
+              <div class="features-grid">
+                <div class="feature-item">
+                  <span class="feature-icon">📅</span>
+                  <span>Année: ${getYear(data.regyear)}</span>
+                </div>
+                <div class="feature-item">
+                  <span class="feature-icon">⛽</span>
+                  <span>Carburant: ${fuel}</span>
+                </div>
+                <div class="feature-item">
+                  <span class="feature-icon">🔋</span>
+                  <span>Batterie: ${specs.capaciteBatterie || specs.battery || 'Non spécifié'}</span>
+                </div>
+                <div class="feature-item">
+                  <span class="feature-icon">📏</span>
+                  <span>Kilométrage: ${fmt(data.mileage)} km</span>
+                </div>
+              </div>
             </div>
 
             <div class="equip-section">
               <h2>Équipements & Accessoires</h2>
-              <div class="equip-grid">
-                <ul class="equip-list">
-                  ${renderList(allEquipments.slice(0, Math.ceil(allEquipments.length / 2)))}
-                </ul>
-                <ul class="equip-list">
-                  ${renderList(allEquipments.slice(Math.ceil(allEquipments.length / 2)))}
-                </ul>
-              </div>
+              ${
+                allEquip.length
+                  ? `<div class="equip-grid">
+                      <ul class="equip-list">${allEquip.slice(0, half).map(li => `<li>${li}</li>`).join('')}</ul>
+                      <ul class="equip-list">${allEquip.slice(half).map(li => `<li>${li}</li>`).join('')}</ul>
+                    </div>`
+                  : '<p>Aucun équipement listé.</p>'
+              }
             </div>
 
             <div class="button-section">
               <a href="#" class="btn-devise">Demander un devis pour ce véhicule</a>
             </div>
           `;
-        })
-        .catch(err => {
-          document.getElementById('vehicle-detail').innerHTML = `
+        } catch (err) {
+          console.error('Erreur chargement véhicule:', err);
+          mount.innerHTML = `
             <div style="background:#fff3f3; color:#d32f2f; padding:2rem; border-radius:12px; text-align:center;">
               <h2>Véhicule non trouvé</h2>
-              <p>ID : ${vehicleId}</p>
+              <p>ID : ${id}</p>
               <p>Le fichier n’existe pas ou a été supprimé.</p>
               <a href="index.html" style="color:#e53e3e; text-decoration:none; font-weight:600;">← Retour au catalogue</a>
-            </div>
-          `;
-          console.error('Erreur chargement véhicule:', err);
-        });
+            </div>`;
+        }
+      })();
     }
   </script>
 </body>
