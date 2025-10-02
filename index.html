@@ -18,11 +18,11 @@
     header {
       background: #1a1f25;
       color: white;
-      padding: 1rem 2rem;
+      padding: 0.75rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
     .logo-container {
       display: flex;
@@ -30,37 +30,29 @@
       gap: 1rem;
     }
     .logo img {
-      height: 60px;
-    }
-    .logo-text {
-      font-size: 1.8rem;
-      font-weight: 800;
-      letter-spacing: 1px;
-      color: white;
-    }
-    .logo-red {
-      color: #e53e3e;
+      height: 80px; /* Logo agrandi */
     }
     nav ul {
       display: flex;
       list-style: none;
-      gap: 2rem;
+      gap: 1.5rem;
     }
     nav a {
       color: white;
       text-decoration: none;
       font-weight: 500;
+      font-size: 0.95rem;
       transition: color 0.2s;
     }
     nav a:hover {
       color: #e53e3e;
     }
 
-    /* Bannière avec image + badge */
+    /* Bannière avec image + badge uniquement */
     .banner {
       position: relative;
       width: 100%;
-      height: 400px;
+      height: 500px; /* Hauteur augmentée pour voir les voitures en entier */
       background: url('https://raw.githubusercontent.com/Rimette21/evh-autotrade/main/images/EVH_banniere.png') no-repeat center center;
       background-size: cover;
       display: flex;
@@ -71,16 +63,6 @@
     .banner-content {
       max-width: 500px;
       z-index: 2;
-      color: white;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-    }
-    .banner h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-    .banner p {
-      font-size: 1.2rem;
-      margin-bottom: 1.5rem;
     }
     .btn {
       display: inline-block;
@@ -90,6 +72,7 @@
       border-radius: 30px;
       text-decoration: none;
       font-weight: 600;
+      font-size: 1.1rem;
       transition: background 0.3s;
     }
     .btn:hover {
@@ -165,21 +148,20 @@
       header {
         flex-direction: column;
         gap: 1rem;
+        padding: 0.5rem 1rem;
       }
       nav ul {
         gap: 1rem;
         flex-wrap: wrap;
         justify-content: center;
+        font-size: 0.9rem;
       }
       .banner {
-        height: 300px;
+        height: 350px;
         padding: 0 2%;
       }
-      .banner h1 {
-        font-size: 2rem;
-      }
-      .banner p {
-        font-size: 1rem;
+      .logo img {
+        height: 60px;
       }
     }
   </style>
@@ -191,23 +173,22 @@
       <div class="logo">
         <img src="https://raw.githubusercontent.com/Rimette21/evh-autotrade/main/images/EVH_logo.png" alt="E.V.H. AUTOTRADE">
       </div>
-      <div class="logo-text">E.V.H. <span class="logo-red">AUTOTRADE</span></div>
     </div>
     <nav>
       <ul>
         <li><a href="index.html">Accueil</a></li>
         <li><a href="index.html">Catalogue</a></li>
+        <li><a href="#">Avantages</a></li>
+        <li><a href="#">Acheter</a></li>
         <li><a href="#">À propos</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Bannière avec image et badge rouge -->
+  <!-- Bannière avec image et badge rouge uniquement -->
   <div class="banner">
     <div class="banner-content">
-      <h1>HYBRID & ELECTRIC CARS</h1>
-      <p>Drive the future, today</p>
       <a href="#vehicles-grid" class="btn">Découvrez notre catalogue</a>
     </div>
   </div>
