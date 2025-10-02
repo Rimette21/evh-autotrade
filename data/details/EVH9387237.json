@@ -13,8 +13,7 @@
       "images/EVH9387237_BYDTANG_int_dev.png"
     ]
   },
-
-   "caracteristiques": [
+  "caracteristiques": [
     "100% électrique",
     "Autonomie 600 km",
     "Transmission AT",
@@ -32,7 +31,6 @@
     "Régulateur de vitesse adaptatif",
     "Sièges chauffants et ventilés"
   ],
-
   "specifications": {
     "capaciteBatterie": "90.3 kWh",
     "puissance": "168 kW (228 ch)",
@@ -50,7 +48,6 @@
     "poids": "2360 kg",
     "volumeCoffre": "940 L → 1655 L (banquette rabattue)"
   },
-
   "equipements": {
     "interieur": [
       "Climatisation automatique tri-zone",
@@ -87,7 +84,6 @@
     ],
     "connectivity": []
   },
-
   "garantie": "Garantie importateur 2 ans (voir conditions dans CGV)",
   "localisation": "Chine",
   "disponibilite": "Livraison au port de destination : 45 jours"
