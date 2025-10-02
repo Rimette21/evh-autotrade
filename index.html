@@ -74,8 +74,8 @@
     }
     .banner-content {
       position: absolute;
-      bottom: 60px;
-      left: 3%;
+      bottom: 40px;
+      left: 5%;
       z-index: 2;
     }
     .btn {
@@ -93,7 +93,7 @@
       background: #c53030;
     }
 
-    /* Grille véhicules */
+    /* Grille des véhicules */
     .container {
       max-width: 1200px;
       margin: 2rem auto;
@@ -137,6 +137,8 @@
       margin: 0.5rem 0;
     }
     .meta {
+      display: flex;
+      justify-content: space-between;
       font-size: 0.9rem;
       color: #666;
       margin-bottom: 0.75rem;
@@ -150,6 +152,22 @@
     }
     .features li {
       margin-bottom: 0.25rem;
+    }
+    .btn-details {
+      display: block;
+      width: 100%;
+      background: linear-gradient(to right, #d4af37, #b8860b);
+      color: white;
+      text-align: center;
+      padding: 0.75rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s;
+      margin-top: 0.75rem;
+    }
+    .btn-details:hover {
+      background: linear-gradient(to right, #c59a30, #a67c00);
     }
     a {
       text-decoration: none;
@@ -232,16 +250,31 @@
           return;
         }
         grid.innerHTML = vehicles.map(v => {
-          const firstFeatures = v.features.slice(0, 3).map(f => `<span style="background:#3182ce;color:white;font-size:0.75rem;padding:2px 6px;border-radius:4px;margin-right:4px;">${f}</span>`).join('');
+          // Extraire les 3 premières features pertinentes (comme sur Lovable)
+          const relevantFeatures = v.features.filter(f => 
+            f.includes("Autonomie") || 
+            f.includes("Moteur") || 
+            f.includes("Transmission") || 
+            f.includes("Caméra") || 
+            f.includes("Régulateur") || 
+            f.includes("Sièges")
+          ).slice(0, 5);
+
           return `
             <a href="vehicle.html?id=${v.id}">
               <div class="card">
                 <img src="${v.images.hero}" alt="${v.name}" onerror="this.src='https://via.placeholder.com/300x180?text=Image+non+disponible'">
                 <div class="card-content">
                   <h3>${v.name}</h3>
-                  <div class="price">${v.priceFCR}</div>
-                  <div class="meta">${v.mileage.toLocaleString('fr-FR')} km • ${v.regyear}</div>
-                  <div style="margin-top:0.5rem;">${firstFeatures}</div>
+                  <div class="price">Prix FCR (HT) : ${v.priceFCR}</div>
+                  <div class="meta">
+                    <span>Km: ${v.mileage.toLocaleString('fr-FR')} km</span>
+                    <span>Immat.: ${v.regyear}</span>
+                  </div>
+                  <ul class="features">
+                    ${relevantFeatures.map(f => `<li>• ${f}</li>`).join('')}
+                  </ul>
+                  <a href="vehicle.html?id=${v.id}" class="btn-details">Voir les détails</a>
                 </div>
               </div>
             </a>
