@@ -5,14 +5,16 @@
   "mileage": 23000,
   "regyear": "2024-01",
   "images": {
-    "hero": "/images/EVH9387237_BYDTANG_droit.png",
+    "hero": "images/EVH9387237_BYDTANG_droit.png",
     "gallery": [
-      "/images/EVH9387237_BYDTANG_avant.png",
-      "/images/EVH9387237_BYDTANG_gauche.png",
-      "/images/EVH9387237_BYDTANG_int_ar.png",
-      "/images/EVH9387237_BYDTANG_int_dev.png"
+      "images/EVH9387237_BYDTANG_avant.png",
+      "images/EVH9387237_BYDTANG_gauche.png",
+      "images/EVH9387237_BYDTANG_int_ar.png",
+      "images/EVH9387237_BYDTANG_int_dev.png"
     ]
   },
+
+  /* Harmonisation des clés */
   "caracteristiques": [
     "100% électrique",
     "Autonomie 600 km",
@@ -22,6 +24,16 @@
     "Régulateur de vitesse adaptatif",
     "Sièges chauffants et ventilés"
   ],
+  "features": [
+    "100% électrique",
+    "Autonomie 600 km",
+    "Transmission AT",
+    "Camera 360°",
+    "7 places",
+    "Régulateur de vitesse adaptatif",
+    "Sièges chauffants et ventilés"
+  ],
+
   "specifications": {
     "capaciteBatterie": "90.3 kWh",
     "puissance": "168 kW (228 ch)",
@@ -39,6 +51,7 @@
     "poids": "2360 kg",
     "volumeCoffre": "940 L → 1655 L (banquette rabattue)"
   },
+
   "equipements": {
     "interieur": [
       "Climatisation automatique tri-zone",
@@ -57,8 +70,26 @@
     ],
     "connectivite": []
   },
+  "equipment": {
+    "interior": [
+      "Climatisation automatique tri-zone",
+      "Écran tactile central 15.6\"",
+      "Tableau de bord numérique",
+      "Système audio premium",
+      "Charge sans fil pour smartphones",
+      "Ambiance lumineuse"
+    ],
+    "safety": [
+      "6 airbags (dont genoux conducteur)",
+      "Alerte de franchissement de ligne",
+      "Détection des angles morts",
+      "Aide au démarrage en côte",
+      "Freinage automatique d'urgence"
+    ],
+    "connectivity": []
+  },
+
   "garantie": "Garantie importateur 2 ans (voir conditions dans CGV)",
   "localisation": "Chine",
   "disponibilite": "Livraison au port de destination : 45 jours"
 }
-
