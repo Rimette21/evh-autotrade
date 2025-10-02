@@ -5,8 +5,13 @@
   "mileage": 23000,
   "regyear": "2024-01",
   "images": {
-    "hero": "https://raw.githubusercontent.com/Rimette21/evh-autotrade/main/images/EVH9387237_BYDTANG_droit.png",
-  "gallery": 
+    "hero": "/images/EVH9387237_BYDTANG_droit.png",
+    "gallery": [
+      "/images/EVH9387237_BYDTANG_avant.png",
+      "/images/EVH9387237_BYDTANG_gauche.png",
+      "/images/EVH9387237_BYDTANG_int_ar.png",
+      "/images/EVH9387237_BYDTANG_int_dev.png"
+    ]
   },
   "caracteristiques": [
     "100% électrique",
@@ -19,7 +24,7 @@
   ],
   "specifications": {
     "capaciteBatterie": "90.3 kWh",
-    "puissance": "168 kW (272 ch)",
+    "puissance": "168 kW (228 ch)",
     "couple": "350 Nm",
     "acceleration": "5.9 s (0-100 km/h)",
     "vitesseMax": "180 km/h",
