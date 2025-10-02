@@ -5,12 +5,12 @@
   "mileage": 23000,
   "regyear": "2024-01",
   "images": {
-    "hero": "https://raw.githubusercontent.com/Rimette21/evh-autotrade/main/images/EVH9387237_BYDTANG_droit.png",
+    "hero": "/images/EVH9387237_BYDTANG_droit.png",
   "gallery": [
-    "https://raw.githubusercontent.com/Rimette21/evh-autotrade/main/images/EVH9387237_BYDTANG_avant.jpg",
-    "https://raw.githubusercontent.com/Rimette21/evh-autotrade/main/images/EVH9387237_BYDTANG_arriere.jpg",
-    "https://raw.githubusercontent.com/Rimette21/evh-autotrade/main/images/EVH9387237_BYDTANG_interieur.jpg",
-    "https://raw.githubusercontent.com/Rimette21/evh-autotrade/main/images/EVH9387237_BYDTANG_coffre.jpg"
+    "/images/EVH9387237_BYDTANG_avant.png",
+    "/images/EVH9387237_BYDTANG_gauche.png",
+    "/images/EVH9387237_BYDTANG_int_ar.png",
+   "/images/EVH9387237_BYDTANG_int_dev.png"
      ]
   },
   "caracteristiques": [
