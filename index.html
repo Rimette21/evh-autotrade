@@ -56,12 +56,13 @@
       color: #e53e3e;
     }
 
-    /* Banner */
+    /* Bannière avec image + badge */
     .banner {
       position: relative;
       width: 100%;
       height: 400px;
-      background: linear-gradient(to right, #d4af37, #8b4513);
+      background: url('https://raw.githubusercontent.com/Rimette21/evh-autotrade/main/images/EVH_banniere.png') no-repeat center center;
+      background-size: cover;
       display: flex;
       align-items: center;
       padding: 0 5%;
@@ -70,18 +71,16 @@
     .banner-content {
       max-width: 500px;
       z-index: 2;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
     }
     .banner h1 {
       font-size: 2.5rem;
-      color: white;
       margin-bottom: 1rem;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
     }
     .banner p {
       font-size: 1.2rem;
-      color: white;
       margin-bottom: 1.5rem;
-      opacity: 0.9;
     }
     .btn {
       display: inline-block;
@@ -95,26 +94,6 @@
     }
     .btn:hover {
       background: #c53030;
-    }
-    .banner-image {
-      position: absolute;
-      right: 0;
-      top: 0;
-      height: 100%;
-      object-fit: cover;
-      filter: brightness(0.95);
-    }
-    .badge {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      background: gold;
-      color: #333;
-      padding: 10px 20px;
-      border-radius: 50px;
-      font-weight: bold;
-      font-size: 0.9rem;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
 
     /* Container principal */
@@ -224,15 +203,13 @@
     </nav>
   </header>
 
-  <!-- Bannière d'accueil -->
+  <!-- Bannière avec image et badge rouge -->
   <div class="banner">
     <div class="banner-content">
-      <h1>HYBRID & ELECTRIC SUV</h1>
+      <h1>HYBRID & ELECTRIC CARS</h1>
       <p>Drive the future, today</p>
       <a href="#vehicles-grid" class="btn">Découvrez notre catalogue</a>
     </div>
-    <img src="https://raw.githubusercontent.com/Rimette21/evh-autotrade/main/images/evh_banniere.jpg" alt="Hybrid & Electric SUV" class="banner-image">
-    <div class="badge">PRIX IMBATTABLES</div>
   </div>
 
   <!-- Grille des véhicules -->
