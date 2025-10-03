@@ -5,150 +5,65 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Détail véhicule — E.V.H. AUTOTRADE</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Open Sans', sans-serif;
-      background: #e5b34a;
-      color: #333;
-      line-height: 1.6;
+    :root{
+      --bg:#e5b34a; --text:#1a1f25; --muted:#6b7280; --white:#fff;
+      --shadow:0 6px 24px rgba(0,0,0,.12); --radius-lg:18px; --brand:#e53e3e;
+      --pill:#20b26b; --pill-bev:#2563eb;
     }
-    header {
-      background: #1a1f25;
-      color: white;
-      padding: 0.75rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    .logo img { height: 60px; }
-    nav ul { display: flex; list-style: none; gap: 1.5rem; }
-    nav a { color: white; text-decoration: none; font-weight: 500; }
-    .container { max-width: 1200px; margin: 2rem auto; padding: 0 1.5rem; }
-    .back-link { display: inline-block; margin-bottom: 1rem; font-weight: 600; color: #1a1f25; text-decoration: none; }
-    .vehicle-header { display: flex; justify-content: space-between; flex-wrap: wrap; margin-bottom: 2rem; }
-    .vehicle-title h1 { font-size: 1.8rem; color: #1a1f25; }
-    .vehicle-price { font-size: 1.4rem; color: #e53e3e; font-weight: bold; }
-    .content-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
-    .image-section, .specs-section, .features-section, .equip-section, .button-section {
-      background: white; border-radius: 12px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-top: 1rem;
-    }
-    .hero-img { width: 100%; max-height: 400px; object-fit: cover; border-radius: 8px; cursor: pointer; }
-    .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 0.75rem; margin-top: 1rem; }
-    .gallery img { width: 100%; height: 100px; object-fit: cover; border-radius: 6px; cursor: pointer; }
-    .specs-section h2, .equip-section h2, .features-section h2 { margin-bottom: 1rem; font-size: 1.2rem; }
-    .specs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; font-size: 0.9rem; }
-    .equip-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; font-size: 0.9rem; }
-    .equip-list { list-style: none; padding: 0; }
-    .equip-list li::before { content:"•"; color:#e53e3e; margin-right:0.5rem; }
-    .btn-devise { display:block;width:100%;background:#e53e3e;color:white;text-align:center;padding:0.75rem;border-radius:8px;text-decoration:none;font-weight:600; }
-    .btn-devise:hover { background:#c53030; }
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;background:var(--bg);color:var(--text);line-height:1.55}
+    a{color:inherit}
+    header{background:#1a1f25;color:#fff;padding:.75rem 2rem;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+    .logo img{height:60px}
+    nav ul{display:flex;list-style:none;gap:1.5rem}
+    nav a{color:#fff;text-decoration:none;font-weight:500}
+    .container{max-width:1150px;margin:2rem auto;padding:0 1.25rem}
+    .back-link{display:inline-block;color:#0e1726;text-decoration:none;font-weight:600;margin-bottom:1rem}
+    .back-link:hover{text-decoration:underline}
+
+    /* header véhicule */
+    .vehicle-header{display:grid;grid-template-columns:1fr auto;gap:1rem;align-items:start;margin-bottom:1.25rem}
+    .vehicle-title h1{font-size:2.1rem;margin-bottom:.35rem}
+    .vehicle-meta{color:var(--muted)}
+    .price-stack{text-align:right}
+    .price-big{font-size:1.6rem;color:var(--brand);font-weight:800}
+    .price-sub{color:#9ca3af;font-size:.9rem;margin-top:.15rem}
+    .fuel-pill{display:inline-block;margin-top:.45rem;background:var(--pill);color:#fff;font-weight:700;font-size:.8rem;border-radius:999px;padding:.22rem .6rem}
+
+    /* contenu */
+    .content-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:1.25rem}
+    .card{background:var(--white);border-radius:var(--radius-lg);box-shadow:var(--shadow)}
+    .image-card{padding:1rem}
+    .hero-img{width:100%;height:420px;object-fit:cover;border-radius:14px;margin-bottom:1rem;cursor:pointer}
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem}
+    .gallery img{width:100%;height:130px;object-fit:cover;border-radius:10px;cursor:pointer}
+
+    /* Spécifs : version aérée (libellé sur une ligne, valeur à la ligne suivante) */
+    .specs-card{padding:1.1rem}
+    .card-title{font-size:1.05rem;font-weight:800;margin-bottom:.8rem}
+    .specs-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem 1.25rem}
+    .spec-item{font-size:.95rem}
+    .spec-label{color:var(--muted);display:block;margin-bottom:.15rem}
+    .spec-value{display:block;font-weight:700}
+    .divider{height:1px;background:#eef2f7;margin:.9rem 0}
+
+    .equip-card{padding:1.1rem;margin-top:1.1rem}
+    .equip-grid{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+    .equip-list{list-style:none;font-size:.95rem}
+    .equip-list li{margin:.35rem 0;padding-left:1.1rem;position:relative}
+    .equip-list li::before{content:"•";color:#e53e3e;font-weight:900;position:absolute;left:0;top:.05rem}
+
+    .features-card{padding:1.1rem;margin-top:1.1rem}
+    .features-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+    .feature{display:flex;align-items:center;gap:.45rem;font-size:.95rem}
+    .feature .icon{font-size:.95rem;color:#111;opacity:.7}
+
+    .cta-card{padding:1.25rem;margin-top:1.1rem;text-align:center}
+    .btn{display:inline-block;background:var(--brand);color:#fff;padding:.9rem 1.25rem;border-radius:12px;font-weight:800;font-size:1.05rem;text-decoration:none}
+    .btn:hover{filter:brightness(.95)}
+
     /* Lightbox */
-    #lightbox {
-      display:none; position:fixed; top:0; left:0; width:100%; height:100%;
-      background:rgba(0,0,0,0.9); z-index:9999; align-items:center; justify-content:center; flex-direction:column;
-    }
-    #lightbox img { max-width:90%; max-height:80%; border-radius:10px; }
-    #lightbox span { color:white; font-size:2rem; cursor:pointer; }
-    #close { position:absolute; top:20px; right:30px; }
-    #prev, #next { position:absolute; top:50%; transform:translateY(-50%); }
-    #prev { left:30px; }
-    #next { right:30px; }
-    @media (max-width: 768px) { .content-grid { grid-template-columns: 1fr; } }
-  </style>
-</head>
-<body>
-  <header>
-    <div class="logo"><img src="images/EVH_logo.png" alt="E.V.H. AUTOTRADE"></div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="index.html">Catalogue</a></li>
-        <li><a href="#">Avantages</a></li>
-        <li><a href="#">Acheter</a></li>
-        <li><a href="#">À propos</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <div class="container">
-    <a href="index.html" class="back-link">← Retour au catalogue</a>
-    <div id="vehicle-detail"><p>Chargement du véhicule...</p></div>
-  </div>
-
-  <!-- Lightbox -->
-  <div id="lightbox">
-    <span id="close">&times;</span>
-    <img id="lightbox-img" src="">
-    <span id="prev">&#10094;</span>
-    <span id="next">&#10095;</span>
-  </div>
-
-  <script>
-    const urlParams = new URLSearchParams(window.location.search);
-    const vehicleId = urlParams.get('id');
-
-    if (!vehicleId) {
-      document.getElementById('vehicle-detail').innerHTML = `<p>Erreur : aucun véhicule sélectionné.</p>`;
-    } else {
-      fetch(`data/details/${vehicleId}.json`)
-        .then(res => res.json())
-        .then(data => {
-          const mileage = new Intl.NumberFormat('fr-FR').format(data.mileage);
-          const specs = data.specifications || {};
-          const equipements = [...(data.equipements?.interieur||[]), ...(data.equipements?.securite||[]), ...(data.equipements?.connectivite||[])];
-
-          const specsHtml = Object.entries(specs).map(([k,v]) =>
-            `<div><strong>${k}:</strong> ${typeof v==="object"?Object.entries(v).map(([sk,sv])=>`${sk}:${sv}`).join(", "):v}</div>`).join('');
-
-          document.getElementById('vehicle-detail').innerHTML = `
-            <div class="vehicle-header">
-              <div class="vehicle-title"><h1>${data.name}</h1><div>Modèle ${data.regyear.split('-')[0]} - Réf: ${data.id}</div></div>
-              <div class="vehicle-price">Prix FCR (HT) : ${data.priceFCR}<br><small style="color:#666;">Dédouanement possible sous conditions</small></div>
-            </div>
-            <div class="content-grid">
-              <div class="image-section">
-                <img src="${data.images.hero}" class="hero-img" alt="${data.name}">
-                <div class="gallery">
-                  ${(data.images.gallery||[]).map(u=>`<img src="${u}" alt="Vue du véhicule">`).join('')}
-                </div>
-              </div>
-              <div class="specs-section"><h2>Spécifications Techniques</h2><div class="specs-grid">${specsHtml}</div></div>
-            </div>
-            <div class="equip-section"><h2>Équipements & Accessoires</h2><div class="equip-grid">
-              <ul class="equip-list">${equipements.slice(0,Math.ceil(equipements.length/2)).map(e=>`<li>${e}</li>`).join('')}</ul>
-              <ul class="equip-list">${equipements.slice(Math.ceil(equipements.length/2)).map(e=>`<li>${e}</li>`).join('')}</ul>
-            </div></div>
-            <div class="features-section"><h2>Caractéristiques principales</h2>
-              <div> Immatriculation: ${data.regyear}</div>
-              <div> Carburant: ${data.features?.find(f=>f.includes("hybride"))?"PHEV":"BEV"}</div>
-              <div> Batterie: ${specs.capaciteBatterie||'Non spécifié'}</div>
-              <div> Kilométrage: ${mileage} km</div>
-            </div>
-            <div class="button-section"><a href="#" class="btn-devise">Demander un devis pour ce véhicule</a></div>
-          `;
-
-          // Init Lightbox
-          let currentIndex=0, imgs=document.querySelectorAll('.gallery img, .hero-img');
-          imgs.forEach((img,i)=>{img.onclick=()=>{currentIndex=i;openLB();}});
-          function openLB(){document.getElementById('lightbox').style.display='flex';updateLB();}
-          function closeLB(){document.getElementById('lightbox').style.display='none';}
-          function updateLB(){document.getElementById('lightbox-img').src=imgs[currentIndex].src;}
-          function next(){currentIndex=(currentIndex+1)%imgs.length;updateLB();}
-          function prev(){currentIndex=(currentIndex-1+imgs.length)%imgs.length;updateLB();}
-          document.getElementById('close').onclick=closeLB;
-          document.getElementById('next').onclick=next;
-          document.getElementById('prev').onclick=prev;
-          document.addEventListener('keydown',e=>{
-            if(document.getElementById('lightbox').style.display==='flex'){
-              if(e.key==='ArrowRight')next();
-              if(e.key==='ArrowLeft')prev();
-              if(e.key==='Escape')closeLB();
-            }
-          });
-        });
-    }
-  </script>
-</body>
-</html>
+    #lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,.9);z-index:9999;align-items:center;justify-content:center;flex-direction:column}
+    #lightbox img{max-width:90%;max-height:80%;border-radius:10px}
+    #close{position:absolute;top:20px;right:30px;font-size:2rem;color:#fff;cursor:pointer}
+    #prev,#next{position:absolute
