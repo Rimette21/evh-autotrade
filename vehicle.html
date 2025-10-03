@@ -4,16 +4,67 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Détail véhicule — E.V.H. AUTOTRADE</title>
-  <link rel="stylesheet" href="styles.css?v=8">
+  <link rel="stylesheet" href="styles.css?v=3">
+  <style>
+    :root{ --header-bg:#1a1f25; --brand-red:#e53e3e; }
+    /* Header commun */
+    .site-header{background:var(--header-bg);color:#fff;padding:.75rem 2rem;display:flex;align-items:center;justify-content:space-between;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+    .brand{display:flex;align-items:center;gap:.8rem;text-decoration:none;color:inherit}
+    .brand-mark{height:84px;border-radius:10px;background:var(--header-bg);display:block;filter:grayscale(1) brightness(.95) contrast(1.05)}
+    .brand-text{display:flex;gap:.35rem;line-height:1}
+    .brand-text .evh{font-weight:800;font-size:2.05rem;letter-spacing:.5px;color:#fff}
+    .brand-text .autotrade{font-weight:900;font-size:2.05rem;color:var(--brand-red)}
+    @media (min-width:1200px){ .brand-mark{height:92px}.brand-text .evh,.brand-text .autotrade{font-size:2.25rem} }
+    .main-nav ul{display:flex;list-style:none;gap:1.5rem;margin:0;padding:0}
+    .main-nav a{color:#fff;text-decoration:none;font-weight:600}
+    .main-nav a:hover{color:var(--brand-red)}
+    /* Page détail */
+    body{background:#e5b34a;color:#333;font-family:system-ui,-apple-system,Segoe UI,Roboto,'Open Sans',sans-serif}
+    .container{max-width:1200px;margin:2rem auto;padding:0 1.5rem}
+    .back-link{display:inline-block;color:#1a1f25;text-decoration:none;font-weight:700;margin-bottom:1rem}
+    .vehicle-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1rem}
+    .vehicle-title h1{font-size:1.9rem;color:#1a1f25;margin:.2rem 0}
+    .vehicle-meta{font-size:.95rem;color:#666}
+    .price-top{font-size:1.4rem;color:#e53e3e;font-weight:800}
+    .badge{display:inline-block;margin-top:.45rem;padding:.25rem .55rem;border-radius:999px;font-size:.8rem;font-weight:700;color:#fff}
+    .badge.bev{background:#22c55e}  /* vert */
+    .badge.phev{background:#eab308} /* or */
+    .content-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+    .image-section,.specs-section,.equip-section,.features-section,.button-section{background:#fff;border-radius:12px;padding:1.2rem;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+    .hero-img{width:100%;max-height:420px;object-fit:cover;border-radius:8px;margin-bottom:.8rem}
+    .gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:.6rem}
+    .gallery img{width:100%;height:100px;object-fit:cover;border-radius:6px;cursor:pointer}
+    .specs-section h2,.equip-section h2,.features-section h2{color:#1a1f25;margin-bottom:.7rem;font-size:1.2rem}
+    .specs-grid{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
+    .spec-item{display:flex;justify-content:space-between;font-size:.92rem;color:#333}
+    .spec-item span:first-child{color:#555}
+    .equip-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+    .equip-list{list-style:none;margin:0;padding:0}
+    .equip-list li{margin:.35rem 0;position:relative;padding-left:1.1rem}
+    .equip-list li:before{content:"•";position:absolute;left:0;color:#e53e3e;font-weight:700}
+    .btn-devise{display:block;width:100%;background:#e53e3e;color:#fff;text-align:center;padding:.75rem;border-radius:8px;text-decoration:none;font-weight:700}
+    /* Lightbox simple */
+    .lightbox{position:fixed;inset:0;background:rgba(0,0,0,.85);display:none;align-items:center;justify-content:center;z-index:9999}
+    .lightbox img{max-width:90vw;max-height:85vh;border-radius:8px}
+    .lightbox .nav{position:absolute;top:50%;transform:translateY(-50%);font-size:2rem;color:#fff;cursor:pointer;user-select:none;padding:.5rem 1rem}
+    .lightbox .prev{left:1rem}.lightbox .next{right:1rem}
+    .lightbox .close{position:absolute;top:1rem;right:1rem;font-size:2rem;cursor:pointer}
+    @media (max-width:900px){ .content-grid{grid-template-columns:1fr} .hero-img{max-height:360px} }
+  </style>
 </head>
 <body>
-  <header>
-    <div class="logo"><img src="images/EVH_logo.png" alt="E.V.H. AUTOTRADE"></div>
-    <nav>
+
+  <!-- Header identique -->
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="E.V.H. AUTOTRADE">
+      <img class="brand-mark" src="images/EVH_logo.png" alt="">
+      <span class="brand-text"><span class="evh">E.V.H.</span><span class="autotrade">AUTOTRADE</span></span>
+    </a>
+    <nav class="main-nav">
       <ul>
         <li><a href="index.html">Accueil</a></li>
-        <li><a href="index.html">Catalogue</a></li>
-        <li><a href="#">Avantages</a></li>
+        <li><a href="index.html#vehicles-grid">Catalogue</a></li>
+        <li><a href="index.html#avantages">Avantages</a></li>
         <li><a href="#">Acheter</a></li>
         <li><a href="#">À propos</a></li>
         <li><a href="#">Contact</a></li>
@@ -23,207 +74,166 @@
 
   <div class="container">
     <a href="index.html" class="back-link">← Retour au catalogue</a>
-    <div id="vehicle-area"><p>Chargement du véhicule...</p></div>
+
+    <div id="vehicle-detail">
+      <p>Chargement du véhicule…</p>
+    </div>
   </div>
 
   <!-- Lightbox -->
-  <div id="lightbox">
-    <span id="close">&times;</span>
-    <img id="lightbox-img" src="">
-    <span id="prev">&#10094;</span>
-    <span id="next">&#10095;</span>
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <span class="close" id="lbClose">✕</span>
+    <span class="nav prev" id="lbPrev">‹</span>
+    <img id="lbImg" alt="">
+    <span class="nav next" id="lbNext">›</span>
   </div>
 
   <script>
-    const $mount = document.getElementById('vehicle-area');
-    const id = new URLSearchParams(location.search).get('id');
-    const placeholderHero='https://via.placeholder.com/1200x800?text=Image+indisponible';
-    const placeholderThumb='https://via.placeholder.com/600x400?text=Photo';
-    const fixPath = p => !p ? p : (/^https?:\/\//i.test(p) ? p : p.replace(/^\//,''));
-    const nfmt = v => Number(v ?? 0).toLocaleString('fr-FR');
-    const regFull = s => s || '';
+    const urlParams = new URLSearchParams(window.location.search);
+    const vehicleId = urlParams.get('id');
 
-    const parseTransmission = (features,specs) => {
-      const f = (features||[]).join(' ');
-      const m = f.match(/Transmission\s+([A-Z\-+]+)/i);
-      return m ? m[1] : (specs?.transmission || '');
-    };
-    const parseAutonomie = (features,specs) => {
-      const f = (features||[]).join(' ');
-      const m = f.match(/Autonomie\s*([0-9]+(?:\.[0-9]+)?)\s*km/i);
-      return m ? `${m[1]}km` : (specs?.autonomie || specs?.autonomieElectrique || '');
-    };
-    const parsePlaces = (features,specs) => {
-      const f = (features||[]).join(' ');
-      const m = f.match(/(\d+)\s*places/i);
-      return m ? `${m[1]} places` : (specs?.places || specs?.seats ? `${specs.places||specs.seats} places` : '');
-    };
-    const parseTraction = (specs) => {
-      if (!specs) return '';
-      if (specs.traction || specs.drive) return specs.traction || specs.drive;
-      if (/Traction\s+avant/i.test(specs.transmission||'')) return 'FWD (2WD)';
-      if (/Traction\s+arrière/i.test(specs.transmission||'')) return 'RWD (2WD)';
-      if (/4x4|intégrale|AWD/i.test(specs.transmission||'')) return 'AWD (4WD)';
-      return '';
-    };
+    if (!vehicleId) {
+      document.getElementById('vehicle-detail').innerHTML = `
+        <div style="background:#fff3f3;color:#d32f2f;padding:2rem;border-radius:12px;text-align:center;">
+          <h2>Erreur</h2>
+          <p>Aucun véhicule sélectionné.</p>
+          <a href="index.html" style="color:#e53e3e;text-decoration:none;font-weight:700;">← Retour au catalogue</a>
+        </div>`;
+    } else {
+      fetch(\`data/details/\${vehicleId}.json\`)
+        .then(res => { if(!res.ok) throw new Error('Fichier non trouvé'); return res.json(); })
+        .then(data => {
+          const mileage = new Intl.NumberFormat('fr-FR').format(data.mileage ?? 0);
+          const year = (data.regyear || '').split('-')[0] || '—';
 
-    (async () => {
-      if (!id){
-        $mount.innerHTML = `<div class="card-box" style="padding:1.1rem;background:#fff3f3;color:#d32f2f;">
-          <h2>Erreur</h2><p>Aucun véhicule sélectionné.</p>
-          <a href="index.html" class="back-link" style="color:#e53e3e">← Retour au catalogue</a></div>`;
-        return;
-      }
-      try{
-        const url = `data/details/${encodeURIComponent(id)}.json`;
-        const res = await fetch(url,{cache:'no-store'});
-        if(!res.ok) throw new Error('HTTP '+res.status);
-        const d = await res.json();
+          const specs = data.specifications || {};
+          const specItems = [];
+          const push = (label, value) => { if(value) specItems.push({label,value}); };
 
-        const features = d.features || d.caracteristiques || [];
-        const equip = d.equipements || d.equipment || {};
-        const hero = fixPath(d.images?.hero) || placeholderHero;
-        const gallery = Array.isArray(d.images?.gallery) ? d.images.gallery.map(fixPath) : [];
-        const specs = d.specifications || {};
-
-        const fuel = (features.join(' ').toLowerCase().includes('hybride')) ? 'PHEV' : 'BEV';
-
-        const dims = specs.dimensions || {};
-        const dimsStr = (dims.longueur && dims.largeur && dims.hauteur) ? `${dims.longueur} × ${dims.largeur} × ${dims.hauteur}` : '';
-        const poidsStr = (specs.poids || specs.poidsTotal) ? String(specs.poids || specs.poidsTotal) : '';
-        const capaciteStr = (specs.capaciteMax || specs.capacite) ? String(specs.capaciteMax || specs.capacite) : '';
-        const poidsCap = [poidsStr, capaciteStr].filter(Boolean).join(' / ');
-
-        const allEquip = [
-          ...(equip.interieur || equip.interior || []),
-          ...(equip.securite || equip.safety || []),
-          ...(equip.connectivite || equip.connectivity || [])
-        ];
-        const half = Math.ceil(allEquip.length/2);
-
-        const moteurVal = specs.moteur || specs.engine || '';
-        const puissanceVal = specs.puissance || specs.power || '';
-        const transVal = parseTransmission(features, specs);
-        const tractionVal = parseTraction(specs);
-        const autoVal = parseAutonomie(features, specs);
-        const bodyVal = specs.carrosserie || specs.body || '';
-        const couleurVal = d.couleur || d.color || specs.couleur || 'À préciser';
-        const placesVal = parsePlaces(features, specs);
-        const batteryVal = specs.capaciteBatterie || specs.battery || '';
-
-        const line = (label, value, compact=false) => `
-          <div class="spec-item ${compact?'spec-compact':''}">
-            <span class="spec-label">${label}</span>
-            <span class="spec-value">${value || '-'}</span>
-          </div>`;
-
-        $mount.innerHTML = `
-          <div class="vehicle-header">
-            <div class="vehicle-title">
-              <h1>${d.name || ''}</h1>
-              <div class="vehicle-meta">Modèle ${regFull(d.regyear)} – Réf: ${d.id || ''}</div>
-            </div>
-            <div class="price-stack">
-              <div class="price-big">Prix FCR (HT) : ${d.priceFCR || ''}</div>
-              <div class="price-sub">dédouanement possible sous conditions</div>
-              <div class="pill">${fuel}</div>
-            </div>
-          </div>
-
-          <div class="content-grid">
-            <!-- images -->
-            <div class="card-box image-card">
-              <img src="${hero}" class="hero-img" alt="${d.name || 'Véhicule'}" onerror="this.src='${placeholderHero}'">
-              <div class="gallery">
-                ${
-                  gallery.length
-                    ? gallery.map(u => `<img src="${u}" alt="Photo" onerror="this.src='${placeholderThumb}'">`).join('')
-                    : '<p class="muted">Aucune image supplémentaire disponible.</p>'
-                }
-              </div>
-            </div>
-
-            <!-- specs aéré -->
-            <div class="card-box specs-card">
-              <div class="card-title">Spécifications techniques</div>
-              <div class="specs-grid">
-                ${line('Moteur:', moteurVal)}
-                ${line('Puissance moteur:', puissanceVal)}
-                ${line('Transmission:', transVal)}
-                ${line('Traction:', tractionVal)}
-                ${line('Autonomie électrique:', autoVal)}
-                ${line('Type de carrosserie:', bodyVal)}
-                ${line('Couleur:', couleurVal)}
-                ${line('Places:', placesVal)}
-              </div>
-
-              <div class="divider"></div>
-
-              <div class="specs-grid">
-                ${line('Dimensions (L×l×H):', dimsStr, true)}
-                ${line('Poids / Capacité max:', poidsCap, true)}
-                ${line('Batterie:', batteryVal)}
-                ${line('Volume coffre:', specs.volumeCoffre || '', true)}
-              </div>
-            </div>
-          </div>
-
-          <div class="card-box equip-card">
-            <div class="card-title">Équipements & Accessoires</div>
-            ${
-              allEquip.length
-                ? `<div class="equip-grid">
-                    <ul class="equip-list">${allEquip.slice(0,half).map(x=>`<li>${x}</li>`).join('')}</ul>
-                    <ul class="equip-list">${allEquip.slice(half).map(x=>`<li>${x}</li>`).join('')}</ul>
-                  </div>`
-                : '<p class="muted">Aucun équipement listé.</p>'
-            }
-          </div>
-
-          <div class="card-box features-card">
-            <div class="card-title">Caractéristiques principales</div>
-            <div class="features-grid">
-              <div class="feature"><span class="icon">🗓️</span><span>Date d’immatriculation : ${regFull(d.regyear)}</span></div>
-              <div class="feature"><span class="icon">⛽</span><span>Carburant : ${fuel}</span></div>
-              <div class="feature"><span class="icon">🔋</span><span>Batterie : ${batteryVal || '—'}</span></div>
-              <div class="feature"><span class="icon">📏</span><span>Kilométrage : ${nfmt(d.mileage)} km</span></div>
-            </div>
-          </div>
-
-          <div class="card-box cta-card">
-            <a href="#" class="btn">Demander un devis pour ce véhicule</a>
-          </div>
-        `;
-
-        /* Lightbox */
-        let currentIndex=0;
-        const images = Array.from(document.querySelectorAll('.hero-img, .gallery img'));
-        const lb = document.getElementById('lightbox');
-        const lbImg = document.getElementById('lightbox-img');
-        const open = i => { currentIndex=i; lb.style.display='flex'; lbImg.src=images[currentIndex].src; };
-        const next = () => { currentIndex=(currentIndex+1)%images.length; lbImg.src=images[currentIndex].src; };
-        const prev = () => { currentIndex=(currentIndex-1+images.length)%images.length; lbImg.src=images[currentIndex].src; };
-        images.forEach((img,i)=> img.addEventListener('click',()=>open(i)));
-        document.getElementById('close').onclick=()=>lb.style.display='none';
-        document.getElementById('next').onclick=next;
-        document.getElementById('prev').onclick=prev;
-        document.addEventListener('keydown',e=>{
-          if(lb.style.display==='flex'){
-            if(e.key==='ArrowRight') next();
-            if(e.key==='ArrowLeft') prev();
-            if(e.key==='Escape') lb.style.display='none';
+          // Remplir les specs (format aéré, 1 par ligne)
+          push('Moteur', specs.moteur || '-');
+          push('Puissance moteur', specs.puissance || '-');
+          push('Transmission', specs.transmission || '-');
+          push('Traction', specs.traction || (data.features||[]).find(f=>/2wd|4wd|awd/i.test(f)) || '-');
+          push('Autonomie électrique', specs.autonomieElectrique || '-');
+          push('Type de carrosserie', specs.typeCarrosserie || 'SUV');
+          push('Couleur', specs.couleur || data.couleur || '-');
+          push('Places', specs.places || '5 places');
+          if (specs.dimensions){
+            push('Dimensions (L×l×H)', [specs.dimensions.longueur, specs.dimensions.largeur, specs.dimensions.hauteur].filter(Boolean).join(' × '));
           }
-        });
+          if (specs.poids || specs.capaciteMax){
+            push('Poids / Capacité max', [specs.poids, specs.capaciteMax].filter(Boolean).join(' / '));
+          }
 
-      }catch(e){
-        console.error(e);
-        $mount.innerHTML = `<div class="card-box" style="padding:1.1rem;background:#fff3f3;color:#d32f2f;text-align:center">
-          <h2>Véhicule non trouvé</h2>
-          <p>ID : ${id}</p>
-          <p>Le fichier n’existe pas ou a été supprimé.</p>
-          <a href="index.html" class="back-link" style="color:#e53e3e">← Retour au catalogue</a></div>`;
-      }
-    })();
+          const listHTML = specItems.map(it => `
+            <div class="spec-item"><span>${it.label} :</span><strong>${it.value}</strong></div>
+          `).join('');
+
+          const eq = data.equipements || {};
+          const allEquip = [
+            ...(eq.interieur||[]),
+            ...(eq.securite||[]),
+            ...(eq.connectivite||[])
+          ];
+
+          // Badge énergie
+          const isPHEV = (data.features||[]).some(f => /phev|hybride/i.test(f));
+          const badge = isPHEV ? '<span class="badge phev">PHEV</span>' : '<span class="badge bev">BEV</span>';
+
+          document.getElementById('vehicle-detail').innerHTML = `
+            <div class="vehicle-header">
+              <div class="vehicle-title">
+                <h1>${data.name || 'Véhicule'}</h1>
+                <div class="vehicle-meta">Modèle ${year} — Réf : <strong>${data.id}</strong></div>
+              </div>
+              <div>
+                <div class="price-top">Prix FCR (HT) : ${data.priceFCR || '-'}</div>
+                ${badge}
+              </div>
+            </div>
+
+            <div class="content-grid">
+              <div class="image-section">
+                <img src="${data.images?.hero || ''}" alt="${data.name}" class="hero-img" onerror="this.src='https://via.placeholder.com/800x500?text=Image+non+disponible'">
+                <div class="gallery" id="gallery">
+                  ${
+                    (data.images?.gallery || []).length
+                    ? data.images.gallery.map((u,i)=>`<img data-idx="${i}" src="${u}" alt="Vue ${i+1}">`).join('')
+                    : '<p>Aucune image supplémentaire disponible.</p>'
+                  }
+                </div>
+              </div>
+
+              <div class="specs-section">
+                <h2>Spécifications techniques</h2>
+                <div class="specs-grid">
+                  ${listHTML}
+                </div>
+              </div>
+            </div>
+
+            <div class="features-section">
+              <h2>Caractéristiques principales</h2>
+              <div class="specs-grid">
+                <div class="spec-item"><span>Année :</span><strong>${year}</strong></div>
+                <div class="spec-item"><span>Kilométrage :</span><strong>${mileage} km</strong></div>
+                <div class="spec-item"><span>Energie :</span><strong>${isPHEV ? 'PHEV' : 'BEV'}</strong></div>
+                <div class="spec-item"><span>Référence :</span><strong>${data.id}</strong></div>
+              </div>
+            </div>
+
+            <div class="equip-section">
+              <h2>Équipements & Accessoires</h2>
+              <div class="equip-grid">
+                <ul class="equip-list">
+                  ${allEquip.slice(0, Math.ceil(allEquip.length/2)).map(li=>`<li>${li}</li>`).join('')}
+                </ul>
+                <ul class="equip-list">
+                  ${allEquip.slice(Math.ceil(allEquip.length/2)).map(li=>`<li>${li}</li>`).join('')}
+                </ul>
+              </div>
+            </div>
+
+            <div class="button-section">
+              <a href="#" class="btn-devise">Demander un devis pour ce véhicule</a>
+            </div>
+          `;
+
+          // Lightbox / navigation
+          const galleryImgs = Array.from(document.querySelectorAll('#gallery img'));
+          const lb = document.getElementById('lightbox'), lbImg = document.getElementById('lbImg');
+          const lbPrev = document.getElementById('lbPrev'), lbNext = document.getElementById('lbNext'), lbClose = document.getElementById('lbClose');
+          let idx = 0;
+
+          const open = i => { idx=i; lbImg.src = data.images.gallery[idx]; lb.style.display='flex'; };
+          const close = () => { lb.style.display='none'; lbImg.src=''; };
+          const prev = () => open((idx-1+galleryImgs.length)%galleryImgs.length);
+          const next = () => open((idx+1)%galleryImgs.length);
+
+          galleryImgs.forEach(img => img.addEventListener('click', e => open(+e.target.dataset.idx)));
+          lbClose.addEventListener('click', close);
+          lb.addEventListener('click', e => { if(e.target===lb) close(); });
+          lbPrev.addEventListener('click', prev);
+          lbNext.addEventListener('click', next);
+          window.addEventListener('keydown', e => {
+            if(lb.style.display!=='flex') return;
+            if(e.key==='Escape') close();
+            if(e.key==='ArrowLeft') prev();
+            if(e.key==='ArrowRight') next();
+          });
+        })
+        .catch(err => {
+          document.getElementById('vehicle-detail').innerHTML = `
+            <div style="background:#fff3f3;color:#d32f2f;padding:2rem;border-radius:12px;text-align:center;">
+              <h2>Véhicule non trouvé</h2>
+              <p>ID : ${vehicleId}</p>
+              <p>Le fichier n’existe pas ou a été supprimé.</p>
+              <a href="index.html" style="color:#e53e3e;text-decoration:none;font-weight:700;">← Retour au catalogue</a>
+            </div>`;
+          console.error('Erreur chargement véhicule:', err);
+        });
+    }
   </script>
 </body>
 </html>
