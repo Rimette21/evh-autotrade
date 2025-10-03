@@ -1,1 +1,80 @@
+{
+  "id": "EVH9330983",
+  "name": "2023 BMW iX1 BEV",
+  "priceFCR": "32 200 €",
+  "mileage": 4000,
+  "regyear": "2025-06",
+
+  "images": {
+    "hero": "images/EVH9330983_BMW_DEVANT.png",
+    "gallery": [
+      "images/EVH9330983_BMW_DROIT.png",
+      "images/EVH9330983_BMW_ARRIERE.png",
+      "images/EVH9330983_BMW_INT_DEV.png",
+      "images/EVH9330983_BMW_INT_ARRIERE.png",
+      "images/EVH9330983_BMW_TAB_BORD.png"
+    ]
+  },
+
+  "caracteristiques": [
+    "100% électrique (BEV)",
+    "Autonomie 510 km",
+    "Puissance 150 kW",
+    "Transmission AT",
+    "Traction 2WD",
+    "5 places"
+  ],
+  "features": [
+    "BEV",
+    "Autonomie 510 km",
+    "Puissance 150 kW",
+    "AT",
+    "2WD",
+    "5 places"
+  ],
+
+  "specifications": {
+    "puissance": "150 kW",
+    "transmission": "AT",
+    "traction": "2WD",
+    "autonomieElectrique": "510 km",
+    "typeCarrosserie": "SUV",
+    "couleur": "Blanc",
+    "dimensions": {
+      "longueur": "4616 mm",
+      "largeur": "1845 mm",
+      "hauteur": "1641 mm"
+    },
+    "poids": "1948 kg",
+    "capaciteMax": "2435 kg",
+    "volumeVehicule": "13.98 m³",
+    "places": "5",
+    "portes": "5"
+  },
+
+  "equipements": {
+    "interieur": [
+      "Climatisation automatique",
+      "Sièges réglables électriquement",
+      "Sellerie soignée",
+      "Vitres électriques",
+      "Jantes alliage"
+    ],
+    "securite": [
+      "Airbags conducteur et passager",
+      "Airbags latéraux",
+      "Aides au stationnement",
+      "Systèmes d’assistance à la conduite"
+    ],
+    "connectivite": [
+      "Bluetooth",
+      "Navigation/GPS",
+      "Accès et démarrage sans clé"
+    ]
+  },
+
+  "garantie": "Garantie importateur 2 ans (voir conditions dans CGV)",
+  "localisation": "Shanghai, Chine",
+  "disponibilite": "Livraison au port de destination : 45 jours"
+}
 
