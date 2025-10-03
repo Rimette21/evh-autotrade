@@ -1,91 +1,84 @@
 {
   "id": "EVH9391855",
-  "name": "2025 Chery Tiggo7 C-DM 1.5T 156HP L4 DHT",
+  "name": "2025 Chery Tiggo7 C-DM 1.5T 156HP L4 DHT PHEV",
   "priceFCR": "23 900 €",
   "mileage": 1200,
   "regyear": "2025-09",
+
   "images": {
-    "hero": "images/EVH9387237_BYDTANG_droit.png",
+    "hero": "images/EVH9391855_CHERRY_DEVANT.png",
     "gallery": [
-      "images/EVH9387237_BYDTANG_avant.png",
-      "images/EVH9387237_BYDTANG_gauche.png",
-      "images/EVH9387237_BYDTANG_int_ar.png",
-      "images/EVH9387237_BYDTANG_int_dev.png"
+      "images/EVH9391855_CHERRY_GAUCHE.png",
+      "images/EVH9391855_CHERRY_ARRIERE.png",
+      "images/EVH9391855_CHERRY_INTDEV.png",
+      "images/EVH9391855_CHERRY_INTARR.png"
     ]
   },
+
   "caracteristiques": [
-    "Hybride rechargeable",
-    "Autonomie 120 km",
+    "Hybride rechargeable (PHEV)",
+    "Autonomie électrique 120 km",
     "Transmission DHT",
-    "Camera 360°",
+    "Traction 2WD",
+    "Caméra 360°",
     "5 places",
-    "Régulateur de vitesse adaptatif",
-    "Sièges chauffants et ventilés"
+    "Régulateur de vitesse adaptatif"
   ],
   "features": [
-    "Hybride rechargeable",
+    "Hybride rechargeable (PHEV)",
     "Autonomie 120 km",
     "Transmission DHT",
-    "Camera 360°",
+    "Traction 2WD",
+    "Caméra 360°",
     "5 places",
-    "Régulateur de vitesse adaptatif",
-    "Sièges chauffants et ventilés"
+    "Régulateur de vitesse adaptatif"
   ],
+
   "specifications": {
-    "capaciteBatterie": "90.3 kWh",
-    "puissance": "150 kW (228 ch)",
-    "couple": "350 Nm",
-    "acceleration": "5.9 s (0-100 km/h)",
-    "vitesseMax": "180 km/h",
-    "tempsDeCharge": "30 min (10-80% en charge rapide)",
-    "transmission": "Traction avant",
+    "puissance": "150 kW",
+    "transmission": "DHT",
+    "traction": "2WD",
+    "autonomieElectrique": "120 km",
+    "typeCarrosserie": "SUV",
+    "couleur": "Blanc",
     "dimensions": {
       "longueur": "4545 mm",
-      "largeur": "*1898 mm",
-      "hauteur": "1670 mm",
-      "empattement": "2820 mm"
+      "largeur": "1898 mm",
+      "hauteur": "1670 mm"
     },
     "poids": "1775 kg",
-    "volumeCoffre": "940 L → 1655 L (banquette rabattue)"
+    "capaciteMax": "2192 kg",
+    "places": "5",
+    "portes": "5"
   },
+
   "equipements": {
     "interieur": [
-      "Climatisation automatique tri-zone",
-      "Écran tactile central 15.6\"",
-      "Tableau de bord numérique",
-      "Système audio premium",
-      "Charge sans fil pour smartphones",
-      "Ambiance lumineuse"
+      "Toit ouvrant",
+      "Sièges en cuir",
+      "Sièges électriques",
+      "Vitres électriques",
+      "Climatisation automatique",
+      "Jantes alliage"
     ],
     "securite": [
-      "6 airbags (dont genoux conducteur)",
-      "Alerte de franchissement de ligne",
-      "Détection des angles morts",
-      "Aide au démarrage en côte",
-      "Freinage automatique d'urgence"
+      "Airbag conducteur",
+      "Airbag passager",
+      "Airbags latéraux",
+      "Caméra 360°",
+      "Radar de stationnement",
+      "Régulateur de vitesse adaptatif",
+      "Direction assistée"
     ],
-    "connectivite": []
+    "connectivite": [
+      "Bluetooth",
+      "GPS",
+      "Verrouillage centralisé",
+      "Accès et démarrage sans clé"
+    ]
   },
-  "equipment": {
-    "interior": [
-      "Climatisation automatique tri-zone",
-      "Écran tactile central 15.6\"",
-      "Tableau de bord numérique",
-      "Système audio premium",
-      "Charge sans fil pour smartphones",
-      "Ambiance lumineuse"
-    ],
-    "safety": [
-      "6 airbags (dont genoux conducteur)",
-      "Alerte de franchissement de ligne",
-      "Détection des angles morts",
-      "Aide au démarrage en côte",
-      "Freinage automatique d'urgence"
-    ],
-    "connectivity": []
-  },
+
   "garantie": "Garantie importateur 2 ans (voir conditions dans CGV)",
-  "localisation": "Chine",
+  "localisation": "Zhangjiakou, Hebei, Chine",
   "disponibilite": "Livraison au port de destination : 45 jours"
 }
-
