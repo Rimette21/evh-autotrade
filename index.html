@@ -96,12 +96,14 @@
           return;
         }
         grid.innerHTML = vehicles.map(v => {
-          const feats = (v.features || []).filter(f =>
-            f.toLowerCase().includes('autonomie') ||
-            f.toLowerCase().includes('moteur') ||
-            f.toLowerCase().includes('transmission') ||
-            f.toLowerCase().includes('cam')
-          ).slice(0, 5);
+          const maxFeat = Number.isFinite(v.featuresCount) ? v.featuresCount : 4;
+
+      const feats = (v.features || []).filter(f =>
+      f.toLowerCase().includes("autonomie") ||
+      f.toLowerCase().includes("moteur") ||
+      f.toLowerCase().includes("transmission") ||
+      f.toLowerCase().includes("cam")
+    ).slice(0, maxFeat);
           const km = (v.mileage ?? 0).toLocaleString('fr-FR');
 
           return `
