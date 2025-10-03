@@ -265,5 +265,20 @@ nav a{color:#fff;font-weight:500}
   .banner{height:380px}
   .banner::before{transform: scale(.95)} /* moins de dézoom sur petit écran */
 }
+/* === PATCH: couvrir toute la largeur malgré le scale === */
+/* 0.88 => on élargit à 100% / 0.88 = 113.64% et on centre avec un décalage de 6.82% */
+.banner::before{
+  left: -6.82%;
+  width: 113.64%;
+  height: 100%;
+}
+
+/* Sur mobile, on scale à .95, donc 100% / .95 = 105.26%, offset 2.63% */
+@media (max-width:680px){
+  .banner::before{
+    left: -2.63%;
+    width: 105.26%;
+  }
+}
 
 
