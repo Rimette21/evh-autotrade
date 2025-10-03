@@ -21,7 +21,7 @@
     <nav>
       <ul>
         <li><a href="index.html">Accueil</a></li>
-        <li><a href="index.html#vehicles-grid">Catalogue</a></li>
+        <li><a href="index.html#catalogue">Catalogue</a></li>
         <li><a href="index.html#avantages">Avantages</a></li>
         <li><a href="#">Acheter</a></li>
         <li><a href="#">À propos</a></li>
@@ -49,17 +49,11 @@
     const urlParams = new URLSearchParams(window.location.search);
     const vehicleId = urlParams.get('id');
 
-    // Fallback dossier "details" (ASCII) puis "détails" (accent)
-    const urlA = `data/details/${vehicleId}.json?v=11`;
-    const urlB = `data/d%C3%A9tails/${vehicleId}.json?v=11`;
+    const url = `data/details/${vehicleId}.json?v=11`;
 
     async function fetchDetail() {
-      let res = await fetch(urlA, { cache: 'no-store' });
-      if (!res.ok) {
-        console.warn('details/… introuvable, tentative sur détails/…');
-        res = await fetch(urlB, { cache: 'no-store' });
-        if (!res.ok) throw new Error('JSON introuvable (details & détails)');
-      }
+      const res = await fetch(url, { cache: 'no-store' });
+      if (!res.ok) throw new Error(`HTTP ${res.status} pour ${url}`);
       return res.json();
     }
 
@@ -70,8 +64,8 @@
           <p>ID : ${vehicleId}</p>
           <p>${msg}</p>
           <p style="margin-top:.5rem;font-size:.95rem;color:#b91c1c">
-            Vérifie que <code>${vehicleId}.json</code> est bien dans
-            <code>data/details/</code> ou <code>data/détails/</code>.
+            Vérifie que <code>${vehicleId}.json</code> existe bien dans <code>data/details/</code>
+            (noms/majuscules identiques).
           </p>
           <a href="index.html" style="color:#e53e3e;text-decoration:none;font-weight:700;">← Retour</a>
         </div>`;
@@ -85,12 +79,12 @@
           const mileage = new Intl.NumberFormat('fr-FR').format(data.mileage ?? 0);
           const year = (data.regyear || '').split('-')[0] || '—';
 
-          // Détecte énergie (PHEV vs BEV)
+          // Énergie (PHEV vs BEV)
           const isPHEV = (data.features || data.caracteristiques || [])
             .some(f => /phev|hybride/i.test(f || ''));
           const energie = isPHEV ? 'PHEV' : 'BEV';
 
-          // Construit la liste de spécifications
+          // Spécifications
           const specs = data.specifications || {};
           const items = [];
           const add = (label, value) => { if (value) items.push({ label, value }); };
@@ -119,7 +113,7 @@
             </div>
           `).join('');
 
-          // Regroupe équipements
+          // Équipements regroupés
           const eq = data.equipements || {};
           const allEquip = [
             ...(eq.interieur || []),
@@ -155,7 +149,7 @@
                 </div>
               </div>
 
-              <!-- Specs -->
+              <!-- Spécifications & Caractéristiques -->
               <div class="card-box specs-card">
                 <div class="card-title">Spécifications techniques</div>
                 <div class="specs-grid spec-compact">
@@ -228,7 +222,7 @@
           });
         })
         .catch(err => {
-          console.error(err);
+          console.error('Erreur chargement véhicule:', err);
           notFound('Le fichier JSON est introuvable ou invalide.');
         });
     }
