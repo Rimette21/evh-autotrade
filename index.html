@@ -4,10 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>E.V.H. AUTOTRADE — Catalogue</title>
-  <link rel="stylesheet" href="styles.css?v=3">
+  <!-- IMPORTANT : mets bien v=5 pour forcer le rechargement -->
+  <link rel="stylesheet" href="styles.css?v=5">
   <meta name="description" content="Importation de SUV hybrides et électriques vers l'Afrique et l'Europe.">
 </head>
 <body>
+  <!-- Header -->
   <header>
     <div class="logo-wrap">
       <div class="logo"><img src="images/EVH_logo.png" alt="E.V.H. AUTOTRADE"></div>
@@ -25,57 +27,72 @@
     </nav>
   </header>
 
-  <!-- Bandeau image -->
+  <!-- Bandeau -->
   <div class="banner">
     <div class="banner-cta">
       <a class="btn" href="#catalogue">Découvrez notre catalogue</a>
     </div>
   </div>
 
-  <!-- AVANTAGES (style soft, centré) -->
-  <section class="section--light">
-    <div class="container">
-      <h2 class="section-title">Nos <span class="accent">Avantages</span></h2>
-      <p class="section-lead">Pourquoi EVH AUTO TRADE est votre partenaire de confiance pour l'acquisition de SUV hybrides et électriques.</p>
+  <!-- Nos Avantages (style Lovable) -->
+  <section class="advantages-lovable">
+    <div class="adv2-head">
+      <h2 class="adv2-title">Nos <span class="gradient-text">Avantages</span></h2>
+      <p class="adv2-sub">
+        Découvrez pourquoi EVH AUTO TRADE est votre partenaire de confiance pour l'acquisition de SUV hybrides et électriques.
+      </p>
+    </div>
 
-      <div class="adv-row">
-        <div class="adv-card adv-card--soft">
-          <div class="adv-icon-badge">✅</div>
-          <h3 class="adv-card-title">Importation directe</h3>
-          <p class="adv-card-desc">Prix réduits grâce à notre réseau d'importation directe sans intermédiaires.</p>
-        </div>
-
-        <div class="adv-card adv-card--soft">
-          <div class="adv-icon-badge">🛡️</div>
-          <h3 class="adv-card-title">Véhicules neufs ou quasi-neufs</h3>
-          <p class="adv-card-desc">SUV neufs ou quasi-neufs, récents, couverts par une garantie importateur de 2 ans.</p>
-        </div>
-
-        <div class="adv-card adv-card--soft">
-          <div class="adv-icon-badge">🚢</div>
-          <h3 class="adv-card-title">Transport inclus jusqu’au port de destination</h3>
-          <p class="adv-card-desc">
-            Acheminement estimé <b>sous 45 jours</b>. Assistance aux formalités de dédouanement à l’arrivée
-            <i>(droits & taxes non inclus)</i>.
+    <div class="adv2-grid">
+      <article class="adv2-card">
+        <div class="inner">
+          <div class="adv2-badge">✅</div>
+          <h3 class="adv2-title-sm">Importation directe</h3>
+          <p class="adv2-desc">
+            Prix réduits grâce à notre réseau d'importation directe sans intermédiaires.
           </p>
         </div>
-      </div>
+      </article>
+
+      <article class="adv2-card">
+        <div class="inner">
+          <div class="adv2-badge">🛡️</div>
+          <h3 class="adv2-title-sm">Véhicules neufs ou quasi-neufs</h3>
+          <p class="adv2-desc">
+            SUV neufs ou quasi-neufs, récents, couverts par une garantie importateur de 2 ans.
+          </p>
+        </div>
+      </article>
+
+      <article class="adv2-card">
+        <div class="inner">
+          <div class="adv2-badge">🚢</div>
+          <h3 class="adv2-title-sm">Transport inclus jusqu’au port de destination</h3>
+          <p class="adv2-desc">
+            Acheminement estimé <b>sous 45 jours</b>. Assistance aux formalités de dédouanement à l’arrivée
+            <i>(droits &amp; taxes non inclus)</i>.
+          </p>
+        </div>
+      </article>
     </div>
   </section>
 
-  <!-- TÊTE DE CATALOGUE (titre centré) -->
+  <!-- Titre “Notre Catalogue” -->
   <section class="section--light" style="padding-top: 1.5rem;">
     <div class="container">
       <h2 class="section-title">Notre <span class="accent">Catalogue</span></h2>
-      <p class="section-lead">Découvrez notre sélection de SUV hybrides et électriques, importés directement pour offrir les meilleurs prix.</p>
+      <p class="section-lead">
+        Découvrez notre sélection de SUV hybrides et électriques, importés directement pour offrir les meilleurs prix.
+      </p>
     </div>
   </section>
 
-  <!-- GRID CATALOGUE -->
+  <!-- Grille catalogue -->
   <main id="catalogue" class="grid">
     <p style="grid-column:1/-1;color:#111;opacity:.8">Chargement du catalogue…</p>
   </main>
 
+  <!-- Script de chargement des cartes -->
   <script>
     (async function(){
       const mount = document.getElementById('catalogue');
