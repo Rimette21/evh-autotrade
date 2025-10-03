@@ -3,80 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>E.V.H. AUTOTRADE — Véhicules électriques & hybrides</title>
-  <meta name="description" content="Importation directe de SUV hybrides et électriques vers l'Afrique et l'Europe. Prix imbattables, véhicules neufs garantis, livraison rapide.">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Open Sans', sans-serif; background: #f5f7fa; color: #333; line-height: 1.6; }
-
-    /* Header / Menu */
-    header { background: #1a1f25; color: white; padding: 0.75rem 2rem; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-    .logo-container { display: flex; align-items: center; gap: 1rem; }
-    .logo img { height: 80px; }
-    .logo-text { display: flex; align-items: center; gap: 0.25rem; }
-    .logo-text .evh { font-size: 1.8rem; font-weight: 800; letter-spacing: 1px; color: white; }
-    .logo-text .autotrade { font-size: 1.8rem; font-weight: 800; color: #e53e3e; }
-    nav ul { display: flex; list-style: none; gap: 1.5rem; }
-    nav a { color: white; text-decoration: none; font-weight: 500; font-size: 0.95rem; transition: color 0.2s; }
-    nav a:hover { color: #e53e3e; }
-
-    /* Bannière */
-    .banner { position: relative; width: 100%; height: 500px; background: url('images/EVH_HERO.jpg') no-repeat center center; background-size: cover; }
-    .banner-content { position: absolute; bottom: 40px; left: 5%; z-index: 2; }
-    .btn { display: inline-block; background: #e53e3e; color: white; padding: 0.75rem 1.5rem; border-radius: 30px; text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: background 0.3s; }
-    .btn:hover { background: #c53030; }
-
-    /* Section "Nos Avantages" */
-    .advantages-section { padding: 3rem 2rem; background: #fff; text-align: center; }
-    .advantages-section h2 { font-size: 2.5rem; color: #1a1f25; margin-bottom: 1rem; }
-    .advantages-section p { font-size: 1.1rem; color: #666; max-width: 800px; margin: 0 auto 2rem; }
-    .advantages-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
-    .advantage-card { background: #f9fafb; border-radius: 12px; padding: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.05); transition: transform 0.3s ease; }
-    .advantage-card:hover { transform: translateY(-6px); }
-    .advantage-icon { font-size: 3rem; color: #e53e3e; margin-bottom: 1rem; }
-    .advantage-title { font-size: 1.5rem; color: #1a1f25; margin-bottom: 1rem; }
-    .advantage-desc { font-size: 0.95rem; color: #444; line-height: 1.5; }
-
-    /* Grille des véhicules */
-    .container { max-width: 100%; margin: 0; padding: 0; }
-    .grid { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: flex-start; padding: 1rem 1rem 0 1rem; }
-    .card-link { text-decoration: none; color: inherit; display: block; }
-    .card { min-width: 280px; flex: 1 1 auto; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease; box-sizing: border-box; }
-    .card:hover { transform: translateY(-6px); box-shadow: 0 8px 24px rgba(0,0,0,0.1); }
-    .card img { width: 100%; height: 200px; object-fit: cover; object-position: center; background: #eee; aspect-ratio: 4 / 3; }
-    .card-content { padding: 1.25rem; }
-    .card h3 { font-size: 1.1rem; margin-bottom: 0.5rem; color: #1a1f25; font-weight: 600; }
-    .price { font-weight: bold; color: #e53e3e; font-size: 1.3rem; margin: 0.5rem 0; }
-    .meta { display: flex; justify-content: space-between; font-size: 0.9rem; color: #666; margin-bottom: 0.75rem; }
-    .features { font-size: 0.85rem; color: #444; list-style-type: none; padding-left: 0; margin: 0.5rem 0 0 0; }
-    .features li { margin-bottom: 0.25rem; }
-    .btn-details { display: block; width: 100%; background: linear-gradient(to right, #d4af37, #b8860b); color: white; text-align: center; padding: 0.75rem; border-radius: 8px; font-weight: 600; transition: background 0.3s; margin-top: 0.75rem; }
-    .btn-details:hover { background: linear-gradient(to right, #c59a30, #a67c00); }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      header { flex-direction: column; gap: 1rem; padding: 0.5rem 1rem; }
-      nav ul { gap: 1rem; flex-wrap: wrap; justify-content: center; font-size: 0.9rem; }
-      .banner { height: 350px; }
-      .logo img { height: 60px; }
-      .logo-text .evh, .logo-text .autotrade { font-size: 1.5rem; }
-      .advantages-section h2 { font-size: 2rem; }
-      .advantages-section p { font-size: 1rem; }
-      .card { min-width: 260px; }
-    }
-  </style>
+  <title>E.V.H. AUTOTRADE — Catalogue</title>
+  <link rel="stylesheet" href="styles.css?v=1">
+  <meta name="description" content="Importation de SUV hybrides et électriques vers l'Afrique et l'Europe.">
 </head>
 <body>
-  <!-- Header -->
   <header>
-    <div class="logo-container">
-      <div class="logo">
-        <img src="images/EVH_logo.png" alt="E.V.H. AUTOTRADE">
-      </div>
-      <div class="logo-text">
-        <span class="evh">E.V.H.</span>
-        <span class="autotrade">AUTOTRADE</span>
-      </div>
+    <div class="logo-wrap">
+      <div class="logo"><img src="images/EVH_logo.png" alt="E.V.H. AUTOTRADE"></div>
+      <div class="brand"><span class="evh">E.V.H.</span><span class="autotrade">AUTOTRADE</span></div>
     </div>
     <nav>
       <ul>
@@ -90,97 +25,92 @@
     </nav>
   </header>
 
-  <!-- Bannière -->
   <div class="banner">
-    <div class="banner-content">
-      <a href="#vehicles-grid" class="btn">Découvrez notre catalogue</a>
+    <div class="banner-cta">
+      <a class="btn" href="#catalogue">Découvrez notre catalogue</a>
     </div>
   </div>
 
-  <!-- Section "Nos Avantages" -->
-  <div class="advantages-section">
-    <h2>Nos <span style="color: #e53e3e;">Avantages</span></h2>
-    <p>Découvrez pourquoi EVH AUTO TRADE est votre partenaire de confiance pour l'acquisition de SUV hybrides et électriques.</p>
-    <div class="advantages-grid">
-      <div class="advantage-card">
-        <div class="advantage-icon">✅</div>
-        <h3 class="advantage-title">Importation directe</h3>
-        <p class="advantage-desc">Prix réduits grâce à notre réseau d'importation directe sans intermédiaires.</p>
+  <section class="section">
+    <h2 class="adv-title">Nos <span class="text-brand">Avantages</span></h2>
+    <p class="adv-sub">Pourquoi EVH AUTO TRADE est votre partenaire de confiance pour l'acquisition de SUV hybrides et électriques.</p>
+    <div class="adv-grid">
+      <div class="adv-card">
+        <div class="adv-icon">✅</div>
+        <div><strong>Importation directe</strong><br><span class="muted">Prix réduits grâce à notre réseau d'importation directe sans intermédiaires.</span></div>
       </div>
-      <div class="advantage-card">
-        <div class="advantage-icon">🛡️</div>
-        <h3 class="advantage-title">Véhicules neufs ou quasi-neufs</h3>
-        <p class="advantage-desc">Tous nos SUV sont neufs ou récents, couverts par une garantie importateur de 2 ans.</p>
+      <div class="adv-card">
+        <div class="adv-icon">🛡️</div>
+        <div><strong>Véhicules neufs ou quasi-neufs</strong><br><span class="muted">SUV neufs ou quasi-neufs, récents, couverts par une garantie importateur de 2 ans.</span></div>
       </div>
-      <div class="advantage-card">
-        <div class="advantage-icon">🚚</div>
-        <h3 class="advantage-title">Transport inclus jusqu’au port de destination</h3>
-        <p class="advantage-desc">Acheminement estimé sous 45 jours. Assistance aux formalités de dédouanement.</p>
+      <div class="adv-card">
+        <div class="adv-icon">🚢</div>
+        <div><strong>Transport inclus jusqu’au port de destination</strong><br>
+          <span class="muted">Acheminement estimé <b>sous 45 jours</b>. Assistance aux formalités de dédouanement à l’arrivée <i>(droits & taxes non inclus)</i>.</span>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- Catalogue -->
-  <div class="container">
-    <div id="vehicles-grid" class="grid">
-      <p>Chargement du catalogue...</p>
-    </div>
-  </div>
+  <main id="catalogue" class="grid">
+    <p style="grid-column:1/-1;color:#111;opacity:.8">Chargement du catalogue…</p>
+  </main>
 
-  <!-- Script de chargement -->
   <script>
-    (async function () {
-      const grid = document.getElementById('vehicles-grid');
-      try {
-        const res = await fetch('data/hero.json', { cache: 'no-store' });
-        if (!res.ok) throw new Error('HTTP ' + res.status + ' sur data/hero.json');
+    (async function(){
+      const mount = document.getElementById('catalogue');
+      try{
+        const res = await fetch('data/hero.json', { cache:'no-store' });
+        if(!res.ok) throw new Error('HTTP '+res.status+' sur data/hero.json');
         const vehicles = await res.json();
-
-        if (!Array.isArray(vehicles) || vehicles.length === 0) {
-          grid.innerHTML = '<p>Aucun véhicule disponible pour le moment.</p>';
+        if(!Array.isArray(vehicles) || !vehicles.length){
+          mount.innerHTML = '<p style="grid-column:1/-1">Aucun véhicule pour le moment.</p>';
           return;
         }
 
-        const cardHtml = vehicles.map(v => {
+        const cards = vehicles.map(v=>{
           const img = (v.images && v.images.hero) ? v.images.hero : 'https://via.placeholder.com/600x450?text=Image';
-          const mileage = Number(v.mileage || 0);
+          const mileage = Number(v.mileage||0);
           const features = Array.isArray(v.features) ? v.features : [];
-
-          // On garde les bullets utiles (compatible "Camera" et "Caméra")
           const relevant = features.filter(f => (
-            /Autonomie/i.test(f) ||
-            /Moteur/i.test(f) ||
-            /Transmission/i.test(f) ||
-            /Cam[eé]ra/i.test(f) ||
-            /R[ée]gulateur/i.test(f) ||
-            /Si[èe]ges/i.test(f)
-          )).slice(0, 5);
+            /Autonomie/i.test(f) || /Moteur/i.test(f) || /Transmission/i.test(f) ||
+            /Cam[eé]ra/i.test(f) || /R[ée]gulateur/i.test(f) || /Si[èe]ges/i.test(f)
+          )).slice(0,4);
+
+          const isPHEV = features.join(' ').toLowerCase().includes('hybride');
+          const pill = `<span class="pill">${isPHEV?'PHEV':'BEV'}</span>`;
+
+          const modelRef = (v.regyear || v.id)
+            ? `Modèle ${v.regyear || '—'} – Réf: ${v.id || '—'}`
+            : '';
 
           return `
             <a class="card-link" href="vehicle.html?id=${encodeURIComponent(v.id)}">
-              <div class="card">
-                <img src="${img}" alt="${v.name}" onerror="this.src='https://via.placeholder.com/600x450?text=Image+indisponible'">
-                <div class="card-content">
-                  <h3>${v.name}</h3>
+              <article class="card">
+                <img class="thumb" src="${img}" alt="${v.name}"
+                     onerror="this.src='https://via.placeholder.com/600x450?text=Image+indisponible'">
+                <div class="body">
+                  <div class="name">${v.name}</div>
+                  <div class="submeta">${modelRef}</div>
                   <div class="price">Prix FCR (HT) : ${v.priceFCR || ''}</div>
                   <div class="meta">
                     <span>Km: ${mileage.toLocaleString('fr-FR')} km</span>
                     <span>Immat.: ${v.regyear || ''}</span>
                   </div>
                   <ul class="features">
-                    ${relevant.map(f => `<li>• ${f}</li>`).join('')}
+                    ${relevant.map(f=>`<li>• ${f}</li>`).join('')}
                   </ul>
-                  <div class="btn-details">Voir les détails</div>
+                  ${pill}
                 </div>
-              </div>
+              </article>
             </a>
           `;
         }).join('');
 
-        grid.innerHTML = cardHtml;
-      } catch (e) {
+        mount.innerHTML = cards;
+      }catch(e){
         console.error('Catalogue load failed:', e);
-        grid.innerHTML = '<p style="color:#c53030;">Erreur : impossible de charger le catalogue.</p>';
+        mount.innerHTML = `<p style="grid-column:1/-1;color:#c53030">Erreur : impossible de charger le catalogue.</p>`;
       }
     })();
   </script>
