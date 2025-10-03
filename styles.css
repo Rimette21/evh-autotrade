@@ -237,4 +237,33 @@ nav a{color:#fff;font-weight:500}
   stroke-width:2; fill:none;
   stroke-linecap:round; stroke-linejoin:round;
 }
+/* === PATCH: header logo plus grand === */
+.logo img{height:80px}
+@media (max-width:680px){
+  .logo img{height:64px}
+}
+
+/* === PATCH: bannière plus haute + image dézoommée === */
+.banner{
+  position:relative;
+  width:100%;
+  height:540px;           /* ← hauteur demandée */
+  overflow:hidden;        /* cache le surplus */
+  background:none;        /* l'image est déplacée dans ::before */
+}
+
+/* Image de fond scalable dans un pseudo-élément */
+.banner::before{
+  content:"";
+  position:absolute; inset:0;
+  background:url('images/EVH_HERO.jpg') center/cover no-repeat;
+  transform: scale(.88);  /* ← zoom -12% demandé */
+  transform-origin: center top; /* ancrage en haut (donne un peu plus de “bas”) */
+}
+/* Ajustements mobile */
+@media (max-width:680px){
+  .banner{height:380px}
+  .banner::before{transform: scale(.95)} /* moins de dézoom sur petit écran */
+}
+
 
