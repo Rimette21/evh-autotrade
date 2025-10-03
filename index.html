@@ -41,7 +41,7 @@
     </div>
   </div>
 
-  <!-- Nos Avantages (markup v10 “Lovable” avec badges jaune pâle) -->
+  <!-- Nos Avantages -->
   <section id="avantages" class="advantages-lovable">
     <div class="adv2-head">
       <h2 class="adv2-title">Nos <span class="gradient-text accent">Avantages</span></h2>
@@ -72,14 +72,14 @@
     </div>
   </section>
 
-  <!-- Notre Catalogue (titre + sous-titre), puis la grille -->
+  <!-- Notre Catalogue -->
   <section id="catalogue" class="section--light">
     <div class="container">
       <h2 class="section-title">Notre <span class="accent">Catalogue</span></h2>
       <p class="section-lead">Des SUV électriques et hybrides récents, au meilleur prix, avec transport inclus au port de destination.</p>
     </div>
 
-    <!-- Grille de cartes (classes v10) -->
+    <!-- Grille de cartes -->
     <div id="vehicles-grid" class="grid">
       <p>Chargement du catalogue…</p>
     </div>
@@ -95,21 +95,34 @@
           grid.innerHTML = '<p>Aucun véhicule disponible pour le moment.</p>';
           return;
         }
-        grid.innerHTML = vehicles.map(v => {
-          const maxFeat = Number.isFinite(v.featuresCount) ? v.featuresCount : 4;
 
-      const feats = (v.features || []).filter(f =>
-      f.toLowerCase().includes("autonomie") ||
-      f.toLowerCase().includes("moteur") ||
-      f.toLowerCase().includes("transmission") ||
-      f.toLowerCase().includes("cam")
-    ).slice(0, maxFeat);
+        grid.innerHTML = vehicles.map(v => {
+          // 1) mots-clés prioritaires
+          const KEYWORDS = ['autonomie', 'moteur', 'transmission', 'cam'];
+          const uniq = arr => [...new Set((arr || []).map(x => String(x)))];
+
+          const all = uniq(v.features);
+          const primary = all.filter(f => KEYWORDS.some(k => f.toLowerCase().includes(k)));
+          const secondary = all.filter(f => !primary.includes(f));
+
+          // 2) nombre de puces cible : v.featuresCount (si fourni) sinon 4
+          const target = Number.isFinite(v.featuresCount) ? v.featuresCount : 4;
+
+          // 3) compose la liste, complète, puis pad si besoin
+          let feats = [...primary, ...secondary].slice(0, target);
+          while (feats.length < target) feats.push('__placeholder__');
+
+          const featuresHTML = feats.map(f =>
+            f === '__placeholder__'
+              ? '<li class="placeholder">•</li>'
+              : `<li>• ${f}</li>`
+          ).join('');
+
           const km = (v.mileage ?? 0).toLocaleString('fr-FR');
 
           return `
             <a class="card-link" href="vehicle.html?id=${encodeURIComponent(v.id)}">
               <article class="card">
-                <!-- IMPORTANT : classe .thumb pour forcer un rendu homogène -->
                 <img class="thumb" src="${v.images?.hero || ''}" alt="${v.name}"
                      onerror="this.src='https://via.placeholder.com/400x300?text=Image+non+disponible'">
                 <div class="body">
@@ -121,7 +134,7 @@
                     <span>Immat. : ${v.regyear || '-'}</span>
                   </div>
                   <ul class="features">
-                    ${feats.map(f => `<li>• ${f}</li>`).join('')}
+                    ${featuresHTML}
                   </ul>
                 </div>
               </article>
