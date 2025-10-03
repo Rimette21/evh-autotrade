@@ -1,1 +1,87 @@
+{
+  "id": "EVH9382121",
+  "name": "2025 Toyota bZ5 BEV",
+  "priceFCR": "29 500 €",
+  "mileage": 5000,
+  "regyear": "2025-09",
+  "images": {
+    "hero": "images/EVH9382121_TOYOTA_COTE%20DROIT.png",
+    "gallery": [
+      "images/EVH9382121_TOYOTA_COTE_GAUCHE.png",
+      "images/EVH9382121_TOYOTA_FACEDEVANT.png",
+      "images/EVH9382121_TOYOTA_INTDEVANT.png",
+      "images/EVH9382121_TOYOTA_TABBORD.png",
+      "images/EVH9382121_TOYOTA_ARRIERE.png"
+    ]
+  },
+  "caracteristiques": [
+    "100% électrique (BEV)",
+    "Autonomie 550 km",
+    "Puissance moteur 200 kW",
+    "Transmission AT",
+    "Traction 2WD",
+    "Caméra 360°",
+    "Régulateur de vitesse adaptatif",
+    "5 places"
+  ],
+  "features": [
+    "BEV",
+    "Autonomie 550 km",
+    "Puissance 200 kW",
+    "AT",
+    "2WD",
+    "Caméra 360°",
+    "ACC",
+    "5 places"
+  ],
+  "specifications": {
+    "puissance": "200 kW",
+    "transmission": "AT",
+    "traction": "2WD",
+    "autonomieElectrique": "550 km",
+    "typeCarrosserie": "SUV",
+    "couleur": "Gris argenté",
+    "dimensions": {
+      "longueur": "4780 mm",
+      "largeur": "1866 mm",
+      "hauteur": "1510 mm"
+    },
+    "poids": "1950 kg",
+    "capaciteMax": "2365 kg",
+    "volumeVehicule": "13.47 m³",
+    "places": "5",
+    "portes": "5"
+  },
+  "equipements": {
+    "interieur": [
+      "Toit ouvrant",
+      "Sièges en cuir",
+      "Sièges électriques",
+      "Sièges chauffants",
+      "Vitres électriques",
+      "Climatisation automatique",
+      "Jantes alliage"
+    ],
+    "securite": [
+      "Airbag conducteur",
+      "Airbag passager",
+      "Airbags latéraux",
+      "Airbag genoux",
+      "Caméra 360°",
+      "Radar de stationnement",
+      "Régulateur de vitesse adaptatif",
+      "Direction assistée"
+    ],
+    "connectivite": [
+      "Bluetooth",
+      "GPS",
+      "Verrouillage centralisé",
+      "Accès sans clé",
+      "Démarrage sans clé"
+    ]
+  },
+  "garantie": "Garantie importateur 2 ans (voir conditions dans CGV)",
+  "localisation": "Xiamen, Fujian, Chine",
+  "disponibilite": "Livraison au port de destination : 45 jours"
+}
 
