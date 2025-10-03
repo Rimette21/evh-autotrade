@@ -1,6 +1,10 @@
+/* =========================================================
+   EVH AUTOTRADE — STYLES GLOBAUX
+   ========================================================= */
+
 /* ========== Variables & reset ========== */
 :root{
-  --bg:#e5b34a;
+  --bg:#e5b34a;           /* fond doré global */
   --text:#1a1f25;
   --muted:#6b7280;
   --muted-2:#374151;
@@ -8,8 +12,8 @@
   --shadow:0 6px 24px rgba(0,0,0,.12);
   --radius-lg:18px;
   --radius-sm:12px;
-  --brand:#e53e3e;
-  --green:#20b26b; /* BEV/PHEV badge */
+  --brand:#e53e3e;        /* rouge EVH */
+  --green:#20b26b;        /* badge BEV/PHEV */
 }
 
 *{margin:0;padding:0;box-sizing:border-box}
@@ -21,7 +25,9 @@ body{
 a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block}
 
-/* ========== Header commun ========== */
+/* =========================================================
+   HEADER
+   ========================================================= */
 header{
   background:#1a1f25; color:#fff; padding:.75rem 2rem;
   display:flex; justify-content:space-between; align-items:center;
@@ -35,115 +41,95 @@ header{
 nav ul{display:flex;list-style:none;gap:1.5rem}
 nav a{color:#fff;font-weight:500}
 
-/* ========== Boutons & utilitaires ========== */
-.btn{display:inline-block;background:var(--brand);color:#fff;padding:.8rem 1.2rem;border-radius:999px;font-weight:800}
+/* =========================================================
+   BOUTONS & UTILITAIRES
+   ========================================================= */
+.btn{
+  display:inline-block;background:var(--brand);color:#fff;
+  padding:.8rem 1.2rem;border-radius:999px;font-weight:800
+}
 .btn:hover{filter:brightness(.95)}
-.pill{display:inline-block;font-size:.78rem;font-weight:700;color:#fff;background:var(--green);border-radius:999px;padding:.2rem .55rem}
+.pill{
+  display:inline-block;font-size:.78rem;font-weight:700;color:#fff;
+  background:var(--green);border-radius:999px;padding:.2rem .55rem
+}
 .muted{color:var(--muted)}
 .muted-2{color:var(--muted-2)}
 .text-brand{color:var(--brand)}
-
-/* ========== Section générique ========== */
 .container{max-width:1150px;margin:2rem auto;padding:0 1.25rem}
 
 /* =========================================================
-   INDEX (page Catalogue)
+   BANNIÈRE D'ACCUEIL
    ========================================================= */
-/* Bannière */
-.banner{position:relative;width:100%;height:440px;background:url('images/EVH_HERO.jpg') center/cover no-repeat}
+.banner{
+  position:relative;width:100%;height:420px;
+  background:url('images/EVH_HERO.jpg') center/cover no-repeat
+}
 .banner-cta{position:absolute;bottom:28px;left:4%}
 
-/* Avantages */
-.section{padding:2rem 1.25rem;max-width:1150px;margin:0 auto}
-.adv-title{font-size:2rem;margin:0 0 .5rem}
-.adv-sub{color:var(--muted);margin-bottom:1.25rem}
-.adv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
-.adv-card{background:var(--white);border-radius:var(--radius-sm);padding:1.2rem;box-shadow:var(--shadow)}
-.adv-icon{font-size:1.6rem;color:var(--brand);margin-bottom:.35rem}
+/* =========================================================
+   SECTIONS TITRÉES (pour “Notre Catalogue”, etc.)
+   ========================================================= */
+.section--light{background:#f6f7fb;padding:3rem 0}
+.section--light .container{max-width:1150px;margin:0 auto;padding:0 1.25rem}
+.section-title{
+  text-align:center;font-size:2.4rem;font-weight:800;letter-spacing:.2px;margin:0 0 .6rem
+}
+.section-title .accent{color:var(--brand)}
+.section-lead{
+  text-align:center;color:var(--muted);max-width:860px;margin:0 auto 2rem
+}
 
-/* Grille catalogue */
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;max-width:1150px;margin:0 auto 2rem;padding:0 1.25rem}
+/* =========================================================
+   “NOS AVANTAGES” — STYLE LOVABLE
+   (Titre centré, gradient sur “Avantages”, cartes soft avec badge)
+   ========================================================= */
+.advantages-lovable{background:#f6f7fb;padding:3rem 0}
+.adv2-head{text-align:center;margin-bottom:2rem}
+.adv2-title{font-size:2.4rem;font-weight:800;margin:0 0 .6rem}
+.adv2-title .gradient-text{
+  background:linear-gradient(90deg,#f6d365 0%,#fda085 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.adv2-sub{color:#6b7280;max-width:860px;margin:0 auto}
+.adv2-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;
+  max-width:1150px;margin:0 auto;padding:0 1.25rem
+}
+.adv2-card{
+  background:linear-gradient(180deg,#ffffff 0%,#faf7f2 100%);
+  border-radius:18px; box-shadow:0 8px 26px rgba(0,0,0,.08);
+  transition:transform .25s ease, box-shadow .25s ease;
+  border:0; text-align:center;
+}
+.adv2-card:hover{transform:translateY(-8px); box-shadow:0 14px 40px rgba(0,0,0,.12)}
+.adv2-card .inner{padding:1.4rem}
+.adv2-badge{
+  width:64px;height:64px;border-radius:999px;margin:0 auto .9rem;
+  display:flex;align-items:center;justify-content:center;
+  background:rgba(245,158,11,.12); /* primary/10 (amber) */
+  color:#d97706; /* amber-600 */
+  font-size:28px; line-height:1;
+}
+.adv2-title-sm{font-size:1.05rem;font-weight:800;margin:.25rem 0 .35rem;color:#0f172a}
+.adv2-desc{color:#6b7280;font-size:.95rem;line-height:1.55}
+
+/* =========================================================
+   GRILLE CATALOGUE (page d’accueil)
+   ========================================================= */
+.grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;
+  max-width:1150px;margin:0 auto 2rem;padding:0 1.25rem
+}
 .card-link{display:block}
-.card{background:var(--white);border-radius:var(--radius-lg);box-shadow:var(--shadow);overflow:hidden;transition:transform .2s ease}
+.card{
+  background:var(--white);border-radius:var(--radius-lg);
+  box-shadow:var(--shadow);overflow:hidden;
+  transition:transform .2s ease
+}
 .card:hover{transform:translateY(-3px)}
-/* Vignettes uniformes, véhicule entier non recadré */
+/* Vignettes uniformes, sans recadrage véhicule */
 .thumb{width:100%;height:220px;object-fit:contain;object-position:center;background:#f3f4f6}
 .body{padding:1rem}
 .name{font-size:1.05rem;font-weight:800;margin-bottom:.35rem}
-.submeta{color:var(--muted);font-size:.88rem;margin-top:.1rem;margin-bottom:.35rem}
-.price{color:var(--brand);font-weight:800;margin:.25rem 0}
-.meta{display:flex;justify-content:space-between;color:var(--muted);font-size:.92rem;margin:.25rem 0 .5rem}
-.features{list-style:none;color:#111;opacity:.9;font-size:.92rem}
-.features li{margin:.25rem 0}
-
-/* =========================================================
-   VEHICLE (page Détail)
-   ========================================================= */
-.back-link{display:inline-block;color:#0e1726;text-decoration:none;font-weight:600;margin-bottom:1rem}
-.back-link:hover{text-decoration:underline}
-
-.vehicle-header{
-  display:grid;grid-template-columns:1fr auto;gap:1rem;align-items:start;margin-bottom:1.25rem
-}
-.vehicle-title h1{font-size:2.1rem;margin-bottom:.35rem}
-.vehicle-meta{color:var(--muted)}
-.price-stack{text-align:right}
-.price-big{font-size:1.6rem;color:var(--brand);font-weight:800}
-.price-sub{color:#9ca3af;font-size:.9rem;margin-top:.15rem}
-
-.content-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:1.25rem}
-.card-box{background:var(--white);border-radius:var(--radius-lg);box-shadow:var(--shadow)}
-.image-card{padding:1rem}
-.hero-img{width:100%;height:420px;object-fit:cover;border-radius:14px;margin-bottom:1rem;cursor:pointer}
-.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem}
-.gallery img{width:100%;height:130px;object-fit:cover;border-radius:10px;cursor:pointer}
-
-/* Spécifs : police + petite / valeurs gris foncé / ligne suivante */
-.specs-card{padding:1.05rem}
-.card-title{font-size:1.02rem;font-weight:800;margin-bottom:.7rem}
-.specs-grid{display:grid;grid-template-columns:1fr 1fr;gap:.9rem 1.1rem}
-.spec-item{font-size:.9rem}
-.spec-label{color:var(--muted);display:block;margin-bottom:.12rem}
-.spec-value{display:block;font-weight:600;color:var(--muted-2)}
-.spec-compact .spec-value{font-size:.88rem;white-space:nowrap}
-.divider{height:1px;background:#eef2f7;margin:.85rem 0}
-
-/* Équipements & Caractéristiques */
-.equip-card{padding:1.05rem;margin-top:1.05rem}
-.equip-grid{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
-.equip-list{list-style:none;font-size:.95rem}
-.equip-list li{margin:.35rem 0;padding-left:1.1rem;position:relative}
-.equip-list li::before{content:"•";color:var(--brand);font-weight:900;position:absolute;left:0;top:.05rem}
-
-.features-card{padding:1.05rem;margin-top:1.05rem}
-.features-grid{display:grid;grid-template-columns:1fr 1fr;gap:.7rem}
-.feature{display:flex;align-items:center;gap:.45rem;font-size:.95rem}
-.feature .icon{font-size:.95rem;color:#111;opacity:.7}
-
-.cta-card{padding:1.15rem;margin-top:1.05rem;text-align:center}
-
-/* Lightbox */
-#lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,.9);z-index:9999;align-items:center;justify-content:center;flex-direction:column}
-#lightbox img{max-width:90%;max-height:80%;border-radius:10px}
-#close{position:absolute;top:20px;right:30px;font-size:2rem;color:#fff;cursor:pointer}
-#prev,#next{position:absolute;top:50%;transform:translateY(-50%);font-size:2rem;color:#fff;cursor:pointer}
-#prev{left:30px} #next{right:30px}
-
-/* ========== Responsive ========== */
-@media (max-width:1100px){
-  .grid{grid-template-columns:repeat(2,1fr)}
-  .banner{height:360px}
-}
-@media (max-width:980px){
-  .content-grid{grid-template-columns:1fr}
-  .hero-img{height:360px}
-  .price-stack{text-align:left}
-}
-@media (max-width:680px){
-  .grid{grid-template-columns:1fr}
-  .adv-grid{grid-template-columns:1fr}
-  .banner{height:300px}
-  .vehicle-title h1{font-size:1.6rem}
-  .gallery{grid-template-columns:repeat(2,1fr)}
-  .features-grid,.equip-grid,.specs-grid{grid-template-columns:1fr}
-}
+.sub
