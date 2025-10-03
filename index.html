@@ -6,6 +6,7 @@
   <title>E.V.H. AUTOTRADE — Véhicules électriques & hybrides</title>
   <meta name="description" content="Importation directe de SUV hybrides et électriques vers l'Afrique et l'Europe. Prix imbattables, véhicules neufs garantis, livraison rapide.">
   <link rel="preload" as="image" href="images/EVH_HERO.jpg">
+  <!-- IMPORTANT : forcer le chargement du bon CSS -->
   <link rel="stylesheet" href="styles.css?v=11">
 </head>
 <body>
@@ -24,7 +25,7 @@
     <nav>
       <ul>
         <li><a href="index.html">Accueil</a></li>
-        <li><a href="#vehicles-grid">Catalogue</a></li>
+        <li><a href="#catalogue">Catalogue</a></li>
         <li><a href="#avantages">Avantages</a></li>
         <li><a href="#">Acheter</a></li>
         <li><a href="#">À propos</a></li>
@@ -33,14 +34,14 @@
     </nav>
   </header>
 
-  <!-- Bannière v10 (simple) -->
+  <!-- Bannière v10 (simple, pas de wrapper) -->
   <div class="banner">
     <div class="banner-cta">
-      <a href="#vehicles-grid" class="btn">Découvrez notre catalogue</a>
+      <a href="#catalogue" class="btn">Découvrez notre catalogue</a>
     </div>
   </div>
 
-  <!-- Avantages (markup v10 “Lovable”) -->
+  <!-- Nos Avantages (markup v10 “Lovable” avec badges jaune pâle) -->
   <section id="avantages" class="advantages-lovable">
     <div class="adv2-head">
       <h2 class="adv2-title">Nos <span class="gradient-text accent">Avantages</span></h2>
@@ -71,13 +72,21 @@
     </div>
   </section>
 
-  <!-- Catalogue -->
-  <div id="vehicles-grid" class="grid">
-    <p>Chargement du catalogue…</p>
-  </div>
+  <!-- Notre Catalogue (titre + sous-titre), puis la grille -->
+  <section id="catalogue" class="section--light">
+    <div class="container">
+      <h2 class="section-title">Notre <span class="accent">Catalogue</span></h2>
+      <p class="section-lead">Des SUV électriques et hybrides récents, au meilleur prix, avec transport inclus au port de destination.</p>
+    </div>
+
+    <!-- Grille de cartes (classes v10) -->
+    <div id="vehicles-grid" class="grid">
+      <p>Chargement du catalogue…</p>
+    </div>
+  </section>
 
   <script>
-    // Charge la liste depuis hero.json
+    // Charge la liste depuis hero.json (cache-bust + no-store)
     fetch('data/hero.json?v=11', { cache: 'no-store' })
       .then(res => res.json())
       .then(vehicles => {
@@ -98,6 +107,7 @@
           return `
             <a class="card-link" href="vehicle.html?id=${encodeURIComponent(v.id)}">
               <article class="card">
+                <!-- IMPORTANT : classe .thumb pour forcer un rendu homogène -->
                 <img class="thumb" src="${v.images?.hero || ''}" alt="${v.name}"
                      onerror="this.src='https://via.placeholder.com/400x300?text=Image+non+disponible'">
                 <div class="body">
