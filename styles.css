@@ -218,3 +218,23 @@ nav a{color:#fff;font-weight:500}
   .adv2-grid{grid-template-columns:1fr}
   .adv2-title{font-size:2rem}
 }
+/* --- Titres harmonisés : même gradient pour "Nos Avantages" ET "Notre Catalogue" --- */
+.section-title .accent,
+.adv2-title .gradient-text{
+  background:linear-gradient(90deg,#f6d365 0%,#fda085 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+/* --- Badges d'icônes : neutres / jaune très pâle --- */
+.adv2-badge{
+  width:64px;height:64px;border-radius:999px;margin:0 auto .9rem;
+  display:flex;align-items:center;justify-content:center;
+  background:#fff4db;            /* jaune très pâle */
+  border:1px solid #fde68a;      /* liseré discret */
+}
+.adv2-badge svg{
+  width:28px;height:28px;
+  stroke:#d6a63a;                /* jaune-or doux pour les traits */
+  stroke-width:2; fill:none;
+  stroke-linecap:round; stroke-linejoin:round;
+}
+
