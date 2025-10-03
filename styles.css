@@ -1,165 +1,237 @@
 /* =========================================================
-   E.V.H. AUTOTRADE  —  styles.css (site global)
-   ---------------------------------------------------------
-   - Header commun (logo + navigation)
-   - Bannière avec bandes latérales 1 cm
-   - Section "Avantages"
-   - Catalogue (grille de cartes)
-   - Page Détail véhicule (specs, galerie + lightbox)
-   - Responsive
+   EVH AUTOTRADE — STYLES GLOBAUX (v10, bannière simplifiée)
    ========================================================= */
 
-/* ---------- Reset minimal ---------- */
-*{box-sizing:border-box}
-html,body{margin:0;padding:0}
-img{max-width:100%;height:auto;display:block}
-
-/* ---------- Variables ---------- */
+/* ========== Variables & reset ========== */
 :root{
-  --header-bg:#1a1f25;     /* barre d'en-tête + bandes latérales */
-  --brand-red:#e53e3e;     /* accent rouge EVH */
-  --text:#333;
-  --muted:#666;
-  --card:#ffffff;
-  --card-muted:#f9fafb;
-  --shadow-sm:0 2px 8px rgba(0,0,0,.1);
-  --shadow-md:0 4px 12px rgba(0,0,0,.08);
-  --shadow-lg:0 8px 24px rgba(0,0,0,.12);
+  --bg:#e5b34a;
+  --text:#1a1f25;
+  --muted:#6b7280;
+  --muted-2:#374151;
+  --white:#fff;
+  --shadow:0 6px 24px rgba(0,0,0,.12);
+  --radius-lg:18px;
+  --radius-sm:12px;
+  --brand:#e53e3e;
+  --green:#20b26b;
 }
 
-/* ---------- Body ---------- */
-body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Open Sans",sans-serif;background:#f5f7fa;color:var(--text);line-height:1.6}
-body.page-vehicle{background:#e5b34a} /* active sur vehicle.html si <body class="page-vehicle"> */
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%}
+body{
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+  background:var(--bg); color:var(--text); line-height:1.55;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
 
-/* ---------- Header / Navigation (commun) ---------- */
-.site-header{
-  background:var(--header-bg);color:#fff;padding:.75rem 2rem;
-  display:flex;align-items:center;justify-content:space-between;
-  box-shadow:var(--shadow-sm);position:relative;z-index:10
+/* =========================================================
+   HEADER
+   ========================================================= */
+header{
+  background:#1a1f25; color:#fff; padding:.75rem 2rem;
+  display:flex; justify-content:space-between; align-items:center;
+  box-shadow:0 2px 8px rgba(0,0,0,.1)
 }
-.brand{display:flex;align-items:center;gap:.8rem;color:inherit;text-decoration:none}
-.brand-mark{
-  height:84px;border-radius:10px;background:var(--header-bg);display:block;
-  /* Harmonisation si PNG non transparent */
-  filter:grayscale(1) brightness(.95) contrast(1.05);
-}
-.brand-text{display:flex;gap:.35rem;line-height:1}
-.brand-text .evh{font-weight:800;font-size:2.05rem;letter-spacing:.5px;color:#fff}
-.brand-text .autotrade{font-weight:900;font-size:2.05rem;color:var(--brand-red)}
-.main-nav ul{display:flex;list-style:none;gap:1.5rem;margin:0;padding:0}
-.main-nav a{color:#fff;text-decoration:none;font-weight:600}
-.main-nav a:hover{color:var(--brand-red)}
+.logo-wrap{display:flex;align-items:center;gap:1rem}
+.logo img{height:80px}
+@media (max-width:680px){ .logo img{height:64px} }
+.brand{display:flex;gap:.25rem;align-items:center}
+.brand .evh{font-weight:800}
+.brand .autotrade{font-weight:800;color:var(--brand)}
+nav ul{display:flex;list-style:none;gap:1.5rem}
+nav a{color:#fff;font-weight:500}
 
-@media (min-width:1200px){
-  .brand-mark{height:92px}
-  .brand-text .evh,.brand-text .autotrade{font-size:2.25rem}
-}
-@media (max-width:680px){
-  .brand-mark{height:70px}
-  .brand-text .evh,.brand-text .autotrade{font-size:1.6rem}
-}
-
-/* ---------- Boutons génériques ---------- */
+/* =========================================================
+   BOUTONS & UTILITAIRES
+   ========================================================= */
 .btn{
-  display:inline-block;background:var(--brand-red);color:#fff;
-  padding:.75rem 1.5rem;border-radius:30px;text-decoration:none;font-weight:700
+  display:inline-block;background:var(--brand);color:#fff;
+  padding:.8rem 1.2rem;border-radius:999px;font-weight:800
 }
 .btn:hover{filter:brightness(.95)}
-
-/* ---------- Bannière avec bandes latérales ---------- */
-/* HTML attendu :
-   <div class="banner-rails">
-     <div class="banner"></div>
-   </div>
-*/
-.banner-rails{
-  background:var(--header-bg);
-  padding-left:1cm;  /* bandes latérales */
-  padding-right:1cm;
+.pill{
+  display:inline-block;font-size:.78rem;font-weight:700;color:#fff;
+  background:var(--green);border-radius:999px;padding:.2rem .55rem
 }
+.container{max-width:1150px;margin:2rem auto;padding:0 1.25rem}
+
+/* =========================================================
+   BANNIÈRE — version SIMPLE (pas de ::before)
+   ========================================================= */
 .banner{
-  height:540px;
-  background:url('images/EVH_HERO.jpg') 55% 18% / cover no-repeat;
+  position:relative;
+  width:100%;
+  height:540px;                  /* hauteur souhaitée */
+  overflow:hidden;
+  background-image:url('images/EVH_HERO.jpg');
+  background-repeat:no-repeat;
+  background-size:cover;         /* couvre toujours toute la largeur */
+  background-position:center 12%;/* ajuste verticalement si besoin */
 }
+/* SI jamais une ancienne règle avec ::before trainait en cache, on la neutralise */
+.banner::before{content:none !important;}
+.banner-cta{position:absolute;bottom:28px;left:4%}
+
 @media (max-width:680px){
-  .banner{height:380px;background-position:50% 22%}
+  .banner{height:380px}
 }
 
-/* ---------- Section Avantages (simple, compatible) ---------- */
-.advantages-section{padding:3rem 1.5rem;background:#fff;text-align:center}
-.advantages-section h2{font-size:2.2rem;margin:0 0 .4rem;color:#1a1f25}
-.advantages-section p{max-width:860px;margin:0 auto 1.2rem;color:var(--muted)}
-.advantages-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem;margin-top:1.25rem}
-.adv-card{background:var(--card-muted);border-radius:12px;padding:1.5rem;box-shadow:var(--shadow-md)}
-.adv-icon{font-size:2rem}
-.adv-title{font-weight:800;margin:.5rem 0 .6rem;color:#1a1f25}
+/* =========================================================
+   SECTIONS TITRÉES (ex: Notre Catalogue)
+   ========================================================= */
+.section--light{background:#f6f7fb;padding:3rem 0}
+.section--light .container{max-width:1150px;margin:0 auto;padding:0 1.25rem}
+.section-title{
+  text-align:center;font-size:2.4rem;font-weight:800;letter-spacing:.2px;margin:0 0 .6rem
+}
+.section-lead{
+  text-align:center;color:var(--muted);max-width:860px;margin:0 auto 2rem
+}
+/* Harmonisation des titres (même gradient que “Nos Avantages”) */
+.section-title .accent,
+.adv2-title .gradient-text{
+  background:linear-gradient(90deg,#f6d365 0%,#fda085 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
 
-/* ---------- Catalogue / Grille de cartes ---------- */
-.grid{display:flex;flex-wrap:wrap;gap:1rem;justify-content:flex-start;padding:1rem}
+/* =========================================================
+   “NOS AVANTAGES” — Style Lovable (cartes soft + badges)
+   ========================================================= */
+.advantages-lovable{background:#f6f7fb;padding:3rem 0}
+.adv2-head{text-align:center;margin-bottom:2rem}
+.adv2-title{font-size:2.4rem;font-weight:800;margin:0 0 .6rem}
+.adv2-sub{color:#6b7280;max-width:860px;margin:0 auto}
+.adv2-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;
+  max-width:1150px;margin:0 auto;padding:0 1.25rem
+}
+.adv2-card{
+  background:linear-gradient(180deg,#ffffff 0%,#faf7f2 100%);
+  border-radius:18px; box-shadow:0 8px 26px rgba(0,0,0,.08);
+  transition:transform .25s ease, box-shadow .25s ease;
+  border:0; text-align:center;
+}
+.adv2-card:hover{transform:translateY(-8px); box-shadow:0 14px 40px rgba(0,0,0,.12)}
+.adv2-card .inner{padding:1.4rem}
+
+/* Badges d'icônes : neutres / jaune très pâle */
+.adv2-badge{
+  width:64px;height:64px;border-radius:999px;margin:0 auto .9rem;
+  display:flex;align-items:center;justify-content:center;
+  background:#fff4db;            /* jaune très pâle */
+  border:1px solid #fde68a;      /* liseré discret */
+}
+.adv2-badge svg{
+  width:28px;height:28px;
+  stroke:#d6a63a;                /* jaune-or doux */
+  stroke-width:2; fill:none;
+  stroke-linecap:round; stroke-linejoin:round;
+}
+
+.adv2-title-sm{font-size:1.05rem;font-weight:800;margin:.25rem 0 .35rem;color:#0f172a}
+.adv2-desc{color:#6b7280;font-size:.95rem;line-height:1.55}
+
+@media (max-width:1100px){ .adv2-grid{grid-template-columns:repeat(2,1fr)} }
+@media (max-width:680px){
+  .adv2-grid{grid-template-columns:1fr}
+  .adv2-title{font-size:2rem}
+}
+
+/* =========================================================
+   GRILLE CATALOGUE (page d’accueil)
+   ========================================================= */
+.grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;
+  max-width:1150px;margin:0 auto 2rem;padding:0 1.25rem
+}
+.card-link{display:block}
 .card{
-  min-width:280px;flex:1 1 300px;background:var(--card);border-radius:12px;
-  overflow:hidden;box-shadow:var(--shadow-md);transition:transform .3s, box-shadow .3s
+  background:var(--white);border-radius:var(--radius-lg);
+  box-shadow:var(--shadow);overflow:hidden;transition:transform .2s ease
 }
-.card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
-.card img{width:100%;height:200px;object-fit:cover;object-position:center;background:#eee;aspect-ratio:4/3}
-.card-content{padding:1.1rem}
-.card h3{font-size:1.08rem;margin:0 0 .4rem;color:#1a1f25;font-weight:700}
-.price{font-weight:800;color:var(--brand-red);font-size:1.25rem;margin:.4rem 0}
-.meta{display:flex;justify-content:space-between;font-size:.92rem;color:var(--muted);margin:.35rem 0 .6rem}
-.ref{font-size:.9rem;color:#444;margin-top:.25rem}
-.btn-details{
-  display:block;width:100%;background:linear-gradient(to right,#d4af37,#b8860b);
-  color:#fff;text-align:center;padding:.7rem;border-radius:8px;text-decoration:none;font-weight:700
-}
-.btn-details:hover{background:linear-gradient(to right,#c59a30,#a67c00)}
-a.stretched{display:block;color:inherit;text-decoration:none}
+.card:hover{transform:translateY(-3px)}
+.thumb{width:100%;height:220px;object-fit:contain;object-position:center;background:#f3f4f6}
+.body{padding:1rem}
+.name{font-size:1.05rem;font-weight:800;margin-bottom:.35rem}
+.submeta{color:var(--muted);font-size:.88rem;margin-top:.1rem;margin-bottom:.35rem}
+.price{color:var(--brand);font-weight:800;margin:.25rem 0}
+.meta{display:flex;justify-content:space-between;color:var(--muted);font-size:.92rem;margin:.25rem 0 .5rem}
+.features{list-style:none;color:#111;opacity:.9;font-size:.92rem}
+.features li{margin:.25rem 0}
 
-/* ---------- Mise en page générique ---------- */
-.container{max-width:1200px;margin:2rem auto;padding:0 1.5rem}
-.back-link{display:inline-block;color:#1a1f25;text-decoration:none;font-weight:700;margin-bottom:1rem}
+/* =========================================================
+   PAGE DÉTAIL (vehicle.html)
+   ========================================================= */
+.back-link{display:inline-block;color:#0e1726;text-decoration:none;font-weight:600;margin-bottom:1rem}
 .back-link:hover{text-decoration:underline}
 
-/* ---------- Page Détail véhicule ---------- */
-.vehicle-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1rem}
-.vehicle-title h1{font-size:1.9rem;color:#1a1f25;margin:.2rem 0}
-.vehicle-meta{font-size:.95rem;color:var(--muted)}
-.price-top{font-size:1.4rem;color:var(--brand-red);font-weight:800}
-
-.badge{display:inline-block;margin-top:.45rem;padding:.25rem .55rem;border-radius:999px;font-size:.8rem;font-weight:700;color:#fff}
-.badge.bev{background:#22c55e}   /* vert */
-.badge.phev{background:#eab308}  /* or  */
-
-.content-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
-.image-section,.specs-section,.equip-section,.features-section,.button-section{
-  background:#fff;border-radius:12px;padding:1.2rem;box-shadow:var(--shadow-sm)
+.vehicle-header{
+  display:grid;grid-template-columns:1fr auto;gap:1rem;align-items:start;margin-bottom:1.25rem
 }
-.hero-img{width:100%;max-height:420px;object-fit:cover;border-radius:8px;margin-bottom:.8rem}
-.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:.6rem}
-.gallery img{width:100%;height:100px;object-fit:cover;border-radius:6px;cursor:pointer}
+.vehicle-title h1{font-size:2.1rem;margin-bottom:.35rem}
+.vehicle-meta{color:var(--muted)}
+.price-stack{text-align:right}
+.price-big{font-size:1.6rem;color:var(--brand);font-weight:800}
+.price-sub{color:#9ca3af;font-size:.9rem;margin-top:.15rem}
 
-.specs-section h2,.equip-section h2,.features-section h2{color:#1a1f25;margin-bottom:.7rem;font-size:1.2rem}
-.specs-grid{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
-.spec-item{display:flex;justify-content:space-between;font-size:.92rem;color:#333}
-.spec-item span:first-child{color:#555}
+.content-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:1.25rem}
+.card-box{background:var(--white);border-radius:var(--radius-lg);box-shadow:var(--shadow)}
+.image-card{padding:1rem}
+.hero-img{width:100%;height:420px;object-fit:cover;border-radius:14px;margin-bottom:1rem;cursor:pointer}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem}
+.gallery img{width:100%;height:130px;object-fit:cover;border-radius:10px;cursor:pointer}
 
-.equip-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-.equip-list{list-style:none;margin:0;padding:0}
-.equip-list li{margin:.35rem 0;position:relative;padding-left:1.1rem}
-.equip-list li:before{content:"•";position:absolute;left:0;color:var(--brand-red);font-weight:700}
+/* Spécifs aéré, police plus petite, valeurs gris foncé */
+.specs-card{padding:1.05rem}
+.card-title{font-size:1.02rem;font-weight:800;margin-bottom:.7rem}
+.specs-grid{display:grid;grid-template-columns:1fr 1fr;gap:.9rem 1.1rem}
+.spec-item{font-size:.9rem}
+.spec-label{color:var(--muted);display:block;margin-bottom:.12rem}
+.spec-value{display:block;font-weight:600;color:var(--muted-2)}
+.spec-compact .spec-value{font-size:.88rem;white-space:nowrap}
+.divider{height:1px;background:#eef2f7;margin:.85rem 0}
 
-.btn-devise{display:block;width:100%;background:var(--brand-red);color:#fff;text-align:center;padding:.75rem;border-radius:8px;text-decoration:none;font-weight:700}
-.btn-devise:hover{filter:brightness(.95)}
+/* Équipements & Caractéristiques */
+.equip-card{padding:1.05rem;margin-top:1.05rem}
+.equip-grid{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+.equip-list{list-style:none;font-size:.95rem}
+.equip-list li{margin:.35rem 0;padding-left:1.1rem;position:relative}
+.equip-list li::before{content:"•";color:var(--brand);font-weight:900;position:absolute;left:0;top:.05rem}
 
-/* ---------- Lightbox simple (galerie détails) ---------- */
-.lightbox{position:fixed;inset:0;background:rgba(0,0,0,.85);display:none;align-items:center;justify-content:center;z-index:9999}
-.lightbox img{max-width:90vw;max-height:85vh;border-radius:8px}
-.lightbox .nav{position:absolute;top:50%;transform:translateY(-50%);font-size:2rem;color:#fff;cursor:pointer;user-select:none;padding:.5rem 1rem}
-.lightbox .prev{left:1rem}
-.lightbox .next{right:1rem}
-.lightbox .close{position:absolute;top:1rem;right:1rem;font-size:2rem;cursor:pointer;color:#fff}
+.features-card{padding:1.05rem;margin-top:1.05rem}
+.features-grid{display:grid;grid-template-columns:1fr 1fr;gap:.7rem}
+.feature{display:flex;align-items:center;gap:.45rem;font-size:.95rem}
+.feature .icon{font-size:.95rem;color:#111;opacity:.7}
 
-/* ---------- Responsive ---------- */
-@media (max-width:900px){
+.cta-card{padding:1.15rem;margin-top:1.05rem;text-align:center}
+
+/* =========================================================
+   LIGHTBOX (galerie plein écran)
+   ========================================================= */
+#lightbox{
+  display:none;position:fixed;inset:0;background:rgba(0,0,0,.9);
+  z-index:9999;align-items:center;justify-content:center;flex-direction:column
+}
+#lightbox img{max-width:90%;max-height:80%;border-radius:10px}
+#close{position:absolute;top:20px;right:30px;font-size:2rem;color:#fff;cursor:pointer}
+#prev,#next{position:absolute;top:50%;transform:translateY(-50%);font-size:2rem;color:#fff;cursor:pointer}
+#prev{left:30px} #next{right:30px}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width:1100px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:980px){
   .content-grid{grid-template-columns:1fr}
-  .hero-img{max-height:360px}
+  .hero-img{height:360px}
+  .price-stack{text-align:left}
+}
+@media (max-width:680px){
+  .grid{grid-template-columns:1fr}
+  .vehicle-title h1{font-size:1.6rem}
+  .gallery{grid-template-columns:repeat(2,1fr)}
+  .features-grid,.equip-grid,.specs-grid{grid-template-columns:1fr}
 }
