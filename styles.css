@@ -235,3 +235,37 @@ nav a{color:#fff;font-weight:500}
   .gallery{grid-template-columns:repeat(2,1fr)}
   .features-grid,.equip-grid,.specs-grid{grid-template-columns:1fr}
 }
+/* Bannière plein-bord avec la nouvelle image */
+.banner::before{content:none !important;} /* neutralise tout ancien pseudo-élément */
+
+.banner{
+  position: relative;
+  width: 100%;
+  height: 540px;
+  overflow: hidden;
+  background-image: url('images/EVH_HERO.jpg'); /* ← ta nouvelle bannière */
+  background-repeat: no-repeat;
+  background-size: cover;         /* remplit toujours la largeur */
+  background-position: 55% 18%;   /* focus au centre-droit ; ajuste au besoin */
+}
+
+/* Très grands écrans : on peut montrer un peu plus à droite si tu veux */
+@media (min-width: 1600px){
+  .banner{ background-position: 60% 18%; }
+}
+
+/* Tablette */
+@media (max-width: 1024px){
+  .banner{ background-position: 50% 20%; }
+}
+
+/* Mobile */
+@media (max-width: 680px){
+  .banner{
+    height: 380px;
+    background-position: 50% 24%;
+  }
+}
+
+
+
