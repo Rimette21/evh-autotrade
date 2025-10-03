@@ -1,1 +1,92 @@
+{
+  "id": "EVH9403325",
+  "name": "2025 Haval Fierce Dragon MAX 1.5L 116HP L4 2DHT PHEV",
+  "priceFCR": "26 590 €",
+  "mileage": 900,
+  "regyear": "2025-09",
+
+  "images": {
+    "hero": "images/EVH9403325_HAVAL_DROIT.jpg",
+    "gallery": [
+      "images/EVH9403325_HAVAL_DEV_GAUCHE.jpg",
+      "images/EVH9403325_HAVAL_ARRIERE.jpg",
+      "images/EVH9403325_HAVAL_FACE%20DEVANT.jpg",
+      "images/EVH9403325_HAVAL_FACEARRIERE.jpg",
+      "images/EVH9403325_HAVAL_INT_DEVANT.jpg",
+      "images/EVH9403325_HAVAL_gauche.jpg"
+    ]
+  },
+
+  "caracteristiques": [
+    "Hybride rechargeable (PHEV)",
+    "Autonomie électrique 110 km",
+    "Transmission DHT",
+    "Transmission intégrale (4WD/AWD)",
+    "Caméra 360°",
+    "5 places",
+    "Régulateur de vitesse adaptatif"
+  ],
+  "features": [
+    "PHEV",
+    "Autonomie 110 km",
+    "DHT",
+    "4WD/AWD",
+    "Caméra 360°",
+    "ACC",
+    "5 places"
+  ],
+
+  "specifications": {
+    "moteur": "1.5L 116HP L4",
+    "puissance": "220 kW",
+    "transmission": "DHT",
+    "traction": "4WD/AWD",
+    "typeCarrosserie": "SUV",
+    "couleur": "Blanc",
+    "autonomieElectrique": "110 km",
+    "dimensions": {
+      "longueur": "4780 mm",
+      "largeur": "1895 mm",
+      "hauteur": "1725 mm"
+    },
+    "poids": "2000 kg",
+    "capaciteMax": "2425 kg",
+    "volumeVehicule": "15.63 m³",
+    "places": "5",
+    "portes": "5"
+  },
+
+  "equipements": {
+    "interieur": [
+      "Toit ouvrant",
+      "Sièges en cuir",
+      "Sièges électriques",
+      "Sièges chauffants",
+      "Sièges ventilés",
+      "Vitres électriques",
+      "Climatisation automatique",
+      "Jantes alliage"
+    ],
+    "securite": [
+      "Airbag conducteur",
+      "Airbag passager",
+      "Airbags latéraux",
+      "Caméra 360°",
+      "Radar de stationnement",
+      "Régulateur de vitesse adaptatif",
+      "Direction assistée"
+    ],
+    "connectivite": [
+      "Bluetooth",
+      "GPS",
+      "Verrouillage centralisé",
+      "Accès sans clé",
+      "Démarrage sans clé"
+    ]
+  },
+
+  "garantie": "Garantie importateur 2 ans (voir conditions dans CGV)",
+  "localisation": "Huaihua, Hunan, Chine",
+  "disponibilite": "Livraison au port de destination : 45 jours"
+}
 
