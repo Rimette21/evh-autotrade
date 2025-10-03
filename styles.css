@@ -57,28 +57,17 @@ nav a{color:#fff;font-weight:500}
 .container{max-width:1150px;margin:2rem auto;padding:0 1.25rem}
 
 /* =========================================================
-   BANNIÈRE — version SIMPLE (pas de ::before)
+   BANNIÈRE — version SIMPLE
    ========================================================= */
 .banner{
-  position:relative;
-  width:100%;
-  height:540px;                  /* hauteur souhaitée */
-  overflow:hidden;
-  background-image:url('images/EVH_HERO.jpg');
-  background-repeat:no-repeat;
-  background-size:cover;         /* couvre toujours toute la largeur */
-  background-position:center 12%;/* ajuste verticalement si besoin */
+  position:relative;width:100%;height:540px;overflow:hidden;
+  background:url('images/EVH_HERO.jpg') center 12% / cover no-repeat;
 }
-/* SI jamais une ancienne règle avec ::before trainait en cache, on la neutralise */
-.banner::before{content:none !important;}
 .banner-cta{position:absolute;bottom:28px;left:4%}
-
-@media (max-width:680px){
-  .banner{height:380px}
-}
+@media (max-width:680px){ .banner{height:380px} }
 
 /* =========================================================
-   SECTIONS TITRÉES (ex: Notre Catalogue)
+   SECTIONS TITRÉES
    ========================================================= */
 .section--light{background:#f6f7fb;padding:3rem 0}
 .section--light .container{max-width:1150px;margin:0 auto;padding:0 1.25rem}
@@ -88,7 +77,7 @@ nav a{color:#fff;font-weight:500}
 .section-lead{
   text-align:center;color:var(--muted);max-width:860px;margin:0 auto 2rem
 }
-/* Harmonisation des titres (même gradient que “Nos Avantages”) */
+/* Même gradient pour “Nos Avantages” et “Notre Catalogue” */
 .section-title .accent,
 .adv2-title .gradient-text{
   background:linear-gradient(90deg,#f6d365 0%,#fda085 100%);
@@ -96,7 +85,7 @@ nav a{color:#fff;font-weight:500}
 }
 
 /* =========================================================
-   “NOS AVANTAGES” — Style Lovable (cartes soft + badges)
+   “NOS AVANTAGES” — style cartes + badges jaune pâle
    ========================================================= */
 .advantages-lovable{background:#f6f7fb;padding:3rem 0}
 .adv2-head{text-align:center;margin-bottom:2rem}
@@ -109,25 +98,18 @@ nav a{color:#fff;font-weight:500}
 .adv2-card{
   background:linear-gradient(180deg,#ffffff 0%,#faf7f2 100%);
   border-radius:18px; box-shadow:0 8px 26px rgba(0,0,0,.08);
-  transition:transform .25s ease, box-shadow .25s ease;
-  border:0; text-align:center;
+  transition:transform .25s ease, box-shadow .25s ease; border:0; text-align:center;
 }
 .adv2-card:hover{transform:translateY(-8px); box-shadow:0 14px 40px rgba(0,0,0,.12)}
 .adv2-card .inner{padding:1.4rem}
 
-/* Badges d'icônes : neutres / jaune très pâle */
+/* Badge icône (jaune très pâle) */
 .adv2-badge{
   width:64px;height:64px;border-radius:999px;margin:0 auto .9rem;
   display:flex;align-items:center;justify-content:center;
-  background:#fff4db;            /* jaune très pâle */
-  border:1px solid #fde68a;      /* liseré discret */
+  background:#fff4db;border:1px solid #fde68a;
 }
-.adv2-badge svg{
-  width:28px;height:28px;
-  stroke:#d6a63a;                /* jaune-or doux */
-  stroke-width:2; fill:none;
-  stroke-linecap:round; stroke-linejoin:round;
-}
+.adv2-badge svg{width:28px;height:28px;stroke:#d6a63a;stroke-width:2;fill:none}
 
 .adv2-title-sm{font-size:1.05rem;font-weight:800;margin:.25rem 0 .35rem;color:#0f172a}
 .adv2-desc{color:#6b7280;font-size:.95rem;line-height:1.55}
@@ -139,7 +121,7 @@ nav a{color:#fff;font-weight:500}
 }
 
 /* =========================================================
-   GRILLE CATALOGUE (page d’accueil)
+   GRILLE CATALOGUE (cartes)
    ========================================================= */
 .grid{
   display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;
@@ -157,8 +139,11 @@ nav a{color:#fff;font-weight:500}
 .submeta{color:var(--muted);font-size:.88rem;margin-top:.1rem;margin-bottom:.35rem}
 .price{color:var(--brand);font-weight:800;margin:.25rem 0}
 .meta{display:flex;justify-content:space-between;color:var(--muted);font-size:.92rem;margin:.25rem 0 .5rem}
-.features{list-style:none;color:#111;opacity:.9;font-size:.92rem}
+
+/* Alignement vertical garanti des puces */
+.features{list-style:none;color:#111;opacity:.9;font-size:.92rem;min-height:4.8rem}
 .features li{margin:.25rem 0}
+.features li.placeholder{visibility:hidden}
 
 /* =========================================================
    PAGE DÉTAIL (vehicle.html)
@@ -182,7 +167,7 @@ nav a{color:#fff;font-weight:500}
 .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem}
 .gallery img{width:100%;height:130px;object-fit:cover;border-radius:10px;cursor:pointer}
 
-/* Spécifs aéré, police plus petite, valeurs gris foncé */
+/* Spécifs aéré */
 .specs-card{padding:1.05rem}
 .card-title{font-size:1.02rem;font-weight:800;margin-bottom:.7rem}
 .specs-grid{display:grid;grid-template-columns:1fr 1fr;gap:.9rem 1.1rem}
@@ -235,84 +220,3 @@ nav a{color:#fff;font-weight:500}
   .gallery{grid-template-columns:repeat(2,1fr)}
   .features-grid,.equip-grid,.specs-grid{grid-template-columns:1fr}
 }
-/* Bannière plein-bord avec la nouvelle image */
-.banner::before{content:none !important;} /* neutralise tout ancien pseudo-élément */
-
-.banner{
-  position: relative;
-  width: 100%;
-  height: 540px;
-  overflow: hidden;
-  background-image: url('images/EVH_HERO.jpg'); /* ← ta nouvelle bannière */
-  background-repeat: no-repeat;
-  background-size: cover;         /* remplit toujours la largeur */
-  background-position: 55% 18%;   /* focus au centre-droit ; ajuste au besoin */
-}
-
-/* Très grands écrans : on peut montrer un peu plus à droite si tu veux */
-@media (min-width: 1600px){
-  .banner{ background-position: 60% 18%; }
-}
-
-/* Tablette */
-@media (max-width: 1024px){
-  .banner{ background-position: 50% 20%; }
-}
-
-/* Mobile */
-@media (max-width: 680px){
-  .banner{
-    height: 380px;
-    background-position: 50% 24%;
-  }
-}
-/* --- Uniformisation de hauteur pour les cartes catalogue --- */
-.card{display:flex;flex-direction:column}
-.body{display:flex;flex-direction:column}
-
-/* Titre sur max 2 lignes, et hauteur minimale identique */
-.name{
-  display:-webkit-box;
-  -webkit-line-clamp:2;
-  -webkit-box-orient:vertical;
-  overflow:hidden;
-  min-height:2.8rem; /* ~2 lignes */
-}
-
-/* Conteneur des puces : hauteur mini pour 4 puces */
-.features{min-height:4.8rem;} /* ajuste à 4–5 rem selon ton interlignage */
-/* --- Alignement cartes catalogue --- */
-.card{display:flex;flex-direction:column}
-.body{display:flex;flex-direction:column}
-
-/* Titre sur 2 lignes max, hauteur stable */
-.name{
-  display:-webkit-box;
-  -webkit-line-clamp:2;
-  -webkit-box-orient:vertical;
-  overflow:hidden;
-  min-height:2.8rem; /* ≈ 2 lignes */
-}
-
-/* Zone des puces : hauteur mini pour ~4 puces */
-.features{min-height:4.8rem;}
-/* Aligne les cartes et stabilise la hauteur des blocs texte */
-.card{display:flex;flex-direction:column}
-.body{display:flex;flex-direction:column}
-.name{
-  display:-webkit-box;
-  -webkit-line-clamp:2;
-  -webkit-box-orient:vertical;
-  overflow:hidden;
-  min-height:2.8rem; /* hauteur ≈ 2 lignes */
-}
-/* Zone puces = hauteur mini ~4 lignes */
-.features{min-height:4.8rem}
-/* Les puces placeholder restent invisibles mais occupent la place */
-.features li.placeholder{visibility:hidden}
-
-
-
-
-
-
