@@ -105,7 +105,7 @@
           document.getElementById('vehicle-detail').innerHTML = `
             <div class="vehicle-header">
               <div class="vehicle-title"><h1>${data.name}</h1><div>Modèle ${data.regyear.split('-')[0]} - Réf: ${data.id}</div></div>
-              <div class="vehicle-price">Prix FCR (HT) : ${data.priceFCR}<br><small style="color:#666;">dédouanement possible sous conditions</small></div>
+              <div class="vehicle-price">Prix FCR (HT) : ${data.priceFCR}<br><small style="color:#666;">Dédouanement possible sous conditions</small></div>
             </div>
             <div class="content-grid">
               <div class="image-section">
@@ -114,17 +114,17 @@
                   ${(data.images.gallery||[]).map(u=>`<img src="${u}" alt="Vue du véhicule">`).join('')}
                 </div>
               </div>
-              <div class="specs-section"><h2>Spécifications techniques</h2><div class="specs-grid">${specsHtml}</div></div>
+              <div class="specs-section"><h2>Spécifications Techniques</h2><div class="specs-grid">${specsHtml}</div></div>
             </div>
             <div class="equip-section"><h2>Équipements & Accessoires</h2><div class="equip-grid">
               <ul class="equip-list">${equipements.slice(0,Math.ceil(equipements.length/2)).map(e=>`<li>${e}</li>`).join('')}</ul>
               <ul class="equip-list">${equipements.slice(Math.ceil(equipements.length/2)).map(e=>`<li>${e}</li>`).join('')}</ul>
             </div></div>
             <div class="features-section"><h2>Caractéristiques principales</h2>
-              <div>📅 Date immatriculation: ${data.regyear}</div>
-              <div>⛽ Carburant: ${data.features?.find(f=>f.includes("hybride"))?"PHEV":"BEV"}</div>
-              <div>🔋 Batterie: ${specs.capaciteBatterie||'Non spécifié'}</div>
-              <div>📏 Kilométrage: ${mileage} km</div>
+              <div> Immatriculation: ${data.regyear}</div>
+              <div> Carburant: ${data.features?.find(f=>f.includes("hybride"))?"PHEV":"BEV"}</div>
+              <div> Batterie: ${specs.capaciteBatterie||'Non spécifié'}</div>
+              <div> Kilométrage: ${mileage} km</div>
             </div>
             <div class="button-section"><a href="#" class="btn-devise">Demander un devis pour ce véhicule</a></div>
           `;
