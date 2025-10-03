@@ -4,8 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>E.V.H. AUTOTRADE — Catalogue</title>
-  <!-- IMPORTANT : mets bien v=5 pour forcer le rechargement -->
-  <link rel="stylesheet" href="styles.css?v=5">
+  <link rel="stylesheet" href="styles.css?v=6">
   <meta name="description" content="Importation de SUV hybrides et électriques vers l'Afrique et l'Europe.">
 </head>
 <body>
@@ -44,9 +43,15 @@
     </div>
 
     <div class="adv2-grid">
+      <!-- Importation directe -->
       <article class="adv2-card">
         <div class="inner">
-          <div class="adv2-badge"> </div>
+          <div class="adv2-badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M9 12l2 2 4-4"></path>
+            </svg>
+          </div>
           <h3 class="adv2-title-sm">Importation directe</h3>
           <p class="adv2-desc">
             Prix réduits grâce à notre réseau d'importation directe sans intermédiaires.
@@ -54,9 +59,14 @@
         </div>
       </article>
 
+      <!-- Véhicules neufs ou quasi-neufs -->
       <article class="adv2-card">
         <div class="inner">
-          <div class="adv2-badge"> </div>
+          <div class="adv2-badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+          </div>
           <h3 class="adv2-title-sm">Véhicules neufs ou quasi-neufs</h3>
           <p class="adv2-desc">
             SUV neufs ou quasi-neufs, récents, couverts par une garantie importateur de 2 ans.
@@ -64,9 +74,17 @@
         </div>
       </article>
 
+      <!-- Transport inclus -->
       <article class="adv2-card">
         <div class="inner">
-          <div class="adv2-badge"> </div>
+          <div class="adv2-badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <rect x="1.5" y="4" width="12" height="9" rx="2"></rect>
+              <path d="M13.5 9h4l3 3v1.5h-7V9z"></path>
+              <circle cx="7" cy="18" r="2"></circle>
+              <circle cx="17" cy="18" r="2"></circle>
+            </svg>
+          </div>
           <h3 class="adv2-title-sm">Transport inclus jusqu’au port de destination</h3>
           <p class="adv2-desc">
             Acheminement estimé <b>sous 45 jours</b>. Assistance aux formalités de dédouanement à l’arrivée
@@ -77,7 +95,7 @@
     </div>
   </section>
 
-  <!-- Titre “Notre Catalogue” -->
+  <!-- Titre “Notre Catalogue” (même gradient) -->
   <section class="section--light" style="padding-top: 1.5rem;">
     <div class="container">
       <h2 class="section-title">Notre <span class="accent">Catalogue</span></h2>
@@ -117,9 +135,8 @@
           const isPHEV = features.join(' ').toLowerCase().includes('hybride');
           const pill = `<span class="pill">${isPHEV?'PHEV':'BEV'}</span>`;
 
-          const modelRef = (v.regyear || v.id)
-            ? `Modèle ${v.regyear || '—'} – Réf: ${v.id || '—'}`
-            : '';
+          /* Afficher uniquement la référence (plus de "Modèle 2024-01") */
+          const modelRef = v.id ? `Réf: ${v.id}` : '';
 
           return `
             <a class="card-link" href="vehicle.html?id=${encodeURIComponent(v.id)}">
