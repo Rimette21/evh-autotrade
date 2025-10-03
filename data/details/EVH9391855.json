@@ -1,1 +1,91 @@
+{
+  "id": "EVH9391855",
+  "name": "2025 Chery Tiggo7 C-DM 1.5T 156HP L4 DHT",
+  "priceFCR": "23 900 €",
+  "mileage": 1200,
+  "regyear": "2025-09",
+  "images": {
+    "hero": "images/EVH9387237_BYDTANG_droit.png",
+    "gallery": [
+      "images/EVH9387237_BYDTANG_avant.png",
+      "images/EVH9387237_BYDTANG_gauche.png",
+      "images/EVH9387237_BYDTANG_int_ar.png",
+      "images/EVH9387237_BYDTANG_int_dev.png"
+    ]
+  },
+  "caracteristiques": [
+    "Hybride rechargeable",
+    "Autonomie 120 km",
+    "Transmission DHT",
+    "Camera 360°",
+    "5 places",
+    "Régulateur de vitesse adaptatif",
+    "Sièges chauffants et ventilés"
+  ],
+  "features": [
+    "Hybride rechargeable",
+    "Autonomie 120 km",
+    "Transmission DHT",
+    "Camera 360°",
+    "5 places",
+    "Régulateur de vitesse adaptatif",
+    "Sièges chauffants et ventilés"
+  ],
+  "specifications": {
+    "capaciteBatterie": "90.3 kWh",
+    "puissance": "150 kW (228 ch)",
+    "couple": "350 Nm",
+    "acceleration": "5.9 s (0-100 km/h)",
+    "vitesseMax": "180 km/h",
+    "tempsDeCharge": "30 min (10-80% en charge rapide)",
+    "transmission": "Traction avant",
+    "dimensions": {
+      "longueur": "4545 mm",
+      "largeur": "*1898 mm",
+      "hauteur": "1670 mm",
+      "empattement": "2820 mm"
+    },
+    "poids": "1775 kg",
+    "volumeCoffre": "940 L → 1655 L (banquette rabattue)"
+  },
+  "equipements": {
+    "interieur": [
+      "Climatisation automatique tri-zone",
+      "Écran tactile central 15.6\"",
+      "Tableau de bord numérique",
+      "Système audio premium",
+      "Charge sans fil pour smartphones",
+      "Ambiance lumineuse"
+    ],
+    "securite": [
+      "6 airbags (dont genoux conducteur)",
+      "Alerte de franchissement de ligne",
+      "Détection des angles morts",
+      "Aide au démarrage en côte",
+      "Freinage automatique d'urgence"
+    ],
+    "connectivite": []
+  },
+  "equipment": {
+    "interior": [
+      "Climatisation automatique tri-zone",
+      "Écran tactile central 15.6\"",
+      "Tableau de bord numérique",
+      "Système audio premium",
+      "Charge sans fil pour smartphones",
+      "Ambiance lumineuse"
+    ],
+    "safety": [
+      "6 airbags (dont genoux conducteur)",
+      "Alerte de franchissement de ligne",
+      "Détection des angles morts",
+      "Aide au démarrage en côte",
+      "Freinage automatique d'urgence"
+    ],
+    "connectivity": []
+  },
+  "garantie": "Garantie importateur 2 ans (voir conditions dans CGV)",
+  "localisation": "Chine",
+  "disponibilite": "Livraison au port de destination : 45 jours"
+}
 
