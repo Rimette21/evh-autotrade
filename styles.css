@@ -147,4 +147,3 @@ nav a{color:#fff;font-weight:500}
   .gallery{grid-template-columns:repeat(2,1fr)}
   .features-grid,.equip-grid,.specs-grid{grid-template-columns:1fr}
 }
-
