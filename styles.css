@@ -50,7 +50,7 @@ nav a{color:#fff;font-weight:500}
    INDEX (page Catalogue)
    ========================================================= */
 /* Bannière */
-.banner{position:relative;width:100%;height:420px;background:url('images/EVH_HERO.jpg') center/cover no-repeat}
+.banner{position:relative;width:100%;height:440px;background:url('images/EVH_HERO.jpg') center/cover no-repeat}
 .banner-cta{position:absolute;bottom:28px;left:4%}
 
 /* Avantages */
