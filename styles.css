@@ -255,3 +255,32 @@ nav a{color:#fff;font-weight:500}
 /* Ajoute ceci tout en bas de styles.css */
 .banner-badge{ display:none !important; }
 
+/* --- Logotype texte dans l'en-tête --- */
+header .brand .evh,
+header .brand .autotrade{
+  font-size: 2.2rem;   /* ← agrandis ici */
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: .5px;
+}
+
+/* Couleur du mot AUTOTRADE (déjà rouge dans tes variables) */
+header .brand .autotrade{
+  color: var(--brand);
+  margin-left: .25rem;
+}
+
+/* Ajuste un peu l'espace menu si besoin sur desktop étroit */
+header nav ul{ gap: 1.25rem; }
+
+/* Responsif : un peu plus petit sur mobile pour éviter les retours à la ligne */
+@media (max-width: 980px){
+  header .brand .evh,
+  header .brand .autotrade{ font-size: 1.7rem; }
+}
+
+/* Option : très grands écrans, encore un cran */
+@media (min-width: 1400px){
+  header .brand .evh,
+  header .brand .autotrade{ font-size: 2.5rem; }
+}
