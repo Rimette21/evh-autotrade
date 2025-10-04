@@ -252,4 +252,6 @@ nav a{color:#fff;font-weight:500}
   .banner-cta{ left:6%; bottom:18px; }
   .banner-badge{ top:20px; right:4%; width:84px; height:84px; font-size:.62rem; }
 }
+/* Ajoute ceci tout en bas de styles.css */
+.banner-badge{ display:none !important; }
 
