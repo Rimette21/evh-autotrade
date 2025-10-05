@@ -286,7 +286,7 @@ header nav ul{ gap: 1.25rem; }
 }
 /* --- Ajuste la taille du logo/texte dans l'en-tête --- */
 .logo img{
-  height:72px;                 /* avant ~80–92px */
+  height:92px;                 /* avant ~80–92px */
 }
 .brand .evh,
 .brand .autotrade{
@@ -304,10 +304,10 @@ nav ul{ gap: 1.2rem; }         /* réduit légèrement l'écart du menu */
 /* Petits écrans : encore un cran en dessous */
 @media (max-width: 1024px){
   .logo img{ height: 64px; }
-  .brand .evh, .brand .autotrade{ font-size: 1.45rem; }
+  .brand .evh, .brand .autotrade{ font-size: 1.35rem; }
 }
 @media (max-width: 640px){
-  .logo img{ height: 56px; }
+  .logo img{ height: 66px; }
   .brand .evh, .brand .autotrade{ font-size: 1.2rem; }
   nav ul{ gap: .9rem; }
 }
