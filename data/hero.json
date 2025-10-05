@@ -37,6 +37,25 @@
   ]
 },
   {
+  "id": "EVH9478503",
+  "name": "2024 BYD Song Plus 1.5L 110HP L4 E-CVT PHEV 18.3 kWh",
+  "priceFCR": "23 250 €",
+  "mileage": 21000,
+  "regyear": "2024-04",
+  "featuresCount": 4,
+  "images": {
+    "hero": "images/EVH9478503_BYD_blanc_devant.png"
+  },
+  "features": [
+    "Hybride rechargeable (PHEV)",
+    "Autonomie électrique 110 km",
+    "Batterie 18.3 kWh",
+    "Transmission E-CVT",
+    "Caméra 360°",
+    "Régulateur de vitesse adaptatif (ACC)"
+  ]
+},
+  {
     "id": "EVH9404921",
     "name": "2025 BYD Song Pro 1.5L 101HP L4 E-CVT PHEV 18.3 kWh",
     "priceFCR": "22 800 €",
