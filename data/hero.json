@@ -1,31 +1,23 @@
-{
-  "id": "EVH9404921",
-  "name": "2025 BYD Song Pro 1.5L 101HP L4 E-CVT PHEV 18.3 kWh",
-  "priceFCR": "22 820 €",
-  "mileage": 13000,
-  "regyear": "2025-01",
-  "featuresCount": 4,
-  "images": {
-    "hero": "images/EVH9404921_DEV_DROITE.png",
-    "gallery": [
-      "images/EVH9404921_DEV_GAUCHE.png",
-      "images/EVH9404921_AR_DROITE.png",
-      "images/EVH9404921_AR_GAUCHE.png",
-      "images/EVH9404921_INT_DEV.png",
-      "images/EVH9404921_AR_INT.png"
-    ]
-  },
-  "features": [
-    "Hybride rechargeable (PHEV)",
-    "Autonomie électrique 115 km",
-    "Batterie 18.3 kWh",
-    "Transmission E-CVT",
-    "Caméra 360°",
-    "Régulateur de vitesse adaptatif (ACC)"
-  ]
-}
-
 [
+  {
+    "id": "EVH9404921",
+    "name": "2025 BYD Song Pro 1.5L 101HP L4 E-CVT PHEV 18.3 kWh",
+    "priceFCR": "22 820 €",
+    "mileage": 13000,
+    "regyear": "2025-01",
+    "images": {
+      "hero": "images/EVH9404921_DEV_DROITE.png"
+    },
+    "features": [
+      "Hybride rechargeable (PHEV)",
+      "Autonomie électrique 115 km",
+      "Batterie 18.3 kWh",
+      "Transmission E-CVT",
+      "Caméra 360°",
+      "Régulateur de vitesse adaptatif (ACC)"
+    ],
+    "featuresCount": 4
+  },
   {
     "id": "EVH9387237",
     "name": "2024 BYD Tang BEV 90.3kWh 600 km",
@@ -41,7 +33,8 @@
       "7 places",
       "Régulateur de vitesse adaptatif",
       "Sièges chauffants et ventilés"
-    ]
+    ],
+    "featuresCount": 4
   },
   {
     "id": "EVH9391855",
@@ -58,7 +51,8 @@
       "Toit ouvrant",
       "Régulateur de vitesse adaptatif",
       "Sièges chauffants et ventilés"
-    ]
+    ],
+    "featuresCount": 4
   },
   {
     "id": "EVH9382121",
@@ -76,7 +70,8 @@
       "Régulateur de vitesse adaptatif",
       "Sièges chauffants et ventilés",
       "Plus Airbags Genoux"
-    ]
+    ],
+    "featuresCount": 4
   },
   {
     "id": "EVH9397463",
@@ -94,7 +89,8 @@
       "Toit ouvrant",
       "Régulateur de vitesse adaptatif",
       "Sièges chauffants et ventilés"
-    ]
+    ],
+    "featuresCount": 4
   },
   {
     "id": "EVH9330983",
@@ -112,7 +108,7 @@
       "Radar de stationnement",
       "Toit ouvrant"
     ],
-    "featuresCount": 4 
+    "featuresCount": 4
   },
   {
     "id": "EVH9336933",
@@ -128,7 +124,8 @@
       "Camera 360°",
       "Toit ouvrant",
       "Régulateur de vitesse adaptatif"
-    ]
+    ],
+    "featuresCount": 4
   },
   {
     "id": "EVH9403325",
@@ -145,6 +142,7 @@
       "Toit ouvrant",
       "Régulateur de vitesse adaptatif",
       "Sièges chauffants et ventilés"
-    ]
+    ],
+    "featuresCount": 4
   }
 ]
