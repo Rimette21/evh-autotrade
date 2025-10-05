@@ -1,1 +1,81 @@
+{
+  "id": "EVH9404921",
+  "name": "2025 BYD Song Pro 1.5L 101HP L4 E-CVT PHEV 18.3 kWh",
+  "priceFCR": "—",
+  "mileage": 13000,
+  "regyear": "2025-01",
+  "images": {
+    "hero": "images/EVH9404921_DEV_DROITE.png",
+    "gallery": [
+      "images/EVH9404921_DEV_GAUCHE.png",
+      "images/EVH9404921_AR_DROITE.png",
+      "images/EVH9404921_AR_GAUCHE.png",
+      "images/EVH9404921_INT_DEV.png",
+      "images/EVH9404921_AR_INT.png"
+    ]
+  },
+  "caracteristiques": [
+    "Hybride rechargeable (PHEV)",
+    "Autonomie électrique 115 km",
+    "Batterie 18.3 kWh",
+    "Transmission E-CVT",
+    "Caméra 360°",
+    "Régulateur de vitesse adaptatif",
+    "Sièges en cuir et à réglages électriques",
+    "Toit ouvrant"
+  ],
+  "features": [
+    "Hybride rechargeable (PHEV)",
+    "Autonomie électrique 115 km",
+    "Batterie 18.3 kWh",
+    "Transmission E-CVT",
+    "Caméra 360°",
+    "Régulateur de vitesse adaptatif (ACC)",
+    "Cinq places"
+  ],
+  "specifications": {
+    "moteur": "Essence 1.5 L 101 ch (L4) + moteur électrique",
+    "puissance": "Moteur thermique 101 ch • Moteur électrique 120 kW",
+    "transmission": "E-CVT",
+    "traction": "2WD",
+    "autonomieElectrique": "115 km",
+    "capaciteBatterie": "18.3 kWh",
+    "dimensions": {
+      "longueur": "4735 mm",
+      "largeur": "1860 mm",
+      "hauteur": "1710 mm"
+    },
+    "poids": "1765 kg",
+    "capaciteMax": "2140 kg",
+    "places": "5",
+    "typeCarrosserie": "SUV",
+    "couleur": "Noir"
+  },
+  "equipements": {
+    "interieur": [
+      "Sièges en cuir",
+      "Siège conducteur à réglages électriques",
+      "Climatisation automatique",
+      "Toit ouvrant",
+      "Lève-vitres électriques",
+      "Volant assisté"
+    ],
+    "securite": [
+      "Airbags conducteur, passager et latéraux",
+      "Caméra 360°",
+      "Radar de stationnement",
+      "Régulateur de vitesse adaptatif (ACC)",
+      "Fermeture centralisée",
+      "Démarrage sans clé (push start)"
+    ],
+    "connectivite": [
+      "GPS",
+      "Bluetooth",
+      "Entrée sans clé"
+    ]
+  },
+  "garantie": "Garantie importateur 2 ans (voir conditions dans CGV)",
+  "localisation": "Shanghai, Chine",
+  "disponibilite": "Livraison au port de destination : 45 jours"
+}
 
