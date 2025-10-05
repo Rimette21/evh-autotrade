@@ -6,13 +6,14 @@
   "regyear": "2024-04",
   "featuresCount": 4,
   "images": {
-    "hero": "images/EVH9478503_BYD_blanc_devant.png",
+    "hero": "images/EVH9478503_DEV_DROITE.png",
     "gallery": [
-      "images/EVH9478503_BYD_blanc_droit.png",
-      "images/EVH9478503_BYD_blanc_arriere.png",
-      "images/EVH9478503_BYD_blanc_gauche.png",
-      "images/EVH9478503_BYD_blanc_int_dev.png",
-      "images/EVH9478503_BYD_blanc_int_ar.png"
+      "images/EVH9478503_DEV_DROIT.png",
+      "images/EVH9478503_DEV.png",
+      "images/EVH9478503_DEV_DROITE.png",
+      "images/EVH9478503_ARRIERE.png",
+       "images/EVH9478503_INT_DEV.png",
+      "images/EVH9478503_ARRIERE_DR.png"
     ]
   },
   "features": [
