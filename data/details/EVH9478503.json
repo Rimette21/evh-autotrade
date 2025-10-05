@@ -1,1 +1,70 @@
+{
+  "id": "EVH9478503",
+  "name": "2024 BYD Song Plus 1.5L 110HP L4 E-CVT PHEV 18.3 kWh",
+  "priceFCR": "23 250 €",
+  "mileage": 21000,
+  "regyear": "2024-04",
+  "featuresCount": 4,
+  "images": {
+    "hero": "images/EVH9478503_BYD_blanc_devant.png",
+    "gallery": [
+      "images/EVH9478503_BYD_blanc_droit.png",
+      "images/EVH9478503_BYD_blanc_arriere.png",
+      "images/EVH9478503_BYD_blanc_gauche.png",
+      "images/EVH9478503_BYD_blanc_int_dev.png",
+      "images/EVH9478503_BYD_blanc_int_ar.png"
+    ]
+  },
+  "features": [
+    "Hybride rechargeable (PHEV)",
+    "Autonomie électrique 110 km",
+    "Batterie 18.3 kWh",
+    "Transmission E-CVT",
+    "Caméra 360°",
+    "Régulateur de vitesse adaptatif (ACC)"
+  ],
+  "specifications": {
+    "moteur": "1.5 L L4 (110 ch)",
+    "motorPower": "145 kW (électrique)",
+    "transmission": "E-CVT",
+    "traction": "2WD",
+    "autonomieElectrique": "110 km",
+    "capaciteBatterie": "18.3 kWh",
+    "typeCarrosserie": "SUV",
+    "couleur": "Blanc",
+    "places": "5",
+    "dimensions": {
+      "longueur": "4775 mm",
+      "largeur": "1890 mm",
+      "hauteur": "1670 mm"
+    },
+    "poids": "1830 kg",
+    "capaciteMax": "2205 kg"
+  },
+  "equipements": {
+    "interieur": [
+      "Sellerie cuir",
+      "Sièges électriques",
+      "Climatisation automatique",
+      "Toit ouvrant"
+    ],
+    "securite": [
+      "ABS",
+      "Airbags conducteur/passager/latéraux",
+      "Contrôle de stabilité (ESP)",
+      "Surveillance pression pneus"
+    ],
+    "connectivite": [
+      "GPS",
+      "Bluetooth",
+      "Démarrage sans clé",
+      "Radar de stationnement",
+      "Caméra 360°",
+      "Régulateur de vitesse adaptatif (ACC)"
+    ]
+  },
+  "garantie": "Garantie importateur 2 ans (voir conditions dans CGV)",
+  "localisation": "Langfang, Hebei, Chine",
+  "disponibilite": "Livraison au port de destination : 45 jours"
+}
 
