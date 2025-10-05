@@ -1,1 +1,67 @@
+{
+  "id": "EVH9404943",
+  "name": "2024 BYD Song Plus 1.5L 110HP L4 E-CVT PHEV 26.6 kWh",
+  "priceFCR": "24 960 €",
+  "mileage": 9000,
+  "regyear": "2024-07",
+  "featuresCount": 4,
+  "images": {
+    "hero": "images/EVH9404943_BYD_beige_devant.png",
+    "gallery": [
+      "images/EVH9404943_BYD_beige_cotegauche.png",
+      "images/EVH9404943_BYD_beige_arriere.png",
+      "images/EVH9404943_BYD_beige_gauche.png",
+      "images/EVH9404943_BYD_beige_int_dev.png",
+      "images/EVH9404943_BYD_beige_int_ar.png"
+    ]
+  },
+  "features": [
+    "Hybride rechargeable (PHEV)",
+    "Autonomie électrique 150 km",
+    "Batterie 26.6 kWh",
+    "Transmission E-CVT",
+    "Caméra 360°",
+    "Régulateur de vitesse adaptatif (ACC)"
+  ],
+  "specifications": {
+    "moteur": "1.5 L L4 110 ch + moteur électrique",
+    "puissance": "145 kW (moteur électrique)",
+    "transmission": "E-CVT, 2WD",
+    "autonomieElectrique": "150 km",
+    "capaciteBatterie": "26.6 kWh",
+    "dimensions": {
+      "longueur": "4775 mm",
+      "largeur": "1890 mm",
+      "hauteur": "1670 mm"
+    },
+    "poids": "1890 kg",
+    "places": "5",
+    "typeCarrosserie": "SUV"
+  },
+  "equipements": {
+    "interieur": [
+      "Toit ouvrant",
+      "Sièges cuir",
+      "Sièges électriques",
+      "Sièges chauffants et ventilés",
+      "Climatisation automatique"
+    ],
+    "securite": [
+      "ABS / ESP",
+      "Airbags conducteur, passager et latéraux",
+      "Caméra 360°",
+      "Régulateur de vitesse adaptatif (ACC)",
+      "Surveillance pression pneus",
+      "Radar de stationnement"
+    ],
+    "connectivite": [
+      "GPS",
+      "Bluetooth",
+      "Entrée sans clé & démarrage par bouton"
+    ]
+  },
+  "garantie": "Garantie importateur 2 ans (voir conditions dans CGV)",
+  "localisation": "Aksu, Xinjiang, Chine",
+  "disponibilite": "Livraison au port de destination : ~45 jours"
+}
 
