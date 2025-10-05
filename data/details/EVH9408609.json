@@ -1,1 +1,67 @@
+{
+  "id": "EVH9408609",
+  "name": "2025 BYD Song Plus BEV 71.8 kWh 150 kW",
+  "priceFCR": "25 760 €",
+  "mileage": 5000,
+  "regyear": "2025-08",
+  "featuresCount": 4,
+  "images": {
+    "hero": "images/EVH9408609_BYD_gris_devant.jpg",
+    "gallery": [
+      "images/EVH9408609_BYD_gris_droit.jpg",
+      "images/EVH9408609_BYD_gris_ecran.jpg",
+      "images/EVH9408609_BYD_gris_tabbord.jpg"
+    ]
+  },
+  "features": [
+    "100% électrique",
+    "Autonomie 520 km",
+    "Batterie 71.8 kWh",
+    "Moteur 150 kW (≈204 ch)",
+    "Transmission automatique",
+    "2WD",
+    "Caméra 360°",
+    "Régulateur de vitesse adaptatif"
+  ],
+  "specifications": {
+    "energie": "Électrique (BEV)",
+    "capaciteBatterie": "71.8 kWh",
+    "autonomie": "520 km (donnée constructeur)",
+    "puissance": "150 kW (≈204 ch)",
+    "transmission": "Automatique (AT)",
+    "traction": "2WD",
+    "typeCarrosserie": "SUV",
+    "dimensions": {
+      "longueur": "4785 mm",
+      "largeur": "1890 mm",
+      "hauteur": "1660 mm"
+    },
+    "poids": "1920 kg"
+  },
+  "equipements": {
+    "interieur": [
+      "Sellerie cuir",
+      "Sièges à réglages électriques",
+      "Climatisation automatique",
+      "Toit ouvrant",
+      "Écran tactile central"
+    ],
+    "securite": [
+      "Airbags conducteur et passager",
+      "Airbags latéraux",
+      "Caméra 360°",
+      "Radar de stationnement",
+      "Régulateur de vitesse adaptatif (ACC)"
+    ],
+    "connectivite": [
+      "Bluetooth",
+      "GPS",
+      "Entrée sans clé & démarrage bouton",
+      "Vitre & verrouillage électriques"
+    ]
+  },
+  "garantie": "Garantie importateur 2 ans (voir conditions dans CGV)",
+  "localisation": "Chine",
+  "disponibilite": "Livraison au port de destination : 45 jours"
+}
 
