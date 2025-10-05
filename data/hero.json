@@ -1,3 +1,30 @@
+{
+  "id": "EVH9404921",
+  "name": "2025 BYD Song Pro 1.5L 101HP L4 E-CVT PHEV 18.3 kWh",
+  "priceFCR": "22 820 €",
+  "mileage": 13000,
+  "regyear": "2025-01",
+  "featuresCount": 4,
+  "images": {
+    "hero": "images/EVH9404921_DEV_DROITE.png",
+    "gallery": [
+      "images/EVH9404921_DEV_GAUCHE.png",
+      "images/EVH9404921_AR_DROITE.png",
+      "images/EVH9404921_AR_GAUCHE.png",
+      "images/EVH9404921_INT_DEV.png",
+      "images/EVH9404921_AR_INT.png"
+    ]
+  },
+  "features": [
+    "Hybride rechargeable (PHEV)",
+    "Autonomie électrique 115 km",
+    "Batterie 18.3 kWh",
+    "Transmission E-CVT",
+    "Caméra 360°",
+    "Régulateur de vitesse adaptatif (ACC)"
+  ]
+}
+
 [
   {
     "id": "EVH9387237",
