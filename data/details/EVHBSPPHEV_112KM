@@ -1,1 +1,89 @@
+{
+  "id": "EVHBSPPHEV_112KM",
+  "name": "2025 BYD Song PLUS DM-i 112KM",
+  "priceFCR": "25 700 €",
+  "mileage": 0,
+  "regyear": "2025-01",
+  "featuresCount": 4,
+  "images": {
+    "hero": "images/EVH_BSPPHEV_devant_gauche.png",
+    "gallery": [
+      "images/EVH_BSPPHEV_ARGAUCHE.png",
+      "images/EVH_BSPPHEV_cote_gauche.png",
+      "images/EVH_BSPPHEV_DEV.png",
+      "images/EVH_BSPPHEV_ARRIERE.png",
+      "images/EVH_BSPPHEV_droite.png"
+    ]
+  },
+  "features": [
+    "Hybride rechargeable (PHEV)",
+    "Autonomie électrique 112 km (CLTC) / 91 km (WLTC)",
+    "Batterie LFP 18,3 kWh (Blade)",
+    "Traction avant, transmission e-CVT (EHS)",
+    "Caméra panoramique 360° + châssis transparent 540°",
+    "Régulateur de vitesse adaptatif (ACC) et aide maintien de voie"
+  ],
+  "specifications": {
+    "moteurThermique": {
+      "type": "1.5 L L4 atmosphérique (BYD472QC)",
+      "puissance": "101 ch (74 kW)",
+      "couple": "126 Nm",
+      "carburant": "Essence 92#"
+    },
+    "moteurElectrique": {
+      "architecture": "Avant, synchrone à aimant permanent",
+      "puissance": "160 kW",
+      "couple": "260 Nm",
+      "nombreMoteurs": "Simple moteur (avant)"
+    },
+    "hybrideBatterie": {
+      "type": "LFP (lithium fer phosphate)",
+      "capaciteBatterie": "18.3 kWh",
+      "autonomieCLTC": "112 km",
+      "autonomieWLTC": "91 km",
+      "consoElec": "15.9 kWh/100 km",
+      "chargeRapide": "Oui (30→80 % ~ 0,38 h ≈ 23 min, 26 kW)",
+      "fonctions": ["Récupération d’énergie", "Préchauffage batterie", "V2L (décharge externe)"]
+    },
+    "transmission": "Traction avant (e-CVT/EHS)",
+    "chassis": {
+      "suspensionAvant": "Indépendante McPherson",
+      "suspensionArriere": "Indépendante multibras",
+      "freins": "Disques ventilés AV / disques AR",
+      "direction": "Assistée électrique",
+      "pneus": "235/50 R19",
+      "jantes": "Alliage aluminium"
+    },
+    "dimensions": {
+      "longueur": "4775 mm",
+      "largeur": "1890 mm",
+      "hauteur": "1670 mm",
+      "empattement": "2765 mm",
+      "coffre": "574–1440 L",
+      "reservoir": "60 L",
+      "poidsATVide": "1830 kg",
+      "ptac": "2205 kg",
+      "portes": 5,
+      "places": 5
+    }
+  },
+  "equipements": {
+    "securite": [
+      "ABS, EBD, BA",
+      "Contrôle de stabilité (ESP)",
+      "Freinage actif / systèmes de sécurité",
+      "Aide au changement de voie, détection angle mort AR",
+      "Aide maintien & centrage dans la voie (LKA/LCA)",
+      "Reconnaissance panneaux",
+      "Airbags conducteur, passager, latéraux & rideaux",
+      "Détection pression pneus, ISOFIX"
+    ],
+    "assistance": [
+      "Radar AV/AR",
+      "Caméras panoramiques 360° + 540° châssis transparent",
+      "Régulateur de vitesse adaptatif",
+      "Modes de conduite Éco / Confort / Sport / Neige"
+    ]
+  }
+}
 
