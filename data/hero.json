@@ -36,6 +36,23 @@
   "featuresCount": 4
 },
   {
+  "id": "EVHBSPPHEV_160KM",
+  "name": "BYD Song Plus DM-i (160 km) 1.5L PHEV",
+  "priceFCR": "27 400 €",
+  "mileage": 100,
+  "regyear": "2025-01",
+  "images": { "hero": "images/EVH_BSPPHEV_160km_DEV.png" },
+  "features": [
+    "Hybride rechargeable (DM-i)",
+    "Autonomie électrique 160 km",
+    "Batterie 26.6 kWh",
+    "Transmission e-CVT",
+    "Caméra 360°",
+    "Régulateur de vitesse adaptatif (ACC)"
+  ],
+  "featuresCount": 4
+},
+  {
   "id": "EVH9404943",
   "name": "2024 BYD Song Plus 1.5L 110HP L4 E-CVT PHEV 26.6 kWh",
   "priceFCR": "24 960 €",
