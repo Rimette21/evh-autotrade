@@ -7,13 +7,13 @@
   "regyear": "2025-09",
   "featuresCount": 4,
   "images": {
-    "hero": "images/EVH_BSPPHEV_75km_devant_gauche.png",
+    "hero": "images/EVH_BSPPHEV_devant_gauche.png",
     "gallery": [
-    "images/EVH_BSPPHEV_75km_ARGAUCHE.png",
-     "images/EVH_BSPPHEV_75km_cote_gauche.png",
-    "images/EVH_BSPPHEV_75km_DEV.png",
-    "images/EVH_BSPPHEV_75km_ARRIERE.png",
-    "images/EVH_BSPPHEV_75km_droite.png"
+    "images/EVH_BSPPHEV_ARGAUCHE.png",
+     "images/EVH_BSPPHEV_cote_gauche.png",
+    "images/EVH_BSPPHEV_DEV.png",
+    "images/EVH_BSPPHEV_ARRIERE.png",
+    "images/EVH_BSPPHEV_droite.png"
     ]
   },
   "features": [
