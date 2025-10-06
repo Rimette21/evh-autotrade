@@ -1,1 +1,66 @@
+{
+  "id": "EVHBSPPHEV_160KM",
+  "name": "2025 BYD Song Plus DM-i 1.5L PHEV — 160 km EV",
+  "priceFCR": "27 400 €",
+  "mileage": 100,
+  "regyear": "2025-01",
+  "images": {
+    "hero": "images/EVH_BSPPHEV_160km_DEV.png",
+    "gallery": [
+      "images/EVH_BSPPHEV_160km_dev_droit.png",
+      "images/EVH_BSPPHEV_160km_dev_gauche.png",
+      "images/EVH_BSPPHEV_160km_GAUCHE.png",
+      "images/EVH_BSPPHEV_160km_int_devant.png"
+    ]
+  },
+  "features": [
+    "Hybride rechargeable (DM-i)",
+    "Autonomie électrique 160 km (CLTC estim.)",
+    "Batterie LFP 26.6 kWh",
+    "Transmission e-CVT (DHT)",
+    "Caméra 360° + aide au stationnement",
+    "Régulateur de vitesse adaptatif (ACC)",
+    "Freinage automatique d’urgence (AEB)",
+    "Alerte franchissement de ligne (LKA)",
+    "Sièges avant chauffants"
+  ],
+  "specifications": {
+    "moteur": "1.5 L essence + moteur(s) électrique(s)",
+    "transmission": "e-CVT / traction avant",
+    "autonomieElectrique": "160 km",
+    "batterie": "26.6 kWh (LFP)",
+    "puissanceSysteme": "—",
+    "couple": "—",
+    "consommation": "Très basse en mode hybride (cycle mixte)",
+    "dimensions": {
+      "longueur": "4775 mm",
+      "largeur": "1890 mm",
+      "hauteur": "1670 mm",
+      "empattement": "2765 mm"
+    }
+  },
+  "equipements": {
+    "interieur": [
+      "Écran central tactile 12.8–15.6\" rotatif (selon version)",
+      "Tableau de bord numérique",
+      "Climatisation automatique",
+      "Sellerie similicuir",
+      "Charge smartphone (USB/12V, parfois induction selon version)"
+    ],
+    "securite": [
+      "AEB freinage d’urgence",
+      "ACC régulateur adaptatif",
+      "LKA maintien de voie",
+      "BSD surveillance angles morts",
+      "6 airbags"
+    ],
+    "connectivite": [
+      "Bluetooth / USB",
+      "Navigation et services connectés (selon marché)"
+    ]
+  },
+  "garantie": "Garantie importateur 2 ans (voir CGV)",
+  "localisation": "Chine",
+  "disponibilite": "Livraison au port de destination : 45 jours"
+}
 
