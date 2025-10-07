@@ -2,8 +2,8 @@
   "id": "EVH9384241",
   "name": "Haval H6 1.5T DCT 2WD",
   "priceFCR": "21 600 €",
-  "mileage": 0,
-  "regyear": "2023-01",
+  "mileage": 28800,
+  "regyear": "2024-04",
   "images": {
     "hero": "images/EVH9384241_HAVALH6_devant.png",
     "gallery": [
@@ -63,5 +63,6 @@
   "garantie": "Garantie importateur 2 ans",
   "localisation": "Chine",
   "disponibilite": "Livraison au port de destination : ~45 jours"
+}
 }
 
