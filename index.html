@@ -5,65 +5,72 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>E.V.H. AUTOTRADE — Véhicules électriques & hybrides</title>
   <meta name="description" content="Importation directe de SUV hybrides et électriques vers l'Afrique et l'Europe. Prix imbattables, véhicules neufs garantis, livraison rapide.">
-  <link rel="preload" as="image" href="images/hero/dubai-1.webp">
-  <!-- IMPORTANT : forcer le chargement du bon CSS -->
+
+  <!-- Précharge l’image unique de la bannière -->
+  <link rel="preload" as="image" href="images/EVH_HERO.jpg">
+
+  <!-- CSS global -->
   <link rel="stylesheet" href="styles.css?v=13">
 
-  <!-- Styles spécifiques à la nouvelle bannière -->
+  <!-- Overrides spécifiques (bannière statique + petits ajustements) -->
   <style>
     :root{ --brand:#e53e3e; }
 
-    /* HERO dynamique (diaporama) */
-    .hero-dyn{position:relative;height:540px;overflow:hidden;color:#fff}
-    .hero-dyn .container{max-width:1150px;margin:0 auto;padding:0 1.25rem}
-    .hero-dyn .bg-overlay{
-      position:absolute;inset:0;z-index:1;
+    /* ============== HÉRO STATIQUE ============== */
+    .hero-static{
+      position:relative; height:540px; overflow:hidden; color:#fff;
+      /* ← change seulement cette URL si tu veux une autre image */
+      background:url('images/EVH_HERO.jpg') center 18% / cover no-repeat;
+    }
+    .hero-static .container{max-width:1150px;margin:0 auto;padding:0 1.25rem}
+    .hero-static .bg-overlay{
+      position:absolute; inset:0; z-index:1;
+      /* léger voile pour lisibilité, moins “flou” que le diaporama */
       background:
-        radial-gradient(1100px 380px at 28% 32%, rgba(0,0,0,.22), transparent 60%),
-        linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.68));
+        radial-gradient(1100px 380px at 28% 32%, rgba(0,0,0,.16), transparent 60%),
+        linear-gradient(180deg, rgba(0,0,0,.28), rgba(0,0,0,.45));
     }
-    .hero-dyn .hero-inner{position:relative;z-index:3;top:16%;max-width:760px}
-    .hero-dyn h1{font-size:2.6rem;line-height:1.1;margin:0 0 .6rem}
-    .hero-dyn p{opacity:.95;margin:0 0 1rem}
-
-    .hero-dyn .btn{
+    /* Titre plus à gauche et plus bas (comme demandé) */
+    .hero-static .hero-inner{
+      position:absolute; z-index:3;
+      left:6%; bottom:110px; max-width:760px;
+    }
+    .hero-static h1{
+      font-size:clamp(28px, 2.4vw + 10px, 44px);
+      line-height:1.08; margin:0 0 .6rem; font-weight:900;
+      text-shadow:0 6px 18px rgba(0,0,0,.45);
+    }
+    .hero-static p{opacity:.95;margin:0 0 1rem;font-weight:700}
+    .hero-static .btn{
       display:inline-block;background:var(--brand);color:#fff;
-      padding:.85rem 1.4rem;border-radius:999px;font-weight:800;text-decoration:none
+      padding:.9rem 1.5rem;border-radius:999px;font-weight:800;text-decoration:none
     }
-    .hero-dyn .btn:hover{filter:brightness(.95)}
+    .hero-static .btn:hover{filter:brightness(.95)}
 
-    /* diaporama */
-    .hero-slides .slides{position:absolute;inset:0;z-index:0}
-    .hero-slides .slide{
-      position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
-      opacity:0;animation:fadeHero 18s infinite;will-change:opacity
-    }
-    .hero-slides .s1{animation-delay:6s}
-    .hero-slides .s2{animation-delay:8s}
-    .hero-slides .s3{animation-delay:12s}
-    @keyframes fadeHero{
-      0%,7%{opacity:1}
-      28%,100%{opacity:0}
-    }
-
-    /* Optionnel si tu ajoutes un PNG des véhicules détourés */
+    /* PNG véhicules détourés (optionnel) — mets le fichier si tu veux l’afficher */
     .hero-cars{
-      position:absolute;right:2%;bottom:-6%;
-      width:min(720px,48vw);max-width:100%;
-      filter:drop-shadow(0 16px 28px rgba(0,0,0,.45));z-index:2;display:none; /* mets display:block si tu fournis l'image */
+      position:absolute; right:2%; bottom:-6%;
+      width:min(720px,48vw); max-width:100%;
+      filter:drop-shadow(0 16px 28px rgba(0,0,0,.45)); z-index:2;
+      display:none; /* passe à 'block' si images/hero/cars.png est présent */
     }
 
-    @media (max-width:980px){ .hero-cars{width:min(560px,60vw);bottom:-4%} }
-    @media (max-width:680px){
-      .hero-dyn{height:380px}
-      .hero-dyn .hero-inner{top:12%}
-      .hero-dyn h1{font-size:1.9rem}
-      .hero-cars{width:min(460px,80vw);bottom:-2%}
+    /* Fond de sections un peu plus lumineux */
+    .section--light,
+    .advantages-lovable{ background:#F9FBFF; }
+    .thumb, .gallery img{ background:#F5FAFF; }
+
+    /* Logo texte un peu plus petit (~3–4 pts) */
+    .brand .evh, .brand .autotrade{
+      font-size: clamp(1.05rem, 0.9vw + 0.85rem, 1.6rem);
     }
-    /* accessibilité : réduit l’animation si demandé */
-    @media (prefers-reduced-motion:reduce){
-      .hero-slides .slide{animation:none;opacity:1}
-      .hero-slides .s2,.hero-slides .s3{display:none}
+    .logo img{ height:84px; }
+    @media (max-width:1024px){ .logo img{ height:64px; } }
+
+    @media (max-width:680px){
+      .hero-static{height:380px}
+      .hero-static .hero-inner{left:5%; bottom:84px}
+      .hero-cars{width:min(460px,80vw); bottom:-2%}
     }
   </style>
 </head>
@@ -92,20 +99,11 @@
     </nav>
   </header>
 
-  <!-- Nouvelle bannière dynamique (DIAPORAMA) -->
-  <section class="hero-dyn hero-slides">
-    <div class="slides">
-      <!-- Mets tes fichiers dans /images/hero/ ; on cache l’image si elle est absente -->
-      <img class="slide s1" src="images/hero/dubai_2.webp" alt="" onerror="this.style.display='none'">
-      <img class="slide s2" src="images/hero/dubai_1.webp" alt="" onerror="this.style.display='none'">
-      <img class="slide s3" src="images/hero/dubai_3.webp" alt="" onerror="this.style.display='none'">
-    </div>
-
-    <!-- Optionnel : PNG véhicule(s) détouré(s) -->
+  <!-- BANNIÈRE STATIQUE -->
+  <section class="hero-static">
+    <!-- Option: mettre display:block si tu veux superposer des voitures détourées -->
     <img class="hero-cars" src="images/hero/cars.png" alt="" aria-hidden="true">
-
     <div class="bg-overlay"></div>
-
     <div class="hero-inner container">
       <h1>DRIVE THE FUTURE, TODAY</h1>
       <p>Hybrid & Electric Cars — import direct, transport au port inclus</p>
@@ -172,7 +170,7 @@
           const KEYWORDS = ['autonomie', 'moteur', 'transmission', 'cam'];
           const uniq = arr => [...new Set((arr || []).map(x => String(x)))];
 
-          const all = uniq(v.features);
+          const all = uniq(v.features || []);
           const primary = all.filter(f => KEYWORDS.some(k => f.toLowerCase().includes(k)));
           const secondary = all.filter(f => !primary.includes(f));
 
