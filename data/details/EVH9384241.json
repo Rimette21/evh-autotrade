@@ -1,0 +1,67 @@
+{
+  "id": "EVH9384241",
+  "name": "Haval H6 1.5T DCT 2WD",
+  "priceFCR": "21 600 €",
+  "mileage": 0,
+  "regyear": "2023-01",
+  "images": {
+    "hero": "images/EVH9384241_HAVALH6_devant.png",
+    "gallery": [
+      "images/EVH9384241_HAVALH6_dev_gauche.png",
+      "images/EVH9384241_HAVALH6_devant.png",
+      "images/EVH9384241_HAVALH6_dev_droite.png",
+      "images/EVH9384241_HAVALH6_int_dev.png",
+      "images/EVH9384241_HAVALH6_int.png",
+      "images/EVH9384241_HAVALH6_arriere.png",
+      "images/EVH9384241_HAVALH6_int_arriere.png"
+    ]
+  },
+  "features": [
+    "Moteur essence 1.5T",
+    "Transmission DCT (AT)",
+    "Caméra panoramique 360°",
+    "Radar de stationnement AV/AR",
+    "Écran central tactile",
+    "Régulateur de vitesse"
+  ],
+  "specifications": {
+    "moteur": "L4 1.5 Turbo essence",
+    "puissance": "≈110–135 kW (selon version)",
+    "couple": "≈230–275 Nm (selon version)",
+    "transmission": "DCT / traction avant",
+    "autonomieElectrique": null,
+    "batterie": null,
+    "dimensions": {
+      "longueur": "4680–4685 mm",
+      "largeur": "1886 mm",
+      "hauteur": "1730 mm",
+      "empattement": "2738 mm"
+    },
+    "pneus": "235/55 R19 (selon version)"
+  },
+  "equipements": {
+    "interieur": [
+      "Écran tactile multimédia",
+      "Tableau de bord numérique",
+      "Climatisation automatique",
+      "Sellerie similicuir",
+      "Commandes au volant"
+    ],
+    "securite": [
+      "Caméra 360°",
+      "Radar AV/AR",
+      "Freinage d’urgence (AEB) selon version",
+      "Alerte franchissement de ligne (LKA) selon version",
+      "6 airbags",
+      "Contrôle de stabilité (ESP)"
+    ],
+    "connectivite": [
+      "Bluetooth / USB",
+      "Navigation & services connectés (selon version)"
+    ]
+  },
+  "garantie": "Garantie importateur 2 ans",
+  "localisation": "Chine",
+  "disponibilite": "Livraison au port de destination : ~45 jours"
+}
+
