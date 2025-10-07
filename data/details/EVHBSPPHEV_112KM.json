@@ -24,6 +24,13 @@
     "Régulateur de vitesse adaptatif (ACC) et aide maintien de voie"
   ],
   "specifications": {
+    "moteur": "1.5 L essence + moteur électrique (PHEV)",
+    "puissance": "101 ch (thermique) + 160 kW (électrique)",
+    "transmission": "Traction avant, e-CVT (EHS)",
+    "autonomieElectrique": "112 km (CLTC) / 91 km (WLTC)",
+    "typeCarrosserie": "SUV",
+    "places": "5 places",
+
     "moteurThermique": {
       "type": "1.5 L L4 atmosphérique (BYD472QC)",
       "puissance": "101 ch (74 kW)",
@@ -45,7 +52,6 @@
       "chargeRapide": "Oui (30→80 % ~ 0,38 h ≈ 23 min, 26 kW)",
       "fonctions": ["Récupération d’énergie", "Préchauffage batterie", "V2L (décharge externe)"]
     },
-    "transmission": "Traction avant (e-CVT/EHS)",
     "chassis": {
       "suspensionAvant": "Indépendante McPherson",
       "suspensionArriere": "Indépendante multibras",
@@ -64,7 +70,7 @@
       "poidsATVide": "1830 kg",
       "ptac": "2205 kg",
       "portes": 5,
-      "places": 5
+      "placesNum": 5
     }
   },
   "equipements": {
@@ -85,4 +91,4 @@
       "Modes de conduite Éco / Confort / Sport / Neige"
     ]
   }
-
+}
