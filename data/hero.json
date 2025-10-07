@@ -10,7 +10,7 @@
   },
   "features": [
     "Hybride rechargeable (PHEV)",
-    "Autonomie électrique 75 km (CLTC) / 60 km WLTC",
+    "Autonomie électrique 75 km",
     "Batterie LFP 12.9 kWh",
     "Transmission E-CVT (DM-i)",
     "Caméra 360°",
@@ -27,7 +27,7 @@
   "images": { "hero": "images/EVH_BSPPHEV_devant_gauche.png" },
   "features": [
     "Hybride rechargeable (PHEV)",
-    "Autonomie 112 km (CLTC)",
+    "Autonomie 112 km",
     "Batterie LFP 18,3 kWh",
     "Transmission e-CVT",
     "Camera 360°",
