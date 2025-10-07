@@ -267,3 +267,50 @@ nav a{color:#fff;font-weight:500}
   .gallery{grid-template-columns:repeat(2,1fr)}
   .features-grid,.equip-grid,.specs-grid{grid-template-columns:1fr}
 }
+/* ========= Bannière : titre plus à gauche et plus bas ========= */
+.banner-title{
+  position:absolute;
+  left:6%;             /* plus à gauche */
+  bottom:120px;        /* plus bas */
+  color:#fff;
+  text-shadow:0 6px 18px rgba(0,0,0,.45);
+}
+.banner-title h1{
+  font-family: "Montserrat", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 900;
+  font-size: clamp(28px, 2.4vw + 10px, 44px);
+  line-height: 1.05;
+  letter-spacing: .02em;
+}
+.banner-title .banner-sub{
+  margin-top:.4rem;
+  font-weight:700;
+  font-size: clamp(16px, 1.1vw + 6px, 22px);
+  opacity:.95;
+}
+
+/* bouton un peu plus bas pour s’aligner sous le titre */
+.banner-cta{ left:6%; bottom:40px; }
+
+/* ========= Fond plus lumineux entre les images / sections ========= */
+/* Sections “claires” */
+.section--light,
+.advantages-lovable{ background:#F9FBFF; }  /* bleu très clair plus lumineux */
+
+/* Cartes / vignettes: fond de tuile plus lumineux */
+.thumb{ background:#F5FAFF; }               /* remplacé l'ancien #f3f4f6 */
+
+/* Galerie de la page détail (si image manquante / bords) */
+.gallery img{ background:#F5FAFF; }
+
+/* ========= Logo texte – réduire de 3–4 points ≈ ~3–4 px ========= */
+.brand .evh,
+.brand .autotrade{
+  /* avant max ~1.85rem, on passe à ~1.6rem */
+  font-size: clamp(1.05rem, 0.9vw + 0.85rem, 1.6rem);
+}
+
+/* option : réduire aussi un peu le logo image si besoin */
+.logo img{ height: 84px; }  /* avant 90–92px ; ajuste si tu veux */
+@media (max-width:1024px){ .logo img{ height:64px; } }
+
