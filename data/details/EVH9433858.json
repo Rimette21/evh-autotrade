@@ -1,1 +1,83 @@
-
+{
+  "id": "EVH9433858",
+  "name": "Jetour X70 C-DM Long Range PRO (7 places)",
+  "priceFCR": "24 350 €",
+  "mileage": 2000,
+  "regyear": "2024-04",
+  "featuresCount": 4,
+  "images": {
+    "hero": "images/9433858_Jetour X70_DEV_gauche.png",
+    "gallery": [
+      "images/9433858_Jetour X70_DEV_droite.png",
+      "images/9433858_Jetour X70_arriere.png",
+      "images/9433858_Jetour X70_arriere_gauche.png",
+      "images/9433858_Jetour X70_tab_bord.png",
+      "images/9433858_Jetour X70_int_arriere.png",
+      "images/9433858_Jetour X70_devant.png"
+    ]
+  },
+  "features": [
+    "Hybride rechargeable (C-DM)",
+    "Autonomie électrique 110 km (CLTC) ~ 85 km (WLTC)",
+    "Transmission DHT e-CVT, traction avant",
+    "Caméra panoramique 360° / châssis transparent",
+    "Toit ouvrant panoramique",
+    "Hayon électrique",
+    "Aides à la conduite L2 (ACC, LKA/LCA)"
+  ],
+  "specifications": {
+    "moteurThermique": {
+      "type": "1.5 L turbo L4 essence",
+      "norme": "China VI"
+    },
+    "groupeElectrique": {
+      "architecture": "PHEV C-DM (moteur AV + DHT)",
+      "autonomieCLTC": "110 km",
+      "autonomieWLTC": "≈ 85 km",
+      "rechargeRapide": "≈ 0,3 h (30→80 %)",
+      "rechargeLente": "≈ 2,5 h"
+    },
+    "transmission": "DHT (e-CVT) — traction avant",
+    "dimensions": {
+      "longueur": "≈ 4749 mm",
+      "largeur": "≈ 1900 mm",
+      "hauteur": "≈ 1720 mm",
+      "empattement": "≈ 2745 mm"
+    },
+    "habitacle": {
+      "places": 7,
+      "configuration": "2+3+2"
+    },
+    "pneumatiques": "Jantes alliage, pneus 19\" (selon finition)"
+  },
+  "equipements": {
+    "securite": [
+      "Airbags frontaux/latéraux/rideaux",
+      "ESP, contrôle de traction",
+      "Surveillance angles morts",
+      "Reconnaissance panneaux",
+      "Freinage automatique d’urgence (AEB)"
+    ],
+    "assistance": [
+      "Régulateur de vitesse adaptatif (ACC)",
+      "Maintien/centrage de voie (LKA/LCA)",
+      "Caméras 360°",
+      "Radars AV/AR",
+      "Aide au stationnement"
+    ],
+    "interieur": [
+      "Écran central tactile (système Jetour OS)",
+      "Tableau de bord numérique",
+      "Sellerie similicuir / sièges électriques",
+      "Climatisation auto",
+      "Toit panoramique"
+    ],
+    "connectivite": [
+      "Bluetooth / USB",
+      "Navigation et services connectés (selon version)"
+    ]
+  },
+  "garantie": "Garantie importateur 2 ans",
+  "disponibilite": "Transport inclus au port — ≈45 jours"
+}
+}
