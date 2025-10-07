@@ -37,8 +37,8 @@ header{
 .logo img{height:90px}
 @media (max-width:680px){ .logo img{height:64px} }
 .brand{display:flex;gap:.25rem;align-items:center}
-.brand .evh{font-weight:800}
-.brand .autotrade{font-weight:800;color:var(--brand)}
+.brand .evh{font-weight:600}
+.brand .autotrade{font-weight:600;color:var(--brand)}
 nav ul{display:flex;list-style:none;gap:1.5rem}
 nav a{color:#fff;font-weight:500}
 
