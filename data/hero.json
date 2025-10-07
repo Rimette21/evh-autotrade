@@ -51,6 +51,23 @@
   "featuresCount": 4
 },
   {
+  "id": "EVH9483482",
+  "name": "2024 Geely Galaxy E5 BEV",
+  "priceFCR": "24 350 €",
+  "mileage": 25000,
+  "regyear": "2024-08",
+  "featuresCount": 4,
+  "images": {
+    "hero": "images/EVH9483482_GeelyGalaxy_dev_gauche.png"
+  },
+  "features": [
+    "100% électrique (160 kW)",
+    "Autonomie 440–530 km (CLTC)",
+    "Batterie LFP 49.5–60.2 kWh",
+    "Recharge DC 110 kW (30→80% ~ 0,3 h)"
+  ]
+},
+  {
   "id": "EVHBSPPHEV_160KM",
   "name": "2025 BYD Song Plus DM-i 160KM 1.5L",
   "priceFCR": "27 400 €",
