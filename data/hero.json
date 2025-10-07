@@ -1,7 +1,7 @@
 [
   {
   "id": "EVHBSPPHEV_75KM",
-  "name": "2025 BYD Song PLUS DM-i 75KM 1.5L 101HP L4 E-CVT",
+  "name": "2025 BYD Song PLUS DM-i 75KM 1.5L",
   "priceFCR": "23 700 €",
   "mileage": 0,
   "regyear": "2025-09",
@@ -20,7 +20,7 @@
 },
   {
   "id": "EVHBSPPHEV_112KM",
-  "name": "2025 BYD Song PLUS DM-i 112KM",
+  "name": "2025 BYD Song PLUS DM-i 112KM 1.5L",
   "priceFCR": "25 700 €",
   "mileage": 0,
   "regyear": "2025-01",
@@ -37,7 +37,7 @@
 },
   {
   "id": "EVHBSPPHEV_160KM",
-  "name": "BYD Song Plus DM-i (160 km) 1.5L PHEV",
+  "name": "2025 BYD Song Plus DM-i 160KM 1.5L",
   "priceFCR": "27 400 €",
   "mileage": 100,
   "regyear": "2025-01",
