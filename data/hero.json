@@ -180,6 +180,25 @@
     "featuresCount": 4
   },
   {
+  "id": "EVH9403367",
+  "name": "2024 Jetour X70 C-DM Long Range (7 places)",
+  "priceFCR": "21 520 €",
+  "mileage": 18000,
+  "regyear": "2024-04",
+  "featuresCount": 4,
+  "images": {
+    "hero": "images/9403367_Jetour X70_devant_gauche.png"
+  },
+  "features": [
+    "Hybride rechargeable (C-DM)",
+    "Autonomie électrique ~110 km (CLTC)",
+    "Transmission DHT e-CVT",
+    "Caméra 360° / hayon électrique",
+    "Toit panoramique",
+    "Aides L2 (ACC, maintien de voie)"
+  ]
+},
+  {
     "id": "EVH9391855",
     "name": "Chery Tiggo7 C-DM 1.5T 156HP L4 DHT",
     "priceFCR": "23 900 €",
