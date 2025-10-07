@@ -85,6 +85,25 @@
   "featuresCount": 4
 },
   {
+  "id": "EVH9433858",
+  "name": "2024 Jetour X70 C-DM Long Range PRO (7 places)",
+  "priceFCR": "24 350 €",
+  "mileage": 2000,
+  "regyear": "2024-04",
+  "featuresCount": 4,
+  "images": {
+    "hero": "images/9433858_Jetour X70_DEV_gauche.png"
+  },
+  "features": [
+    "Hybride rechargeable (C-DM)",
+    "Autonomie électrique 110 km (CLTC)",
+    "Transmission DHT e-CVT",
+    "Caméra 360° / hayon électrique",
+    "Toit panoramique",
+    "Aides L2 (ACC, maintien de voie)"
+  ]
+},
+  {
   "id": "EVH9408609",
   "name": "2025 BYD Song Plus BEV 71.8 kWh 150 kW",
   "priceFCR": "25 760 €",
