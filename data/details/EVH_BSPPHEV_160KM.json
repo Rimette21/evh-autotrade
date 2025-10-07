@@ -4,6 +4,7 @@
   "priceFCR": "27 400 €",
   "mileage": 100,
   "regyear": "2025-01",
+  "featuresCount": 4,
   "images": {
     "hero": "images/EVH_BSPPHEV_160km_DEV.png",
     "gallery": [
@@ -62,6 +63,4 @@
   "garantie": "Garantie importateur 2 ans (voir CGV)",
   "localisation": "Chine",
   "disponibilite": "Livraison au port de destination : 45 jours"
-  }
 }
-
