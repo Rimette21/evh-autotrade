@@ -1,0 +1,77 @@
+{
+  "id": "EVH9483482",
+  "name": "Geely Galaxy E5 BEV",
+  "priceFCR": "24 350 €",
+  "mileage": 25000,
+  "regyear": "2024-08",
+  "images": {
+    "hero": "images/EVH9483482_GeelyGalaxy_dev_gauche.png",
+    "gallery": [
+      "images/EVH9483482_GeelyGalaxy_dev.png",
+      "images/EVH9483482_GeelyGalaxy_intdev.png",
+      "images/EVH9483482_GeelyGalaxy_intarriere.png",
+      "images/EVH9483482_GeelyGalaxy_arriere.png"
+    ]
+  },
+  "features": [
+    "100% électrique (BEV)",
+    "Autonomie 440–530 km (CLTC) selon batterie",
+    "Recharge DC 110 kW (30→80% ~ 0,3 h), AC 7–11 kW",
+    "Aides à la conduite (selon version)"
+  ],
+  "specifications": {
+    "motorisation": {
+      "type": "Synchrone à aimants permanents (PMSM)",
+      "puissance": "160 kW (218 ch)",
+      "couple": "320 Nm",
+      "traction": "Avant",
+      "0-100": "6,9 s",
+      "vitesseMax": "180 km/h"
+    },
+    "batterie": {
+      "chimie": "LFP (Aegis Short Blade)",
+      "capacites": ["49,52 kWh", "60,22 kWh"],
+      "autonomieCLTC": ["440 km", "530 km"],
+      "recharge": {
+        "AC": "7–11 kW",
+        "DC": "110 kW",
+        "30-80%": "~ 0,3 h"
+      }
+    },
+    "dimensions": {
+      "longueur": "4615 mm",
+      "largeur": "1901 mm",
+      "hauteur": "1670 mm",
+      "empattement": "2750 mm"
+    },
+    "coffre": "461–1877 L",
+    "poids": "1615–1740 kg",
+    "places": 5,
+    "portes": 5
+  },
+  "equipements": {
+    "securite": [
+      "Airbags frontaux/latéraux/rideaux",
+      "ESP, contrôle de traction",
+      "Freinage automatique d’urgence (AEB)",
+      "Surveillance des angles morts (selon version)"
+    ],
+    "assistance": [
+      "Régulateur de vitesse adaptatif (selon version)",
+      "Aide au maintien de voie",
+      "Caméra de recul / vision périphérique (selon version)"
+    ],
+    "interieur": [
+      "Écran central tactile",
+      "Tableau de bord numérique",
+      "Climatisation automatique",
+      "Sellerie tissu/similicuir (selon version)"
+    ],
+    "connectivite": [
+      "Bluetooth / USB",
+      "Services connectés / Navigation (selon version)"
+    ]
+  },
+  "garantie": "Garantie importateur 2 ans",
+  "disponibilite": "Transport inclus au port — ≈45 jours"
+}
