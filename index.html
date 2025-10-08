@@ -79,11 +79,10 @@
   <!-- BANNIÈRE STATIQUE (texte dans l’image, CTA seulement) -->
   <section class="hero-static">
     <picture class="hero-bg">
-      <source type="image/webp"
-              srcset="images/Dubai_car.webp 1x, images/Dubai_car@2x.webp 2x"
-              sizes="100vw">
-      <img src="images/Dubai_car.jpg" alt="" fetchpriority="high" decoding="async" loading="eager">
-    </picture>
+  <source media="(max-width: 680px)" srcset="images/Dubai_car-mobile.webp" type="image/webp">
+  <source srcset="images/Dubai_car.webp 1x, images/Dubai_car@2x.webp 2x" type="image/webp">
+  <img src="images/Dubai_car.jpg" alt="EVH Autotrade – Importation de SUV électriques et hybrides" fetchpriority="high">
+</picture>
 
     <div class="bg-overlay"></div>
 
