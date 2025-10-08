@@ -11,49 +11,13 @@
         imagesrcset="images/Dubai_car.webp 1x, images/Dubai_car@2x.webp 2x"
         imagesizes="100vw">
 
-  <!-- CSS global (v16) -->
+  <!-- CSS -->
   <link rel="stylesheet" href="styles.css?v=16">
-
-  <!-- Patch mobile “v16.1 – mobile tighten” (option : à déplacer en fichier séparé) -->
-  <style>
-  @media (max-width: 859.98px){
-    :root{ --hdr-h:54px }
-    .header-inner{ padding: 0 .8rem; }
-    .logo img{ height: 44px; }
-    .brand .evh, .brand .autotrade{
-      font-size: clamp(.88rem, 2.4vw, 1.02rem);
-      letter-spacing: .25px;
-    }
-    .brand{ gap: .2rem; }
-  }
-  @media (max-width: 420px){
-    :root{ --hdr-h:50px }
-    .logo img{ height: 40px; }
-    .brand .evh{ display:none; }
-    .brand .autotrade{ font-size: .9rem; }
-  }
-  @media (max-width: 680px){
-    .hero-cta{ left:4.5%; bottom:14px; }
-    .hero-cta .btn{ padding:.6rem .9rem; min-height:38px; font-size:.9rem; font-weight:700; box-shadow:0 4px 12px rgba(229,62,62,.22); }
-    .btn{ padding:.65rem 1rem; min-height:38px; font-size:.9rem; font-weight:700; }
-    .footer-wrap{ padding: 1.2rem .9rem; }
-    .f-cols{ gap: .6rem; }
-    .f-col h4{ font-size: .85rem; }
-    .site-footer{ font-size: .82rem; }
-    .f-bottom{ font-size: .78rem; padding: .65rem .9rem; }
-  }
-  @media (max-width: 859.98px){
-    .nav-btn{ width:36px; height:36px; }
-    .nav-btn .bar, .nav-btn::before, .nav-btn::after{ width:20px; left:8px; }
-    .nav-btn .bar{ top:17px } .nav-btn::before{ top:11px } .nav-btn::after{ top:23px }
-  }
-  </style>
+  <link rel="stylesheet" href="mobile-tighten.css">
 </head>
 <body>
 
-  <!-- ======================
-       HEADER (burger CSS-only)
-       ====================== -->
+  <!-- HEADER (burger CSS-only) -->
   <header>
     <div class="header-inner">
       <div class="logo-wrap">
@@ -66,7 +30,6 @@
         </div>
       </div>
 
-      <!-- Nav inline (desktop) -->
       <nav class="nav" aria-label="Navigation principale">
         <ul>
           <li><a href="index.html">Accueil</a></li>
@@ -77,17 +40,14 @@
         </ul>
       </nav>
 
-      <!-- Burger (checkbox hack) -->
       <input type="checkbox" id="nav-toggle" aria-hidden="true" />
       <label class="nav-btn" for="nav-toggle" aria-label="Ouvrir le menu">
         <span class="bar"></span>
       </label>
     </div>
 
-    <!-- Overlay cliquable pour fermer (label lié au checkbox) -->
     <label for="nav-toggle" class="nav-overlay" aria-hidden="true"></label>
 
-    <!-- Tiroir mobile -->
     <aside class="nav-drawer" role="dialog" aria-modal="true" aria-label="Menu mobile">
       <div class="drawer-head">
         <div class="drawer-title">Menu</div>
@@ -107,9 +67,7 @@
     </aside>
   </header>
 
-  <!-- ======================
-       BANNIÈRE STATIQUE
-       ====================== -->
+  <!-- HÉRO -->
   <section class="hero-static">
     <picture class="hero-bg">
       <source media="(max-width: 680px)" srcset="images/Dubai_car_mobile.webp" type="image/webp">
@@ -122,9 +80,7 @@
     </div>
   </section>
 
-  <!-- ======================
-       Nos Avantages
-       ====================== -->
+  <!-- AVANTAGES -->
   <section id="avantages" class="advantages-lovable">
     <div class="adv2-head">
       <h2 class="adv2-title">Nos <span class="gradient-text accent">Avantages</span></h2>
@@ -155,9 +111,7 @@
     </div>
   </section>
 
-  <!-- ======================
-       Notre Catalogue
-       ====================== -->
+  <!-- CATALOGUE -->
   <section id="catalogue" class="section--light">
     <div class="container">
       <h2 class="section-title">Notre <span class="accent">Catalogue</span></h2>
@@ -169,7 +123,7 @@
   </section>
 
   <script>
-    // Charge la liste depuis hero.json (cache-bust + no-store)
+    // Charge la liste depuis hero.json (no-store)
     fetch('data/hero.json?v=12', { cache: 'no-store' })
       .then(res => res.json())
       .then(vehicles => {
@@ -178,28 +132,21 @@
           grid.innerHTML = '<p>Aucun véhicule disponible pour le moment.</p>';
           return;
         }
-
         grid.innerHTML = vehicles.map(v => {
           const KEYWORDS = ['autonomie', 'moteur', 'transmission', 'cam'];
           const uniq = arr => [...new Set((arr || []).map(x => String(x)))];
-
           const all = uniq(v.features || []);
           const primary = all.filter(f => KEYWORDS.some(k => f.toLowerCase().includes(k)));
           const secondary = all.filter(f => !primary.includes(f));
-
           const target = Number.isFinite(v.featuresCount) ? v.featuresCount : 4;
-
           let feats = [...primary, ...secondary].slice(0, target);
           while (feats.length < target) feats.push('__placeholder__');
-
           const featuresHTML = feats.map(f =>
             f === '__placeholder__'
               ? '<li class="placeholder">•</li>'
               : `<li>• ${f}</li>`
           ).join('');
-
           const km = (v.mileage ?? 0).toLocaleString('fr-FR');
-
           return `
             <a class="card-link" href="vehicle.html?id=${encodeURIComponent(v.id)}">
               <article class="card">
@@ -213,13 +160,10 @@
                     <span>Km : ${km} km</span>
                     <span>Immat. : ${v.regyear || '-'}</span>
                   </div>
-                  <ul class="features">
-                    ${featuresHTML}
-                  </ul>
+                  <ul class="features">${featuresHTML}</ul>
                 </div>
               </article>
-            </a>
-          `;
+            </a>`;
         }).join('');
       })
       .catch(err => {
@@ -229,13 +173,10 @@
       });
   </script>
 
-  <!-- ======================
-       FOOTER
-       ====================== -->
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="footer-wrap">
       <div class="f-brand">
-        <!-- Logo footer masqué par CSS (.f-logo { display:none !important; }) -->
         <img src="images/EVH_logo.png" alt="EVH AUTOTRADE" class="f-logo">
         <div>
           <strong>Eco Value Hub FZ-LLC</strong><br>
@@ -244,7 +185,6 @@
           Ras Al Khaimah, United Arab Emirates
         </div>
       </div>
-
       <div class="f-cols">
         <div class="f-col">
           <h4>Contact</h4>
@@ -271,16 +211,13 @@
         </div>
       </div>
     </div>
-
     <div class="f-bottom">
       <small>© <span id="y"></span> Eco Value Hub FZ-LLC — All rights reserved.</small>
     </div>
   </footer>
 
   <script>
-    // année auto
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
-
 </body>
 </html>
