@@ -286,5 +286,10 @@ nav a{color:#fff;font-weight:500}
 @media (max-width:560px){
   .f-cols{grid-template-columns:1fr}
 }
-
+@media (max-width: 680px) {
+  .name { font-size: 1rem !important; }
+  .submeta, .price, .meta { font-size: 0.85rem !important; }
+  .features li { font-size: 0.825rem !important; }
+  .f-brand div, .f-col li, .f-bottom small { font-size: 0.85rem !important; }
+}
 
