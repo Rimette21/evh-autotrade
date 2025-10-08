@@ -286,3 +286,157 @@ nav a{color:#fff;font-weight:500}
 @media (max-width:560px){
   .f-cols{grid-template-columns:1fr}
 }
+/* ===== RÉPONSE MOBILE GLOBALE ===== */
+@media (max-width: 768px) {
+  body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 20px;
+  }
+
+  .logo-wrap {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+
+  .brand {
+    font-size: 1.1rem;
+  }
+
+  nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  nav li a {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+
+  .hero-static {
+    height: auto !important;
+    min-height: 300px;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .hero-bg img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+    padding: 0 12px;
+  }
+
+  .hero-cta {
+    left: 5%;
+    bottom: 16px;
+    max-width: 90%;
+    text-align: center;
+  }
+
+  .hero-cta .btn {
+    padding: 0.75rem 1.1rem;
+    font-size: 0.9rem;
+    white-space: normal;
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+    box-sizing: border-box;
+  }
+
+  .advantages-lovable {
+    padding: 40px 20px;
+  }
+
+  .adv2-head {
+    text-align: center;
+  }
+
+  .adv2-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .adv2-card {
+    padding: 20px;
+  }
+
+  .section--light {
+    padding: 40px 20px;
+  }
+
+  .container {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  #vehicles-grid {
+    padding: 0 12px;
+  }
+
+  .card {
+    flex-direction: column;
+    padding: 16px;
+  }
+
+  .thumb {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 12px;
+  }
+
+  .body {
+    width: 100%;
+  }
+
+  .name {
+    font-size: 1.1rem;
+  }
+
+  .features {
+    padding-left: 16px;
+  }
+
+  .footer-wrap {
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+  }
+
+  .f-brand {
+    text-align: center;
+  }
+
+  .f-cols {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .f-col {
+    width: 100%;
+  }
+
+  .f-bottom {
+    padding: 12px;
+    text-align: center;
+  }
+}
