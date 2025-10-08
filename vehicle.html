@@ -4,47 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Détail véhicule — E.V.H. AUTOTRADE</title>
-
-  <!-- CSS global (v16) -->
   <link rel="stylesheet" href="styles.css?v=16">
-
-  <!-- Patch mobile “v16.1 – mobile tighten” (option : à déplacer en fichier séparé) -->
-  <style>
-  @media (max-width: 859.98px){
-    :root{ --hdr-h:54px }
-    .header-inner{ padding: 0 .8rem; }
-    .logo img{ height: 44px; }
-    .brand .evh, .brand .autotrade{
-      font-size: clamp(.88rem, 2.4vw, 1.02rem);
-      letter-spacing: .25px;
-    }
-    .brand{ gap: .2rem; }
-  }
-  @media (max-width: 420px){
-    :root{ --hdr-h:50px }
-    .logo img{ height: 40px; }
-    .brand .evh{ display:none; }
-    .brand .autotrade{ font-size: .9rem; }
-  }
-  </style>
+  <link rel="stylesheet" href="mobile-tighten.css">
 </head>
 <body class="page-vehicle">
-  <!-- ======================
-       HEADER (burger CSS-only)
-       ====================== -->
+  <!-- HEADER -->
   <header>
     <div class="header-inner">
       <div class="logo-wrap">
-        <div class="logo">
-          <img src="images/EVH_logo.png" alt="E.V.H. AUTOTRADE">
-        </div>
-        <div class="brand">
-          <span class="evh">E.V.H.</span>
-          <span class="autotrade">AUTOTRADE</span>
-        </div>
+        <div class="logo"><img src="images/EVH_logo.png" alt="E.V.H. AUTOTRADE"></div>
+        <div class="brand"><span class="evh">E.V.H.</span><span class="autotrade">AUTOTRADE</span></div>
       </div>
-
-      <!-- Nav inline (desktop) -->
       <nav class="nav" aria-label="Navigation principale">
         <ul>
           <li><a href="index.html">Accueil</a></li>
@@ -54,18 +24,12 @@
           <li><a href="#">Contact</a></li>
         </ul>
       </nav>
-
-      <!-- Burger (checkbox hack) -->
       <input type="checkbox" id="nav-toggle" aria-hidden="true" />
       <label class="nav-btn" for="nav-toggle" aria-label="Ouvrir le menu">
         <span class="bar"></span>
       </label>
     </div>
-
-    <!-- Overlay cliquable pour fermer -->
     <label for="nav-toggle" class="nav-overlay" aria-hidden="true"></label>
-
-    <!-- Tiroir mobile -->
     <aside class="nav-drawer" role="dialog" aria-modal="true" aria-label="Menu mobile">
       <div class="drawer-head">
         <div class="drawer-title">Menu</div>
@@ -85,19 +49,12 @@
     </aside>
   </header>
 
-  <!-- ======================
-       CONTENU
-       ====================== -->
   <div class="container--page">
     <a href="index.html" class="back-link">← Retour au catalogue</a>
-    <div id="vehicle-detail">
-      <p>Chargement du véhicule…</p>
-    </div>
+    <div id="vehicle-detail"><p>Chargement du véhicule…</p></div>
   </div>
 
-  <!-- ======================
-       LIGHTBOX
-       ====================== -->
+  <!-- LIGHTBOX -->
   <div id="lightbox" aria-hidden="true">
     <span id="close">✕</span>
     <span id="prev">‹</span>
@@ -108,7 +65,6 @@
   <script>
     const urlParams = new URLSearchParams(window.location.search);
     const vehicleId = urlParams.get('id');
-
     const url = `data/details/${vehicleId}.json?v=11`;
 
     async function fetchDetail() {
@@ -124,8 +80,7 @@
           <p>ID : ${vehicleId}</p>
           <p>${msg}</p>
           <p style="margin-top:.5rem;font-size:.95rem;color:#b91c1c">
-            Vérifie que <code>${vehicleId}.json</code> existe bien dans <code>data/details/</code>
-            (noms/majuscules identiques).
+            Vérifie que <code>${vehicleId}.json</code> existe bien dans <code>data/details/</code>.
           </p>
           <a href="index.html" style="color:#e53e3e;text-decoration:none;font-weight:700;">← Retour</a>
         </div>`;
@@ -139,12 +94,10 @@
           const mileage = new Intl.NumberFormat('fr-FR').format(data.mileage ?? 0);
           const year = (data.regyear || '').split('-')[0] || '—';
 
-          // Énergie (PHEV vs BEV)
           const isPHEV = (data.features || data.caracteristiques || [])
             .some(f => /phev|hybride/i.test(f || ''));
           const energie = isPHEV ? 'PHEV' : 'BEV';
 
-          // Spécifications
           const specs = data.specifications || {};
           const items = [];
           const add = (label, value) => { if (value) items.push({ label, value }); };
@@ -173,7 +126,6 @@
             </div>
           `).join('');
 
-          // Équipements regroupés
           const eq = data.equipements || {};
           const allEquip = [
             ...(eq.interieur || []),
@@ -181,7 +133,6 @@
             ...(eq.connectivite || [])
           ];
 
-          // Rendu
           document.getElementById('vehicle-detail').innerHTML = `
             <div class="vehicle-header">
               <div class="vehicle-title">
@@ -198,44 +149,28 @@
             </div>
 
             <div class="content-grid">
-              <!-- Images -->
               <div class="card-box image-card">
                 <img src="${data.images?.hero || ''}" alt="${data.name}" class="hero-img"
                      onerror="this.src='https://via.placeholder.com/800x500?text=Image+non+disponible'">
                 <div class="gallery" id="gallery">
                   ${
                     (data.images?.gallery || []).length
-                    ? data.images.gallery.map((u,i)=>`<img data-idx="${i}" src="${u}" alt="Vue ${i+1}">`).join('')
+                    ? data.images.gallery.map((u,i)=>`<img data-idx="\${i}" src="\${u}" alt="Vue \${i+1}">`).join('')
                     : '<p>Aucune image supplémentaire disponible.</p>'
                   }
                 </div>
               </div>
 
-              <!-- Spécifications & Caractéristiques -->
               <div class="card-box specs-card">
                 <div class="card-title">Spécifications techniques</div>
-                <div class="specs-grid spec-compact">
-                  ${specsHTML}
-                </div>
+                <div class="specs-grid spec-compact">${specsHTML}</div>
                 <div class="divider"></div>
                 <div class="card-title">Caractéristiques principales</div>
                 <div class="specs-grid">
-                  <div class="spec-item">
-                    <span class="spec-label">Année</span>
-                    <span class="spec-value">${year}</span>
-                  </div>
-                  <div class="spec-item">
-                    <span class="spec-label">Kilométrage</span>
-                    <span class="spec-value">${mileage} km</span>
-                  </div>
-                  <div class="spec-item">
-                    <span class="spec-label">Énergie</span>
-                    <span class="spec-value">${energie}</span>
-                  </div>
-                  <div class="spec-item">
-                    <span class="spec-label">Référence</span>
-                    <span class="spec-value">${data.id}</span>
-                  </div>
+                  <div class="spec-item"><span class="spec-label">Année</span><span class="spec-value">${year}</span></div>
+                  <div class="spec-item"><span class="spec-label">Kilométrage</span><span class="spec-value">${mileage} km</span></div>
+                  <div class="spec-item"><span class="spec-label">Énergie</span><span class="spec-value">${energie}</span></div>
+                  <div class="spec-item"><span class="spec-label">Référence</span><span class="spec-value">${data.id}</span></div>
                 </div>
               </div>
             </div>
@@ -259,7 +194,7 @@
             </div>
           `;
 
-          // Lightbox navigation
+          // Lightbox
           const galleryImgs = Array.from(document.querySelectorAll('#gallery img'));
           const lb = document.getElementById('lightbox');
           const lbImg = document.getElementById('lbImg');
