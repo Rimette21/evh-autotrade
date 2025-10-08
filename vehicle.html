@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Détail véhicule — E.V.H. AUTOTRADE</title>
-  <link rel="stylesheet" href="styles.css?v=12">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Détails du véhicule | E.V.H. AUTOTRADE</title>
+  <meta name="description" content="Découvrez les détails de ce véhicule disponible chez E.V.H. AUTOTRADE — importation et vente de véhicules neufs et récents.">
+  
+  <!-- Feuilles de style -->
+  <link rel="stylesheet" href="styles.css?v=1.0">
+  <link rel="stylesheet" href="mobile.css?v=1.0">
 </head>
-<body class="page-vehicle">
-  <!-- Header v10 -->
+
+<body>
+
+  <!-- ========== HEADER ========== -->
   <header>
     <div class="logo-wrap">
       <div class="logo">
@@ -18,6 +24,11 @@
         <span class="autotrade">AUTOTRADE</span>
       </div>
     </div>
+
+    <button class="menu-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+
     <nav>
       <ul>
         <li><a href="index.html">Accueil</a></li>
@@ -29,202 +40,88 @@
     </nav>
   </header>
 
-  <div class="container">
-    <a href="index.html" class="back-link">← Retour au catalogue</a>
-    <div id="vehicle-detail">
-      <p>Chargement du véhicule…</p>
-    </div>
-  </div>
-
-  <!-- Lightbox v10 -->
-  <div id="lightbox" aria-hidden="true">
-    <span id="close">✕</span>
-    <span id="prev">‹</span>
-    <img id="lbImg" alt="">
-    <span id="next">›</span>
-  </div>
-
   <script>
-    const urlParams = new URLSearchParams(window.location.search);
-    const vehicleId = urlParams.get('id');
-
-    const url = `data/details/${vehicleId}.json?v=11`;
-
-    async function fetchDetail() {
-      const res = await fetch(url, { cache: 'no-store' });
-      if (!res.ok) throw new Error(`HTTP ${res.status} pour ${url}`);
-      return res.json();
-    }
-
-    function notFound(msg) {
-      document.getElementById('vehicle-detail').innerHTML = `
-        <div style="background:#fff3f3;color:#d32f2f;padding:2rem;border-radius:12px;text-align:center;">
-          <h2>Véhicule non trouvé</h2>
-          <p>ID : ${vehicleId}</p>
-          <p>${msg}</p>
-          <p style="margin-top:.5rem;font-size:.95rem;color:#b91c1c">
-            Vérifie que <code>${vehicleId}.json</code> existe bien dans <code>data/details/</code>
-            (noms/majuscules identiques).
-          </p>
-          <a href="index.html" style="color:#e53e3e;text-decoration:none;font-weight:700;">← Retour</a>
-        </div>`;
-    }
-
-    if (!vehicleId) {
-      notFound("Aucun identifiant n'a été fourni.");
-    } else {
-      fetchDetail()
-        .then(data => {
-          const mileage = new Intl.NumberFormat('fr-FR').format(data.mileage ?? 0);
-          const year = (data.regyear || '').split('-')[0] || '—';
-
-          // Énergie (PHEV vs BEV)
-          const isPHEV = (data.features || data.caracteristiques || [])
-            .some(f => /phev|hybride/i.test(f || ''));
-          const energie = isPHEV ? 'PHEV' : 'BEV';
-
-          // Spécifications
-          const specs = data.specifications || {};
-          const items = [];
-          const add = (label, value) => { if (value) items.push({ label, value }); };
-
-          add('Moteur', specs.moteur || '-');
-          add('Puissance moteur', specs.puissance || '-');
-          add('Transmission', specs.transmission || '-');
-          add('Traction', specs.traction || (data.features||[]).find(f=>/2wd|4wd|awd/i.test(f||'')) || '-');
-          add('Autonomie électrique', specs.autonomieElectrique || '-');
-          add('Type de carrosserie', specs.typeCarrosserie || 'SUV');
-          add('Couleur', specs.couleur || data.couleur || '-');
-          add('Places', specs.places || '5 places');
-          if (specs.dimensions) {
-            const dims = [specs.dimensions.longueur, specs.dimensions.largeur, specs.dimensions.hauteur]
-              .filter(Boolean).join(' × ');
-            add('Dimensions (L×l×H)', dims);
-          }
-          if (specs.poids || specs.capaciteMax) {
-            add('Poids / Capacité max', [specs.poids, specs.capaciteMax].filter(Boolean).join(' / '));
-          }
-
-          const specsHTML = items.map(it => `
-            <div class="spec-item">
-              <span class="spec-label">${it.label}</span>
-              <span class="spec-value">${it.value}</span>
-            </div>
-          `).join('');
-
-          // Équipements regroupés
-          const eq = data.equipements || {};
-          const allEquip = [
-            ...(eq.interieur || []),
-            ...(eq.securite || []),
-            ...(eq.connectivite || [])
-          ];
-
-          // Rendu
-          document.getElementById('vehicle-detail').innerHTML = `
-            <div class="vehicle-header">
-              <div class="vehicle-title">
-                <h1>${data.name || 'Véhicule'}</h1>
-                <div class="vehicle-meta">Modèle ${year} — Réf : <strong>${data.id}</strong></div>
-              </div>
-              <div class="price-stack">
-                <div class="price-big">Prix FCR (HT) : ${data.priceFCR || '-'}</div>
-                <div class="price-sub">Dédouanement possible sous conditions</div>
-                <div style="margin-top:.4rem"><span class="pill">${energie}</span></div>
-              </div>
-            </div>
-
-            <div class="content-grid">
-              <!-- Images -->
-              <div class="card-box image-card">
-                <img src="${data.images?.hero || ''}" alt="${data.name}" class="hero-img"
-                     onerror="this.src='https://via.placeholder.com/800x500?text=Image+non+disponible'">
-                <div class="gallery" id="gallery">
-                  ${
-                    (data.images?.gallery || []).length
-                    ? data.images.gallery.map((u,i)=>`<img data-idx="${i}" src="${u}" alt="Vue ${i+1}">`).join('')
-                    : '<p>Aucune image supplémentaire disponible.</p>'
-                  }
-                </div>
-              </div>
-
-              <!-- Spécifications & Caractéristiques -->
-              <div class="card-box specs-card">
-                <div class="card-title">Spécifications techniques</div>
-                <div class="specs-grid spec-compact">
-                  ${specsHTML}
-                </div>
-                <div class="divider"></div>
-                <div class="card-title">Caractéristiques principales</div>
-                <div class="specs-grid">
-                  <div class="spec-item">
-                    <span class="spec-label">Année</span>
-                    <span class="spec-value">${year}</span>
-                  </div>
-                  <div class="spec-item">
-                    <span class="spec-label">Kilométrage</span>
-                    <span class="spec-value">${mileage} km</span>
-                  </div>
-                  <div class="spec-item">
-                    <span class="spec-label">Énergie</span>
-                    <span class="spec-value">${energie}</span>
-                  </div>
-                  <div class="spec-item">
-                    <span class="spec-label">Référence</span>
-                    <span class="spec-value">${data.id}</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="card-box equip-card">
-              <div class="card-title">Équipements & Accessoires</div>
-              <div class="equip-grid">
-                <ul class="equip-list">
-                  ${allEquip.slice(0, Math.ceil(allEquip.length/2)).map(li=>`<li>${li}</li>`).join('')}
-                </ul>
-                <ul class="equip-list">
-                  ${allEquip.slice(Math.ceil(allEquip.length/2)).map(li=>`<li>${li}</li>`).join('')}
-                </ul>
-              </div>
-            </div>
-
-            <div class="card-box cta-card">
-              <a href="#" class="btn">Demander un devis pour ce véhicule</a>
-            </div>
-          `;
-
-          // Lightbox navigation
-          const galleryImgs = Array.from(document.querySelectorAll('#gallery img'));
-          const lb = document.getElementById('lightbox');
-          const lbImg = document.getElementById('lbImg');
-          const btnClose = document.getElementById('close');
-          const btnPrev = document.getElementById('prev');
-          const btnNext = document.getElementById('next');
-          let idx = 0;
-
-          const open = i => { idx=i; lbImg.src = data.images.gallery[idx]; lb.style.display='flex'; };
-          const close = () => { lb.style.display='none'; lbImg.src=''; };
-          const prev = () => open((idx-1+galleryImgs.length)%galleryImgs.length);
-          const next = () => open((idx+1)%galleryImgs.length);
-
-          galleryImgs.forEach(img => img.addEventListener('click', e => open(+e.target.dataset.idx)));
-          btnClose.addEventListener('click', close);
-          lb.addEventListener('click', e => { if(e.target===lb) close(); });
-          btnPrev.addEventListener('click', prev);
-          btnNext.addEventListener('click', next);
-          window.addEventListener('keydown', e => {
-            if(lb.style.display!=='flex') return;
-            if(e.key==='Escape') close();
-            if(e.key==='ArrowLeft') prev();
-            if(e.key==='ArrowRight') next();
-          });
-        })
-        .catch(err => {
-          console.error('Erreur chargement véhicule:', err);
-          notFound('Le fichier JSON est introuvable ou invalide.');
-        });
-    }
+    // Gestion du menu hamburger
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('header nav');
+    toggle.addEventListener('click', () => {
+      toggle.classList.toggle('active');
+      nav.classList.toggle('open');
+    });
   </script>
+
+  <!-- ========== SECTION DÉTAIL VÉHICULE ========== -->
+  <main class="vehicle-detail">
+
+    <section class="hero-img">
+      <img src="images/vehicule-exemple.jpg" alt="Photo du véhicule">
+    </section>
+
+    <section class="vehicle-info">
+      <div class="vehicle-title">
+        <h1>Toyota Corolla Cross 2024</h1>
+        <p class="price-big">Prix : 82 000 TND</p>
+      </div>
+
+      <div class="specs-grid">
+        <div class="spec-item">
+          <span class="spec-label">Carburant :</span> Hybride essence
+        </div>
+        <div class="spec-item">
+          <span class="spec-label">Transmission :</span> Automatique
+        </div>
+        <div class="spec-item">
+          <span class="spec-label">Puissance :</span> 122 ch
+        </div>
+        <div class="spec-item">
+          <span class="spec-label">Année :</span> 2024
+        </div>
+      </div>
+
+      <div class="equipements">
+        <h2>Équipements principaux</h2>
+        <ul class="equip-list">
+          <li>Écran tactile 10"</li>
+          <li>Caméra de recul</li>
+          <li>Climatisation automatique</li>
+          <li>Feux LED</li>
+          <li>Radar avant/arrière</li>
+        </ul>
+      </div>
+
+      <div class="cta-card">
+        <a href="contact.html" class="btn btn-primary">Demander un devis pour ce véhicule</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="footer-wrap">
+
+      <div class="f-cols">
+        <div class="f-col">
+          <h4>Contact</h4>
+          <p>Email : contact@evhautotrade.com</p>
+          <p>Téléphone : +216 00 000 000</p>
+        </div>
+
+        <div class="f-col">
+          <h4>Liens utiles</h4>
+          <ul>
+            <li><a href="index.html#catalogue">Catalogue</a></li>
+            <li><a href="index.html#avantages">Avantages</a></li>
+            <li><a href="#">À propos</a></li>
+            <li><a href="#">Mentions légales</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="f-bottom">
+      <p>© 2025 E.V.H. AUTOTRADE – Tous droits réservés.</p>
+    </div>
+  </footer>
+
 </body>
 </html>
