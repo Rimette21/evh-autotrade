@@ -1,183 +1,159 @@
-/* ======================
-   MOBILE CSS COMPLÈTE & OPTIMISÉE
-   ====================== */
-@media screen and (max-width: 768px) {
+/* =========================================================
+   E.V.H. AUTOTRADE — Version mobile optimisée (v2.0)
+   ========================================================= */
 
-  /* --- HEADER --- */
+/* ========== Header mobile ========== */
+@media (max-width: 768px) {
   header {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-      padding: 10px 15px;
-      position: relative;
-      z-index: 100;
-      background-color: #fff;
+    padding: 0.6rem 1rem;
+    position: relative;
   }
 
   .logo-wrap {
-      display: flex;
-      align-items: center;
+    gap: 0.4rem;
   }
 
   .logo img {
-      width: 80px;   /* plus petit */
-      height: auto;
-      margin-right: 8px;
+    height: 48px;
   }
 
-  .brand {
-      font-size: 16px; /* plus petit */
-      text-align: left;
+  .brand .evh, 
+  .brand .autotrade {
+    font-size: 1rem;
   }
 
-  /* Hamburger */
+  /* Menu hamburger */
   .menu-toggle {
-      display: block;
-      font-size: 28px;
-      background: none;
-      border: none;
-      cursor: pointer;
-      z-index: 1000;
-      transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 34px;
+    height: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+  }
+  .menu-toggle span {
+    display: block;
+    height: 3px;
+    background: #fff;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+  .menu-toggle.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-toggle.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
   }
 
-  .menu-toggle:active {
-      transform: scale(0.95);
+  /* Navigation mobile */
+  nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    background: #1a1f25;
+    transform: translateY(-200%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
   }
 
-  /* Menu mobile */
+  nav.open {
+    transform: translateY(0);
+  }
+
   nav ul {
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      width: 100%;
-      background-color: #fff;
-      padding: 10px 0;
-      margin: 0;
-      list-style: none;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      border-top: 1px solid #eee;
-      transform: translateY(-20px);
-      opacity: 0;
-      pointer-events: none;
-      transition: all 0.3s ease;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    gap: 0.8rem;
   }
 
-  nav ul.active {
-      transform: translateY(0);
-      opacity: 1;
-      pointer-events: auto;
+  nav li a {
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 600;
   }
+}
 
-  nav ul li {
-      padding: 10px 0;
-      border-bottom: 1px solid #eee;
-  }
-
-  nav ul li a {
-      font-size: 15px;
-      text-decoration: none;
-      color: #000;
-      display: block;
-  }
-
-  /* --- BANNIÈRE / CTA --- */
+/* ========== CTA & Hero ========== */
+@media (max-width: 768px) {
   .hero-static {
-      height: 350px;
+    height: 320px;
   }
-  .hero-cta {
-      left: 5%;
-      bottom: 15px;
-  }
+
   .hero-cta .btn {
-      padding: 0.6rem 1rem;
-      font-size: 0.85rem;  /* plus petit */
-      transition: transform 0.2s ease, filter 0.2s ease;
+    font-size: 0.9rem;
+    padding: 0.7rem 1.1rem;
+  }
+}
+
+/* ========== Page catalogue & détails véhicule ========== */
+@media (max-width: 768px) {
+  .vehicle-title h1 {
+    font-size: 1.4rem;
+    line-height: 1.2;
   }
 
-  /* --- Bouton Demander un devis (page détail catalogue) --- */
-  .btn-devis {
-      padding: 0.6rem 1rem;
-      font-size: 0.85rem;
+  .price-big {
+    font-size: 1.2rem;
   }
 
-  /* --- TEXTES / TITRES --- */
-  p, h1, h2, h3, h4, h5, h6 {
-      font-size: 13px;
-      line-height: 1.35em;
+  .cta-card .btn {
+    font-size: 0.9rem;
+    padding: 0.7rem 1rem;
   }
 
-  /* --- Catalogue / détails véhicules --- */
-  .catalogue-detail, #vehicles-grid, .vehicle-detail {
-      padding: 8px;
-      font-size: 13px;
+  .spec-item {
+    font-size: 0.82rem;
   }
 
-  .grid .card {
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      margin-bottom: 12px;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+  .spec-label {
+    font-size: 0.75rem;
   }
 
-  .grid .card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+  .equip-list li {
+    font-size: 0.85rem;
   }
 
-  .grid .card img, .catalogue-detail img {
-      width: 100%;
-      height: auto;
-      display: block;
-      margin: 0 auto;
+  .hero-img {
+    height: 260px;
+  }
+}
+
+/* ========== Footer simplifié ========== */
+@media (max-width: 768px) {
+  .site-footer {
+    font-size: 0.8rem;
+    text-align: center;
   }
 
-  .grid .card .body, .vehicle-detail .body {
-      padding: 6px 8px;
+  .footer-wrap {
+    grid-template-columns: 1fr;
+    padding: 1.2rem;
   }
 
-  .grid .card .features li, .vehicle-detail .features li {
-      font-size: 12px;
-      line-height: 1.25em;
+  .f-brand {
+    display: none; /* suppression du logo doublon */
   }
 
-  /* --- Sections / conteneurs --- */
-  .container {
-      padding: 0 10px;
-      overflow-x: hidden;
+  .f-cols {
+    grid-template-columns: 1fr;
   }
 
-  /* --- Footer simplifié --- */
-  footer, .site-footer {
-      font-size: 11px;
-      text-align: center;
-      padding: 8px 5px;
+  .f-col h4 {
+    font-size: 0.85rem;
+    margin-bottom: 0.4rem;
   }
 
-  footer .f-brand img {
-      display: none; /* pas de logo répété */
+  .f-bottom {
+    font-size: 0.75rem;
+    padding: 0.7rem 0;
   }
-
-  footer .f-cols, footer .f-bottom {
-      text-align: center;
-  }
-
-  footer .f-col h4 {
-      font-size: 13px;
-  }
-
-  footer .f-col ul li {
-      font-size: 11px;
-      line-height: 1.3em;
-  }
-
-  /* --- Empêche débordement horizontal --- */
-  body, html {
-      overflow-x: hidden;
-  }
-
 }
