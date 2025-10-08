@@ -78,7 +78,7 @@ nav a{color:#fff;font-weight:500}
 .hero-bg img{
   width:100%; height:100%; object-fit:cover;
   /* petit coup d’éclat sans “brûler” l’image */
-  filter: contrast(1.07) brightness(1.06) saturate(1.05);
+  filter: contrast(1.07) brightness(1.07) saturate(1.05);
   transform: translateZ(0);    /* évite de rares flous GPU */
 }
 
