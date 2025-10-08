@@ -1,33 +1,34 @@
 /* ======================
-   MOBILE CSS COMPLET
+   MOBILE CSS COMPLÈTE & OPTIMISÉE
    ====================== */
 @media screen and (max-width: 768px) {
 
   /* --- HEADER --- */
   header {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       align-items: center;
-      padding: 10px 10px;
+      justify-content: space-between;
+      padding: 10px 15px;
       position: relative;
       z-index: 100;
+      background-color: #fff;
   }
 
   .logo-wrap {
       display: flex;
-      flex-direction: column;
       align-items: center;
-      text-align: center;
   }
 
   .logo img {
-      width: 120px;
+      width: 80px;   /* plus petit */
       height: auto;
+      margin-right: 8px;
   }
 
   .brand {
-      font-size: 18px;
-      margin-top: 5px;
+      font-size: 16px; /* plus petit */
+      text-align: left;
   }
 
   /* Hamburger */
@@ -37,75 +38,111 @@
       background: none;
       border: none;
       cursor: pointer;
-      position: absolute;
-      top: 15px;
-      right: 20px;
       z-index: 1000;
+      transition: transform 0.3s ease;
+  }
+
+  .menu-toggle:active {
+      transform: scale(0.95);
   }
 
   /* Menu mobile */
   nav ul {
-      display: none;
+      display: flex;
       flex-direction: column;
       text-align: center;
       position: absolute;
-      top: 70px;
+      top: 60px;
       left: 0;
       width: 100%;
       background-color: #fff;
       padding: 10px 0;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
       margin: 0;
       list-style: none;
-      z-index: 999;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      border-top: 1px solid #eee;
+      transform: translateY(-20px);
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s ease;
   }
 
   nav ul.active {
-      display: flex;
+      transform: translateY(0);
+      opacity: 1;
+      pointer-events: auto;
   }
 
   nav ul li {
-      padding: 12px 0;
+      padding: 10px 0;
       border-bottom: 1px solid #eee;
   }
 
   nav ul li a {
-      font-size: 16px;
+      font-size: 15px;
       text-decoration: none;
       color: #000;
       display: block;
   }
 
-  /* --- HÉROS / BANNIÈRE --- */
+  /* --- BANNIÈRE / CTA --- */
   .hero-static {
-      height: 380px;
+      height: 350px;
   }
   .hero-cta {
       left: 5%;
-      bottom: 18px;
+      bottom: 15px;
   }
   .hero-cta .btn {
-      padding: 0.8rem 1.2rem;
-      font-size: 0.95rem;
+      padding: 0.6rem 1rem;
+      font-size: 0.85rem;  /* plus petit */
+      transition: transform 0.2s ease, filter 0.2s ease;
+  }
+
+  /* --- Bouton Demander un devis (page détail catalogue) --- */
+  .btn-devis {
+      padding: 0.6rem 1rem;
+      font-size: 0.85rem;
   }
 
   /* --- TEXTES / TITRES --- */
   p, h1, h2, h3, h4, h5, h6 {
-      font-size: 14px;
-      line-height: 1.4em;
+      font-size: 13px;
+      line-height: 1.35em;
   }
 
-  /* --- Catalogue détail --- */
-  .catalogue-detail, #vehicles-grid {
-      padding: 10px;
-      font-size: 14px;
+  /* --- Catalogue / détails véhicules --- */
+  .catalogue-detail, #vehicles-grid, .vehicle-detail {
+      padding: 8px;
+      font-size: 13px;
   }
 
-  .catalogue-detail img, .grid .card img {
-      max-width: 100%;
+  .grid .card {
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      margin-bottom: 12px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .grid .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+  }
+
+  .grid .card img, .catalogue-detail img {
+      width: 100%;
       height: auto;
       display: block;
       margin: 0 auto;
+  }
+
+  .grid .card .body, .vehicle-detail .body {
+      padding: 6px 8px;
+  }
+
+  .grid .card .features li, .vehicle-detail .features li {
+      font-size: 12px;
+      line-height: 1.25em;
   }
 
   /* --- Sections / conteneurs --- */
@@ -116,13 +153,13 @@
 
   /* --- Footer simplifié --- */
   footer, .site-footer {
-      font-size: 12px;
+      font-size: 11px;
       text-align: center;
-      padding: 10px 5px;
+      padding: 8px 5px;
   }
 
   footer .f-brand img {
-      display: none; /* cache le logo répété */
+      display: none; /* pas de logo répété */
   }
 
   footer .f-cols, footer .f-bottom {
@@ -130,15 +167,15 @@
   }
 
   footer .f-col h4 {
-      font-size: 14px;
+      font-size: 13px;
   }
 
   footer .f-col ul li {
-      font-size: 12px;
+      font-size: 11px;
       line-height: 1.3em;
   }
 
-  /* --- Évite débordement horizontal --- */
+  /* --- Empêche débordement horizontal --- */
   body, html {
       overflow-x: hidden;
   }
