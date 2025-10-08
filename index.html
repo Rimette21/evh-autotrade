@@ -6,38 +6,53 @@
   <title>E.V.H. AUTOTRADE — Véhicules électriques & hybrides</title>
   <meta name="description" content="Importation directe de SUV hybrides et électriques vers l'Afrique et l'Europe. Prix imbattables, véhicules neufs garantis, livraison rapide.">
 
-  <!-- Précharge l’image unique de la bannière -->
- <link rel="preload" as="image"
-      href="images/Dubai_car.webp"
-      imagesrcset="images/Dubai_car_1x.webp, images/Dubai_car_2x.webp"
-      imagesizes="100vw">
+  <!-- Précharge l’image de bannière (1x/2x) -->
+  <link rel="preload" as="image"
+        href="images/Dubai_car.webp"
+        imagesrcset="images/Dubai_car.webp 1x, images/Dubai_car@2x.webp 2x"
+        imagesizes="100vw">
 
   <!-- CSS global -->
   <link rel="stylesheet" href="styles.css?v=15">
 
-  <!-- Overrides spécifiques (bannière statique + CTA seul) -->
+  <!-- Styles spécifiques (bannière statique + CTA seul) -->
   <style>
     :root{ --brand:#e53e3e; }
 
-    /* ============== HÉRO STATIQUE ============== */
-    <section class="hero-static">
-  <!-- Image de fond en <picture> pour netteté + DPR 2x -->
-  <picture class="hero-bg">
-    <source type="image/webp"
-            srcset="images/Dubai_car.webp 1x, images/Dubai_car@2x.webp 2x"
-            sizes="100vw">
-    <img src="images/Dubai_car.jpg" alt=""
-         fetchpriority="high" decoding="async" loading="eager">
-  </picture>
+    /* ============== HÉRO STATIQUE (net & lumineux) ============== */
+    .hero-static{ position:relative; height:540px; overflow:hidden; color:#fff; }
 
-  <div class="bg-overlay"></div>
+    /* image de fond en <img> pour appliquer les filtres sans flou */
+    .hero-bg{ position:absolute; inset:0; z-index:1; }
+    .hero-bg img{
+      width:100%; height:100%; object-fit:cover;
+      filter: contrast(1.07) brightness(1.06) saturate(1.05);
+      transform: translateZ(0);
+    }
 
-  <!-- CTA seul -->
-  <div class="hero-cta">
-    <a href="#catalogue" class="btn">Découvrez notre catalogue</a>
-  </div>
-</section>
+    /* voile léger pour lisibilité */
+    .bg-overlay{
+      position:absolute; inset:0; z-index:2;
+      background: linear-gradient(180deg, rgba(0,0,0,.06), rgba(0,0,0,.18));
+    }
 
+    /* CTA seul en bas/gauche */
+    .hero-cta{ position:absolute; left:6%; bottom:28px; z-index:3; }
+    .hero-cta .btn{
+      background: var(--brand); color:#fff; font-weight:800;
+      border-radius:999px; padding:.9rem 1.5rem; text-decoration:none;
+      box-shadow:0 8px 20px rgba(229,62,62,.25);
+    }
+    .hero-cta .btn:hover{ filter:brightness(.95); transform:translateY(-1px); }
+
+    @media (max-width:680px){
+      .hero-static{ height:380px; }
+      .hero-cta{ left:5%; bottom:18px; }
+      .hero-cta .btn{ padding:.8rem 1.2rem; font-size:.95rem; }
+    }
+  </style>
+</head>
+<body>
 
   <!-- Header -->
   <header>
@@ -61,9 +76,17 @@
     </nav>
   </header>
 
-  <!-- BANNIÈRE STATIQUE (texte intégré dans l’image, CTA seulement) -->
+  <!-- BANNIÈRE STATIQUE (texte dans l’image, CTA seulement) -->
   <section class="hero-static">
+    <picture class="hero-bg">
+      <source type="image/webp"
+              srcset="images/Dubai_car.webp 1x, images/Dubai_car@2x.webp 2x"
+              sizes="100vw">
+      <img src="images/Dubai_car.jpg" alt="" fetchpriority="high" decoding="async" loading="eager">
+    </picture>
+
     <div class="bg-overlay"></div>
+
     <div class="hero-cta">
       <a href="#catalogue" class="btn">Découvrez notre catalogue</a>
     </div>
