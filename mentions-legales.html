@@ -4,11 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Mentions légales — Eco Value Hub FZ-LLC</title>
-
-  <!-- CSS global (v16 recommandé) -->
   <link rel="stylesheet" href="styles.css?v=16">
-
-  <!-- Ajustements légers spécifiques à la page -->
+  <link rel="stylesheet" href="mobile-tighten.css">
   <style>
     .legal{max-width:900px;margin:1.5rem auto 2rem;padding:0 1.25rem}
     .legal h1{font-size:clamp(1.5rem,2.2vw,2rem);margin-bottom:.5rem}
@@ -16,20 +13,13 @@
   </style>
 </head>
 <body>
-
-  <!-- Header identique au reste du site (burger CSS-only) -->
+  <!-- Header -->
   <header>
     <div class="header-inner">
       <div class="logo-wrap">
-        <div class="logo">
-          <img src="images/EVH_logo.png" alt="E.V.H. AUTOTRADE">
-        </div>
-        <div class="brand">
-          <span class="evh">E.V.H.</span>
-          <span class="autotrade">AUTOTRADE</span>
-        </div>
+        <div class="logo"><img src="images/EVH_logo.png" alt="E.V.H. AUTOTRADE"></div>
+        <div class="brand"><span class="evh">E.V.H.</span><span class="autotrade">AUTOTRADE</span></div>
       </div>
-
       <nav class="nav" aria-label="Navigation principale">
         <ul>
           <li><a href="index.html">Accueil</a></li>
@@ -39,15 +29,9 @@
           <li><a href="confidentialite.html">Confidentialité</a></li>
         </ul>
       </nav>
-
-      <!-- Burger -->
       <input type="checkbox" id="nav-toggle" aria-hidden="true" />
-      <label class="nav-btn" for="nav-toggle" aria-label="Ouvrir le menu">
-        <span class="bar"></span>
-      </label>
+      <label class="nav-btn" for="nav-toggle" aria-label="Ouvrir le menu"><span class="bar"></span></label>
     </div>
-
-    <!-- Overlay / Drawer mobile -->
     <label for="nav-toggle" class="nav-overlay" aria-hidden="true"></label>
     <aside class="nav-drawer" role="dialog" aria-modal="true" aria-label="Menu mobile">
       <div class="drawer-head">
@@ -69,14 +53,8 @@
   </header>
 
   <main class="legal">
-    <!-- Flèche retour -->
-    <a class="back-link" href="index.html"
-       onclick="if (history.length > 1) { history.back(); return false; }">
-      ← Retour
-    </a>
-
+    <a class="back-link" href="index.html" onclick="if(history.length>1){history.back();return false;}">← Retour</a>
     <h1>Mentions légales</h1>
-
     <p><strong>Éditeur :</strong> Eco Value Hub FZ-LLC, Free Zone Limited Liability Company (FZ-LLC), General Trading Licence (RAKEZ).</p>
     <p><strong>Adresse :</strong> VUNE1173, Compass building – Al Hulaila, AL Hulaila Industrial Zone-FZ, Ras Al Khaimah, United Arab Emirates.</p>
     <p><strong>Représentant légal :</strong> —</p>
@@ -95,7 +73,7 @@
     <p>Les informations et prix FCR affichés sont indicatifs et non contractuels ; ils peuvent évoluer selon la disponibilité et les frais logistiques.</p>
   </main>
 
-  <!-- Footer (logo masqué par CSS .f-logo { display:none !important }) -->
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="footer-wrap">
       <div class="f-brand">
@@ -107,25 +85,21 @@
           Ras Al Khaimah, United Arab Emirates
         </div>
       </div>
-
       <div class="f-cols">
-        <div class="f-col">
-          <h4>Contact</h4>
+        <div class="f-col"><h4>Contact</h4>
           <ul>
             <li><a href="mailto:contact@evhautotrade.com">contact@evhautotrade.com</a></li>
-            <li><a href="https://wa.me/33650447400" rel="noopener" target="_blank">WhatsApp : +33 6 50 44 74 00</a></li>
+            <li><a href="https://wa.me/33650447400" target="_blank" rel="noopener">WhatsApp : +33 6 50 44 74 00</a></li>
           </ul>
         </div>
-        <div class="f-col">
-          <h4>Informations légales</h4>
+        <div class="f-col"><h4>Informations légales</h4>
           <ul>
             <li><a href="mentions-legales.html">Mentions légales</a></li>
             <li><a href="conditions-generales.html">Conditions générales</a></li>
             <li><a href="confidentialite.html">Confidentialité</a></li>
           </ul>
         </div>
-        <div class="f-col">
-          <h4>EVH Autotrade</h4>
+        <div class="f-col"><h4>EVH Autotrade</h4>
           <ul>
             <li><a href="index.html#catalogue">Catalogue</a></li>
             <li><a href="index.html#avantages">Nos avantages</a></li>
@@ -134,15 +108,11 @@
         </div>
       </div>
     </div>
-
     <div class="f-bottom">
       <small>© <span id="y"></span> Eco Value Hub FZ-LLC — All rights reserved.</small>
     </div>
   </footer>
 
-  <script>
-    // année auto
-    document.getElementById('y') && (document.getElementById('y').textContent = new Date().getFullYear());
-  </script>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
