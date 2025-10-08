@@ -10,7 +10,7 @@
   },
   "features": [
     "Hybride rechargeable (PHEV)",
-    "Autonomie électrique 75 km",
+    "Autonomie électrique 75km",
     "Batterie LFP 12.9 kWh",
     "Transmission E-CVT (DM-i)",
     "Caméra 360°",
@@ -26,8 +26,9 @@
   "regyear": "2023-01",
   "images": { "hero": "images/EVH9384241_HAVALH6_devant.png" },
   "features": [
-    "Moteur essence 1.5T",
-    "Transmission DCT (AT)",
+    "Hybride rechargeable (PHEV)",
+    "Autonomie électrique 110km",
+    "Transmission DHT",
     "Caméra 360°",
     "Radar de stationnement"
   ],
@@ -42,7 +43,7 @@
   "images": { "hero": "images/EVH_BSPPHEV_devant_gauche.png" },
   "features": [
     "Hybride rechargeable (PHEV)",
-    "Autonomie 112 km",
+    "Autonomie électrique 112km",
     "Batterie LFP 18,3 kWh",
     "Transmission e-CVT",
     "Camera 360°",
@@ -76,7 +77,7 @@
   "images": { "hero": "images/EVH_BSPPHEV_160km_DEV.png" },
   "features": [
     "Hybride rechargeable (DM-i)",
-    "Autonomie électrique 160 km",
+    "Autonomie électrique 160km",
     "Batterie 26.6 kWh",
     "Transmission e-CVT",
     "Caméra 360°",
@@ -86,14 +87,14 @@
 },
   {
   "id": "EVH9404943",
-  "name": "2024 BYD Song Plus 1.5L 110HP L4 E-CVT PHEV 26.6 kWh",
+  "name": "2024 BYD Song Plus 1.5L 110HP L4",
   "priceFCR": "24 960 €",
   "mileage": 9000,
   "regyear": "2024-07",
   "images": { "hero": "images/EVH9404943_BYD_beige_devant.png" },
   "features": [
     "Hybride rechargeable (PHEV)",
-    "Autonomie électrique 150 km",
+    "Autonomie électrique 150km",
     "Batterie 26.6 kWh",
     "Transmission E-CVT",
     "Caméra 360°",
@@ -113,7 +114,7 @@
   },
   "features": [
     "Hybride rechargeable (C-DM)",
-    "Autonomie électrique 110 km (CLTC)",
+    "Autonomie électrique 110km",
     "Transmission DHT e-CVT",
     "Caméra 360° / hayon électrique",
     "Toit panoramique",
@@ -122,7 +123,7 @@
 },
   {
   "id": "EVH9408609",
-  "name": "2025 BYD Song Plus BEV 71.8 kWh 150 kW",
+  "name": "2025 BYD Song Plus BEV",
   "priceFCR": "25 760 €",
   "mileage": 5000,
   "regyear": "2025-08",
@@ -131,8 +132,8 @@
     "hero": "images/EVH9408609_BYD_gris_droit.jpg"
   },
   "features": [
-    "100% électrique",
-    "Autonomie 520 km",
+    "100% électrique - BEV",
+    "Autonomie 520km",
     "Batterie 71.8 kWh",
     "Moteur 150 kW",
     "Caméra 360°",
@@ -142,7 +143,7 @@
 },
   {
   "id": "EVH9478503",
-  "name": "2024 BYD Song Plus 1.5L 110HP L4 E-CVT PHEV 18.3 kWh",
+  "name": "2024 BYD Song Plus 1.5L 110HP L4",
   "priceFCR": "23 250 €",
   "mileage": 21000,
   "regyear": "2024-04",
@@ -152,7 +153,7 @@
   },
   "features": [
     "Hybride rechargeable (PHEV)",
-    "Autonomie électrique 110 km",
+    "Autonomie électrique 110km",
     "Batterie 18.3 kWh",
     "Transmission E-CVT",
     "Caméra 360°",
@@ -170,7 +171,7 @@
     },
     "features": [
       "Hybride rechargeable (PHEV)",
-      "Autonomie électrique 115 km",
+      "Autonomie électrique 115km",
       "Batterie 18.3 kWh",
       "Transmission E-CVT",
       "Caméra 360°",
@@ -180,14 +181,14 @@
   },
   {
     "id": "EVH9387237",
-    "name": "2024 BYD Tang BEV 90.3kWh 600 km",
+    "name": "2024 BYD Tang BEV 90.3kWh 600km",
     "priceFCR": "30 950 €",
     "mileage": 23000,
     "regyear": "2024-01",
     "images": { "hero": "images/EVH9387237_BYDTANG_droit.png" },
     "features": [
       "100% électrique",
-      "Autonomie 600 km",
+      "Autonomie 600km",
       "Transmission AT",
       "Camera 360°",
       "7 places",
@@ -207,8 +208,8 @@
     "hero": "images/9403367_Jetour X70_devant_gauche.png"
   },
   "features": [
-    "Hybride rechargeable (C-DM)",
-    "Autonomie électrique ~110 km (CLTC)",
+    "Hybride rechargeable",
+    "Autonomie électrique ~110km",
     "Transmission DHT e-CVT",
     "Caméra 360° / hayon électrique",
     "Toit panoramique",
@@ -217,14 +218,14 @@
 },
   {
     "id": "EVH9391855",
-    "name": "Chery Tiggo7 C-DM 1.5T 156HP L4 DHT",
+    "name": "Chery Tiggo7 C-DM 1.5T 156HP L4",
     "priceFCR": "23 900 €",
     "mileage": 1200,
     "regyear": "2024-01",
     "images": { "hero": "images/EVH9391855_CHERRY_DEVANT.png" },
     "features": [
       "Moteur hybride rechargeable",
-      "Autonomie électrique 120 km",
+      "Autonomie électrique 120km",
       "Transmission DHT",
       "Camera 360°",
       "Toit ouvrant",
@@ -242,7 +243,7 @@
     "images": { "hero": "images/EVH9382121_TOYOTA_COTE DROIT.png" },
     "features": [
       "100% électrique",
-      "Autonomie 550 km",
+      "Autonomie 550km",
       "Puissance Moteur 200 kW",
       "Transmission AT",
       "Camera 360°",
@@ -261,7 +262,7 @@
     "images": { "hero": "images/EVH9397463_TOYOTA_DROIT.png" },
     "features": [
       "100% électrique",
-      "Autonomie 630 km",
+      "Autonomie 630km",
       "Puissance Moteur 200 kW",
       "Transmission AT",
       "Camera 360°",
@@ -280,7 +281,7 @@
     "images": { "hero": "images/EVH9330983_BMW_DEVANT.png" },
     "features": [
       "100% électrique",
-      "Autonomie 510 km",
+      "Autonomie 510km",
       "Puissance Moteur 150 kW",
       "Transmission AT",
       "Régulateur de vitesse adaptatif",
@@ -298,7 +299,7 @@
     "images": { "hero": "images/EVH9336933_JETOUR_DEVANT.png" },
     "features": [
       "Moteur hybride rechargeable",
-      "Autonomie électrique 100 km",
+      "Autonomie électrique 100km",
       "Transmission DHT",
       "Camera 360°",
       "Toit ouvrant",
@@ -315,7 +316,7 @@
     "images": { "hero": "images/EVH9403325_HAVAL_DROIT.jpg" },
     "features": [
       "Moteur hybride rechargeable",
-      "Autonomie électrique 110 km",
+      "Autonomie électrique 110km",
       "Transmission DHT",
       "Camera 360°",
       "Toit ouvrant",
