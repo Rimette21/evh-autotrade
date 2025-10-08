@@ -3,20 +3,21 @@
    ====================== */
 @media screen and (max-width: 768px) {
 
-  /* --- Header --- */
+  /* --- HEADER --- */
   header {
       display: flex;
       flex-direction: column;
       align-items: center;
       padding: 10px 10px;
       position: relative;
+      z-index: 100;
   }
 
-  /* Logo et brand */
   .logo-wrap {
       display: flex;
       flex-direction: column;
       align-items: center;
+      text-align: center;
   }
 
   .logo img {
@@ -27,7 +28,6 @@
   .brand {
       font-size: 18px;
       margin-top: 5px;
-      text-align: center;
   }
 
   /* Hamburger */
@@ -49,14 +49,13 @@
       flex-direction: column;
       text-align: center;
       position: absolute;
-      top: 70px; /* ajuster selon hauteur header */
+      top: 70px;
       left: 0;
       width: 100%;
       background-color: #fff;
       padding: 10px 0;
       box-shadow: 0 2px 8px rgba(0,0,0,0.2);
       margin: 0;
-      gap: 0;
       list-style: none;
       z-index: 999;
   }
@@ -77,19 +76,32 @@
       display: block;
   }
 
-  /* --- Texte et paragraphes --- */
+  /* --- HÉROS / BANNIÈRE --- */
+  .hero-static {
+      height: 380px;
+  }
+  .hero-cta {
+      left: 5%;
+      bottom: 18px;
+  }
+  .hero-cta .btn {
+      padding: 0.8rem 1.2rem;
+      font-size: 0.95rem;
+  }
+
+  /* --- TEXTES / TITRES --- */
   p, h1, h2, h3, h4, h5, h6 {
       font-size: 14px;
       line-height: 1.4em;
   }
 
   /* --- Catalogue détail --- */
-  .catalogue-detail {
+  .catalogue-detail, #vehicles-grid {
       padding: 10px;
       font-size: 14px;
   }
 
-  .catalogue-detail img {
+  .catalogue-detail img, .grid .card img {
       max-width: 100%;
       height: auto;
       display: block;
@@ -102,11 +114,28 @@
       overflow-x: hidden;
   }
 
-  /* --- Footer --- */
-  footer {
+  /* --- Footer simplifié --- */
+  footer, .site-footer {
       font-size: 12px;
       text-align: center;
-      padding: 15px 5px;
+      padding: 10px 5px;
+  }
+
+  footer .f-brand img {
+      display: none; /* cache le logo répété */
+  }
+
+  footer .f-cols, footer .f-bottom {
+      text-align: center;
+  }
+
+  footer .f-col h4 {
+      font-size: 14px;
+  }
+
+  footer .f-col ul li {
+      font-size: 12px;
+      line-height: 1.3em;
   }
 
   /* --- Évite débordement horizontal --- */
