@@ -1,1 +1,77 @@
+/* =========================================================
+   EVH AUTOTRADE — v16.1 OVERRIDES (mobile tighten)
+   Fichier séparé : mobile-tighten.css
+   Objectif : réduire CTA + logo/texte en mobile, footer + compact
+   ========================================================= */
+
+/* -------- Header + Logo + Texte de marque (mobile) -------- */
+@media (max-width: 859.98px){
+  :root{ --hdr-h:54px }                     /* header un peu plus fin */
+  .header-inner{ padding: 0 .8rem; }
+  .logo img{ height: 44px; }                /* ↓ 52 -> 44 */
+  .brand .evh, .brand .autotrade{
+    font-size: clamp(.88rem, 2.4vw, 1.02rem); /* ↓ taille texte logo */
+    letter-spacing: .25px;
+  }
+  .brand{ gap: .2rem; }
+}
+
+/* Très petits écrans : on simplifie davantage */
+@media (max-width: 420px){
+  :root{ --hdr-h:50px }
+  .logo img{ height: 40px; }                /* ↓ encore */
+  .brand .evh{ display:none; }              /* garde “AUTOTRADE” seul */
+  .brand .autotrade{ font-size: .9rem; }    /* discrète mais lisible */
+}
+
+/* -------- Hero CTA “Découvrez notre catalogue” (mobile) -------- */
+@media (max-width: 680px){
+  .hero-cta{ left:4.5%; bottom:14px; }      /* un poil plus bas et à gauche */
+  .hero-cta .btn{
+    padding: .6rem .9rem;                   /* ↓ padding */
+    min-height: 38px;                       /* ↓ hauteur mini */
+    font-size: .9rem;                       /* ↓ taille texte */
+    font-weight: 700;                       /* un cran moins “épais” */
+    box-shadow: 0 4px 12px rgba(229,62,62,.22); /* ombre plus soft */
+    border-radius: 999px;
+  }
+}
+@media (max-width: 420px){
+  .hero-cta .btn{
+    padding: .55rem .8rem;                  /* encore plus compact */
+    min-height: 36px;
+    font-size: .85rem;
+    box-shadow: 0 3px 10px rgba(229,62,62,.2);
+  }
+}
+
+/* -------- Boutons globaux en mobile (harmonisation) -------- */
+@media (max-width: 680px){
+  .btn{
+    padding: .65rem 1rem;
+    min-height: 38px;
+    font-size: .9rem;
+    font-weight: 700;
+  }
+}
+
+/* -------- Menu : burger un peu plus compact -------- */
+@media (max-width: 859.98px){
+  .nav-btn{ width: 36px; height: 36px; }    /* icône burger plus petite */
+  .nav-btn .bar, .nav-btn::before, .nav-btn::after{
+    width: 20px; left: 8px;
+  }
+  .nav-btn .bar{ top: 17px }
+  .nav-btn::before{ top: 11px }
+  .nav-btn::after{ top: 23px }
+}
+
+/* -------- Footer : encore plus discret en mobile -------- */
+@media (max-width: 680px){
+  .footer-wrap{ padding: 1.2rem .9rem; }
+  .f-cols{ gap: .6rem; }
+  .f-col h4{ font-size: .85rem; }
+  .site-footer{ font-size: .82rem; }
+  .f-bottom{ font-size: .78rem; padding: .65rem .9rem; }
+}
 
