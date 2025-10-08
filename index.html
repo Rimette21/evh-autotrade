@@ -20,36 +20,24 @@
     :root{ --brand:#e53e3e; }
 
     /* ============== HÉRO STATIQUE ============== */
-    .hero-static{
-      position:relative; height:540px; overflow:hidden; color:#fff;
-      background:url('images/Dubai_car.jpg') center 18% / cover no-repeat;
-    }
-    .hero-static .bg-overlay{
-      position:absolute; inset:0; z-index:1;
-      /* voile très léger pour la lisibilité du bouton */
-      background: linear-gradient(180deg, rgba(0,0,0,.10), rgba(0,0,0,.28));
-    }
+    <section class="hero-static">
+  <!-- Image de fond en <picture> pour netteté + DPR 2x -->
+  <picture class="hero-bg">
+    <source type="image/webp"
+            srcset="images/Dubai_car.webp 1x, images/Dubai_car@2x.webp 2x"
+            sizes="100vw">
+    <img src="images/Dubai_car.jpg" alt=""
+         fetchpriority="high" decoding="async" loading="eager">
+  </picture>
 
-    /* CTA seul en bas à gauche */
-    .hero-cta{
-      position:absolute; left:6%; bottom:28px; z-index:3;
-    }
-    .hero-cta .btn{
-      background: var(--brand);
-      color:#fff; font-weight:800; border-radius:999px;
-      padding:.9rem 1.5rem; text-decoration:none;
-      box-shadow:0 8px 20px rgba(229,62,62,.25);
-    }
-    .hero-cta .btn:hover{ filter:brightness(.95); transform:translateY(-1px); }
+  <div class="bg-overlay"></div>
 
-    @media (max-width:680px){
-      .hero-static{height:380px}
-      .hero-cta{ left:5%; bottom:18px; }
-      .hero-cta .btn{ padding:.8rem 1.2rem; font-size:.95rem; }
-    }
-  </style>
-</head>
-<body>
+  <!-- CTA seul -->
+  <div class="hero-cta">
+    <a href="#catalogue" class="btn">Découvrez notre catalogue</a>
+  </div>
+</section>
+
 
   <!-- Header -->
   <header>
