@@ -63,32 +63,31 @@ nav a{color:#fff;font-weight:500}
 }
 .container{max-width:1150px;margin:2rem auto;padding:0 1.25rem}
 
-/* =========================================================
-   HÉRO — STATIQUE (image définie dans index.html)
-   ========================================================= */
+/* ---- HÉRO statique net & lumineux ---- */
 .hero-static{
   position:relative; height:540px; overflow:hidden; color:#fff;
-  /* l’image de fond est définie inline dans index.html */
-  background-position:center 18%; background-size:cover; background-repeat:no-repeat;
 }
 .hero-static .bg-overlay{
-  position:absolute; inset:0; z-index:1;
-  /* voile léger pour la lisibilité du CTA */
-  background: linear-gradient(180deg, rgba(0,0,0,.10), rgba(0,0,0,.28));
+  position:absolute; inset:0; z-index:2;
+  /* Overlay beaucoup plus léger qu'avant */
+  background: linear-gradient(180deg, rgba(0,0,0,.06), rgba(0,0,0,.18));
 }
 
-/* CTA seul (bas-gauche) */
-.hero-cta{
-  position:absolute; left:6%; bottom:28px; z-index:3;
+/* L'image de fond en <img> pour appliquer un filtre (netteté/lumière) */
+.hero-bg{ position:absolute; inset:0; z-index:1; }
+.hero-bg img{
+  width:100%; height:100%; object-fit:cover;
+  /* petit coup d’éclat sans “brûler” l’image */
+  filter: contrast(1.07) brightness(1.06) saturate(1.05);
+  transform: translateZ(0);    /* évite de rares flous GPU */
 }
+
+/* CTA bas-gauche */
+.hero-cta{ position:absolute; left:6%; bottom:28px; z-index:3; }
 .hero-cta .btn{
-  background: var(--brand);
-  color:#fff; font-weight:800; border-radius:999px;
-  padding:.9rem 1.5rem; text-decoration:none;
   box-shadow:0 8px 20px rgba(229,62,62,.25);
+  padding:.9rem 1.5rem; font-weight:800; border-radius:999px;
 }
-.hero-cta .btn:hover{ filter:brightness(.95); transform:translateY(-1px); }
-
 @media (max-width:680px){
   .hero-static{height:380px}
   .hero-cta{ left:5%; bottom:18px; }
