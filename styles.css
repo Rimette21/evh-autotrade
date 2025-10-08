@@ -313,4 +313,24 @@ nav a{color:#fff;font-weight:500}
 /* option : réduire aussi un peu le logo image si besoin */
 .logo img{ height: 84px; }  /* avant 90–92px ; ajuste si tu veux */
 @media (max-width:1024px){ .logo img{ height:64px; } }
+/* === Remonter le texte/CTA du hero === */
+.hero-static .hero-inner,
+.hero-dyn .hero-inner{
+  bottom: 150px;   /* avant ~60–80px ; augmente pour monter le texte */
+  top: auto;
+}
+
+/* Ajuste selon la largeur d’écran */
+@media (min-width: 1400px){
+  .hero-static .hero-inner,
+  .hero-dyn .hero-inner{ bottom: 170px; }
+}
+@media (max-width: 980px){
+  .hero-static .hero-inner,
+  .hero-dyn .hero-inner{ bottom: 100px; }   /* un peu moins haut sur tablette */
+}
+@media (max-width: 680px){
+  .hero-static .hero-inner,
+  .hero-dyn .hero-inner{ bottom: 80px; }    /* mobile */
+}
 
