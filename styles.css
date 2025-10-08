@@ -592,18 +592,7 @@ nav a{color:#fff;font-weight:500}
   .hamburger {
     display: flex;
   }
-
-  .logo-wrap {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .logo {
-    height: 36px;
-    width: auto;
-  }
-
+   
   .brand {
     display: flex;
     flex-direction: column;
