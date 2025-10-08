@@ -1,42 +1,39 @@
 /* ======================
-   Styles mobiles (max-width: 768px)
+   MOBILE CSS COMPLET
    ====================== */
 @media screen and (max-width: 768px) {
 
-  /* --- Logo --- */
-  .logo {
-      width: 120px;           /* ajuster la taille du logo */
+  /* --- Header --- */
+  header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px 10px;
+      position: relative;
+  }
+
+  /* Logo et brand */
+  .logo-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .logo img {
+      width: 120px;
       height: auto;
-      font-size: 18px;        /* texte logo plus petit */
-      display: block;
-      margin: 0 auto;         /* centrer le logo */
   }
 
-  /* --- Menu --- */
-  .menu {
-      display: none;           /* on cache le menu par défaut */
-      flex-direction: column;  
+  .brand {
+      font-size: 18px;
+      margin-top: 5px;
       text-align: center;
-      padding: 0;
-      margin: 0;
-      background-color: #fff;  /* fond menu */
-      position: absolute;
-      top: 60px;               /* ajuster selon hauteur header */
-      left: 0;
-      width: 100%;
-      z-index: 999;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
   }
 
-  .menu li {
-      padding: 12px 0;
-      border-bottom: 1px solid #eee;
-  }
-
-  /* --- Menu hamburger --- */
+  /* Hamburger */
   .menu-toggle {
       display: block;
-      font-size: 24px;
+      font-size: 28px;
       background: none;
       border: none;
       cursor: pointer;
@@ -46,14 +43,43 @@
       z-index: 1000;
   }
 
-  /* --- Affichage menu lorsqu’on clique hamburger --- */
-  .menu.active {
+  /* Menu mobile */
+  nav ul {
+      display: none;
+      flex-direction: column;
+      text-align: center;
+      position: absolute;
+      top: 70px; /* ajuster selon hauteur header */
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      padding: 10px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      margin: 0;
+      gap: 0;
+      list-style: none;
+      z-index: 999;
+  }
+
+  nav ul.active {
       display: flex;
+  }
+
+  nav ul li {
+      padding: 12px 0;
+      border-bottom: 1px solid #eee;
+  }
+
+  nav ul li a {
+      font-size: 16px;
+      text-decoration: none;
+      color: #000;
+      display: block;
   }
 
   /* --- Texte et paragraphes --- */
   p, h1, h2, h3, h4, h5, h6 {
-      font-size: 14px;  /* réduire la taille des textes */
+      font-size: 14px;
       line-height: 1.4em;
   }
 
@@ -64,13 +90,15 @@
   }
 
   .catalogue-detail img {
-      max-width: 100%;      /* images adaptatives */
+      max-width: 100%;
       height: auto;
+      display: block;
+      margin: 0 auto;
   }
 
   /* --- Sections / conteneurs --- */
   .container {
-      padding: 0 10px;      /* éviter débordement horizontal */
+      padding: 0 10px;
       overflow-x: hidden;
   }
 
@@ -81,10 +109,9 @@
       padding: 15px 5px;
   }
 
-  /* --- Ajustement général pour éviter débordement --- */
+  /* --- Évite débordement horizontal --- */
   body, html {
       overflow-x: hidden;
   }
 
 }
-
