@@ -13,6 +13,8 @@
 
   <!-- CSS global -->
   <link rel="stylesheet" href="styles.css?v=15.1">
+  <!-- CSS mobile séparé -->
+  <link rel="stylesheet" href="mobile.css" media="screen and (max-width: 768px)">
 
   <!-- Styles spécifiques (bannière statique + CTA seul) -->
   <style>
@@ -20,22 +22,16 @@
 
     /* ============== HÉRO STATIQUE (net & lumineux) ============== */
     .hero-static{ position:relative; height:540px; overflow:hidden; color:#fff; }
-
-    /* image de fond en <img> pour appliquer les filtres sans flou */
     .hero-bg{ position:absolute; inset:0; z-index:1; }
     .hero-bg img{
       width:100%; height:100%; object-fit:cover;
       filter: contrast(1.07) brightness(1.06) saturate(1.05);
       transform: translateZ(0);
     }
-
-    /* voile léger pour lisibilité */
     .bg-overlay{
       position:absolute; inset:0; z-index:2;
       background: linear-gradient(180deg, rgba(0,0,0,.06), rgba(0,0,0,.18));
     }
-
-    /* CTA seul en bas/gauche */
     .hero-cta{ position:absolute; left:6%; bottom:28px; z-index:3; }
     .hero-cta .btn{
       background: var(--brand); color:#fff; font-weight:800;
@@ -53,7 +49,9 @@
 </head>
 <body>
 
-  <!-- Header -->
+  <!-- ======================
+       HEADER
+       ====================== -->
   <header>
     <div class="logo-wrap">
       <div class="logo">
@@ -64,6 +62,10 @@
         <span class="autotrade">AUTOTRADE</span>
       </div>
     </div>
+
+    <!-- Bouton hamburger mobile -->
+    <button class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('active')">☰</button>
+
     <nav>
       <ul>
         <li><a href="index.html">Accueil</a></li>
@@ -75,13 +77,15 @@
     </nav>
   </header>
 
-  <!-- BANNIÈRE STATIQUE (texte dans l’image, CTA seulement) -->
+  <!-- ======================
+       BANNIÈRE STATIQUE
+       ====================== -->
   <section class="hero-static">
     <picture class="hero-bg">
-  <source media="(max-width: 680px)" srcset="images/Dubai_car_mobile.webp" type="image/webp">
-  <source srcset="images/Dubai_car.webp 1x, images/Dubai_car@2x.webp 2x" type="image/webp">
-  <img src="images/Dubai_car.jpg" alt="EVH Autotrade – Importation de SUV électriques et hybrides" fetchpriority="high">
-</picture>
+      <source media="(max-width: 680px)" srcset="images/Dubai_car_mobile.webp" type="image/webp">
+      <source srcset="images/Dubai_car.webp 1x, images/Dubai_car@2x.webp 2x" type="image/webp">
+      <img src="images/Dubai_car.jpg" alt="EVH Autotrade – Importation de SUV électriques et hybrides" fetchpriority="high">
+    </picture>
 
     <div class="bg-overlay"></div>
 
@@ -90,7 +94,9 @@
     </div>
   </section>
 
-  <!-- Nos Avantages -->
+  <!-- ======================
+       Nos Avantages
+       ====================== -->
   <section id="avantages" class="advantages-lovable">
     <div class="adv2-head">
       <h2 class="adv2-title">Nos <span class="gradient-text accent">Avantages</span></h2>
@@ -121,7 +127,9 @@
     </div>
   </section>
 
-  <!-- Notre Catalogue -->
+  <!-- ======================
+       Notre Catalogue
+       ====================== -->
   <section id="catalogue" class="section--light">
     <div class="container">
       <h2 class="section-title">Notre <span class="accent">Catalogue</span></h2>
@@ -192,55 +200,68 @@
           '<p style="color:red;">Erreur : impossible de charger le catalogue.</p>';
       });
   </script>
+
+  <!-- ======================
+       FOOTER
+       ====================== -->
   <footer class="site-footer">
-  <div class="footer-wrap">
-    <div class="f-brand">
-      <img src="images/EVH_logo.png" alt="EVH AUTOTRADE" class="f-logo">
-      <div>
-        <strong>Eco Value Hub FZ-LLC</strong><br>
-        Free Zone Limited Liability Company (FZ-LLC) – General Trading Licence<br>
-        VUNE1173, Compass building – Al Hulaila, AL Hulaila Industrial Zone-FZ,<br>
-        Ras Al Khaimah, United Arab Emirates
+    <div class="footer-wrap">
+      <div class="f-brand">
+        <img src="images/EVH_logo.png" alt="EVH AUTOTRADE" class="f-logo">
+        <div>
+          <strong>Eco Value Hub FZ-LLC</strong><br>
+          Free Zone Limited Liability Company (FZ-LLC) – General Trading Licence<br>
+          VUNE1173, Compass building – Al Hulaila, AL Hulaila Industrial Zone-FZ,<br>
+          Ras Al Khaimah, United Arab Emirates
+        </div>
+      </div>
+
+      <div class="f-cols">
+        <div class="f-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:contact@evhautotrade.com">contact@evhautotrade.com</a></li>
+            <li><a href="https://wa.me/33650447400" rel="noopener" target="_blank">WhatsApp : +33 6 50 44 74 00</a></li>
+            <li>Direction : Rim CLEMENT (General Manager)</li>
+          </ul>
+        </div>
+        <div class="f-col">
+          <h4>Informations légales</h4>
+          <ul>
+            <li><a href="mentions-legales.html">Mentions légales</a></li>
+            <li><a href="conditions-generales.html">Conditions générales</a></li>
+            <li><a href="confidentialite.html">Confidentialité</a></li>
+          </ul>
+        </div>
+        <div class="f-col">
+          <h4>EVH Autotrade</h4>
+          <ul>
+            <li><a href="index.html#catalogue">Catalogue</a></li>
+            <li><a href="index.html#avantages">Nos avantages</a></li>
+            <li><a href="mailto:contact@evhautotrade.com?subject=Demande%20devis">Demander un devis</a></li>
+          </ul>
+        </div>
       </div>
     </div>
 
-    <div class="f-cols">
-      <div class="f-col">
-        <h4>Contact</h4>
-        <ul>
-          <li><a href="mailto:contact@evhautotrade.com">contact@evhautotrade.com</a></li>
-          <li><a href="https://wa.me/33650447400" rel="noopener" target="_blank">WhatsApp : +33 6 50 44 74 00</a></li>
-          <li>Direction : Rim CLEMENT (General Manager)</li>
-        </ul>
-      </div>
-      <div class="f-col">
-        <h4>Informations légales</h4>
-        <ul>
-          <li><a href="mentions-legales.html">Mentions légales</a></li>
-          <li><a href="conditions-generales.html">Conditions générales</a></li>
-          <li><a href="confidentialite.html">Confidentialité</a></li>
-        </ul>
-      </div>
-      <div class="f-col">
-        <h4>EVH Autotrade</h4>
-        <ul>
-          <li><a href="index.html#catalogue">Catalogue</a></li>
-          <li><a href="index.html#avantages">Nos avantages</a></li>
-          <li><a href="mailto:contact@evhautotrade.com?subject=Demande%20devis">Demander un devis</a></li>
-        </ul>
-      </div>
+    <div class="f-bottom">
+      <small>© <span id="y"></span> Eco Value Hub FZ-LLC — All rights reserved.</small>
     </div>
-  </div>
+  </footer>
 
-  <div class="f-bottom">
-    <small>© <span id="y"></span> Eco Value Hub FZ-LLC — All rights reserved.</small>
-  </div>
-</footer>
+  <script>
+    // année auto
+    document.getElementById('y').textContent = new Date().getFullYear();
 
-<script>
-  // année auto
-  document.getElementById('y').textContent = new Date().getFullYear();
-</script>
+    // Fermer le menu hamburger si clic en dehors
+    document.addEventListener('click', function(e) {
+      const menu = document.querySelector('nav ul');
+      const toggle = document.querySelector('.menu-toggle');
+      if (!menu.contains(e.target) && !toggle.contains(e.target)) {
+        menu.classList.remove('active');
+      }
+    });
+  </script>
 
 </body>
 </html>
