@@ -3,31 +3,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>E.V.H. AUTOTRADE — Véhicules électriques & hybrides</title>
-  <meta name="description" content="Importation directe de SUV hybrides et électriques vers l'Afrique et l'Europe. Prix imbattables, véhicules neufs garantis, livraison rapide.">
-
-  <!-- Précharge l’image de bannière -->
-  <link rel="preload" as="image" href="images/Dubai_car.webp" imagesrcset="images/Dubai_car.webp 1x, images/Dubai_car@2x.webp 2x" imagesizes="100vw">
+  <title>E.V.H. AUTOTRADE</title>
+ 
+  <!-- Précharge l’image de bannière (1x/2x) -->
+  <link rel="preload" as="image"
+        href="images/Dubai_car.webp"
+        imagesrcset="images/Dubai_car.webp 1x, images/Dubai_car@2x.webp 2x"
+        imagesizes="100vw">
 
   <!-- CSS global -->
-  <link rel="stylesheet" href="styles.css?v=15.2">
+  <link rel="stylesheet" href="styles.css?v=15.1">
 
-  <!-- Styles embarqués pour la bannière et le hamburger -->
+  <!-- Styles spécifiques (bannière statique + CTA seul) -->
   <style>
     :root{ --brand:#e53e3e; }
 
-    /* HÉRO STATIQUE */
-    .hero-static{ position:relative; height:540px; overflow:hidden; color:#fff; background:#0b0f14; }
+    /* ============== HÉRO STATIQUE (net & lumineux) ============== */
+    .hero-static{ position:relative; height:540px; overflow:hidden; color:#fff; }
+
+    /* image de fond en <img> pour appliquer les filtres sans flou */
     .hero-bg{ position:absolute; inset:0; z-index:1; }
     .hero-bg img{
       width:100%; height:100%; object-fit:cover;
       filter: contrast(1.07) brightness(1.06) saturate(1.05);
       transform: translateZ(0);
     }
+
+    /* voile léger pour lisibilité */
     .bg-overlay{
       position:absolute; inset:0; z-index:2;
       background: linear-gradient(180deg, rgba(0,0,0,.06), rgba(0,0,0,.18));
     }
+
+    /* CTA seul en bas/gauche */
     .hero-cta{ position:absolute; left:6%; bottom:28px; z-index:3; }
     .hero-cta .btn{
       background: var(--brand); color:#fff; font-weight:800;
@@ -36,63 +44,10 @@
     }
     .hero-cta .btn:hover{ filter:brightness(.95); transform:translateY(-1px); }
 
-    /* MENU HAMBURGER */
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 8px;
-      z-index: 100;
-    }
-    .hamburger span {
-      width: 28px;
-      height: 3px;
-      background: #fff;
-      margin: 3px 0;
-      border-radius: 2px;
-    }
-    .mobile-menu {
-      display: none;
-      position: absolute;
-      top: 100%;
-      right: 20px;
-      background: #1a1f25;
-      border-radius: 12px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-      z-index: 10;
-    }
-    .mobile-menu.active {
-      display: block;
-    }
-    .mobile-menu ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    .mobile-menu li { margin: 0; }
-    .mobile-menu a {
-      display: block;
-      color: #fff;
-      padding: 12px 20px;
-      text-decoration: none;
-      font-weight: 500;
-      border-bottom: 1px solid #2a2f3a;
-    }
-    .mobile-menu a:last-child {
-      border-bottom: none;
-    }
-
-    /* RESPONSIVE */
-    @media (max-width:768px){
-      .hero-static{ height: 380px; }
+    @media (max-width:680px){
+      .hero-static{ height:380px; }
       .hero-cta{ left:5%; bottom:18px; }
       .hero-cta .btn{ padding:.8rem 1.2rem; font-size:.95rem; }
-
-      header { position: relative; }
-      nav:not(.mobile-menu) { display: none; }
-      .hamburger { display: flex; }
     }
   </style>
 </head>
@@ -101,33 +56,15 @@
   <!-- Header -->
   <header>
     <div class="logo-wrap">
-      <img src="images/EVH_logo.png" alt="EVH AUTOTRADE" class="logo">
+      <div class="logo">
+        <img src="images/EVH_logo.png" alt="E.V.H. AUTOTRADE">
+      </div>
       <div class="brand">
         <span class="evh">E.V.H.</span>
         <span class="autotrade">AUTOTRADE</span>
       </div>
     </div>
-
-    <!-- Ancien menu (caché sur mobile) -->
     <nav>
-      <ul>
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="#catalogue">Catalogue</a></li>
-        <li><a href="#avantages">Avantages</a></li>
-        <li><a href="#">À propos</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-
-    <!-- Hamburger (visible uniquement sur mobile) -->
-    <button class="hamburger" aria-label="Menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-
-    <!-- Menu mobile -->
-    <nav class="mobile-menu">
       <ul>
         <li><a href="index.html">Accueil</a></li>
         <li><a href="#catalogue">Catalogue</a></li>
@@ -138,66 +75,95 @@
     </nav>
   </header>
 
-  <!-- BANNIÈRE -->
+  <!-- BANNIÈRE STATIQUE (texte dans l’image, CTA seulement) -->
   <section class="hero-static">
     <picture class="hero-bg">
-      <source media="(max-width: 768px)" srcset="images/Dubai_car_mobile.webp" type="image/webp">
-      <source srcset="images/Dubai_car.webp 1x, images/Dubai_car@2x.webp 2x" type="image/webp">
-      <img src="images/Dubai_car.jpg" alt="EVH Autotrade – Importation de SUV électriques et hybrides" fetchpriority="high">
-    </picture>
+  <source media="(max-width: 680px)" srcset="images/Dubai_car_mobile.webp" type="image/webp">
+  <source srcset="images/Dubai_car.webp 1x, images/Dubai_car@2x.webp 2x" type="image/webp">
+  <img src="images/Dubai_car.jpg" alt="EVH Autotrade – Importation de SUV électriques et hybrides" fetchpriority="high">
+</picture>
+
     <div class="bg-overlay"></div>
+
     <div class="hero-cta">
       <a href="#catalogue" class="btn">Découvrez notre catalogue</a>
     </div>
   </section>
 
-  <!-- Avantages -->
+  <!-- Nos Avantages -->
   <section id="avantages" class="advantages-lovable">
     <div class="adv2-head">
       <h2 class="adv2-title">Nos <span class="gradient-text accent">Avantages</span></h2>
       <p class="adv2-sub">Découvrez pourquoi EVH AUTO TRADE est votre partenaire de confiance pour l'acquisition de SUV hybrides et électriques.</p>
     </div>
     <div class="adv2-grid">
-      <article class="adv2-card"><div class="inner"><div class="adv2-badge">✅</div><div class="adv2-title-sm">Importation directe</div><p class="adv2-desc">Prix réduits grâce à notre réseau d'importation directe sans intermédiaires.</p></div></article>
-      <article class="adv2-card"><div class="inner"><div class="adv2-badge">🛡️</div><div class="adv2-title-sm">SUV neufs ou quasi-neufs</div><p class="adv2-desc">SUV récents, couverts par une garantie importateur de 2 ans.</p></div></article>
-      <article class="adv2-card"><div class="inner"><div class="adv2-badge">🚚</div><div class="adv2-title-sm">Transport inclus au port</div><p class="adv2-desc">Acheminement estimé sous 45 jours. Assistance aux formalités de dédouanement (droits & taxes non inclus).</p></div></article>
+      <article class="adv2-card">
+        <div class="inner">
+          <div class="adv2-badge">✅</div>
+          <div class="adv2-title-sm">Importation directe</div>
+          <p class="adv2-desc">Prix réduits grâce à notre réseau d'importation directe sans intermédiaires.</p>
+        </div>
+      </article>
+      <article class="adv2-card">
+        <div class="inner">
+          <div class="adv2-badge">🛡️</div>
+          <div class="adv2-title-sm">SUV neufs ou quasi-neufs</div>
+          <p class="adv2-desc">SUV récents, couverts par une garantie importateur de 2 ans.</p>
+        </div>
+      </article>
+      <article class="adv2-card">
+        <div class="inner">
+          <div class="adv2-badge">🚚</div>
+          <div class="adv2-title-sm">Transport inclus au port</div>
+          <p class="adv2-desc">Acheminement estimé sous 45 jours. Assistance aux formalités de dédouanement (droits & taxes non inclus).</p>
+        </div>
+      </article>
     </div>
   </section>
 
-  <!-- Catalogue -->
+  <!-- Notre Catalogue -->
   <section id="catalogue" class="section--light">
     <div class="container">
       <h2 class="section-title">Notre <span class="accent">Catalogue</span></h2>
     </div>
+
     <div id="vehicles-grid" class="grid">
       <p>Chargement du catalogue…</p>
     </div>
   </section>
 
   <script>
+    // Charge la liste depuis hero.json (cache-bust + no-store)
     fetch('data/hero.json?v=12', { cache: 'no-store' })
       .then(res => res.json())
       .then(vehicles => {
         const grid = document.getElementById('vehicles-grid');
         if (!Array.isArray(vehicles) || vehicles.length === 0) {
-          grid.innerHTML = '<p>Aucun véhicule disponible.</p>';
+          grid.innerHTML = '<p>Aucun véhicule disponible pour le moment.</p>';
           return;
         }
+
         grid.innerHTML = vehicles.map(v => {
           const KEYWORDS = ['autonomie', 'moteur', 'transmission', 'cam'];
           const uniq = arr => [...new Set((arr || []).map(x => String(x)))];
+
           const all = uniq(v.features || []);
           const primary = all.filter(f => KEYWORDS.some(k => f.toLowerCase().includes(k)));
           const secondary = all.filter(f => !primary.includes(f));
+
           const target = Number.isFinite(v.featuresCount) ? v.featuresCount : 4;
+
           let feats = [...primary, ...secondary].slice(0, target);
           while (feats.length < target) feats.push('__placeholder__');
+
           const featuresHTML = feats.map(f =>
             f === '__placeholder__'
               ? '<li class="placeholder">•</li>'
               : `<li>• ${f}</li>`
           ).join('');
+
           const km = (v.mileage ?? 0).toLocaleString('fr-FR');
+
           return `
             <a class="card-link" href="vehicle.html?id=${encodeURIComponent(v.id)}">
               <article class="card">
@@ -226,70 +192,55 @@
           '<p style="color:red;">Erreur : impossible de charger le catalogue.</p>';
       });
   </script>
-
-  <!-- Footer -->
   <footer class="site-footer">
-    <div class="footer-wrap">
-      <div class="f-brand">
-        <img src="images/EVH_logo.png" alt="EVH AUTOTRADE" class="f-logo">
-        <div>
-          <strong>Eco Value Hub FZ-LLC</strong><br>
-          Free Zone Limited Liability Company (FZ-LLC) – General Trading Licence<br>
-          VUNE1173, Compass building – Al Hulaila, AL Hulaila Industrial Zone-FZ,<br>
-          Ras Al Khaimah, United Arab Emirates
-        </div>
-      </div>
-      <div class="f-cols">
-        <div class="f-col">
-          <h4>Contact</h4>
-          <ul>
-            <li><a href="mailto:contact@evhautotrade.com">contact@evhautotrade.com</a></li>
-            <li><a href="https://wa.me/33650447400" rel="noopener" target="_blank">WhatsApp : +33 6 50 44 74 00</a></li>
-            <li>Direction : Rim CLEMENT (General Manager)</li>
-          </ul>
-        </div>
-        <div class="f-col">
-          <h4>Informations légales</h4>
-          <ul>
-            <li><a href="mentions-legales.html">Mentions légales</a></li>
-            <li><a href="conditions-generales.html">Conditions générales</a></li>
-            <li><a href="confidentialite.html">Confidentialité</a></li>
-          </ul>
-        </div>
-        <div class="f-col">
-          <h4>EVH Autotrade</h4>
-          <ul>
-            <li><a href="index.html#catalogue">Catalogue</a></li>
-            <li><a href="index.html#avantages">Nos avantages</a></li>
-            <li><a href="mailto:contact@evhautotrade.com?subject=Demande%20devis">Demander un devis</a></li>
-          </ul>
-        </div>
+  <div class="footer-wrap">
+    <div class="f-brand">
+      <img src="images/EVH_logo.png" alt="EVH AUTOTRADE" class="f-logo">
+      <div>
+        <strong>Eco Value Hub FZ-LLC</strong><br>
+        Free Zone Limited Liability Company (FZ-LLC) – General Trading Licence<br>
+        VUNE1173, Compass building – Al Hulaila, AL Hulaila Industrial Zone-FZ,<br>
+        Ras Al Khaimah, United Arab Emirates
       </div>
     </div>
-    <div class="f-bottom">
-      <small>© <span id="y"></span> Eco Value Hub FZ-LLC — All rights reserved.</small>
+
+    <div class="f-cols">
+      <div class="f-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:contact@evhautotrade.com">contact@evhautotrade.com</a></li>
+          <li><a href="https://wa.me/33650447400" rel="noopener" target="_blank">WhatsApp : +33 6 50 44 74 00</a></li>
+          <li>Direction : Rim CLEMENT (General Manager)</li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h4>Informations légales</h4>
+        <ul>
+          <li><a href="mentions-legales.html">Mentions légales</a></li>
+          <li><a href="conditions-generales.html">Conditions générales</a></li>
+          <li><a href="confidentialite.html">Confidentialité</a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h4>EVH Autotrade</h4>
+        <ul>
+          <li><a href="index.html#catalogue">Catalogue</a></li>
+          <li><a href="index.html#avantages">Nos avantages</a></li>
+          <li><a href="mailto:contact@evhautotrade.com?subject=Demande%20devis">Demander un devis</a></li>
+        </ul>
+      </div>
     </div>
-  </footer>
+  </div>
 
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
+  <div class="f-bottom">
+    <small>© <span id="y"></span> Eco Value Hub FZ-LLC — All rights reserved.</small>
+  </div>
+</footer>
 
-    // Hamburger JS
-    document.addEventListener('DOMContentLoaded', () => {
-      const hamburger = document.querySelector('.hamburger');
-      const menu = document.querySelector('.mobile-menu');
-      if (hamburger && menu) {
-        hamburger.addEventListener('click', (e) => {
-          e.stopPropagation();
-          menu.classList.toggle('active');
-        });
-        document.addEventListener('click', (e) => {
-          if (!hamburger.contains(e.target) && !menu.contains(e.target)) {
-            menu.classList.remove('active');
-          }
-        });
-      }
-    });
-  </script>
+<script>
+  // année auto
+  document.getElementById('y').textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
