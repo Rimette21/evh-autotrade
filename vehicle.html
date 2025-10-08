@@ -4,39 +4,100 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Détail véhicule — E.V.H. AUTOTRADE</title>
-  <link rel="stylesheet" href="styles.css?v=12">
+
+  <!-- CSS global (v16) -->
+  <link rel="stylesheet" href="styles.css?v=16">
+
+  <!-- Patch mobile “v16.1 – mobile tighten” (option : à déplacer en fichier séparé) -->
+  <style>
+  @media (max-width: 859.98px){
+    :root{ --hdr-h:54px }
+    .header-inner{ padding: 0 .8rem; }
+    .logo img{ height: 44px; }
+    .brand .evh, .brand .autotrade{
+      font-size: clamp(.88rem, 2.4vw, 1.02rem);
+      letter-spacing: .25px;
+    }
+    .brand{ gap: .2rem; }
+  }
+  @media (max-width: 420px){
+    :root{ --hdr-h:50px }
+    .logo img{ height: 40px; }
+    .brand .evh{ display:none; }
+    .brand .autotrade{ font-size: .9rem; }
+  }
+  </style>
 </head>
 <body class="page-vehicle">
-  <!-- Header v10 -->
+  <!-- ======================
+       HEADER (burger CSS-only)
+       ====================== -->
   <header>
-    <div class="logo-wrap">
-      <div class="logo">
-        <img src="images/EVH_logo.png" alt="E.V.H. AUTOTRADE">
+    <div class="header-inner">
+      <div class="logo-wrap">
+        <div class="logo">
+          <img src="images/EVH_logo.png" alt="E.V.H. AUTOTRADE">
+        </div>
+        <div class="brand">
+          <span class="evh">E.V.H.</span>
+          <span class="autotrade">AUTOTRADE</span>
+        </div>
       </div>
-      <div class="brand">
-        <span class="evh">E.V.H.</span>
-        <span class="autotrade">AUTOTRADE</span>
-      </div>
+
+      <!-- Nav inline (desktop) -->
+      <nav class="nav" aria-label="Navigation principale">
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="index.html#catalogue">Catalogue</a></li>
+          <li><a href="index.html#avantages">Avantages</a></li>
+          <li><a href="#">À propos</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Burger (checkbox hack) -->
+      <input type="checkbox" id="nav-toggle" aria-hidden="true" />
+      <label class="nav-btn" for="nav-toggle" aria-label="Ouvrir le menu">
+        <span class="bar"></span>
+      </label>
     </div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="index.html#catalogue">Catalogue</a></li>
-        <li><a href="index.html#avantages">Avantages</a></li>
-        <li><a href="#">À propos</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
+
+    <!-- Overlay cliquable pour fermer -->
+    <label for="nav-toggle" class="nav-overlay" aria-hidden="true"></label>
+
+    <!-- Tiroir mobile -->
+    <aside class="nav-drawer" role="dialog" aria-modal="true" aria-label="Menu mobile">
+      <div class="drawer-head">
+        <div class="drawer-title">Menu</div>
+        <label for="nav-toggle" class="drawer-close" aria-label="Fermer">✕</label>
+      </div>
+      <div class="drawer-body">
+        <nav class="drawer-nav">
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="index.html#catalogue">Catalogue</a></li>
+            <li><a href="index.html#avantages">Avantages</a></li>
+            <li><a href="#">À propos</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </aside>
   </header>
 
-  <div class="container">
+  <!-- ======================
+       CONTENU
+       ====================== -->
+  <div class="container--page">
     <a href="index.html" class="back-link">← Retour au catalogue</a>
     <div id="vehicle-detail">
       <p>Chargement du véhicule…</p>
     </div>
   </div>
 
-  <!-- Lightbox v10 -->
+  <!-- ======================
+       LIGHTBOX
+       ====================== -->
   <div id="lightbox" aria-hidden="true">
     <span id="close">✕</span>
     <span id="prev">‹</span>
@@ -129,7 +190,9 @@
               </div>
               <div class="price-stack">
                 <div class="price-big">Prix FCR (HT) : ${data.priceFCR || '-'}</div>
-                <div class="price-sub">Dédouanement possible sous conditions</div>
+                <div class="price-sub">
+                  <span class="notice notice--customs">Dédouanement possible sous conditions</span>
+                </div>
                 <div style="margin-top:.4rem"><span class="pill">${energie}</span></div>
               </div>
             </div>
@@ -190,7 +253,9 @@
             </div>
 
             <div class="card-box cta-card">
-              <a href="#" class="btn">Demander un devis pour ce véhicule</a>
+              <a href="mailto:contact@evhautotrade.com?subject=Demande%20devis%20${encodeURIComponent(data.name || data.id)}" class="btn">
+                Demander un devis pour ce véhicule
+              </a>
             </div>
           `;
 
@@ -228,4 +293,3 @@
   </script>
 </body>
 </html>
-
