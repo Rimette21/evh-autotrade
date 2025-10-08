@@ -316,7 +316,7 @@ nav a{color:#fff;font-weight:500}
 /* === Remonter le texte/CTA du hero === */
 .hero-static .hero-inner,
 .hero-dyn .hero-inner{
-  bottom: 150px;   /* avant ~60–80px ; augmente pour monter le texte */
+  bottom: 90px;   /* avant ~60–80px ; augmente pour monter le texte */
   top: auto;
 }
 
@@ -327,7 +327,7 @@ nav a{color:#fff;font-weight:500}
 }
 @media (max-width: 980px){
   .hero-static .hero-inner,
-  .hero-dyn .hero-inner{ bottom: 100px; }   /* un peu moins haut sur tablette */
+  .hero-dyn .hero-inner{ bottom: 80px; }   /* un peu moins haut sur tablette */
 }
 @media (max-width: 680px){
   .hero-static .hero-inner,
