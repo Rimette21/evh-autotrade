@@ -323,7 +323,7 @@ nav a{color:#fff;font-weight:500}
 /* Ajuste selon la largeur d’écran */
 @media (min-width: 1400px){
   .hero-static .hero-inner,
-  .hero-dyn .hero-inner{ bottom: 190px; }
+  .hero-dyn .hero-inner{ bottom: 160px; }
 }
 @media (max-width: 980px){
   .hero-static .hero-inner,
