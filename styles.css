@@ -1,5 +1,5 @@
 /* =========================================================
-   EVH AUTOTRADE — STYLES GLOBAUX (v15, héro statique + CTA)
+   EVH AUTOTRADE — STYLES GLOBAUX (v15.1 — héro statique + CTA)
    ========================================================= */
 
 /* ========== Variables & reset ========== */
@@ -63,23 +63,29 @@ nav a{color:#fff;font-weight:500}
 }
 .container{max-width:1150px;margin:2rem auto;padding:0 1.25rem}
 
-/* ---- HÉRO statique net & lumineux ---- */
+/* =========================================================
+   HÉRO STATIQUE — net & lumineux (CTA seul)
+   ========================================================= */
 .hero-static{
   position:relative; height:540px; overflow:hidden; color:#fff;
+  background:#0b0f14; /* fond discret pendant le chargement de l'image */
 }
 .hero-static .bg-overlay{
   position:absolute; inset:0; z-index:2;
-  /* Overlay beaucoup plus léger qu'avant */
+  /* Overlay léger pour la lisibilité, sans ternir l’image */
   background: linear-gradient(180deg, rgba(0,0,0,.06), rgba(0,0,0,.18));
 }
 
-/* L'image de fond en <img> pour appliquer un filtre (netteté/lumière) */
+/* Image de fond placée via <picture>/<img> pour appliquer un filtre */
 .hero-bg{ position:absolute; inset:0; z-index:1; }
 .hero-bg img{
   width:100%; height:100%; object-fit:cover;
   /* petit coup d’éclat sans “brûler” l’image */
   filter: contrast(1.07) brightness(1.07) saturate(1.05);
-  transform: translateZ(0);    /* évite de rares flous GPU */
+  transform: translateZ(0);
+  image-rendering:auto;
+  backface-visibility:hidden;
+  will-change:transform;
 }
 
 /* CTA bas-gauche */
@@ -87,7 +93,10 @@ nav a{color:#fff;font-weight:500}
 .hero-cta .btn{
   box-shadow:0 8px 20px rgba(229,62,62,.25);
   padding:.9rem 1.5rem; font-weight:800; border-radius:999px;
+  min-height:44px; line-height:1;
 }
+.hero-cta .btn:hover{ filter:brightness(.95); transform:translateY(-1px); }
+
 @media (max-width:680px){
   .hero-static{height:380px}
   .hero-cta{ left:5%; bottom:18px; }
@@ -205,65 +214,5 @@ nav a{color:#fff;font-weight:500}
 .spec-compact .spec-value{font-size:.88rem;white-space:nowrap}
 .divider{height:1px;background:#eef2f7;margin:.85rem 0}
 
-/* Équipements & Caractéristiques */
-.equip-card{padding:1.05rem;margin-top:1.05rem}
-.equip-grid{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
-.equip-list{list-style:none;font-size:.95rem}
-.equip-list li{margin:.35rem 0;padding-left:1.1rem;position:relative}
-.equip-list li::before{content:"•";color:var(--brand);font-weight:900;position:absolute;left:0;top:.05rem}
+/* Équipements & Caractéristiqu*
 
-.features-card{padding:1.05rem;margin-top:1.05rem}
-.features-grid{display:grid;grid-template-columns:1fr 1fr;gap:.7rem}
-.feature{display:flex;align-items:center;gap:.45rem;font-size:.95rem}
-.feature .icon{font-size:.95rem;color:#111;opacity:.7}
-
-.cta-card{padding:1.15rem;margin-top:1.05rem;text-align:center}
-
-/* =========================================================
-   LIGHTBOX (galerie plein écran)
-   ========================================================= */
-#lightbox{
-  display:none;position:fixed;inset:0;background:rgba(0,0,0,.9);
-  z-index:9999;align-items:center;justify-content:center;flex-direction:column
-}
-#lightbox img{max-width:90%;max-height:80%;border-radius:10px}
-#close{position:absolute;top:20px;right:30px;font-size:2rem;color:#fff;cursor:pointer}
-#prev,#next{position:absolute;top:50%;transform:translateY(-50%);font-size:2rem;color:#fff;cursor:pointer}
-#prev{left:30px} #next{right:30px}
-
-/* =========================================================
-   RESPONSIVE
-   ========================================================= */
-@media (max-width:1100px){
-  .grid{grid-template-columns:repeat(2,1fr)}
-}
-@media (max-width:980px){
-  .content-grid{grid-template-columns:1fr}
-  .hero-img{height:360px}
-  .price-stack{text-align:left}
-}
-@media (max-width:680px){
-  .grid{grid-template-columns:1fr}
-  .vehicle-title h1{font-size:1.6rem}
-  .gallery{grid-template-columns:repeat(2,1fr)}
-  .features-grid,.equip-grid,.specs-grid{grid-template-columns:1fr}
-}
-/* ===== Footer ===== */
-.site-footer{background:#0f141a;color:#d6dde7;margin-top:2rem}
-.footer-wrap{max-width:1150px;margin:0 auto;padding:2rem 1.25rem;display:grid;gap:1.5rem;grid-template-columns:1.2fr 2fr}
-.f-brand{display:flex;gap:1rem;align-items:flex-start}
-.f-logo{height:56px;filter:grayscale(1) contrast(1.05) brightness(.95)}
-.f-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
-.f-col h4{font-size:1rem;color:#fff;margin:0 0 .5rem;font-weight:800}
-.f-col ul{list-style:none;margin:0;padding:0}
-.f-col li{margin:.35rem 0}
-.f-col a{color:#d6dde7;text-decoration:none}
-.f-col a:hover{color:#fff;text-decoration:underline}
-.f-bottom{border-top:1px solid rgba(255,255,255,.08);text-align:center;padding:.85rem 1.25rem;color:#9fb0c7}
-@media (max-width:900px){
-  .footer-wrap{grid-template-columns:1fr}
-  .f-cols{grid-template-columns:1fr 1fr}
-}
-@media (max-width:560px){
-  .f-cols{grid-template-columns:1fr}
-}
