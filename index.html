@@ -1,19 +1,57 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>E.V.H. AUTOTRADE | Importation & Vente de Véhicules</title>
-  <meta name="description" content="E.V.H. AUTOTRADE — Importation et vente de véhicules neufs et récents. Bénéficiez du statut FCR et d’un accompagnement complet.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>E.V.H. AUTOTRADE</title>
+ 
+  <!-- Précharge l’image de bannière (1x/2x) -->
+  <link rel="preload" as="image"
+        href="images/Dubai_car.webp"
+        imagesrcset="images/Dubai_car.webp 1x, images/Dubai_car@2x.webp 2x"
+        imagesizes="100vw">
 
-  <!-- Feuilles de style -->
-  <link rel="stylesheet" href="styles.css?v=1.0">
-  <link rel="stylesheet" href="mobile.css?v=1.0">
+  <!-- CSS global -->
+  <link rel="stylesheet" href="styles.css?v=15.1">
+  <!-- CSS mobile séparé -->
+  <link rel="stylesheet" href="mobile.css" media="screen and (max-width: 768px)">
+
+  <!-- Styles spécifiques (bannière statique + CTA seul) -->
+  <style>
+    :root{ --brand:#e53e3e; }
+
+    /* ============== HÉRO STATIQUE (net & lumineux) ============== */
+    .hero-static{ position:relative; height:540px; overflow:hidden; color:#fff; }
+    .hero-bg{ position:absolute; inset:0; z-index:1; }
+    .hero-bg img{
+      width:100%; height:100%; object-fit:cover;
+      filter: contrast(1.07) brightness(1.06) saturate(1.05);
+      transform: translateZ(0);
+    }
+    .bg-overlay{
+      position:absolute; inset:0; z-index:2;
+      background: linear-gradient(180deg, rgba(0,0,0,.06), rgba(0,0,0,.18));
+    }
+    .hero-cta{ position:absolute; left:6%; bottom:28px; z-index:3; }
+    .hero-cta .btn{
+      background: var(--brand); color:#fff; font-weight:800;
+      border-radius:999px; padding:.9rem 1.5rem; text-decoration:none;
+      box-shadow:0 8px 20px rgba(229,62,62,.25);
+    }
+    .hero-cta .btn:hover{ filter:brightness(.95); transform:translateY(-1px); }
+
+    @media (max-width:680px){
+      .hero-static{ height:380px; }
+      .hero-cta{ left:5%; bottom:18px; }
+      .hero-cta .btn{ padding:.8rem 1.2rem; font-size:.95rem; }
+    }
+  </style>
 </head>
-
 <body>
 
-  <!-- ========== HEADER ========== -->
+  <!-- ======================
+       HEADER
+       ====================== -->
   <header>
     <div class="logo-wrap">
       <div class="logo">
@@ -25,9 +63,8 @@
       </div>
     </div>
 
-    <button class="menu-toggle" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
+    <!-- Bouton hamburger mobile -->
+    <button class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('active')">☰</button>
 
     <nav>
       <ul>
@@ -40,111 +77,192 @@
     </nav>
   </header>
 
-  <script>
-    // Gestion du menu hamburger
-    const toggle = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('header nav');
-    toggle.addEventListener('click', () => {
-      toggle.classList.toggle('active');
-      nav.classList.toggle('open');
-    });
+  <!-- ======================
+       BANNIÈRE STATIQUE
+       ====================== -->
+  <section class="hero-static">
+    <picture class="hero-bg">
+      <source media="(max-width: 680px)" srcset="images/Dubai_car_mobile.webp" type="image/webp">
+      <source srcset="images/Dubai_car.webp 1x, images/Dubai_car@2x.webp 2x" type="image/webp">
+      <img src="images/Dubai_car.jpg" alt="EVH Autotrade – Importation de SUV électriques et hybrides" fetchpriority="high">
+    </picture>
 
-    // Fermer le menu si clic à l’extérieur
-    document.addEventListener('click', function(e) {
-      if (!nav.contains(e.target) && !toggle.contains(e.target)) {
-        nav.classList.remove('open');
-        toggle.classList.remove('active');
-      }
-    });
+    <div class="bg-overlay"></div>
+
+    <div class="hero-cta">
+      <a href="#catalogue" class="btn">Découvrez notre catalogue</a>
+    </div>
+  </section>
+
+  <!-- ======================
+       Nos Avantages
+       ====================== -->
+  <section id="avantages" class="advantages-lovable">
+    <div class="adv2-head">
+      <h2 class="adv2-title">Nos <span class="gradient-text accent">Avantages</span></h2>
+      <p class="adv2-sub">Découvrez pourquoi EVH AUTO TRADE est votre partenaire de confiance pour l'acquisition de SUV hybrides et électriques.</p>
+    </div>
+    <div class="adv2-grid">
+      <article class="adv2-card">
+        <div class="inner">
+          <div class="adv2-badge">✅</div>
+          <div class="adv2-title-sm">Importation directe</div>
+          <p class="adv2-desc">Prix réduits grâce à notre réseau d'importation directe sans intermédiaires.</p>
+        </div>
+      </article>
+      <article class="adv2-card">
+        <div class="inner">
+          <div class="adv2-badge">🛡️</div>
+          <div class="adv2-title-sm">SUV neufs ou quasi-neufs</div>
+          <p class="adv2-desc">SUV récents, couverts par une garantie importateur de 2 ans.</p>
+        </div>
+      </article>
+      <article class="adv2-card">
+        <div class="inner">
+          <div class="adv2-badge">🚚</div>
+          <div class="adv2-title-sm">Transport inclus au port</div>
+          <p class="adv2-desc">Acheminement estimé sous 45 jours. Assistance aux formalités de dédouanement (droits & taxes non inclus).</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ======================
+       Notre Catalogue
+       ====================== -->
+  <section id="catalogue" class="section--light">
+    <div class="container">
+      <h2 class="section-title">Notre <span class="accent">Catalogue</span></h2>
+    </div>
+
+    <div id="vehicles-grid" class="grid">
+      <p>Chargement du catalogue…</p>
+    </div>
+  </section>
+
+  <script>
+    // Charge la liste depuis hero.json (cache-bust + no-store)
+    fetch('data/hero.json?v=12', { cache: 'no-store' })
+      .then(res => res.json())
+      .then(vehicles => {
+        const grid = document.getElementById('vehicles-grid');
+        if (!Array.isArray(vehicles) || vehicles.length === 0) {
+          grid.innerHTML = '<p>Aucun véhicule disponible pour le moment.</p>';
+          return;
+        }
+
+        grid.innerHTML = vehicles.map(v => {
+          const KEYWORDS = ['autonomie', 'moteur', 'transmission', 'cam'];
+          const uniq = arr => [...new Set((arr || []).map(x => String(x)))];
+
+          const all = uniq(v.features || []);
+          const primary = all.filter(f => KEYWORDS.some(k => f.toLowerCase().includes(k)));
+          const secondary = all.filter(f => !primary.includes(f));
+
+          const target = Number.isFinite(v.featuresCount) ? v.featuresCount : 4;
+
+          let feats = [...primary, ...secondary].slice(0, target);
+          while (feats.length < target) feats.push('__placeholder__');
+
+          const featuresHTML = feats.map(f =>
+            f === '__placeholder__'
+              ? '<li class="placeholder">•</li>'
+              : `<li>• ${f}</li>`
+          ).join('');
+
+          const km = (v.mileage ?? 0).toLocaleString('fr-FR');
+
+          return `
+            <a class="card-link" href="vehicle.html?id=${encodeURIComponent(v.id)}">
+              <article class="card">
+                <img class="thumb" src="${v.images?.hero || ''}" alt="${v.name}"
+                     onerror="this.src='https://via.placeholder.com/400x300?text=Image+non+disponible'">
+                <div class="body">
+                  <div class="name">${v.name}</div>
+                  <div class="submeta">Réf : <strong>${v.id}</strong></div>
+                  <div class="price">Prix FCR (HT) : ${v.priceFCR || '-'}</div>
+                  <div class="meta">
+                    <span>Km : ${km} km</span>
+                    <span>Immat. : ${v.regyear || '-'}</span>
+                  </div>
+                  <ul class="features">
+                    ${featuresHTML}
+                  </ul>
+                </div>
+              </article>
+            </a>
+          `;
+        }).join('');
+      })
+      .catch(err => {
+        console.error(err);
+        document.getElementById('vehicles-grid').innerHTML =
+          '<p style="color:red;">Erreur : impossible de charger le catalogue.</p>';
+      });
   </script>
 
-  <!-- ========== SECTION BANNIÈRE ========== -->
-  <section class="hero">
-    <picture>
-      <source media="(max-width: 768px)" srcset="images/hero-mobile.jpg">
-      <img src="images/hero-desktop.jpg" alt="Bannière E.V.H. AUTOTRADE">
-    </picture>
-    <div class="hero-content">
-      <h1>Votre véhicule, notre expertise.</h1>
-      <p>Importation, accompagnement et livraison clés en main.</p>
-      <a href="#catalogue" class="btn btn-primary">Découvrez notre catalogue</a>
-    </div>
-  </section>
-
-  <!-- ========== SECTION CATALOGUE ========== -->
-  <section id="catalogue" class="catalogue">
-    <h2>Nos véhicules disponibles</h2>
-    <div class="catalogue-grid">
-      <!-- Exemple de carte véhicule -->
-      <div class="car-card">
-        <img src="images/vehicule1.jpg" alt="BYD Song Plus 2024">
-        <h3>BYD Song Plus 2024</h3>
-        <p>Hybride rechargeable | Automatique | 180 ch</p>
-        <a href="vehicle.html" class="btn btn-secondary">Voir le détail</a>
-      </div>
-
-      <div class="car-card">
-        <img src="images/vehicule2.jpg" alt="Jetour Dasheng i-DM">
-        <h3>Jetour Dasheng i-DM</h3>
-        <p>Hybride rechargeable | Boîte auto | 320 ch</p>
-        <a href="vehicle.html" class="btn btn-secondary">Voir le détail</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== SECTION AVANTAGES ========== -->
-  <section id="avantages" class="advantages">
-    <h2>Pourquoi choisir E.V.H. AUTOTRADE ?</h2>
-    <div class="advantages-grid">
-      <div class="advantage-item">
-        <h3>Statut FCR</h3>
-        <p>Bénéficiez d’avantages douaniers exclusifs pour l’importation de votre véhicule.</p>
-      </div>
-      <div class="advantage-item">
-        <h3>Accompagnement complet</h3>
-        <p>De la commande à la livraison, nous gérons toutes les étapes pour vous.</p>
-      </div>
-      <div class="advantage-item">
-        <h3>Réseau fiable</h3>
-        <p>Partenaires certifiés en Europe et en Asie pour garantir des véhicules de qualité.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== SECTION CONTACT / APPEL À ACTION ========== -->
-  <section class="cta">
-    <h2>Un projet d’achat ?</h2>
-    <p>Contactez-nous pour un accompagnement personnalisé et un devis sur mesure.</p>
-    <a href="contact.html" class="btn btn-primary">Nous contacter</a>
-  </section>
-
-  <!-- ========== FOOTER ========== -->
+  <!-- ======================
+       FOOTER
+       ====================== -->
   <footer class="site-footer">
     <div class="footer-wrap">
+      <div class="f-brand">
+        <img src="images/EVH_logo.png" alt="EVH AUTOTRADE" class="f-logo">
+        <div>
+          <strong>Eco Value Hub FZ-LLC</strong><br>
+          Free Zone Limited Liability Company (FZ-LLC) – General Trading Licence<br>
+          VUNE1173, Compass building – Al Hulaila, AL Hulaila Industrial Zone-FZ,<br>
+          Ras Al Khaimah, United Arab Emirates
+        </div>
+      </div>
 
       <div class="f-cols">
         <div class="f-col">
           <h4>Contact</h4>
-          <p>Email : contact@evhautotrade.com</p>
-          <p>WhatsApp : +33 650 447 400</p>
-        </div>
-
-        <div class="f-col">
-          <h4>Liens utiles</h4>
           <ul>
-            <li><a href="#catalogue">Catalogue</a></li>
-            <li><a href="#avantages">Avantages</a></li>
-            <li><a href="#">À propos</a></li>
-            <li><a href="#">Mentions légales</a></li>
+            <li><a href="mailto:contact@evhautotrade.com">contact@evhautotrade.com</a></li>
+            <li><a href="https://wa.me/33650447400" rel="noopener" target="_blank">WhatsApp : +33 6 50 44 74 00</a></li>
+          </ul>
+        </div>
+        <div class="f-col">
+          <h4>Informations légales</h4>
+          <ul>
+            <li><a href="mentions-legales.html">Mentions légales</a></li>
+            <li><a href="conditions-generales.html">Conditions générales</a></li>
+            <li><a href="confidentialite.html">Confidentialité</a></li>
+          </ul>
+        </div>
+        <div class="f-col">
+          <h4>EVH Autotrade</h4>
+          <ul>
+            <li><a href="index.html#catalogue">Catalogue</a></li>
+            <li><a href="index.html#avantages">Nos avantages</a></li>
+            <li><a href="mailto:contact@evhautotrade.com?subject=Demande%20devis">Demander un devis</a></li>
           </ul>
         </div>
       </div>
     </div>
 
     <div class="f-bottom">
-      <p>© 2025 E.V.H. AUTOTRADE – Tous droits réservés.</p>
+      <small>© <span id="y"></span> Eco Value Hub FZ-LLC — All rights reserved.</small>
     </div>
   </footer>
 
+  <script>
+    // année auto
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Fermer le menu hamburger si clic en dehors
+    document.addEventListener('click', function(e) {
+      const menu = document.querySelector('nav ul');
+      const toggle = document.querySelector('.menu-toggle');
+      if (!menu.contains(e.target) && !toggle.contains(e.target)) {
+        menu.classList.remove('active');
+      }
+    });
+  </script>
+
 </body>
 </html>
+
+
