@@ -248,3 +248,22 @@ nav a{color:#fff;font-weight:500}
   .gallery{grid-template-columns:repeat(2,1fr)}
   .features-grid,.equip-grid,.specs-grid{grid-template-columns:1fr}
 }
+/* ===== Footer ===== */
+.site-footer{background:#0f141a;color:#d6dde7;margin-top:2rem}
+.footer-wrap{max-width:1150px;margin:0 auto;padding:2rem 1.25rem;display:grid;gap:1.5rem;grid-template-columns:1.2fr 2fr}
+.f-brand{display:flex;gap:1rem;align-items:flex-start}
+.f-logo{height:56px;filter:grayscale(1) contrast(1.05) brightness(.95)}
+.f-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.f-col h4{font-size:1rem;color:#fff;margin:0 0 .5rem;font-weight:800}
+.f-col ul{list-style:none;margin:0;padding:0}
+.f-col li{margin:.35rem 0}
+.f-col a{color:#d6dde7;text-decoration:none}
+.f-col a:hover{color:#fff;text-decoration:underline}
+.f-bottom{border-top:1px solid rgba(255,255,255,.08);text-align:center;padding:.85rem 1.25rem;color:#9fb0c7}
+@media (max-width:900px){
+  .footer-wrap{grid-template-columns:1fr}
+  .f-cols{grid-template-columns:1fr 1fr}
+}
+@media (max-width:560px){
+  .f-cols{grid-template-columns:1fr}
+}
