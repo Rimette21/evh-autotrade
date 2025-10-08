@@ -1,1 +1,90 @@
+/* ======================
+   Styles mobiles (max-width: 768px)
+   ====================== */
+@media screen and (max-width: 768px) {
+
+  /* --- Logo --- */
+  .logo {
+      width: 120px;           /* ajuster la taille du logo */
+      height: auto;
+      font-size: 18px;        /* texte logo plus petit */
+      display: block;
+      margin: 0 auto;         /* centrer le logo */
+  }
+
+  /* --- Menu --- */
+  .menu {
+      display: none;           /* on cache le menu par défaut */
+      flex-direction: column;  
+      text-align: center;
+      padding: 0;
+      margin: 0;
+      background-color: #fff;  /* fond menu */
+      position: absolute;
+      top: 60px;               /* ajuster selon hauteur header */
+      left: 0;
+      width: 100%;
+      z-index: 999;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+
+  .menu li {
+      padding: 12px 0;
+      border-bottom: 1px solid #eee;
+  }
+
+  /* --- Menu hamburger --- */
+  .menu-toggle {
+      display: block;
+      font-size: 24px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      z-index: 1000;
+  }
+
+  /* --- Affichage menu lorsqu’on clique hamburger --- */
+  .menu.active {
+      display: flex;
+  }
+
+  /* --- Texte et paragraphes --- */
+  p, h1, h2, h3, h4, h5, h6 {
+      font-size: 14px;  /* réduire la taille des textes */
+      line-height: 1.4em;
+  }
+
+  /* --- Catalogue détail --- */
+  .catalogue-detail {
+      padding: 10px;
+      font-size: 14px;
+  }
+
+  .catalogue-detail img {
+      max-width: 100%;      /* images adaptatives */
+      height: auto;
+  }
+
+  /* --- Sections / conteneurs --- */
+  .container {
+      padding: 0 10px;      /* éviter débordement horizontal */
+      overflow-x: hidden;
+  }
+
+  /* --- Footer --- */
+  footer {
+      font-size: 12px;
+      text-align: center;
+      padding: 15px 5px;
+  }
+
+  /* --- Ajustement général pour éviter débordement --- */
+  body, html {
+      overflow-x: hidden;
+  }
+
+}
 
