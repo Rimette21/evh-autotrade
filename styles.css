@@ -195,7 +195,7 @@ nav a{color:#fff;font-weight:500}
 .vehicle-meta{color:var(--muted)}
 .price-stack{text-align:right}
 .price-big{font-size:1.6rem;color:var(--brand);font-weight:800}
-.price-sub{color:#333;font-size:.9rem;margin-top:.15rem}
+.price-sub{color:#6b7280;font-size:.9rem;margin-top:.15rem}
 
 .content-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:1.25rem}
 .card-box{background:var(--white);border-radius:var(--radius-lg);box-shadow:var(--shadow)}
