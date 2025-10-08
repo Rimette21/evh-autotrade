@@ -12,7 +12,7 @@
   <!-- CSS global -->
   <link rel="stylesheet" href="styles.css?v=15">
 
-  <!-- Overrides spécifiques (bannière statique + petits ajustements) -->
+  <!-- Overrides spécifiques (bannière statique + CTA seul) -->
   <style>
     :root{ --brand:#e53e3e; }
 
@@ -21,62 +21,28 @@
       position:relative; height:540px; overflow:hidden; color:#fff;
       background:url('images/Dubai_car.jpg') center 18% / cover no-repeat;
     }
-    .hero-static .container{max-width:1150px;margin:0 auto;padding:0 1.25rem}
     .hero-static .bg-overlay{
       position:absolute; inset:0; z-index:1;
-      /* voile léger pour lisibilité */
-      background:
-        radial-gradient(1100px 380px at 28% 32%, rgba(0,0,0,.16), transparent 60%),
-        linear-gradient(180deg, rgba(0,0,0,.24), rgba(0,0,0,.42));
+      /* voile très léger pour la lisibilité du bouton */
+      background: linear-gradient(180deg, rgba(0,0,0,.10), rgba(0,0,0,.28));
     }
 
-    /* Titre plus à gauche et PLUS HAUT (ancré en haut) */
-    .hero-static .hero-inner{
-      position:absolute; z-index:3;
-      left:6%;
-      top:12%;              /* << remonte le bloc texte */
-      bottom:auto;         /* annule l’ancrage bas */
-      max-width:760px;
+    /* CTA seul en bas à gauche */
+    .hero-cta{
+      position:absolute; left:6%; bottom:28px; z-index:3;
     }
-    .hero-static h1{
-      font-size:clamp(28px, 2.4vw + 10px, 44px);
-      line-height:1.08; margin:0 0 .6rem; font-weight:900;
-      text-shadow:0 6px 18px rgba(0,0,0,.45);
+    .hero-cta .btn{
+      background: var(--brand);
+      color:#fff; font-weight:800; border-radius:999px;
+      padding:.9rem 1.5rem; text-decoration:none;
+      box-shadow:0 8px 20px rgba(229,62,62,.25);
     }
-    .hero-static p{opacity:.95;margin:0 0 1rem;font-weight:700}
-    .hero-static .btn{
-      display:inline-block;background:var(--brand);color:#fff;
-      padding:.9rem 1.5rem;border-radius:999px;font-weight:800;text-decoration:none
-    }
-    .hero-static .btn:hover{filter:brightness(.95)}
+    .hero-cta .btn:hover{ filter:brightness(.95); transform:translateY(-1px); }
 
-    /* PNG véhicules détourés (optionnel) */
-    .hero-cars{
-      position:absolute; right:2%; bottom:-6%;
-      width:min(720px,48vw); max-width:100%;
-      filter:drop-shadow(0 16px 28px rgba(0,0,0,.45)); z-index:2;
-      display:none; /* passe à 'block' si images/hero/cars.png est présent */
-    }
-
-    /* Fond de sections un peu plus lumineux */
-    .section--light,
-    .advantages-lovable{ background:#F9FBFF; }
-    .thumb, .gallery img{ background:#F5FAFF; }
-
-    /* Logo texte un peu plus petit (~3–4 pts) */
-    .brand .evh, .brand .autotrade{
-      font-size: clamp(1.05rem, 0.9vw + 0.85rem, 1.6rem);
-    }
-    .logo img{ height:84px; }
-    @media (max-width:1024px){ .logo img{ height:64px; } }
-
-    /* Ajustements réactifs de la hauteur/position du texte */
-    @media (min-width:1400px){ .hero-static .hero-inner{ top:6%; } }
-    @media (max-width:980px){  .hero-static{height:460px} .hero-static .hero-inner{ top:9%; } }
     @media (max-width:680px){
       .hero-static{height:380px}
-      .hero-static .hero-inner{left:5%; top:12%}
-      .hero-cars{width:min(460px,80vw); bottom:-2%}
+      .hero-cta{ left:5%; bottom:18px; }
+      .hero-cta .btn{ padding:.8rem 1.2rem; font-size:.95rem; }
     }
   </style>
 </head>
@@ -104,11 +70,10 @@
     </nav>
   </header>
 
-  <!-- BANNIÈRE STATIQUE -->
+  <!-- BANNIÈRE STATIQUE (texte intégré dans l’image, CTA seulement) -->
   <section class="hero-static">
-    <img class="hero-cars" src="images/hero/cars.png" alt="" aria-hidden="true">
     <div class="bg-overlay"></div>
-    <div class="hero-inner container">
+    <div class="hero-cta">
       <a href="#catalogue" class="btn">Découvrez notre catalogue</a>
     </div>
   </section>
