@@ -1,5 +1,5 @@
 /* =========================================================
-   EVH AUTOTRADE — STYLES GLOBAUX (v14, bannière dynamique)
+   EVH AUTOTRADE — STYLES GLOBAUX (v15, héro statique + CTA)
    ========================================================= */
 
 /* ========== Variables & reset ========== */
@@ -12,7 +12,7 @@
   --shadow:0 6px 24px rgba(0,0,0,.12);
   --radius-lg:18px;
   --radius-sm:12px;
-  --brand:#e53e3e;
+  --brand:#e53e3e;   /* rouge AUTOTRADE */
   --green:#20b26b;
 }
 
@@ -34,14 +34,14 @@ header{
   box-shadow:0 2px 8px rgba(0,0,0,.1)
 }
 .logo-wrap{display:flex;align-items:center;gap:.6rem}
-.logo img{height:92px}
+.logo img{height:84px}
 @media (max-width:1024px){ .logo img{height:64px} }
 @media (max-width:640px){ .logo img{height:66px} }
 
 .brand{display:flex;gap:.25rem;align-items:center}
 .brand .evh,
 .brand .autotrade{
-  font-size:clamp(1.15rem,1.0vw + 1rem,1.85rem);
+  font-size:clamp(1.05rem, 0.9vw + 0.85rem, 1.6rem);
   line-height:1; font-weight:700; letter-spacing:.5px;
 }
 .brand .autotrade{font-weight:800;color:var(--brand);margin-left:.25rem}
@@ -64,59 +64,41 @@ nav a{color:#fff;font-weight:500}
 .container{max-width:1150px;margin:2rem auto;padding:0 1.25rem}
 
 /* =========================================================
-   BANNIÈRE — DYNAMIQUE (DIAPORAMA)
+   HÉRO — STATIQUE (image définie dans index.html)
    ========================================================= */
-.hero-dyn{position:relative;height:540px;overflow:hidden;color:#fff}
-.hero-dyn .container{max-width:1150px;margin:0 auto;padding:0 1.25rem}
-.hero-dyn .bg-overlay{
-  position:absolute;inset:0;z-index:1;
-  background:
-    radial-gradient(1100px 380px at 28% 32%, rgba(0,0,0,.22), transparent 60%),
-    linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.68));
+.hero-static{
+  position:relative; height:540px; overflow:hidden; color:#fff;
+  /* l’image de fond est définie inline dans index.html */
+  background-position:center 18%; background-size:cover; background-repeat:no-repeat;
 }
-.hero-dyn .hero-inner{position:relative;z-index:3;top:16%;max-width:760px}
-.hero-dyn h1{font-size:2.6rem;line-height:1.1;margin:0 0 .6rem}
-.hero-dyn p{opacity:.95;margin:0 0 1rem}
-.hero-dyn .btn{padding:.85rem 1.4rem;border-radius:999px;font-weight:800}
-
-.hero-slides .slides{position:absolute;inset:0;z-index:0}
-.hero-slides .slide{
-  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
-  opacity:0;animation:fadeHero 18s infinite;will-change:opacity
-}
-.hero-slides .s1{animation-delay:0s}
-.hero-slides .s2{animation-delay:6s}
-.hero-slides .s3{animation-delay:12s}
-@keyframes fadeHero{
-  0%,7%{opacity:1}
-  28%,100%{opacity:0}
+.hero-static .bg-overlay{
+  position:absolute; inset:0; z-index:1;
+  /* voile léger pour la lisibilité du CTA */
+  background: linear-gradient(180deg, rgba(0,0,0,.10), rgba(0,0,0,.28));
 }
 
-/* Optionnel : overlay véhicules détourés */
-.hero-cars{
-  position:absolute;right:2%;bottom:-6%;
-  width:min(720px,48vw);max-width:100%;
-  filter:drop-shadow(0 16px 28px rgba(0,0,0,.45));
-  z-index:2;display:none; /* passe à block si tu ajoutes l'image */
+/* CTA seul (bas-gauche) */
+.hero-cta{
+  position:absolute; left:6%; bottom:28px; z-index:3;
 }
+.hero-cta .btn{
+  background: var(--brand);
+  color:#fff; font-weight:800; border-radius:999px;
+  padding:.9rem 1.5rem; text-decoration:none;
+  box-shadow:0 8px 20px rgba(229,62,62,.25);
+}
+.hero-cta .btn:hover{ filter:brightness(.95); transform:translateY(-1px); }
 
-@media (max-width:980px){ .hero-cars{width:min(560px,60vw);bottom:-4%} }
 @media (max-width:680px){
-  .hero-dyn{height:380px}
-  .hero-dyn .hero-inner{top:12%}
-  .hero-dyn h1{font-size:1.9rem}
-  .hero-cars{width:min(460px,80vw);bottom:-2%}
-}
-/* Accessibilité : réduit l’anim si l’utilisateur le demande */
-@media (prefers-reduced-motion:reduce){
-  .hero-slides .slide{animation:none;opacity:1}
-  .hero-slides .s2,.hero-slides .s3{display:none}
+  .hero-static{height:380px}
+  .hero-cta{ left:5%; bottom:18px; }
+  .hero-cta .btn{ padding:.8rem 1.2rem; font-size:.95rem; }
 }
 
 /* =========================================================
    SECTIONS TITRÉES
    ========================================================= */
-.section--light{background:#f6f7fb;padding:3rem 0}
+.section--light{background:#F9FBFF;padding:3rem 0}
 .section--light .container{max-width:1150px;margin:0 auto;padding:0 1.25rem}
 .section-title{
   text-align:center;font-size:2.4rem;font-weight:800;letter-spacing:.2px;margin:0 0 .6rem
@@ -134,7 +116,7 @@ nav a{color:#fff;font-weight:500}
 /* =========================================================
    “NOS AVANTAGES” — style cartes + badges jaune pâle
    ========================================================= */
-.advantages-lovable{background:#f6f7fb;padding:3rem 0}
+.advantages-lovable{background:#F9FBFF;padding:3rem 0}
 .adv2-head{text-align:center;margin-bottom:2rem}
 .adv2-title{font-size:2.4rem;font-weight:800;margin:0 0 .6rem}
 .adv2-sub{color:#6b7280;max-width:860px;margin:0 auto}
@@ -180,7 +162,7 @@ nav a{color:#fff;font-weight:500}
   box-shadow:var(--shadow);overflow:hidden;transition:transform .2s ease
 }
 .card:hover{transform:translateY(-3px)}
-.thumb{width:100%;height:220px;object-fit:contain;object-position:center;background:#f3f4f6}
+.thumb{width:100%;height:220px;object-fit:contain;object-position:center;background:#F5FAFF}
 .body{padding:1rem}
 .name{font-size:1.05rem;font-weight:800;margin-bottom:.35rem}
 .submeta{color:var(--muted);font-size:.88rem;margin-top:.1rem;margin-bottom:.35rem}
@@ -212,7 +194,7 @@ nav a{color:#fff;font-weight:500}
 .image-card{padding:1rem}
 .hero-img{width:100%;height:420px;object-fit:cover;border-radius:14px;margin-bottom:1rem;cursor:pointer}
 .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem}
-.gallery img{width:100%;height:130px;object-fit:cover;border-radius:10px;cursor:pointer}
+.gallery img{width:100%;height:130px;object-fit:cover;border-radius:10px;cursor:pointer;background:#F5FAFF}
 
 /* Spécifs aéré */
 .specs-card{padding:1.05rem}
@@ -267,70 +249,3 @@ nav a{color:#fff;font-weight:500}
   .gallery{grid-template-columns:repeat(2,1fr)}
   .features-grid,.equip-grid,.specs-grid{grid-template-columns:1fr}
 }
-/* ========= Bannière : titre plus à gauche et plus bas ========= */
-.banner-title{
-  position:absolute;
-  left:6%;             /* plus à gauche */
-  bottom:120px;        /* plus bas */
-  color:#fff;
-  text-shadow:0 6px 18px rgba(0,0,0,.45);
-}
-.banner-title h1{
-  font-family: "Montserrat", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-  font-weight: 900;
-  font-size: clamp(28px, 2.4vw + 10px, 44px);
-  line-height: 1.05;
-  letter-spacing: .02em;
-}
-.banner-title .banner-sub{
-  margin-top:.4rem;
-  font-weight:700;
-  font-size: clamp(16px, 1.1vw + 6px, 22px);
-  opacity:.95;
-}
-
-/* bouton un peu plus bas pour s’aligner sous le titre */
-.banner-cta{ left:6%; bottom:40px; }
-
-/* ========= Fond plus lumineux entre les images / sections ========= */
-/* Sections “claires” */
-.section--light,
-.advantages-lovable{ background:#F9FBFF; }  /* bleu très clair plus lumineux */
-
-/* Cartes / vignettes: fond de tuile plus lumineux */
-.thumb{ background:#F5FAFF; }               /* remplacé l'ancien #f3f4f6 */
-
-/* Galerie de la page détail (si image manquante / bords) */
-.gallery img{ background:#F5FAFF; }
-
-/* ========= Logo texte – réduire de 3–4 points ≈ ~3–4 px ========= */
-.brand .evh,
-.brand .autotrade{
-  /* avant max ~1.85rem, on passe à ~1.6rem */
-  font-size: clamp(1.05rem, 0.9vw + 0.85rem, 1.6rem);
-}
-
-/* option : réduire aussi un peu le logo image si besoin */
-.logo img{ height: 84px; }  /* avant 90–92px ; ajuste si tu veux */
-@media (max-width:1024px){ .logo img{ height:64px; } }
-/* === Remonter le texte/CTA du hero === */
-.hero-static .hero-inner,
-.hero-dyn .hero-inner{
-  bottom: 90px;   /* avant ~60–80px ; augmente pour monter le texte */
-  top: auto;
-}
-
-/* Ajuste selon la largeur d’écran */
-@media (min-width: 1400px){
-  .hero-static .hero-inner,
-  .hero-dyn .hero-inner{ bottom: 160px; }
-}
-@media (max-width: 980px){
-  .hero-static .hero-inner,
-  .hero-dyn .hero-inner{ bottom: 80px; }   /* un peu moins haut sur tablette */
-}
-@media (max-width: 680px){
-  .hero-static .hero-inner,
-  .hero-dyn .hero-inner{ bottom: 80px; }    /* mobile */
-}
-
