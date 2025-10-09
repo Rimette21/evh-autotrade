@@ -14,24 +14,35 @@
 </head>
 <body>
   <!-- Header (burger CSS-only) -->
-  <header>
-    <div class="header-inner">
-      <div class="logo-wrap">
-        <div class="logo"><img src="images/EVH_logo.png" alt="E.V.H. AUTOTRADE"></div>
-        <div class="brand"><span class="evh">E.V.H.</span><span class="autotrade">AUTOTRADE</span></div>
+<header>
+  <div class="header-inner">
+    <div class="logo-wrap">
+      <div class="logo">
+        <img src="images/EVH_logo.png" alt="E.V.H. AUTOTRADE">
       </div>
-      <nav class="nav" aria-label="Navigation principale">
-        <ul>
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="index.html#catalogue">Catalogue</a></li>
-          <li><a href="index.html#avantages">Avantages</a></li>
-          <li><a href="mentions-legales.html">Mentions légales</a></li>
-          <li><a href="confidentialite.html">Confidentialité</a></li>
-        </ul>
-      </nav>
-      <input type="checkbox" id="nav-toggle" aria-hidden="true" />
-      <label class="nav-btn" for="nav-toggle" aria-label="Ouvrir le menu"><span class="bar"></span></label>
+      <div class="brand">
+        <span class="evh">E.V.H.</span>
+        <span class="autotrade">AUTOTRADE</span>
+      </div>
     </div>
+
+    <nav class="nav" aria-label="Navigation principale">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="#catalogue">Catalogue</a></li>
+        <li><a href="#avantages">Avantages</a></li>
+        <li><a href="#">À propos</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Checkbox + bouton burger -->
+    <input type="checkbox" id="nav-toggle" aria-hidden="true" />
+    <label class="nav-btn" for="nav-toggle" aria-label="Ouvrir le menu">
+      <span class="bar"></span>
+    </label>
+
+    <!-- ⚠️ Ces deux éléments doivent rester DANS .header-inner -->
     <label for="nav-toggle" class="nav-overlay" aria-hidden="true"></label>
     <aside class="nav-drawer" role="dialog" aria-modal="true" aria-label="Menu mobile">
       <div class="drawer-head">
@@ -42,16 +53,18 @@
         <nav class="drawer-nav">
           <ul>
             <li><a href="index.html">Accueil</a></li>
-            <li><a href="index.html#catalogue">Catalogue</a></li>
-            <li><a href="index.html#avantages">Avantages</a></li>
-            <li><a href="mentions-legales.html">Mentions légales</a></li>
-            <li><a href="confidentialite.html">Confidentialité</a></li>
+            <li><a href="#catalogue">Catalogue</a></li>
+            <li><a href="#avantages">Avantages</a></li>
+            <li><a href="#">À propos</a></li>
+            <li><a href="#">Contact</a></li>
           </ul>
         </nav>
       </div>
     </aside>
-  </header>
-
+    <!-- fin des éléments qui doivent rester dans .header-inner -->
+  </div>
+</header>
+  
   <main class="legal">
     <a class="back-link" href="index.html" onclick="if(history.length>1){history.back();return false;}">← Retour</a>
 
