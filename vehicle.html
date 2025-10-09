@@ -155,7 +155,7 @@
                 <div class="gallery" id="gallery">
                   ${
                     (data.images?.gallery || []).length
-                    ? data.images.gallery.map((u,i)=>`<img data-idx="\${i}" src="\${u}" alt="Vue \${i+1}">`).join('')
+                    ? data.images.gallery.map((u,i)=>`<img data-idx="${i}" src="${u}" alt="Vue ${i+1}">`).join('')
                     : '<p>Aucune image supplémentaire disponible.</p>'
                   }
                 </div>
