@@ -74,4 +74,98 @@
   .site-footer{ font-size: .82rem; }
   .f-bottom{ font-size: .78rem; padding: .65rem .9rem; }
 }
+/* =========================================================
+   EVH AUTOTRADE — v16.2 OVERRIDES (mobile harmony)
+   Coller APRÈS la v16.1 dans mobile-tighten.css
+   Objectifs :
+   - Page DÉTAIL : images + petites, notice douane grise, titre sur 1 ligne,
+     bloc prix aligné à droite
+   - Page ACCUEIL : vignettes catalogue plus grandes en mobile
+   ========================================================= */
+
+/* -----  A) PAGE DÉTAIL (vehicle.html)  ----- */
+@media (max-width: 680px){
+  /* 1) Image de présentation : plus compacte */
+  .hero-img{
+    height: 300px;                 /* était 360/420 → évite de “dépasser” l’écran */
+    border-radius: 12px;
+  }
+  /* Galerie sous l’image : plus fine */
+  .gallery img{
+    height: 96px;                  /* était 130px */
+    border-radius: 10px;
+  }
+
+  /* 2) Titre sur une seule ligne + plus harmonieux */
+  .vehicle-title h1{
+    font-size: clamp(1.08rem, 3.8vw, 1.35rem);
+    line-height: 1.12;
+    white-space: nowrap;           /* force une seule ligne */
+    overflow: hidden;
+    text-overflow: ellipsis;       /* coupe proprement si trop long */
+    margin-bottom: .25rem;
+  }
+  .vehicle-meta{
+    font-size: .9rem;              /* cohérent avec le gris “modèle / réf.” */
+  }
+
+  /* 3) Bloc prix : un peu plus à droite + allégé */
+  .vehicle-header{
+    grid-template-columns: 1fr auto; /* garantit le bloc prix à droite */
+    align-items: start;
+  }
+  .price-stack{
+    text-align: right;             /* override v16 qui passait en left */
+    margin-left: .5rem;
+  }
+  .price-big{
+    font-size: 1.25rem;            /* ↓ pour laisser la place au titre à gauche */
+    margin-top: .15rem;
+  }
+  .price-sub{
+    margin-top: .2rem;
+  }
+
+  /* 4) Mention “dédouanement…” : grise, petite, sans encadré */
+  .notice--customs{
+    display: inline-block;
+    background: transparent !important;
+    border: 0 !important;
+    color: var(--muted) !important;          /* même gris que .vehicle-meta */
+    font-size: .86rem !important;            /* plus discret */
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* 5) Spécifs : aérer et réduire légèrement */
+  .specs-card{ padding: .9rem; }
+  .specs-grid{ gap: .65rem .9rem; }
+  .spec-item{ font-size: .88rem; }
+  .spec-label{ margin-bottom: .08rem; }
+}
+
+/* -----  B) PAGE ACCUEIL — vignettes du CATALOGUE  ----- */
+@media (max-width: 680px){
+  /* Images de cartes plus grandes pour la lisibilité produit */
+  .thumb{
+    height: 260px;                 /* était 220px */
+    object-fit: contain;
+    object-position: center;
+  }
+  /* Un peu plus d’air sous l’image */
+  .body{ padding: .9rem; }
+  .name{ font-size: 1rem; }        /* garde un texte compact */
+}
+
+/* -----  C) Détails généraux (harmonisation mobile)  ----- */
+@media (max-width: 680px){
+  .content-grid{ gap: 1rem; }
+  .card-title{ font-size: .98rem; }
+  .equip-list{ font-size: .92rem; }
+  .cta-card .btn{
+    font-size: .92rem;             /* cohérent avec le reste */
+    padding: .65rem 1rem;
+  }
+}
+
 
