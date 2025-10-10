@@ -295,4 +295,88 @@
 @media (min-width: 681px){
   .energy-badge{ top: 14px; right: 16px; }
 }
+   /* =========================================================
+   v16.7 — Mobile tweaks (logo + images + alignements)
+   ========================================================= */
+
+/* A) LOGO : garder "E.V.H." visible et grossir légèrement l’image */
+@media (max-width: 859.98px){
+  .logo img{ height: 48px; }                        /* +4px vs v16.1 */
+  .brand{ gap: .28rem; }
+  .brand .evh{ display: inline !important; }        /* on ré-affiche EVH */
+  .brand .evh, .brand .autotrade{
+    font-size: clamp(.88rem, 2.2vw, 1.02rem);       /* très léger + lisible */
+    letter-spacing: .25px;
+  }
+}
+@media (max-width: 420px){
+  .logo img{ height: 44px; }                        /* était 40px */
+  .brand .evh{ display: inline !important; }        /* ne plus masquer */
+  .brand .evh, .brand .autotrade{
+    font-size: .88rem;                               /* compact sur très petits écrans */
+  }
+}
+
+/* B) DÉTAIL — images : réduire encore la 1ère, empêcher tout débordement */
+@media (max-width: 680px){
+  .image-card{ position: relative; overflow: hidden; }
+  .hero-img{
+    height: 270px;                                  /* ↓ 300 → 270 */
+    width: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: .9rem;
+  }
+  .gallery img{
+    height: 88px;                                   /* ↓ 96 → 88 */
+    border-radius: 10px;
+  }
+}
+
+/* C) DÉTAIL — aligner les deux encadrés (Spécifs / Équipements) */
+@media (max-width: 680px){
+  .content-grid{ gap: .9rem; }
+  .specs-card, .equip-card{
+    padding: .9rem;                                 /* padding identique */
+  }
+  .equip-card{ margin-top: .9rem; }                 /* même marge que l'écart global */
+}
+
+/* D) DÉTAIL — pastille énergie : léger décalage demandé (↘ et ←) */
+@media (max-width: 680px){
+  .energy-badge{ top: 14px; right: 18px; }
+  .energy-badge .pill{ font-size: .78rem; padding: .24rem .5rem; }
+}
+
+/* E) DÉTAIL — prix sous le titre, plus discret, et mention douane en (petit gris) */
+@media (max-width: 680px){
+  .vehicle-header{
+    grid-template-columns: 1fr !important;
+    grid-template-areas: "title" "price";
+    align-items: start;
+  }
+  .vehicle-title{ grid-area: title; }
+  .price-stack{
+    grid-area: price;
+    text-align: left !important;
+    margin: .2rem 0 0 .1rem;
+  }
+  .price-big{
+    font-size: .98rem;                               /* taille réduite */
+    font-weight: 800;
+    margin-top: .05rem;
+  }
+  .price-sub{ margin-top: .05rem; }
+  .price-sub .notice--customs{
+    background: transparent !important;
+    border: 0 !important;
+    padding: 0 !important;
+    color: var(--muted) !important;                  /* gris des metas */
+    font-size: .76rem !important;                    /* très petit */
+    line-height: 1.25;
+  }
+  .price-sub .notice--customs::before{ content:"("; }
+  .price-sub .notice--customs::after{ content:")"; }
+}
+
 
