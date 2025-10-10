@@ -292,6 +292,8 @@ body.page-vehicle { background: #F6F7FB; }
 /* Détail : retirer l'encadré blanc du bloc CTA */
 .page-vehicle .cta-card{
   background: transparent;
+   body.page-vehicle{ overflow-x:hidden; }
+
   box-shadow: none;
   border: 0;
   padding: 0;
