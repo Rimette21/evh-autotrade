@@ -72,206 +72,22 @@
     <span id="next">›</span>
   </div>
 
-  <!-- Script stable : accepte ?id=… ou ?rid=… ; pas de backticks dans notFound -->
+  <!-- Script : accepte ?id=… / ?rid=… + pastille Couleur + clés robustes -->
   <script>
     (function(){
       const root = document.getElementById('vehicle-detail');
 
-      // 1) Récupère l'ID via id/rid/ref/veh
-      const qs = new URLSearchParams(window.location.search);
-      const vehicleId = (qs.get('id') || qs.get('rid') || qs.get('ref') || qs.get('veh') || '').trim();
-
-      // Normalise l’URL en ?id=… si on arrive avec ?rid=
-      if (qs.get('rid') && !qs.get('id') && vehicleId) {
-        history.replaceState({}, '', location.pathname + '?id=' + encodeURIComponent(vehicleId));
-      }
-
-      function notFound(msg) {
-        root.innerHTML =
-          '<div style="background:#fff3f3;color:#d32f2f;padding:2rem;border-radius:12px;text-align:center;">' +
-            '<h2>Véhicule non trouvé</h2>' +
-            '<p>ID : ' + (vehicleId || '—') + '</p>' +
-            '<p>' + (msg || '') + '</p>' +
-            '<p style="margin-top:.5rem;font-size:.95rem;color:#b91c1c">' +
-              'Vérifie que <code>' + (vehicleId || 'ID') + '.json</code> existe bien dans <code>data/details/</code>.' +
-            '</p>' +
-            '<a href="index.html#catalogue" style="color:#e53e3e;text-decoration:none;font-weight:700;">← Retour</a>' +
-          '</div>';
-      }
-
-      if (!vehicleId) { notFound("Aucun identifiant n'a été fourni."); return; }
-
-      const url = 'data/details/' + encodeURIComponent(vehicleId) + '.json?v=11';
-
-      // 2) Charge le JSON et rend la page
-      fetch(url, { cache: 'no-store' })
-        .then(function(res){
-          if (!res.ok) throw new Error('HTTP ' + res.status + ' pour ' + url);
-          return res.json();
-        })
-        .then(function(data){
-          const mileage = new Intl.NumberFormat('fr-FR').format(data.mileage ?? 0);
-          const year = (data.regyear || '').split('-')[0] || '—';
-
-          const isPHEV = (data.features || data.caracteristiques || [])
-            .some(function(f){ return /phev|hybride/i.test(f || ''); });
-          const energie = isPHEV ? 'PHEV' : 'BEV';
-
-          const specs = data.specifications || {};
-          const items = [];
-          function add(label, value){ if (value) items.push({ label: label, value: value }); }
-
-          add('Moteur', specs.moteur || '-');
-          add('Puissance moteur', specs.puissance || '-');
-          add('Transmission', specs.transmission || '-');
-          add('Traction', specs.traction || (data.features||[]).find(function(f){return /2wd|4wd|awd/i.test(f || '');}) || '-');
-          add('Autonomie électrique', specs.autonomieElectrique || '-');
-          add('Type de carrosserie', specs.typeCarrosserie || 'SUV');
-          add('Couleur', specs.couleur || data.features|| '-');
-          add('Places', specs.places || '5 places');
-          if (specs.dimensions) {
-            const dims = [specs.dimensions.longueur, specs.dimensions.largeur, specs.dimensions.hauteur]
-              .filter(Boolean).join(' × ');
-            add('Dimensions (L×l×H)', dims);
-          }
-          if (specs.poids || specs.capaciteMax) {
-            add('Poids / Capacité max', [specs.poids, specs.capaciteMax].filter(Boolean).join(' / '));
-          }
-
-          const specsHTML = items.map(function(it){
-            return '<div class="spec-item">' +
-                     '<span class="spec-label">' + it.label + '</span>' +
-                     '<span class="spec-value">' + it.value + '</span>' +
-                   '</div>';
-          }).join('');
-
-          const eq = data.equipements || {};
-          const allEquip = []
-            .concat(eq.interieur || [])
-            .concat(eq.securite || [])
-            .concat(eq.connectivite || []);
-
-          document.getElementById('vehicle-detail').innerHTML = `
-            <div class="vehicle-header">
-              <div class="vehicle-title">
-                <h1>${data.name || 'Véhicule'}</h1>
-                <div class="vehicle-meta">Modèle ${year} — Réf : <strong>${data.id}</strong></div>
-              </div>
-              <div class="price-stack">
-                <div class="price-big">Prix FCR (HT) : ${data.priceFCR || '-'}</div>
-                <div class="price-sub">
-                  <span class="notice notice--customs">Dédouanement possible sous conditions</span>
-                </div>
-                <div style="margin-top:.4rem"><span class="pill">${energie}</span></div>
-              </div>
-            </div>
-
-            <div class="content-grid">
-              <div class="card-box image-card">
-                <img src="${data.images?.hero || ''}" alt="${data.name || ''}" class="hero-img"
-                     onerror="this.src='https://via.placeholder.com/800x500?text=Image+non+disponible'">
-                <div class="gallery" id="gallery">
-                  ${
-                    (data.images?.gallery || []).length
-                    ? data.images.gallery.map((u,i)=>`<img data-idx="${i}" src="${u}" alt="Vue ${i+1}">`).join('')
-                    : '<p>Aucune image supplémentaire disponible.</p>'
-                  }
-                </div>
-              </div>
-
-              <div class="card-box specs-card">
-                <div class="card-title">Spécifications techniques</div>
-                <div class="specs-grid spec-compact">${specsHTML}</div>
-                <div class="divider"></div>
-                <div class="card-title">Caractéristiques principales</div>
-                <div class="specs-grid">
-                  <div class="spec-item"><span class="spec-label">Année</span><span class="spec-value">${year}</span></div>
-                  <div class="spec-item"><span class="spec-label">Kilométrage</span><span class="spec-value">${mileage} km</span></div>
-                  <div class="spec-item"><span class="spec-label">Énergie</span><span class="spec-value">${energie}</span></div>
-                  <div class="spec-item"><span class="spec-label">Référence</span><span class="spec-value">${data.id}</span></div>
-                </div>
-              </div>
-            </div>
-
-            <div class="card-box equip-card">
-              <div class="card-title">Équipements & Accessoires</div>
-              <div class="equip-grid">
-                <ul class="equip-list">
-                  ${allEquip.slice(0, Math.ceil(allEquip.length/2)).map(li=>`<li>${li}</li>`).join('')}
-                </ul>
-                <ul class="equip-list">
-                  ${allEquip.slice(Math.ceil(allEquip.length/2)).map(li=>`<li>${li}</li>`).join('')}
-                </ul>
-              </div>
-            </div>
-
-            <div class="card-box cta-card">
-              <a href="mailto:contact@evhautotrade.com?subject=Demande%20devis%20${encodeURIComponent(data.name || data.id)}" class="btn">
-                Demander un devis pour ce véhicule
-              </a>
-            </div>
-          `;
-
-          // Lightbox
-          const galleryImgs = Array.from(document.querySelectorAll('#gallery img'));
-          const lb = document.getElementById('lightbox');
-          const lbImg = document.getElementById('lbImg');
-          const btnClose = document.getElementById('close');
-          const btnPrev = document.getElementById('prev');
-          const btnNext = document.getElementById('next');
-          let idx = 0;
-
-          const open = i => { idx=i; lbImg.src = data.images.gallery[idx]; lb.style.display='flex'; };
-          const close = () => { lb.style.display='none'; lbImg.src=''; };
-          const prev = () => open((idx-1+galleryImgs.length)%galleryImgs.length);
-          const next = () => open((idx+1)%galleryImgs.length);
-
-          galleryImgs.forEach(img => img.addEventListener('click', e => open(+e.target.dataset.idx)));
-          btnClose.addEventListener('click', close);
-          lb.addEventListener('click', e => { if(e.target===lb) close(); });
-          btnPrev.addEventListener('click', prev);
-          btnNext.addEventListener('click', next);
-          window.addEventListener('keydown', e => {
-            if(lb.style.display!=='flex') return;
-            if(e.key==='Escape') close();
-            if(e.key==='ArrowLeft') prev();
-            if(e.key==='ArrowRight') next();
-          });
-        })
-        .catch(function(err){
-          console.error('Erreur chargement véhicule:', err);
-          notFound('Le fichier JSON est introuvable ou invalide. Détail : ' + (err && err.message ? err.message : err));
-        });
-    })();
-  </script>
-
-  <!-- Déplace la pastille .pill (BEV/PHEV) dans la photo Hero -->
-  <script>
-  (function(){
-    const root = document.getElementById('vehicle-detail');
-    if (!root) return;
-
-    function movePill(){
-      const imgCard = root.querySelector('.image-card');
-      const pill = root.querySelector('.price-stack .pill');
-      if (imgCard && pill){
-        let badge = root.querySelector('.energy-badge');
-        if (!badge){
-          badge = document.createElement('div');
-          badge.className = 'energy-badge';
-          imgCard.appendChild(badge);
-        }
-        badge.appendChild(pill);
-        return true;
-      }
-      return false;
-    }
-
-    if (!movePill()){
-      const obs = new MutationObserver(() => { if (movePill()) obs.disconnect(); });
-      obs.observe(root, { childList: true, subtree: true });
-    }
-  })();
-  </script>
-</body>
-</html>
+      // ===== Helpers pastille couleur =====
+      function normalizeColor(str){
+        if(!str) return null;
+        const s = String(str).trim().toLowerCase();
+        if(/^#([0-9a-f]{3}|[0-9a-f]{6})$/i.test(s)) return s;
+        if(/^rgb\(/.test(s)) return s;
+        const map = {
+          "blanc":"#ffffff","blanc nacré":"#f7f7f7","noir":"#111111","noir métallisé":"#222222",
+          "gris":"#9aa0a6","gris clair":"#c7cbd1","gris foncé":"#5f666d","gris anthracite":"#4a4f55","argent":"#c0c0c0",
+          "bleu":"#1e73be","bleu clair":"#7bb6f0","bleu foncé":"#0b3d91",
+          "rouge":"#d93025","rouge foncé":"#8b0000",
+          "vert":"#16a34a","vert foncé":"#14532d",
+          "beige":"#d8c6a0","marron":"#6d4c41","brun":"#5a3825",
+          "jaune":"#facc15","orange":"#fb923c
