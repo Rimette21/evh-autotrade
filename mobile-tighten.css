@@ -378,5 +378,45 @@
   .price-sub .notice--customs::before{ content:"("; }
   .price-sub .notice--customs::after{ content:")"; }
 }
+   /* =========================================================
+   v16.7.1 — Anti-overflow photo (mobile)
+   Empêche la grande image de déborder sur la droite
+   ========================================================= */
+@media (max-width: 680px){
+  /* évite toute barre de scroll horizontale sur la fiche */
+  body.page-vehicle{ overflow-x: hidden; }
+
+  /* le conteneur et la carte image ne laissent rien dépasser */
+  .container--page{ overflow-x: hidden; }
+  .image-card{
+    position: relative;
+    overflow: hidden;              /* masque tout débordement interne */
+    padding-left: .75rem;          /* un poil moins de padding latéral */
+    padding-right: .75rem;
+  }
+
+  /* image héro : bloc, largeur sûre, pas de dépassement subpixel */
+  .hero-img{
+    display: block;
+    width: calc(100% - 2px);       /* évite les 1–2px de dépassement sur certains mobiles */
+    max-width: 100%;
+    height: 260px;                 /* un cran plus bas vs 270 pour + de marge */
+    object-fit: cover;
+    border-radius: 12px;
+    margin: 0 auto .9rem;          /* recentre proprement */
+    transform: translateZ(0);      /* anti-blur/overflow GPU */
+  }
+
+  /* galerie : s’assure de rester dans la largeur */
+  .gallery{
+    overflow: hidden;
+    margin-left: -1px;             /* neutralise d'éventuels arrondis de grille */
+    margin-right: -1px;
+  }
+  .gallery img{
+    height: 86px;                  /* très léger - */
+  }
+}
+
 
 
