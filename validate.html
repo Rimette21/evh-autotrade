@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Validateur JSON EVH (en ligne + images + scan ID)</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root{--ink:#1a1f25;--muted:#6b7280;--ok:#15803d;--warn:#b45309;--err:#b91c1c;--br:#e5e7eb}
+  body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;margin:24px;background:#f6f7fb;color:var(--ink)}
+  h1{font-size:1.25rem;margin:0 0 .25rem}
+  .row{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin:.25rem 0 1rem}
+  .uploader{border:2px dashed #c8cfda;padding:18px;border-radius:12px;background:#fff; text-align:center}
+  .uploader.drag{background:#f0f4ff; border-color:#8aa8ff}
+  .tips{font-size:.9rem;color:var(--muted);margin:.35rem 0 1rem}
+  .grid{display:grid;grid-template-columns:1fr;gap:12px;margin-top:16px}
+  .card{background:#fff;border:1px solid var(--br);border-radius:12px;padding:12px}
+  .ok{color:var(--ok);font-weight:700}
+  .warn{color:var(--warn);font-weight:700}
+  .err{color:var(--err);font-weight:700}
+  code{background:#f3f4f6;padding:.1rem .3rem;border-radius:6px}
+  ul{margin:.35rem 0 .25rem 1.2rem}
+  .meta{font-size:.85rem;color:var(--muted)}
+  input[type="text"]{flex:1;min-width:220px;padding:10px;border-radius:10px;border:1px solid var(--br);background:#fff}
+  button{padding:10px 14px;border-radius:10px;border:1px solid #c8cfda;background:#fff;cursor:pointer}
+  button:hover{background:#f3f4ff}
+  label.chk{display:inline-flex;align-items:center;gap:8px;font-size:.95rem;color:#374151;user-select:none}
+  .small{font-size:.85rem;color:#6b7280}
+</style>
+</head>
+<body>
+  <h1>Validateur de fiches véhicule (JSON)</h1>
+  <div class="tips">
+    Vérifie : <code>features (≤5)</code>, <code>specifications.volumeCoffre</code>, <code>specifications.places</code>, autonomie (WLTP/CLTC/EPA), batterie/recharge, etc.
+    <br>En mode “en ligne”, les <strong>images</strong> (hero + gallery) sont testées via <code>HEAD</code> (fallback GET).
+  </div>
+
+  <div class="row">
+    <div class="uploader" id="drop" tabindex="0" style="flex:1">
+      <input id="file" type="file" accept="application/json" multiple style="display:none">
+      <p><button id="pick">Choisir des fichiers JSON</button> ou glisser-déposer ici</p>
+      <p class="small">Les images référencées seront testées sur <code><span id="origin"></span></code></p>
+    </div>
+
+    <div style="min-width:340px;flex:1">
+      <div class="tips" style="margin-top:0">Charger par URL <em>ou</em> scanner un ID :</div>
+      <div class="row" style="margin:0">
+        <input id="jsonUrl" type="text" placeholder="https://www.evhautotrade.com/data/details/EVHxxxx.json">
+        <button id="loadUrl">Charger URL</button>
+      </div>
+      <div class="row" style="margin:.5rem 0 0">
+        <input id="scanId" type="text" placeholder="EVHxxxx (ex. EVH9403325)">
+        <button id="btnScan">Scanner un ID</button>
+        <label class="chk"><input type="checkbox" id="tryV" checked> Essayer <code>?v=11</code> puis sans</label>
+      </div>
+      <label class="chk" style="margin-top:.5rem"><input type="checkbox" id="checkImages" checked> Tester l’existence des images (hero + gallery)</label>
+      <div class="small">Timeout image: 6s • Méthode: <code>HEAD</code> (fallback <code>GET</code>)</div>
+    </div>
+  </div>
+
+  <div id="out" class="grid"></div>
+
+<script>
+document.getElementById('origin').textContent = location.origin;
+
+const drop = document.getElementById('drop');
+const pick = document.getElementById('pick');
+const fileInput = document.getElementById('file');
+const out = document.getElementById('out');
+const jsonUrl = document.getElementById('jsonUrl');
+const loadUrlBtn = document.getElementById('loadUrl');
+const checkImages = document.getElementById('checkImages');
+
+const scanId = document.getElementById('scanId');
+const btnScan = document.getElementById('btnScan');
+const tryV = document.getElementById('tryV');
+
+pick.addEventListener('click', ()=> fileInput.click());
+fileInput.addEventListener('change', e => handleFiles(e.target.files));
+
+['dragenter','dragover'].forEach(ev => drop.addEventListener(ev, e=>{
+  e.preventDefault(); e.stopPropagation(); drop.classList.add('drag');
+}));
+['dragleave','drop'].forEach(ev => drop.addEventListener(ev, e=>{
+  e.preventDefault(); e.stopPropagation(); drop.classList.remove('drag');
+}));
+drop.addEventListener('drop', e => handleFiles(e.dataTransfer.files));
+
+loadUrlBtn.addEventListener('click', async ()=>{
+  const url = jsonUrl.value.trim();
+  if(!url) return;
+  out.innerHTML = '';
+  try {
+    const res = await fetch(url, { cache:'no-store' });
+    if(!res.ok) throw new Error('HTTP '+res.status);
+    const data = await res.json();
+    renderResult({ name: url }, data);
+  } catch(err) {
+    renderCards(url, ['Impossible de charger le JSON : '+err.message], [], [], null);
+  }
+});
+
+// === Nouveau : Scanner un ID -> data/details/<ID>.json (avec option ?v=11 puis sans)
+btnScan.addEventListener('click', async ()=>{
+  const id = (scanId.value || '').trim();
+  if(!id) return;
+  out.innerHTML = '';
+  const base = new URL('data/details/', location.href).href;
+  const candidates = tryV.checked
+    ? [ base + encodeURIComponent(id) + '.json?v=11', base + encodeURIComponent(id) + '.json' ]
+    : [ base + encodeURIComponent(id) + '.json' ];
+
+  let loaded = false, data = null, lastErr = null, tried = [];
+  for (const u of candidates){
+    tried.push(u);
+    try {
+      const res = await fetch(u, { cache: 'no-store' });
+      if (!res.ok) throw new Error('HTTP '+res.status);
+      data = await res.json();
+      loaded = true;
+      break;
+    } catch (e) { lastErr = e; }
+  }
+  if (!loaded) {
+    renderCards('ID '+id, ['Impossible de charger : ' + (lastErr?.message || 'erreur')], ['Essais : ' + tried.join(' → ')], [], null);
+    return;
+  }
+  renderResult({ name: 'ID '+id }, data);
+});
+
+function handleFiles(files){
+  out.innerHTML = '';
+  [...files].forEach(file => {
+    const reader = new FileReader();
+    reader.onload = () => {
+      let data = null;
+      try { data = JSON.parse(reader.result); }
+      catch(e){ renderCards(file.name, ['JSON invalide : ' + e.message], [], [], null); return; }
+      renderResult(file, data);
+    };
+    reader.readAsText(file);
+  });
+}
+
+async function renderResult(file, data){
+  const { errors, warns, oks } = validateJson(data);
+  let imgChecks = [];
+  if (checkImages.checked) {
+    imgChecks = await checkAllImages(data);
+    imgChecks.forEach(r => {
+      if (r.ok) oks.push('Image OK: '+r.url);
+      else warns.push('Image manquante: '+r.url+' — '+r.reason);
+    });
+  }
+  renderCards(file.name || '(URL)', errors, warns, oks, data);
+}
+
+function validateJson(data){
+  const errors = [], warns = [], oks = [];
+  must(data.id, 'id manquant');
+  must(data.name, 'name manquant');
+  must(data.images && data.images.hero, 'images.hero manquant');
+  mustNumber(data.mileage, 'mileage doit être un nombre');
+  must(data.regyear, 'regyear manquant (YYYY-MM)');
+  must(data.specifications, 'specifications manquant');
+  must(data.features, 'features manquant (4–5 items)');
+
+  if (Array.isArray(data.features)) {
+    if (data.features.length === 0) errors.push('Aucune feature fournie');
+    if (data.features.length > 5) warns.push('Plus de 5 features — garde 4–5 max pour la carte catalogue');
+    const txt = data.features.join(' • ').toLowerCase();
+    const keyHints = ['autonomie','batterie','recharge','traction','transmission','puissance'];
+    if (!keyHints.some(k => txt.includes(k))) warns.push('Les features ne contiennent pas de mots clés attendus (autonomie, batterie, recharge, traction, puissance...)');
+  }
+
+  const sp = data.specifications || {};
+  must(sp.places, 'specifications.places manquant (ex. "5 places")');
+  must(sp.volumeCoffre, 'specifications.volumeCoffre manquant (ex. "574–1440 L")');
+
+  const hasAnyAutonomy = [sp.autonomieWLTP, sp.autonomieCLTC, sp.autonomieEPA, sp.autonomieWLTC, sp.autonomieElectrique].some(Boolean);
+  if (!hasAnyAutonomy) {
+    const featText = (data.features || []).join(' ');
+    const nameText = String(data.name || '');
+    const m = featText.match(/autonomie(?:\s*électrique)?\s*[:\-]?\s*([\d.,]+)\s*km/i) ||
+              nameText.match(/([\d]{2,4})\s*km/i);
+    if (!m) warns.push("Aucune autonomie trouvée (WLTP/CLTC/EPA) ni détectable dans features/name");
+  }
+
+  if (!sp.batterieKWh) warns.push('specifications.batterieKWh manquant (ex. "82 kWh")');
+  if (!sp.rechargeACkW) warns.push('specifications.rechargeACkW manquant (ex. "11 kW")');
+  if (!sp.rechargeDCkW) warns.push('specifications.rechargeDCkW absent (ok pour PHEV, utile pour BEV)');
+
+  if (!sp.transmission) warns.push('specifications.transmission manquant');
+  if (!sp.traction) warns.push('specifications.traction manquant (ex. "Traction avant", "AWD", "RWD")');
+
+  if (!(sp.puissanceSysteme || sp.puissanceThermique || sp.puissanceElectrique)) {
+    warns.push('Aucune puissance fournie (puissanceSysteme / puissanceThermique / puissanceElectrique)');
+  }
+
+  if (!sp.dimensions || !(sp.dimensions.longueur && sp.dimensions.largeur && sp.dimensions.hauteur)) {
+    warns.push('Dimensions incomplètes (longueur/largeur/hauteur)');
+  }
+
+  oks.push('Fichier lisible ✓');
+  if (sp.places) oks.push('Places présent ✓');
+  if (sp.volumeCoffre) oks.push('Volume coffre présent ✓');
+
+  return { errors, warns, oks };
+
+  function must(cond, msg){ if(!cond) errors.push(msg); }
+  function mustNumber(v, msg){ if(!(typeof v === 'number' && isFinite(v))) errors.push(msg); }
+}
+
+/* ===== Vérification des images (en ligne) ===== */
+async function checkAllImages(data){
+  const urls = [];
+  if (data && data.images && data.images.hero) urls.push(data.images.hero);
+  if (data && data.images && Array.isArray(data.images.gallery)) urls.push(...data.images.gallery);
+  const absUrls = urls.map(u => toAbs(u));
+  const results = await Promise.all(absUrls.map(u => checkUrlExists(u)));
+  return results;
+
+  function toAbs(u){
+    try { return new URL(u, location.href).href; } catch{ return u; }
+  }
+}
+
+async function checkUrlExists(url){
+  const timeoutMs = 6000;
+  try {
+    const okHead = await fetchWithTimeout(url, { method:'HEAD', cache:'no-store' }, timeoutMs);
+    if (okHead.ok) return { url, ok:true };
+    const okGet = await fetchWithTimeout(url, { method:'GET', cache:'no-store' }, timeoutMs);
+    if (okGet.ok) return { url, ok:true };
+    return { url, ok:false, reason: 'HTTP '+okGet.status };
+  } catch(err){
+    return { url, ok:false, reason: err.message || 'timeout' };
+  }
+}
+
+function fetchWithTimeout(resource, options = {}, timeout = 6000) {
+  return new Promise((resolve, reject) => {
+    const controller = new AbortController();
+    const id = setTimeout(() => controller.abort(), timeout);
+    fetch(resource, { ...options, signal: controller.signal })
+      .then(response => { clearTimeout(id); resolve(response); })
+      .catch(error => { clearTimeout(id); reject(error); });
+  });
+}
+
+/* ===== Rendu ===== */
+function renderCards(name, errors, warns, oks, data){
+  const el = document.createElement('div');
+  el.className = 'card';
+  el.innerHTML = `
+    <div class="meta"><strong>${escapeHtml(name)}</strong></div>
+    ${errors.length ? `<div class="err">Erreurs</div><ul>${errors.map(li).join('')}</ul>` : `<div class="ok">Aucune erreur bloquante</div>`}
+    ${warns.length ? `<div class="warn" style="margin-top:.5rem">Avertissements</div><ul>${warns.map(li).join('')}</ul>` : ''}
+    ${oks.length ? `<div class="meta" style="margin-top:.5rem">${oks.map(escapeHtml).join(' • ')}</div>` : ''}
+    ${data ? `<details style="margin-top:.5rem"><summary>Voir l’aperçu JSON</summary><pre style="white-space:pre-wrap;font-size:.9rem;background:#f9fafb;padding:.75rem;border-radius:8px;border:1px solid var(--br);">${escapeHtml(JSON.stringify(data, null, 2))}</pre></details>` : ''}
+  `;
+  out.appendChild(el);
+  function li(t){ return `<li>${escapeHtml(t)}</li>`; }
+}
+
+function escapeHtml(s){ return String(s).replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m])); }
+</script>
+</body>
+</html>
