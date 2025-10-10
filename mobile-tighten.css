@@ -237,3 +237,62 @@
     font-size: .78rem;
   }
 }
+   /* =========================================================
+   v16.6 – Détail véhicule (mobile) : prix sous le titre,
+   pastille énergie ajustée, mention douane en petit gris
+   ========================================================= */
+@media (max-width: 680px){
+  /* Empile PRIX sous TITRE */
+  .vehicle-header{
+    grid-template-columns: 1fr !important;
+    grid-template-areas: "title" "price";
+    align-items: start;
+  }
+  .vehicle-title{ grid-area: title; }
+  .price-stack{
+    grid-area: price;
+    text-align: left !important;
+    margin: .25rem 0 0 .15rem;
+  }
+
+  /* Titre compact (1 ligne, tronqué si trop long) */
+  .vehicle-title h1{
+    font-size: clamp(1.06rem, 3.7vw, 1.30rem);
+    line-height: 1.18;
+    margin-bottom: .1rem;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+
+  /* Prix plus discret */
+  .price-big{
+    font-size: .98rem;          /* ↓ taille prix */
+    font-weight: 800;
+    margin-top: .05rem;
+  }
+
+  /* Mention douane : petite, grise, entre parenthèses */
+  .price-sub{ margin-top: .05rem; }
+  .price-sub .notice--customs{
+    background: transparent !important;
+    border: 0 !important;
+    padding: 0 !important;
+    color: var(--muted) !important;
+    font-size: .76rem !important;   /* très petit */
+    line-height: 1.25;
+  }
+  .price-sub .notice--customs::before{ content:"("; }
+  .price-sub .notice--customs::after{ content:")"; }
+
+  /* Pastille énergie (BEV/PHEV) : un peu plus bas et plus à gauche */
+  .energy-badge{ top: 12px; right: 14px; }   /* ↓ vers le bas, ← vers la gauche */
+  .energy-badge .pill{
+    padding: .24rem .48rem;
+    font-size: .78rem;
+  }
+}
+
+/* Desktop/tablettes : légère harmonisation de la pastille aussi */
+@media (min-width: 681px){
+  .energy-badge{ top: 14px; right: 16px; }
+}
+
