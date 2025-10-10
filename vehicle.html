@@ -75,9 +75,26 @@
   </div>
 
   <script>
-    const urlParams = new URLSearchParams(window.location.search);
-    const vehicleId = urlParams.get('id');
-    const url = `data/details/${vehicleId}.json?v=11`;
+    <script>
+  // Récupère l'identifiant depuis plusieurs alias (id / rid / ref / veh)
+  const params = new URLSearchParams(window.location.search);
+  const vehicleId =
+    params.get('id') ||
+    params.get('rid') ||
+    params.get('ref') ||
+    params.get('veh') ||
+    '';
+
+  // URL du JSON (vide si pas d'ID)
+  const url = vehicleId
+    ? `data/details/${encodeURIComponent(vehicleId)}.json?v=11`
+    : '';
+
+  // (Optionnel) Normalise l'URL en ?id=... si on est arrivé avec ?rid=...
+  if (params.get('rid') && !params.get('id') && vehicleId) {
+    history.replaceState({}, '', `${location.pathname}?id=${encodeURIComponent(vehicleId)}`);
+  }
+</script>
 
     async function fetchDetail() {
       const res = await fetch(url, { cache: 'no-store' });
