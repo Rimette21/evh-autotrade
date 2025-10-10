@@ -72,7 +72,7 @@
   (function(){
     const root = document.getElementById('vehicle-detail');
 
-    /* ===== Helpers couleur (pastille) ===== */
+    /* ================== Helpers couleur (pastille) ================== */
     function normalizeColor(str){
       if(!str) return null;
       const s = String(str).trim().toLowerCase();
@@ -96,12 +96,29 @@
       return col ? '<span class="color-dot" style="--swatch:'+col+'"></span>'+value : value;
     }
 
-    /* ===== Helper nettoyage (puissance, etc.) ===== */
+    /* ================== Helpers génériques ================== */
     function clean(v){
       if (v == null) return null;
       const s = String(v).trim();
       if (s === '—' || s === '-' || /^n\/?a$/i.test(s) || /^na$/i.test(s)) return null;
       return s;
+    }
+    function fmt(v, fallback='—'){ return (v===0 || v) ? String(v) : fallback; }
+    function fmtKm(n){ try{ return new Intl.NumberFormat('fr-FR').format(n||0)+' km'; }catch(e){ return (n||0)+' km'; } }
+    function shortTransm(t){
+      if(!t) return '—';
+      const s=String(t).toUpperCase();
+      if(/2DHT|DHT/.test(s)) return 'DHT';
+      if(/E[- ]?CVT/.test(s)) return 'e-CVT';
+      if(/DCT/.test(s)) return 'DCT';
+      if(/\bAT\b/.test(s)) return 'AT';
+      if(/\bMT\b/.test(s)) return 'MT';
+      return t;
+    }
+    function fuelLabel(data, isPHEV){
+      const f = (data.fuel || data.specifications?.fuel || '').toUpperCase();
+      if(f) return f;
+      return isPHEV ? 'PHEV' : 'BEV';
     }
 
     /* ===== Récupère l'ID via ?id= / ?rid= / ?ref= / ?veh= ===== */
@@ -144,11 +161,12 @@
       }
 
       /* ===== Données préparées ===== */
-      const mileage = new Intl.NumberFormat('fr-FR').format(data.mileage ?? 0);
+      const mileageStr = fmtKm(data.mileage);
       const year = (data.regyear || '').split('-')[0] || '—';
       const isPHEV = (data.features || data.caracteristiques || [])
         .some(f => /phev|hybride/i.test(f || ''));
       const energie = isPHEV ? 'PHEV' : 'BEV';
+      const fuel = fuelLabel(data, isPHEV);
 
       const specs = data.specifications || {};
       const items = [];
@@ -156,9 +174,7 @@
 
       add('Moteur', specs.moteur || '-');
 
-      const puissance = clean(
-        specs.puissance || specs.puissanceSysteme || specs.puissanceMoteur || specs.power
-      );
+      const puissance = clean(specs.puissance || specs.puissanceSysteme || specs.puissanceMoteur || specs.power);
       add('Puissance moteur', puissance || '-');
 
       add('Transmission', specs.transmission || '-');
@@ -170,17 +186,23 @@
       }
       add('Traction', traction || '-');
 
-      add('Autonomie électrique', specs.autonomieElectrique || '-');
+      // Autonomie: prend la meilleure dispo
+      const autoElec = clean(specs.autonomieElectrique) ||
+                       clean(specs.autonomieWLTP) ||
+                       clean(specs.autonomieCLTC) ||
+                       clean(specs.autonomieEPA);
+      add('Autonomie électrique', autoElec || '-');
+
       add('Type de carrosserie', specs.typeCarrosserie || 'SUV');
       add('Places', specs.places || '5 places');
 
       const couleurRaw = specs.couleur || specs.Couleur || data.couleur || '';
-      add('Couleur', swatchHTML(couleurRaw));
+      if (couleurRaw) add('Couleur', swatchHTML(couleurRaw));
 
       if (specs.dimensions){
         const dims = [specs.dimensions.longueur, specs.dimensions.largeur, specs.dimensions.hauteur]
           .filter(Boolean).join(' × ');
-        add('Dimensions (L×l×H)', dims || null);
+        if (dims) add('Dimensions (L×l×H)', dims);
       }
       if (specs.poids || specs.capaciteMax){
         add('Poids / Capacité max', [specs.poids, specs.capaciteMax].filter(Boolean).join(' / '));
@@ -222,6 +244,19 @@
         </div>
       `;
 
+      /* ===== Essentials (Reg. Year / cc / km / fuel / transm.) ===== */
+      const engineCc = (specs.engineCc != null && specs.engineCc !== '') ? specs.engineCc : null;
+      const transmShort = shortTransm(specs.transmission || data.transmission);
+      const essentialsHTML = `
+        <div class="essentials">
+          <div class="ess-item"><span class="ess-label">Reg. Year</span><span class="ess-value">${year}</span></div>
+          <div class="ess-item"><span class="ess-label">Engine (cc)</span><span class="ess-value">${fmt(engineCc)}</span></div>
+          <div class="ess-item"><span class="ess-label">Mlg (km)</span><span class="ess-value">${mileageStr}</span></div>
+          <div class="ess-item"><span class="ess-label">Fuel</span><span class="ess-value">${fuel}</span></div>
+          <div class="ess-item"><span class="ess-label">Transm.</span><span class="ess-value">${fmt(transmShort)}</span></div>
+        </div>
+      `;
+
       /* ===== Rendu ===== */
       root.innerHTML =
         '<div class="vehicle-header">'+
@@ -235,6 +270,7 @@
             '<div style="margin-top:.4rem"><span class="pill">'+energie+'</span></div>'+
           '</div>'+
         '</div>'+
+        essentialsHTML +
         '<div class="content-grid">'+
           '<div class="card-box image-card">'+
             '<img src="'+(data.images && data.images.hero ? data.images.hero : '')+'" alt="'+(data.name || '')+'" class="hero-img" '+
@@ -252,7 +288,7 @@
             '<div class="card-title">Caractéristiques principales</div>'+
             '<div class="specs-grid">'+
               '<div class="spec-item"><span class="spec-label">Année</span><span class="spec-value">'+year+'</span></div>'+
-              '<div class="spec-item"><span class="spec-label">Kilométrage</span><span class="spec-value">'+mileage+' km</span></div>'+
+              '<div class="spec-item"><span class="spec-label">Kilométrage</span><span class="spec-value">'+mileageStr+'</span></div>'+
               '<div class="spec-item"><span class="spec-label">Énergie</span><span class="spec-value">'+energie+'</span></div>'+
               '<div class="spec-item"><span class="spec-label">Référence</span><span class="spec-value">'+data.id+'</span></div>'+
             '</div>'+
@@ -260,7 +296,7 @@
         '</div>' +
         equipHtml + ctaHtml;
 
-      /* ===== Lightbox basique ===== */
+      /* ===== Lightbox ===== */
       const galleryImgs = Array.from(document.querySelectorAll('#gallery img'));
       const lb = document.getElementById('lightbox');
       const lbImg = document.getElementById('lbImg');
