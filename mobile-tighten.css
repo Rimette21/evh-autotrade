@@ -166,6 +166,48 @@
     font-size: .92rem;             /* cohérent avec le reste */
     padding: .65rem 1rem;
   }
+   /* =========================================================
+   v16.3 – CTA hero plus petit + plus bas
+   À mettre APRÈS tous les autres overrides
+   ========================================================= */
+
+/* Desktop / tablettes (>= 681px) */
+@media (min-width: 681px){
+  .hero-cta{
+    left: 5.5%;
+    bottom: 12px;                 /* ↓ était ~28px → plus proche du bas */
+  }
+  .hero-cta .btn{
+    padding: .55rem .9rem;        /* ↓ taille globale */
+    font-size: .92rem;            /* ↓ texte */
+    min-height: 36px;
+    box-shadow: 0 4px 12px rgba(229,62,62,.22);
+  }
+}
+
+/* Mobile (<= 680px) : encore plus compact + un peu plus bas */
+@media (max-width: 680px){
+  .hero-cta{
+    left: 4%;
+    bottom: 10px;                 /* ↓ était 14–18px */
+  }
+  .hero-cta .btn{
+    padding: .48rem .72rem;       /* ↓ padding */
+    font-size: .82rem;            /* ↓ texte */
+    min-height: 32px;             /* ↓ hauteur mini */
+    font-weight: 700;
+    box-shadow: 0 3px 10px rgba(229,62,62,.20);
+  }
+}
+
+/* Très petits écrans */
+@media (max-width: 420px){
+  .hero-cta{ bottom: 8px; }
+  .hero-cta .btn{
+    padding: .45rem .68rem;
+    font-size: .8rem;
+    min-height: 30px;
+  }
 }
 
 
