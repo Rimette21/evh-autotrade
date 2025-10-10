@@ -37,7 +37,6 @@
         <span class="bar"></span>
       </label>
 
-      <!-- overlay + tiroir DOIVENT rester dans .header-inner -->
       <label for="nav-toggle" class="nav-overlay" aria-hidden="true"></label>
       <aside class="nav-drawer" role="dialog" aria-modal="true" aria-label="Menu mobile">
         <div class="drawer-head">
@@ -50,14 +49,13 @@
               <li><a href="index.html">Accueil</a></li>
               <li><a href="index.html#catalogue">Catalogue</a></li>
               <li><a href="index.html#avantages">Avantages</a></li>
-              <li><a href="mentions-legales.html">Mentions légales</a></li>
-              <li><a href="conditions-generales.html">Conditions générales</a></li>
-              <li><a href="confidentialite.html">Confidentialité</a></li>
+              <li><a href="#">À propos</a></li>
+              <li><a href="#">Contact</a></li>
             </ul>
           </nav>
         </div>
       </aside>
-      <!-- fin .header-inner -->
+      <!-- fin des éléments qui doivent rester dans .header-inner -->
     </div>
   </header>
 
@@ -74,230 +72,59 @@
     <span id="next">›</span>
   </div>
 
+  <!-- Script stable : accepte ?id=… ou ?rid=… ; pas de backticks dans notFound -->
   <script>
- <script>
-(function(){
-  const root = document.getElementById('vehicle-detail');
+    (function(){
+      const root = document.getElementById('vehicle-detail');
 
-  /* ---- 1) Récupérer l'ID (id/rid/ref/veh) et normaliser l'URL ---- */
-  const p = new URLSearchParams(location.search);
-  const vehicleId = (p.get('id') || p.get('rid') || p.get('ref') || p.get('veh') || '').trim();
+      // 1) Récupère l'ID via id/rid/ref/veh
+      const qs = new URLSearchParams(window.location.search);
+      const vehicleId = (qs.get('id') || qs.get('rid') || qs.get('ref') || qs.get('veh') || '').trim();
 
-  if (p.get('rid') && !p.get('id') && vehicleId) {
-    history.replaceState({}, '', location.pathname + '?id=' + encodeURIComponent(vehicleId));
-  }
-
-  function notFound(msg) {
-    root.innerHTML =
-      '<div style="background:#fff3f3;color:#d32f2f;padding:2rem;border-radius:12px;text-align:center;">' +
-        '<h2>Véhicule non trouvé</h2>' +
-        '<p>ID : ' + (vehicleId || '—') + '</p>' +
-        '<p>' + (msg || '') + '</p>' +
-        '<p style="margin-top:.5rem;font-size:.95rem;color:#b91c1c">' +
-          'Vérifie que <code>' + (vehicleId || 'ID') + '.json</code> existe bien dans <code>data/details/</code>.' +
-        '</p>' +
-        '<a href="index.html#catalogue" style="color:#e53e3e;text-decoration:none;font-weight:700;">← Retour</a>' +
-      '</div>';
-  }
-
-  if (!vehicleId) { notFound("Aucun identifiant n'a été fourni."); return; }
-
-  /* ---- 2) Charger le JSON + parsing robuste (donne l’erreur exacte) ---- */
-  const url = 'data/details/' + encodeURIComponent(vehicleId) + '.json?v=11';
-  console.log('[vehicle] JSON →', url);
-
-  function parseJsonText(txt, src){
-    try { return JSON.parse(txt); }
-    catch(e){
-      // Message lisible si JSON invalide
-      const preview = txt.slice(0, 500);
-      throw new Error('JSON invalide (' + src + ')\n' + e.message + '\n\nAperçu:\n' + preview);
-    }
-  }
-
-  fetch(url, { cache: 'no-store' })
-    .then(function(res){
-      if (!res.ok) throw new Error('HTTP ' + res.status + ' pour ' + url);
-      return res.text();
-    })
-    .then(function(txt){
-      const data = parseJsonText(txt, url);
-
-      const mileage = new Intl.NumberFormat('fr-FR').format(data.mileage ?? 0);
-      const year = (data.regyear || '').split('-')[0] || '—';
-
-      const isPHEV = (data.features || data.caracteristiques || [])
-        .some(function(f){ return /phev|hybride/i.test(f || ''); });
-      const energie = isPHEV ? 'PHEV' : 'BEV';
-
-      const specs = data.specifications || {};
-      const items = [];
-      function add(label, value){ if (value) items.push({ label: label, value: value }); }
-
-      add('Moteur', specs.moteur || '-');
-      add('Puissance moteur', specs.puissance || '-');
-      add('Transmission', specs.transmission || '-');
-      add('Traction', specs.traction || (data.features||[]).find(function(f){return /2wd|4wd|awd/i.test(f || '');}) || '-');
-      add('Autonomie électrique', specs.autonomieElectrique || '-');
-      add('Type de carrosserie', specs.typeCarrosserie || 'SUV');
-      add('Couleur', specs.couleur || data.couleur || '-');
-      add('Places', specs.places || '5 places');
-      if (specs.dimensions){
-        const dims = [specs.dimensions.longueur, specs.dimensions.largeur, specs.dimensions.hauteur].filter(Boolean).join(' × ');
-        add('Dimensions (L×l×H)', dims);
-      }
-      if (specs.poids || specs.capaciteMax){
-        add('Poids / Capacité max', [specs.poids, specs.capaciteMax].filter(Boolean).join(' / '));
+      // Normalise l’URL en ?id=… si on arrive avec ?rid=
+      if (qs.get('rid') && !qs.get('id') && vehicleId) {
+        history.replaceState({}, '', location.pathname + '?id=' + encodeURIComponent(vehicleId));
       }
 
-      const specsHTML = items.map(function(it){
-        return '<div class="spec-item">' +
-                 '<span class="spec-label">' + it.label + '</span>' +
-                 '<span class="spec-value">' + it.value + '</span>' +
-               '</div>';
-      }).join('');
+      function notFound(msg) {
+        root.innerHTML =
+          '<div style="background:#fff3f3;color:#d32f2f;padding:2rem;border-radius:12px;text-align:center;">' +
+            '<h2>Véhicule non trouvé</h2>' +
+            '<p>ID : ' + (vehicleId || '—') + '</p>' +
+            '<p>' + (msg || '') + '</p>' +
+            '<p style="margin-top:.5rem;font-size:.95rem;color:#b91c1c">' +
+              'Vérifie que <code>' + (vehicleId || 'ID') + '.json</code> existe bien dans <code>data/details/</code>.' +
+            '</p>' +
+            '<a href="index.html#catalogue" style="color:#e53e3e;text-decoration:none;font-weight:700;">← Retour</a>' +
+          '</div>';
+      }
 
-      const eq = data.equipements || {};
-      const allEquip = []
-        .concat(eq.interieur || [])
-        .concat(eq.securite || [])
-        .concat(eq.connectivite || []);
+      if (!vehicleId) { notFound("Aucun identifiant n'a été fourni."); return; }
 
-      root.innerHTML =
-        '<div class="vehicle-header">' +
-          '<div class="vehicle-title">' +
-            '<h1>' + (data.name || 'Véhicule') + '</h1>' +
-            '<div class="vehicle-meta">Modèle ' + year + ' — Réf : <strong>' + data.id + '</strong></div>' +
-          '</div>' +
-          '<div class="price-stack">' +
-            '<div class="price-big">Prix FCR (HT) : ' + (data.priceFCR || '-') + '</div>' +
-            '<div class="price-sub"><span class="notice notice--customs">Dédouanement possible sous conditions</span></div>' +
-            '<div style="margin-top:.4rem"><span class="pill">' + energie + '</span></div>' +
-          '</div>' +
-        '</div>' +
+      const url = 'data/details/' + encodeURIComponent(vehicleId) + '.json?v=11';
 
-        '<div class="content-grid">' +
-          '<div class="card-box image-card">' +
-            '<img src="' + (data.images && data.images.hero ? data.images.hero : '') + '" alt="' + (data.name || '') + '" class="hero-img" onerror="this.src=\'https://via.placeholder.com/800x500?text=Image+non+disponible\'">' +
-            '<div class="gallery" id="gallery">' +
-              (
-                (data.images && Array.isArray(data.images.gallery) && data.images.gallery.length)
-                ? data.images.gallery.map(function(u, i){ return '<img data-idx="' + i + '" src="' + u + '" alt="Vue ' + (i+1) + '">'; }).join('')
-                : '<p>Aucune image supplémentaire disponible.</p>'
-              ) +
-            '</div>' +
-          '</div>' +
-
-          '<div class="card-box specs-card">' +
-            '<div class="card-title">Spécifications techniques</div>' +
-            '<div class="specs-grid spec-compact">' + specsHTML + '</div>' +
-            '<div class="divider"></div>' +
-            '<div class="card-title">Caractéristiques principales</div>' +
-            '<div class="specs-grid">' +
-              '<div class="spec-item"><span class="spec-label">Année</span><span class="spec-value">' + year + '</span></div>' +
-              '<div class="spec-item"><span class="spec-label">Kilométrage</span><span class="spec-value">' + mileage + ' km</span></div>' +
-              '<div class="spec-item"><span class="spec-label">Énergie</span><span class="spec-value">' + energie + '</span></div>' +
-              '<div class="spec-item"><span class="spec-label">Référence</span><span class="spec-value">' + data.id + '</span></div>' +
-            '</div>' +
-          '</div>' +
-        '</div>' +
-
-        '<div class="card-box equip-card">' +
-          '<div class="card-title">Équipements & Accessoires</div>' +
-          '<div class="equip-grid">' +
-            '<ul class="equip-list">' +
-              allEquip.slice(0, Math.ceil(allEquip.length/2)).map(function(li){ return '<li>' + li + '</li>'; }).join('') +
-            '</ul>' +
-            '<ul class="equip-list">' +
-              allEquip.slice(Math.ceil(allEquip.length/2)).map(function(li){ return '<li>' + li + '</li>'; }).join('') +
-            '</ul>' +
-          '</div>' +
-        '</div>' +
-
-        '<div class="card-box cta-card">' +
-          '<a href="mailto:contact@evhautotrade.com?subject=Demande%20devis%20' + encodeURIComponent(data.name || data.id) + '" class="btn">' +
-            'Demander un devis pour ce véhicule' +
-          '</a>' +
-        '</div>';
-
-      // Lightbox
-      const galleryImgs = Array.prototype.slice.call(document.querySelectorAll('#gallery img'));
-      const lb = document.getElementById('lightbox');
-      const lbImg = document.getElementById('lbImg');
-      const btnClose = document.getElementById('close');
-      const btnPrev = document.getElementById('prev');
-      const btnNext = document.getElementById('next');
-      var idx = 0;
-
-      function open(i){ idx = i; lbImg.src = (data.images.gallery[idx]); lb.style.display = 'flex'; }
-      function close(){ lb.style.display = 'none'; lbImg.src = ''; }
-      function prev(){ open((idx - 1 + galleryImgs.length) % galleryImgs.length); }
-      function next(){ open((idx + 1) % galleryImgs.length); }
-
-      galleryImgs.forEach(function(img){
-        img.addEventListener('click', function(e){ open(+e.target.getAttribute('data-idx')); });
-      });
-      btnClose.addEventListener('click', close);
-      lb.addEventListener('click', function(e){ if (e.target === lb) close(); });
-      btnPrev.addEventListener('click', prev);
-      btnNext.addEventListener('click', next);
-      window.addEventListener('keydown', function(e){
-        if (lb.style.display !== 'flex') return;
-        if (e.key === 'Escape') close();
-        if (e.key === 'ArrowLeft') prev();
-        if (e.key === 'ArrowRight') next();
-      });
-    })
-    .catch(function(err){
-      console.error('[vehicle] erreur:', err);
-      notFound('Le fichier JSON est introuvable ou invalide. Détail : ' + (err && err.message ? err.message : err));
-    });
-})();
-</script>
-
-</script>
-
-    async function fetchDetail() {
-      const res = await fetch(url, { cache: 'no-store' });
-      if (!res.ok) throw new Error(\`HTTP \${res.status} pour \${url}\`);
-      return res.json();
-    }
-
-    function notFound(msg) {
-      document.getElementById('vehicle-detail').innerHTML = `
-        <div style="background:#fff3f3;color:#d32f2f;padding:2rem;border-radius:12px;text-align:center;">
-          <h2>Véhicule non trouvé</h2>
-          <p>ID : ${vehicleId}</p>
-          <p>${msg}</p>
-          <p style="margin-top:.5rem;font-size:.95rem;color:#b91c1c">
-            Vérifie que <code>${vehicleId}.json</code> existe bien dans <code>data/details/</code>.
-          </p>
-          <a href="index.html#catalogue" style="color:#e53e3e;text-decoration:none;font-weight:700;">← Retour</a>
-        </div>`;
-    }
-
-    if (!vehicleId) {
-      notFound("Aucun identifiant n'a été fourni.");
-    } else {
-      fetchDetail()
-        .then(data => {
+      // 2) Charge le JSON et rend la page
+      fetch(url, { cache: 'no-store' })
+        .then(function(res){
+          if (!res.ok) throw new Error('HTTP ' + res.status + ' pour ' + url);
+          return res.json();
+        })
+        .then(function(data){
           const mileage = new Intl.NumberFormat('fr-FR').format(data.mileage ?? 0);
           const year = (data.regyear || '').split('-')[0] || '—';
 
-          // Énergie (PHEV vs BEV)
           const isPHEV = (data.features || data.caracteristiques || [])
-            .some(f => /phev|hybride/i.test(f || ''));
+            .some(function(f){ return /phev|hybride/i.test(f || ''); });
           const energie = isPHEV ? 'PHEV' : 'BEV';
 
-          // Spécifications
           const specs = data.specifications || {};
           const items = [];
-          const add = (label, value) => { if (value) items.push({ label, value }); };
+          function add(label, value){ if (value) items.push({ label: label, value: value }); }
 
           add('Moteur', specs.moteur || '-');
           add('Puissance moteur', specs.puissance || '-');
           add('Transmission', specs.transmission || '-');
-          add('Traction', specs.traction || (data.features||[]).find(f=>/2wd|4wd|awd/i.test(f||'')) || '-');
+          add('Traction', specs.traction || (data.features||[]).find(function(f){return /2wd|4wd|awd/i.test(f || '');}) || '-');
           add('Autonomie électrique', specs.autonomieElectrique || '-');
           add('Type de carrosserie', specs.typeCarrosserie || 'SUV');
           add('Couleur', specs.couleur || data.couleur || '-');
@@ -311,22 +138,19 @@
             add('Poids / Capacité max', [specs.poids, specs.capaciteMax].filter(Boolean).join(' / '));
           }
 
-          const specsHTML = items.map(it => `
-            <div class="spec-item">
-              <span class="spec-label">${it.label}</span>
-              <span class="spec-value">${it.value}</span>
-            </div>
-          `).join('');
+          const specsHTML = items.map(function(it){
+            return '<div class="spec-item">' +
+                     '<span class="spec-label">' + it.label + '</span>' +
+                     '<span class="spec-value">' + it.value + '</span>' +
+                   '</div>';
+          }).join('');
 
-          // Équipements regroupés
           const eq = data.equipements || {};
-          const allEquip = [
-            ...(eq.interieur || []),
-            ...(eq.securite || []),
-            ...(eq.connectivite || [])
-          ];
+          const allEquip = []
+            .concat(eq.interieur || [])
+            .concat(eq.securite || [])
+            .concat(eq.connectivite || []);
 
-          // Rendu
           document.getElementById('vehicle-detail').innerHTML = `
             <div class="vehicle-header">
               <div class="vehicle-title">
@@ -343,9 +167,8 @@
             </div>
 
             <div class="content-grid">
-              <!-- Images -->
               <div class="card-box image-card">
-                <img src="${data.images?.hero || ''}" alt="${data.name}" class="hero-img"
+                <img src="${data.images?.hero || ''}" alt="${data.name || ''}" class="hero-img"
                      onerror="this.src='https://via.placeholder.com/800x500?text=Image+non+disponible'">
                 <div class="gallery" id="gallery">
                   ${
@@ -356,7 +179,6 @@
                 </div>
               </div>
 
-              <!-- Spécifications & Caractéristiques -->
               <div class="card-box specs-card">
                 <div class="card-title">Spécifications techniques</div>
                 <div class="specs-grid spec-compact">${specsHTML}</div>
@@ -390,7 +212,7 @@
             </div>
           `;
 
-          // Lightbox navigation
+          // Lightbox
           const galleryImgs = Array.from(document.querySelectorAll('#gallery img'));
           const lb = document.getElementById('lightbox');
           const lbImg = document.getElementById('lbImg');
@@ -416,14 +238,14 @@
             if(e.key==='ArrowRight') next();
           });
         })
-        .catch(err => {
+        .catch(function(err){
           console.error('Erreur chargement véhicule:', err);
-          notFound('Le fichier JSON est introuvable ou invalide.');
+          notFound('Le fichier JSON est introuvable ou invalide. Détail : ' + (err && err.message ? err.message : err));
         });
-    }
+    })();
   </script>
 
-  <!-- Déplacement de la pastille BEV/PHEV sur la photo Hero -->
+  <!-- Déplace la pastille .pill (BEV/PHEV) dans la photo Hero -->
   <script>
   (function(){
     const root = document.getElementById('vehicle-detail');
