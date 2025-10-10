@@ -9,58 +9,60 @@
 </head>
 <body class="page-vehicle">
   <!-- HEADER -->
- <header>
-  <div class="header-inner">
-    <div class="logo-wrap">
-      <div class="logo">
-        <img src="images/EVH_logo.png" alt="E.V.H. AUTOTRADE">
+  <header>
+    <div class="header-inner">
+      <div class="logo-wrap">
+        <div class="logo">
+          <img src="images/EVH_logo.png" alt="E.V.H. AUTOTRADE">
+        </div>
+        <div class="brand">
+          <span class="evh">E.V.H.</span>
+          <span class="autotrade">AUTOTRADE</span>
+        </div>
       </div>
-      <div class="brand">
-        <span class="evh">E.V.H.</span>
-        <span class="autotrade">AUTOTRADE</span>
-      </div>
+
+      <nav class="nav" aria-label="Navigation principale">
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="index.html#catalogue">Catalogue</a></li>
+          <li><a href="index.html#avantages">Avantages</a></li>
+          <li><a href="#">À propos</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Checkbox + bouton burger -->
+      <input type="checkbox" id="nav-toggle" aria-hidden="true" />
+      <label class="nav-btn" for="nav-toggle" aria-label="Ouvrir le menu">
+        <span class="bar"></span>
+      </label>
+
+      <!-- overlay + tiroir DOIVENT rester dans .header-inner -->
+      <label for="nav-toggle" class="nav-overlay" aria-hidden="true"></label>
+      <aside class="nav-drawer" role="dialog" aria-modal="true" aria-label="Menu mobile">
+        <div class="drawer-head">
+          <div class="drawer-title">Menu</div>
+          <label for="nav-toggle" class="drawer-close" aria-label="Fermer">✕</label>
+        </div>
+        <div class="drawer-body">
+          <nav class="drawer-nav">
+            <ul>
+              <li><a href="index.html">Accueil</a></li>
+              <li><a href="index.html#catalogue">Catalogue</a></li>
+              <li><a href="index.html#avantages">Avantages</a></li>
+              <li><a href="mentions-legales.html">Mentions légales</a></li>
+              <li><a href="conditions-generales.html">Conditions générales</a></li>
+              <li><a href="confidentialite.html">Confidentialité</a></li>
+            </ul>
+          </nav>
+        </div>
+      </aside>
+      <!-- fin .header-inner -->
     </div>
-
-    <nav class="nav" aria-label="Navigation principale">
-      <ul>
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="#catalogue">Catalogue</a></li>
-        <li><a href="#avantages">Avantages</a></li>
-        <li><a href="#">À propos</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-
-    <!-- Checkbox + bouton burger -->
-    <input type="checkbox" id="nav-toggle" aria-hidden="true" />
-    <label class="nav-btn" for="nav-toggle" aria-label="Ouvrir le menu">
-      <span class="bar"></span>
-    </label>
-
-    <label for="nav-toggle" class="nav-overlay" aria-hidden="true"></label>
-    <aside class="nav-drawer" role="dialog" aria-modal="true" aria-label="Menu mobile">
-      <div class="drawer-head">
-        <div class="drawer-title">Menu</div>
-        <label for="nav-toggle" class="drawer-close" aria-label="Fermer">✕</label>
-      </div>
-      <div class="drawer-body">
-        <nav class="drawer-nav">
-          <ul>
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="#catalogue">Catalogue</a></li>
-            <li><a href="#avantages">Avantages</a></li>
-            <li><a href="#">À propos</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-    </aside>
-    <!-- fin des éléments qui doivent rester dans .header-inner -->
-  </div>
-</header>
+  </header>
 
   <div class="container--page">
-    <a href="index.html" class="back-link">← Retour au catalogue</a>
+    <a href="index.html#catalogue" class="back-link">← Retour au catalogue</a>
     <div id="vehicle-detail"><p>Chargement du véhicule…</p></div>
   </div>
 
@@ -79,7 +81,7 @@
 
     async function fetchDetail() {
       const res = await fetch(url, { cache: 'no-store' });
-      if (!res.ok) throw new Error(`HTTP ${res.status} pour ${url}`);
+      if (!res.ok) throw new Error(\`HTTP \${res.status} pour \${url}\`);
       return res.json();
     }
 
@@ -92,7 +94,7 @@
           <p style="margin-top:.5rem;font-size:.95rem;color:#b91c1c">
             Vérifie que <code>${vehicleId}.json</code> existe bien dans <code>data/details/</code>.
           </p>
-          <a href="index.html" style="color:#e53e3e;text-decoration:none;font-weight:700;">← Retour</a>
+          <a href="index.html#catalogue" style="color:#e53e3e;text-decoration:none;font-weight:700;">← Retour</a>
         </div>`;
     }
 
@@ -104,10 +106,12 @@
           const mileage = new Intl.NumberFormat('fr-FR').format(data.mileage ?? 0);
           const year = (data.regyear || '').split('-')[0] || '—';
 
+          // Énergie (PHEV vs BEV)
           const isPHEV = (data.features || data.caracteristiques || [])
             .some(f => /phev|hybride/i.test(f || ''));
           const energie = isPHEV ? 'PHEV' : 'BEV';
 
+          // Spécifications
           const specs = data.specifications || {};
           const items = [];
           const add = (label, value) => { if (value) items.push({ label, value }); };
@@ -136,6 +140,7 @@
             </div>
           `).join('');
 
+          // Équipements regroupés
           const eq = data.equipements || {};
           const allEquip = [
             ...(eq.interieur || []),
@@ -143,6 +148,7 @@
             ...(eq.connectivite || [])
           ];
 
+          // Rendu
           document.getElementById('vehicle-detail').innerHTML = `
             <div class="vehicle-header">
               <div class="vehicle-title">
@@ -159,6 +165,7 @@
             </div>
 
             <div class="content-grid">
+              <!-- Images -->
               <div class="card-box image-card">
                 <img src="${data.images?.hero || ''}" alt="${data.name}" class="hero-img"
                      onerror="this.src='https://via.placeholder.com/800x500?text=Image+non+disponible'">
@@ -171,6 +178,7 @@
                 </div>
               </div>
 
+              <!-- Spécifications & Caractéristiques -->
               <div class="card-box specs-card">
                 <div class="card-title">Spécifications techniques</div>
                 <div class="specs-grid spec-compact">${specsHTML}</div>
@@ -204,7 +212,7 @@
             </div>
           `;
 
-          // Lightbox
+          // Lightbox navigation
           const galleryImgs = Array.from(document.querySelectorAll('#gallery img'));
           const lb = document.getElementById('lightbox');
           const lbImg = document.getElementById('lbImg');
@@ -236,34 +244,34 @@
         });
     }
   </script>
+
+  <!-- Déplacement de la pastille BEV/PHEV sur la photo Hero -->
   <script>
-/* Déplace la pastille .pill (BEV/PHEV) dans la photo Hero (.image-card) */
-(function(){
-  const root = document.getElementById('vehicle-detail');
-  if (!root) return;
+  (function(){
+    const root = document.getElementById('vehicle-detail');
+    if (!root) return;
 
-  function movePill(){
-    const imgCard = root.querySelector('.image-card');
-    const pill = root.querySelector('.price-stack .pill');
-    if (imgCard && pill){
-      let badge = root.querySelector('.energy-badge');
-      if (!badge){
-        badge = document.createElement('div');
-        badge.className = 'energy-badge';
-        imgCard.appendChild(badge);
+    function movePill(){
+      const imgCard = root.querySelector('.image-card');
+      const pill = root.querySelector('.price-stack .pill');
+      if (imgCard && pill){
+        let badge = root.querySelector('.energy-badge');
+        if (!badge){
+          badge = document.createElement('div');
+          badge.className = 'energy-badge';
+          imgCard.appendChild(badge);
+        }
+        badge.appendChild(pill);
+        return true;
       }
-      badge.appendChild(pill); // on déplace l'élément existant
-      return true;
+      return false;
     }
-    return false;
-  }
 
-  // Essaye tout de suite, sinon observe jusqu'à ce que la fiche soit rendue
-  if (!movePill()){
-    const obs = new MutationObserver(() => { if (movePill()) obs.disconnect(); });
-    obs.observe(root, { childList: true, subtree: true });
-  }
-})();
-</script>
+    if (!movePill()){
+      const obs = new MutationObserver(() => { if (movePill()) obs.disconnect(); });
+      obs.observe(root, { childList: true, subtree: true });
+    }
+  })();
+  </script>
 </body>
 </html>
