@@ -6,6 +6,15 @@
   <title>Détail véhicule — E.V.H. AUTOTRADE</title>
   <link rel="stylesheet" href="styles.css?v=16">
   <link rel="stylesheet" href="mobile-tighten.css">
+  <style>
+    /* Petit bloc d’erreur visible si souci */
+    .debug-error{
+      background:#fff3f3;color:#b42318;border:1px solid #f1caca;
+      padding:1rem;border-radius:10px;margin:1rem 1.25rem;font-family:ui-sans-serif,system-ui;
+      line-height:1.4
+    }
+    .debug-error code{background:#fee;border:1px solid #fcc;padding:.05rem .3rem;border-radius:6px}
+  </style>
 </head>
 <body class="page-vehicle">
   <!-- HEADER -->
@@ -31,11 +40,8 @@
         </ul>
       </nav>
 
-      <!-- Checkbox + bouton burger -->
       <input type="checkbox" id="nav-toggle" aria-hidden="true" />
-      <label class="nav-btn" for="nav-toggle" aria-label="Ouvrir le menu">
-        <span class="bar"></span>
-      </label>
+      <label class="nav-btn" for="nav-toggle" aria-label="Ouvrir le menu"><span class="bar"></span></label>
 
       <label for="nav-toggle" class="nav-overlay" aria-hidden="true"></label>
       <aside class="nav-drawer" role="dialog" aria-modal="true" aria-label="Menu mobile">
@@ -55,7 +61,6 @@
           </nav>
         </div>
       </aside>
-      <!-- fin des éléments qui doivent rester dans .header-inner -->
     </div>
   </header>
 
@@ -72,22 +77,17 @@
     <span id="next">›</span>
   </div>
 
-  <!-- Script : accepte ?id=… / ?rid=… + pastille Couleur + clés robustes -->
   <script>
-    (function(){
-      const root = document.getElementById('vehicle-detail');
+  (function(){
+    const root = document.getElementById('vehicle-detail');
 
-      // ===== Helpers pastille couleur =====
-      function normalizeColor(str){
-        if(!str) return null;
-        const s = String(str).trim().toLowerCase();
-        if(/^#([0-9a-f]{3}|[0-9a-f]{6})$/i.test(s)) return s;
-        if(/^rgb\(/.test(s)) return s;
-        const map = {
-          "blanc":"#ffffff","blanc nacré":"#f7f7f7","noir":"#111111","noir métallisé":"#222222",
-          "gris":"#9aa0a6","gris clair":"#c7cbd1","gris foncé":"#5f666d","gris anthracite":"#4a4f55","argent":"#c0c0c0",
-          "bleu":"#1e73be","bleu clair":"#7bb6f0","bleu foncé":"#0b3d91",
-          "rouge":"#d93025","rouge foncé":"#8b0000",
-          "vert":"#16a34a","vert foncé":"#14532d",
-          "beige":"#d8c6a0","marron":"#6d4c41","brun":"#5a3825",
-          "jaune":"#facc15","orange":"#fb923c
+    // Helpers pastille couleur (laisser tel quel)
+    function normalizeColor(str){
+      if(!str) return null;
+      const s = String(str).trim().toLowerCase();
+      if(/^#([0-9a-f]{3}|[0-9a-f]{6})$/i.test(s)) return s;
+      if(/^rgb\(/.test(s)) return s;
+      const map = {
+        "blanc":"#ffffff","blanc nacré":"#f7f7f7","noir":"#111111","noir métallisé":"#222222",
+        "gris":"#9aa0a6","gris clair":"#c7cbd1","gris foncé":"#5f666d","gris anthracite":"#4a4f55","argent":"#c0c0c0",
+        "bleu":"#1e73be","bleu clair":"#7bb6f0","bleu
