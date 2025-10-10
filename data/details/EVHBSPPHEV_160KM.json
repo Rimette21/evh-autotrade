@@ -16,7 +16,7 @@
   },
   "features": [
     "Hybride rechargeable (DM-i)",
-    "Autonomie électrique 160 km (CLTC estim.)",
+    "Autonomie électrique 160 km",
     "Batterie LFP 26.6 kWh",
     "Transmission e-CVT (DHT)",
     "Caméra 360° + aide au stationnement",
@@ -26,7 +26,7 @@
     "Sièges avant chauffants"
   ],
   "specifications": {
-    "moteur": "1.5 L essence + moteur(s) électrique(s)",
+    "moteur": "1.5 L essence + moteur électrique",
     "transmission": "e-CVT / traction avant",
     "autonomieElectrique": "160 km",
     "batterie": "26.6 kWh (LFP)",
