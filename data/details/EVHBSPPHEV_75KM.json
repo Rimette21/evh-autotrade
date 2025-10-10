@@ -23,6 +23,7 @@
     "Caméra panoramique 360° + vue 540°",
     "Aides à la conduite L2 (LKA/ACC)"
   ],
+  
   "specifications": {
     "moteur": "1.5L BYD472QC, atmosphérique",
     "puissanceThermique": "74 kW (101 ch)",
@@ -37,6 +38,7 @@
     "traction": "Traction avant",
     "chargeRapide": "Non (—)",
     "v2l": "Oui (décharge vers l’extérieur)",
+    "couleur": "Blanc",
     "dimensions": {
       "longueur": "4775 mm",
       "largeur": "1890 mm",
