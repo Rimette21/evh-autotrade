@@ -289,6 +289,16 @@ header{
 /* Fond des pages détail (toutes tailles) */
 /* Option A – gris très pâle (sobre) */
 body.page-vehicle { background: #F6F7FB; }
+/* Pastille de couleur dans les spécifications */
+.spec-value .color-dot{
+  display:inline-block;
+  width:12px; height:12px;
+  border-radius:50%;
+  background: var(--swatch, #ccc);
+  border:1px solid #ccd3e0;
+  margin-right:.4rem;
+  vertical-align:-2px;
+}
 /* Détail : retirer l'encadré blanc du bloc CTA */
 .page-vehicle .cta-card{
   background: transparent;
