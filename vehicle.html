@@ -90,4 +90,224 @@
       const map = {
         "blanc":"#ffffff","blanc nacré":"#f7f7f7","noir":"#111111","noir métallisé":"#222222",
         "gris":"#9aa0a6","gris clair":"#c7cbd1","gris foncé":"#5f666d","gris anthracite":"#4a4f55","argent":"#c0c0c0",
-        "bleu":"#1e73be","bleu clair":"#7bb6f0","bleu
+        "bleu":"#1e73be","bleu clair":"#7bb6f0","bleu foncé":"#0b3d91",
+        "rouge":"#d93025","rouge foncé":"#8b0000",
+        "vert":"#16a34a","vert foncé":"#14532d",
+        "beige":"#d8c6a0","marron":"#6d4c41","brun":"#5a3825",
+        "jaune":"#facc15","orange":"#fb923c","violet":"#7e57c2",
+        "bordeaux":"#6d071a","champagne":"#efe3c8","gris métallisé":"#9ea3aa"
+      };
+      return map[s] || null;
+    }
+    function swatchHTML(value){
+      if(!value) return '-';
+      const col = normalizeColor(value);
+      return col ? '<span class="color-dot" style="--swatch:'+col+'"></span>'+value : value;
+    }
+
+    // ID via ?id= / ?rid= / ?ref= / ?veh=
+    const qs = new URLSearchParams(location.search);
+    const vehicleId = (qs.get('id') || qs.get('rid') || qs.get('ref') || qs.get('veh') || '').trim();
+    if (qs.get('rid') && !qs.get('id') && vehicleId) {
+      history.replaceState({}, '', location.pathname + '?id=' + encodeURIComponent(vehicleId));
+    }
+
+    function showError(title, details){
+      root.innerHTML =
+        '<div class="debug-error">'+
+          '<strong>'+ title +'</strong><br>'+ (details || '') +
+        '</div>';
+    }
+
+    if(!vehicleId){
+      showError('Aucun identifiant fourni', 'URL attendue : <code>vehicle.html?id=VOTRE_ID</code>');
+      return;
+    }
+
+    // Essaie avec et sans ?v=11
+    const candidates = [
+      'data/details/' + encodeURIComponent(vehicleId) + '.json?v=11',
+      'data/details/' + encodeURIComponent(vehicleId) + '.json'
+    ];
+
+    // fonction fetch robuste + message visible
+    function fetchJson(url){
+      return fetch(url, {cache:'no-store'})
+        .then(r => {
+          if(!r.ok) throw new Error('HTTP '+r.status+' pour '+r.url);
+          return r.json();
+        })
+        .catch(e => { throw new Error('Échec chargement: '+e.message); });
+    }
+
+    (async function load(){
+      let data = null, lastErr = null, usedUrl = null;
+
+      for (const u of candidates){
+        try{
+          usedUrl = u;
+          data = await fetchJson(u);
+          break;
+        }catch(e){
+          lastErr = e;
+        }
+      }
+
+      if(!data){
+        showError('Véhicule non trouvé',
+          'ID : <code>'+vehicleId+'</code><br>'+
+          (lastErr ? ('Détail : <code>'+lastErr.message.replace(/</g,'&lt;')+'</code>') : '')
+        );
+        return;
+      }
+
+      // ---------- RENDU ----------
+      const mileage = new Intl.NumberFormat('fr-FR').format(data.mileage ?? 0);
+      const year = (data.regyear || '').split('-')[0] || '—';
+
+      const isPHEV = (data.features || data.caracteristiques || [])
+        .some(f => /phev|hybride/i.test(f || ''));
+      const energie = isPHEV ? 'PHEV' : 'BEV';
+
+      const specs = data.specifications || {};
+      const items = [];
+      function add(label, value){ if (value !== undefined && value !== null && value !== '') items.push({ label, value }); }
+
+      add('Moteur', specs.moteur || '-');
+
+      const puissance =
+        specs.puissance ||
+        specs.puissanceSysteme ||
+        specs.puissanceMoteur ||
+        specs.power || null;
+      add('Puissance moteur', puissance || '-');
+
+      add('Transmission', specs.transmission || '-');
+
+      let traction = specs.traction || '';
+      if (!traction && specs.transmission){
+        const m = String(specs.transmission).match(/(traction\s+(avant|arrière|intégrale))|(\b(2wd|4wd|awd)\b)/i);
+        if (m) traction = m[0].replace(/2wd/i,'2WD').replace(/4wd/i,'4WD').replace(/awd/i,'AWD');
+      }
+      add('Traction', traction || '-');
+
+      add('Autonomie électrique', specs.autonomieElectrique || '-');
+      add('Type de carrosserie', specs.typeCarrosserie || 'SUV');
+      add('Places', specs.places || '5 places');
+
+      const couleurRaw = specs.couleur || specs.Couleur || data.couleur || '';
+      add('Couleur', swatchHTML(couleurRaw));
+
+      if (specs.dimensions){
+        const dims = [specs.dimensions.longueur, specs.dimensions.largeur, specs.dimensions.hauteur]
+          .filter(Boolean).join(' × ');
+        add('Dimensions (L×l×H)', dims || null);
+      }
+      if (specs.poids || specs.capaciteMax){
+        add('Poids / Capacité max', [specs.poids, specs.capaciteMax].filter(Boolean).join(' / '));
+      }
+
+      const specsHTML = items.map(it =>
+        '<div class="spec-item">'+
+          '<span class="spec-label">'+it.label+'</span>'+
+          '<span class="spec-value">'+it.value+'</span>'+
+        '</div>'
+      ).join('');
+
+      root.innerHTML =
+        '<div class="vehicle-header">'+
+          '<div class="vehicle-title">'+
+            '<h1>'+(data.name || 'Véhicule')+'</h1>'+
+            '<div class="vehicle-meta">Modèle '+year+' — Réf : <strong>'+data.id+'</strong></div>'+
+          '</div>'+
+          '<div class="price-stack">'+
+            '<div class="price-big">Prix FCR (HT) : '+(data.priceFCR || '-')+'</div>'+
+            '<div class="price-sub"><span class="notice notice--customs">(Dédouanement possible sous conditions)</span></div>'+
+            '<div style="margin-top:.4rem"><span class="pill">'+energie+'</span></div>'+
+          '</div>'+
+        '</div>'+
+
+        '<div class="debug-error" style="display:block;margin-top:.5rem">'+
+          '<strong>Debug chargé</strong> — JSON : <code>'+usedUrl.replace(/</g,'&lt;')+'</code>'+
+        '</div>'+
+
+        '<div class="content-grid">'+
+          '<div class="card-box image-card">'+
+            '<img src="'+(data.images && data.images.hero ? data.images.hero : '')+'" alt="'+(data.name || '')+'" class="hero-img" '+
+            'onerror="this.src=\'https://via.placeholder.com/800x500?text=Image+non+disponible\'">'+
+            '<div class="gallery" id="gallery">'+
+              ((data.images && Array.isArray(data.images.gallery) && data.images.gallery.length)
+                ? data.images.gallery.map((u,i)=>'<img data-idx="'+i+'" src="'+u+'" alt="Vue '+(i+1)+'">').join('')
+                : '<p>Aucune image supplémentaire disponible.</p>')+
+            '</div>'+
+          '</div>'+
+
+          '<div class="card-box specs-card">'+
+            '<div class="card-title">Spécifications techniques</div>'+
+            '<div class="specs-grid spec-compact">'+specsHTML+'</div>'+
+            '<div class="divider"></div>'+
+            '<div class="card-title">Caractéristiques principales</div>'+
+            '<div class="specs-grid">'+
+              '<div class="spec-item"><span class="spec-label">Année</span><span class="spec-value">'+year+'</span></div>'+
+              '<div class="spec-item"><span class="spec-label">Kilométrage</span><span class="spec-value">'+mileage+' km</span></div>'+
+              '<div class="spec-item"><span class="spec-label">Énergie</span><span class="spec-value">'+energie+'</span></div>'+
+              '<div class="spec-item"><span class="spec-label">Référence</span><span class="spec-value">'+data.id+'</span></div>'+
+            '</div>'+
+          '</div>'+
+        '</div>';
+
+      // Lightbox basique
+      const galleryImgs = Array.from(document.querySelectorAll('#gallery img'));
+      const lb = document.getElementById('lightbox');
+      const lbImg = document.getElementById('lbImg');
+      const btnClose = document.getElementById('close');
+      const btnPrev = document.getElementById('prev');
+      const btnNext = document.getElementById('next');
+      let idx = 0;
+      function open(i){ idx=i; lbImg.src = data.images.gallery[idx]; lb.style.display='flex'; }
+      function close(){ lb.style.display='none'; lbImg.src=''; }
+      function prev(){ open((idx-1+galleryImgs.length)%galleryImgs.length); }
+      function next(){ open((idx+1)%galleryImgs.length); }
+      galleryImgs.forEach(img => img.addEventListener('click', e => open(+e.target.dataset.idx)));
+      btnClose.addEventListener('click', close);
+      lb.addEventListener('click', e => { if(e.target===lb) close(); });
+      btnPrev.addEventListener('click', prev);
+      btnNext.addEventListener('click', next);
+      window.addEventListener('keydown', e => {
+        if(lb.style.display!=='flex') return;
+        if(e.key==='Escape') close();
+        if(e.key==='ArrowLeft') prev();
+        if(e.key==='ArrowRight') next();
+      });
+    })();
+  })();
+  </script>
+
+  <!-- Déplace la pastille .pill (BEV/PHEV) dans la photo Hero -->
+  <script>
+  (function(){
+    const root = document.getElementById('vehicle-detail');
+    if (!root) return;
+    function movePill(){
+      const imgCard = root.querySelector('.image-card');
+      const pill = root.querySelector('.price-stack .pill');
+      if (imgCard && pill){
+        let badge = root.querySelector('.energy-badge');
+        if (!badge){
+          badge = document.createElement('div');
+          badge.className = 'energy-badge';
+          imgCard.appendChild(badge);
+        }
+        badge.appendChild(pill);
+        return true;
+      }
+      return false;
+    }
+    if (!movePill()){
+      const obs = new MutationObserver(() => { if (movePill()) obs.disconnect(); });
+      obs.observe(root, { childList: true, subtree: true });
+    }
+  })();
+  </script>
+</body>
+</html>
