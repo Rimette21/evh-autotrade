@@ -1,9 +1,10 @@
 {
   "id": "EVH9384241",
-  "name": "Haval H6 1.5T DCT 2WD",
+  "name": "Haval H6 PHEV 1.5T 2DHT — 110 km (CLTC)",
   "priceFCR": "21 600 €",
   "mileage": 28800,
   "regyear": "2024-04",
+
   "images": {
     "hero": "images/EVH9384241_HAVALH6_devant.png",
     "gallery": [
@@ -16,21 +17,37 @@
       "images/EVH9384241_HAVALH6_int_arriere.png"
     ]
   },
+
   "features": [
-    "Moteur Hybride rechargeable",
-    "Transmission DCT (AT)",
-    "Caméra panoramique 360°",
-    "Radar de stationnement AV/AR",
-    "Écran central tactile",
-    "Régulateur de vitesse"
+    "Hybride rechargeable (PHEV)",
+    "Autonomie électrique 110 km (CLTC)",
+    "Batterie 19.94 kWh",
+    "Transmission 2DHT (e-CVT)",
+    "Caméra 360° + radars AV/AR"
   ],
+
   "specifications": {
-    "moteur": "L4 1.5 Turbo essence",
-    "puissance": "≈110–135 kW (selon version)",
-    "couple": "≈230–275 Nm (selon version)",
-    "transmission": "DCT / traction avant",
-    "autonomieElectrique": null,
-    "batterie": null,
+    "moteur": "L4 1.5 Turbo + moteur électrique",
+    "engineCc": 1499,
+    "puissanceThermique": "154 ch (~113 kW)",
+    "puissanceSysteme": "240 kW (326 ch)",
+    "puissanceElectrique": "130 kW",
+    "coupleSysteme": "530 N·m (combiné)",
+
+    "transmission": "2DHT (e-CVT)",
+    "traction": "Traction avant (2WD)",
+
+    "autonomieCLTC": "110 km",
+    "autonomieWLTP": "—",
+    "autonomieEPA": "—",
+
+    "batterieKWh": "19.94 kWh",
+    "rechargeACkW": "6.6 kW",
+    "rechargeDCkW": "34 kW",
+
+    "places": "5 places",
+    "volumeCoffre": "560 L / 1485 L (sièges rabattus)",
+
     "dimensions": {
       "longueur": "4680–4685 mm",
       "largeur": "1886 mm",
@@ -39,27 +56,40 @@
     },
     "pneus": "235/55 R19 (selon version)"
   },
+
   "equipements": {
     "interieur": [
-      "Écran tactile multimédia",
-      "Tableau de bord numérique",
+      "Toit ouvrant",
+      "Sièges en cuir",
+      "Sièges à réglages électriques",
+      "Sièges chauffants",
       "Climatisation automatique",
-      "Sellerie similicuir",
-      "Commandes au volant"
+      "Vitres électriques",
+      "Direction assistée",
+      "Jantes en alliage",
+      "GPS / Navigation",
+      "Démarrage sans clé (bouton Start)",
+      "Accès mains libres",
+      "Verrouillage centralisé"
     ],
     "securite": [
       "Caméra 360°",
-      "Radar AV/AR",
-      "Freinage d’urgence (AEB) selon version",
-      "Alerte franchissement de ligne (LKA) selon version",
-      "6 airbags",
-      "Contrôle de stabilité (ESP)"
+      "Radars de stationnement",
+      "Régulateur de vitesse adaptatif (ACC)",
+      "ABS (freinage antiblocage)",
+      "Contrôle de stabilité (ESP)",
+      "Surveillance pression des pneus (TPMS)",
+      "Projecteurs antibrouillard",
+      "Airbag conducteur",
+      "Airbag passager",
+      "Airbags latéraux"
     ],
     "connectivite": [
-      "Bluetooth / USB",
-      "Navigation & services connectés (selon version)"
+      "Bluetooth",
+      "Navigation & services connectés"
     ]
   },
+
   "garantie": "Garantie importateur 2 ans",
   "localisation": "Chine",
   "disponibilite": "Livraison au port de destination : ~45 jours"
