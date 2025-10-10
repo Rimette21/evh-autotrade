@@ -127,7 +127,7 @@
           add('Traction', specs.traction || (data.features||[]).find(function(f){return /2wd|4wd|awd/i.test(f || '');}) || '-');
           add('Autonomie électrique', specs.autonomieElectrique || '-');
           add('Type de carrosserie', specs.typeCarrosserie || 'SUV');
-          add('Couleur', specs.couleur || data.couleur || '-');
+          add('Couleur', specs.couleur || data.features|| '-');
           add('Places', specs.places || '5 places');
           if (specs.dimensions) {
             const dims = [specs.dimensions.longueur, specs.dimensions.largeur, specs.dimensions.hauteur]
