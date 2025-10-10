@@ -236,5 +236,34 @@
         });
     }
   </script>
+  <script>
+/* Déplace la pastille .pill (BEV/PHEV) dans la photo Hero (.image-card) */
+(function(){
+  const root = document.getElementById('vehicle-detail');
+  if (!root) return;
+
+  function movePill(){
+    const imgCard = root.querySelector('.image-card');
+    const pill = root.querySelector('.price-stack .pill');
+    if (imgCard && pill){
+      let badge = root.querySelector('.energy-badge');
+      if (!badge){
+        badge = document.createElement('div');
+        badge.className = 'energy-badge';
+        imgCard.appendChild(badge);
+      }
+      badge.appendChild(pill); // on déplace l'élément existant
+      return true;
+    }
+    return false;
+  }
+
+  // Essaye tout de suite, sinon observe jusqu'à ce que la fiche soit rendue
+  if (!movePill()){
+    const obs = new MutationObserver(() => { if (movePill()) obs.disconnect(); });
+    obs.observe(root, { childList: true, subtree: true });
+  }
+})();
+</script>
 </body>
 </html>
