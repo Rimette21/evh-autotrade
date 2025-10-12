@@ -172,6 +172,7 @@
     function quickSpecsHTML(v){
       const reg=cleanReg(v.regyear);
       const cc=engineCc(v);// Ruban 5 infos sous l’image – version horizontale premium
+// Ruban 5 infos sous l’image – version horizontale identique à l’image 2
 function quickSpecsHTML(v){
   const reg = cleanReg(v.regyear);
   const cc = engineCc(v);
@@ -181,20 +182,20 @@ function quickSpecsHTML(v){
   return `
     <div class="quick-specs">
       <div class="qs-col">
-        <span class="qs-label">Immat.</span>
+        <span class="qs-label">Reg. Year</span>
         <span class="qs-value">${reg}</span>
       </div>
       <div class="qs-col">
-        <span class="qs-label">Moteur (cc)</span>
+        <span class="qs-label">Engine(cc)</span>
         <span class="qs-value">${cc}</span>
       </div>
       <div class="qs-col">
-        <span class="qs-label">Km</span>
+        <span class="qs-label">Mlg(km)</span>
         <span class="qs-value">${km}</span>
       </div>
       <div class="qs-col">
         <span class="qs-label">Fuel</span>
-        <span class="qs-value">${fuel}</span>
+        <span class="qs-value" style="color: #00aa00; font-weight: 700;">${fuel}</span>
       </div>
       <div class="qs-col">
         <span class="qs-label">Transm.</span>
