@@ -123,85 +123,84 @@
     </div>
   </section>
 
-  <!-- ===== Helpers (quick-specs + puces fixes) ===== -->
-  <script>
-    // Détermine l’énergie : PHEV si on détecte un hybride rechargeable, sinon BEV
-    function energyFrom(v){
-      const hay = [v.name, ...(v.features||[])].join(' ').toLowerCase();
-      if (/(phev|hybride\s*rechargeable|dm-i|plug[- ]?in)/i.test(hay)) return 'PHEV';
-      if (/\bbev\b|100%\s*électrique|fully electric/i.test(hay)) return 'BEV';
-      return 'BEV';
+ <!-- ===== Helpers (quick-specs + puces fixes) ===== -->
+<script>
+  // Détermine l’énergie : PHEV si on détecte un hybride rechargeable, sinon BEV
+  function energyFrom(v){
+    const hay = [v.name, ...(v.features||[])].join(' ').toLowerCase();
+    if (/(phev|hybride\s*rechargeable|dm-i|plug[- ]?in)/i.test(hay)) return 'PHEV';
+    if (/\bbev\b|100%\s*électrique|fully electric/i.test(hay)) return 'BEV';
+    return 'BEV';
+  }
+  // Format immat YYYY-MM
+  function cleanReg(y){
+    if(!y) return '—';
+    const p=String(y).split('-');
+    return p.length===2?`${p[0]}-${p[1]}`:p[0];
+  }
+  // Cylindrée depuis specs
+  function engineCc(v){
+    const s=v.specifications||{};
+    return s.engineCc||s.enginecc||s.EngineCC||s.cylindree||'—';
+  }
+  // Sigle court transmission
+  function transmissionShort(v){
+    const t = (v.specifications && v.specifications.transmission) ? String(v.specifications.transmission) : '';
+    const m =
+      t.match(/\b(2?DHT)\b/i) ||
+      t.match(/\bE[-\s]?CVT\b/i) ||
+      t.match(/\bDCT\b/i) ||
+      t.match(/\bAT\b/i) ||
+      t.match(/\bMT\b/i) ||
+      t.match(/\bSingle[-\s]?speed\b/i);
+    return m ? m[0].toUpperCase().replace(/\s+/g,'-') : null;
+  }
+  // "Autonomie 110 km" à partir de specs → features → name
+  function autonomyLabel(v){
+    const s = v.specifications || {};
+    const candidates = [s.autonomieWLTP, s.autonomieCLTC, s.autonomieEPA, s.autonomieElectrique];
+    for (const c of candidates){
+      if (!c) continue;
+      const m = String(c).match(/(\d{2,4})\s*km/i);
+      if (m) return `Autonomie ${m[1]} km`;
     }
-    // Format immat YYYY-MM
-    function cleanReg(y){
-      if(!y) return '—';
-      const p=String(y).split('-');
-      return p.length===2?`${p[0]}-${p[1]}`:p[0];
-    }
-    // Cylindrée depuis specs
-    function engineCc(v){
-      const s=v.specifications||{};
-      return s.engineCc||s.enginecc||s.EngineCC||s.cylindree||'—';
-    }
-    // Sigle court transmission
-    function transmissionShort(v){
-      const t = (v.specifications && v.specifications.transmission) ? String(v.specifications.transmission) : '';
-      const m =
-        t.match(/\b(2?DHT)\b/i) ||
-        t.match(/\bE[-\s]?CVT\b/i) ||
-        t.match(/\bDCT\b/i) ||
-        t.match(/\bAT\b/i) ||
-        t.match(/\bMT\b/i) ||
-        t.match(/\bSingle[-\s]?speed\b/i);
-      return m ? m[0].toUpperCase().replace(/\s+/g,'-') : null;
-    }
-    // "Autonomie 110 km" à partir de specs → features → name
-    function autonomyLabel(v){
-      const s = v.specifications || {};
-      const candidates = [s.autonomieWLTP, s.autonomieCLTC, s.autonomieEPA, s.autonomieElectrique];
-      for (const c of candidates){
-        if (!c) continue;
-        const m = String(c).match(/(\d{2,4})\s*km/i);
-        if (m) return `Autonomie ${m[1]} km`;
-      }
-      const pool = [v.name, ...(v.features||[])].join(' | ');
-      const m = pool.match(/(\d{2,4})\s*km/i);
-      return m ? `Autonomie ${m[1]} km` : 'Autonomie —';
-    }
-    // Ruban 5 infos sous l’image
-    function quickSpecsHTML(v){
-      const reg=cleanReg(v.regyear);
-      const cc=engineCc(v);// Ruban 5 infos sous l’image – version horizontale premium
-// Ruban 5 infos sous l’image – version horizontale identique à l’image 2
-function quickSpecsHTML(v){
-  const reg = cleanReg(v.regyear);
-  const cc = engineCc(v);
-  const km = (v.mileage != null) ? new Intl.NumberFormat('fr-FR').format(v.mileage) : '—';
-  const fuel = energyFrom(v);
-  const tr = transmissionShort(v) || '—';
-  return `
-    <div class="quick-specs">
-      <div class="qs-col">
-        <span class="qs-label">Reg. Year</span>
-        <span class="qs-value">${reg}</span>
-      </div>
-      <div class="qs-col">
-        <span class="qs-label">Engine(cc)</span>
-        <span class="qs-value">${cc}</span>
-      </div>
-      <div class="qs-col">
-        <span class="qs-label">Mlg(km)</span>
-        <span class="qs-value">${km}</span>
-      </div>
-      <div class="qs-col">
-        <span class="qs-label">Fuel</span>
-        <span class="qs-value" style="color: #00aa00; font-weight: 700;">${fuel}</span>
-      </div>
-      <div class="qs-col">
-        <span class="qs-label">Transm.</span>
-        <span class="qs-value">${tr}</span>
-      </div>
-    </div>`;
+    const pool = [v.name, ...(v.features||[])].join(' | ');
+    const m = pool.match(/(\d{2,4})\s*km/i);
+    return m ? `Autonomie ${m[1]} km` : 'Autonomie —';
+  }
+
+  // Ruban 5 infos sous l’image – version horizontale identique à la page 2
+  function quickSpecsHTML(v){
+    const reg = cleanReg(v.regyear);
+    const cc = engineCc(v);
+    const km = (v.mileage != null) ? new Intl.NumberFormat('fr-FR').format(v.mileage) : '—';
+    const fuel = energyFrom(v);
+    const tr = transmissionShort(v) || '—';
+    return `
+      <div class="quick-specs">
+        <div class="qs-col">
+          <span class="qs-label">Reg. Year</span>
+          <span class="qs-value">${reg}</span>
+        </div>
+        <div class="qs-col">
+          <span class="qs-label">Engine(cc)</span>
+          <span class="qs-value">${cc}</span>
+        </div>
+        <div class="qs-col">
+          <span class="qs-label">Mlg(km)</span>
+          <span class="qs-value">${km}</span>
+        </div>
+        <div class="qs-col">
+          <span class="qs-label">Fuel</span>
+          <span class="qs-value" style="color: #00aa00; font-weight: 700;">${fuel}</span>
+        </div>
+        <div class="qs-col">
+          <span class="qs-label">Transm.</span>
+          <span class="qs-value">${tr}</span>
+        </div>
+      </div>`;
+  }
+</script>
 }
       const km=(v.mileage!=null)?new Intl.NumberFormat('fr-FR').format(v.mileage):'—';
       const fuel=energyFrom(v);
