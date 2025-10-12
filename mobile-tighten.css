@@ -417,6 +417,28 @@
     height: 86px;                  /* très léger - */
   }
 }
+   @media (max-width: 680px) {
+  .quick-specs {
+    padding: 8px 10px;
+    font-size: 11px;
+    gap: 6px;
+  }
+  .qs-label {
+    font-size: 9px;
+  }
+  .qs-value {
+    font-size: 12px;
+  }
+  /* Sur très petit écran, réduire les labels */
+  @media (max-width: 480px) {
+    .qs-label {
+      font-size: 8px;
+    }
+    .qs-value {
+      font-size: 11px;
+    }
+  }
+}
 
 
 
