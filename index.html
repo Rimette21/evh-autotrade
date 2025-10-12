@@ -3,21 +3,123 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>E.V.H. AUTOTRADE</title>
-
-  <!-- Précharge bannière -->
-  <link rel="preload" as="image"
-        href="images/Dubai_car.webp"
-        imagesrcset="images/Dubai_car.webp 1x, images/Dubai_car@2x.webp 2x"
-        imagesizes="100vw">
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="styles.css?v=16">
+  <title>Détail véhicule — E.V.H. AUTOTRADE</title>
+  <link rel="stylesheet" href="styles.css?v=17">
   <link rel="stylesheet" href="mobile-tighten.css">
+  <style>
+    /* Styles spécifiques à la page détail */
+    .vehicle-header {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      padding: 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .gallery { flex: 1; min-width: 300px; }
+    .gallery img.hero { width: 100%; border-radius: 8px; }
+    .gallery .thumbs {
+      display: flex;
+      gap: 8px;
+      margin-top: 12px;
+      flex-wrap: wrap;
+    }
+    .gallery .thumbs img {
+      width: 80px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 4px;
+      cursor: pointer;
+      border: 2px solid #eee;
+    }
+    .gallery .thumbs img:hover,
+    .gallery .thumbs img.active {
+      border-color: #ff0000;
+    }
+    .info { flex: 1; min-width: 300px; }
+    .info h1 { margin-top: 0; font-size: 1.6rem; }
+    .info .price { font-size: 1.4rem; color: #d32f2f; font-weight: 700; margin: 12px 0; }
+    .info .ref { color: #666; font-size: 0.95rem; }
+
+    /* Bandeau horizontal — identique à la page catalogue */
+    .quick-specs {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #f9f9f9;
+      padding: 10px 12px;
+      border-radius: 6px;
+      margin: 16px 0;
+      font-size: 12px;
+      gap: 8px;
+    }
+    .qs-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      flex: 1;
+      min-width: 0;
+    }
+    .qs-label {
+      font-size: 10px;
+      color: #777;
+      font-weight: 500;
+      margin-bottom: 2px;
+      letter-spacing: 0.4px;
+    }
+    .qs-value {
+      font-size: 13px;
+      font-weight: 700;
+      color: #000;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .qs-col:nth-child(4) .qs-value {
+      color: #00aa00;
+    }
+
+    /* Spécifications techniques */
+    .specs-section {
+      background: #f9f9f9;
+      padding: 24px;
+      border-radius: 8px;
+      margin: 24px 0;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .specs-section h3 {
+      font-size: 1.3rem;
+      margin-bottom: 16px;
+      color: #333;
+    }
+    .spec-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+    .spec-table td {
+      padding: 10px 12px;
+      border-bottom: 1px solid #eee;
+      vertical-align: top;
+    }
+    .spec-table td:first-child {
+      font-weight: 600;
+      width: 40%;
+      color: #555;
+    }
+    @media (max-width: 768px) {
+      .vehicle-header { padding: 16px; }
+      .spec-table { font-size: 13px; }
+      .spec-table td:first-child { width: 45%; }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- HEADER (burger CSS-only) -->
+  <!-- HEADER -->
   <header>
     <div class="header-inner">
       <div class="logo-wrap">
@@ -29,23 +131,19 @@
           <span class="autotrade">AUTOTRADE</span>
         </div>
       </div>
-
       <nav class="nav" aria-label="Navigation principale">
         <ul>
           <li><a href="index.html">Accueil</a></li>
-          <li><a href="#catalogue">Catalogue</a></li>
-          <li><a href="#avantages">Avantages</a></li>
+          <li><a href="index.html#catalogue">Catalogue</a></li>
+          <li><a href="index.html#avantages">Avantages</a></li>
           <li><a href="#">À propos</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
       </nav>
-
-      <!-- Checkbox + bouton burger -->
       <input type="checkbox" id="nav-toggle" aria-hidden="true" />
       <label class="nav-btn" for="nav-toggle" aria-label="Ouvrir le menu">
         <span class="bar"></span>
       </label>
-
       <label for="nav-toggle" class="nav-overlay" aria-hidden="true"></label>
       <aside class="nav-drawer" role="dialog" aria-modal="true" aria-label="Menu mobile">
         <div class="drawer-head">
@@ -56,225 +154,47 @@
           <nav class="drawer-nav">
             <ul>
               <li><a href="index.html">Accueil</a></li>
-              <li><a href="#catalogue">Catalogue</a></li>
-              <li><a href="#avantages">Avantages</a></li>
+              <li><a href="index.html#catalogue">Catalogue</a></li>
+              <li><a href="index.html#avantages">Avantages</a></li>
               <li><a href="#">À propos</a></li>
               <li><a href="#">Contact</a></li>
             </ul>
           </nav>
         </div>
       </aside>
-      <!-- fin des éléments qui doivent rester dans .header-inner -->
     </div>
   </header>
 
-  <!-- HÉRO -->
-  <section class="hero-static">
-    <picture class="hero-bg">
-      <source media="(max-width: 680px)" srcset="images/Dubai_car_mobile.webp" type="image/webp">
-      <source srcset="images/Dubai_car.webp" type="image/webp">
-      <img src="images/Dubai_car.jpg" alt="EVH Autotrade – Importation de SUV électriques et hybrides" fetchpriority="high">
-    </picture>
-    <div class="bg-overlay"></div>
-    <div class="hero-cta">
-      <a href="#catalogue" class="btn">Découvrez notre catalogue</a>
-    </div>
-  </section>
-
-  <!-- AVANTAGES -->
-  <section id="avantages" class="advantages-lovable">
-    <div class="adv2-head">
-      <h2 class="adv2-title">Nos <span class="gradient-text accent">Avantages</span></h2>
-      <p class="adv2-sub">Découvrez pourquoi EVH AUTO TRADE est votre partenaire de confiance pour l'acquisition de SUV hybrides et électriques.</p>
-    </div>
-    <div class="adv2-grid">
-      <article class="adv2-card">
-        <div class="inner">
-          <div class="adv2-badge">✅</div>
-          <div class="adv2-title-sm">Importation directe</div>
-          <p class="adv2-desc">Prix réduits grâce à notre réseau d'importation directe sans intermédiaires.</p>
-        </div>
-      </article>
-      <article class="adv2-card">
-        <div class="inner">
-          <div class="adv2-badge">🛡️</div>
-          <div class="adv2-title-sm">SUV neufs ou quasi-neufs</div>
-          <p class="adv2-desc">SUV récents, couverts par une garantie importateur de 2 ans.</p>
-        </div>
-      </article>
-      <article class="adv2-card">
-        <div class="inner">
-          <div class="adv2-badge">🚚</div>
-          <div class="adv2-title-sm">Transport inclus au port</div>
-          <p class="adv2-desc">Acheminement estimé sous 45 jours. Assistance aux formalités de dédouanement (droits & taxes non inclus).</p>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <!-- CATALOGUE -->
-  <section id="catalogue" class="section--light">
-    <div class="container">
-      <h2 class="section-title">Notre <span class="accent">Catalogue</span></h2>
+  <!-- CONTENU PRINCIPAL -->
+  <main class="vehicle-header">
+    <div class="gallery">
+      <img id="main-img" class="hero" src="" alt="">
+      <div class="thumbs" id="thumb-container"></div>
     </div>
 
-    <div id="vehicles-grid" class="grid">
-      <p>Chargement du catalogue…</p>
+    <div class="info">
+      <h1 id="vehicle-name">Chargement…</h1>
+      <div class="ref">Réf : <span id="vehicle-id"></span></div>
+      <div class="price" id="vehicle-price">—</div>
+
+      <!-- Bandeau horizontal — identique à la page catalogue -->
+      <div id="quick-specs"></div>
+
+      <p id="vehicle-availability" style="margin-top: 16px; color: #555; font-size: 0.95rem;"></p>
+
+      <a href="https://wa.me/33650447400" target="_blank" rel="noopener" class="btn" style="display: inline-block; margin-top: 20px;">
+        Contacter sur WhatsApp
+      </a>
     </div>
-  </section>
+  </main>
 
-  <!-- ===== Helpers (quick-specs + puces fixes) ===== -->
-  <script>
-    // Détermine l’énergie : PHEV si on détecte un hybride rechargeable, sinon BEV
-    function energyFrom(v){
-      const hay = [v.name, ...(v.features||[])].join(' ').toLowerCase();
-      if (/(phev|hybride\s*rechargeable|dm-i|plug[- ]?in)/i.test(hay)) return 'PHEV';
-      if (/\bbev\b|100%\s*électrique|fully electric/i.test(hay)) return 'BEV';
-      return 'BEV';
-    }
-    // Format immat YYYY-MM
-    function cleanReg(y){
-      if(!y) return '—';
-      const p=String(y).split('-');
-      return p.length===2?`${p[0]}-${p[1]}`:p[0];
-    }
-    // Cylindrée depuis specs
-    function engineCc(v){
-      const s=v.specifications||{};
-      return s.engineCc||s.enginecc||s.EngineCC||s.cylindree||'—';
-    }
-    // Sigle court transmission
-    function transmissionShort(v){
-      const t = (v.specifications && v.specifications.transmission) ? String(v.specifications.transmission) : '';
-      const m =
-        t.match(/\b(2?DHT)\b/i) ||
-        t.match(/\bE[-\s]?CVT\b/i) ||
-        t.match(/\bDCT\b/i) ||
-        t.match(/\bAT\b/i) ||
-        t.match(/\bMT\b/i) ||
-        t.match(/\bSingle[-\s]?speed\b/i);
-      return m ? m[0].toUpperCase().replace(/\s+/g,'-') : null;
-    }
-    // "Autonomie 110 km" à partir de specs → features → name
-    function autonomyLabel(v){
-      const s = v.specifications || {};
-      const candidates = [s.autonomieWLTP, s.autonomieCLTC, s.autonomieEPA, s.autonomieElectrique];
-      for (const c of candidates){
-        if (!c) continue;
-        const m = String(c).match(/(\d{2,4})\s*km/i);
-        if (m) return `Autonomie ${m[1]} km`;
-      }
-      const pool = [v.name, ...(v.features||[])].join(' | ');
-      const m = pool.match(/(\d{2,4})\s*km/i);
-      return m ? `Autonomie ${m[1]} km` : 'Autonomie —';
-    }
-    // Ruban 5 infos sous l’image
-    function quickSpecsHTML(v){
-      const reg=cleanReg(v.regyear);
-      const cc=engineCc(v);// Ruban 5 infos sous l’image – version horizontale premium
-// Ruban 5 infos sous l’image – version horizontale identique à l’image 2
-function quickSpecsHTML(v){
-  const reg = cleanReg(v.regyear);
-  const cc = engineCc(v);
-  const km = (v.mileage != null) ? new Intl.NumberFormat('fr-FR').format(v.mileage) : '—';
-  const fuel = energyFrom(v);
-  const tr = transmissionShort(v) || '—';
-  return `
-    <div class="quick-specs">
-      <div class="qs-col">
-        <span class="qs-label">Reg. Year</span>
-        <span class="qs-value">${reg}</span>
-      </div>
-      <div class="qs-col">
-        <span class="qs-label">Engine(cc)</span>
-        <span class="qs-value">${cc}</span>
-      </div>
-      <div class="qs-col">
-        <span class="qs-label">Mlg(km)</span>
-        <span class="qs-value">${km}</span>
-      </div>
-      <div class="qs-col">
-        <span class="qs-label">Fuel</span>
-        <span class="qs-value" style="color: #00aa00; font-weight: 700;">${fuel}</span>
-      </div>
-      <div class="qs-col">
-        <span class="qs-label">Transm.</span>
-        <span class="qs-value">${tr}</span>
-      </div>
-    </div>`;
-}
-      const km=(v.mileage!=null)?new Intl.NumberFormat('fr-FR').format(v.mileage):'—';
-      const fuel=energyFrom(v);
-      const tr=transmissionShort(v) || '—';
-      return `
-        <div class="quick-specs">
-          <div class="qs"><span class="qs-k">Immat.</span><span class="qs-v">${reg}</span></div>
-          <div class="qs"><span class="qs-k">Moteur (cc)</span><span class="qs-v">${cc}</span></div>
-          <div class="qs"><span class="qs-k">Km</span><span class="qs-v">${km}</span></div>
-          <div class="qs"><span class="qs-k">Fuel</span><span class="qs-v">${fuel}</span></div>
-          <div class="qs"><span class="qs-k">Transm.</span><span class="qs-v">${tr}</span></div>
-        </div>`;
-    }
-  </script>
-
-  <!-- ===== Catalogue : génération des cartes ===== -->
-  <script>
-    fetch('data/hero.json?v=12', { cache: 'no-store' })
-      .then(res => res.json())
-      .then(vehicles => {
-        const grid = document.getElementById('vehicles-grid');
-        if (!Array.isArray(vehicles) || vehicles.length === 0) {
-          grid.innerHTML = '<p>Aucun véhicule disponible pour le moment.</p>';
-          return;
-        }
-
-        grid.innerHTML = vehicles.map(v => {
-          const energy = energyFrom(v);                  // "PHEV" ou "BEV"
-          const autoLbl = autonomyLabel(v);              // "Autonomie 110 km"
-          const trShort = transmissionShort(v) || '—';   // "DHT", "E-CVT", "DCT", …
-
-          // 5 puces fixes selon l’énergie
-          const bullets = (energy === 'PHEV')
-            ? [
-                'Hybride rechargeable (PHEV)',
-                autoLbl,
-                `Transmission auto ${trShort}`,
-                'Caméra 360°',
-                'Toit panoramique'
-              ]
-            : [
-                '100% électrique (BEV)',
-                autoLbl,
-                `Transmission auto ${trShort}`,
-                'Caméra 360°',
-                'Toit panoramique'
-              ];
-
-          const featuresHTML = bullets.map(txt => `<li>• ${txt}</li>`).join('');
-
-          return `
-            <a class="card-link" href="vehicle.html?id=${encodeURIComponent(v.id)}">
-              <article class="card">
-                <img class="thumb" src="${v.images?.hero || ''}" alt="${v.name}"
-                     onerror="this.src='https://via.placeholder.com/400x300?text=Image+non+disponible'">
-                ${quickSpecsHTML(v)}
-                <div class="body">
-                  <div class="name">${v.name}</div>
-                  <div class="submeta">Réf : <strong>${v.id}</strong></div>
-                  <div class="price">Prix FCR (HT) : ${v.priceFCR || '-'}</div>
-                  <!-- ligne Km/Immat supprimée car incluse dans quick-specs -->
-                  <ul class="features">${featuresHTML}</ul>
-                </div>
-              </article>
-            </a>`;
-        }).join('');
-      })
-      .catch(err => {
-        console.error(err);
-        document.getElementById('vehicles-grid').innerHTML =
-          '<p style="color:red;">Erreur : impossible de charger le catalogue.</p>';
-      });
-  </script>
+  <!-- Spécifications techniques (sans duplication des équipements) -->
+  <div class="specs-section">
+    <h3>Spécifications techniques détaillées</h3>
+    <table class="spec-table" id="tech-specs-table">
+      <!-- Rempli dynamiquement -->
+    </table>
+  </div>
 
   <!-- FOOTER -->
   <footer class="site-footer">
@@ -321,6 +241,146 @@ function quickSpecsHTML(v){
 
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Fonctions utilitaires (copiées depuis index.html)
+    function energyFrom(v){
+      const hay = [v.name, ...(v.features||[])].join(' ').toLowerCase();
+      if (/(phev|hybride\s*rechargeable|dm-i|plug[- ]?in)/i.test(hay)) return 'PHEV';
+      if (/\bbev\b|100%\s*électrique|fully electric/i.test(hay)) return 'BEV';
+      return 'BEV';
+    }
+    function cleanReg(y){
+      if(!y) return '—';
+      const p=String(y).split('-');
+      return p.length===2?`${p[0]}-${p[1]}`:p[0];
+    }
+    function engineCc(v){
+      const s=v.specifications||{};
+      return s.engineCc||s.enginecc||s.EngineCC||s.cylindree||'—';
+    }
+    function transmissionShort(v){
+      const t = (v.specifications && v.specifications.transmission) ? String(v.specifications.transmission) : '';
+      const m =
+        t.match(/\b(2?DHT)\b/i) ||
+        t.match(/\bE[-\s]?CVT\b/i) ||
+        t.match(/\bDCT\b/i) ||
+        t.match(/\bAT\b/i) ||
+        t.match(/\bMT\b/i) ||
+        t.match(/\bSingle[-\s]?speed\b/i);
+      return m ? m[0].toUpperCase().replace(/\s+/g,'-') : null;
+    }
+
+    // Génère le bandeau horizontal
+    function renderQuickSpecs(v){
+      const reg = cleanReg(v.regyear);
+      const cc = engineCc(v);
+      const km = (v.mileage != null) ? new Intl.NumberFormat('fr-FR').format(v.mileage) : '—';
+      const fuel = energyFrom(v);
+      const tr = transmissionShort(v) || '—';
+      return `
+        <div class="quick-specs">
+          <div class="qs-col">
+            <span class="qs-label">Reg. Year</span>
+            <span class="qs-value">${reg}</span>
+          </div>
+          <div class="qs-col">
+            <span class="qs-label">Engine(cc)</span>
+            <span class="qs-value">${cc}</span>
+          </div>
+          <div class="qs-col">
+            <span class="qs-label">Mlg(km)</span>
+            <span class="qs-value">${km}</span>
+          </div>
+          <div class="qs-col">
+            <span class="qs-label">Fuel</span>
+            <span class="qs-value" style="color: #00aa00; font-weight: 700;">${fuel}</span>
+          </div>
+          <div class="qs-col">
+            <span class="qs-label">Transm.</span>
+            <span class="qs-value">${tr}</span>
+          </div>
+        </div>`;
+    }
+
+    // Génère le tableau des specs techniques
+    function renderTechSpecs(specs){
+      const rows = [];
+      const add = (label, value) => {
+        if (value && value !== '—' && value !== '') {
+          rows.push(`<tr><td>${label}</td><td>${value}</td></tr>`);
+        }
+      };
+
+      const s = specs;
+      add("Moteur", s.moteur);
+      add("Puissance système", s.puissanceSysteme);
+      add("Puissance thermique", s.puissanceThermique);
+      add("Puissance électrique", s.puissanceElectrique);
+      add("Couple combiné", s.coupleSysteme);
+      add("Transmission", s.transmission);
+      add("Traction", s.traction);
+      add("Autonomie électrique", s.autonomieCLTC ? `${s.autonomieCLTC} km (CLTC)` : s.autonomieWLTP ? `${s.autonomieWLTP} km (WLTP)` : null);
+      add("Batterie", s.batterieKWh ? `${s.batterieKWh} kWh` : null);
+      add("Recharge AC", s.rechargeACkW ? `${s.rechargeACkW} kW` : null);
+      add("Recharge DC", s.rechargeDCkW ? `${s.rechargeDCkW} kW` : null);
+      add("Places", s.places);
+      add("Volume coffre", s.volumeCoffre);
+      if (s.dimensions) {
+        const d = s.dimensions;
+        add("Dimensions (L×l×H)", `${d.longueur} × ${d.largeur} × ${d.hauteur}`);
+      }
+      add("Pneus", s.pneus);
+
+      return rows.join('');
+    }
+
+    // Chargement du véhicule
+    const urlParams = new URLSearchParams(window.location.search);
+    const vehicleId = urlParams.get('id');
+
+    if (!vehicleId) {
+      document.getElementById('vehicle-name').textContent = 'Véhicule non spécifié';
+    } else {
+      fetch(`data/${vehicleId}.json?v=${Date.now()}`, { cache: 'no-store' })
+        .then(res => res.json())
+        .then(v => {
+          document.getElementById('vehicle-name').textContent = v.name;
+          document.getElementById('vehicle-id').textContent = v.id;
+          document.getElementById('vehicle-price').textContent = v.priceFCR || '—';
+          document.getElementById('vehicle-availability').textContent = v.disponibilite || '';
+
+          // Image principale
+          const mainImg = document.getElementById('main-img');
+          mainImg.src = v.images?.hero || 'https://via.placeholder.com/600x400?text=Image+non+disponible';
+          mainImg.alt = v.name;
+
+          // Miniatures
+          const thumbContainer = document.getElementById('thumb-container');
+          thumbContainer.innerHTML = (v.images?.gallery || []).map(src => 
+            `<img src="${src}" alt="">`
+          ).join('');
+
+          // Ajout interaction miniatures
+          thumbContainer.querySelectorAll('img').forEach(img => {
+            img.addEventListener('click', () => {
+              mainImg.src = img.src;
+              thumbContainer.querySelectorAll('img').forEach(i => i.classList.remove('active'));
+              img.classList.add('active');
+            });
+          });
+          if (thumbContainer.children[0]) thumbContainer.children[0].classList.add('active');
+
+          // Bandeau specs
+          document.getElementById('quick-specs').innerHTML = renderQuickSpecs(v);
+
+          // Tableau technique
+          document.getElementById('tech-specs-table').innerHTML = renderTechSpecs(v.specifications || {});
+        })
+        .catch(err => {
+          console.error(err);
+          document.getElementById('vehicle-name').textContent = 'Erreur : véhicule non trouvé';
+        });
+    }
   </script>
 </body>
 </html>
