@@ -171,7 +171,37 @@
     // Ruban 5 infos sous l’image
     function quickSpecsHTML(v){
       const reg=cleanReg(v.regyear);
-      const cc=engineCc(v);
+      const cc=engineCc(v);// Ruban 5 infos sous l’image – version horizontale premium
+function quickSpecsHTML(v){
+  const reg = cleanReg(v.regyear);
+  const cc = engineCc(v);
+  const km = (v.mileage != null) ? new Intl.NumberFormat('fr-FR').format(v.mileage) : '—';
+  const fuel = energyFrom(v);
+  const tr = transmissionShort(v) || '—';
+  return `
+    <div class="quick-specs">
+      <div class="qs-col">
+        <span class="qs-label">Immat.</span>
+        <span class="qs-value">${reg}</span>
+      </div>
+      <div class="qs-col">
+        <span class="qs-label">Moteur (cc)</span>
+        <span class="qs-value">${cc}</span>
+      </div>
+      <div class="qs-col">
+        <span class="qs-label">Km</span>
+        <span class="qs-value">${km}</span>
+      </div>
+      <div class="qs-col">
+        <span class="qs-label">Fuel</span>
+        <span class="qs-value">${fuel}</span>
+      </div>
+      <div class="qs-col">
+        <span class="qs-label">Transm.</span>
+        <span class="qs-value">${tr}</span>
+      </div>
+    </div>`;
+}
       const km=(v.mileage!=null)?new Intl.NumberFormat('fr-FR').format(v.mileage):'—';
       const fuel=energyFrom(v);
       const tr=transmissionShort(v) || '—';
