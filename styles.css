@@ -577,3 +577,43 @@ body.page-vehicle{ overflow-x:hidden; }
   color: #00aa00;
   font-weight: 700;
 }
+/* Nouveau format horizontal pour les specs sous l’image */
+.quick-specs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9f9f9;
+  padding: 10px 12px;
+  border-radius: 6px;
+  margin: 12px 0;
+  font-size: 12px;
+  gap: 8px;
+}
+
+.qs-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+  min-width: 0;
+}
+
+.qs-label {
+  font-size: 10px;
+  color: #777;
+  font-weight: 500;
+  margin-bottom: 2px;
+  letter-spacing: 0.4px;
+}
+
+.qs-value {
+  font-size: 13px;
+  font-weight: 700; /* plus gras */
+  color: #000;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Fuel en vert — déjà défini dans le HTML avec style="color: #00aa00" */
