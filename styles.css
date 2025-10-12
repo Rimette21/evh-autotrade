@@ -177,16 +177,43 @@ header{
   filter:contrast(1.07) brightness(1.07) saturate(1.05);
   transform:translateZ(0); image-rendering:auto; backface-visibility:hidden; will-change:transform;
 }
-.hero-cta{ position:absolute; left:6%; bottom:28px; z-index:3; }
-.hero-cta .btn{
-  box-shadow:0 8px 20px rgba(229,62,62,.25); padding:.9rem 1.5rem; font-weight:800; border-radius:999px;
+.hero-cta {
+  position: absolute;
+  left: 6%;
+  bottom: 60px; /* ↑ descendu de 28px à 60px */
+  z-index: 3;
 }
-.hero-cta .btn:hover{ filter:brightness(.95); transform:translateY(-1px); }
 
-@media (max-width:680px){
-  .hero-static{height:380px}
-  .hero-cta{ left:5%; bottom:18px }
-  .hero-cta .btn{ padding:.8rem 1.2rem; font-size:.95rem }
+.hero-cta .btn {
+  box-shadow: 0 6px 16px rgba(229, 62, 62, 0.2); /* ombre un peu plus discrète */
+  padding: 0.7rem 1.3rem; /* ↓ réduit (avant : 0.9rem 1.5rem) */
+  font-size: 14px; /* ajout explicite pour contrôle */
+  font-weight: 700; /* un peu moins lourd que 800 → plus élégant */
+  border-radius: 999px;
+  background-color: #ff0000; /* assurez-vous que la couleur est bien définie */
+  color: white;
+  text-decoration: none;
+}
+
+.hero-cta .btn:hover {
+  filter: brightness(0.95);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 680px) {
+  .hero-static {
+    height: 380px;
+  }
+  .hero-cta {
+    left: 5%;
+    bottom: 50px;
+  }
+  .hero-cta .btn {
+    padding: 0.65rem 1.1rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    box-shadow: 0 5px 12px rgba(229, 62, 62, 0.18);
+  }
 }
 
 .section--light{background:#F9FBFF;padding:3rem 0}
