@@ -1,5 +1,5 @@
 [
-   {
+  {
     "id": "EVH9384241",
     "name": "2023 Haval H6 1.5T DCT 2WD",
     "priceFCR": "21 600 €",
@@ -15,7 +15,10 @@
       "Caméra 360°",
       "Radar de stationnement"
     ],
-    "featuresCount": 4
+    "specifications": {
+      "engineCc": 1499,
+      "transmission": "DHT"
+    }
   },
   {
     "id": "EVHBSPPHEV_75KM",
@@ -34,7 +37,10 @@
       "Caméra 360°",
       "Régulateur de vitesse adaptatif (L2)"
     ],
-    "featuresCount": 4
+    "specifications": {
+      "engineCc": 1497,
+      "transmission": "E-CVT"
+    }
   },
   {
     "id": "EVHBSPPHEV_112KM",
@@ -53,7 +59,10 @@
       "Camera 360°",
       "Régulateur de vitesse adaptatif"
     ],
-    "featuresCount": 4
+    "specifications": {
+      "engineCc": 1497,
+      "transmission": "E-CVT"
+    }
   },
   {
     "id": "EVH9382121",
@@ -74,7 +83,10 @@
       "Sièges chauffants et ventilés",
       "Plus Airbags Genoux"
     ],
-    "featuresCount": 4
+    "specifications": {
+      "engineCc": null,
+      "transmission": "AT"
+    }
   },
   {
     "id": "EVHBSPPHEV_160KM",
@@ -93,7 +105,10 @@
       "Caméra 360°",
       "Régulateur de vitesse adaptatif (ACC)"
     ],
-    "featuresCount": 4
+    "specifications": {
+      "engineCc": 1497,
+      "transmission": "E-CVT"
+    }
   },
   {
     "id": "EVH9403325",
@@ -113,7 +128,10 @@
       "Régulateur de vitesse adaptatif",
       "Sièges chauffants et ventilés"
     ],
-    "featuresCount": 4
+    "specifications": {
+      "engineCc": 1498,
+      "transmission": "DHT"
+    }
   },
   {
     "id": "EVH9391855",
@@ -133,7 +151,10 @@
       "Régulateur de vitesse adaptatif",
       "Sièges chauffants et ventilés"
     ],
-    "featuresCount": 4
+    "specifications": {
+      "engineCc": 1499,
+      "transmission": "DHT"
+    }
   },
   {
     "id": "EVH9433858",
@@ -152,7 +173,11 @@
       "Caméra 360° / hayon électrique",
       "Toit panoramique",
       "Aides L2 (ACC, maintien de voie)"
-    ]
+    ],
+    "specifications": {
+      "engineCc": 1499,
+      "transmission": "DHT"
+    }
   },
   {
     "id": "EVH9404921",
@@ -171,7 +196,10 @@
       "Caméra 360°",
       "Régulateur de vitesse adaptatif (ACC)"
     ],
-    "featuresCount": 4
+    "specifications": {
+      "engineCc": 1498,
+      "transmission": "E-CVT"
+    }
   },
   {
     "id": "EVH9336933",
@@ -190,7 +218,10 @@
       "Toit ouvrant",
       "Régulateur de vitesse adaptatif"
     ],
-    "featuresCount": 4
+    "specifications": {
+      "engineCc": 1498,
+      "transmission": "DHT"
+    }
   },
   {
     "id": "EVH9403367",
@@ -209,7 +240,11 @@
       "Caméra 360° / hayon électrique",
       "Toit panoramique",
       "Aides L2 (ACC, maintien de voie)"
-    ]
+    ],
+    "specifications": {
+      "engineCc": 1499,
+      "transmission": "DHT"
+    }
   },
   {
     "id": "EVH9478503",
@@ -217,7 +252,7 @@
     "priceFCR": "23 250 €",
     "mileage": 21000,
     "regyear": "2024-04",
-    "featuresCount": 4,
+    "featuresCount": 5,
     "images": {
       "hero": "images/EVH9478503_DEV_DROITE.png"
     },
@@ -228,7 +263,11 @@
       "Transmission E-CVT",
       "Caméra 360°",
       "Régulateur de vitesse adaptatif (ACC)"
-    ]
+    ],
+    "specifications": {
+      "engineCc": 1498,
+      "transmission": "E-CVT"
+    }
   },
   {
     "id": "EVH9387237",
@@ -248,7 +287,10 @@
       "Régulateur de vitesse adaptatif",
       "Sièges chauffants et ventilés"
     ],
-    "featuresCount": 4
+    "specifications": {
+      "engineCc": null,
+      "transmission": "AT"
+    }
   },
   {
     "id": "EVH9404943",
@@ -267,7 +309,10 @@
       "Caméra 360°",
       "Régulateur de vitesse adaptatif (ACC)"
     ],
-    "featuresCount": 4
+    "specifications": {
+      "engineCc": 1498,
+      "transmission": "E-CVT"
+    }
   },
   {
     "id": "EVH9408609",
@@ -275,7 +320,7 @@
     "priceFCR": "25 760 €",
     "mileage": 5000,
     "regyear": "2025-08",
-    "featuresCount": 4,
+    "featuresCount": 5,
     "images": {
       "hero": "images/EVH9408609_BYD_gris_droit.jpg"
     },
@@ -287,7 +332,11 @@
       "Caméra 360°",
       "Régulateur de vitesse adaptatif",
       "Toit ouvrant"
-    ]
+    ],
+    "specifications": {
+      "engineCc": null,
+      "transmission": "AT"
+    }
   },
   {
     "id": "EVH9330983",
@@ -307,7 +356,10 @@
       "Radar de stationnement",
       "Toit ouvrant"
     ],
-    "featuresCount": 4
+    "specifications": {
+      "engineCc": null,
+      "transmission": "AT"
+    }
   },
   {
     "id": "EVH9397463",
@@ -328,7 +380,10 @@
       "Régulateur de vitesse adaptatif",
       "Sièges chauffants et ventilés"
     ],
-    "featuresCount": 4
+    "specifications": {
+      "engineCc": null,
+      "transmission": "AT"
+    }
   },
   {
     "id": "EVH9483482",
@@ -345,6 +400,10 @@
       "Autonomie 440–530 km (CLTC)",
       "Batterie LFP 49.5–60.2 kWh",
       "Recharge DC 110 kW (30→80% ~ 0,3 h)"
-    ]
+    ],
+    "specifications": {
+      "engineCc": null,
+      "transmission": "AT"
+    }
   }
 ]
