@@ -58,9 +58,9 @@ header{
 }
 
 /* Logo (image + marque) */
-.logo-wrap{display:flex; align-items:flex-start; gap:.55rem}
+.logo-wrap{display:flex; align-items:center; gap:.55rem}
 .logo img{height:58px}
-.brand{display:flex; gap:.25rem; align-items:flex-start}
+.brand{display:flex; gap:.25rem; align-items:center}
 .brand .evh, .brand .autotrade{
   font-weight:700; line-height:1;
   font-size:clamp(1rem, .9vw + .85rem, 1.35rem);
