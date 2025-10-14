@@ -39,6 +39,7 @@
 
   "specifications": {
     "moteur": "1.5T 156HP L4",
+    "engineCc": 1499,
     "transmission": "DHT (3DHT)",
     "traction": "2WD",
     "capaciteBatterie": "19.27 kWh",
