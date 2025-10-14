@@ -38,6 +38,7 @@
 
   "specifications": {
     "moteur": "1.5L 116HP L4",
+     "engineCc": 1499,
     "puissance": "220 kW",
     "transmission": "DHT",
     "traction": "4WD/AWD",
