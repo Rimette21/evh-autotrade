@@ -25,6 +25,7 @@
   ],
   "specifications": {
     "moteur": "1.5 L L4 110 ch + moteur électrique",
+    "engineCc": 1498,
     "puissance": "145 kW (moteur électrique)",
     "transmission": "E-CVT, 2WD",
     "autonomieElectrique": "150 km",
