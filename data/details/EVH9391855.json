@@ -35,8 +35,8 @@
   ],
 
   "specifications": {
-     "Moteur": 1499",
-    "engineCc": 1499",
+     "moteur": "1.5 L L4 (110 ch)",
+    "engineCc": 1499,
     "puissance": "150 kW",
     "transmission": "DHT",
     "traction": "2WD",
