@@ -35,6 +35,7 @@
   ],
   "specifications": {
     "moteur": "Essence 1.5 L 101 ch (L4) + moteur électrique",
+     "engineCc": 1498,
     "puissance": "Moteur thermique 101 ch • Moteur électrique 120 kW",
     "transmission": "E-CVT",
     "traction": "2WD",
