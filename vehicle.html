@@ -173,7 +173,14 @@
       function add(label, value){ if (value !== undefined && value !== null && value !== '') items.push({ label, value }); }
 
       add('Moteur', specs.moteur || '-');
-
+add('Puissance thermique', specs.puissanceThermique || '-');
+add('Puissance système', specs.puissanceSysteme || '-');
+add('Puissance électrique', specs.puissanceElectrique || '-');
+add('Couple combiné', specs.coupleSysteme || '-');
+add('Batterie', specs.batterieKWh ? `${specs.batterieKWh} kWh` : '-');
+add('Recharge AC', specs.rechargeACkW ? `${specs.rechargeACkW} kW` : '-');
+add('Recharge DC', specs.rechargeDCkW ? `${specs.rechargeDCkW} kW` : '-');
+add('Volume coffre', specs.volumeCoffre || '-');
       const puissance = clean(specs.puissance || specs.puissanceSysteme || specs.puissanceMoteur || specs.power);
       add('Puissance moteur', puissance || '-');
 
