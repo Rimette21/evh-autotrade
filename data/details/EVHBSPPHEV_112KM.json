@@ -25,6 +25,7 @@
   ],
   "specifications": {
     "moteur": "1.5 L essence + moteur électrique (PHEV)",
+     "engineCc": 1498,
     "puissance": "101 ch (thermique) + 160 kW (électrique)",
     "transmission": "Traction avant, e-CVT (EHS)",
     "autonomieElectrique": "112 km (CLTC) / 91 km (WLTC)",
