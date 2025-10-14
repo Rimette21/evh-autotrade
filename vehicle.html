@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Détail véhicule — E.V.H. AUTOTRADE</title>
-  <link rel="stylesheet" href="styles.css?v=17">
+  <link rel="stylesheet" href="styles.css?v=16">
   <link rel="stylesheet" href="mobile-tighten.css">
 </head>
 <body class="page-vehicle">
@@ -72,7 +72,7 @@
   (function(){
     const root = document.getElementById('vehicle-detail');
 
-    /* ================== Helpers couleur ================== */
+    /* ================== Helpers couleur (pastille) ================== */
     function normalizeColor(str){
       if(!str) return null;
       const s = String(str).trim().toLowerCase();
@@ -121,7 +121,7 @@
       return isPHEV ? 'PHEV' : 'BEV';
     }
 
-    /* ===== Récupère l'ID ===== */
+    /* ===== Récupère l'ID via ?id= / ?rid= / ?ref= / ?veh= ===== */
     const qs = new URLSearchParams(location.search);
     const vehicleId = (qs.get('id') || qs.get('rid') || qs.get('ref') || qs.get('veh') || '').trim();
     if (qs.get('rid') && !qs.get('id') && vehicleId) {
@@ -135,15 +135,16 @@
       return;
     }
 
-    /* ===== Chargement JSON ===== */
+    /* ===== Fallback double URL ===== */
     const candidates = [
-      'data/details/' + encodeURIComponent(vehicleId) + '.json?v=' + Date.now(),
+      'data/details/' + encodeURIComponent(vehicleId) + '.json?v=11',
       'data/details/' + encodeURIComponent(vehicleId) + '.json'
     ];
-    async function fetchJson(url){
-      const r = await fetch(url, {cache:'no-store'});
-      if(!r.ok) throw new Error('HTTP '+r.status);
-      return r.json();
+    function fetchJson(url){
+      return fetch(url, {cache:'no-store'}).then(r=>{
+        if(!r.ok) throw new Error('HTTP '+r.status+' pour '+r.url);
+        return r.json();
+      });
     }
 
     (async function load(){
@@ -159,58 +160,60 @@
         return;
       }
 
-      /* ===== Préparation des données ===== */
+      /* ===== Données préparées ===== */
       const mileageStr = fmtKm(data.mileage);
       const year = (data.regyear || '').split('-')[0] || '—';
-      const isPHEV = (data.features || []).some(f => /phev|hybride/i.test(f || ''));
+      const isPHEV = (data.features || data.caracteristiques || [])
+        .some(f => /phev|hybride/i.test(f || ''));
       const energie = isPHEV ? 'PHEV' : 'BEV';
       const fuel = fuelLabel(data, isPHEV);
 
       const specs = data.specifications || {};
       const items = [];
-      function add(label, value){ if (value) items.push({ label, value }); }
+      function add(label, value){ if (value !== undefined && value !== null && value !== '') items.push({ label, value }); }
 
-      // 1. Moteur & Puissance
-      add('Moteur', specs.moteur);
-      add('Puissance thermique', specs.puissanceThermique);
-      add('Puissance électrique', specs.puissanceElectrique);
-      add('Puissance système', specs.puissanceSysteme);
-      add('Couple combiné', specs.coupleSysteme);
+      add('Moteur', specs.moteur || '-');
+add('Puissance thermique', specs.puissanceThermique || '-');
+add('Puissance système', specs.puissanceSysteme || '-');
+add('Puissance électrique', specs.puissanceElectrique || '-');
+add('Couple combiné', specs.coupleSysteme || '-');
+add('Batterie', specs.batterieKWh ? `${specs.batterieKWh} kWh` : '-');
+add('Recharge AC', specs.rechargeACkW ? `${specs.rechargeACkW} kW` : '-');
+add('Recharge DC', specs.rechargeDCkW ? `${specs.rechargeDCkW} kW` : '-');
+add('Volume coffre', specs.volumeCoffre || '-');
+      const puissance = clean(specs.puissance || specs.puissanceSysteme || specs.puissanceMoteur || specs.power);
+      add('Puissance moteur', puissance || '-');
 
-      // 2. Transmission & Traction
-      add('Transmission', specs.transmission);
+      add('Transmission', specs.transmission || '-');
+
       let traction = specs.traction || '';
       if (!traction && specs.transmission){
         const m = String(specs.transmission).match(/(traction\s+(avant|arrière|intégrale))|(\b(2wd|4wd|awd)\b)/i);
         if (m) traction = m[0].replace(/2wd/i,'2WD').replace(/4wd/i,'4WD').replace(/awd/i,'AWD');
       }
-      add('Traction', traction);
+      add('Traction', traction || '-');
 
-      // 3. Batterie & Recharge
-      add('Batterie', specs.batterieKWh ? `${specs.batterieKWh} kWh` : null);
-      add('Recharge AC', specs.rechargeACkW ? `${specs.rechargeACkW} kW` : null);
-      add('Recharge DC', specs.rechargeDCkW ? `${specs.rechargeDCkW} kW` : null);
-
-      // Autonomie
+      // Autonomie: prend la meilleure dispo
       const autoElec = clean(specs.autonomieElectrique) ||
                        clean(specs.autonomieWLTP) ||
                        clean(specs.autonomieCLTC) ||
                        clean(specs.autonomieEPA);
-      add('Autonomie électrique', autoElec);
+      add('Autonomie électrique', autoElec || '-');
 
-      // 4. Dimensions & Capacité
-      add('Places', specs.places);
-      add('Volume coffre', specs.volumeCoffre);
-      if (specs.dimensions) {
-        add('Longueur', specs.dimensions.longueur);
-        add('Largeur', specs.dimensions.largeur);
-        add('Hauteur', specs.dimensions.hauteur);
-        add('Empattement', specs.dimensions.empattement);
+      add('Type de carrosserie', specs.typeCarrosserie || 'SUV');
+      add('Places', specs.places || '5 places');
+
+      const couleurRaw = specs.couleur || specs.Couleur || data.couleur || '';
+      if (couleurRaw) add('Couleur', swatchHTML(couleurRaw));
+
+      if (specs.dimensions){
+        const dims = [specs.dimensions.longueur, specs.dimensions.largeur, specs.dimensions.hauteur]
+          .filter(Boolean).join(' × ');
+        if (dims) add('Dimensions (L×l×H)', dims);
       }
-
-      // 5. Autres
-      add('Pneus', specs.pneus);
-      add('Livraison estimée', data.disponibilite);
+      if (specs.poids || specs.capaciteMax){
+        add('Poids / Capacité max', [specs.poids, specs.capaciteMax].filter(Boolean).join(' / '));
+      }
 
       const specsHTML = items.map(it =>
         '<div class="spec-item">'+
@@ -242,14 +245,14 @@
 
       const ctaHtml = `
         <div class="card-box cta-card">
-          <a href="https://wa.me/33650447400" target="_blank" rel="noopener" class="btn">
-            Contacter sur WhatsApp
+          <a href="mailto:contact@evhautotrade.com?subject=Demande%20devis%20${encodeURIComponent(data.name || data.id)}" class="btn">
+            Demander un devis pour ce véhicule
           </a>
         </div>
       `;
 
-      /* ===== Essentials (bandeau haut) ===== */
-      const engineCc = specs.engineCc != null ? specs.engineCc : null;
+      /* ===== Essentials (Reg. Year / cc / km / fuel / transm.) ===== */
+      const engineCc = (specs.engineCc != null && specs.engineCc !== '') ? specs.engineCc : null;
       const transmShort = shortTransm(specs.transmission || data.transmission);
       const essentialsHTML = `
         <div class="essentials">
@@ -261,7 +264,7 @@
         </div>
       `;
 
-      /* ===== Rendu final ===== */
+      /* ===== Rendu ===== */
       root.innerHTML =
         '<div class="vehicle-header">'+
           '<div class="vehicle-title">'+
@@ -277,12 +280,12 @@
         essentialsHTML +
         '<div class="content-grid">'+
           '<div class="card-box image-card">'+
-            '<img src="'+(data.images?.hero || '')+'" alt="'+(data.name || '')+'" class="hero-img" '+
+            '<img src="'+(data.images && data.images.hero ? data.images.hero : '')+'" alt="'+(data.name || '')+'" class="hero-img" '+
             'onerror="this.src=\'https://via.placeholder.com/800x500?text=Image+non+disponible\'">'+
             '<div class="gallery" id="gallery">'+
-              ((data.images?.gallery?.length) ?
-                data.images.gallery.map((u,i)=>`<img data-idx="${i}" src="${u}" alt="Vue ${i+1}">`).join('') :
-                '<p>Aucune image supplémentaire disponible.</p>')+
+              ((data.images && Array.isArray(data.images.gallery) && data.images.gallery.length)
+                ? data.images.gallery.map((u,i)=>'<img data-idx="'+i+'" src="'+u+'" alt="Vue '+(i+1)+'">').join('')
+                : '<p>Aucune image supplémentaire disponible.</p>')+
             '</div>'+
           '</div>'+
           '<div class="card-box specs-card">'+
@@ -319,7 +322,7 @@
   })();
   </script>
 
-  <!-- Déplace la pastille .pill dans la photo Hero -->
+  <!-- Déplace la pastille .pill (BEV/PHEV) dans la photo Hero -->
   <script>
   (function(){
     const root = document.getElementById('vehicle-detail');
