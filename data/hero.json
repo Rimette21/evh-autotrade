@@ -6,7 +6,7 @@
     "mileage": 13000,
     "regyear": "2024-05",
     "images": {
-      "hero": "images/EVH9336933_JETOUR_DEVANT.png"
+      "hero": "images/EVH9336933_JETOUR_DEVANT.webp"
     },
     "features": [
       "Moteur hybride rechargeable",
@@ -29,7 +29,7 @@
     "regyear": "2024-04",
     "featuresCount": 5,
     "images": {
-      "hero": "images/9403367_Jetour X70_devant_gauche.png"
+      "hero": "images/9403367_Jetour X70_devant_gauche.webp"
     },
     "features": [
       "Hybride rechargeable",
@@ -51,7 +51,7 @@
     "mileage": 28800,
     "regyear": "2023-01",
     "images": {
-      "hero": "images/EVH9384241_HAVALH6_devant.png"
+      "hero": "images/EVH9384241_HAVALH6_devant.webp"
     },
     "features": [
       "Hybride rechargeable (PHEV)",
@@ -72,7 +72,7 @@
     "mileage": 13000,
     "regyear": "2025-01",
     "images": {
-      "hero": "images/EVH9404921_DEV_DROITE.png"
+      "hero": "images/EVH9404921_DEV_DROITE.webp"
     },
     "features": [
       "Hybride rechargeable (PHEV)",
@@ -95,7 +95,7 @@
     "regyear": "2024-04",
     "featuresCount": 4,
     "images": {
-      "hero": "images/EVH9478503_DEV_DROITE.png"
+      "hero": "images/EVH9478503_DEV_DROITE.webp"
     },
     "features": [
       "Hybride rechargeable (PHEV)",
@@ -139,7 +139,7 @@
     "mileage": 1200,
     "regyear": "2024-01",
     "images": {
-      "hero": "images/EVH9391855_CHERRY_DEVANT.png"
+      "hero": "images/EVH9391855_CHERRY_DEVANT.webp"
     },
     "features": [
       "Moteur hybride rechargeable",
@@ -163,7 +163,7 @@
     "regyear": "2024-04",
     "featuresCount": 4,
     "images": {
-      "hero": "images/9433858_Jetour X70_DEV_gauche.png"
+      "hero": "images/9433858_Jetour X70_DEV_gauche.webp"
     },
     "features": [
       "Hybride rechargeable (C-DM)",
@@ -186,7 +186,7 @@
     "regyear": "2024-08",
     "featuresCount": 4,
     "images": {
-      "hero": "images/EVH9483482_GeelyGalaxy_dev_gauche.png"
+      "hero": "images/EVH9483482_GeelyGalaxy_dev_gauche.webp"
     },
     "features": [
       "100% électrique (160 kW)",
@@ -206,7 +206,7 @@
     "mileage": 9000,
     "regyear": "2024-07",
     "images": {
-      "hero": "images/EVH9404943_BYD_beige_devant.png"
+      "hero": "images/EVH9404943_BYD_beige_devant.webp"
     },
     "features": [
       "Hybride rechargeable (PHEV)",
@@ -228,7 +228,7 @@
     "mileage": 0,
     "regyear": "2025-01",
     "images": {
-      "hero": "images/EVH_BSPPHEV_devant_gauche.png"
+      "hero": "images/EVH_BSPPHEV_devant_gauche.webp"
     },
     "features": [
       "Hybride rechargeable (PHEV)",
@@ -251,7 +251,7 @@
     "regyear": "2025-08",
     "featuresCount": 4,
     "images": {
-      "hero": "images/EVH9408609_BYD_gris_droit.jpg"
+      "hero": "images/EVH9408609_BYD_gris_droit.webp"
     },
     "features": [
       "100% électrique - BEV",
@@ -274,7 +274,7 @@
     "mileage": 900,
     "regyear": "2025-09",
     "images": {
-      "hero": "images/EVH9403325_HAVAL_DROIT.jpg"
+      "hero": "images/EVH9403325_HAVAL_DROIT.webp"
     },
     "features": [
       "Moteur hybride rechargeable",
@@ -297,7 +297,7 @@
     "mileage": 100,
     "regyear": "2025-01",
     "images": {
-      "hero": "images/EVH_BSPPHEV_160km_DEV.png"
+      "hero": "images/EVH_BSPPHEV_160km_DEV.webp"
     },
     "features": [
       "Hybride rechargeable (DM-i)",
@@ -319,7 +319,7 @@
     "mileage": 50,
     "regyear": "2025-09",
     "images": {
-      "hero": "images/EVH9382121_TOYOTA_COTE DROIT.png"
+      "hero": "images/EVH9382121_TOYOTA_COTE DROIT.webp"
     },
     "features": [
       "100% électrique",
@@ -343,7 +343,7 @@
     "mileage": 23000,
     "regyear": "2024-01",
     "images": {
-      "hero": "images/EVH9387237_BYDTANG_droit.png"
+      "hero": "images/EVH9387237_BYDTANG_droit.webp"
     },
     "features": [
       "100% électrique",
@@ -366,7 +366,7 @@
     "mileage": 1000,
     "regyear": "2025-09",
     "images": {
-      "hero": "images/EVH9397463_TOYOTA_DROIT.png"
+      "hero": "images/EVH9397463_TOYOTA_DROIT.webp"
     },
     "features": [
       "100% électrique",
@@ -390,7 +390,7 @@
     "mileage": 4000,
     "regyear": "2025-06",
     "images": {
-      "hero": "images/EVH9330983_BMW_DEVANT.png"
+      "hero": "images/EVH9330983_BMW_DEVANT.webp"
     },
     "features": [
       "100% électrique",
