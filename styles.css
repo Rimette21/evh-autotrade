@@ -52,7 +52,7 @@ header{
 .header-inner{
   height:100%;
   max-width:var(--container);
-  margin:0 auto;
+  margin:0;
   padding:0 1rem;
   display:flex; align-items:center; justify-content:flex-start; gap:.75rem;
 }
