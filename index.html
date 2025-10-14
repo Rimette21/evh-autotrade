@@ -201,11 +201,6 @@
       </div>`;
   }
 </script>
-}
-      const km=(v.mileage!=null)?new Intl.NumberFormat('fr-FR').format(v.mileage):'—';
-      const fuel=energyFrom(v);
-      const tr=transmissionShort(v) || '—';
-      return `
         <div class="quick-specs">
           <div class="qs"><span class="qs-k">Immat.</span><span class="qs-v">${reg}</span></div>
           <div class="qs"><span class="qs-k">Moteur (cc)</span><span class="qs-v">${cc}</span></div>
