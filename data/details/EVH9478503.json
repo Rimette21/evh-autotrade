@@ -26,7 +26,7 @@
   ],
   "specifications": {
     "moteur": "1.5 L L4 (110 ch)",
-     "engineCc": 1498,
+     "engineCc": "1498",
     "motorPower": "145 kW (électrique)",
     "transmission": "E-CVT",
     "traction": "2WD",
