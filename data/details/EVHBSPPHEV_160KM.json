@@ -27,6 +27,7 @@
   ],
   "specifications": {
     "moteur": "1.5 L essence + moteur électrique",
+     "engineCc": 1498,
     "transmission": "e-CVT / traction avant",
     "autonomieElectrique": "160 km",
     "batterie": "26.6 kWh (LFP)",
