@@ -1,6 +1,6 @@
 {
   "id": "EVH9387237",
-  "name": "2024 BYD Tang BEV 90.3kWh 600 km",
+  "name": "2024 BYD Tang BEV AWD 90.3 kWh – 600 km",
   "priceFCR": "30 950 €",
   "mileage": 23000,
   "regyear": "2024-01",
@@ -14,75 +14,66 @@
     ]
   },
   "caracteristiques": [
-    "100% électrique",
-    "Autonomie 600 km",
-    "Transmission AT",
-    "Camera 360°",
-    "7 places",
-    "Régulateur de vitesse adaptatif",
-    "Sièges chauffants et ventilés"
-  ],
-  "features": [
-    "100% électrique",
-    "Autonomie 600 km",
-    "Transmission AT",
-    "Camera 360°",
-    "7 places",
-    "Régulateur de vitesse adaptatif",
-    "Sièges chauffants et ventilés"
+    "SUV 7 places 100% électrique",
+    "Double moteur – transmission intégrale (AWD)",
+    "Autonomie 600 km (CLTC)",
+    "Batterie LFP Blade 90.3 kWh",
+    "Charge rapide DC 30% → 80% en 30 min",
+    "Écran tactile central 15.6”",
+    "Régulateur adaptatif & conduite semi-autonome L2"
   ],
   "specifications": {
-    "capaciteBatterie": "90.3 kWh",
+    "motorisation": "Double moteur électrique (AWD)",
     "puissance": "168 kW (228 ch)",
     "couple": "350 Nm",
-    "acceleration": "5.9 s (0-100 km/h)",
+    "acceleration": "5.9 s (0–100 km/h)",
     "vitesseMax": "180 km/h",
-    "tempsDeCharge": "30 min (10-80% en charge rapide)",
-    "transmission": "Traction avant",
-    "dimensions": {
-      "longueur": "4870 mm",
-      "largeur": "1950 mm",
-      "hauteur": "1725 mm",
-      "empattement": "2820 mm"
+    "batterie": {
+      "type": "LFP Blade Battery",
+      "capacite": "90.3 kWh",
+      "autonomieCLTC": "600 km",
+      "consommation": "15.7 kWh/100 km",
+      "rechargeDC": "30–80% en 30 min",
+      "rechargeAC": "7 kW – environ 8.5 h",
+      "gestionThermique": "Pompe à chaleur"
     },
-    "poids": "2360 kg",
-    "volumeCoffre": "940 L → 1655 L (banquette rabattue)"
+    "dimensions": "4995 × 1910 × 1725 mm",
+    "empattement": "2820 mm",
+      "poids": "2360 kg",
+      "pneus": "255/50 R20",
+      "volumeCoffre": "940–1655 L (banquette rabattue)"
+    },
+    "chassis": {
+      "suspensionAvant": "MacPherson indépendante",
+      "suspensionArriere": "Multibras indépendante",
+      "freins": "Disques ventilés aux 4 roues"
+    }
   },
   "equipements": {
     "interieur": [
-      "Climatisation automatique tri-zone",
-      "Écran tactile central 15.6\"",
-      "Tableau de bord numérique",
-      "Système audio premium",
-      "Charge sans fil pour smartphones",
-      "Ambiance lumineuse"
+      "Climatisation automatique tri-zone avec pompe à chaleur",
+      "Écran tactile central 15.6”",
+      "Tableau de bord numérique 12.3”",
+      "Système audio premium 12 HP",
+      "Toit panoramique ouvrant",
+      "Charge sans fil 50W",
+      "Portes électriques",
+      "Ambiance lumineuse personnalisable"
     ],
     "securite": [
       "6 airbags (dont genoux conducteur)",
       "Alerte de franchissement de ligne",
-      "Détection des angles morts",
-      "Aide au démarrage en côte",
-      "Freinage automatique d'urgence"
+      "Assistance maintien de voie",
+      "Régulateur de vitesse adaptatif (ACC)",
+      "Détection angles morts",
+      "Freinage automatique d’urgence",
+      "Caméras 360° et radars AV/AR"
     ],
-    "connectivite": []
-  },
-  "equipment": {
-    "interior": [
-      "Climatisation automatique tri-zone",
-      "Écran tactile central 15.6\"",
-      "Tableau de bord numérique",
-      "Système audio premium",
-      "Charge sans fil pour smartphones",
-      "Ambiance lumineuse"
-    ],
-    "safety": [
-      "6 airbags (dont genoux conducteur)",
-      "Alerte de franchissement de ligne",
-      "Détection des angles morts",
-      "Aide au démarrage en côte",
-      "Freinage automatique d'urgence"
-    ],
-    "connectivity": []
+    "connectivite": [
+      "Contrôle à distance via application",
+      "Mises à jour OTA",
+      "Android Auto / Apple CarPlay"
+    ]
   },
   "garantie": "Garantie importateur 2 ans (voir conditions dans CGV)",
   "localisation": "Chine",
