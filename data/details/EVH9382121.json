@@ -35,22 +35,44 @@
     "5 places"
   ],
   "specifications": {
-    "puissance": "200 kW",
-    "transmission": "AT",
-    "traction": "2WD",
-    "autonomieElectrique": "550 km",
-    "typeCarrosserie": "SUV",
-    "couleur": "Gris argenté",
-    "dimensions": {
-      "longueur": "4780 mm",
-      "largeur": "1866 mm",
-      "hauteur": "1510 mm"
+    "moteurThermique": null,
+    "puissanceThermique": null,
+    "typeHybride": "100% électrique (BEV)",
+    "puissanceSysteme": "272 ch (200 kW)",
+    "coupleSysteme": "330 N·m",
+    "transmission": "Automatique (AT)",
+    "traction": "Traction avant (2WD)",
+    "typeBatterie": "Lithium fer phosphate (LFP) – Blade Battery BYD",
+    "batterieKWh": "65.28 kWh (standard) / 73.98 kWh (longue autonomie)",
+    "autonomieCLTC": "550 km (standard) / 630 km (longue autonomie)",
+    "autonomieWLTP": "-",
+    "autonomieTotale": "550–630 km",
+    "rechargeDCkW": "90 kW",
+    "rechargeACkW": "7 kW",
+    "tempsRechargeAC": "8.5 h (0–100%)",
+    "tempsRechargeDC": "27 min (30–80%)",
+    "refroidissementBatterie": "-",
+    "places": "5 places",
+    "portes": "5 portes",
+    "volumeCoffre": "-",
+    "dimensions": "4780 × 1866 × 1510 mm",
+    "empattement": "2880 mm"
     },
+    "pneus": "225/45 R21 (AV/AR)",
     "poids": "1950 kg",
     "capaciteMax": "2365 kg",
-    "volumeVehicule": "13.47 m³",
-    "places": "5",
-    "portes": "5"
+    "vitesseMax": "160 km/h",
+    "acceleration0100": "-",
+    "acceleration050": "3.4 s",
+    "suspension": "McPherson AV / Link Strut AR indépendants",
+    "freins": "Disques ventilés AV / Disques AR, frein stationnement électrique",
+    "airbags": "Conducteur, passager, latéraux, genoux",
+    "climatisation": "Automatique",
+    "connectivite": "Bluetooth, GPS, Accès/démarrage sans clé, Verrouillage centralisé",
+    "multimedia": "Écran tactile, ambiance lumineuse 256 couleurs",
+    "chargeSansFil": "50 W",
+    "toit": "Toit panoramique fixe",
+    "resume": "SUV électrique familial alliant grande autonomie (jusqu’à 630 km), sécurité batterie BYD Blade, et confort premium avec toit panoramique et ambiance lumineuse personnalisée."
   },
   "equipements": {
     "interieur": [
@@ -84,4 +106,3 @@
   "localisation": "Xiamen, Fujian, Chine",
   "disponibilite": "Livraison au port de destination : 45 jours"
 }
-
