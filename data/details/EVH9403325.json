@@ -1,10 +1,9 @@
 {
   "id": "EVH9403325",
-  "name": "2025 Haval Fierce Dragon MAX 1.5L 116HP L4 2DHT PHEV",
+  "name": "2025 Haval Fierce Dragon MAX 1.5T 2DHT PHEV (AWD)",
   "priceFCR": "26 590 €",
   "mileage": 900,
   "regyear": "2025-09",
-
   "images": {
     "hero": "images/EVH9403325_HAVAL_DROIT.webp",
     "gallery": [
@@ -16,78 +15,78 @@
       "images/EVH9403325_HAVAL_gauche.jpg"
     ]
   },
-
   "caracteristiques": [
-    "Hybride rechargeable (PHEV)",
-    "Autonomie électrique 110 km",
-    "Transmission DHT",
-    "Transmission intégrale (4WD/AWD)",
-    "Caméra 360°",
-    "5 places",
-    "Régulateur de vitesse adaptatif"
-  ],
-  "features": [
-    "PHEV",
-    "Autonomie 110 km",
-    "DHT",
-    "4WD/AWD",
-    "Caméra 360°",
-    "ACC",
+    "SUV hybride rechargeable (PHEV)",
+    "Transmission 2DHT, traction intégrale (AWD)",
+    "Autonomie électrique 165 km (CLTC)",
+    "Puissance combinée 238 kW (≈320 ch) / 595 Nm",
+    "Batterie NCM ~19.3 kWh, DC 33 kW + V2L 3.3 kW",
+    "Caméra 360°, HUD, ADAS complet (ACC, LKA, AEB)",
+    "Écran 14.6”, interface vocale Coffee OS",
     "5 places"
   ],
-
   "specifications": {
-    "moteur": "1.5L 116HP L4",
-     "engineCc": 1499,
-    "puissance": "220 kW",
-    "transmission": "DHT",
-    "traction": "4WD/AWD",
-    "typeCarrosserie": "SUV",
-    "couleur": "Blanc",
-    "autonomieElectrique": "110 km",
-    "dimensions": {
-      "longueur": "4780 mm",
-      "largeur": "1895 mm",
-      "hauteur": "1725 mm"
+    "motorisation": {
+      "type": "Hybride rechargeable (PHEV)",
+      "moteurThermique": "1.5 L Turbo L4 (116 ch / 85 kW)",
+      "moteursElectriques": "Deux moteurs électriques (total 220 kW)",
+      "puissanceSysteme": "238 kW (≈320 ch)",
+      "coupleSysteme": "595 Nm",
+      "transmission": "2DHT (2 rapports)",
+      "traction": "Intégrale (AWD)"
     },
-    "poids": "2000 kg",
-    "capaciteMax": "2425 kg",
-    "volumeVehicule": "15.63 m³",
-    "places": "5",
-    "portes": "5"
+    "performances": {
+      "vitesseMax": "180 km/h",
+      "acceleration": "≈ 6.8 s (0–60 km/h)",
+      "consommationHybrideWLTC": "0.97 L/100 km"
+    },
+    "batterie": {
+      "type": "Li-ion NCM",
+      "capacite": "≈ 19.27 kWh",
+      "autonomieCLTC": "165 km",
+      "autonomieWLTC": "≈ 126 km",
+      "rechargeDC": "Jusqu’à 33 kW",
+      "rechargeAC": "Type embarqué (temps selon borne)",
+      "dechargeExterne": "V2L 3.3 kW"
+    },
+    "dimensions": "4758 × 1895 × 1725 mm",
+    "empattement": "2800 mm",
+    "poids": "2075 kg",
+    "volumeCoffre": "540–1366 L",
+    "pneus": "—",
+    "chassis": {
+      "suspensionAvant": "Indépendante",
+      "suspensionArriere": "Indépendante",
+      "freins": "Disques ventilés AV/AR",
+      "freinStationnement": "Électrique (EPB)"
+    }
   },
-
   "equipements": {
     "interieur": [
       "Toit ouvrant",
-      "Sièges en cuir",
-      "Sièges électriques",
-      "Sièges chauffants",
-      "Sièges ventilés",
-      "Vitres électriques",
+      "Sièges en cuir, électriques, chauffants et ventilés",
       "Climatisation automatique",
+      "Écran tactile 14.6” + HUD",
+      "Interface vocale Coffee OS",
       "Jantes alliage"
     ],
     "securite": [
-      "Airbag conducteur",
-      "Airbag passager",
-      "Airbags latéraux",
+      "Airbags multiples",
       "Caméra 360°",
-      "Radar de stationnement",
-      "Régulateur de vitesse adaptatif",
-      "Direction assistée"
+      "Radars de stationnement",
+      "Régulateur de vitesse adaptatif (ACC)",
+      "Assistance maintien de voie (LKA)",
+      "Freinage d’urgence automatique (AEB)",
+      "ABS / ESC / TPMS"
     ],
     "connectivite": [
       "Bluetooth",
       "GPS",
-      "Verrouillage centralisé",
-      "Accès sans clé",
-      "Démarrage sans clé"
+      "Accès et démarrage sans clé",
+      "Verrouillage centralisé"
     ]
   },
-
-  "garantie": "Garantie importateur 2 ans (voir conditions dans CGV)",
-  "localisation": "Huaihua, Hunan, Chine",
-  "disponibilite": "Livraison au port de destination : 45 jours"
+  "resume": "Le Haval Fierce Dragon MAX PHEV 2025 combine une chaîne hybride puissante (≈320 ch, 595 Nm) à une grande autonomie électrique CLTC de 165 km, une transmission intégrale 2DHT, des technologies avancées (HUD, caméra 360°, ADAS, Coffee OS) et un espace familial polyvalent.",
+  "disponibilite": "Livraison au port de destination : 45 jours",
+  "garantie": "Garantie importateur 2 ans (voir conditions dans CGV)"
 }
-
