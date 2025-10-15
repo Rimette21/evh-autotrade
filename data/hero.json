@@ -21,7 +21,28 @@
       "transmission": "DHT"
     }
   },
- {
+  {
+    "id": "EVH9384241",
+    "name": "2023 Haval H6 1.5T DCT 2WD",
+    "priceFCR": "21 600 €",
+    "mileage": 28800,
+    "regyear": "2023-01",
+    "images": {
+      "hero": "images/EVH9384241_HAVALH6_devant.webp"
+    },
+    "features": [
+      "Hybride rechargeable (PHEV)",
+      "Autonomie électrique 110km",
+      "Transmission DHT",
+      "Caméra 360°",
+      "Radar de stationnement"
+    ],
+    "specifications": {
+      "engineCc": 1499,
+      "transmission": "DHT"
+    }
+  },
+  {
     "id": "EVH9403367",
     "name": "2024 Jetour X70 C-DM Long Range (7 places)",
     "priceFCR": "21 520 €",
@@ -38,27 +59,6 @@
       "Caméra 360° / hayon électrique",
       "Toit panoramique",
       "Aides L2 (ACC, maintien de voie)"
-    ],
-    "specifications": {
-      "engineCc": 1499,
-      "transmission": "DHT"
-    }
-  },
-  {
-    "id": "EVH9384241",
-    "name": "2023 Haval H6 1.5T DCT 2WD",
-    "priceFCR": "21 600 €",
-    "mileage": 28800,
-    "regyear": "2023-01",
-    "images": {
-      "hero": "images/EVH9384241_HAVALH6_devant.webp"
-    },
-    "features": [
-      "Hybride rechargeable (PHEV)",
-      "Autonomie électrique 110km",
-      "Transmission DHT",
-      "Caméra 360°",
-      "Radar de stationnement"
     ],
     "specifications": {
       "engineCc": 1499,
