@@ -18,31 +18,37 @@
     "Double moteur – transmission intégrale (AWD)",
     "Autonomie 600 km (CLTC)",
     "Batterie LFP Blade 90.3 kWh",
-    "Charge rapide DC 30% → 80% en 30 min",
+    "Charge rapide DC 30–80% en 30 min",
     "Écran tactile central 15.6”",
     "Régulateur adaptatif & conduite semi-autonome L2"
   ],
   "specifications": {
-    "motorisation": "Double moteur électrique (AWD)",
-    "puissance": "168 kW (228 ch)",
-    "couple": "350 Nm",
-    "acceleration": "5.9 s (0–100 km/h)",
-    "vitesseMax": "180 km/h",
+    "motorisation": {
+      "type": "100% électrique (BEV)",
+      "architecture": "Double moteur (AWD)",
+      "puissance": "168 kW (228 ch)",
+      "couple": "350 Nm",
+      "transmission": "Automatique",
+      "traction": "Intégrale (AWD)"
+    },
+    "performances": {
+      "acceleration": "5.9 s (0–100 km/h)",
+      "vitesseMax": "180 km/h"
+    },
     "batterie": {
       "type": "LFP Blade Battery",
       "capacite": "90.3 kWh",
       "autonomieCLTC": "600 km",
       "consommation": "15.7 kWh/100 km",
       "rechargeDC": "30–80% en 30 min",
-      "rechargeAC": "7 kW – environ 8.5 h",
+      "rechargeAC": "7 kW – ~8.5 h",
       "gestionThermique": "Pompe à chaleur"
     },
     "dimensions": "4995 × 1910 × 1725 mm",
     "empattement": "2820 mm",
-      "poids": "2360 kg",
-      "pneus": "255/50 R20",
-      "volumeCoffre": "940–1655 L (banquette rabattue)"
-    },
+    "poids": "2360 kg",
+    "volumeCoffre": "940–1655 L (banquette rabattue)",
+    "pneus": "255/50 R20",
     "chassis": {
       "suspensionAvant": "MacPherson indépendante",
       "suspensionArriere": "Multibras indépendante",
@@ -51,31 +57,29 @@
   },
   "equipements": {
     "interieur": [
-      "Climatisation automatique tri-zone avec pompe à chaleur",
-      "Écran tactile central 15.6”",
-      "Tableau de bord numérique 12.3”",
+      "Climatisation tri-zone avec pompe à chaleur",
+      "Écran central 15.6”",
+      "Combiné numérique 12.3”",
       "Système audio premium 12 HP",
-      "Toit panoramique ouvrant",
+      "Toit panoramique",
       "Charge sans fil 50W",
       "Portes électriques",
-      "Ambiance lumineuse personnalisable"
+      "Ambiance lumineuse"
     ],
     "securite": [
       "6 airbags (dont genoux conducteur)",
-      "Alerte de franchissement de ligne",
-      "Assistance maintien de voie",
-      "Régulateur de vitesse adaptatif (ACC)",
+      "ACC, LKA, AEB",
       "Détection angles morts",
-      "Freinage automatique d’urgence",
-      "Caméras 360° et radars AV/AR"
+      "Caméras 360° + radars AV/AR"
     ],
     "connectivite": [
-      "Contrôle à distance via application",
+      "Application mobile (contrôle à distance)",
       "Mises à jour OTA",
-      "Android Auto / Apple CarPlay"
+      "Apple CarPlay / Android Auto"
     ]
   },
   "garantie": "Garantie importateur 2 ans (voir conditions dans CGV)",
-  "localisation": "Chine",
+  "resume": "La BYD Tang 2024 combine 7 places, grande autonomie CLTC de 600 km et batterie LFP Blade réputée pour sa sécurité, avec un confort complet et une transmission intégrale adaptée aux familles exigeantes.",
   "disponibilite": "Livraison au port de destination : 45 jours"
+  
 }
