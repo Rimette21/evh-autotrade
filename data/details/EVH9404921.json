@@ -1,6 +1,6 @@
 {
   "id": "EVH9404921",
-  "name": "2025 BYD Song Pro 1.5L 101HP L4 E-CVT PHEV 18.3 kWh",
+  "name": "2025 BYD Song Pro 1.5L E-CVT PHEV 18.3 kWh",
   "priceFCR": "22 800 €",
   "mileage": 13000,
   "regyear": "2025-01",
@@ -15,68 +15,78 @@
     ]
   },
   "caracteristiques": [
-    "Hybride rechargeable (PHEV)",
-    "Autonomie électrique 115 km",
-    "Batterie 18.3 kWh",
-    "Transmission E-CVT",
-    "Caméra 360°",
-    "Régulateur de vitesse adaptatif",
-    "Sièges en cuir et à réglages électriques",
-    "Toit ouvrant"
-  ],
-  "features": [
-    "Hybride rechargeable (PHEV)",
-    "Autonomie électrique 115 km",
-    "Batterie 18.3 kWh",
-    "Transmission E-CVT",
-    "Caméra 360°",
+    "SUV hybride rechargeable (PHEV)",
+    "Autonomie électrique ≈ 115 km (CLTC)",
+    "Batterie LFP 18.3 kWh",
+    "Transmission E-CVT traction avant",
+    "Caméra 360° + radars AV/AR",
     "Régulateur de vitesse adaptatif (ACC)",
-    "Cinq places"
+    "Sièges en cuir et à réglages électriques",
+    "Toit ouvrant panoramique"
   ],
   "specifications": {
-    "moteur": "Essence 1.5 L 101 ch (L4) + moteur électrique",
-     "engineCc": 1498,
-    "puissance": "Moteur thermique 101 ch • Moteur électrique 120 kW",
-    "transmission": "E-CVT",
-    "traction": "2WD",
-    "autonomieElectrique": "115 km",
-    "capaciteBatterie": "18.3 kWh",
-    "dimensions": {
-      "longueur": "4735 mm",
-      "largeur": "1860 mm",
-      "hauteur": "1710 mm"
+    "motorisation": {
+      "type": "Hybride rechargeable (PHEV)",
+      "moteurThermique": "1.5 L L4 essence (101 ch / 74 kW)",
+      "moteurElectrique": "120 kW (163 ch)",
+      "puissanceSysteme": "≈ 220 ch (163 kW)",
+      "coupleThermique": "126 Nm",
+      "coupleElectrique": "210 Nm",
+      "transmission": "E-CVT",
+      "traction": "Avant (FWD)"
     },
+    "performances": {
+      "vitesseMax": "180 km/h",
+      "acceleration": "≈ 8.4 s (0-100 km/h)"
+    },
+    "batterie": {
+      "type": "LFP (Lithium Fer Phosphate)",
+      "capacite": "18.3 kWh",
+      "autonomieCLTC": "≈ 115 km",
+      "rechargeDC": "≈ 0.6 h (0-80 %)",
+      "rechargeAC": "≈ 2.8 h (0-100 %)"
+    },
+    "dimensions": "4735 × 1860 × 1710 mm",
+    "empattement": "2712 mm",
     "poids": "1765 kg",
-    "capaciteMax": "2140 kg",
-    "places": "5",
-    "typeCarrosserie": "SUV",
-    "couleur": "Noir"
+    "volumeCoffre": "≈ 500–1330 L (selon configuration)",
+    "carrosserie": {
+      "type": "SUV 5 portes",
+      "places": 5,
+      "couleur": "Noir"
+    },
+    "chassis": {
+      "suspensionAvant": "Indépendante MacPherson",
+      "suspensionArriere": "Multibras indépendante",
+      "freins": "Disques ventilés AV / AR"
+    }
   },
   "equipements": {
     "interieur": [
-      "Sièges en cuir",
-      "Siège conducteur à réglages électriques",
+      "Sièges en cuir avec réglages électriques",
       "Climatisation automatique",
-      "Toit ouvrant",
+      "Toit ouvrant panoramique",
+      "Volant assisté",
       "Lève-vitres électriques",
-      "Volant assisté"
+      "Écran tactile central 12.8–15.6”",
+      "Commandes vocales et hotspot Wi-Fi"
     ],
     "securite": [
-      "Airbags conducteur, passager et latéraux",
-      "Caméra 360°",
-      "Radar de stationnement",
+      "Airbags frontaux et latéraux",
+      "Caméra 360° + radars AV/AR",
       "Régulateur de vitesse adaptatif (ACC)",
+      "Systèmes ADAS (29 capteurs)",
       "Fermeture centralisée",
       "Démarrage sans clé (push start)"
     ],
     "connectivite": [
-      "GPS",
+      "GPS intégré",
       "Bluetooth",
-      "Entrée sans clé"
+      "Apple CarPlay / Android Auto",
+      "Connectivité 5G et Wi-Fi embarqué"
     ]
   },
-  "garantie": "Garantie importateur 2 ans (voir conditions dans CGV)",
-  "localisation": "Shanghai, Chine",
-  "disponibilite": "Livraison au port de destination : 45 jours"
+  "resume": "Le BYD Song Pro 2025 PHEV offre une autonomie électrique de 115 km grâce à sa batterie LFP de 18.3 kWh, des performances équilibrées et une technologie embarquée riche (ADAS, 5G, écran tactile 15,6”). Un SUV compact efficace, confortable et adapté au quotidien urbain et aux longs trajets.",
+  "disponibilite": "Livraison au port de destination : 45 jours",
+  "garantie": "Garantie importateur 2 ans (voir conditions dans CGV)"
 }
-
