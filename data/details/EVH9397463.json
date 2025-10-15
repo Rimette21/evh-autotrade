@@ -4,7 +4,6 @@
   "priceFCR": "31 150 €",
   "mileage": 1000,
   "regyear": "2025-09",
-
   "images": {
     "hero": "images/EVH9397463_TOYOTA_DROIT.webp",
     "gallery": [
@@ -12,78 +11,79 @@
       "images/EVH9397463_TOYOTA_INTAVANT.png"
     ]
   },
-
   "caracteristiques": [
-    "100% électrique (BEV)",
-    "Autonomie 630 km",
-    "Puissance moteur 200 kW",
-    "Transmission AT",
-    "Traction 2WD",
-    "Caméra 360°",
-    "Régulateur de vitesse adaptatif",
-    "5 places"
+    "SUV 100% électrique (BEV)",
+    "Autonomie jusqu’à 630 km (CLTC)",
+    "Batterie LFP Blade BYD",
+    "Puissance moteur 200 kW (272 ch)",
+    "Transmission automatique",
+    "Traction avant (2WD)",
+    "Caméra 360° + ADAS complet",
+    "Recharge rapide DC 90 kW"
   ],
-  "features": [
-    "BEV",
-    "Autonomie 630 km",
-    "Puissance 200 kW",
-    "AT",
-    "2WD",
-    "Caméra 360°",
-    "ACC",
-    "5 places"
-  ],
-
   "specifications": {
-    "puissance": "200 kW",
-    "transmission": "AT",
-    "traction": "2WD",
-    "autonomieElectrique": "630 km",
-    "typeCarrosserie": "SUV",
-    "couleur": "Gris",
-    "dimensions": {
-      "longueur": "4780 mm",
-      "largeur": "1866 mm",
-      "hauteur": "1510 mm"
+    "motorisation": {
+      "type": "100% électrique (BEV)",
+      "moteur": "Électrique synchrone à aimants permanents",
+      "puissance": "200 kW (272 ch)",
+      "couple": "330 Nm",
+      "vitesseMax": "160 km/h",
+      "acceleration": "3.4 s (0–50 km/h)",
+      "traction": "Avant (2WD)",
+      "transmission": "Automatique (AT)"
     },
-    "poids": "2010 kg",
-    "capaciteMax": "2425 kg",
+    "batterie": {
+      "type": "LFP Blade Battery (BYD)",
+      "capacites": "65.28 / 73.98 kWh",
+      "autonomieCLTC": "550–630 km",
+      "rechargeDC": "90 kW (30–80% en 27 min)",
+      "rechargeAC": "7 kW (0–100% en 8.5 h)"
+    },
+    "dimensions": "4780 × 1866 × 1510 mm",
+    "empattement": "2880 mm",
+    "poids": "1950–2010 kg",
     "volumeVehicule": "13.47 m³",
-    "places": "5",
-    "portes": "5"
+    "pneus": "225/45 R21",
+    "carrosserie": {
+      "type": "SUV 5 portes",
+      "places": 5,
+      "couleur": "Gris"
+    },
+    "chassis": {
+      "suspensionAvant": "Indépendante MacPherson",
+      "suspensionArriere": "Indépendante Link Strut",
+      "freins": "Disques ventilés avant / disques arrière",
+      "freinStationnement": "Électrique (EPB)"
+    }
   },
-
   "equipements": {
     "interieur": [
-      "Toit ouvrant",
-      "Sièges en cuir",
-      "Sièges électriques",
-      "Sièges chauffants",
-      "Vitres électriques",
+      "Toit panoramique fixe",
+      "Sièges en cuir électriques et chauffants",
       "Climatisation automatique",
-      "Jantes alliage"
+      "Écran tactile central",
+      "Ambiance lumineuse 256 couleurs",
+      "Charge sans fil 50W pour smartphone",
+      "Jantes alliage 21”"
     ],
     "securite": [
-      "Airbag conducteur",
-      "Airbag passager",
-      "Airbags latéraux",
-      "Airbag genoux",
+      "Airbags multiples (frontaux, latéraux, genoux)",
       "Caméra 360°",
-      "Radar de stationnement",
-      "Régulateur de vitesse adaptatif",
-      "Direction assistée"
+      "Radars avant/arrière",
+      "Régulateur de vitesse adaptatif (ACC)",
+      "Assistance maintien de voie (LKA)",
+      "Freinage d’urgence automatique (AEB)",
+      "ABS / ESC / TPMS"
     ],
     "connectivite": [
       "Bluetooth",
-      "GPS",
-      "Verrouillage centralisé",
-      "Accès sans clé",
-      "Démarrage sans clé"
+      "GPS intégré",
+      "Accès et démarrage sans clé",
+      "Verrouillage centralisé"
     ]
   },
-
   "garantie": "Garantie importateur 2 ans (voir conditions dans CGV)",
   "localisation": "Tianjin, Chine",
-  "disponibilite": "Livraison au port de destination : 45 jours"
+  "disponibilite": "Livraison au port de destination : 45 jours",
+  "resume": "Le Toyota bZ5 2025 se distingue par son autonomie élevée, son confort moderne, sa batterie BYD Blade réputée pour sa sécurité et sa durabilité, et un équilibre remarquable entre performances électriques et habitabilité pour un SUV familial et performant."
 }
-
