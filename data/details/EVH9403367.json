@@ -4,7 +4,6 @@
   "priceFCR": "21 520 €",
   "mileage": 18000,
   "regyear": "2024-04",
-  "featuresCount": 5,
   "images": {
     "hero": "images/9403367_Jetour X70_devant_gauche.webp",
     "gallery": [
@@ -16,40 +15,48 @@
       "images/9403367_Jetour X70_int_arriere.png"
     ]
   },
-  "features": [
-    "Hybride rechargeable (C-DM)",
-    "Autonomie électrique ~110 km (CLTC) ~ 85 km WLTC",
-    "Transmission DHT e-CVT, traction avant",
-    "Caméra panoramique 360° + radars AV/AR",
-    "Toit ouvrant panoramique",
-    "Hayon électrique",
-    "Aides à la conduite L2 (ACC, LKA/LCA)"
+  "caracteristiques": [
+    "SUV hybride rechargeable C-DM (PHEV)",
+    "Autonomie électrique 110–120 km (CLTC) ~ 85 km (WLTC)",
+    "Transmission DHT (e-CVT) – traction avant",
+    "7 places (configuration 2+3+2)",
+    "Caméra 360° + radars AV/AR",
+    "Aides à la conduite L2 (ACC, LKA/LCA)",
+    "Toit ouvrant panoramique, hayon électrique"
   ],
   "specifications": {
-    "moteurThermique": {
-      "type": "1.5 L turbo L4 essence",
-      "norme": "China VI"
+    "motorisation": {
+      "type": "Hybride rechargeable (C-DM)",
+      "moteurThermique": "1.5 L Turbo L4 essence (156 ch / 115 kW) – norme China VI",
+      "groupeElectrique": "Deux moteurs électriques (architecture AV + DHT)",
+      "puissanceSysteme": "≈ 200 kW (≈ 271 ch)",
+      "coupleSysteme": "≈ 395 Nm",
+      "transmission": "DHT (e-CVT)",
+      "traction": "Avant (FWD)"
     },
-     "engineCc": 1499,
-    "groupeElectrique": {
-      "architecture": "PHEV C-DM (moteur AV + DHT)",
-      "autonomieCLTC": "≈ 110 km",
+    "performances": {
+      "vitesseMax": "≈ 180 km/h"
+    },
+    "batterie": {
+      "type": "Li-ion NCM",
+      "capacite": "≈ 19.43 kWh",
+      "autonomieCLTC": "≈ 110–120 km",
       "autonomieWLTC": "≈ 85 km",
-      "rechargeRapide": "≈ 0,3 h (30→80 %)",
-      "rechargeLente": "≈ 2,5 h"
+      "rechargeDC": "30–80% en ≈ 18–30 min",
+      "rechargeAC": "≈ 2.5 h"
     },
-    "transmission": "DHT (e-CVT) — traction avant",
-    "dimensions": {
-      "longueur": "≈ 4749 mm",
-      "largeur": "≈ 1900 mm",
-      "hauteur": "≈ 1720 mm",
-      "empattement": "≈ 2745 mm"
-    },
+    "dimensions": "4785 × 1900 × 1720 mm",
+    "empattement": "2745 mm",
     "habitacle": {
       "places": 7,
       "configuration": "2+3+2"
     },
-    "pneumatiques": "Jantes alliage, pneus 19\" (selon finition)"
+    "volumeCoffre": "≈ 438–1688 L (sièges rabattus)",
+    "pneus": "Jantes alliage 19” (selon finition)",
+    "chassis": {
+      "suspensionAvant": "Indépendante",
+      "suspensionArriere": "Indépendante"
+    }
   },
   "equipements": {
     "securite": [
@@ -67,17 +74,20 @@
       "Aide au stationnement"
     ],
     "interieur": [
-      "Écran central tactile (système Jetour OS)",
+      "Écran central tactile (Jetour OS)",
       "Tableau de bord numérique",
-      "Sellerie similicuir / sièges électriques",
+      "Sellerie similicuir, sièges électriques",
       "Climatisation automatique",
-      "Toit panoramique"
+      "Toit panoramique",
+      "Hayon électrique"
     ],
     "connectivite": [
       "Bluetooth / USB",
-      "Navigation et services connectés (selon version)"
+      "Apple CarPlay / Android Auto (selon version)",
+      "Navigation et services connectés"
     ]
   },
-  "garantie": "Garantie importateur 2 ans",
-  "disponibilite": "Transport inclus au port — ≈45 jours"
+  "resume": "Le Jetour X70 C-DM Long Range propose une vraie polyvalence familiale avec 7 places (2+3+2), une grande autonomie électrique (jusqu’à ~120 km CLTC), une chaîne hybride efficiente en traction avant et un équipement moderne (caméra 360°, aides L2, toit panoramique, hayon électrique).",
+  "disponibilite": "Transport inclus au port — ≈ 45 jours",
+  "garantie": "Garantie importateur 2 ans"
 }
