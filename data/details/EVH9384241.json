@@ -1,10 +1,9 @@
 {
   "id": "EVH9384241",
-  "name": "Haval H6 PHEV 1.5T 2DHT — 110 km (CLTC)",
+  "name": "2024 Haval H6 PHEV 1.5T 2DHT — 110 km (CLTC)",
   "priceFCR": "21 600 €",
   "mileage": 28800,
   "regyear": "2024-04",
-
   "images": {
     "hero": "images/EVH9384241_HAVALH6_devant.webp",
     "gallery": [
@@ -17,77 +16,82 @@
       "images/EVH9384241_HAVALH6_int_arriere.png"
     ]
   },
-
-  "features": [
-    "Hybride rechargeable (PHEV)",
+  "caracteristiques": [
+    "SUV hybride rechargeable (PHEV)",
     "Autonomie électrique 110 km (CLTC)",
-    "Batterie 19.94 kWh",
     "Transmission 2DHT (e-CVT)",
-    "Caméra 360° + radars AV/AR"
+    "Puissance combinée 238 kW (320 ch)",
+    "Couple maximal 595 Nm",
+    "Batterie lithium-ion NCM 19,9 kWh",
+    "Caméra 360° + radars AV/AR",
+    "Régulateur de vitesse adaptatif (ACC)"
   ],
-
   "specifications": {
-    "moteur": "L4 1.5 Turbo + moteur électrique",
-    "engineCc": 1499,
-    "puissanceThermique": "154 ch (~113 kW)",
-    "puissanceSysteme": "240 kW (326 ch)",
-    "puissanceElectrique": "130 kW",
-    "coupleSysteme": "530 N·m (combiné)",
-
-    "transmission": "2DHT (e-CVT)",
-    "traction": "Traction avant (2WD)",
-
-    "autonomieCLTC": "110 km",
-    "autonomieWLTP": "—",
-    "autonomieEPA": "—",
-
-    "batterieKWh": "19.94 kWh",
-    "rechargeACkW": "6.6 kW",
-    "rechargeDCkW": "34 kW",
-
-    "places": "5 places",
-    "volumeCoffre": "560 L / 1485 L (sièges rabattus)",
-
-    "dimensions": "4680 × 1886 × 1730 mm",
-    "empattement": "2738 mm"
+    "motorisation": {
+      "type": "Hybride rechargeable (PHEV)",
+      "moteurThermique": "1.5 L Turbo L4 essence (116 ch / 85 kW)",
+      "moteurElectrique": "Moteur synchrone 80 kW (110 ch)",
+      "puissanceSysteme": "238 kW (320 ch)",
+      "coupleSysteme": "595 Nm",
+      "transmission": "2DHT (e-CVT)",
+      "traction": "Avant (FWD)"
     },
-    "pneus": "235/55 R19 (selon version)"
+    "performances": {
+      "vitesseMax": "180 km/h",
+      "acceleration": "≈ 6.8 s (0–60 km/h)",
+      "consommationHybride": "1.58 L/100 km (WLTC)"
+    },
+    "batterie": {
+      "type": "Lithium-ion NCM",
+      "capacite": "19.94 kWh",
+      "autonomieCLTC": "110 km",
+      "rechargeAC": "6.6 kW – 1.5 à 2.6 h",
+      "rechargeDC": "34 kW – charge rapide disponible"
+    },
+    "dimensions": "4685 × 1886 × 1730 mm",
+    "empattement": "2738 mm",
+    "poids": "≈ 1850 kg",
+    "volumeCoffre": "560–1485 L (sièges rabattus)",
+    "pneus": "235/55 R19",
+    "chassis": {
+      "suspensionAvant": "Indépendante MacPherson",
+      "suspensionArriere": "Indépendante multibras",
+      "freins": "Disques ventilés avant/arrière",
+      "freinStationnement": "Électrique (EPB)"
+    }
   },
-
   "equipements": {
     "interieur": [
-      "Toit ouvrant",
+      "Toit ouvrant panoramique",
       "Sièges en cuir",
-      "Sièges à réglages électriques",
-      "Sièges chauffants",
-      "Climatisation automatique",
-      "Vitres électriques",
-      "Direction assistée",
-      "Jantes en alliage",
-      "GPS / Navigation",
+      "Sièges à réglages électriques et chauffants",
+      "Climatisation automatique bi-zone",
+      "Écran tactile central 14.6”",
+      "Système audio 9 haut-parleurs",
+      "Reconnaissance vocale",
       "Démarrage sans clé (bouton Start)",
       "Accès mains libres",
-      "Verrouillage centralisé"
+      "Ambiance lumineuse intérieure"
     ],
     "securite": [
       "Caméra 360°",
-      "Radars de stationnement",
+      "Radars de stationnement AV/AR",
       "Régulateur de vitesse adaptatif (ACC)",
-      "ABS (freinage antiblocage)",
-      "Contrôle de stabilité (ESP)",
-      "Surveillance pression des pneus (TPMS)",
-      "Projecteurs antibrouillard",
-      "Airbag conducteur",
-      "Airbag passager",
-      "Airbags latéraux"
+      "Assistance au maintien de voie (LKA)",
+      "Freinage d’urgence automatique (AEB)",
+      "ABS + ESP",
+      "TPMS (surveillance pression pneus)",
+      "Airbags frontaux et latéraux",
+      "Projecteurs antibrouillard"
     ],
     "connectivite": [
       "Bluetooth",
-      "Navigation & services connectés"
+      "Navigation GPS intégrée",
+      "Ports USB / USB-C",
+      "Services connectés"
     ]
   },
-
   "garantie": "Garantie importateur 2 ans",
   "localisation": "Chine",
-  "disponibilite": "Livraison au port de destination : ~45 jours"
+  "disponibilite": "Livraison au port de destination : 45 jours"
 }
