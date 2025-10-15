@@ -48,11 +48,8 @@
     "places": "5 places",
     "volumeCoffre": "560 L / 1485 L (sièges rabattus)",
 
-    "dimensions": {
-      "longueur": "4680–4685 mm",
-      "largeur": "1886 mm",
-      "hauteur": "1730 mm",
-      "empattement": "2738 mm"
+    "dimensions": "4680 × 1886 × 1730 mm",
+    "empattement": "2738 mm"
     },
     "pneus": "235/55 R19 (selon version)"
   },
