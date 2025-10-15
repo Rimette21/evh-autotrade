@@ -15,7 +15,6 @@
   },
   "caracteristiques": [
     "SUV hybride rechargeable (PHEV)",
-    "Double motorisation essence + électrique",
     "Autonomie électrique 120 km (CLTC)",
     "Transmission DHT – traction avant (FWD)",
     "Puissance combinée 265 kW (360 ch)",
@@ -25,8 +24,8 @@
   "specifications": {
     "motorisation": {
       "type": "Hybride rechargeable (PHEV)",
-      "moteurThermique": "1.5 L Turbo L4 essence (156 ch / 115 kW)",
-      "moteurElectrique": "Moteur synchrone à aimants permanents 150 kW (204 ch)",
+      "moteurThermique": "1.5 L Turbo L4 (156 ch / 115 kW)",
+      "moteurElectrique": "150 kW (204 ch)",
       "puissanceTotale": "265 kW (360 ch)",
       "coupleTotal": "530 Nm",
       "transmission": "DHT",
@@ -37,8 +36,7 @@
       "acceleration": "≈ 7.0 s (0–100 km/h)"
     },
     "batterie": {
-      "type": "LFP (Lithium Fer Phosphate)",
-      "fournisseur": "CALB",
+      "type": "LFP (CALB)",
       "autonomieCLTC": "120 km",
       "autonomieWLTC": "93 km",
       "rechargeRapide": "Jusqu’à 45 kW",
@@ -69,20 +67,20 @@
     "securite": [
       "Airbags frontaux et latéraux",
       "Caméra 360°",
-      "Radar de stationnement AV/AR",
-      "Régulateur de vitesse adaptatif",
-      "Freinage d'urgence automatique",
-      "Assistance conduite niveau 2"
+      "Radars AV/AR",
+      "ACC, AEB, L2",
+      "TPMS"
     ],
     "connectivite": [
       "Bluetooth",
-      "GPS intégré",
+      "GPS",
       "Apple CarPlay / Huawei HiCar",
-      "Accès et démarrage sans clé",
-      "Contrôle à distance via application"
+      "Accès & démarrage sans clé",
+      "Contrôle à distance via app"
     ]
   },
+   "resume": "Le Chery Tiggo7 C-DM 2025 offre une grande autonomie électrique urbaine (120 km CLTC), de belles performances hybrides (360 ch) et un équipement de sécurité L2 complet, dans un format SUV moderne et efficient.",
   "garantie": "Garantie importateur 2 ans (voir conditions dans CGV)",
-  "localisation": "Zhangjiakou, Hebei, Chine",
   "disponibilite": "Livraison au port de destination : 45 jours"
+
 }
