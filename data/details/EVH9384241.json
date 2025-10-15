@@ -19,18 +19,18 @@
   "caracteristiques": [
     "SUV hybride rechargeable (PHEV)",
     "Autonomie électrique 110 km (CLTC)",
-    "Transmission 2DHT (e-CVT)",
+    "Transmission 2DHT (e-CVT) – FWD",
     "Puissance combinée 238 kW (320 ch)",
     "Couple maximal 595 Nm",
-    "Batterie lithium-ion NCM 19,9 kWh",
+    "Batterie lithium-ion NCM 19.9 kWh",
     "Caméra 360° + radars AV/AR",
-    "Régulateur de vitesse adaptatif (ACC)"
+    "ACC & ADAS"
   ],
   "specifications": {
     "motorisation": {
       "type": "Hybride rechargeable (PHEV)",
-      "moteurThermique": "1.5 L Turbo L4 essence (116 ch / 85 kW)",
-      "moteurElectrique": "Moteur synchrone 80 kW (110 ch)",
+      "moteurThermique": "1.5 L Turbo L4 (116 ch / 85 kW)",
+      "moteurElectrique": "80 kW (110 ch)",
       "puissanceSysteme": "238 kW (320 ch)",
       "coupleSysteme": "595 Nm",
       "transmission": "2DHT (e-CVT)",
@@ -42,56 +42,51 @@
       "consommationHybride": "1.58 L/100 km (WLTC)"
     },
     "batterie": {
-      "type": "Lithium-ion NCM",
+      "type": "Li-ion NCM",
       "capacite": "19.94 kWh",
       "autonomieCLTC": "110 km",
       "rechargeAC": "6.6 kW – 1.5 à 2.6 h",
-      "rechargeDC": "34 kW – charge rapide disponible"
+      "rechargeDC": "34 kW – charge rapide"
     },
     "dimensions": "4685 × 1886 × 1730 mm",
     "empattement": "2738 mm",
     "poids": "≈ 1850 kg",
-    "volumeCoffre": "560–1485 L (sièges rabattus)",
+    "volumeCoffre": "560–1485 L",
     "pneus": "235/55 R19",
     "chassis": {
       "suspensionAvant": "Indépendante MacPherson",
       "suspensionArriere": "Indépendante multibras",
-      "freins": "Disques ventilés avant/arrière",
+      "freins": "Disques ventilés AV/AR",
       "freinStationnement": "Électrique (EPB)"
     }
   },
   "equipements": {
     "interieur": [
       "Toit ouvrant panoramique",
-      "Sièges en cuir",
-      "Sièges à réglages électriques et chauffants",
+      "Sièges en cuir chauffants à réglages électriques",
       "Climatisation automatique bi-zone",
       "Écran tactile central 14.6”",
-      "Système audio 9 haut-parleurs",
-      "Reconnaissance vocale",
-      "Démarrage sans clé (bouton Start)",
-      "Accès mains libres",
-      "Ambiance lumineuse intérieure"
+      "Système audio 9 HP",
+      "Démarrage sans clé",
+      "Ambiance lumineuse"
     ],
     "securite": [
       "Caméra 360°",
-      "Radars de stationnement AV/AR",
-      "Régulateur de vitesse adaptatif (ACC)",
-      "Assistance au maintien de voie (LKA)",
-      "Freinage d’urgence automatique (AEB)",
+      "Radars AV/AR",
+      "ACC, LKA, AEB",
       "ABS + ESP",
-      "TPMS (surveillance pression pneus)",
-      "Airbags frontaux et latéraux",
-      "Projecteurs antibrouillard"
+      "TPMS",
+      "Airbags frontaux et latéraux"
     ],
     "connectivite": [
       "Bluetooth",
-      "Navigation GPS intégrée",
-      "Ports USB / USB-C",
+      "Navigation GPS",
+      "USB / USB-C",
       "Services connectés"
     ]
   },
+  "resume": "Le Haval H6 PHEV 2024 associe 110 km d’autonomie électrique CLTC à une chaîne hybride puissante (320 ch / 595 Nm) et un équipement ADAS complet, idéal pour un usage quotidien efficient et confortable.",
   "garantie": "Garantie importateur 2 ans",
-  "localisation": "Chine",
   "disponibilite": "Livraison au port de destination : 45 jours"
+
 }
