@@ -4,7 +4,6 @@
   "priceFCR": "21 490 €",
   "mileage": 13000,
   "regyear": "2024-05",
-
   "images": {
     "hero": "images/EVH9336933_JETOUR_DEVANT.webp",
     "gallery": [
@@ -13,7 +12,6 @@
       "images/EVH9336933_JETOUR_TABBORD.png"
     ]
   },
-
   "caracteristiques": [
     "Hybride rechargeable (PHEV)",
     "Autonomie électrique 100 km",
@@ -36,16 +34,29 @@
     "Sièges chauffants/ventilés",
     "5 places"
   ],
-
   "specifications": {
-    "moteur": "1.5T 156HP L4",
-    "engineCc": 1499,
-    "transmission": "DHT (3DHT)",
-    "traction": "2WD",
-    "capaciteBatterie": "19.27 kWh",
-    "autonomieElectrique": "100 km",
-    "typeCarrosserie": "SUV",
-    "couleur": "Noir",
+    "moteurThermique": "1.5L turbo 4 cylindres",
+    "puissanceThermique": "156 ch (115 kW)",
+    "typeHybride": "Hybride rechargeable (PHEV) i-DM avec 3DHT",
+    "puissanceElectrique": "125 kW (~170 ch)",
+    "puissanceSysteme": "286 ch (210 kW)",
+    "coupleSysteme": "545 N·m",
+    "transmission": "3DHT (3 vitesses dédiée hybride)",
+    "traction": "Traction avant (2WD)",
+    "typeBatterie": "Lithium ternary NCM",
+    "batterieKWh": "19.27 kWh",
+    "autonomieNEDC": "100 km",
+    "autonomieWLTP": "-",
+    "autonomieTotale": "-",
+    "rechargeDCkW": "-",
+    "rechargeACkW": "-",
+    "tempsRechargeAC": "-",
+    "tempsRechargeDC": "-",
+    "refroidissementBatterie": "Liquide",
+    "consommationElectrique": "21.2 kWh/100 km (hybride)",
+    "places": "5 places",
+    "portes": "5 portes",
+    "volumeCoffre": "-",
     "dimensions": {
       "longueur": "4590 mm",
       "largeur": "1900 mm",
@@ -53,10 +64,22 @@
       "empattement": "2720 mm"
     },
     "poids": "1810 kg",
-    "places": "5",
-    "portes": "5"
+    "capaciteMax": "-",
+    "vitesseMax": "180 km/h",
+    "acceleration0100": "-",
+    "reservoir": "60 L",
+    "normeEmission": "CHN VI (équivalent Euro 6)",
+    "suspension": "McPherson AV / Multibras AR indépendants",
+    "freins": "-",
+    "airbags": "Conducteur, passager, rideaux AV/AR",
+    "climatisation": "Automatique",
+    "connectivite": "Bluetooth, GPS, Accès/démarrage sans clé, Verrouillage centralisé",
+    "multimedia": "Écran tactile 15.6\", 8 haut-parleurs",
+    "v2l": "3000 W (alimentation externe)",
+    "chargeSansFil": "40 W",
+    "feux": "LED (route et croisement)",
+    "resume": "SUV compact hybride rechargeable alliant puissance (545 N·m), autonomie électrique (100 km) et confort high-tech, idéal pour usage urbain et périurbain."
   },
-
   "equipements": {
     "interieur": [
       "Sièges en cuir",
@@ -83,9 +106,7 @@
       "Verrouillage centralisé"
     ]
   },
-
   "garantie": "Garantie importateur 2 ans (voir conditions dans CGV)",
   "localisation": "Chine",
   "disponibilite": "Livraison au port de destination : 45 jours"
 }
-
