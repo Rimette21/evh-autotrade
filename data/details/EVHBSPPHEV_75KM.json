@@ -27,6 +27,7 @@
     "motorisation": {
       "type": "Hybride rechargeable (DM-i)",
       "moteurThermique": "1.5L BYD472QC atmosphérique – 74 kW (101 ch) / 126 Nm",
+       "engineCc": 1498,
       "moteurElectrique": "Avant, synchrone à aimant permanent – 160 kW / 260 Nm",
       "transmission": "e-CVT (DM-i) – traction avant (2WD)"
     },
