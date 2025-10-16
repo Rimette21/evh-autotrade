@@ -23,10 +23,11 @@
     "Sièges avant chauffants"
   ],
   "specifications": {
+     "engineCc": 1498,
     "motorisation": {
       "type": "Hybride rechargeable (DM-i)",
       "moteurThermique": "1.5 L essence + générateur",
-       "engineCc": 1498,
+      
       "moteurElectrique": "Synchrone à aimant permanent (avant)",
       "transmission": "e-CVT (DHT) – traction avant (2WD)",
       "puissanceSysteme": "—"
