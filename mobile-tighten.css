@@ -384,7 +384,6 @@
    ========================================================= */
 @media (max-width: 680px){
   /* évite toute barre de scroll horizontale sur la fiche */
-  body.page-vehicle{ overflow-x: hidden; }
 
   /* le conteneur et la carte image ne laissent rien dépasser */
   .container--page{ overflow-x: hidden; }
