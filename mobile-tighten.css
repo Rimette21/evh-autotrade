@@ -148,7 +148,7 @@
 @media (max-width: 680px){
   /* Images de cartes plus grandes pour la lisibilité produit */
   .thumb{
-    height: 260px;                 /* était 220px */
+    height: 100%;                 /* était 220px */
     object-fit: contain;
     object-position: center;
   }
