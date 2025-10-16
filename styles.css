@@ -358,7 +358,7 @@ body.page-vehicle{ overflow-x:hidden; }
 .spec-item{font-size:.88rem}
 .spec-label{color:var(--muted);display:block;margin-bottom:.12rem}
 .spec-value{display:block;font-weight:600;color:var(--muted-2)}
-.spec-compact .spec-value{font-size:.86rem;white-space:nowrap}
+.spec-compact .spec-value{font-size:.86rem;}
 .divider{height:1px;background:#eef2f7;margin:.75rem 0}
 
 .equip-card{padding:1rem;margin-top:1rem}
