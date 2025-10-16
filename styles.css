@@ -318,8 +318,6 @@ body.page-vehicle { background:#F6F7FB; }
 /* Détail : retirer l'encadré blanc du bloc CTA */
 .page-vehicle .cta-card{ background:transparent; box-shadow:none; border:0; padding:0; }
 
-/* Empêcher tout débordement horizontal sur mobile */
-body.page-vehicle{ overflow-x:hidden; }
 
 .container--page{max-width:var(--container); margin:1.5rem auto; padding:0 1.25rem}
 .back-link{display:inline-block;color:#0e1726;text-decoration:none;font-weight:600;margin-bottom:1rem}
