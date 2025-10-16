@@ -302,18 +302,45 @@
         </div>
       `;
 
-      /* ===== Essentials (Reg. Year / cc / km / fuel / transm.) ===== */
-      const engineCc = (specs.engineCc != null && specs.engineCc !== '') ? specs.engineCc : null;
-      const transmShort = shortTransm(specs.transmission || data.transmission);
-      const essentialsHTML = `
-        <div class="essentials">
-          <div class="ess-item"><span class="ess-label">Reg. Year</span><span class="ess-value">${year}</span></div>
-          <div class="ess-item"><span class="ess-label">Engine (cc)</span><span class="ess-value">${fmt(engineCc)}</span></div>
-          <div class="ess-item"><span class="ess-label">Mlg (km)</span><span class="ess-value">${mileageStr}</span></div>
-          <div class="ess-item"><span class="ess-label">Fuel</span><span class="ess-value">${fuel}</span></div>
-          <div class="ess-item"><span class="ess-label">Transm.</span><span class="ess-value">${fmt(transmShort)}</span></div>
-        </div>
-      `;
+     /* ===== Essentials (Reg. Year / cc / km / fuel / transm.) ===== */
+function pick(...vals){
+  for (const v of vals){ if (v !== undefined && v !== null && String(v).trim() !== '') return v; }
+  return null;
+}
+
+function extractCcFromText(txt){
+  if(!txt) return null;
+  // 1) "1499 cc"
+  const m1 = String(txt).match(/\b(\d{3,4})\s?cc\b/i);
+  if (m1) return m1[1];
+  // 2) "1.5 L" (on n’affiche pas une valeur calculée approximative ici)
+  return null;
+}
+
+// Fallbacks multi-sources
+const engineCcRaw = pick(
+  specs.engineCc,               // schéma actuel
+  data.engineCc,                // au cas où
+  extractCcFromText(M.moteurThermique || specs.moteur) // extraction texte
+);
+
+const transmRaw = pick(
+  M.transmission,               // nouveau schéma
+  specs.transmission,           // ancien schéma
+  data.transmission             // au cas où
+);
+const transmShort = shortTransm(transmRaw);
+
+const essentialsHTML = `
+  <div class="essentials">
+    <div class="ess-item"><span class="ess-label">Reg. Year</span><span class="ess-value">${year}</span></div>
+    <div class="ess-item"><span class="ess-label">Engine (cc)</span><span class="ess-value">${fmt(engineCcRaw)}</span></div>
+    <div class="ess-item"><span class="ess-label">Mlg (km)</span><span class="ess-value">${mileageStr}</span></div>
+    <div class="ess-item"><span class="ess-label">Fuel</span><span class="ess-value">${fuel}</span></div>
+    <div class="ess-item"><span class="ess-label">Transm.</span><span class="ess-value">${fmt(transmShort)}</span></div>
+  </div>
+`;
+
 
       /* ===== Rendu ===== */
       root.innerHTML =
