@@ -10,7 +10,7 @@
   .header-inner{ padding: 0 .8rem; }
   .logo img{ height: 44px; }                /* ↓ 52 -> 44 */
   .brand .evh, .brand .autotrade{
-    font-size: clamp(.88rem, 2.4vw, 1.02rem); /* ↓ taille texte logo */
+    font-size: clamp(1rem, 2.4vw, 1.02rem); /* ↓ taille texte logo */
     letter-spacing: .25px;
   }
   .brand{ gap: .2rem; }
@@ -305,7 +305,7 @@
   .brand{ gap: .28rem; }
   .brand .evh{ display: inline !important; }        /* on ré-affiche EVH */
   .brand .evh, .brand .autotrade{
-    font-size: clamp(.88rem, 2.2vw, 1.02rem);       /* très léger + lisible */
+    font-size: clamp(1rem, 2.2vw, 1.02rem);       /* très léger + lisible */
     letter-spacing: .25px;
   }
 }
@@ -313,7 +313,7 @@
   .logo img{ height: 44px; }                        /* était 40px */
   .brand .evh{ display: inline !important; }        /* ne plus masquer */
   .brand .evh, .brand .autotrade{
-    font-size: .88rem;                               /* compact sur très petits écrans */
+    font-size: 1rem;                               /* compact sur très petits écrans */
   }
 }
 
