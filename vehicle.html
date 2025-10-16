@@ -4,16 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Détail véhicule — E.V.H. Autotrade</title>
-  <link rel="stylesheet" href="styles.css?v=16">
+  <link rel="stylesheet" href="styles.css?v=17">
   <link rel="stylesheet" href="mobile-tighten.css">
 </head>
 <body class="page-vehicle">
   <!-- HEADER -->
-<header>
+  <header>
     <div class="header-inner">
       <div class="logo-wrap">
         <div class="logo">
-<img src="images/EVH_logo-removebg-preview.png" alt="E.V.H. AUTOTRADE">        </div>
+          <img src="images/EVH_logo-removebg-preview.png" alt="E.V.H. AUTOTRADE">
+        </div>
         <div class="brand">
           <span class="evh">E.V.H.</span>
           <span class="autotrade">Autotrade</span>
@@ -23,10 +24,10 @@
       <nav class="nav" aria-label="Navigation principale">
         <ul>
           <li><a href="index.html">Accueil</a></li>
-          <li><a href="#catalogue">Catalogue</a></li>
-          <li><a href="#avantages">Avantages</a></li>
-          <li><a href="#">À propos</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="index.html#catalogue">Catalogue</a></li>
+          <li><a href="index.html#avantages">Avantages</a></li>
+          <li><a href="index.html#apropos">À propos</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
         </ul>
       </nav>
 
@@ -46,10 +47,10 @@
           <nav class="drawer-nav">
             <ul>
               <li><a href="index.html">Accueil</a></li>
-              <li><a href="#catalogue">Catalogue</a></li>
-              <li><a href="#avantages">Avantages</a></li>
-              <li><a href="#">À propos</a></li>
-              <li><a href="#">Contact</a></li>
+              <li><a href="index.html#catalogue">Catalogue</a></li>
+              <li><a href="index.html#avantages">Avantages</a></li>
+              <li><a href="index.html#apropos">À propos</a></li>
+              <li><a href="index.html#contact">Contact</a></li>
             </ul>
           </nav>
         </div>
@@ -171,57 +172,94 @@
       const energie = isPHEV ? 'PHEV' : 'BEV';
       const fuel = fuelLabel(data, isPHEV);
 
+      // ---------- Construction des spécifications (nouveau + ancien schéma) ----------
       const specs = data.specifications || {};
       const items = [];
-      function add(label, value){ if (value !== undefined && value !== null && value !== '') items.push({ label, value }); }
+      const add = (label, value) => {
+        const v = clean(value);
+        if (v || v === "0") items.push({ label, value: v });
+      };
 
-      add('Moteur', specs.moteur || '-');
-add('Puissance thermique', specs.puissanceThermique || '-');
-add('Puissance système', specs.puissanceSysteme || '-');
-add('Puissance électrique', specs.puissanceElectrique || '-');
-add('Couple combiné', specs.coupleSysteme || '-');
-add('Batterie', specs.batterieKWh ? `${specs.batterieKWh} kWh` : '-');
-add('Recharge AC', specs.rechargeACkW ? `${specs.rechargeACkW} kW` : '-');
-add('Recharge DC', specs.rechargeDCkW ? `${specs.rechargeDCkW} kW` : '-');
-add('Volume coffre', specs.volumeCoffre || '-');
-      const puissance = clean(specs.puissance || specs.puissanceSysteme || specs.puissanceMoteur || specs.power);
+      // Raccourcis (nouveau schéma)
+      const M  = specs.motorisation || {};
+      const P  = specs.performances || {};
+      const B  = specs.batterie || {};
+      const C  = specs.carrosserie || {};
+
+      // Motorisation / puissance
+      add('Moteur', M.moteurThermique || specs.moteur || '-');
+      add('Puissance thermique', specs.puissanceThermique || (M.moteurThermique && M.moteurThermique.match(/\b\d+\s?(ch|kW)/i)?.[0]) || '-');
+      add('Puissance électrique', specs.puissanceElectrique || (M.moteurElectrique && M.moteurElectrique.match(/\b\d+\s?kW/i)?.[0]) || '-');
+      add('Puissance système', specs.puissanceSysteme || M.puissanceCombinée || '-');
+      add('Couple combiné', specs.coupleSysteme || P.couple || M.coupleCombiné || '-');
+
+      // Batterie / recharge (nouveau ou ancien)
+      const capBatterie = B.capacite || specs.capaciteBatterie || specs.batterieKWh;
+      add('Batterie', capBatterie ? String(capBatterie).replace(/kwh\s*kwh/i,'kWh') : '-');
+      add('Recharge AC', B.rechargeAC || (specs.rechargeACkW ? `${specs.rechargeACkW} kW` : null) || '-');
+      add('Recharge DC', B.rechargeDC || (specs.rechargeDCkW ? `${specs.rechargeDCkW} kW` : null) || '-');
+
+      add('Volume coffre', specs.volumeCoffre || specs.coffre || '-');
+
+      // Puissance moteur (fallback large)
+      const puissance = clean(
+        specs.puissance ||
+        specs.puissanceSysteme ||
+        specs.puissanceMoteur ||
+        M.puissance ||
+        P.puissance ||
+        specs.power
+      );
       add('Puissance moteur', puissance || '-');
 
-      add('Transmission', specs.transmission || '-');
-
-      let traction = specs.traction || '';
-      if (!traction && specs.transmission){
-        const m = String(specs.transmission).match(/(traction\s+(avant|arrière|intégrale))|(\b(2wd|4wd|awd)\b)/i);
+      // Transmission / Traction
+      add('Transmission', M.transmission || specs.transmission || '-');
+      let traction = M.traction || specs.traction || '';
+      if (!traction && (M.transmission || specs.transmission)){
+        const m = String(M.transmission || specs.transmission).match(/(traction\s+(avant|arrière|intégrale))|(\b(2wd|4wd|awd)\b)/i);
         if (m) traction = m[0].replace(/2wd/i,'2WD').replace(/4wd/i,'4WD').replace(/awd/i,'AWD');
       }
       add('Traction', traction || '-');
 
-      // Autonomie: prend la meilleure dispo
-      const autoElec = clean(specs.autonomieElectrique) ||
-                       clean(specs.autonomieWLTP) ||
-                       clean(specs.autonomieCLTC) ||
-                       clean(specs.autonomieEPA);
+      // Autonomie EV
+      const autoElec =
+        clean(specs.autonomieElectrique) ||
+        clean(P.autonomieCLTC) ||
+        clean(B.autonomieCLTC) ||
+        clean(specs.autonomieWLTP) ||
+        clean(specs.autonomieCLTC) ||
+        clean(specs.autonomieEPA);
       add('Autonomie électrique', autoElec || '-');
 
-      add('Type de carrosserie', specs.typeCarrosserie || 'SUV');
-      add('Places', specs.places || '5 places');
+      // Carrosserie / places
+      add('Type de carrosserie', C.type || specs.typeCarrosserie || 'SUV');
+      add('Places', C.places || specs.places || '5 places');
 
-      const couleurRaw = specs.couleur || specs.Couleur || data.couleur || '';
+      // Couleur
+      const couleurRaw = specs.couleur || specs.Couleur || data.couleur || C.couleur || '';
       if (couleurRaw) add('Couleur', swatchHTML(couleurRaw));
 
-      if (specs.dimensions){
-        const dims = [specs.dimensions.longueur, specs.dimensions.largeur, specs.dimensions.hauteur]
+      // Dimensions (chaîne OU ancien objet)
+      let dimsLine = '';
+      if (typeof specs.dimensions === 'string') {
+        dimsLine = specs.dimensions;
+      } else if (specs.dimensions) {
+        dimsLine = [specs.dimensions.longueur, specs.dimensions.largeur, specs.dimensions.hauteur]
           .filter(Boolean).join(' × ');
-        if (dims) add('Dimensions (L×l×H)', dims);
+        if (dimsLine) dimsLine += ' mm';
       }
-      if (specs.poids || specs.capaciteMax){
-        add('Poids / Capacité max', [specs.poids, specs.capaciteMax].filter(Boolean).join(' / '));
-      }
+      if (dimsLine) add('Dimensions (L×l×H)', dimsLine);
+      if (specs.empattement) add('Empattement', specs.empattement);
+
+      // Poids / PTAC
+      const poids = specs.poids || specs.poidsATVide || null;
+      const ptac  = specs.capaciteMax || specs.ptac || null;
+      if (poids || ptac) add('Poids / Capacité max', [poids, ptac].filter(Boolean).join(' / '));
 
       const specsHTML = items.map(it =>
         '<div class="spec-item">'+
           '<span class="spec-label">'+it.label+'</span>'+
-          '<span class="spec-value">'+it.value+'</span>'+
+          '<span class="spec-value">'+(it.value || '—')+'</span>'+
         '</div>'
       ).join('');
 
@@ -230,6 +268,7 @@ add('Volume coffre', specs.volumeCoffre || '-');
       const allEquip = []
         .concat(eq.interieur || [])
         .concat(eq.securite  || [])
+        .concat(eq.assistance || [])   // pris en compte désormais
         .concat(eq.connectivite || []);
 
       const equipHtml = allEquip.length ? `
@@ -245,6 +284,15 @@ add('Volume coffre', specs.volumeCoffre || '-');
           </div>
         </div>
       ` : '';
+
+      // Résumé -> Disponibilité -> Garantie
+      const rdgHtml = `
+        <div class="card-box note-card">
+          ${data.resume ? `<p class="v-resume">${data.resume}</p>` : ''}
+          ${data.disponibilite ? `<p><strong>Disponibilité :</strong> ${data.disponibilite}</p>` : ''}
+          ${data.garantie ? `<p><strong>Garantie :</strong> ${data.garantie}</p>` : ''}
+        </div>
+      `;
 
       const ctaHtml = `
         <div class="card-box cta-card">
@@ -296,7 +344,9 @@ add('Volume coffre', specs.volumeCoffre || '-');
             '<div class="specs-grid spec-compact">'+specsHTML+'</div>'+
           '</div>'+
         '</div>' +
-        equipHtml + ctaHtml;
+        equipHtml +
+        rdgHtml +       /* Résumé + disponibilité + garantie */
+        ctaHtml;
 
       /* ===== Lightbox ===== */
       const galleryImgs = Array.from(document.querySelectorAll('#gallery img'));
@@ -352,7 +402,7 @@ add('Volume coffre', specs.volumeCoffre || '-');
   })();
   </script>
 
-  <footer class="site-footer">
+  <footer class="site-footer" id="contact">
     <div class="footer-wrap">
       <div class="f-brand">
         <img src="images/EVH_logo.png" alt="EVH Autotrade" class="f-logo">
@@ -394,7 +444,9 @@ add('Volume coffre', specs.volumeCoffre || '-');
     </div>
   </footer>
 
-  <style>/* 1) Base responsive */
+  <!-- Petits correctifs CSS "anti-débordement" inclus -->
+  <style>
+/* 1) Base responsive */
 html { box-sizing: border-box; }
 *, *::before, *::after { box-sizing: inherit; }
 img, video { max-width: 100%; height: auto; display: block; }
@@ -415,15 +467,12 @@ pre, code { white-space: pre-wrap; }
 .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 
 /* 6) Iframe responsive avec ratio */
-.embed {
-  position: relative; width: 100%; aspect-ratio: 16 / 9;
-}
-.embed iframe {
-  position: absolute; inset: 0; width: 100%; height: 100%;
-}
+.embed { position: relative; width: 100%; aspect-ratio: 16 / 9; }
+.embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; }
 
-/* 7) Dernier recours (à éviter en “permanent fix”) */
-</style>
-  
+/* Résumé */
+.v-resume { font-size: 1.05rem; line-height: 1.5; margin-bottom: .5rem; }
+.note-card p { margin: .25rem 0; }
+  </style>
 </body>
 </html>
