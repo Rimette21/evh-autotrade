@@ -66,8 +66,7 @@
     "freins": "Frein de stationnement électrique",
     "airbags": "Conducteur, passager, latéraux",
     "climatisation": "Automatique",
-    "connectivite": "Bluetooth, Navigation/GPS, Accès et démarrage sans clé",
-    "resume": "SUV électrique compact offrant plus de 500 km d’autonomie (CLTC), une recharge rapide (130 kW), et un intérieur haut de gamme."
+    "connectivite": "Bluetooth, Navigation/GPS, Accès et démarrage sans clé"
   },
   "equipements": {
     "interieur": [
@@ -89,6 +88,7 @@
       "Accès et démarrage sans clé"
     ]
   },
+   "resume": "SUV électrique compact offrant plus de 500 km d’autonomie (CLTC), une recharge rapide (130 kW), et un intérieur haut de gamme.",
   "garantie": "Garantie importateur 2 ans (voir conditions dans CGV)",
   "disponibilite": "Livraison au port de destination : 45 jours"
 }
