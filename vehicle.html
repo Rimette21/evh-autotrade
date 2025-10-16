@@ -393,6 +393,38 @@ add('Volume coffre', specs.volumeCoffre || '-');
       <small>© <span id="y">2025</span> Eco Value Hub FZ-LLC — All rights reserved.</small>
     </div>
   </footer>
+
+  <style>/* 1) Base responsive */
+html { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: inherit; }
+img, video { max-width: 100%; height: auto; display: block; }
+iframe { max-width: 100%; }
+
+/* 2) Empêcher les longs textes de déborder */
+:root { word-wrap: break-word; overflow-wrap: anywhere; }
+pre, code { white-space: pre-wrap; }
+
+/* 3) Flex/Grid : permettre le shrink */
+.flex, [class*="flex"] > * { min-width: 0; }
+.grid, [class*="grid"] > * { min-width: 0; }
+
+/* 4) Éviter le piège 100vw (préfère 100%) */
+.container { width: 100%; max-width: 1200px; margin: 0 auto; }
+
+/* 5) Tables responsives */
+.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+/* 6) Iframe responsive avec ratio */
+.embed {
+  position: relative; width: 100%; aspect-ratio: 16 / 9;
+}
+.embed iframe {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+}
+
+/* 7) Dernier recours (à éviter en “permanent fix”) */
+html, body { overflow-x: hidden; } /* pour masquer le débordement résiduel */
+</style>
   
 </body>
 </html>
