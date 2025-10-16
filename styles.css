@@ -482,7 +482,7 @@ body.page-vehicle{ overflow-x:hidden; }
 
 /* -------- Hero CTA “Découvrez notre catalogue” (mobile) -------- */
 @media (max-width: 680px){
-  .hero-cta{ left:4.5%; bottom:14px; }
+  .hero-cta{ left:4.5%; bottom:35%; }
   .hero-cta .btn{
     padding: .6rem .9rem;
     min-height: 38px;
