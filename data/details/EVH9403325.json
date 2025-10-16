@@ -26,10 +26,11 @@
     "5 places"
   ],
   "specifications": {
+    "engineCc": 1499,
     "motorisation": {
       "type": "Hybride rechargeable (PHEV)",
       "moteurThermique": "1.5 L Turbo L4 (116 ch / 85 kW)",
-      "engineCc": 1499,
+      
       "moteursElectriques": "Deux moteurs électriques (total 220 kW)",
       "puissanceSysteme": "238 kW (≈320 ch)",
       "coupleSysteme": "595 Nm",
