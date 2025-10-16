@@ -8,7 +8,6 @@
     "hero": "images/EVH9384241_HAVALH6_devant.webp",
     "gallery": [
       "images/EVH9384241_HAVALH6_dev_gauche.png",
-      "images/EVH9384241_HAVALH6_devant.png",
       "images/EVH9384241_HAVALH6_dev_droite.png",
       "images/EVH9384241_HAVALH6_int_dev.png",
       "images/EVH9384241_HAVALH6_int.png",
@@ -18,6 +17,7 @@
   },
   "caracteristiques": [
     "SUV hybride rechargeable (PHEV)",
+    "engineCc": 1499,
     "Autonomie électrique 110 km (CLTC)",
     "Transmission 2DHT (e-CVT) – FWD",
     "Puissance combinée 238 kW (320 ch)",
@@ -30,7 +30,6 @@
     "motorisation": {
       "type": "Hybride rechargeable (PHEV)",
       "moteurThermique": "1.5 L Turbo L4 (116 ch / 85 kW)",
-      "engineCc": 1499,
       "moteurElectrique": "80 kW (110 ch)",
       "puissanceSysteme": "238 kW (320 ch)",
       "coupleSysteme": "595 Nm",
