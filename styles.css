@@ -7,7 +7,6 @@
 
 /* ---------- Variables & reset ---------- */
 :root{
-  --bg:#e5b34a;
   --text:#1a1f25;
   --muted:#6b7280;
   --muted-2:#374151;
@@ -55,6 +54,8 @@ header{
   margin:0;
   padding:0 1rem;
   display:flex; align-items:center; justify-content:flex-start; gap:.75rem;
+   margin-left:auto;
+   margin-right:auto;
 }
 
 /* Logo (image + marque) */
@@ -178,10 +179,11 @@ header{
   transform:translateZ(0); image-rendering:auto; backface-visibility:hidden; will-change:transform;
 }
 .hero-cta {
-  position: absolute;
-  left: 6%;
-  bottom: 60px; /* ↑ descendu de 28px à 60px */
-  z-index: 3;
+    position: absolute;
+    left: 6%;
+    bottom: 10%;
+    z-index: 3;
+    max-width: var(--container);
 }
 
 .hero-cta .btn {
@@ -204,10 +206,10 @@ header{
   .hero-static {
     height: 380px;
   }
-  .hero-cta {
-    left: 5%;
-    bottom: 50px;
-  }
+          .hero-cta {
+            bottom: 35%;
+        }
+   
   .hero-cta .btn {
     padding: 0.65rem 1.1rem;
     font-size: 0.9rem;
@@ -227,15 +229,19 @@ header{
   font-size:clamp(.95rem, 1.1vw, 1.05rem);
 }
 .section-title .accent{ 
-  background:linear-gradient(90deg,#f6d365 0%,#fda085 100%);
-  -webkit-background-clip:text; background-clip:text; color:transparent;
+  -webkit-background-clip:text; background-clip:text; color:#000;
 }
 
 /* =========================================================
    AVANTAGES (cards)
    ========================================================= */
 .advantages-lovable{background:#F9FBFF;padding:3rem 0}
-.adv2-head{text-align:center;margin-bottom:2rem}
+.adv2-head {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-left: 10px;
+    padding-right: 10px;
+}
 .adv2-title{font-size:clamp(1.5rem,2vw,2rem);font-weight:800;margin:0 0 .6rem}
 .adv2-sub{color:#6b7280;max-width:860px;margin:0 auto}
 .adv2-grid{
