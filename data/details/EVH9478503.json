@@ -27,6 +27,7 @@
     "motorisation": {
       "type": "Hybride rechargeable (PHEV)",
       "moteurThermique": "1.5 L L4 essence (110 ch / 81 kW)",
+      "engineCc": 1498,
       "moteurElectrique": "≈ 145 kW (puissance combinée 197 ch)",
       "transmission": "E-CVT (variateur continu électronique)",
       "traction": "Avant (FWD)"
