@@ -259,7 +259,7 @@
     font-size: clamp(1.06rem, 3.7vw, 1.30rem);
     line-height: 1.18;
     margin-bottom: .1rem;
-    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+     overflow: hidden; text-overflow: ellipsis;
   }
 
   /* Prix plus discret */
