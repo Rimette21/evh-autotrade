@@ -92,7 +92,7 @@
   }
   /* Galerie sous l’image : plus fine */
   .gallery img{
-    height: 96px;                  /* était 130px */
+    height: 100%;                  /* était 130px */
     border-radius: 10px;
   }
 
@@ -327,7 +327,7 @@
     margin-bottom: .9rem;
   }
   .gallery img{
-    height: 88px;                                   /* ↓ 96 → 88 */
+    height: 100%;                                   /* ↓ 96 → 88 */
     border-radius: 10px;
   }
 }
@@ -412,7 +412,7 @@
     margin-right: -1px;
   }
   .gallery img{
-    height: 86px;                  /* très léger - */
+    height: 100%;                  /* très léger - */
   }
 }
    @media (max-width: 680px) {
