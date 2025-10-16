@@ -190,7 +190,7 @@ header{
 .hero-cta .btn {
   box-shadow: 0 6px 16px rgba(229, 62, 62, 0.2); /* ombre un peu plus discrète */
   padding: 0.7rem 1.3rem; /* ↓ réduit (avant : 0.9rem 1.5rem) */
-  font-size: 14px; /* ajout explicite pour contrôle */
+  font-size: 16px; /* ajout explicite pour contrôle */
   font-weight: 700; /* un peu moins lourd que 800 → plus élégant */
   border-radius: 999px;
   background-color: #ff0000; /* assurez-vous que la couleur est bien définie */
