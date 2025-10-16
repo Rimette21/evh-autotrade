@@ -7,7 +7,7 @@
 
 /* ---------- Variables & reset ---------- */
 :root{
-  --text:#1a1f25;
+  --text:#000;
   --muted:#6b7280;
   --muted-2:#374151;
   --white:#fff;
@@ -19,7 +19,7 @@
   --container:1150px;
 
   /* Header & nav */
-  --hdr-bg:#1a1f25;
+  --hdr-bg:#000;
   --hdr-h:64px;
   --nav-overlay:rgba(0,0,0,.55);
   --drawer-bg:#0f141a;
@@ -288,10 +288,10 @@ header{
 }
 .card:hover{transform:translateY(-3px)}
 .thumb{
-  width:100%; height:220px; object-fit:contain; object-position:center; background:#F5FAFF;
+  width:100%; height:100%; object-fit:contain; object-position:center; background:#F5FAFF;
 }
-@media (max-width:680px){ .thumb{height:160px} }
-@media (max-width:420px){ .thumb{height:150px} }
+@media (max-width:680px){ .thumb{height:100%} }
+@media (max-width:420px){ .thumb{height:100%} }
 .body{padding:1rem}
 .name{font-size:1rem;font-weight:800;margin-bottom:.35rem}
 .submeta{color:var(--muted);font-size:.86rem;margin:.1rem 0 .35rem}
@@ -547,7 +547,7 @@ body.page-vehicle{ overflow-x:hidden; }
   background: #f9f9f9;
   padding: 10px 12px;
   border-radius: 6px;
-  margin: 12px 0;
+  margin: 0px 0;
   font-size: 12px;
   gap: 8px;
 }
@@ -622,10 +622,6 @@ body.page-vehicle{ overflow-x:hidden; }
   text-overflow: ellipsis;
 }
 
-
-article.card {
-    padding-top: .9rem;
-}
 
 
 /* Fuel en vert — déjà défini dans le HTML avec style="color: #00aa00" */
