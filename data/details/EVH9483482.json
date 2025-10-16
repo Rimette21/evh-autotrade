@@ -1,6 +1,6 @@
 {
   "id": "EVH9483482",
-  "name": "Geely Galaxy E5 BEV",
+  "name": "2025 Geely Galaxy E5 BEV",
   "priceFCR": "24 350 €",
   "mileage": 25000,
   "regyear": "2024-08",
@@ -13,65 +13,73 @@
       "images/EVH9483482_GeelyGalaxy_arriere.png"
     ]
   },
-  "features": [
-    "100% électrique (BEV)",
-    "Autonomie 440–530 km (CLTC) selon batterie",
-    "Recharge DC 110 kW (30→80% ~ 0,3 h), AC 7–11 kW",
-    "Aides à la conduite (selon version)"
+  "caracteristiques": [
+    "SUV 100% électrique (BEV)",
+    "Autonomie 440 à 530 km (CLTC) selon batterie",
+    "Recharge rapide DC 110 kW (30→80% ~18 min)",
+    "Moteur 160 kW (218 ch)",
+    "Technologie Aegis Short Blade LFP",
+    "Systèmes d’aide à la conduite L2 (selon version)"
   ],
   "specifications": {
     "motorisation": {
-      "type": "Synchrone à aimants permanents (PMSM)",
+      "type": "Électrique (BEV)",
+      "moteur": "Synchrone à aimants permanents (PMSM)",
       "puissance": "160 kW (218 ch)",
       "couple": "320 Nm",
-      "traction": "Avant",
-      "0-100": "6,9 s",
+      "transmission": "Automatique",
+      "traction": "Avant (FWD)",
+      "acceleration": "6.9 s (0–100 km/h)",
       "vitesseMax": "180 km/h"
     },
     "batterie": {
-      "chimie": "LFP (Aegis Short Blade)",
-      "capacites": ["49,52 kWh", "60,22 kWh"],
-      "autonomieCLTC": ["440 km", "530 km"],
-      "recharge": {
-        "AC": "7–11 kW",
-        "DC": "110 kW",
-        "30-80%": "~ 0,3 h"
-      }
+      "type": "LFP (Aegis Short Blade)",
+      "capacites": "49.52 kWh ou 60.22 kWh",
+      "autonomieCLTC": "440 à 530 km selon version",
+      "rechargeDC": "30–80% ~18 min (110 kW)",
+      "rechargeAC": "7–11 kW (environ 6–8 h)",
+      "consommation": "≈ 11.9 kWh/100 km",
+      "refroidissement": "Liquide (CTB – Cell to Body)"
     },
-    "dimensions": {
-      "longueur": "4615 mm",
-      "largeur": "1901 mm",
-      "hauteur": "1670 mm",
-      "empattement": "2750 mm"
-    },
-    "coffre": "461–1877 L",
+    "dimensions": "4615 × 1901 × 1670 mm",
+    "empattement": "2750 mm",
     "poids": "1615–1740 kg",
-    "places": 5,
-    "portes": 5
+    "volumeCoffre": "461–1877 L",
+    "carrosserie": {
+      "type": "SUV compact",
+      "portes": 5,
+      "places": 5
+    },
+    "architecture": {
+      "tension": "400 V",
+      "efficacite": "≈ 90%"
+    }
   },
   "equipements": {
+    "interieur": [
+      "Écran tactile central (système Flyme Auto)",
+      "Tableau de bord numérique",
+      "Climatisation automatique",
+      "Sellerie tissu ou similicuir (selon version)"
+    ],
     "securite": [
-      "Airbags frontaux/latéraux/rideaux",
-      "ESP, contrôle de traction",
+      "Airbags frontaux, latéraux et rideaux",
       "Freinage automatique d’urgence (AEB)",
+      "ESP et contrôle de traction",
       "Surveillance des angles morts (selon version)"
     ],
     "assistance": [
-      "Régulateur de vitesse adaptatif (selon version)",
-      "Aide au maintien de voie",
-      "Caméra de recul / vision périphérique (selon version)"
-    ],
-    "interieur": [
-      "Écran central tactile",
-      "Tableau de bord numérique",
-      "Climatisation automatique",
-      "Sellerie tissu/similicuir (selon version)"
+      "Régulateur de vitesse adaptatif (ACC)",
+      "Aide au maintien de voie (LKA)",
+      "Caméra de recul / vision 360° (selon version)"
     ],
     "connectivite": [
       "Bluetooth / USB",
-      "Services connectés / Navigation (selon version)"
+      "Navigation GPS et services connectés",
+      "Commandes vocales AI Elf"
     ]
   },
-  "garantie": "Garantie importateur 2 ans",
-  "disponibilite": "Transport inclus au port — ≈45 jours"
+  "resume": "Le Geely Galaxy E5 BEV 2025 combine une autonomie jusqu’à 530 km, une batterie LFP innovante Aegis Short Blade et un moteur de 160 kW. Ce SUV électrique compact, moderne et connecté, allie performances, confort et technologie avancée, idéal pour un usage quotidien ou professionnel.",
+  "disponibilite": "Transport inclus au port — ≈45 jours",
+  "garantie": "Garantie importateur 2 ans (voir conditions dans CGV)"
 }
