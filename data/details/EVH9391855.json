@@ -22,10 +22,10 @@
     "Caméra 360° et assistance conduite L2"
   ],
   "specifications": {
+    "engineCc": 1499,
     "motorisation": {
       "type": "Hybride rechargeable (PHEV)",
       "moteurThermique": "1.5 L Turbo L4 (156 ch / 115 kW)",
-      "engineCc": 1499,
       "moteurElectrique": "150 kW (204 ch)",
       "puissanceTotale": "265 kW (360 ch)",
       "coupleTotal": "530 Nm",
