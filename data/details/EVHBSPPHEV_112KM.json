@@ -1,10 +1,9 @@
 {
   "id": "EVHBSPPHEV_112KM",
-  "name": "2025 BYD Song PLUS DM-i 112KM",
+  "name": "2025 BYD Song PLUS DM-i 112KM PHEV",
   "priceFCR": "25 700 €",
   "mileage": 0,
   "regyear": "2025-01",
-  "featuresCount": 4,
   "images": {
     "hero": "images/EVH_BSPPHEV_devant_gauche.webp",
     "gallery": [
@@ -15,81 +14,92 @@
       "images/EVH_BSPPHEV_droite.png"
     ]
   },
-  "features": [
-    "Hybride rechargeable (PHEV)",
+  "caracteristiques": [
+    "SUV hybride rechargeable (PHEV)",
     "Autonomie électrique 112 km (CLTC) / 91 km (WLTC)",
-    "Batterie LFP 18,3 kWh (Blade)",
-    "Traction avant, transmission e-CVT (EHS)",
+    "Batterie Blade LFP 18.3 kWh",
+    "Transmission e-CVT (EHS) traction avant",
     "Caméra panoramique 360° + châssis transparent 540°",
-    "Régulateur de vitesse adaptatif (ACC) et aide maintien de voie"
+    "Régulateur adaptatif et maintien de voie (ADAS L2)"
   ],
   "specifications": {
-    "moteur": "1.5 L essence + moteur électrique (PHEV)",
-     "engineCc": 1498,
-    "puissance": "101 ch (thermique) + 160 kW (électrique)",
-    "transmission": "Traction avant, e-CVT (EHS)",
-    "autonomieElectrique": "112 km (CLTC) / 91 km (WLTC)",
-    "typeCarrosserie": "SUV",
-    "places": "5 places",
-
-    "moteurThermique": {
-      "type": "1.5 L L4 atmosphérique (BYD472QC)",
-      "puissance": "101 ch (74 kW)",
-      "couple": "126 Nm",
-      "carburant": "Essence 92#"
+    "motorisation": {
+      "type": "Hybride rechargeable (PHEV)",
+      "moteurThermique": "1.5 L L4 atmosphérique (BYD472QC) – 101 ch (74 kW) / 126 Nm",
+      "moteurElectrique": "Avant, synchrone à aimant permanent – 160 kW / 260 Nm",
+      "puissanceCombinée": "≈ 230 ch",
+      "transmission": "e-CVT (EHS) – traction avant (2WD)"
     },
-    "moteurElectrique": {
-      "architecture": "Avant, synchrone à aimant permanent",
-      "puissance": "160 kW",
-      "couple": "260 Nm",
-      "nombreMoteurs": "Simple moteur (avant)"
-    },
-    "hybrideBatterie": {
-      "type": "LFP (lithium fer phosphate)",
-      "capaciteBatterie": "18.3 kWh",
+    "performances": {
       "autonomieCLTC": "112 km",
       "autonomieWLTC": "91 km",
-      "consoElec": "15.9 kWh/100 km",
-      "chargeRapide": "Oui (30→80 % ~ 0,38 h ≈ 23 min, 26 kW)",
-      "fonctions": ["Récupération d’énergie", "Préchauffage batterie", "V2L (décharge externe)"]
+      "consommationElectrique": "≈ 15.9 kWh/100 km",
+      "vitesseMax": "≈ 170 km/h",
+      "acceleration": "≈ 8.5 s (0–100 km/h)"
+    },
+    "batterie": {
+      "type": "LFP (Blade Battery BYD)",
+      "capacite": "18.3 kWh",
+      "rechargeDC": "30→80% en ~23 min (26 kW)",
+      "rechargeAC": "≈ 3.5 h",
+      "fonctions": [
+        "Récupération d’énergie",
+        "Préchauffage batterie",
+        "V2L (décharge externe)"
+      ]
+    },
+    "dimensions": "4775 × 1890 × 1670 mm",
+    "empattement": "2765 mm",
+    "poids": "1830 kg",
+    "ptac": "2205 kg",
+    "volumeCoffre": "574–1440 L",
+    "reservoir": "60 L",
+    "carrosserie": {
+      "type": "SUV 5 portes",
+      "places": 5
     },
     "chassis": {
-      "suspensionAvant": "Indépendante McPherson",
+      "suspensionAvant": "Indépendante MacPherson",
       "suspensionArriere": "Indépendante multibras",
-      "freins": "Disques ventilés AV / disques AR",
       "direction": "Assistée électrique",
+      "freins": "Disques ventilés AV / disques AR",
       "pneus": "235/50 R19",
       "jantes": "Alliage aluminium"
-    },
-    "dimensions": {
-      "longueur": "4775 mm",
-      "largeur": "1890 mm",
-      "hauteur": "1670 mm",
-      "empattement": "2765 mm",
-      "coffre": "574–1440 L",
-      "reservoir": "60 L",
-      "poidsATVide": "1830 kg",
-      "ptac": "2205 kg",
-      "portes": 5,
-      "placesNum": 5
     }
   },
   "equipements": {
+    "interieur": [
+      "Climatisation automatique",
+      "Sellerie cuir",
+      "Sièges électriques",
+      "Écran tactile central 15,6’’ rotatif",
+      "Tableau de bord numérique",
+      "Toit ouvrant panoramique",
+      "Charge sans fil pour smartphone"
+    ],
     "securite": [
-      "ABS, EBD, BA",
-      "Contrôle de stabilité (ESP)",
-      "Freinage actif / systèmes de sécurité",
-      "Aide au changement de voie, détection angle mort AR",
-      "Aide maintien & centrage dans la voie (LKA/LCA)",
-      "Reconnaissance panneaux",
-      "Airbags conducteur, passager, latéraux & rideaux",
-      "Détection pression pneus, ISOFIX"
+      "ABS / EBD / ESP / BA",
+      "Airbags frontaux, latéraux et rideaux",
+      "Aide au changement de voie et détection angle mort",
+      "Reconnaissance panneaux de signalisation",
+      "Aide maintien et centrage dans la voie (LKA/LCA)",
+      "Détection pression pneus (TPMS)",
+      "Ancrages ISOFIX"
     ],
     "assistance": [
+      "Régulateur de vitesse adaptatif (ACC)",
+      "Caméras panoramiques 360° + vision 540° châssis transparent",
       "Radar AV/AR",
-      "Caméras panoramiques 360° + 540° châssis transparent",
-      "Régulateur de vitesse adaptatif",
-      "Modes de conduite Éco / Confort / Sport / Neige"
+      "Modes de conduite : Éco / Confort / Sport / Neige"
+    ],
+    "connectivite": [
+      "Bluetooth",
+      "GPS intégré",
+      "Apple CarPlay / Android Auto",
+      "Wi-Fi embarqué"
     ]
-  }
+  },
+  "resume": "Le BYD Song PLUS DM-i 2025 associe un moteur essence 1.5L et un moteur électrique performant (160 kW) pour offrir jusqu’à 112 km d’autonomie électrique. Sa batterie Blade LFP fiable, son habitacle moderne et ses aides à la conduite L2 en font un SUV hybride haut de gamme, idéal pour les trajets urbains et longs déplacements.",
+  "disponibilite": "Livraison au port de destination : 45 jours",
+  "garantie": "Garantie importateur 2 ans (voir conditions dans CGV)"
 }
