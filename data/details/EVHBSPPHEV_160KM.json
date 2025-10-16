@@ -1,10 +1,9 @@
 {
   "id": "EVHBSPPHEV_160KM",
-  "name": "2025 BYD Song Plus DM-i 1.5L PHEV — 160 km",
+  "name": "2025 BYD Song Plus DM-i 160KM PHEV",
   "priceFCR": "27 400 €",
   "mileage": 100,
   "regyear": "2025-01",
-  "featuresCount": 4,
   "images": {
     "hero": "images/EVH_BSPPHEV_160km_DEV.webp",
     "gallery": [
@@ -14,54 +13,68 @@
       "images/EVH_BSPPHEV_160km_int_devant.png"
     ]
   },
-  "features": [
-    "Hybride rechargeable (DM-i)",
-    "Autonomie électrique 160 km",
-    "Batterie LFP 26.6 kWh",
-    "Transmission e-CVT (DHT)",
+  "caracteristiques": [
+    "SUV hybride rechargeable (DM-i / PHEV)",
+    "Autonomie électrique ≈ 160 km (CLTC)",
+    "Batterie LFP 26.6 kWh (Blade)",
+    "Transmission e-CVT (DHT) traction avant",
+    "ADAS L2 : ACC, AEB, LKA",
     "Caméra 360° + aide au stationnement",
-    "Régulateur de vitesse adaptatif (ACC)",
-    "Freinage automatique d’urgence (AEB)",
-    "Alerte franchissement de ligne (LKA)",
     "Sièges avant chauffants"
   ],
   "specifications": {
-    "moteur": "1.5 L essence + moteur électrique",
-     "engineCc": 1498,
-    "transmission": "e-CVT / traction avant",
-    "autonomieElectrique": "160 km",
-    "batterie": "26.6 kWh (LFP)",
-    "puissanceSysteme": "—",
-    "Couleur": "Gris",
-    "consommation": "Très basse en mode hybride (cycle mixte)",
-    "dimensions": {
-      "longueur": "4775 mm",
-      "largeur": "1890 mm",
-      "hauteur": "1670 mm",
-      "empattement": "2765 mm"
+    "motorisation": {
+      "type": "Hybride rechargeable (DM-i)",
+      "moteurThermique": "1.5 L essence + générateur",
+      "moteurElectrique": "Synchrone à aimant permanent (avant)",
+      "transmission": "e-CVT (DHT) – traction avant (2WD)",
+      "puissanceSysteme": "—"
+    },
+    "performances": {
+      "autonomieCLTC": "≈ 160 km",
+      "consommationHybride": "Très basse (cycle mixte, selon version)",
+      "vitesseMax": "—",
+      "acceleration": "—"
+    },
+    "batterie": {
+      "type": "LFP (Blade Battery BYD)",
+      "capacite": "26.6 kWh",
+      "rechargeDC": "—",
+      "rechargeAC": "—"
+    },
+    "dimensions": "4775 × 1890 × 1670 mm",
+    "empattement": "2765 mm",
+    "carrosserie": {
+      "type": "SUV 5 portes",
+      "couleur": "Gris",
+      "places": 5
     }
   },
   "equipements": {
     "interieur": [
-      "Écran central tactile 12.8–15.6\" rotatif (selon version)",
+      "Écran central tactile 12.8–15.6\" (rotatif selon version)",
       "Tableau de bord numérique",
       "Climatisation automatique",
       "Sellerie similicuir",
-      "Charge smartphone (USB/12V, parfois induction selon version)"
+      "Sièges avant chauffants",
+      "Prises USB/12V (charge induction selon version)"
     ],
     "securite": [
-      "AEB freinage d’urgence",
-      "ACC régulateur adaptatif",
-      "LKA maintien de voie",
-      "BSD surveillance angles morts",
-      "6 airbags"
+      "Freinage d’urgence automatique (AEB)",
+      "Régulateur de vitesse adaptatif (ACC)",
+      "Maintien de voie (LKA)",
+      "Surveillance angles morts (BSD)",
+      "6 airbags",
+      "ESP / ABS"
     ],
     "connectivite": [
       "Bluetooth / USB",
-      "Navigation et services connectés (selon marché)"
+      "Navigation & services connectés (selon marché)",
+      "Caméra 360°",
+      "Radars de stationnement"
     ]
   },
-  "garantie": "Garantie importateur 2 ans (voir CGV)",
-  "localisation": "Chine",
-  "disponibilite": "Livraison au port de destination : 45 jours"
+  "resume": "Le BYD Song Plus DM-i 160KM associe batterie Blade LFP 26.6 kWh, autonomie électrique étendue (~160 km CLTC) et transmission e-CVT DHT pour une conduite fluide et économique. ADAS L2, caméra 360° et habitacle bien équipé en font un SUV PHEV confortable et très efficient.",
+  "disponibilite": "Livraison au port de destination : 45 jours",
+  "garantie": "Garantie importateur 2 ans (voir CGV)"
 }
