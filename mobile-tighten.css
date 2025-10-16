@@ -30,7 +30,7 @@
   .hero-cta .btn{
     padding: .6rem .9rem;                   /* ↓ padding */
     min-height: 38px;                       /* ↓ hauteur mini */
-    font-size: 1rem;                       /* ↓ taille texte */
+    font-size: 16px;                       /* ↓ taille texte */
     font-weight: 700;                       /* un cran moins “épais” */
     box-shadow: 0 4px 12px rgba(229,62,62,.22); /* ombre plus soft */
     border-radius: 999px;
@@ -40,7 +40,7 @@
   .hero-cta .btn{
     padding: .55rem .8rem;                  /* encore plus compact */
     min-height: 36px;
-    font-size: 1rem;
+    font-size: 16px;
     box-shadow: 0 3px 10px rgba(229,62,62,.2);
   }
 }
@@ -179,7 +179,7 @@
   }
   .hero-cta .btn{
     padding: .55rem .9rem;        /* ↓ taille globale */
-    font-size: 1rem;            /* ↓ texte */
+    font-size: 16px;            /* ↓ texte */
     min-height: 36px;
     box-shadow: 0 4px 12px rgba(229,62,62,.22);
   }
@@ -193,7 +193,7 @@
   }
   .hero-cta .btn{
     padding: .48rem .72rem;       /* ↓ padding */
-    font-size: 1rem;            /* ↓ texte */
+    font-size: 16px;            /* ↓ texte */
     min-height: 32px;             /* ↓ hauteur mini */
     font-weight: 700;
     box-shadow: 0 3px 10px rgba(229,62,62,.20);
@@ -205,7 +205,7 @@
   .hero-cta{ bottom: 35%; }
   .hero-cta .btn{
     padding: .45rem .68rem;
-    font-size: 1rem;
+    font-size: 16px;
     min-height: 30px;
   }
 }
