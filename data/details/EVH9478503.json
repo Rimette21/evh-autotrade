@@ -1,10 +1,9 @@
 {
   "id": "EVH9478503",
-  "name": "2024 BYD Song Plus 1.5L 110HP L4 E-CVT PHEV 18.3 kWh",
+  "name": "2024 BYD Song Plus 1.5L E-CVT PHEV 18.3 kWh",
   "priceFCR": "23 250 €",
   "mileage": 21000,
   "regyear": "2024-04",
-  "featuresCount": 4,
   "images": {
     "hero": "images/EVH9478503_DEV_DROITE.webp",
     "gallery": [
@@ -12,61 +11,78 @@
       "images/EVH9478503_DEV.png",
       "images/EVH9478503_DEV_DROITE.png",
       "images/EVH9478503_ARRIERE.png",
-       "images/EVH9478503_INT_DEV.png",
+      "images/EVH9478503_INT_DEV.png",
       "images/EVH9478503_ARRIERE_DR.png"
     ]
   },
-  "features": [
-    "Hybride rechargeable (PHEV)",
-    "Autonomie électrique 110 km",
-    "Batterie 18.3 kWh",
-    "Transmission E-CVT",
+  "caracteristiques": [
+    "SUV hybride rechargeable (PHEV)",
+    "Autonomie électrique ≈ 110 km (CLTC)",
+    "Batterie LFP 18.3 kWh",
+    "Transmission E-CVT traction avant",
     "Caméra 360°",
     "Régulateur de vitesse adaptatif (ACC)"
   ],
   "specifications": {
-    "moteur": "1.5 L L4 (110 ch)",
-     "engineCc": "1498",
-    "motorPower": "145 kW (électrique)",
-    "transmission": "E-CVT",
-    "traction": "2WD",
-    "autonomieElectrique": "110 km",
-    "capaciteBatterie": "18.3 kWh",
-    "typeCarrosserie": "SUV",
-    "couleur": "Blanc",
-    "places": "5",
-    "dimensions": {
-      "longueur": "4775 mm",
-      "largeur": "1890 mm",
-      "hauteur": "1670 mm"
+    "motorisation": {
+      "type": "Hybride rechargeable (PHEV)",
+      "moteurThermique": "1.5 L L4 essence (110 ch / 81 kW)",
+      "moteurElectrique": "≈ 145 kW (puissance combinée 197 ch)",
+      "transmission": "E-CVT (variateur continu électronique)",
+      "traction": "Avant (FWD)"
     },
-    "poids": "1830 kg",
-    "capaciteMax": "2205 kg"
+    "performances": {
+      "vitesseMax": "≈ 170 km/h",
+      "acceleration": "≈ 8.5 s (0–100 km/h)"
+    },
+    "batterie": {
+      "type": "LFP (Lithium Fer Phosphate)",
+      "capacite": "18.3 kWh",
+      "autonomieCLTC": "≈ 110–115 km",
+      "rechargeDC": "≈ 1 h (30→80%)",
+      "rechargeAC": "≈ 2,5–3 h (complète)"
+    },
+    "dimensions": "4785 × 1890 × 1660 mm",
+    "empattement": "2765 mm",
+    "poids": "≈ 1830 kg",
+    "volumeCoffre": "≈ 574 L",
+    "carrosserie": {
+      "type": "SUV 5 portes",
+      "places": 5
+    },
+    "chassis": {
+      "suspensionAvant": "Indépendante MacPherson",
+      "suspensionArriere": "Indépendante multibras",
+      "freins": "Disques ventilés AV/AR"
+    }
   },
   "equipements": {
     "interieur": [
       "Sellerie cuir",
       "Sièges électriques",
       "Climatisation automatique",
-      "Toit ouvrant"
+      "Toit ouvrant panoramique",
+      "Écran tactile 12,8–15,6 pouces",
+      "Commandes vocales",
+      "Charge sans fil smartphone 50W"
     ],
     "securite": [
-      "ABS",
-      "Airbags conducteur/passager/latéraux",
-      "Contrôle de stabilité (ESP)",
-      "Surveillance pression pneus"
+      "ABS / ESP / ESC",
+      "Airbags frontaux et latéraux",
+      "Caméra 360°",
+      "Contrôle de stabilité",
+      "Surveillance pression pneus (TPMS)",
+      "Régulateur de vitesse adaptatif (ACC)"
     ],
     "connectivite": [
-      "GPS",
+      "GPS intégré",
       "Bluetooth",
+      "Apple CarPlay / Android Auto",
       "Démarrage sans clé",
-      "Radar de stationnement",
-      "Caméra 360°",
-      "Régulateur de vitesse adaptatif (ACC)"
+      "Radars de stationnement"
     ]
   },
-  "garantie": "Garantie importateur 2 ans (voir conditions dans CGV)",
-  "localisation": "Langfang, Hebei, Chine",
-  "disponibilite": "Livraison au port de destination : 45 jours"
+  "resume": "Le BYD Song Plus PHEV 2024 (18.3 kWh) offre une autonomie électrique d’environ 110 km, une recharge rapide en 1 h et un confort haut de gamme. Son moteur 1.5L associé à une technologie hybride BYD assure une conduite fluide, économique et parfaitement adaptée à la vie urbaine.",
+  "disponibilite": "Livraison au port de destination : 45 jours",
+  "garantie": "Garantie importateur 2 ans (voir conditions dans CGV)"
 }
-
