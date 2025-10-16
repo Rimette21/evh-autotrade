@@ -87,7 +87,7 @@
 @media (max-width: 680px){
   /* 1) Image de présentation : plus compacte */
   .hero-img{
-    height: 300px;                 /* était 360/420 → évite de “dépasser” l’écran */
+    height: auto;                 /* était 360/420 → évite de “dépasser” l’écran */
     border-radius: 12px;
   }
   /* Galerie sous l’image : plus fine */
@@ -321,7 +321,7 @@
 @media (max-width: 680px){
   .image-card{ position: relative; overflow: hidden; }
   .hero-img{
-    height: 270px;                                  /* ↓ 300 → 270 */
+    height: auto;                                  /* ↓ 300 → 270 */
     width: 100%;
     object-fit: cover;
     border-radius: 12px;
@@ -399,7 +399,7 @@
     display: block;
     width: calc(100% - 2px);       /* évite les 1–2px de dépassement sur certains mobiles */
     max-width: 100%;
-    height: 260px;                 /* un cran plus bas vs 270 pour + de marge */
+    height: auto;                 /* un cran plus bas vs 270 pour + de marge */
     object-fit: cover;
     border-radius: 12px;
     margin: 0 auto .9rem;          /* recentre proprement */
