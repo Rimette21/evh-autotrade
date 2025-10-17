@@ -631,15 +631,25 @@ body.page-vehicle { background:#F6F7FB; }
 .resume-card { padding: .85rem 1rem; }
 .v-resume { font-size: .95rem; line-height: 1.45; margin: 0; }
 
-/* Ajustement espacement du résumé sur la page véhicule */
-.page-vehicle .resume,
-.page-vehicle .vehicle-description {
-  margin-top: 40px; /* augmente l'espace au-dessus */
-  margin-bottom: 20px; /* léger espace sous le paragraphe */
-  display: block;
+/* Résumé placé en bas de la carte "Spécifications" */
+.page-vehicle .specs-resume {
+  margin-top: 28px;         /* pousse le bloc plus bas */
+  padding-top: 12px;        /* respirations internes */
+  border-top: 1px solid #eee; /* séparateur léger */
 }
 
+.page-vehicle .specs-resume .v-resume {
+  margin: 0;
+  line-height: 1.55;
+}
 
+/* Option: un peu plus d'espace sur mobile */
+@media (max-width: 768px) {
+  .page-vehicle .specs-resume {
+    margin-top: 32px;
+    padding-top: 14px;
+  }
+}
 
 
 
