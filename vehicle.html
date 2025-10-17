@@ -286,13 +286,21 @@
       ` : '';
 
       // Résumé -> Disponibilité -> Garantie
-      const rdgHtml = `
-        <div class="card-box note-card">
-          ${data.resume ? `<p class="v-resume">${data.resume}</p>` : ''}
-          ${data.disponibilite ? `<p><strong>Disponibilité :</strong> ${data.disponibilite}</p>` : ''}
-          ${data.garantie ? `<p><strong>Garantie :</strong> ${data.garantie}</p>` : ''}
-        </div>
-      `;
+     // (NOUVEAU) 1/2 : résumé pour la colonne de droite, sous les specs
+const resumeRightHtml = data.resume
+  ? `<div class="card-box note-card resume-card in-grid-right">
+       <p class="v-resume">${data.resume}</p>
+     </div>`
+  : '';
+
+// (NOUVEAU) 2/2 : Dispo + Garantie en bas (on garde le bloc du bas)
+const bottomInfoHtml = (data.disponibilite || data.garantie)
+  ? `<div class="card-box note-card">
+       ${data.disponibilite ? `<p><strong>Disponibilité :</strong> ${data.disponibilite}</p>` : ''}
+       ${data.garantie ? `<p><strong>Garantie :</strong> ${data.garantie}</p>` : ''}
+     </div>`
+  : '';
+
 
       const ctaHtml = `
         <div class="card-box cta-card">
@@ -366,14 +374,16 @@ const essentialsHTML = `
                 : '<p>Aucune image supplémentaire disponible.</p>')+
             '</div>'+
           '</div>'+
-          '<div class="card-box specs-card">'+
-            '<div class="card-title">Spécifications techniques</div>'+
-            '<div class="specs-grid spec-compact">'+specsHTML+'</div>'+
-          '</div>'+
-        '</div>' +
-        equipHtml +
-        rdgHtml +       /* Résumé + disponibilité + garantie */
-        ctaHtml;
+         '<div class="card-box specs-card">'+
+        '<div class="card-title">Spécifications techniques</div>'+
+        '<div class="specs-grid spec-compact">'+specsHTML+'</div>'+
+        '</div>'+
+          resumeRightHtml +                 // ← Résumé (colonne de droite)
+          '</div>' +                        // ← fin .content-grid
+          equipHtml +
+          bottomInfoHtml +                  // ← Disponibilité + Garantie (en bas)
+          ctaHtml;
+
 
       /* ===== Lightbox ===== */
       const galleryImgs = Array.from(document.querySelectorAll('#gallery img'));
