@@ -1,1 +1,92 @@
+{
+  "id": "EVH9519205",
+  "name": "2025 Chery Tiggo9 C-DM 1.5T 156HP L4 3DHT PHEV 18.67KWH",
+  "priceFCR": "28 200 €",
+  "mileage": 3800,
+  "regyear": "2025-05",
+  "images": {
+    "hero": "images/EVH9519205_CHERY_TIGO_devdroit.webp",
+    "gallery": [
+      "images/EVH9519205_CHERY_TIGO_ar_gauche.webp",
+      "images/EVH9519205_CHERY_TIGO_arriere_droit.webp",
+      "images/EVH9519205_CHERY_TIGO_DEV2.webp",
+      "images/EVH9519205_CHERY_TIGO_DEV.webp",
+      "images/EVH9519205_CHERY_TIGO_intdevant.webp"
+  },
+  "caracteristiques": [
+    "SUV hybride rechargeable (PHEV)",
+    "Autonomie électrique 106 km (CLTC)",
+    "Transmission DHT",
+    "Puissance combinée 280 kW (381 ch)",
+    "Couple maximal 610 Nm",
+    "Batterie lithium-ion NCM 19.43 kWh",
+    "Caméra 360° + radars AV/AR",
+    "ACC & ADAS"
+  ],
+  "specifications": {
+     "engineCc": 1499,
+    "motorisation": {
+      "type": "Hybride rechargeable (PHEV)",
+      "moteurThermique": "1.5T L4 Turbo essence, 156 ch",
+      
+      "moteurElectrique": "165 kW (224 ch)",
+      "puissanceSysteme": "280 kW (381 ch)",
+      "coupleSysteme": "610 Nm",
+      "transmission": "3DHT",
+      "traction": "Avant (FWD)"
+    },
+    "performances": {
+      "vitesseMax": "180 km/h",
+      "acceleration": "≈ 6.8 s (0–60 km/h)",
+      "consommationHybride": "1.58 L/100 km (WLTC)"
+    },
+    "batterie": {
+      "type": "Li-ion NCM",
+      "capacite": "19.94 kWh",
+      "autonomieCLTC": "110 km",
+      "autonomietotale": "1400 km",
+      "rechargeAC": "7.2 kW",
+      "rechargeDC": "41 kW – charge rapide"
+    },
+    "dimensions": "4820 × 1930 × 1712 mm",
+    "empattement": "2820 mm",
+    "poids": "≈ 1935 kg",
+    "volumeCoffre": "717–2021 L",
+    "pneus": "235/55 R19",
+    "chassis": {
+      "suspensionAvant": "Indépendante MacPherson",
+      "suspensionArriere": "Indépendante multibras",
+      "freins": "Disques ventilés AV/AR",
+      "freinStationnement": "Électrique (EPB)"
+    }
+  },
+  "equipements": {
+    "interieur": [
+      "Toit ouvrant panoramique",
+      "Sièges en cuir synthétique chauffants ventilés et massants",
+      "Climatisation automatique bi-zone",
+      "Écran tactile central 12.3”",
+      "Système audio 12 HP",
+      "Démarrage sans clé",
+    ],
+    "securite": [
+      "Caméra 360°",
+      "Radars AV/AR",
+      "ACC, LKA, AEB",
+      "ABS + ESP",
+      "TPMS",
+      "Airbags frontaux et latéraux"
+    ],
+    "connectivite": [
+      "Bluetooth",
+      "Navigation GPS",
+      "USB / USB-C",
+      "Services connectés"
+    ]
+  },
+  "resume": "Ainsi, le Tiggo 9 C‑DM combine un intérieur premium, une technologie hybride avançée (3DHT), et une autonomie mixte élevée.",
+  "garantie": "Garantie importateur 2 ans",
+  "disponibilite": "Livraison au port de destination : 45 jours"
+
+}
 
