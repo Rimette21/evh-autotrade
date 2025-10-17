@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Détail véhicule — E.V.H. Autotrade</title>
-  <link rel="stylesheet" href="styles.css?v=17">
+  <link rel="stylesheet" href="styles.css?v=18">
   <link rel="stylesheet" href="mobile-tighten.css">
 </head>
 <body class="page-vehicle">
@@ -256,6 +256,11 @@
       const ptac  = specs.capaciteMax || specs.ptac || null;
       if (poids || ptac) add('Poids / Capacité max', [poids, ptac].filter(Boolean).join(' / '));
 
+      // ===== Résumé intégré à la carte “Spécifications” =====
+      const resumeInline = data.resume
+        ? `<div class="specs-resume"><p class="v-resume">${data.resume}</p></div>`
+        : '';
+
       const specsHTML = items.map(it =>
         '<div class="spec-item">'+
           '<span class="spec-label">'+it.label+'</span>'+
@@ -268,7 +273,7 @@
       const allEquip = []
         .concat(eq.interieur || [])
         .concat(eq.securite  || [])
-        .concat(eq.assistance || [])   // pris en compte désormais
+        .concat(eq.assistance || [])
         .concat(eq.connectivite || []);
 
       const equipHtml = allEquip.length ? `
@@ -285,22 +290,13 @@
         </div>
       ` : '';
 
-      // Résumé -> Disponibilité -> Garantie
-     // (NOUVEAU) 1/2 : résumé pour la colonne de droite, sous les specs
-const resumeRightHtml = data.resume
-  ? `<div class="card-box note-card resume-card in-grid-right">
-       <p class="v-resume">${data.resume}</p>
-     </div>`
-  : '';
-
-// (NOUVEAU) 2/2 : Dispo + Garantie en bas (on garde le bloc du bas)
-const bottomInfoHtml = (data.disponibilite || data.garantie)
-  ? `<div class="card-box note-card">
-       ${data.disponibilite ? `<p><strong>Disponibilité :</strong> ${data.disponibilite}</p>` : ''}
-       ${data.garantie ? `<p><strong>Garantie :</strong> ${data.garantie}</p>` : ''}
-     </div>`
-  : '';
-
+      // Dispo + Garantie (en bas)
+      const bottomInfoHtml = (data.disponibilite || data.garantie)
+        ? `<div class="card-box note-card">
+             ${data.disponibilite ? `<p><strong>Disponibilité :</strong> ${data.disponibilite}</p>` : ''}
+             ${data.garantie ? `<p><strong>Garantie :</strong> ${data.garantie}</p>` : ''}
+           </div>`
+        : '';
 
       const ctaHtml = `
         <div class="card-box cta-card">
@@ -310,45 +306,35 @@ const bottomInfoHtml = (data.disponibilite || data.garantie)
         </div>
       `;
 
-     /* ===== Essentials (Reg. Year / cc / km / fuel / transm.) ===== */
-function pick(...vals){
-  for (const v of vals){ if (v !== undefined && v !== null && String(v).trim() !== '') return v; }
-  return null;
-}
+      /* ===== Essentials (Reg. Year / cc / km / fuel / transm.) ===== */
+      function pick(...vals){
+        for (const v of vals){ if (v !== undefined && v !== null && String(v).trim() !== '') return v; }
+        return null;
+      }
+      function extractCcFromText(txt){
+        if(!txt) return null;
+        const m1 = String(txt).match(/\b(\d{3,4})\s?cc\b/i);
+        if (m1) return m1[1];
+        return null;
+      }
+      const engineCcRaw = pick(
+        specs.engineCc,           // schéma standard
+        (specs.motorisation||{}).engineCc, // schéma imbriqué
+        data.engineCc,
+        extractCcFromText(M.moteurThermique || specs.moteur)
+      );
+      const transmRaw = pick(M.transmission, specs.transmission, data.transmission);
+      const transmShort = shortTransm(transmRaw);
 
-function extractCcFromText(txt){
-  if(!txt) return null;
-  // 1) "1499 cc"
-  const m1 = String(txt).match(/\b(\d{3,4})\s?cc\b/i);
-  if (m1) return m1[1];
-  // 2) "1.5 L" (on n’affiche pas une valeur calculée approximative ici)
-  return null;
-}
-
-// Fallbacks multi-sources
-const engineCcRaw = pick(
-  specs.engineCc,               // schéma actuel
-  data.engineCc,                // au cas où
-  extractCcFromText(M.moteurThermique || specs.moteur) // extraction texte
-);
-
-const transmRaw = pick(
-  M.transmission,               // nouveau schéma
-  specs.transmission,           // ancien schéma
-  data.transmission             // au cas où
-);
-const transmShort = shortTransm(transmRaw);
-
-const essentialsHTML = `
-  <div class="essentials">
-    <div class="ess-item"><span class="ess-label">Reg. Year</span><span class="ess-value">${year}</span></div>
-    <div class="ess-item"><span class="ess-label">Engine (cc)</span><span class="ess-value">${fmt(engineCcRaw)}</span></div>
-    <div class="ess-item"><span class="ess-label">Mlg (km)</span><span class="ess-value">${mileageStr}</span></div>
-    <div class="ess-item"><span class="ess-label">Fuel</span><span class="ess-value">${fuel}</span></div>
-    <div class="ess-item"><span class="ess-label">Transm.</span><span class="ess-value">${fmt(transmShort)}</span></div>
-  </div>
-`;
-
+      const essentialsHTML = `
+        <div class="essentials">
+          <div class="ess-item"><span class="ess-label">Reg. Year</span><span class="ess-value">${year}</span></div>
+          <div class="ess-item"><span class="ess-label">Engine (cc)</span><span class="ess-value">${fmt(engineCcRaw)}</span></div>
+          <div class="ess-item"><span class="ess-label">Mlg (km)</span><span class="ess-value">${mileageStr}</span></div>
+          <div class="ess-item"><span class="ess-label">Fuel</span><span class="ess-value">${fuel}</span></div>
+          <div class="ess-item"><span class="ess-label">Transm.</span><span class="ess-value">${fmt(transmShort)}</span></div>
+        </div>
+      `;
 
       /* ===== Rendu ===== */
       root.innerHTML =
@@ -374,16 +360,15 @@ const essentialsHTML = `
                 : '<p>Aucune image supplémentaire disponible.</p>')+
             '</div>'+
           '</div>'+
-         '<div class="card-box specs-card">'+
-        '<div class="card-title">Spécifications techniques</div>'+
-        '<div class="specs-grid spec-compact">'+specsHTML+'</div>'+
-        '</div>'+
-          resumeRightHtml +                 // ← Résumé (colonne de droite)
-          '</div>' +                        // ← fin .content-grid
-          equipHtml +
-          bottomInfoHtml +                  // ← Disponibilité + Garantie (en bas)
-          ctaHtml;
-
+          '<div class="card-box specs-card">'+
+            '<div class="card-title">Spécifications techniques</div>'+
+            '<div class="specs-grid spec-compact">'+specsHTML+'</div>'+
+            resumeInline+  // résumé intégré
+          '</div>'+
+        '</div>' +
+        equipHtml +
+        bottomInfoHtml +
+        ctaHtml;
 
       /* ===== Lightbox ===== */
       const galleryImgs = Array.from(document.querySelectorAll('#gallery img'));
@@ -481,7 +466,7 @@ const essentialsHTML = `
     </div>
   </footer>
 
-  <!-- Petits correctifs CSS "anti-débordement" inclus -->
+  <!-- Petits correctifs CSS "anti-débordement" + résumé inline -->
   <style>
 /* 1) Base responsive */
 html { box-sizing: border-box; }
@@ -507,8 +492,23 @@ pre, code { white-space: pre-wrap; }
 .embed { position: relative; width: 100%; aspect-ratio: 16 / 9; }
 .embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; }
 
-/* Résumé */
-.v-resume { font-size: 1.05rem; line-height: 1.5; margin-bottom: .5rem; }
+/* Résumé intégré à la carte Spécifications */
+.specs-card .specs-resume {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px dashed #e5e7eb;
+}
+.specs-card .v-resume {
+  font-size: .88rem;
+  line-height: 1.4;
+  color: #3f3f46;
+  margin: 0;
+}
+@media (max-width: 900px) {
+  .specs-card .v-resume { font-size: .85rem; line-height: 1.35; }
+}
+
+/* Petites marges pour les notes bas de page */
 .note-card p { margin: .25rem 0; }
   </style>
 </body>
