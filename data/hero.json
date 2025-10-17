@@ -290,25 +290,22 @@
       "transmission": "DHT"
     }
   },
- {
+{
   "id": "EVH9519205",
-  "name": "2025 Chery Tiggo9 C-DM 1.5T 156HP L4 3DHT PHEV 18.67KWH",
+  "name": "2025 Chery Tiggo 9 C-DM 1.5T PHEV",
   "priceFCR": "28 200 €",
   "mileage": 3800,
   "regyear": "2025-05",
   "images": {
-    "hero": "images/EVH9519205_CHERY_TIGO_devdroit.webp",
+    "hero": "images/EVH9519205_CHERY_TIGO_devdroit.webp"
   },
   "features": [
-    "Hybride rechargeable (PHEV)",
-    "Autonomie électrique 106 km",
-   "Batterie 19.43 kWh",
-    "Transmission DHT",
-    "Camera 360°",
-    "Toit ouvrant",
-      "Régulateur de vitesse adaptatif",
-      "Sièges chauffants et ventilés"
-    ],
+    "PHEV 3DHT",
+    "Autonomie EV ~110 km",
+    "Puissance 381 ch",
+    "Caméra 360° / ADAS",
+    "Intérieur premium"
+  ],
     "specifications": {
       "engineCc": 1499,
       "transmission": "DHT"
