@@ -1,1 +1,85 @@
+{
+  "id": "EVH2025003",
+  "name": "2025 BYD DOLPHIN 2025 smart driving Edition 420 km Freedom Edition Pure Electric",
+  "priceFCR": "19 990 €",
+  "mileage": 0,
+  "regyear": "2025-10",
+  "images": {
+    "hero": "images/EVH2025003_BydDolphin_dev_droit.webp",
+    "gallery": [
+      "images/EVH2025003_BydDolphin_cote.webp",
+      "images/EVH2025003_BydDolphin_dev_gauche.webp",
+      "images/EVH2025003_BydDolphin_intdevant.webp"
+    ]
+  },
+  "caracteristiques": [
+    "Hatchback 5 portes 100% électrique (5 places)",
+    "Autonomie 420 km (CLTC)",
+    "Moteur synchrone à aimant permanent 70 kW (95 ch) / 180 Nm",
+    "Batterie LFP Blade 44,9 kWh (e-Platform 3.0, 400V)",
+    "Écran tactile 12,8” pivotant + commandes vocales",
+    "CarPlay et connectivité sans fil",
+    "Sécurité: 7 airbags, AEB, surveillance angles morts",
+    "Caméra 360° + assistance au stationnement automatique (HNOA+)",
+    "Recharge DC 30–80% ≈ 30 min ; AC complet ≈ 6,4 h"
+  ],
+  "specifications": {
+    "engineCc": 0,
+    "motorisation": {
+      "type": "Électrique (BEV)",
+      "moteurElectrique": "70 kW (95 ch) — 180 Nm (Smart Driving / Freedom)",
+      "transmission": "Réducteur à 1 rapport",
+      "traction": "Avant (FWD)"
+    },
+    "performances": {
+      "vitesseMax": "≈ 150 km/h",
+      "acceleration": "0–50 km/h : 3,9 s",
+      "consommationElectrique": "≈ 11,2 kWh/100 km"
+    },
+    "batterie": {
+      "type": "LFP Blade (BYD)",
+      "capacite": "44,9 kWh",
+      "autonomieCLTC": "420 km",
+      "rechargeAC": "Charge AC complète ≈ 6,4 h",
+      "rechargeDC": "30–80% ≈ 0,5 h"
+    },
+    "dimensions": "4125 × 1770 × 1570 mm",
+    "empattement": "2700 mm",
+    "poids": "1435–1460 kg (selon version)",
+    "volumeCoffre": "345–1310 L",
+    "pneus": "—",
+    "chassis": {
+      "suspensionAvant": "—",
+      "suspensionArriere": "—",
+      "freins": "ABS + ESP",
+      "freinStationnement": "Électrique (EPB)"
+    },
+    "plateforme": "BYD e-Platform 3.0 (400V)"
+  },
+  "equipements": {
+    "interieur": [
+      "Sièges multifonctions chauffants/ventilés",
+      "Climatisation automatique",
+      "Écran tactile 12,8” pivotant",
+      "Commandes vocales avancées",
+      "Multiples rangements"
+    ],
+    "securite": [
+      "7 airbags",
+      "AEB (freinage automatique d’urgence)",
+      "Surveillance des angles morts",
+      "Caméra 360°",
+      "Assistance au stationnement automatique (HNOA+)",
+      "TPMS",
+      "ABS + ESP"
+    ],
+    "connectivite": [
+      "Bluetooth",
+      "CarPlay (sans fil)",
+      "USB / USB-C",
+      "Services connectés"
+    ]
+  },
+  "resume": "Le BYD Dolphin 2025 (Smart Driving / Freedom) est un hatchback 100 % électrique doté d’une batterie LFP Blade de 44,9 kWh offrant 420 km d’autonomie CLTC. Avec son moteur de 70 kW (95 ch), ses fonctions ADAS (7 airbags, AEB, BSM), sa caméra 360° et son grand écran pivotant de 12,8” compatible CarPlay, il combine efficience, technologies modernes et confort urbain."
+}
 
