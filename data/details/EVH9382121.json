@@ -71,8 +71,8 @@
     "connectivite": "Bluetooth, GPS, Accès/démarrage sans clé, Verrouillage centralisé",
     "multimedia": "Écran tactile, ambiance lumineuse 256 couleurs",
     "chargeSansFil": "50 W",
-    "toit": "Toit panoramique fixe",
-    "resume": "SUV électrique familial alliant grande autonomie (jusqu’à 630 km), sécurité batterie BYD Blade, et confort premium avec toit panoramique et ambiance lumineuse personnalisée."
+    "toit": "Toit panoramique fixe"
+  
   },
   "equipements": {
     "interieur": [
@@ -102,6 +102,5 @@
       "Démarrage sans clé"
     ]
   },
-  "garantie": "Garantie importateur 2 ans (voir conditions dans CGV)",
-  "disponibilite": "Livraison au port de destination : 45 jours"
+    "resume": "SUV électrique familial alliant grande autonomie (jusqu’à 630 km), sécurité batterie BYD Blade, et confort premium avec toit panoramique et ambiance lumineuse personnalisée."
 }
