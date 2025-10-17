@@ -1,4 +1,28 @@
 [
+  {
+    "id": "EVH2025003",
+    "name": "2025 BYD Dolphin (Smart Driving / Freedom) – 420 km CLTC",
+    "priceFCR": "19 990 €",
+    "mileage": 0,
+    "regyear": "2025-10",
+    "featuresCount": 5,
+    "images": {
+      "hero": "images/EVH2025003_BydDolphin_dev_droit.webp"
+    },
+    "features": [
+      "100% électrique (BEV)",
+      "Autonomie 420km (CLTC)",
+      "Batterie LFP Blade 44.9 kWh",
+      "Moteur 70 kW (95 ch) / 180 Nm",
+      "Écran 12.8” pivotant + CarPlay",
+      "Caméra 360° / ADAS (AEB, BSM)"
+    ],
+    "specifications": {
+      "engineCc": null,
+      "transmission": "AT"
+    }
+  },
+   
  {
     "id": "EVH9336933",
     "name": "2023 Jetour DASHING i-DM 1.5T 156HP",
