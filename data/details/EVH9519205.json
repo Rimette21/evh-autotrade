@@ -12,24 +12,23 @@
       "images/EVH9519205_CHERY_TIGO_DEV2.webp",
       "images/EVH9519205_CHERY_TIGO_DEV.webp",
       "images/EVH9519205_CHERY_TIGO_intdevant.webp"
-      ]
+    ]
   },
   "caracteristiques": [
     "SUV hybride rechargeable (PHEV)",
     "Autonomie électrique 106 km (CLTC)",
     "Transmission DHT",
-    "Puissance combinée 280 kW (381 ch)",
+    "Puissance combinée 280 kW (381 ch)",
     "Couple maximal 610 Nm",
     "Batterie lithium-ion NCM 19.43 kWh",
     "Caméra 360° + radars AV/AR",
     "ACC & ADAS"
   ],
   "specifications": {
-     "engineCc": 1499,
+    "engineCc": 1499,
     "motorisation": {
       "type": "Hybride rechargeable (PHEV)",
-      "moteurThermique": "1.5T L4 Turbo essence, 156 ch",
-      
+      "moteurThermique": "1.5T L4 Turbo essence, 156 ch",
       "moteurElectrique": "165 kW (224 ch)",
       "puissanceSysteme": "280 kW (381 ch)",
       "coupleSysteme": "610 Nm",
@@ -68,7 +67,7 @@
       "Climatisation automatique bi-zone",
       "Écran tactile central 12.3”",
       "Système audio 12 HP",
-      "Démarrage sans clé",
+      "Démarrage sans clé"
     ],
     "securite": [
       "Caméra 360°",
@@ -85,9 +84,7 @@
       "Services connectés"
     ]
   },
-  "resume": "Ainsi, le Tiggo 9 C‑DM combine un intérieur premium, une technologie hybride avançée (3DHT), et une autonomie mixte élevée.",
+  "resume": "Ainsi, le Tiggo 9 C-DM combine un intérieur premium, une technologie hybride avancée (3DHT) et une autonomie mixte élevée.",
   "garantie": "Garantie importateur 2 ans",
   "disponibilite": "Livraison au port de destination : 45 jours"
-
 }
-
