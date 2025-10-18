@@ -45,18 +45,7 @@
     "empattement": "2850 mm",
     "gardeAuSol": "210 mm",
     "poids": "≈ 2560 kg (à vide, selon version)",
-    "volumeCoffre": {
-      "configuration5Places": {
-        "standard": "954 L (banquette arrière en place)",
-        "maximal": "1 895 L (banquette arrière rabattue)"
-      },
-      "configuration7Places": {
-        "derriere3eRangee": "182 L",
-        "avec3eRangeeRabattue": "906 L",
-        "maximal": "1 829 L (toutes rangées rabattues)"
-      },
-      "note": "Espace optimisé avec plancher plat (rangement double niveau)"
-    },
+    "volumeCoffre": "954-1895 L"
     "pneus": "265/70 R18 ou 265/65 R20",
     "chassis": {
       "suspensionAvant": "Double triangles indépendants",
