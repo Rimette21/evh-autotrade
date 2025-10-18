@@ -5,11 +5,11 @@
   "mileage": 500,
   "regyear": "2025-04",
   "images": {
-    "hero": "EVH9431983_ToyotaPrado_dev_gauche.webp",
+    "hero": "images/EVH9431983_ToyotaPrado_dev_gauche.webp",
     "gallery": [
       "images/EVH9431983_ToyotaPrado_devant.webp",
       "images/EVH9431983_ToyotaPrado_int_dev.webp",
-      "images/EVH9431983_ToyotaPrado_int_arrieret.webp"
+      "images/EVH9431983_ToyotaPrado_int_arriere.webp"
     ]
   },
   "caracteristiques": [
