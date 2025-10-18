@@ -451,6 +451,29 @@
     }
   },
   {
+  "id": "EVH9509448",
+  "name": "2022 Toyota Highlander 2.5L 192HP Hybrid (HEV)",
+  "priceFCR": "37 490€",
+  "mileage": 58000,
+  "regyear": "2022-06",
+  "featuresCount": 5,
+  "images": {
+    "hero": "images/EVH9509448_ToyotaHighlander_devgauche.webp"
+  },
+  "features": [
+    "Hybride (HEV) 2.5L — ≈192 ch",
+    "Transmission e-CVT",
+    "5 à 7 places",
+    "Conso WLTP ≈ 5,5–6,5 L/100",
+    "Coffre 520–1340 L",
+    "Écran jusqu’à 12,3” + CarPlay/Android Auto"
+  ],
+  "specifications": {
+    "engineCc": 2487,
+    "transmission": "E-CVT"
+  }
+},
+  {
     "id": "EVH9431983",
     "name": "2024 Toyota Land Cruiser Prado 2.4T 282HP L4 8AT Hybrid",
     "priceFCR": "67 490€",
