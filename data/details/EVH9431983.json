@@ -1,0 +1,99 @@
+{
+  "id": "EVH9431983",
+  "name": "2024 Toyota Land Cruiser Prado 2.4T 282HP L4 8AT Hybrid",
+  "priceFCR": "67 490€",
+  "mileage": 500,
+  "regyear": "2025-04",
+  "images": {
+    "hero": "EVH9431983_ToyotaPrado_dev_gauche.webp",
+    "gallery": [
+      "images/EVH9431983_ToyotaPrado_devant.webp",
+      "images/EVH9431983_ToyotaPrado_int_dev.webp",
+      "images/EVH9431983_ToyotaPrado_int_arrieret.webp"
+    ]
+  },
+  "caracteristiques": [
+    "SUV 4x4 haut de gamme (châssis à échelle) – 5 à 7 places",
+    "Hybride auto-rechargeable (HEV) non rechargeable",
+    "2.4 L Turbo L4 essence + moteur électrique (282 ch / 210 kW, 430 Nm)",
+    "Boîte automatique 8 rapports (8AT)",
+    "Transmission intégrale permanente (4WD) + modes Multi-Terrain",
+    "Dimensions 4 930 × 1 980 × 1 935 mm, empattement 2 850 mm",
+    "Garde au sol 210 mm, remorquage jusqu’à 2 720 kg",
+    "Toyota Safety Sense complet + caméra 360°",
+    "Double écran 12,3” (combiné + multimédia), CarPlay/Android Auto",
+    "Cuir chauffé/ventilé, toit ouvrant panoramique, audio JBL 14 HP"
+  ],
+  "specifications": {
+    "engineCc": 2393,
+    "motorisation": {
+      "type": "Hybride (HEV) non rechargeable",
+      "moteurThermique": "2.4 L Turbo L4 (essence)",
+      "moteurElectrique": "Moteur d’assistance (hybride parallèle)",
+      "puissanceSysteme": "282 ch (210 kW)",
+      "coupleSysteme": "430 Nm",
+      "suralimentation": "Turbocompresseur",
+      "transmission": "Automatique 8 rapports (8AT)",
+      "traction": "Intégrale permanente (4WD) avec sélecteur Multi-Terrain",
+      "modesConduite": "Eco / Normal / Sport + Multi-Terrain"
+    },
+    "performances": {
+      "remorquageMax": "2 720 kg (≈ 6 000 lb)",
+      "reservoirCarburant": "80 L (réservoir secondaire +30 L selon version)"
+    },
+    "dimensions": "4930 × 1980 × 1935 mm",
+    "empattement": "2850 mm",
+    "gardeAuSol": "210 mm",
+    "poids": "≈ 2560 kg (à vide, selon version)",
+    "volumeCoffre": {
+      "configuration5Places": {
+        "standard": "954 L (banquette arrière en place)",
+        "maximal": "1 895 L (banquette arrière rabattue)"
+      },
+      "configuration7Places": {
+        "derriere3eRangee": "182 L",
+        "avec3eRangeeRabattue": "906 L",
+        "maximal": "1 829 L (toutes rangées rabattues)"
+      },
+      "note": "Espace optimisé avec plancher plat (rangement double niveau)"
+    },
+    "pneus": "265/70 R18 ou 265/65 R20",
+    "chassis": {
+      "suspensionAvant": "Double triangles indépendants",
+      "suspensionArriere": "Multibras",
+      "systemeEKDSS": "E-KDSS (selon finitions)",
+      "freins": "Disques ventilés AV/AR"
+    }
+  },
+  "equipements": {
+    "interieur": [
+      "Tableau de bord numérique 12,3”",
+      "Écran central 12,3” CarPlay / Android Auto",
+      "Climatisation auto bi-zone + commandes arrière",
+      "Sellerie cuir ventilée et chauffante (AV/AR selon finitions)",
+      "Sièges AV électriques avec mémoire",
+      "Système audio JBL 14 HP",
+      "Toit ouvrant panoramique électrique",
+      "Hayon motorisé / accès mains libres",
+      "Recharge sans fil + ports USB-C toutes rangées",
+      "Volant cuir chauffant, réglage électrique"
+    ],
+    "securite": [
+      "Toyota Safety Sense (régulateur adaptatif)",
+      "Aide maintien de voie (LTA) + alerte franchissement (LDA)",
+      "Freinage d’urgence autonome (PCS)",
+      "Surveillance angles morts (BSM)",
+      "Caméra panoramique 360°",
+      "Aide au stationnement AV/AR",
+      "Reconnaissance des panneaux",
+      "Contrôle stabilité (VSC) et antipatinage (TRC)"
+    ],
+    "connectivite": [
+      "Apple CarPlay / Android Auto",
+      "Bluetooth",
+      "USB-C multi-rangées",
+      "Services connectés"
+    ]
+  },
+  "resume": "Le Land Cruiser Prado 2024 2.4T Hybrid (HEV) développe 282 ch et 430 Nm via un 2,4 L turbo essence assisté électriquement. Avec 4WD permanent, boîte 8AT et modes Multi-Terrain, il conjugue vraies aptitudes tout-terrain et confort haut de gamme (double écran 12,3”, Safety Sense, cuir ventilé/chauffé, audio JBL). Coffre jusqu’à 1 895 L selon configuration."
+}
