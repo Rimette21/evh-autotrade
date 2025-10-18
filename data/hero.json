@@ -22,7 +22,7 @@
       "transmission": "AT"
     }
   },
-    {
+  {
     "id": "EVH9336933",
     "name": "2023 Jetour DASHING i-DM 1.5T 156HP",
     "priceFCR": "21 490 €",
@@ -88,7 +88,7 @@
       "transmission": "DHT"
     }
   },
- {
+  {
     "id": "EVH9404921",
     "name": "2025 BYD Song Pro 1.5L 101HP L4",
     "priceFCR": "22 800 €",
@@ -110,7 +110,7 @@
       "transmission": "E-CVT"
     }
   },
- {
+  {
     "id": "EVH9478503",
     "name": "2024 BYD Song Plus 1.5L 110HP L4",
     "priceFCR": "23 250 €",
@@ -133,7 +133,7 @@
       "transmission": "E-CVT"
     }
   },
- {
+  {
     "id": "EVHBSPPHEV_75KM",
     "name": "2025 BYD Song PLUS DM-i 75KM 1.5L",
     "priceFCR": "23 700 €",
@@ -155,7 +155,7 @@
       "transmission": "E-CVT"
     }
   },
- {
+  {
     "id": "EVH9391855",
     "name": "Chery Tiggo7 C-DM 1.5T 156HP L4",
     "priceFCR": "23 900 €",
@@ -178,7 +178,7 @@
       "transmission": "DHT"
     }
   },
- {
+  {
     "id": "EVH9433858",
     "name": "2024 Jetour X70 C-DM Long Range PRO (7 places)",
     "priceFCR": "24 350 €",
@@ -222,7 +222,7 @@
       "transmission": "AT"
     }
   },
- {
+  {
     "id": "EVH9404943",
     "name": "2024 BYD Song Plus 1.5L 110HP L4",
     "priceFCR": "24 960 €",
@@ -290,7 +290,7 @@
       "transmission": "AT"
     }
   },
- {
+  {
     "id": "EVH9403325",
     "name": "Haval Fierce DragonMAX 1.5L 116HP",
     "priceFCR": "26 590 €",
@@ -313,28 +313,27 @@
       "transmission": "DHT"
     }
   },
-{
-  "id": "EVH9519205",
-  "name": "2025 Chery Tiggo 9 C-DM 1.5T PHEV",
-  "priceFCR": "28 200 €",
-  "mileage": 3800,
-  "regyear": "2025-05",
-  "images": {
-    "hero": "images/EVH9519205_CHERY_TIGO_devdroit.webp"
-  },
-  "features": [
-    "PHEV 3DHT",
-    "Autonomie EV ~110 km",
-    "Puissance 381 ch",
-    "Caméra 360° / ADAS",
-    "Intérieur premium"
-  ],
+  {
+    "id": "EVH9519205",
+    "name": "2025 Chery Tiggo 9 C-DM 1.5T PHEV",
+    "priceFCR": "28 200 €",
+    "mileage": 3800,
+    "regyear": "2025-05",
+    "images": {
+      "hero": "images/EVH9519205_CHERY_TIGO_devdroit.webp"
+    },
+    "features": [
+      "PHEV 3DHT",
+      "Autonomie EV ~110 km",
+      "Puissance 381 ch",
+      "Caméra 360° / ADAS",
+      "Intérieur premium"
+    ],
     "specifications": {
       "engineCc": 1499,
       "transmission": "DHT"
-   }
+    }
   },
-  
   {
     "id": "EVHBSPPHEV_160KM",
     "name": "2025 BYD Song Plus DM-i 160KM 1.5L",
@@ -450,7 +449,28 @@
       "engineCc": null,
       "transmission": "AT"
     }
+  },
+  {
+    "id": "EVH9431983",
+    "name": "2024 Toyota Land Cruiser Prado 2.4T 282HP L4 8AT Hybrid",
+    "priceFCR": "67 490€",
+    "mileage": 500,
+    "regyear": "2025-04",
+    "featuresCount": 5,
+    "images": {
+      "hero": "images/EVH9431983_ToyotaPrado_dev_gauche.webp"
+    },
+    "features": [
+      "Hybride (HEV) 2.4T – 282 ch / 430 Nm",
+      "Boîte auto 8 rapports (8AT) + 4WD permanent",
+      "Dimensions 4930×1980×1935 mm (empattement 2850 mm)",
+      "Caméra 360° / Toyota Safety Sense",
+      "Double écran 12,3” + CarPlay/Android Auto",
+      "Remorquage jusqu’à 2 720 kg"
+    ],
+    "specifications": {
+      "engineCc": 2393,
+      "transmission": "AT"
+    }
   }
- ]
-
-
+]
