@@ -830,5 +830,44 @@ body.page-vehicle { background:#F6F7FB; }
 .cta-center { text-align:center; margin-top: .6rem; }
 .cta-center .btn { margin:.15rem; }
 
+/* =========================================================
+   Correctif mise en page — Page À propos
+   ========================================================= */
+.about {
+  padding-top: 80px;        /* espace sous le header */
+  padding-bottom: 60px;
+  background: #F9FBFF;
+}
+
+.about__container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  text-align: left;
+}
+
+/* Retrait horizontal global équivalent à ~2 cm */
+.about__container p,
+.about__container h1,
+.about__container h2,
+.about__container h3,
+.about__container ul,
+.about__container li {
+  margin-left: 2cm;
+}
+
+/* Optionnel : lisibilité renforcée du premier bloc */
+.about__container h1 {
+  margin-bottom: 1rem;
+  font-size: clamp(1.8rem, 3vw, 2.3rem);
+  font-weight: 800;
+}
+
+.about__container p {
+  color: #0f172a;
+  line-height: 1.6;
+  margin-bottom: .8rem;
+}
+
 
 /* Fuel en vert — déjà défini dans le HTML avec style="color: #00aa00" */
