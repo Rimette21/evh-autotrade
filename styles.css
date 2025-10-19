@@ -762,7 +762,7 @@ body.page-vehicle { background:#F6F7FB; }
   color: var(--muted);
   max-width: 860px;
   margin: 0 auto 1.6rem;
-  font-size: clamp(.78rem, 1.2vw, 1.05rem);
+  font-size: clamp(.78rem);
 }
 
 /* Cartes de contact */
