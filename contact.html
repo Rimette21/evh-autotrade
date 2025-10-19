@@ -1,1 +1,135 @@
+<!-- contact.html -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact — E.V.H. Autotrade</title>
+  <link rel="stylesheet" href="styles.css?v=17">
+  <link rel="stylesheet" href="mobile-tighten.css">
+</head>
+<body>
+
+  <!-- HEADER (identique à index.html) -->
+  <header>
+    <div class="header-inner">
+      <div class="logo-wrap">
+        <div class="logo">
+          <img src="images/EVH_logo-removebg-preview.png" alt="E.V.H. AUTOTRADE">
+        </div>
+        <div class="brand">
+          <span class="evh">E.V.H.</span>
+          <span class="autotrade">Autotrade</span>
+        </div>
+      </div>
+
+      <nav class="nav" aria-label="Navigation principale">
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="index.html#catalogue">Catalogue</a></li>
+          <li><a href="index.html#avantages">Avantages</a></li>
+          <li><a href="about.html">À propos</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Burger -->
+      <input type="checkbox" id="nav-toggle" aria-hidden="true" />
+      <label class="nav-btn" for="nav-toggle" aria-label="Ouvrir le menu">
+        <span class="bar"></span>
+      </label>
+      <label for="nav-toggle" class="nav-overlay" aria-hidden="true"></label>
+      <aside class="nav-drawer" role="dialog" aria-modal="true" aria-label="Menu mobile">
+        <div class="drawer-head">
+          <div class="drawer-title">Menu</div>
+          <label for="nav-toggle" class="drawer-close" aria-label="Fermer">✕</label>
+        </div>
+        <div class="drawer-body">
+          <nav class="drawer-nav">
+            <ul>
+              <li><a href="index.html">Accueil</a></li>
+              <li><a href="index.html#catalogue">Catalogue</a></li>
+              <li><a href="index.html#avantages">Avantages</a></li>
+              <li><a href="about.html">À propos</a></li>
+              <li><a href="contact.html" aria-current="page">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </aside>
+    </div>
+  </header>
+
+  <!-- CONTENU -->
+  <main class="contact-page">
+    <h1>Contactez-nous</h1>
+    <p>Notre équipe vous répond rapidement pour toute demande d’information, de devis FCR (Tunisie) ou d’assistance logistique.</p>
+
+    <section class="contact-grid">
+      <article class="contact-card">
+        <h3>📩 Par e-mail</h3>
+        <p><a href="mailto:contact@evhautotrade.com">contact@evhautotrade.com</a></p>
+      </article>
+
+      <article class="contact-card">
+        <h3>💬 WhatsApp</h3>
+        <p><a href="https://wa.me/33650447400" target="_blank" rel="noopener">+33 6 50 44 74 00</a></p>
+      </article>
+
+      <article class="contact-card">
+        <h3>🌍 Siège</h3>
+        <p>
+          Eco Value Hub FZ-LLC<br>
+          Compass Building – Al Hulaila, RAKEZ Free Zone<br>
+          Ras Al Khaimah, Émirats Arabes Unis
+        </p>
+      </article>
+    </section>
+  </main>
+
+  <!-- FOOTER (identique à index.html) -->
+  <footer class="site-footer">
+    <div class="footer-wrap">
+      <div class="f-brand">
+        <img src="images/EVH_logo.png" alt="EVH Autotrade" class="f-logo">
+        <div>
+          <strong>Eco Value Hub FZ-LLC</strong><br>
+          Free Zone Limited Liability Company (FZ-LLC) – General Trading Licence<br>
+          VUNE1173, Compass building – Al Hulaila, AL Hulaila Industrial Zone-FZ,<br>
+          Ras Al Khaimah, United Arab Emirates
+        </div>
+      </div>
+      <div class="f-cols">
+        <div class="f-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:contact@evhautotrade.com">contact@evhautotrade.com</a></li>
+            <li><a href="https://wa.me/33650447400" rel="noopener" target="_blank">WhatsApp : +33 6 50 44 74 00</a></li>
+          </ul>
+        </div>
+        <div class="f-col">
+          <h4>Informations légales</h4>
+          <ul>
+            <li><a href="mentions-legales.html">Mentions légales</a></li>
+            <li><a href="conditions-generales.html">Conditions générales</a></li>
+            <li><a href="confidentialite.html">Confidentialité</a></li>
+          </ul>
+        </div>
+        <div class="f-col">
+          <h4>EVH Autotrade</h4>
+          <ul>
+            <li><a href="index.html#catalogue">Catalogue</a></li>
+            <li><a href="index.html#avantages">Nos avantages</a></li>
+            <li><a href="mailto:contact@evhautotrade.com?subject=Demande%20devis">Demander un devis</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <small>© <span id="y"></span> Eco Value Hub FZ-LLC — All rights reserved.</small>
+    </div>
+  </footer>
+
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
 
