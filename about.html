@@ -1,1 +1,188 @@
+<!-- about.html -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>À propos — E.V.H. Autotrade</title>
+  <link rel="stylesheet" href="styles.css?v=17">
+  <link rel="stylesheet" href="mobile-tighten.css">
+</head>
+<body>
+
+  <!-- HEADER (identique à index.html) -->
+  <header>
+    <div class="header-inner">
+      <div class="logo-wrap">
+        <div class="logo">
+          <img src="images/EVH_logo-removebg-preview.png" alt="E.V.H. AUTOTRADE">
+        </div>
+        <div class="brand">
+          <span class="evh">E.V.H.</span>
+          <span class="autotrade">Autotrade</span>
+        </div>
+      </div>
+
+      <nav class="nav" aria-label="Navigation principale">
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="index.html#catalogue">Catalogue</a></li>
+          <li><a href="index.html#avantages">Avantages</a></li>
+          <li><a href="about.html" aria-current="page">À propos</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Burger -->
+      <input type="checkbox" id="nav-toggle" aria-hidden="true" />
+      <label class="nav-btn" for="nav-toggle" aria-label="Ouvrir le menu">
+        <span class="bar"></span>
+      </label>
+      <label for="nav-toggle" class="nav-overlay" aria-hidden="true"></label>
+      <aside class="nav-drawer" role="dialog" aria-modal="true" aria-label="Menu mobile">
+        <div class="drawer-head">
+          <div class="drawer-title">Menu</div>
+          <label for="nav-toggle" class="drawer-close" aria-label="Fermer">✕</label>
+        </div>
+        <div class="drawer-body">
+          <nav class="drawer-nav">
+            <ul>
+              <li><a href="index.html">Accueil</a></li>
+              <li><a href="index.html#catalogue">Catalogue</a></li>
+              <li><a href="index.html#avantages">Avantages</a></li>
+              <li><a href="about.html" aria-current="page">À propos</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </aside>
+    </div>
+  </header>
+
+  <!-- CONTENU -->
+  <main class="about">
+    <div class="about__container">
+
+      <header class="about__header">
+        <h1>À propos d’<span class="brand">E.V.H. Autotrade</span></h1>
+        <p class="about__intro">
+          <strong>E.V.H. Autotrade</strong> est la marque automobile d’<strong>Eco Value Hub FZ-LLC</strong>,
+          société enregistrée dans la <strong>Free Zone de Ras Al Khaimah (RAKEZ)</strong>, Émirats Arabes Unis.
+          Nous coordonnons l’importation directe de <strong>SUV hybrides & 100% électriques</strong> depuis la Chine
+          vers l’Afrique, avec un focus actuel sur la <strong>Tunisie (régime FCR)</strong>.
+        </p>
+      </header>
+
+      <section class="about__grid">
+        <section class="about__card">
+          <h2>Notre société</h2>
+          <p>
+            Basés à RAKEZ, nous opérons un <strong>schéma d’import direct</strong> : de l’usine au
+            <strong>port d’arrivée</strong> du client (sans transit par Dubaï). Ce modèle réduit les délais,
+            sécurise la chaîne logistique et optimise les coûts.
+          </p>
+          <ul class="about__ticks">
+            <li>Enregistrement : <strong>Eco Value Hub FZ-LLC (RAKEZ)</strong></li>
+            <li>Spécialité : <strong>Hybrides & Électriques</strong> récents</li>
+            <li>Processus : <strong>Commande → Inspection → Expédition → Livraison port</strong></li>
+          </ul>
+        </section>
+
+        <section class="about__card">
+          <h2>Notre mission</h2>
+          <p>
+            Rendre la <strong>mobilité durable</strong> accessible et transparente dans les marchés africains,
+            en combinant <strong>sélection rigoureuse</strong>, <strong>prix maîtrisés</strong> et
+            <strong>accompagnement de A à Z</strong>.
+          </p>
+          <ul class="about__ticks">
+            <li><strong>Prix FCR Tunisie</strong> (transport inclus au port de Radès)</li>
+            <li>Assistance <strong>documentaire & logistique</strong> complète</li>
+            <li>Conseil sur les <strong>modèles adaptés</strong> aux usages locaux</li>
+          </ul>
+        </section>
+
+        <section class="about__card">
+          <h2>Nos engagements</h2>
+          <ul class="about__ticks">
+            <li>Importation <strong>directe</strong>, sans intermédiaires</li>
+            <li>Véhicules <strong>contrôlés</strong> et <strong>garantis 2 ans</strong></li>
+            <li>Transport maritime <strong>inclus au port</strong> d’arrivée</li>
+            <li>Suivi expédition & <strong>assistance douanière</strong></li>
+          </ul>
+        </section>
+
+        <section class="about__card">
+          <h2>Notre vision</h2>
+          <p>
+            Devenir le <strong>partenaire de confiance</strong> pour l’importation de véhicules hybrides et électriques
+            en Afrique, avec une approche fondée sur la <strong>transparence</strong>, l’<strong>innovation</strong>
+            et l’<strong>excellence du service</strong>.
+          </p>
+          <p class="about__note">
+            Prochainement : ouverture des ventes <strong>Export (CIF)</strong> vers d’autres pays d’Afrique,
+            avec tarification transport adaptée à chaque port.
+          </p>
+        </section>
+      </section>
+
+      <section class="about__contact">
+        <h3>Contact</h3>
+        <div class="about__contactGrid">
+          <p><strong>Email :</strong> <a href="mailto:contact@evhautotrade.com">contact@evhautotrade.com</a></p>
+          <p><strong>WhatsApp :</strong> <a href="https://wa.me/33650447400" target="_blank" rel="noopener">+33 6 50 44 74 00</a></p>
+          <p><strong>Adresse :</strong> Eco Value Hub FZ-LLC, RAKEZ Free Zone, Émirats Arabes Unis</p>
+          <p><strong>Site :</strong> <a href="https://www.evhautotrade.com" target="_blank" rel="noopener">www.evhautotrade.com</a></p>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- FOOTER (identique à index.html) -->
+  <footer class="site-footer">
+    <div class="footer-wrap">
+      <div class="f-brand">
+        <img src="images/EVH_logo.png" alt="EVH Autotrade" class="f-logo">
+        <div>
+          <strong>Eco Value Hub FZ-LLC</strong><br>
+          Free Zone Limited Liability Company (FZ-LLC) – General Trading Licence<br>
+          VUNE1173, Compass building – Al Hulaila, AL Hulaila Industrial Zone-FZ,<br>
+          Ras Al Khaimah, United Arab Emirates
+        </div>
+      </div>
+      <div class="f-cols">
+        <div class="f-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:contact@evhautotrade.com">contact@evhautotrade.com</a></li>
+            <li><a href="https://wa.me/33650447400" rel="noopener" target="_blank">WhatsApp : +33 6 50 44 74 00</a></li>
+          </ul>
+        </div>
+        <div class="f-col">
+          <h4>Informations légales</h4>
+          <ul>
+            <li><a href="mentions-legales.html">Mentions légales</a></li>
+            <li><a href="conditions-generales.html">Conditions générales</a></li>
+            <li><a href="confidentialite.html">Confidentialité</a></li>
+          </ul>
+        </div>
+        <div class="f-col">
+          <h4>EVH Autotrade</h4>
+          <ul>
+            <li><a href="index.html#catalogue">Catalogue</a></li>
+            <li><a href="index.html#avantages">Nos avantages</a></li>
+            <li><a href="mailto:contact@evhautotrade.com?subject=Demande%20devis">Demander un devis</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <small>© <span id="y"></span> Eco Value Hub FZ-LLC — All rights reserved.</small>
+    </div>
+  </footer>
+
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
 
