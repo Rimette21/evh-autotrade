@@ -650,7 +650,185 @@ body.page-vehicle { background:#F6F7FB; }
     padding-top: 14px;
   }
 }
+/* =========================================================
+   EVH — PAGES ABOUT & CONTACT (sans changement du Hero)
+   Non-destructive: peut être collé en bas de styles.css
+   ========================================================= */
 
+/* -------- À PROPOS -------- */
+.about{
+  background:#F9FBFF;
+  color:#0f172a;
+  padding: clamp(40px, 6vw, 72px) 0;
+}
+.about__container{
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+.about__header h1{
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 800;
+  margin: 0 0 .5rem;
+}
+.about__intro{
+  color: var(--muted);
+  font-size: clamp(.98rem, 1.2vw, 1.05rem);
+  max-width: 900px;
+}
+
+/* Cartes & grille */
+.about__grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 1.4rem;
+}
+@media (max-width:1100px){ .about__grid{ grid-template-columns: repeat(2,1fr); } }
+@media (max-width:680px){ .about__grid{ grid-template-columns: 1fr; } }
+
+.about__card{
+  background:#fff;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  padding: 1.1rem;
+  border: 1px solid #eef2f7;
+}
+.about__card h2{
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin: 0 0 .5rem;
+}
+.about__card p{ color:#374151; }
+
+.about__ticks{
+  list-style: none;
+  padding-left: 0;
+  margin: .5rem 0 0;
+}
+.about__ticks li{
+  margin: .28rem 0;
+  padding-left: 1.05rem;
+  position: relative;
+}
+.about__ticks li::before{
+  content: "•";
+  color: var(--brand);
+  font-weight: 900;
+  position: absolute;
+  left: 0; top: 0;
+}
+
+/* Bloc contact en bas de page */
+.about__contact{
+  background:#fff;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  padding: 1.1rem;
+  margin-top: 1.2rem;
+  border: 1px solid #eef2f7;
+}
+.about__contact h3{
+  font-size: 1.02rem;
+  font-weight: 800;
+  margin: 0 0 .5rem;
+}
+.about__contactGrid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: .6rem 1rem;
+}
+@media (max-width:680px){ .about__contactGrid{ grid-template-columns: 1fr; } }
+.about__contact a{
+  color: #0f172a;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* -------- CONTACT -------- */
+.contact-page{
+  background:#F9FBFF;
+  color:#0f172a;
+  padding: clamp(40px, 6vw, 72px) 0;
+}
+.contact-page h1{
+  text-align:center;
+  font-size: clamp(1.8rem, 3vw, 2.3rem);
+  font-weight: 800;
+  margin: 0 0 .5rem;
+}
+.contact-page p{
+  text-align:center;
+  color: var(--muted);
+  max-width: 860px;
+  margin: 0 auto 1.6rem;
+  font-size: clamp(.98rem, 1.2vw, 1.05rem);
+}
+
+/* Cartes de contact */
+.contact-grid{
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width:1100px){ .contact-grid{ grid-template-columns: repeat(2,1fr); } }
+@media (max-width:680px){ .contact-grid{ grid-template-columns: 1fr; } }
+
+.contact-card{
+  background:#fff;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  padding: 1.1rem;
+  border: 1px solid #eef2f7;
+}
+.contact-card h3{
+  font-size: 1.05rem;
+  font-weight: 800;
+  margin: 0 0 .5rem;
+  color:#0f172a;
+}
+.contact-card a{
+  color:#0f172a;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.contact-card a:hover{ opacity:.85; }
+/* ===== Processus d’importation ===== */
+.process-page { background:#F9FBFF; padding: 2.6rem 0 3rem; }
+.process-intro { max-width: var(--container); margin: 0 auto 1.6rem; padding: 0 1.25rem; text-align: center; }
+.process-intro h1 { font-size: clamp(1.6rem, 2.6vw, 2.2rem); font-weight: 800; margin-bottom: .6rem; }
+.process-intro .lead { color: var(--muted); max-width: 900px; margin: 0 auto; }
+
+.steps { max-width: var(--container); margin: 1.2rem auto; padding: 0 1.25rem; display: grid; gap: 1rem; grid-template-columns: repeat(3,1fr); }
+@media (max-width: 1100px){ .steps{ grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 680px){ .steps{ grid-template-columns: 1fr; } }
+
+.step-card { background:#fff; border-radius: var(--radius-lg); box-shadow: var(--shadow); padding: 1.1rem; }
+.step-no { width: 36px; height: 36px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 800; background:#111; color:#fff; margin-bottom:.4rem; }
+.step-card h3 { font-size:1.05rem; margin:.2rem 0 .4rem; font-weight:800; }
+.step-card p { color:#374151; margin-bottom:.4rem; }
+.step-card .bullets { margin:.2rem 0 0; padding-left:1.05rem; }
+.step-card .bullets li { margin:.22rem 0; }
+
+.inclusions { max-width: var(--container); margin: 1.6rem auto; padding: 0 1.25rem; display: grid; gap: 1rem; grid-template-columns: repeat(2,1fr); }
+@media (max-width:900px){ .inclusions{ grid-template-columns:1fr; } }
+.inc-card { background:#fff; border-radius: var(--radius-lg); box-shadow: var(--shadow); padding: 1.1rem; }
+.inc-card h3 { font-size:1.05rem; margin:0 0 .4rem; font-weight:800; }
+.inc-card ul { padding-left:1.05rem; margin:0; }
+.inc-card li { margin:.22rem 0; }
+.inc-card .note { margin-top:.5rem; color:#6b7280; }
+
+.faq { max-width: var(--container); margin: 1.2rem auto 1.6rem; padding: 0 1.25rem; }
+.faq h2 { font-size:1.2rem; font-weight:800; margin-bottom:.5rem; }
+.faq details { background:#fff; border-radius: var(--radius-sm); box-shadow: var(--shadow); padding:.75rem 1rem; margin:.5rem 0; }
+.faq summary { cursor:pointer; font-weight:700; }
+.faq p { margin-top:.4rem; color:#374151; }
+
+.cta-center { text-align:center; margin-top: .6rem; }
+.cta-center .btn { margin:.15rem; }
 
 
 /* Fuel en vert — déjà défini dans le HTML avec style="color: #00aa00" */
