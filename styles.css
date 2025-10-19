@@ -868,6 +868,80 @@ body.page-vehicle { background:#F6F7FB; }
   line-height: 1.6;
   margin-bottom: .8rem;
 }
+/* =======================
+   CONTACT — alignement & lisibilité
+   ======================= */
+.contact-page{
+  background:#F9FBFF;
+  padding:80px 0 60px;           /* espace sous le header noir */
+  color:#0f172a;
+}
+
+/* Aligne h1, le paragraphe d’intro et la grille sur la même
+   largeur que le header/footer (var(--container)) */
+.contact-page > h1,
+.contact-page > p,
+.contact-grid{
+  max-width: var(--container);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;         /* même padding horizontal */
+  padding-right: 1.25rem;
+  text-align: left;              /* plus de centrage */
+}
+/* =======================
+   À PROPOS — alignement comme header/footer
+   ======================= */
+.about{
+  background:#F9FBFF;
+  padding:80px 0 60px;           /* espace sous le header noir */
+  color:#0f172a;
+}
+
+.about__container{
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  text-align: left;
+}
+
+/* Annule le retrait 2cm si tu l’avais ajouté */
+.about__container p,
+.about__container h1,
+.about__container h2,
+.about__container h3,
+.about__container ul,
+.about__container li{
+  margin-left: 0 !important;
+}
+/* =======================
+   FOOTER — version compacte et discrète
+   ======================= */
+.site-footer{
+  font-size: .9rem;              /* taille globale plus petite */
+}
+.footer-wrap{
+  padding: 1.4rem 1rem;          /* un peu moins haut */
+}
+.f-col h4{
+  font-size: .86rem;
+}
+.f-col li{
+  line-height: 1.3;
+}
+.f-bottom{
+  font-size: .78rem;             /* ligne © plus fine */
+}
+
+/* Mobile : encore un peu plus discret */
+@media (max-width:680px){
+  .site-footer{ font-size: .82rem; }
+  .f-bottom{ font-size: .74rem; }
+}
+
+
+/* Cartes déjà en grille : on garde tes breakpoints actuels */
+
 
 
 /* Fuel en vert — déjà défini dans le HTML avec style="color: #00aa00" */
