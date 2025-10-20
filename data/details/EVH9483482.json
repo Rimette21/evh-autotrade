@@ -1,21 +1,22 @@
 {
-  "id": "EVH9483482",
-  "name": "2025 Geely Galaxy E5 BEV",
-  "priceFCR": "21 970 €",
-  "mileage": 25000,
-  "regyear": "2024-08",
+  "id": "EVH9524551",
+  "name": "2024 Geely Galaxy E5 BEV",
+  "priceFCR": "20 130 €",
+  "mileage": 27000,
+  "regyear": "2024-07",
   "images": {
-    "hero": "images/EVH9483482_GeelyGalaxy_dev_gauche.webp",
+    "hero": "images/EVH9524551_GEELYGALAXY_devgauche.webp",
     "gallery": [
-      "images/EVH9483482_GeelyGalaxy_dev.png",
-      "images/EVH9483482_GeelyGalaxy_intdev.png",
-      "images/EVH9483482_GeelyGalaxy_intarriere.png",
-      "images/EVH9483482_GeelyGalaxy_arriere.png"
+      "images/EVH9524551_GEELYGALAXY_devface.webp",
+      "images/EVH9524551_GEELYGALAXY_arriere.webp",
+      "images/EVH9524551_GEELYGALAXY_intdevant.webp",
+      "images/EVH9524551_GEELYGALAXY_intarriere.webp",
+       "images/EVH9524551_GEELYGALAXY_int_passager.webp"
     ]
   },
   "caracteristiques": [
     "SUV 100% électrique (BEV)",
-    "Autonomie 440 à 530 km (CLTC) selon batterie",
+    "Autonomie 530 km (CLTC)",
     "Recharge rapide DC 110 kW (30→80% ~18 min)",
     "Moteur 160 kW (218 ch)",
     "Technologie Aegis Short Blade LFP",
@@ -27,15 +28,15 @@
       "moteur": "Synchrone à aimants permanents (PMSM)",
       "puissance": "160 kW (218 ch)",
       "couple": "320 Nm",
-      "transmission": "Automatique",
+      "transmission": "AT",
       "traction": "Avant (FWD)",
       "acceleration": "6.9 s (0–100 km/h)",
       "vitesseMax": "180 km/h"
     },
     "batterie": {
       "type": "LFP (Aegis Short Blade)",
-      "capacites": "49.52 kWh ou 60.22 kWh",
-      "autonomieCLTC": "440 à 530 km selon version",
+      "capacites": "60.22 kWh",
+      "autonomieCLTC": "530 km",
       "rechargeDC": "30–80% ~18 min (110 kW)",
       "rechargeAC": "7–11 kW (environ 6–8 h)",
       "consommation": "≈ 11.9 kWh/100 km",
@@ -79,5 +80,5 @@
       "Commandes vocales AI Elf"
     ]
   },
-  "resume": "Le Geely Galaxy E5 BEV 2025 combine une autonomie jusqu’à 530 km, une batterie LFP innovante Aegis Short Blade et un moteur de 160 kW. Ce SUV électrique compact, moderne et connecté, allie performances, confort et technologie avancée, idéal pour un usage quotidien ou professionnel."
+  "resume": "Le Geely Galaxy E5 BEV 2025 combine une autonomie de 530 km, une batterie LFP innovante Aegis Short Blade et un moteur de 160 kW. Ce SUV électrique compact, moderne et connecté, allie performances, confort et technologie avancée, idéal pour un usage quotidien ou professionnel."
 }
