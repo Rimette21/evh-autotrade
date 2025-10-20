@@ -1062,6 +1062,24 @@ body.page-vehicle { background:#F6F7FB; }
 /* CTA bas de page */
 .cta-center{ text-align:center; margin-top:10px; }
 
+.tag-new {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: linear-gradient(135deg, #2ecc71, #27ae60);
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.card {
+  position: relative;
+}
+
 
 /* Cartes déjà en grille : on garde tes breakpoints actuels */
 
