@@ -94,7 +94,7 @@
   },
     {
     "id": "EVH2025003",
-    "name": "2025 BYD Dolphin (Smart Driving / Freedom) – 420 km CLTC",
+    "name": "2025 BYD Dolphin-Smart Driving",
     "priceFCR": "19 410 €",
     "mileage": 0,
     "regyear": "2025-10",
@@ -212,7 +212,7 @@
   },
   {
     "id": "EVH9433858",
-    "name": "2024 Jetour X70 C-DM Long Range PRO (7 places)",
+    "name": "2024 Jetour X70 C-DM Long Range PRO",
     "priceFCR": "21 970 €",
     "mileage": 2000,
     "regyear": "2024-04",
@@ -225,8 +225,8 @@
       "Hybride rechargeable (C-DM)",
       "Autonomie électrique 110km",
       "Transmission DHT e-CVT",
-      "Caméra 360° / hayon électrique",
-      "Toit panoramique",
+      "7 places",
+      "Caméra 360° / Toit panoramique",
       "Aides L2 (ACC, maintien de voie)"
     ],
     "specifications": {
@@ -521,7 +521,7 @@
   },
   {
   "id": "EVH9509448",
-  "name": "2022 Toyota Highlander 2.5L 192HP Hybrid (HEV)",
+  "name": "2022 Toyota Highlander 2.5L 192HP",
   "priceFCR": "39 550€",
   "mileage": 58000,
   "regyear": "2022-06",
@@ -531,12 +531,12 @@
     "hero": "images/EVH9509448_ToyotaHighlander_devgauche.webp"
   },
   "features": [
-    "Hybride (HEV) 2.5L — ≈192 ch",
-    "Transmission e-CVT",
-    "5 à 7 places",
+    "Hybride",
+    "Transmission E-CVT",
+    "7 places",
     "Conso WLTP ≈ 5,5–6,5 L/100",
     "Coffre 520–1340 L",
-    "Écran jusqu’à 12,3” + CarPlay/Android Auto"
+    "Traction : 4WD/AWD"
   ],
   "specifications": {
     "engineCc": 2487,
