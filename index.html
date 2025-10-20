@@ -248,6 +248,7 @@ Un service complet, du choix du modèle à la livraison au port, avec un accompa
           return `
             <a class="card-link" href="vehicle.html?id=${encodeURIComponent(v.id)}">
               <article class="card">
+              ${v.isNew ? '<div class="tag-new">Neuf</div>' : ''}
                 <img class="thumb" src="${v.images?.hero || ''}" alt="${v.name}"
                      onerror="this.src='https://via.placeholder.com/400x300?text=Image+non+disponible'">
                 ${quickSpecsHTML(v)}
