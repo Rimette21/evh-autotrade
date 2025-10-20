@@ -1,0 +1,92 @@
+{
+  "id": "EVH9496374",
+  "name": "2025 Mercedes-Benz EQA Class BEV 73.5KWH",
+  "priceFCR": "25 870 €",
+  "mileage": 22000,
+  "regyear": "2024-05",
+  "images": {
+    "hero": "images/EVH9496374_Mercedesbenz_dev_gauche.webp",
+    "gallery": [
+      "images/EVH9496374_Mercedesbenz_arriere.webp",
+      "images/EVH9496374_Mercedesbenz_tabbord.webp"
+    ]
+  },
+  "caracteristiques": [
+    "100% électrique (BEV)",
+    "Autonomie 619 km (CLTC)",
+    "Batterie 73,5 kWh (NCM)",
+    "Moteur 140 kW (190 ch) / 380 Nm",
+    "Transmission AT (1 rapport)",
+    "Traction 2WD – 5 places"
+  ],
+  "features": [
+    "BEV",
+    "Autonomie 619 km",
+    "Batterie 73,5 kWh",
+    "Puissance 140 kW",
+    "AT",
+    "2WD",
+    "5 places"
+  ],
+  "specifications": {
+    "moteurThermique": null,
+    "puissanceThermique": null,
+    "typeHybride": "100% électrique (BEV)",
+    "puissanceSysteme": "190 ch (140 kW)",
+    "coupleSysteme": "380 Nm",
+    "transmission": "Automatique (AT) – 1 rapport",
+    "traction": "Avant (2WD)",
+    "typeBatterie": "Lithium-ion ternary (NCM) – Farasis Energy",
+    "batterieKWh": "73,5 kWh",
+    "autonomieCLTC": "619 km",
+    "autonomieWLTP": "—",
+    "autonomieTotale": "619 km",
+    "rechargeDCkW": "—",
+    "rechargeACkW": "—",
+    "tempsRechargeAC": "—",
+    "tempsRechargeDC": "—",
+    "refroidissementBatterie": "Liquide",
+    "places": "5 places",
+    "portes": "5 portes",
+    "volumeCoffre": "340–1320 L",
+    "dimensions": {
+      "longueur": "4463 mm",
+      "largeur": "1849 mm",
+      "hauteur": "1619 mm",
+      "empattement": "2729 mm"
+    },
+    "poids": "2029 kg",
+    "capaciteMax": "2455 kg",
+    "vitesseMax": "160 km/h",
+    "acceleration0100": "8,6 s",
+    "consommationElectrique": "≈ 12,7 kWh/100 km",
+    "suspension": "Indépendante : McPherson AV / Multibras AR",
+    "freins": "Disques ventilés AV / disques AR, frein de stationnement électrique",
+    "airbags": "Conducteur, passager, latéraux (dont genoux)",
+    "climatisation": "Automatique",
+    "connectivite": "Bluetooth, USB-C, Recharge sans fil, Accès & démarrage sans clé, Navigation/GPS"
+  },
+  "equipements": {
+    "interieur": [
+      "Climatisation automatique",
+      "Sièges électriques",
+      "Sellerie cuir",
+      "Éclairage d’ambiance 64 couleurs",
+      "Toit ouvrant électrique segmenté"
+    ],
+    "securite": [
+      "Caméras/radars d’aide au stationnement",
+      "Régulateur adaptatif (ACC)",
+      "Aide maintien de voie (LKA)",
+      "Assistance conduite niveau L2"
+    ],
+    "connectivite": [
+      "Bluetooth",
+      "USB-C (3 AV / 1 AR)",
+      "Recharge sans fil smartphone",
+      "Navigation / GPS",
+      "Accès et démarrage sans clé"
+    ]
+  },
+  "resume": "SUV 100 % électrique (73,5 kWh) offrant 619 km d’autonomie CLTC et 140 kW (190 ch). Confort et technologies Mercedes (ACC, LKA, ambiance 64 couleurs), avec assistance à l’import jusqu’au port."
+}
