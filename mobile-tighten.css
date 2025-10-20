@@ -201,7 +201,7 @@
 
 /* Très petits écrans */
 @media (max-width: 420px){
-  .hero-cta{ bottom: 35%; }
+  .hero-cta{ bottom: 57%; }
   .hero-cta .btn{
     padding: .45rem .68rem;
     font-size: 16px;
