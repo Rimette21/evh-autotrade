@@ -1,28 +1,5 @@
 [
   {
-    "id": "EVH2025003",
-    "name": "2025 BYD Dolphin (Smart Driving / Freedom) – 420 km CLTC",
-    "priceFCR": "19 410 €",
-    "mileage": 0,
-    "regyear": "2025-10",
-    "featuresCount": 5,
-    "images": {
-      "hero": "images/EVH2025003_BydDolphin_dev_droit.webp"
-    },
-    "features": [
-      "100% électrique (BEV)",
-      "Autonomie 420km (CLTC)",
-      "Batterie LFP Blade 44.9 kWh",
-      "Moteur 70 kW (95 ch) / 180 Nm",
-      "Écran 12.8” pivotant + CarPlay",
-      "Caméra 360° / ADAS (AEB, BSM)"
-    ],
-    "specifications": {
-      "engineCc": null,
-      "transmission": "AT"
-    }
-  },
-  {
     "id": "EVH9336933",
     "name": "2023 Jetour DASHING i-DM 1.5T 156HP",
     "priceFCR": "18 220 €",
@@ -86,6 +63,29 @@
     "specifications": {
       "engineCc": 1499,
       "transmission": "DHT"
+    }
+  },
+    {
+    "id": "EVH2025003",
+    "name": "2025 BYD Dolphin (Smart Driving / Freedom) – 420 km CLTC",
+    "priceFCR": "19 410 €",
+    "mileage": 0,
+    "regyear": "2025-10",
+    "featuresCount": 5,
+    "images": {
+      "hero": "images/EVH2025003_BydDolphin_dev_droit.webp"
+    },
+    "features": [
+      "100% électrique (BEV)",
+      "Autonomie 420km (CLTC)",
+      "Batterie LFP Blade 44.9 kWh",
+      "Moteur 70 kW (95 ch) / 180 Nm",
+      "Écran 12.8” pivotant + CarPlay",
+      "Caméra 360° / ADAS (AEB, BSM)"
+    ],
+    "specifications": {
+      "engineCc": null,
+      "transmission": "AT"
     }
   },
   {
@@ -244,28 +244,7 @@
       "transmission": "E-CVT"
     }
   },
-  {
-    "id": "EVHBSPPHEV_112KM",
-    "name": "2025 BYD Song PLUS DM-i 112KM 1.5L",
-    "priceFCR": "25 340 €",
-    "mileage": 0,
-    "regyear": "2025-01",
-    "images": {
-      "hero": "images/EVH_BSPPHEV_devant_gauche.webp"
-    },
-    "features": [
-      "Hybride rechargeable (PHEV)",
-      "Autonomie électrique 112km",
-      "Batterie LFP 18,3 kWh",
-      "Transmission e-CVT",
-      "Camera 360°",
-      "Régulateur de vitesse adaptatif"
-    ],
-    "specifications": {
-      "engineCc": 1498,
-      "transmission": "E-CVT"
-    }
-  },
+ 
   {
     "id": "EVH9408609",
     "name": "2025 BYD Song Plus BEV",
@@ -313,6 +292,28 @@
       "transmission": "DHT"
     }
   },
+   {
+    "id": "EVHBSPPHEV_112KM",
+    "name": "2025 BYD Song PLUS DM-i 112KM 1.5L",
+    "priceFCR": "25 340 €",
+    "mileage": 0,
+    "regyear": "2025-01",
+    "images": {
+      "hero": "images/EVH_BSPPHEV_devant_gauche.webp"
+    },
+    "features": [
+      "Hybride rechargeable (PHEV)",
+      "Autonomie électrique 112km",
+      "Batterie LFP 18,3 kWh",
+      "Transmission e-CVT",
+      "Camera 360°",
+      "Régulateur de vitesse adaptatif"
+    ],
+    "specifications": {
+      "engineCc": 1498,
+      "transmission": "E-CVT"
+    }
+  },
   {
     "id": "EVH9519205",
     "name": "2025 Chery Tiggo 9 C-DM 1.5T PHEV",
@@ -334,6 +335,29 @@
       "transmission": "DHT"
     }
   },
+  {
+  "id": "EVH9496374",
+  "name": "2025 Mercedes-Benz EQA Class BEV 73.5 kWh",
+  "priceFCR": "25 870 €",
+  "mileage": 22000,
+  "regyear": "2024-05",
+  "featuresCount": 5,
+  "images": {
+    "hero": "images/EVH9496374_Mercedesbenz_dev_gauche.webp"
+  },
+  "features": [
+    "100% électrique (BEV)",
+    "Autonomie 619 km (CLTC)",
+    "Batterie 73,5 kWh (NCM)",
+    "Moteur 140 kW (190 ch)",
+    "Caméra 360° / ADAS"
+  ],
+  "specifications": {
+    "engineCc": null,
+    "transmission": "AT"
+  }
+},
+  
   {
     "id": "EVHBSPPHEV_160KM",
     "name": "2025 BYD Song Plus DM-i 160KM 1.5L",
