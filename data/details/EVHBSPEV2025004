@@ -1,0 +1,101 @@
+{
+  "id": "EVHBSPEV2025004",
+  "name": "2025 Song PLUS EV Smart Driving Edition 520km Luxury",
+  "priceFCR": "26 790 €",
+  "mileage": 0,
+  "regyear": "2025-10",
+  "images": {
+    "hero": "images/EVHBSPEV2025004_DEVFACE.webp",
+    "gallery": [
+      "images/EVHBSPEV2025004_cote_gauche.webp",
+      "images/EVHBSPEV2025004_intdevant.webp",
+      "images/EVHBSPEV2025004_intarriere.webp"
+    ]
+  },
+  "caracteristiques": [
+    "SUV 100% électrique (BEV)",
+    "Autonomie 520 km (CLTC)",
+    "Batterie Blade LFP 71,8 kWh (FinDreams/BYD)",
+    "Moteur 150 kW (204 ch) / 310 Nm – FWD, mono-vitesse",
+    "Recharge DC 90 kW (30→80% ≈ 30 min) / AC 7 kW (≈ 10,2 h)",
+    "Caméras 360° + assistances ADAS niveau 2+"
+  ],
+  "specifications": {
+    "moteurThermique": null,
+    "puissanceThermique": null,
+    "typeHybride": "100% électrique (BEV)",
+    "puissanceSysteme": "204 ch (150 kW)",
+    "coupleSysteme": "310 Nm",
+    "transmission": "Automatique (mono-vitesse)",
+    "traction": "Avant (FWD, 2WD)",
+    "typeBatterie": "LFP Blade (FinDreams/BYD)",
+    "batterieKWh": "71,8 kWh",
+    "autonomieCLTC": "520 km",
+    "autonomieWLTP": "—",
+    "autonomieTotale": "520 km",
+    "rechargeDCkW": "90 kW (30→80% ≈ 30 min)",
+    "rechargeACkW": "7 kW (≈ 10,2 h 0→100%)",
+    "tempsRechargeAC": "≈ 10,2 h (0–100%)",
+    "tempsRechargeDC": "≈ 30 min (30–80%)",
+    "refroidissementBatterie": "Gestion thermique liquide + chauffage intégré",
+    "fonctionsBatterie": "VTOL (alimentation externe) 3,3 kW",
+    "places": "5 places",
+    "portes": "5 portes",
+    "volumeCoffre": "574–1477 L",
+    "dimensions": {
+      "longueur": "4785 mm",
+      "largeur": "1890 mm",
+      "hauteur": "1660 mm",
+      "empattement": "2765 mm",
+      "gardeAuSol": "170 mm",
+      "rayonDeBraquage": "5,55 m"
+    },
+    "poids": "1920 kg (à vide)",
+    "ptac": "2295 kg",
+    "vitesseMax": "175 km/h",
+    "acceleration0100": "≈ 7,7 s",
+    "consommationElectrique": "≈ 13,7 kWh/100 km",
+    "structure": "Monocoque",
+    "suspension": "Indépendante : McPherson AV / Multibras AR",
+    "freins": "Disques ventilés AV / disques AR, frein de stationnement électrique",
+    "direction": "Assistée électrique (EPS)",
+    "pneus": "235/50 R19",
+    "jantes": "Alliage aluminium"
+  },
+  "equipements": {
+    "interieur": [
+      "Écran central rotatif 15,6\" (DiLink OS)",
+      "Combiné conducteur 12,3\"",
+      "Sellerie cuir, sièges AV ventilés/chauffants",
+      "Climatisation automatique bi-zone",
+      "Toit panoramique",
+      "Hayon électrique",
+      "Clé NFC & démarrage à distance",
+      "Charge sans fil smartphone"
+    ],
+    "securite": [
+      "Airbags frontaux, latéraux et rideaux",
+      "Freinage d’urgence autonome (AEB)",
+      "Aide au maintien/centrage de voie (LKA/LCA)",
+      "Reconnaissance panneaux",
+      "Surveillance angle mort",
+      "TPMS (pression pneus)",
+      "Ancrages ISOFIX"
+    ],
+    "assistance": [
+      "Conduite assistée niveau 2+ (ADAS)",
+      "Régulateur de vitesse adaptatif (ACC)",
+      "Caméras panoramiques 360°",
+      "Capteurs AV/AR & stationnement automatique",
+      "Modes de conduite : Éco / Confort / Sport / Neige"
+    ],
+    "connectivite": [
+      "Bluetooth",
+      "GPS intégré",
+      "Apple CarPlay / Android Auto",
+      "Wi-Fi embarqué",
+      "Fonction VTOL 3,3 kW"
+    ]
+  },
+  "resume": "SUV 100% électrique (LFP 71,8 kWh) offrant 520 km CLTC, moteur 150 kW (FWD) et recharge rapide DC 90 kW. Habitacle haut de gamme (écran rotatif 15,6”, sièges ventilés/chauffants) et ADAS niveau 2+ pour un usage quotidien confortable et efficient."
+}
