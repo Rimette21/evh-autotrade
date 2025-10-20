@@ -235,20 +235,20 @@
     }
   },
   {
-    "id": "EVH9483482",
+    "id": "EVH9524551",
     "name": "2024 Geely Galaxy E5 BEV",
-    "priceFCR": "21 970 €",
-    "mileage": 25000,
-    "regyear": "2024-08",
+    "priceFCR": "20 190 €",
+    "mileage": 27000,
+    "regyear": "2024-07",
      "isNew": false,
-    "featuresCount": 4,
+    "featuresCount": 5,
     "images": {
-      "hero": "images/EVH9483482_GeelyGalaxy_dev_gauche.webp"
+      "hero": "images/EVH9524551_GEELYGALAXY_devgauche.webp"
     },
     "features": [
       "100% électrique (160 kW)",
-      "Autonomie 440–530 km (CLTC)",
-      "Batterie LFP 49.5–60.2 kWh",
+      "Autonomie 530 km (CLTC)",
+      "Batterie LFP 60.2 kWh",
       "Recharge DC 110 kW (30→80% ~ 0,3 h)"
     ],
     "specifications": {
