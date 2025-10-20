@@ -5,7 +5,7 @@
     "priceFCR": "18 220 €",
     "mileage": 13000,
     "regyear": "2024-05",
-    "isNew": false
+    "isNew": false,
     "images": {
       "hero": "images/EVH9336933_JETOUR_DEVANT.webp"
     },
@@ -28,7 +28,7 @@
     "priceFCR": "18 400 €",
     "mileage": 28800,
     "regyear": "2023-01",
-     "isNew": false
+     "isNew": false,
     "images": {
       "hero": "images/EVH9384241_HAVALH6_devant.webp"
     },
@@ -50,7 +50,7 @@
     "priceFCR": "18 400 €",
     "mileage": 18000,
     "regyear": "2024-04",
-     "isNew": false
+     "isNew": false,
     "featuresCount": 5,
     "images": {
       "hero": "images/9403367_Jetour X70_devant_gauche.webp"
@@ -74,7 +74,7 @@
     "priceFCR": "19 410 €",
     "mileage": 0,
     "regyear": "2025-10",
-      "isNew": true
+      "isNew": true,
     "featuresCount": 5,
     "images": {
       "hero": "images/EVH2025003_BydDolphin_dev_droit.webp"
@@ -98,7 +98,7 @@
     "priceFCR": "19 660 €",
     "mileage": 13000,
     "regyear": "2025-01",
-     "isNew": false
+     "isNew": false,
     "images": {
       "hero": "images/EVH9404921_DEV_DROITE.webp"
     },
@@ -121,7 +121,7 @@
     "priceFCR": "20 920 €",
     "mileage": 21000,
     "regyear": "2024-04",
-     "isNew": false
+     "isNew": false,
     "featuresCount": 4,
     "images": {
       "hero": "images/EVH9478503_DEV_DROITE.webp"
@@ -145,7 +145,7 @@
     "priceFCR": "23 000 €",
     "mileage": 0,
     "regyear": "2025-09",
-    "isNew": true
+    "isNew": true,
     "images": {
       "hero": "images/EVH_BSPPHEV_DEV.webp"
     },
@@ -168,7 +168,7 @@
     "priceFCR": "21 460 €",
     "mileage": 1200,
     "regyear": "2024-01",
-     "isNew": false
+     "isNew": false,
     "images": {
       "hero": "images/EVH9391855_CHERRY_DEVANT.webp"
     },
@@ -192,7 +192,7 @@
     "priceFCR": "21 970 €",
     "mileage": 2000,
     "regyear": "2024-04",
-     "isNew": false
+     "isNew": false,
     "featuresCount": 4,
     "images": {
       "hero": "images/9433858_Jetour X70_DEV_gauche.webp"
@@ -216,7 +216,7 @@
     "priceFCR": "21 970 €",
     "mileage": 25000,
     "regyear": "2024-08",
-     "isNew": false
+     "isNew": false,
     "featuresCount": 4,
     "images": {
       "hero": "images/EVH9483482_GeelyGalaxy_dev_gauche.webp"
@@ -238,7 +238,7 @@
     "priceFCR": "22 900 €",
     "mileage": 9000,
     "regyear": "2024-07",
-     "isNew": false
+     "isNew": false,
     "images": {
       "hero": "images/EVH9404943_BYD_beige_devant.webp"
     },
@@ -262,7 +262,7 @@
     "priceFCR": "23 980 €",
     "mileage": 5000,
     "regyear": "2025-08",
-     "isNew": false
+     "isNew": false,
     "featuresCount": 4,
     "images": {
       "hero": "images/EVH9408609_BYD_gris_droit.webp"
@@ -287,7 +287,7 @@
     "priceFCR": "24 670 €",
     "mileage": 900,
     "regyear": "2025-09",
-     "isNew": false
+     "isNew": false,
     "images": {
       "hero": "images/EVH9403325_HAVAL_DROIT.webp"
     },
@@ -311,7 +311,7 @@
     "priceFCR": "25 340 €",
     "mileage": 0,
     "regyear": "2025-01",
-    "isNew": true
+    "isNew": true,
     "images": {
       "hero": "images/EVH_BSPPHEV_devant_gauche.webp"
     },
@@ -334,7 +334,7 @@
     "priceFCR": "25 420 €",
     "mileage": 3800,
     "regyear": "2025-05",
-     "isNew": false
+     "isNew": false,
     "images": {
       "hero": "images/EVH9519205_CHERY_TIGO_devdroit.webp"
     },
@@ -356,7 +356,7 @@
   "priceFCR": "25 870 €",
   "mileage": 22000,
   "regyear": "2024-05",
-     "isNew": false
+     "isNew": false,
   "featuresCount": 5,
   "images": {
     "hero": "images/EVH9496374_Mercedesbenz_dev_gauche.webp"
@@ -380,7 +380,7 @@
     "priceFCR": "27 300 €",
     "mileage": 0,
     "regyear": "2025-01",
-     "isNew": true
+     "isNew": true,
     "images": {
       "hero": "images/EVH_BSPPHEV_160km_DEV.webp"
     },
@@ -403,7 +403,7 @@
     "priceFCR": "27 730 €",
     "mileage": 50,
     "regyear": "2025-09",
-     "isNew": true
+     "isNew": true,
     "images": {
       "hero": "images/EVH9382121_TOYOTA_COTE DROIT.webp"
     },
@@ -428,7 +428,7 @@
     "priceFCR": "29 130 €",
     "mileage": 23000,
     "regyear": "2024-01",
-     "isNew": false
+     "isNew": false,
     "images": {
       "hero": "images/EVH9387237_BYDTANG_droit.webp"
     },
@@ -452,7 +452,7 @@
     "priceFCR": "29 280 €",
     "mileage": 1000,
     "regyear": "2025-09",
-     "isNew": false
+     "isNew": false,
     "images": {
       "hero": "images/EVH9397463_TOYOTA_DROIT.webp"
     },
@@ -477,7 +477,7 @@
     "priceFCR": "30 310 €",
     "mileage": 4000,
     "regyear": "2025-06",
-     "isNew": false
+     "isNew": false,
     "images": {
       "hero": "images/EVH9330983_BMW_DEVANT.webp"
     },
@@ -501,7 +501,7 @@
   "priceFCR": "39 550€",
   "mileage": 58000,
   "regyear": "2022-06",
-     "isNew": false
+     "isNew": false,
   "featuresCount": 5,
   "images": {
     "hero": "images/EVH9509448_ToyotaHighlander_devgauche.webp"
@@ -525,7 +525,7 @@
     "priceFCR": "67 880€",
     "mileage": 500,
     "regyear": "2025-04",
-     "isNew": true
+     "isNew": true,
     "featuresCount": 5,
     "images": {
       "hero": "images/EVH9431983_ToyotaPrado_dev_gauche.webp"
