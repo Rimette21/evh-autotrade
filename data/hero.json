@@ -525,7 +525,7 @@
   "priceFCR": "30 620 €",
   "mileage": 28000,
   "regyear": "2023-09",
-  "isNew": true,
+  "isNew": false,
   "featuresCount": 5,
   "images": {
     "hero": "images/EVH9535838-AUDIQ5_DEV-DROITE.webp"
@@ -536,12 +536,12 @@
     "Batterie LFP Blade 83,4 kWh",
     "Moteur 150 kW (204 ch)",
     "7 places",
-    "Caméras 360° / Toit panoramique"
+    "Caméras 360° - Toit panoramique"
   ],
   "specifications": {
     "engineCc": null,
     "transmission": "AT"
-  }
+  },
   {
   "id": "EVH9509448",
   "name": "2022 Toyota Highlander 2.5L 192HP",
