@@ -291,7 +291,6 @@ Un service complet, du choix du modèle à la livraison au port, avec un accompa
   function debounce(fn, ms=250){
     let t; return (...args)=>{ clearTimeout(t); t=setTimeout(()=>fn(...args), ms); };
   }
-<script>
 // --- Helpers EUR → TND (à placer une fois, au-dessus de cardHTML) ---
 const EURO = new Intl.NumberFormat('fr-FR',{ style:'currency', currency:'EUR', maximumFractionDigits:0 });
 const TND  = new Intl.NumberFormat('fr-FR',{ style:'currency', currency:'TND', maximumFractionDigits:0 });
