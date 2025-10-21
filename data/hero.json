@@ -1,29 +1,5 @@
 [
   {
-  "id": "EVHBSPEV2025004",
-  "name": "2025 BYD Song PLUS EV-SmartDriving- Luxury Model",
-  "priceFCR": "26 790 € (~91 210 Tnd)",
-  "mileage": 0,
-  "regyear": "2025-10",
-  "isNew": true,
-  "featuresCount": 5,
-  "images": {
-    "hero": "images/EVHBSPEV2025004_DEVFACE.webp"
-  },
-  "features": [
-    "100% électrique (BEV)",
-    "Autonomie 520 km (CLTC)",
-    "Batterie LFP Blade 71,8 kWh",
-    "Moteur 150 kW (204 ch) – FWD",
-    "Recharge DC 90 kW / AC 7 kW",
-    "Caméras 360° / ADAS niveau 2+"
-  ],
-  "specifications": {
-    "engineCc": null,
-    "transmission": "AT"
-  }
-},
-  {
     "id": "EVH9336933",
     "name": "2023 Jetour DASHING i-DM 1.5T 156HP",
     "priceFCR": "18 220 € (~62 032 Tnd)",
@@ -140,6 +116,28 @@
     }
   },
   {
+    "id": "EVH9524551",
+    "name": "2024 Geely Galaxy E5 BEV",
+    "priceFCR": "20 190 € (~68 739 Tnd)",
+    "mileage": 27000,
+    "regyear": "2024-07",
+     "isNew": false,
+    "featuresCount": 5,
+    "images": {
+      "hero": "images/EVH9524551_GEELYGALAXY_devgauche.webp"
+    },
+    "features": [
+      "100% électrique (160 kW)",
+      "Autonomie 530 km (CLTC)",
+      "Batterie LFP 60.2 kWh",
+      "Recharge DC 110 kW (30→80% ~ 0,3 h)"
+    ],
+    "specifications": {
+      "engineCc": null,
+      "transmission": "AT"
+    }
+  },
+  {
     "id": "EVH9478503",
     "name": "2024 BYD Song Plus 1.5L 110HP L4",
     "priceFCR": "20 920 € (~71 225 Tnd)",
@@ -163,30 +161,7 @@
       "transmission": "E-CVT"
     }
   },
-  {
-    "id": "EVHBSPPHEV_75KM",
-    "name": "2025 BYD Song PLUS DM-i 75KM 1.5L",
-    "priceFCR": "23 000 € (~78 309 Tnd)",
-    "mileage": 0,
-    "regyear": "2025-09",
-    "isNew": true,
-    "images": {
-      "hero": "images/EVH_BSPPHEV_DEV.webp"
-    },
-    "features": [
-      "Hybride rechargeable (PHEV)",
-      "Autonomie électrique 75km",
-      "Batterie LFP 12.9 kWh",
-      "Transmission E-CVT (DM-i)",
-      "Caméra 360°",
-      "Régulateur de vitesse adaptatif (L2)"
-    ],
-    "specifications": {
-      "engineCc": 1498,
-      "transmission": "E-CVT"
-    }
-  },
-  {
+   {
     "id": "EVH9391855",
     "name": "Chery Tiggo7 C-DM 1.5T 156HP L4",
     "priceFCR": "21 460 € (~73 063 Tnd)",
@@ -210,6 +185,7 @@
       "transmission": "DHT"
     }
   },
+
   {
     "id": "EVH9433858",
     "name": "2024 Jetour X70 C-DM Long Range PRO",
@@ -235,28 +211,6 @@
     }
   },
   {
-    "id": "EVH9524551",
-    "name": "2024 Geely Galaxy E5 BEV",
-    "priceFCR": "20 190 € (~68 739 Tnd)",
-    "mileage": 27000,
-    "regyear": "2024-07",
-     "isNew": false,
-    "featuresCount": 5,
-    "images": {
-      "hero": "images/EVH9524551_GEELYGALAXY_devgauche.webp"
-    },
-    "features": [
-      "100% électrique (160 kW)",
-      "Autonomie 530 km (CLTC)",
-      "Batterie LFP 60.2 kWh",
-      "Recharge DC 110 kW (30→80% ~ 0,3 h)"
-    ],
-    "specifications": {
-      "engineCc": null,
-      "transmission": "AT"
-    }
-  },
-  {
     "id": "EVH9404943",
     "name": "2024 BYD Song Plus 1.5L 110HP L4",
     "priceFCR": "22 900 € (~77 965 Tnd)",
@@ -273,6 +227,29 @@
       "Transmission E-CVT",
       "Caméra 360°",
       "Régulateur de vitesse adaptatif (ACC)"
+    ],
+    "specifications": {
+      "engineCc": 1498,
+      "transmission": "E-CVT"
+    }
+  },
+    {
+    "id": "EVHBSPPHEV_75KM",
+    "name": "2025 BYD Song PLUS DM-i 75KM 1.5L",
+    "priceFCR": "23 000 € (~78 309 Tnd)",
+    "mileage": 0,
+    "regyear": "2025-09",
+    "isNew": true,
+    "images": {
+      "hero": "images/EVH_BSPPHEV_DEV.webp"
+    },
+    "features": [
+      "Hybride rechargeable (PHEV)",
+      "Autonomie électrique 75km",
+      "Batterie LFP 12.9 kWh",
+      "Transmission E-CVT (DM-i)",
+      "Caméra 360°",
+      "Régulateur de vitesse adaptatif (L2)"
     ],
     "specifications": {
       "engineCc": 1498,
@@ -390,6 +367,30 @@
     "Batterie 73,5 kWh (NCM)",
     "Moteur 140 kW (190 ch)",
     "Caméra 360° / ADAS"
+  ],
+  "specifications": {
+    "engineCc": null,
+    "transmission": "AT"
+  }
+},
+   {
+  "id": "EVHBSPEV2025004",
+  "name": "2025 BYD Song PLUS EV-SmartDriving- Luxury Model",
+  "priceFCR": "26 790 € (~91 210 Tnd)",
+  "mileage": 0,
+  "regyear": "2025-10",
+  "isNew": true,
+  "featuresCount": 5,
+  "images": {
+    "hero": "images/EVHBSPEV2025004_DEVFACE.webp"
+  },
+  "features": [
+    "100% électrique (BEV)",
+    "Autonomie 520 km (CLTC)",
+    "Batterie LFP Blade 71,8 kWh",
+    "Moteur 150 kW (204 ch) – FWD",
+    "Recharge DC 90 kW / AC 7 kW",
+    "Caméras 360° / ADAS niveau 2+"
   ],
   "specifications": {
     "engineCc": null,
