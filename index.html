@@ -297,7 +297,7 @@ const EURO = new Intl.NumberFormat('fr-FR',{ style:'currency', currency:'EUR', m
 const TND  = new Intl.NumberFormat('fr-FR',{ style:'currency', currency:'TND', maximumFractionDigits:0 });
 
 // Taux par défaut ; tu peux le surcharger ailleurs : window.TND_RATE = 3.40;
-window.TND_RATE = window.TND_RATE || 3.35;
+window.TND_RATE = window.TND_RATE || 3.41;
 
 function parseEuroToNumber(s){
   if (!s) return NaN;
