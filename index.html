@@ -124,6 +124,50 @@ Un service complet, du choix du modèle à la livraison au port, avec un accompa
   <div class="adv2-head">
       <h2 class="adv2-title">Découvrez <span class="accent">Nos Modèles</span></h2>
     </div>
+    
+<!-- FILTRES CATALOGUE (v2) -->
+<div id="filters" class="filters">
+  <div class="filters-row">
+    <!-- Recherche Marque/Modèle -->
+    <input id="f-q" type="search" placeholder="Rechercher : marque ou modèle…" aria-label="Rechercher par marque/modèle">
+
+    <!-- Motorisation -->
+    <select id="f-type" aria-label="Filtrer par motorisation">
+      <option value="">Motorisation</option>
+      <option value="BEV">Électrique (BEV)</option>
+      <option value="PHEV">Hybride rechargeable (PHEV)</option>
+      <option value="HEV">Hybride (HEV)</option>
+      <option value="ESSENCE">Essence</option>
+      <option value="DIESEL">Diesel</option>
+    </select>
+
+    <!-- Année (slider) -->
+    <div class="range-wrap">
+      <label for="f-year" class="range-label">
+        Année immat. : <span id="f-year-val">—</span>
+      </label>
+      <input id="f-year" type="range" min="2008" max="2026" step="1" value="2008" aria-label="Année d'immatriculation minimale">
+    </div>
+
+    <!-- Kilométrage (slider) -->
+    <div class="range-wrap">
+      <label for="f-km" class="range-label">
+        Kilométrage max : <span id="f-km-val">—</span>
+      </label>
+      <input id="f-km" type="range" min="0" max="200000" step="1000" value="200000" aria-label="Kilométrage maximal">
+    </div>
+
+    <!-- Prix (slider) -->
+    <div class="range-wrap">
+      <label for="f-price" class="range-label">
+        Prix FCR max : <span id="f-price-val">—</span>
+      </label>
+      <input id="f-price" type="range" min="0" max="100000" step="500" value="100000" aria-label="Prix maximal">
+    </div>
+
+    <button id="f-reset" class="btn btn--ghost" type="button">Réinitialiser</button>
+  </div>
+</div>
 
     <div id="vehicles-grid" class="grid">
       <p>Chargement du catalogue…</p>
