@@ -640,7 +640,7 @@ body.page-vehicle { background:#F6F7FB; }
 
 .page-vehicle .specs-resume .v-resume {
   margin: 0;
-  line-height: 1.55;
+  line-height: 1.25;
 }
 
 /* Option: un peu plus d'espace sur mobile */
