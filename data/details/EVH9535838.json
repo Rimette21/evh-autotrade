@@ -21,23 +21,23 @@
     "Capacité Batterie : 83,4  kWh",
     "Transmission : AT",
     "7 places",
-    "Toit ouvrant”
+    "Toit ouvrant"
   ],
   "specifications": {
-      "moteurElectrique": “150 kW (204 chevaux)”,
-      "puissanceCombinée": “310 Nm”,
-      "transmission": “intégrale électrique (AWD) avec deux moteurs (avant synchrone, arrière asynchrone)”
+      "moteurElectrique": "150 kW (204 chevaux)",
+      "puissanceCombinée": "310 Nm",
+      "transmission": "intégrale électrique (AWD) avec deux moteurs (avant synchrone, arrière asynchrone)"
     },
     "performances": {
       "autonomie": "560 km",
       "consommationElectrique": "≈ 15.9 kWh/100 km",
-      "vitesseMax": " 180 km/h",
+      "vitesseMax": "180 km/h",
       "acceleration": "0-100 km/h : environ 6,7 secondes)"
     },
     "batterie": {
       "type": "lithium-ion ternary (NCM)",
       "capacite": "83,4 kWh",
-      "rechargeDC": “supportée (vitesse jusqu'à environ 150 kW)"
+      "rechargeDC": "supportée (vitesse jusqu'à environ 150 kW)"
            },
     "dimensions": "4876 × 1860 × 1675 mm",
     "empattement": "2965 mm",
