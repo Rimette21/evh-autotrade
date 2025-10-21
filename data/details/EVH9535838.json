@@ -1,0 +1,99 @@
+{
+  "id": "EVH9535838",
+  "name": "2023 Audi Q5 e-tron BEV 83.4KWH",
+  "priceFCR": "30 620 €", 
+  "mileage": 28000,
+  "regyear": "2023-09",
+  "images": {
+    "hero": "images/EVH9535838-AUDIQ5_DEV-DROITE.webp",
+    "gallery": [
+      "images/EVH9535838-AUDIQ5_DEV-GAUCHE.webp",
+      "images/EVH9535838-AUDIQ5_DEV-FACE.webp",
+      "images/EVH9535838-AUDIQ5_ARRIERE-GAUCHE.webp",
+      "images/EVH9535838-AUDIQ5_ARRIERE-DROIT.webp",
+      "images/EVH9535838-AUDIQ5_INTDEV.webp",
+       "images/EVH9535838-AUDIQ5_INTARRIERE.webp"
+    ]
+  },
+  "caracteristiques": [
+    "SUV 100 % électrique",
+    "Autonomie : 560 km",
+    "Capacité Batterie : 83,4  kWh",
+    "Transmission : AT",
+    "7 places",”
+    "Toit ouvrant”
+  ],
+  "specifications": {
+      "moteurElectrique": “150 kW (204 chevaux)”,
+      "puissanceCombinée": “310 Nm”,
+      "transmission": “intégrale électrique (AWD) avec deux moteurs (avant synchrone, arrière asynchrone)”
+    },
+    "performances": {
+      "autonomie": "560 km",
+      "consommationElectrique": "≈ 15.9 kWh/100 km",
+      "vitesseMax": " 180 km/h",
+      "acceleration": "0-100 km/h : environ 6,7 secondes)"
+    },
+    "batterie": {
+      "type": "lithium-ion ternary (NCM)",
+      "capacite": "83,4 kWh",
+      "rechargeDC": “supportée (vitesse jusqu'à environ 150 kW)"
+           },
+    "dimensions": "4876 × 1860 × 1675 mm",
+    "empattement": "2965 mm",
+    "poids": "2410 kg",
+     "volumeCoffre": "1825 (sièges rabattus)"
+            },
+    "chassis": {
+      "suspensionAvant": "Indépendante MacPherson",
+      "suspensionArriere": "Indépendante multibras",
+      "direction": "Assistée électrique",
+      "freins": "Disques ventilés AV / disques AR",
+      "pneus": "235/45 R21",
+      "jantes": "Alliage aluminium"
+    }
+  },
+ {
+  "equipements": {
+    "interieur": [
+      "Climatisation automatique tri-zone",
+      "Sellerie cuir Milano ou Nappa",
+      "Sièges avant électriques avec mémoire et fonction massage",
+      "Tableau de bord numérique Audi Virtual Cockpit 12,3’’",
+      "Écran tactile central MMI 10,1’’ avec retour haptique",
+      "Toit ouvrant panoramique électrique",
+      "Eclairage d’ambiance personnalisable 30 couleurs",
+      "Volant multifonction chauffant gainé de cuir",
+      "Recharge sans fil pour smartphone (Audi Phone Box)"
+    ],
+    "securite": [
+      "ABS / EBD / ESP / BA",
+      "Huit airbags (frontaux, latéraux, rideaux et genoux)",
+      "Audi pre sense front / rear / side / basic",
+      "Surveillance angle mort (Audi Side Assist)",
+      "Avertisseur de collision et freinage d’urgence automatique",
+      "Reconnaissance des panneaux de signalisation",
+      "Aide maintien et centrage dans la voie (Lane Assist)",
+      "Contrôle électronique de la pression des pneus (TPMS)",
+      "Ancrages ISOFIX aux places arrière"
+    ],
+    "assistance": [
+      "Régulateur de vitesse adaptatif (ACC) avec fonction Stop & Go",
+      "Assistant embouteillage (Traffic Jam Assist)",
+      "Assistant de stationnement automatique (Park Assist)",
+      "Caméras 360° avec guidage dynamique",
+      "Frein de stationnement automatique",
+      "Assistant de freinage post-collision (Multi-Collision Brake)"
+    ],
+    "connectivite": [
+      "Interface MMI Navigation Plus avec MMI Touch Response",
+      "Bluetooth et Wi-Fi embarqué",
+      "Système audio Audi Sound System / Bang & Olufsen (selon version)",
+      "Compatibilité Apple CarPlay / Android Auto sans fil",
+      "Commande vocale naturelle Audi connect"
+    ]
+  },
+  "resume": "SUV électrique premium (83,4 kWh, 204 ch) combinant sécurité active Audi pre sense, connectivité avancée MMI et confort intérieur haut de gamme."
+}
+
+
