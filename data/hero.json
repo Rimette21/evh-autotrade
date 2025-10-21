@@ -279,7 +279,6 @@
       "transmission": "E-CVT"
     }
   },
-
   {
     "id": "EVH9408609",
     "name": "2025 BYD Song Plus BEV",
@@ -397,7 +396,6 @@
     "transmission": "AT"
   }
 },
-  
   {
     "id": "EVHBSPPHEV_160KM",
     "name": "2025 BYD Song Plus 1.5L DM-i ",
@@ -422,7 +420,7 @@
     }
   },
   {
-  "id": "EVHBSPEV2025004",
+  "id": "EVHBSPEV2025005",
   "name": "2025 BYD Song PLUS EV - Premium Edition",
   "priceFCR": "27 650 € (~94 140 Tnd)",
   "mileage": 0,
