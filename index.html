@@ -255,64 +255,170 @@ Un service complet, du choix du modèle à la livraison au port, avec un accompa
 </script>
        
   <!-- ===== Catalogue : génération des cartes ===== -->
-  <script>
-    fetch('data/hero.json?v=12', { cache: 'no-store' })
-      .then(res => res.json())
-      .then(vehicles => {
-        const grid = document.getElementById('vehicles-grid');
-        if (!Array.isArray(vehicles) || vehicles.length === 0) {
-          grid.innerHTML = '<p>Aucun véhicule disponible pour le moment.</p>';
-          return;
-        }
+ <script>
+  // ===== Helpers additionnels =====
+  const EURO = new Intl.NumberFormat('fr-FR');
+  function parsePriceEUR(s){
+    if(!s) return null;
+    const n = String(s).replace(/[^\d]/g,''); // "25 340 €" -> "25340"
+    return n ? parseInt(n,10) : null;
+  }
+  function brandFromName(name){
+    if(!name) return '';
+    const t = name.split(/\s+/).filter(Boolean);
+    return /^\d{4}$/.test(t[0]) ? (t[1] || '') : t[0];
+  }
+  function yearFromReg(reg){
+    // "2025-10" -> 2025 ; "2023" -> 2023
+    if(!reg) return null;
+    const y = String(reg).slice(0,4);
+    return /^\d{4}$/.test(y) ? parseInt(y,10) : null;
+  }
+  function kmNum(v){
+    return (v.mileage != null) ? parseInt(String(v.mileage).replace(/[^\d]/g,''),10) : 0;
+  }
+  function energyNormalized(v){
+    const e = energyFrom(v).toUpperCase();
+    if (e.includes('PHEV')) return 'PHEV';
+    if (e.includes('BEV')) return 'BEV';
+    if (/(HEV|hybride(?!.*rechargeable))/i.test([v.name, ...(v.features||[])].join(' '))) return 'HEV';
+    if (/\bESSENCE\b|gasoline|petrol/i.test([v.name, ...(v.features||[])].join(' '))) return 'ESSENCE';
+    if (/\bDIESEL\b/i.test([v.name, ...(v.features||[])].join(' '))) return 'DIESEL';
+    return e || '';
+  }
+  // petite latence pour la recherche texte
+  function debounce(fn, ms=250){
+    let t; return (...args)=>{ clearTimeout(t); t=setTimeout(()=>fn(...args), ms); };
+  }
 
-        grid.innerHTML = vehicles.map(v => {
-          const energy = energyFrom(v);                  // "PHEV" ou "BEV"
-          const autoLbl = autonomyLabel(v);              // "Autonomie 110 km"
-          const trShort = transmissionShort(v) || '—';   // "DHT", "E-CVT", "DCT", …
+  // ===== Rendu d'une carte =====
+  function cardHTML(v){
+    const energy = energyFrom(v);
+    const autoLbl = autonomyLabel(v);
+    const trShort = transmissionShort(v) || '—';
+    const newBadge = v.isNew ? `<span class="pill" style="position:absolute;left:10px;top:10px;z-index:2;background:#fef3c7;color:#92400e;border:1px solid #fde68a;">Neuf</span>` : '';
+    return `
+      <a class="card-link" href="vehicle.html?id=${encodeURIComponent(v.id)}">
+        <article class="card" style="position:relative">
+          ${newBadge}
+          <img class="thumb" src="${v.images?.hero || ''}" alt="${v.name}"
+               onerror="this.src='https://via.placeholder.com/400x300?text=Image+non+disponible'">
+          ${quickSpecsHTML(v)}
+          <div class="body">
+            <div class="name">${v.name}</div>
+            <div class="submeta">Réf : <strong>${v.id}</strong></div>
+            <div class="price">Prix FCR (HT) : ${v.priceFCR || '-'}</div>
+            <ul class="features">${
+              (energy === 'PHEV'
+                ? ['Hybride rechargeable (PHEV)', autoLbl, `Transmission auto ${trShort}`, 'Caméra 360°', 'Toit panoramique']
+                : ['100% électrique (BEV)', autoLbl, `Transmission auto ${trShort}`, 'Caméra 360°', 'Toit panoramique'])
+              .map(x=>`<li>• ${x}</li>`).join('')
+            }</ul>
+          </div>
+        </article>
+      </a>`;
+  }
 
-          // 5 puces fixes selon l’énergie
-          const bullets = (energy === 'PHEV')
-            ? [
-                'Hybride rechargeable (PHEV)',
-                autoLbl,
-                `Transmission auto ${trShort}`,
-                'Caméra 360°',
-                'Toit panoramique'
-              ]
-            : [
-                '100% électrique (BEV)',
-                autoLbl,
-                `Transmission auto ${trShort}`,
-                'Caméra 360°',
-                'Toit panoramique'
-              ];
+  function renderGrid(list){
+    const grid = document.getElementById('vehicles-grid');
+    if(!Array.isArray(list) || list.length === 0){
+      grid.innerHTML = '<p>Aucun véhicule ne correspond aux filtres.</p>';
+      return;
+    }
+    grid.innerHTML = list.map(cardHTML).join('');
+  }
 
-          const featuresHTML = bullets.map(txt => `<li>• ${txt}</li>`).join('');
+  // ===== Filtrage principal =====
+  function applyFilters(){
+    const q = document.getElementById('f-q').value.trim().toLowerCase();
+    const type = document.getElementById('f-type').value;     // BEV/PHEV/HEV/ESSENCE/DIESEL/''
+    const yMin = parseInt(document.getElementById('f-year').value,10);
+    const kmMax = parseInt(document.getElementById('f-km').value,10);
+    const pMax = parseInt(document.getElementById('f-price').value,10);
 
-          return `
-            <a class="card-link" href="vehicle.html?id=${encodeURIComponent(v.id)}">
-              <article class="card">
-              ${v.isNew ? '<div class="tag-new">Neuf</div>' : ''}
-                <img class="thumb" src="${v.images?.hero || ''}" alt="${v.name}"
-                     onerror="this.src='https://via.placeholder.com/400x300?text=Image+non+disponible'">
-                ${quickSpecsHTML(v)}
-                <div class="body">
-                  <div class="name">${v.name}</div>
-                  <div class="submeta">Réf : <strong>${v.id}</strong></div>
-                  <div class="price">Prix FCR (HT) : ${v.priceFCR || '-'}</div>
-                  <!-- ligne Km/Immat supprimée car incluse dans quick-specs -->
-                  <ul class="features">${featuresHTML}</ul>
-                </div>
-              </article>
-            </a>`;
-        }).join('');
-      })
-      .catch(err => {
-        console.error(err);
-        document.getElementById('vehicles-grid').innerHTML =
-          '<p style="color:red;">Erreur : impossible de charger le catalogue.</p>';
+    const filtered = window.__VEHICLES__.filter(v => {
+      const name = (v.name||'').toLowerCase();
+      const brand = brandFromName(v.name).toLowerCase();
+      const hay = [name, brand, ...(v.features||[])].join(' ').toLowerCase();
+      const okQ = !q || hay.includes(q);
+
+      const e = energyNormalized(v);           // normalisé
+      const okType = !type || e === type;
+
+      const y = yearFromReg(v.regyear) || 1900;
+      const okYear = y >= yMin;
+
+      const km = kmNum(v);
+      const okKm = isFinite(kmMax) ? km <= kmMax : true;
+
+      const price = parsePriceEUR(v.priceFCR) || 0;
+      const okPrice = isFinite(pMax) ? price <= pMax : true;
+
+      return okQ && okType && okYear && okKm && okPrice;
+    });
+
+    renderGrid(filtered);
+    // maj étiquettes sliders
+    document.getElementById('f-year-val').textContent = yMin;
+    document.getElementById('f-km-val').textContent = EURO.format(kmMax) + ' km';
+    document.getElementById('f-price-val').textContent = EURO.format(pMax) + ' €';
+  }
+
+  // ===== Initialisation =====
+  fetch('data/hero.json?v=12', { cache: 'no-store' })
+    .then(res => res.json())
+    .then(vehicles => {
+      window.__VEHICLES__ = vehicles || [];
+
+      // bornes dynamiques
+      const years = window.__VEHICLES__.map(v => yearFromReg(v.regyear)).filter(Boolean);
+      const kms = window.__VEHICLES__.map(kmNum).filter(n => !isNaN(n));
+      const prices = window.__VEHICLES__.map(v => parsePriceEUR(v.priceFCR)).filter(n => !isNaN(n));
+
+      const yMin = Math.min(...(years.length?years:[2015]));
+      const yMax = Math.max(...(years.length?years:[(new Date()).getFullYear()]));
+      const kmMax = Math.max(...(kms.length?kms:[200000]));
+      const pMax = Math.max(...(prices.length?prices:[40000]));
+
+      const elYear = document.getElementById('f-year');
+      elYear.min = yMin; elYear.max = yMax; elYear.value = yMin;
+      document.getElementById('f-year-val').textContent = yMin;
+
+      const elKm = document.getElementById('f-km');
+      elKm.min = 0; elKm.max = kmMax; elKm.step = 1000; elKm.value = kmMax;
+      document.getElementById('f-km-val').textContent = EURO.format(kmMax) + ' km';
+
+      const elPrice = document.getElementById('f-price');
+      elPrice.min = 0; elPrice.max = pMax; elPrice.step = 500; elPrice.value = pMax;
+      document.getElementById('f-price-val').textContent = EURO.format(pMax) + ' €';
+
+      // Rendu initial
+      renderGrid(window.__VEHICLES__);
+
+      // Listeners
+      const onInput = debounce(applyFilters, 200);
+      document.getElementById('f-q').addEventListener('input', onInput);
+      document.getElementById('f-type').addEventListener('change', applyFilters);
+      elYear.addEventListener('input', applyFilters);
+      elKm.addEventListener('input', applyFilters);
+      elPrice.addEventListener('input', applyFilters);
+
+      document.getElementById('f-reset').addEventListener('click', () => {
+        document.getElementById('f-q').value = '';
+        document.getElementById('f-type').value = '';
+        elYear.value = yMin;
+        elKm.value = kmMax;
+        elPrice.value = pMax;
+        applyFilters();
       });
-  </script>
+    })
+    .catch(err => {
+      console.error(err);
+      document.getElementById('vehicles-grid').innerHTML =
+        '<p style="color:red;">Erreur : impossible de charger le catalogue.</p>';
+    });
+</script>
+
 
   <section id="avantages" class="advantages-lovable">
     <div class="adv2-head">
