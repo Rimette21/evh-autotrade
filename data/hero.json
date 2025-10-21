@@ -422,6 +422,30 @@
     }
   },
   {
+  "id": "EVHBSPEV2025004",
+  "name": "2025 BYD Song PLUS EV - Premium Edition",
+  "priceFCR": "27 650 € (~94 140 Tnd)",
+  "mileage": 0,
+  "regyear": "2025-10",
+  "isNew": true,
+  "featuresCount": 5,
+  "images": {
+    "hero": "images/EVHBSPEV2025005_dev_face.webp"
+  },
+  "features": [
+    "100% électrique (BEV)",
+    "Autonomie 520 km (CLTC)",
+    "Batterie LFP Blade 71,8 kWh",
+    "Moteur 150 kW (204 ch) – FWD",
+    "Recharge DC 90 kW / AC 7 kW",
+    "Caméras 360° / ADAS niveau 2+"
+  ],
+  "specifications": {
+    "engineCc": null,
+    "transmission": "AT"
+  },
+
+  {
     "id": "EVH9382121",
     "name": "2025 Toyota bZ5 - BEV",
     "priceFCR": "27 730 € (~94 410 Tnd)",
