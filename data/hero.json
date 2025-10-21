@@ -421,7 +421,7 @@
   },
   {
   "id": "EVHBSPEV2025005",
-  "name": "2025 BYD Song PLUS EV - Premium Edition",
+  "name": "2025 BYD Song PLUS EV- Premium Edition",
   "priceFCR": "27 650 € (~94 140 Tnd)",
   "mileage": 0,
   "regyear": "2025-10",
@@ -441,8 +441,8 @@
   "specifications": {
     "engineCc": null,
     "transmission": "AT"
+    }
   },
-
   {
     "id": "EVH9382121",
     "name": "2025 Toyota bZ5 - BEV",
