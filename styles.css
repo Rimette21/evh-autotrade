@@ -1102,8 +1102,12 @@ body.page-vehicle { background:#F6F7FB; }
   .filters input[type="range"] { width:100%; min-width:200px; }
   .range-wrap { width:100%; }
 }
-
-
+.price-note{
+  margin-top: .15rem;
+  font-size: .78rem;
+  color: #6b7280; /* gris discret */
+}
+.price-note em{ font-style: italic; }
 
 /* Cartes déjà en grille : on garde tes breakpoints actuels */
 
