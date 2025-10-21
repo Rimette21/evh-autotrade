@@ -7,17 +7,15 @@
   "images": {
     "hero": "images/EVH9478503_DEV_DROITE.webp",
     "gallery": [
-      "images/EVH9478503_DEV_DROIT.png",
-      "images/EVH9478503_DEV.png",
-      "images/EVH9478503_DEV_DROITE.png",
-      "images/EVH9478503_ARRIERE.png",
-      "images/EVH9478503_INT_DEV.png",
-      "images/EVH9478503_ARRIERE_DR.png"
+      "images/EVH9478503_DEV.webp",
+      "images/EVH9478503_ARRIERE.webp",
+      "images/EVH9478503_INT_DEV.webp",
+      "images/EVH9478503_ARRIERE_DR.webp"
     ]
   },
   "caracteristiques": [
     "SUV hybride rechargeable (PHEV)",
-    "Autonomie électrique ≈ 110 km (CLTC)",
+    "Autonomie électrique 110 km",
     "Batterie LFP 18.3 kWh",
     "Transmission E-CVT traction avant",
     "Caméra 360°",
@@ -39,7 +37,7 @@
     "batterie": {
       "type": "LFP (Lithium Fer Phosphate)",
       "capacite": "18.3 kWh",
-      "autonomieCLTC": "≈ 110–115 km",
+      "autonomieCLTC": "≈ 110 km",
       "rechargeDC": "≈ 1 h (30→80%)",
       "rechargeAC": "≈ 2,5–3 h (complète)"
     },
