@@ -1102,14 +1102,6 @@ body.page-vehicle { background:#F6F7FB; }
   .filters input[type="range"] { width:100%; min-width:200px; }
   .range-wrap { width:100%; }
 }
-/* Note de conversion TND sous le prix */
-.price-note{
-  margin-top: .15rem;
-  font-size: .82rem;         /* petit */
-  color: #6b7280;            /* discret */
-  line-height: 1.2;
-}
-
 
 /* Cartes déjà en grille : on garde tes breakpoints actuels */
 
