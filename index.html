@@ -292,6 +292,22 @@ Un service complet, du choix du modèle à la livraison au port, avec un accompa
   }
 
   // ===== Rendu d'une carte =====
+   <script>
+// --- paramètre de conversion (à ajuster quand tu veux) ---
+const EUR_TO_TND = 3.41; // ex: 1 € ≈ 3,41 TND (mets la valeur du jour)
+
+// Formateur TND
+const TND = new Intl.NumberFormat('fr-TN');
+
+// Convertit "25 870 €" → nombre → TND formaté
+function priceTNDfromEURString(priceStr){
+  const eur = parsePriceEUR(priceStr);  // utilitaire que tu as déjà
+  if(!eur) return null;
+  const tnd = Math.round(eur * EUR_TO_TND);
+  return TND.format(tnd) + ' TND';
+}
+</script>
+
   function cardHTML(v){
     const energy = energyFrom(v);
     const autoLbl = autonomyLabel(v);
@@ -308,6 +324,7 @@ Un service complet, du choix du modèle à la livraison au port, avec un accompa
             <div class="name">${v.name}</div>
             <div class="submeta">Réf : <strong>${v.id}</strong></div>
             <div class="price">Prix FCR (HT) : ${v.priceFCR || '-'}</div>
+            ${priceTND ? `<div class="price-note">(<em>~${priceTND} selon taux de change en vigueur</em>)</div>` : ''}
             <ul class="features">${
               (energy === 'PHEV'
                 ? ['Hybride rechargeable (PHEV)', autoLbl, `Transmission auto ${trShort}`, 'Caméra 360°', 'Toit panoramique']
