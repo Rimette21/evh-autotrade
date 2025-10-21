@@ -519,6 +519,29 @@
       "transmission": "AT"
     }
   },
+   {
+  "id": "EVH9535838",
+  "name": "2023 Audi Q5 e-tron BEV 83.4KWH",
+  "priceFCR": "30 620 €",
+  "mileage": 28000,
+  "regyear": "2023-09",
+  "isNew": true,
+  "featuresCount": 5,
+  "images": {
+    "hero": "images/EVH9535838-AUDIQ5_DEV-DROITE.webp"
+  },
+  "features": [
+    "100% électrique (BEV)",
+    "Autonomie 560 km",
+    "Batterie LFP Blade 83,4 kWh",
+    "Moteur 150 kW (204 ch)",
+    "7 places",
+    "Caméras 360° / Toit panoramique"
+  ],
+  "specifications": {
+    "engineCc": null,
+    "transmission": "AT"
+  }
   {
   "id": "EVH9509448",
   "name": "2022 Toyota Highlander 2.5L 192HP",
