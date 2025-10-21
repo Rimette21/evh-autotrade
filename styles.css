@@ -297,7 +297,7 @@ header{
 .body{padding:1rem}
 .name{font-size:1rem;font-weight:800;margin-bottom:.35rem}
 .submeta{color:var(--muted);font-size:.86rem;margin:.1rem 0 .35rem}
-.price{color:var(--brand);font-weight:800;margin:.25rem 0}
+.price{color:var(--brand);font-weight:700;margin:.25rem 0}
 .meta{display:flex;justify-content:space-between;color:var(--muted);font-size:.9rem;margin:.25rem 0 .5rem}
 .features{list-style:none;color:#111;opacity:.9;font-size:.9rem;min-height:4.6rem}
 .features li{margin:.25rem 0}
