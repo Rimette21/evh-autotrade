@@ -26,7 +26,7 @@
   "specifications": {
     "energie": "Électrique (BEV)",
     "capaciteBatterie": "71.8 kWh",
-    "autonomie": "520 km (donnée constructeur)",
+    "autonomie": "520 km",
     "puissance": "150 kW (≈204 ch)",
     "transmission": "Automatique (AT)",
     "traction": "2WD",
@@ -34,9 +34,8 @@
     "dimensions": {
       "longueur": "4785 mm",
       "largeur": "1890 mm",
-      "hauteur": "1660 mm"
-    },
-    "poids": "1920 kg"
+      "hauteur": "1660 mm",
+      "poids": "1920 kg"
   },
   "equipements": {
     "interieur": [
