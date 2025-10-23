@@ -1,0 +1,103 @@
+{
+  "id": "EVHBYDSEAL6EV007",
+  "name": "2025 Seal 06 EV 545KM Flagship Model",
+  "priceFCR": "25 390 €",
+  "mileage": 0,
+  "regyear": "2025-10",
+  "images": {
+    "hero": "images/EVHBYD_SEAL6_EV_FACE.webp",
+    "gallery": [
+      "images/EVHBYD_SEAL6_EV_COTE_DROIT.webp",
+      "images/EVHBYD_SEAL6_EV_ARDROITE.webp",
+      "images/EVHBYD_SEAL6_EV_DEVGAUCHE.webp",
+      "images/EVHBYD_SEAL6_EV_tabbord.webp",
+      "images/EVHBYD_SEAL6_EV_arriere.webp"
+    ]
+  },
+  "caracteristiques": [
+    "SUV 100% électrique (BEV)",
+    "Autonomie 545 km (CLTC)",
+    "Batterie Blade LFP 87,04 kWh",
+    "Moteur 160 kW (218 ch) / 310 Nm – 2 FWD",
+    "Recharge DC 90 kW (0→80% ≈ 28 min) / AC 7 kW (≈ 12,4 h)",
+    "Caméras 360° + assistances ADAS niveau 2+"
+  ],
+  "specifications": {
+    "moteurThermique": null,
+    "puissanceThermique": null,
+    "typeHybride": "100% électrique (BEV)",
+    "puissanceSysteme": "218 ch (160 kW)",
+    "coupleSysteme": "310 Nm",
+    "transmission": "Auto AT",
+    "traction": "Avant (FWD, 2WD)",
+    "typeBatterie": "LFP Blade (FinDreams/BYD)",
+    "batterieKWh": "87,04 kWh",
+    "autonomieCLTC": "545 km",
+    "autonomieWLTP": "—",
+    "autonomieTotale": "545 km",
+    "rechargeDCkW": "90 kW (0→80% ≈ 28 min)",
+    "rechargeACkW": "7 kW (≈ 12,4 h 0→100%)",
+    "tempsRechargeAC": "≈ 12,4 h (0–100%)",
+    "tempsRechargeDC": "≈ 28 min (0–80%)",
+    "refroidissementBatterie": "Gestion thermique liquide + chauffage intégré",
+    "fonctionsBatterie": "VTOL (alimentation externe) 3,3 kW",
+    "places": "5 places",
+    "portes": "5 portes",
+    "volumeCoffre": "574–1477 L",
+    "dimensions": {
+      "longueur": "4785 mm",
+      "largeur": "1890 mm",
+      "hauteur": "1660 mm",
+      "empattement": "2765 mm",
+      "gardeAuSol": "170 mm",
+      "rayonDeBraquage": "5,55 m"
+    },
+    "poids": "1920 kg (à vide)",
+    "ptac": "2295 kg",
+    "vitesseMax": "175 km/h",
+    "acceleration0100": "≈ 7,7 s",
+    "consommationElectrique": "≈ 14,1 kWh/100 km",
+    "structure": "Monocoque",
+    "suspension": "Indépendante : McPherson AV / Multibras AR",
+    "freins": "Disques ventilés AV / disques AR, frein de stationnement électrique",
+    "direction": "Assistée électrique (EPS)",
+    "pneus": "235/50 R19",
+    "jantes": "Alliage aluminium"
+  },
+  "equipements": {
+    "interieur": [
+      "Écran central rotatif 15,6\" (DiLink OS)",
+      "Combiné conducteur 12,3\"",
+      "Sellerie cuir, sièges AV ventilés/chauffants",
+      "Climatisation automatique bi-zone",
+      "Toit panoramique",
+      "Hayon électrique",
+      "Clé NFC & démarrage à distance",
+      "Charge sans fil smartphone"
+    ],
+    "securite": [
+      "Airbags frontaux, latéraux et rideaux",
+      "Freinage d’urgence autonome (AEB)",
+      "Aide au maintien/centrage de voie (LKA/LCA)",
+      "Reconnaissance panneaux",
+      "Surveillance angle mort",
+      "TPMS (pression pneus)",
+      "Ancrages ISOFIX"
+    ],
+    "assistance": [
+      "Conduite assistée niveau 2+ (ADAS)",
+      "Régulateur de vitesse adaptatif (ACC)",
+      "Caméras panoramiques 360°",
+      "Capteurs AV/AR & stationnement automatique",
+      "Modes de conduite : Éco / Confort / Sport / Neige"
+    ],
+    "connectivite": [
+      "Bluetooth",
+      "GPS intégré",
+      "Apple CarPlay / Android Auto",
+      "Wi-Fi embarqué",
+      "Fonction VTOL 3,3 kW"
+    ]
+  },
+  "resume": "Habitacle haut de gamme avec écran rotatif 15,6\", sellerie cuir ventilée et chauffante, et système avancé d'assistance à la conduite ADAS niveau 2+. Inclut un système HUD (tête haute) qui projette les informations clés sur le pare-brise, permettant au conducteur de garder les yeux sur la route tout en restant informé en temps réel pour plus de sécurité et de confort."
+}
