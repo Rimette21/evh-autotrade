@@ -5,13 +5,13 @@
   "mileage": 0,
   "regyear": "2025-01",
   "images": {
-    "hero": "images/EVH_BSPPHEV_devant_gauche.webp",
+    "hero": "images/EVHBSPPHEV_75KM_face.webp",
     "gallery": [
-      "images/EVH_BSPPHEV_ARGAUCHE.png",
-      "images/EVH_BSPPHEV_cote_gauche.png",
-      "images/EVH_BSPPHEV_DEV.png",
-      "images/EVH_BSPPHEV_ARRIERE.png",
-      "images/EVH_BSPPHEV_droite.png"
+      "images/EEVHBSPPHEV_75KM_devtroisquart.webp",
+      "images/EVHBSPPHEV_75KM_tabbord.webp",
+      "images/EVHBSPPHEV_75KM_intarriere.webp",
+      "images/EVHBSPPHEV_75KM_intdevant.webp",
+      "images/EVHBSPPHEV_75KM_intdev.webp"
     ]
   },
   "caracteristiques": [
