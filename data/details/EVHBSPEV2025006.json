@@ -5,11 +5,11 @@
   "mileage": 0,
   "regyear": "2025-10",
   "images": {
-    "hero": "images/EVH2025006_FLAGSHIP_face.webp",
+    "hero": "images/EVHBSPEV2025006_Flagship_noirface.webp",
     "gallery": [
       "images/EVH2025006_Flagship_ ARDROITE.webp",
       "images/EVH2025006_FLAGSHIP_COTE.webp",
-      "images/EVH2025006_FLAGSHIP_ARRIERE.webp",
+      "images/EVH2025006_FLAGSHIP_grisface.webp",
       "images/EVH2025006_Flagship_ARGAUCHE.webp"
     ]
   },
