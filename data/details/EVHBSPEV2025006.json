@@ -1,0 +1,104 @@
+{
+  "id": "EVHBSPEV2025006",
+  "name": "2025 Song PLUS EV Smart Driving Edition 605km Flagship",
+  "priceFCR": "29 410 €",
+  "mileage": 0,
+  "regyear": "2025-10",
+  "images": {
+    "hero": "images/EVH2025006_FLAGSHIP_face.webp",
+    "gallery": [
+      "images/EVH2025006_Flagship_ ARDROITE.webp",
+      "images/EVH2025006_FLAGSHIP_COTE.webp",
+      "images/EVH2025006_FLAGSHIP_ARRIERE.webp",
+      "images/EVH2025006_Flagship_ARGAUCHE.webp"
+    ]
+  },
+  "caracteristiques": [
+    "SUV 100% électrique (BEV)",
+    "Autonomie 605 km (CLTC)",
+    "Batterie Blade LFP 87,04 kWh",
+    "Moteur 160 kW (218 ch) / 310 Nm – traction avant (FWD)",
+    "Recharge DC 90 kW (0→80% ≈ 28 min) / AC 7 kW (≈ 12,4 h)",
+    "Consommation moyenne ≈ 14,1 kWh / 100 km",
+    "Caméras 360° + assistances ADAS niveau 2+"
+  ],
+  "specifications": {
+    "moteurThermique": null,
+    "puissanceThermique": null,
+    "typeHybride": "100% électrique (BEV)",
+    "puissanceSysteme": "218 ch (160 kW)",
+    "coupleSysteme": "310 Nm",
+    "transmission": "Automatique (réducteur à un rapport)",
+    "traction": "Avant (FWD, 2WD)",
+    "typeBatterie": "LFP Blade (BYD FinDreams)",
+    "batterieKWh": "87,04 kWh",
+    "autonomieCLTC": "605 km",
+    "autonomieWLTP": "≈ 500 km (estimation)",
+    "autonomieTotale": "605 km",
+    "rechargeDCkW": "90 kW (0→80% ≈ 28 min)",
+    "rechargeACkW": "7 kW (≈ 12,4 h 0→100%)",
+    "tempsRechargeAC": "≈ 12,4 h (0–100%)",
+    "tempsRechargeDC": "≈ 28 min (0–80%)",
+    "refroidissementBatterie": "Refroidissement liquide + gestion thermique intelligente",
+    "fonctionsBatterie": "VTOL (alimentation externe) 3,3 kW",
+    "places": "5 places",
+    "portes": "5 portes",
+    "volumeCoffre": "574–1477 L",
+    "dimensions": {
+      "longueur": "4785 mm",
+      "largeur": "1890 mm",
+      "hauteur": "1660 mm",
+      "empattement": "2765 mm",
+      "gardeAuSol": "170 mm",
+      "rayonDeBraquage": "5,55 m"
+    },
+    "poids": "2050 kg (à vide)",
+    "ptac": "2320 kg",
+    "vitesseMax": "175 km/h",
+    "acceleration0100": "≈ 7,5 s",
+    "consommationElectrique": "≈ 14,1 kWh/100 km",
+    "structure": "Monocoque en acier haute résistance",
+    "suspension": "Indépendante : McPherson AV / Multibras AR",
+    "freins": "Disques ventilés AV / disques AR, frein électrique",
+    "direction": "Assistée électrique (EPS)",
+    "pneus": "235/50 R19",
+    "jantes": "Alliage aluminium"
+  },
+  "equipements": {
+    "interieur": [
+      "Écran central rotatif 15,6\" (DiLink OS)",
+      "Combiné conducteur 12,3\"",
+      "Sellerie cuir, sièges AV/AR ventilés et chauffants",
+      "Climatisation automatique bi-zone",
+      "Toit panoramique ouvrant",
+      "Hayon électrique",
+      "Clé NFC & démarrage sans clé",
+      "Chargeur sans fil smartphone"
+    ],
+    "securite": [
+      "Airbags frontaux, latéraux et rideaux",
+      "Freinage d’urgence autonome (AEB)",
+      "Aide active au maintien de voie (LKA/LCA)",
+      "Reconnaissance des panneaux de signalisation",
+      "Surveillance angle mort (BSD)",
+      "Alerte de trafic transversal (RCTA/CTA)",
+      "TPMS (pression pneus)",
+      "Ancrages ISOFIX"
+    ],
+    "assistance": [
+      "Conduite assistée DiPilot 100 (ADAS Niveau 2+)",
+      "Régulateur de vitesse adaptatif (ACC)",
+      "Caméras panoramiques 360°",
+      "Capteurs AV/AR & stationnement automatique",
+      "Modes de conduite : Éco / Confort / Sport / Neige"
+    ],
+    "connectivite": [
+      "Bluetooth",
+      "GPS intégré",
+      "Apple CarPlay / Android Auto",
+      "Wi-Fi embarqué",
+      "Fonction V2L (alimentation externe) 3,3 kW"
+    ]
+  },
+  "resume": "SUV électrique haut de gamme (605 km CLTC) équipé de la batterie Blade 87 kWh et d’un moteur de 218 ch. Intègre le système DiPilot 100 (ADAS niveau 2+), un écran rotatif 15,6'' et une sellerie cuir ventilée. Excellent compromis entre autonomie, confort et technologie."
+}
