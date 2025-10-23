@@ -7,6 +7,7 @@
   "images": {
     "hero": "images/EVH2025003_BydDolphin_dev_droit.webp",
     "gallery": [
+      "images/EVH2025003_BydDolphin_devFACE.webp",
       "images/EVH2025003_BydDolphin_cote.webp",
       "images/EVH2025003_BydDolphin_dev_gauche.webp",
       "images/EVH2025003_BydDolphin_intdevant.webp"
