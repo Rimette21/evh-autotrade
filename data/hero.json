@@ -46,6 +46,30 @@
     }
   },
    {
+  "id": "EVHBYDSEAL6EV007",
+  "name": "2025 Seal 06 EV 545KM Flagship Model",
+  "priceFCR": "25 390 € (~86 590 Tnd)",
+  "mileage": 0,
+  "regyear": "2025-10",
+  "isNew": true,
+  "featuresCount": 5,
+  "images": {
+    "hero": "images/EVHBYD_SEAL6_EV_FACE.webp"
+  },
+  "features": [
+    "100% électrique (BEV)",
+    "Autonomie 545 km (CLTC)",
+    "Batterie LFP Blade 87,04 kWh",
+    "Moteur 160 kW (218 ch) – 2 FWD",
+    "Recharge DC 90 kW / AC 7 kW",
+    "Caméras 360° / ADAS niveau 2+"
+  ],
+  "specifications": {
+    "engineCc": null,
+    "transmission": "Auto AT"
+  }
+  },
+   {
     "id": "EVHBSPPHEV_160KM",
     "name": "2025 BYD Song Plus 1.5L DM-i ",
     "priceFCR": "27 300 € (~92 945 Tnd)",
