@@ -166,14 +166,14 @@
   },
    {
   "id": "EVHBYDSEALION7008",
-  "name": "2025 Seal 06 EV 545KM Flagship Model",
+  "name": "2025 BYD SEALION 7 EV 610 km Smart Driving Edition",
   "priceFCR": "34 600 € (~117 990 Tnd)",
   "mileage": 0,
   "regyear": "2025",
   "isNew": true,
   "featuresCount": 5,
   "images": {
-    "hero": "EVHBYDSEALION7_devdroite.webp"
+    "hero": "images/EVHBYDSEALION7_devdroite.webp"
   },
   "features": [
     "100% électrique (BEV)",
