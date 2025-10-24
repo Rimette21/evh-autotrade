@@ -8,9 +8,9 @@
   "images": {
     "hero": "images/EVH9408609_BYD_gris_devant.webp",
     "gallery": [
-      "images/EVH9408609_BYD_gris_droit.jpg",
-      "images/EVH9408609_BYD_gris_ecran.jpg",
-      "images/EVH9408609_BYD_gris_tabbord.jpg"
+      "images/EVH9408609_BYD_gris_droit.webp",
+      "images/EVH9408609_BYD_gris_ecran.webp",
+      "images/EVH9408609_BYD_gris_tabbord.webp"
     ]
   },
   "features": [
