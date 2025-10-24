@@ -7,12 +7,12 @@
   "images": {
     "hero": "images/EVH9403325_HAVAL_DROIT.webp",
     "gallery": [
-      "images/EVH9403325_HAVAL_DEV_GAUCHE.jpg",
-      "images/EVH9403325_HAVAL_ARRIERE.jpg",
-      "images/EVH9403325_HAVAL_FACE%20DEVANT.jpg",
-      "images/EVH9403325_HAVAL_FACEARRIERE.jpg",
-      "images/EVH9403325_HAVAL_INT_DEVANT.jpg",
-      "images/EVH9403325_HAVAL_gauche.jpg"
+      "images/EVH9403325_HAVAL_DEV_GAUCHE.webp",
+      "images/EVH9403325_HAVAL_ARRIERE.webp",
+      "images/EVH9403325_HAVAL_FACE%20DEVANT.webp",
+      "images/EVH9403325_HAVAL_FACEARRIERE.webp",
+      "images/EVH9403325_HAVAL_INT_DEVANT.webp",
+      "images/EVH9403325_HAVAL_gauche.webp"
     ]
   },
   "caracteristiques": [
