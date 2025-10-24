@@ -7,12 +7,12 @@
   "images": {
     "hero": "images/9433858_Jetour X70_DEV_gauche.webp",
     "gallery": [
-      "images/9433858_Jetour X70_DEV_droite.png",
-      "images/9433858_Jetour X70_arriere.png",
-      "images/9433858_Jetour X70_arriere_gauche.png",
-      "images/9433858_Jetour X70_tab_bord.png",
-      "images/9433858_Jetour X70_int_arriere.png",
-      "images/9433858_Jetour X70_devant.png"
+      "images/9433858_Jetour X70_DEV_droite.webp",
+      "images/9433858_Jetour X70_arriere.webp",
+      "images/9433858_Jetour X70_arriere_gauche.webp",
+      "images/9433858_Jetour X70_tab_bord.webp",
+      "images/9433858_Jetour X70_int_arriere.webp",
+      "images/9433858_Jetour X70_devant.webp"
     ]
   },
   "caracteristiques": [
