@@ -7,9 +7,9 @@
   "images": {
     "hero": "images/EVH9336933_JETOUR_DEVANT.webp",
     "gallery": [
-      "images/EVH9336933_JETOUR_DROIT.png",
-      "images/EVH9336933_JETOUR_ARRIERE.png",
-      "images/EVH9336933_JETOUR_TABBORD.png"
+      "images/EVH9336933_JETOUR_DROIT.webp",
+      "images/EVH9336933_JETOUR_ARRIERE.webp",
+      "images/EVH9336933_JETOUR_TABBORD.webp"
     ]
   },
   "caracteristiques": [
