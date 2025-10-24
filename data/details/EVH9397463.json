@@ -7,8 +7,8 @@
   "images": {
     "hero": "images/EVH9397463_TOYOTA_DROIT.webp",
     "gallery": [
-      "images/EVH9397463_TOYOTA_DEVANT.png",
-      "images/EVH9397463_TOYOTA_INTAVANT.png"
+      "images/EVH9397463_TOYOTA_DEVANT.webp",
+      "images/EVH9397463_TOYOTA_INTAVANT.webp"
     ]
   },
   "caracteristiques": [
