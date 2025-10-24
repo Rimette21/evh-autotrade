@@ -7,10 +7,10 @@
   "images": {
     "hero": "images/EVH_BSPPHEV_160km_DEV.webp",
     "gallery": [
-      "images/EVH_BSPPHEV_160km_dev_droit.png",
-      "images/EVH_BSPPHEV_160km_dev_gauche.png",
-      "images/EVH_BSPPHEV_160km_GAUCHE.png",
-      "images/EVH_BSPPHEV_160km_int_devant.png"
+      "images/EVH_BSPPHEV_160km_dev_droit.webp",
+      "images/EVH_BSPPHEV_160km_dev_gauche.webp",
+      "images/EVH_BSPPHEV_160km_GAUCHE.webp",
+      "images/EVH_BSPPHEV_160km_int_devant.webp"
     ]
   },
   "caracteristiques": [
