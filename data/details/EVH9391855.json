@@ -7,10 +7,10 @@
   "images": {
     "hero": "images/EVH9391855_CHERRY_DEVANT.webp",
     "gallery": [
-      "images/EVH9391855_CHERRY_GAUCHE.png",
-      "images/EVH9391855_CHERRY_ARRIERE.png",
-      "images/EVH9391855_CHERRY_INTDEV.png",
-      "images/EVH9391855_CHERRY_INTARR.png"
+      "images/EVH9391855_CHERRY_GAUCHE.webp",
+      "images/EVH9391855_CHERRY_ARRIERE.webp",
+      "images/EVH9391855_CHERRY_INTDEV.webp",
+      "images/EVH9391855_CHERRY_INTARR.webp"
     ]
   },
   "caracteristiques": [
