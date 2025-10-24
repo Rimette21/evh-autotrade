@@ -7,12 +7,12 @@
   "images": {
     "hero": "images/EVH9384241_HAVALH6_devant.webp",
     "gallery": [
-      "images/EVH9384241_HAVALH6_dev_gauche.png",
-      "images/EVH9384241_HAVALH6_dev_droite.png",
-      "images/EVH9384241_HAVALH6_int_dev.png",
-      "images/EVH9384241_HAVALH6_int.png",
-      "images/EVH9384241_HAVALH6_arriere.png",
-      "images/EVH9384241_HAVALH6_int_arriere.png"
+      "images/EVH9384241_HAVALH6_dev_gauche.webp",
+      "images/EVH9384241_HAVALH6_dev_droite.webp",
+      "images/EVH9384241_HAVALH6_int_dev.webp",
+      "images/EVH9384241_HAVALH6_int.webp",
+      "images/EVH9384241_HAVALH6_arriere.webp",
+      "images/EVH9384241_HAVALH6_int_arriere.webp"
     ]
   },
   "caracteristiques": [
