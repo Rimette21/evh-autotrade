@@ -7,11 +7,11 @@
   "images": {
     "hero": "images/EVH9404921_DEV_DROITE.webp",
     "gallery": [
-      "images/EVH9404921_DEV_GAUCHE.png",
-      "images/EVH9404921_AR_DROITE.png",
-      "images/EVH9404921_AR_GAUCHE.png",
-      "images/EVH9404921_INT_DEV.png",
-      "images/EVH9404921_AR_INT.png"
+      "images/EVH9404921_DEV_GAUCHE.webp",
+      "images/EVH9404921_AR_DROITE.webp",
+      "images/EVH9404921_AR_GAUCHE.webp",
+      "images/EVH9404921_INT_DEV.webp",
+      "images/EVH9404921_AR_INT.webp"
     ]
   },
   "caracteristiques": [
