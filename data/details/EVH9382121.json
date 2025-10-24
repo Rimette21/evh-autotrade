@@ -73,7 +73,6 @@
     "chargeSansFil": "50 W",
     "toit": "Toit panoramique fixe"
   
-  },
   "equipements": {
     "interieur": [
       "Toit ouvrant",
@@ -101,7 +100,7 @@
       "Accès sans clé",
       "Démarrage sans clé"
     ]
-  }
+  },
     "resume": "SUV électrique familial alliant grande autonomie (jusqu’à 630 km), sécurité batterie BYD Blade, et confort premium avec toit panoramique et ambiance lumineuse personnalisée."
 
-
+ }
