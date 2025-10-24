@@ -1,0 +1,109 @@
+{
+  "id": "EVHBYDSEALION7008",
+  "name": "2025 BYD SEALION 7 EV 610 km Smart Driving Edition",
+  "priceFCR": "34 600 €",
+  "mileage": 0,
+  "regyear": "2025",
+  "images": {
+    "hero": "images/EVHBYDSEALION7_devdroite.webp",
+    "gallery": [
+      "images/EVHBYDSEALION7_face.webp",
+      "images/EVHBYDSEALION7_noire.webp",
+      "images/EVHBYDSEALION7_blanche.webp",
+      "images/EVHBYDSEALION7_cotedroit.webp",
+      "images/EVHBYDSEALION7_intdev.webp",
+      "images/EVHBYDSEALION7_interieurorange.webp",
+      "images/EVHBYDSEALION7_intarorange.webp",
+      "images/EVHBYDSEALION7_arriere.webp"
+    ]
+  },
+  "caracteristiques": [
+    "SUV 100% électrique (BEV)",
+    "Autonomie 610 km (CLTC)",
+    "Batterie Blade LFP 80,64 kWh",
+    "Moteur 230 kW (313 ch) / 380 Nm – RWD",
+    "Recharge DC 90 kW (0→80% ≈ 28 min) / AC 11 kW (≈ 7,5 h)",
+    "Système de conduite intelligente NVIDIA Orin-X avec LIDAR",
+    "Caméras 360° + assistances ADAS niveau 2+"
+  ],
+  "specifications": {
+    "moteurThermique": null,
+    "puissanceThermique": null,
+    "typeHybride": "100% électrique (BEV)",
+    "puissanceSysteme": "313 ch (230 kW)",
+    "coupleSysteme": "380 Nm",
+    "transmission": "Automatique (boîte à une vitesse)",
+    "traction": "Arrière (RWD)",
+    "typeBatterie": "LFP Blade (BYD FinDreams)",
+    "batterieKWh": "80,64 kWh",
+    "autonomieCLTC": "610 km",
+    "autonomieWLTP": "env. 490 km",
+    "autonomieTotale": "610 km",
+    "rechargeDCkW": "90 kW (0→80% ≈ 28 min)",
+    "rechargeACkW": "11 kW (≈ 7,5 h 0→100%)",
+    "tempsRechargeAC": "≈ 7,5 h (0–100%)",
+    "tempsRechargeDC": "≈ 28 min (0–80%)",
+    "refroidissementBatterie": "Gestion thermique liquide + chauffage intégré",
+    "fonctionsBatterie": "VTOL (alimentation externe) 3,3 kW",
+    "places": "5 places",
+    "portes": "5 portes",
+    "volumeCoffre": "520–1789 L (incl. frunk 58 L)",
+    "dimensions": {
+      "longueur": "4830 mm",
+      "largeur": "1925 mm",
+      "hauteur": "1620 mm",
+      "empattement": "2930 mm",
+      "gardeAuSol": "variable (non spécifié)",
+      "rayonDeBraquage": "5,5 m"
+    },
+    "poids": "2210 kg (à vide)",
+    "ptac": "non spécifié",
+    "vitesseMax": "225 km/h",
+    "acceleration0100": "≈ 6,7 s",
+    "consommationElectrique": "≈ 15–17 kWh/100 km",
+    "structure": "Monocoque",
+    "suspension": "Indépendante : double triangulation AV / Multibras AR",
+    "freins": "Disques ventilés AV / disques AR, frein de stationnement électrique",
+    "direction": "Assistée électrique (EPS)",
+    "pneus": "235/50 R19",
+    "jantes": "Alliage aluminium"
+  },
+  "equipements": {
+    "interieur": [
+      "Écran central rotatif 15,6\" (DiLink OS)",
+      "Combiné conducteur 10,25\"",
+      "Affichage tête haute (HUD)",
+      "Sellerie cuir, sièges AV ventilés/chauffants, sièges AR chauffants",
+      "Climatisation automatique bi-zone",
+      "Toit panoramique avec toit ouvrant électrique",
+      "Hayon électrique",
+      "Clé NFC & démarrage sans clé",
+      "Charge sans fil smartphone"
+    ],
+    "securite": [
+      "Airbags frontaux, latéraux et rideaux",
+      "Freinage d’urgence autonome (AEB)",
+      "Aide au maintien/centrage de voie (LKA/LCA)",
+      "Reconnaissance panneaux",
+      "Surveillance angle mort",
+      "TPMS (pression pneus)",
+      "Ancrages ISOFIX",
+      "Assistance conduite semi-autonome NVIDIA Orin-X avec LIDAR"
+    ],
+    "assistance": [
+      "Conduite assistée niveau 2+ (ADAS) avec capteurs LIDAR et caméras",
+      "Régulateur de vitesse adaptatif (ACC)",
+      "Caméras panoramiques 360°",
+      "Capteurs AV/AR & stationnement automatique",
+      "Modes de conduite : Éco / Confort / Sport / Neige"
+    ],
+    "connectivite": [
+      "Bluetooth",
+      "GPS intégré",
+      "Apple CarPlay / Android Auto",
+      "Wi-Fi embarqué",
+      "Fonction VTOL 3,3 kW (alimentation externe)"
+    ]
+  },
+  "resume": "Habitacle haut de gamme avec écran rotatif 15,6\", sellerie cuir avec sièges ventilés et chauffants, affichage tête haute HUD et système avancé de conduite semi-autonome (NVIDIA Orin-X et LIDAR). Autonomie record de 610 km CLTC avec batterie Blade LFP 80,64 kWh."
+}
