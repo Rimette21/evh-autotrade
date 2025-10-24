@@ -5,7 +5,7 @@
   "mileage": 5000,
   "regyear": "2025-09",
   "images": {
-    "hero": "images/EVH9382121_TOYOTA_COTE DROIT.webp",
+    "hero": "images/EVH9382121_TOYOTA_COTEDROIT.webp",
     "gallery": [
       "images/EVH9382121_TOYOTA_COTE_GAUCHE.webp",
       "images/EVH9382121_TOYOTA_FACEDEVANT.webp",
@@ -72,7 +72,7 @@
     "multimedia": "Écran tactile, ambiance lumineuse 256 couleurs",
     "chargeSansFil": "50 W",
     "toit": "Toit panoramique fixe"
-  
+   },
   "equipements": {
     "interieur": [
       "Toit ouvrant",
