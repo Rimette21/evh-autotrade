@@ -7,10 +7,10 @@
   "images": {
     "hero": "images/EVH9387237_BYDTANG_droit.webp",
     "gallery": [
-      "images/EVH9387237_BYDTANG_avant.png",
-      "images/EVH9387237_BYDTANG_gauche.png",
-      "images/EVH9387237_BYDTANG_int_ar.png",
-      "images/EVH9387237_BYDTANG_int_dev.png"
+      "images/EVH9387237_BYDTANG_avant.webp",
+      "images/EVH9387237_BYDTANG_gauche.webp",
+      "images/EVH9387237_BYDTANG_int_ar.webp",
+      "images/EVH9387237_BYDTANG_int_dev.webp"
     ]
   },
   "caracteristiques": [
