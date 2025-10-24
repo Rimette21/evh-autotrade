@@ -7,11 +7,11 @@
   "images": {
     "hero": "images/EVH9330983_BMW_DEVANT.webp",
     "gallery": [
-      "images/EVH9330983_BMW_DROIT.png",
-      "images/EVH9330983_BMW_ARRIERE.png",
-      "images/EVH9330983_BMW_INT_DEV.png",
-      "images/EVH9330983_BMW_INT_ARRIERE.png",
-      "images/EVH9330983_BMW_TAB_BORD.png"
+      "images/EVH9330983_BMW_DROIT.webp",
+      "images/EVH9330983_BMW_ARRIERE.webp",
+      "images/EVH9330983_BMW_INT_DEV.webp",
+      "images/EVH9330983_BMW_INT_ARRIERE.webp",
+      "images/EVH9330983_BMW_TAB_BORD.webp"
     ]
   },
   "caracteristiques": [
