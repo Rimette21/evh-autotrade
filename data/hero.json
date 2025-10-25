@@ -643,7 +643,7 @@
   "priceFCR": "24 360 € (~83 070 TND)",
   "mileage": 40000,
   "regyear": "2024-03",
-  "isNew": true,
+  "isNew": false,
   "featuresCount": 6,
   "images": {
     "hero": "images/EVH9552616_BYDTANG_devgauche.webp"
