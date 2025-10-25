@@ -57,22 +57,21 @@
     "volumeCoffre": "-",
     "dimensions": "4780 × 1866 × 1510 mm",
     "empattement": "2880 mm"
-   
-    "pneus": "225/45 R21 (AV/AR)",
-    "poids": "1950 kg",
-    "capaciteMax": "2365 kg",
-    "vitesseMax": "160 km/h",
-    "acceleration0100": "-",
-    "acceleration050": "3.4 s",
-    "suspension": "McPherson AV / Link Strut AR indépendants",
-    "freins": "Disques ventilés AV / Disques AR, frein stationnement électrique",
-    "airbags": "Conducteur, passager, latéraux, genoux",
-    "climatisation": "Automatique",
-    "connectivite": "Bluetooth, GPS, Accès/démarrage sans clé, Verrouillage centralisé",
-    "multimedia": "Écran tactile, ambiance lumineuse 256 couleurs",
-    "chargeSansFil": "50 W",
-    "toit": "Toit panoramique fixe"
-   },
+  },
+  "pneus": "225/45 R21 (AV/AR)",
+  "poids": "1950 kg",
+  "capaciteMax": "2365 kg",
+  "vitesseMax": "160 km/h",
+  "acceleration0100": "-",
+  "acceleration050": "3.4 s",
+  "suspension": "McPherson AV / Link Strut AR indépendants",
+  "freins": "Disques ventilés AV / Disques AR, frein stationnement électrique",
+  "airbags": "Conducteur, passager, latéraux, genoux",
+  "climatisation": "Automatique",
+  "connectivite": "Bluetooth, GPS, Accès/démarrage sans clé, Verrouillage centralisé",
+  "multimedia": "Écran tactile, ambiance lumineuse 256 couleurs",
+  "chargeSansFil": "50 W",
+  "toit": "Toit panoramique fixe",
   "equipements": {
     "interieur": [
       "Toit ouvrant",
@@ -101,6 +100,5 @@
       "Démarrage sans clé"
     ]
   },
-    "resume": "SUV électrique familial alliant grande autonomie (jusqu’à 630 km), sécurité batterie BYD Blade, et confort premium avec toit panoramique et ambiance lumineuse personnalisée."
-
- }
+  "resume": "SUV électrique familial alliant grande autonomie (jusqu’à 630 km), sécurité batterie BYD Blade, et confort premium avec toit panoramique et ambiance lumineuse personnalisée."
+}
