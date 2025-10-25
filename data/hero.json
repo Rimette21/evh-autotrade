@@ -637,6 +637,30 @@
     "transmission": "AT"
   }
 },
+   {
+  "id": "EVH9552616",
+  "name": "2023 BYD Tang 1.5T 139HP L4 E‑CVT PHEV",
+  "priceFCR": "24 360 € (~83 070 TND)",
+  "mileage": 40000,
+  "regyear": "2024-03",
+  "isNew": true,
+  "featuresCount": 6,
+  "images": {
+    "hero": "images/EVH9552616_BYDTANG_devgauche.webp"
+  },
+  "features": [
+    "Hybride rechargeable (PHEV)",
+    "Autonomie électrique 112 km",
+    "Batterie Blade LFP 21,5 kWh",
+    "Moteur 1.5 L Turbo (139 ch) + électrique 160 kW (218 ch)",
+    "Recharge DC 40 kW (30→80% ≈ 30 min) / AC 7 kW (≈ 3 h)",
+    "SUV 7 places haut de gamme avec ADAS niveau 2 et écran rotatif 15,6″"
+  ],
+  "specifications": {
+    "engineCc": "1497 cc",
+    "transmission": "Automatique E‑CVT"
+  }
+},
   {
   "id": "EVH9509448",
   "name": "2022 Toyota Highlander 2.5L 192HP",
