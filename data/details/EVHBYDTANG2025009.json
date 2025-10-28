@@ -1,0 +1,108 @@
+{
+  "id": "EVHBYDTANG2025009",
+  "name": "2025 BYD Tang L 670 KM LiDAR Flagship",
+  "priceFCR": "39 370 €",
+  "mileage": 0,
+  "regyear": "2025",
+  "images": {
+    "hero": "images/EVHBYDTANG2025009_facetroisquart.webp",
+    "gallery": [
+      "images/EVH_BYDTANG_2025009_devdroit.webp",
+      "images/EVH_BYDTANG_2025009_facegrise.webp",
+      "images/EVH_BYDTANG_2025009_noire_argauche.webp",
+      "images/EVHBYDTANG2025009_ardrgrise.webp",
+      "images/EVHBYDTANG2025009_intcotedev.webp",
+      "images/EVHBYDTANG2025009_intdev.webp",
+      "images/EVHBYDTANG2025009_intar.webp",
+      "images/EVHBYDTANG2025009_accoud.webp",
+      "images/EVHBYDTANG2025009_facegauche.webp",
+      "images/EVHBYDTANG2025009_jantes.webp"
+    ]
+  },
+  "caracteristiques": [
+    "SUV 100% électrique (BEV)",
+    "Autonomie 670 km (CLTC)",
+    "Batterie Blade LFP 100,53 kWh",
+    "Puissance moteur total 500 kW (680 ch)",
+    "Couple total 420 Nm",
+    "Traction arrière (RWD)",
+    "Recharge rapide DC 30–80% en 1 heure",
+    "7 places"
+  ],
+  "specifications": {
+    "moteurThermique": null,
+    "puissanceThermique": null,
+    "typeHybride": "100% électrique (BEV)",
+    "puissanceSysteme": "680 ch (500 kW)",
+    "coupleSysteme": "420 Nm",
+    "transmission": "Automatique 1 vitesse",
+    "traction": "Arrière (RWD)",
+    "typeBatterie": "LFP Blade",
+    "batterieKWh": "100,53 kWh",
+    "autonomieCLTC": "670 km",
+    "autonomieWLTP": "non spécifié",
+    "autonomieTotale": "670 km",
+    "rechargeDCkW": "non spécifié (charge rapide 1 heure 30-80%)",
+    "rechargeACkW": "non spécifié",
+    "tempsRechargeAC": "non spécifié",
+    "tempsRechargeDC": "≈ 1 heure (30-80%)",
+    "refroidissementBatterie": "Gestion thermique liquide",
+    "fonctionsBatterie": "non spécifié",
+    "places": "7 places",
+    "portes": "5 portes",
+    "volumeCoffre": "non spécifié",
+    "dimensions": {
+      "longueur": "5040 mm",
+      "largeur": "1996 mm",
+      "hauteur": "1760 mm",
+      "empattement": "3060 mm",
+      "gardeAuSol": "non spécifié",
+      "rayonDeBraquage": "non spécifié"
+    },
+    "poids": "2675 kg",
+    "ptac": "non spécifié",
+    "vitesseMax": "240 km/h",
+    "acceleration0100": "≈ 6,9 s",
+    "consommationElectrique": "non spécifié",
+    "structure": "Monocoque",
+    "suspension": "Double triangulation avant / Multibras arrière",
+    "freins": "Disques ventilés AV/AR, ABS, EBD, ESC",
+    "direction": "Assistée électrique",
+    "pneus": "255/50 R20 AV, 275/45 R20 AR",
+    "jantes": "Alliage aluminium 20 pouces"
+  },
+  "equipements": {
+    "interieur": [
+      "Écran central rotatif 15,6\" (DiLink OS)",
+      "Affichage tête haute AR-HUD",
+      "Sellerie cuir premium, sièges ventilés/chauffants",
+      "Toit panoramique",
+      "Hayon électrique",
+      "Caméras 360°",
+      "7 places confortables"
+    ],
+    "securite": [
+      "Système LiDAR avancé pour conduite assistée",
+      "ADAS niveau 2+",
+      "Freinage d'urgence autonome (AEB)",
+      "Surveillance angle mort",
+      "Caméra 360° avec détection piéton et véhicules",
+      "Assistance stationnement",
+      "Airbags frontaux, latéraux et rideaux"
+    ],
+    "assistance": [
+      "Régulateur de vitesse adaptatif (ACC)",
+      "Assistant maintien de voie (LKA)",
+      "Capteurs AV/AR",
+      "Mode de conduite : Eco, Confort, Sport"
+    ],
+    "connectivite": [
+      "Bluetooth, GPS intégré",
+      "Apple CarPlay / Android Auto",
+      "Wi-Fi embarqué",
+      "Mises à jour OTA",
+      "Application BYD smartphone"
+    ]
+  },
+  "resume": "Le BYD Tang L 670 km LiDAR Flagship Edition est un SUV 7 places 100% électrique équipé d’une large batterie Blade LFP de 100,53 kWh, offrant une autonomie CLTC de 670 km. Il dispose d’une motorisation puissante de 680 ch en propulsion arrière, d’un système LiDAR avancé pour la conduite semi-autonome niveau 2+, ainsi que d’un intérieur luxueux avec technologies modernes et confort haut de gamme."
+}
