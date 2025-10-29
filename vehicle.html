@@ -369,6 +369,14 @@
         equipHtml +
         bottomInfoHtml +
         ctaHtml;
+      if (data.fichePDF) {
+  root.innerHTML += `
+    <div style="margin:2em 0; text-align:center;">
+      <a href="${data.fichePDF}" target="_blank" class="btn fiche-btn">
+        Télécharger la fiche technique PDF
+      </a>
+    </div>
+  `;
 
       /* ===== Lightbox ===== */
       const galleryImgs = Array.from(document.querySelectorAll('#gallery img'));
