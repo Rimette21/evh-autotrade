@@ -256,7 +256,10 @@
     "features": [
       "100% électrique",
       "Autonomie 550km",
-      "Puissance Moteur 200 kW"
+      "Puissance système 272 ch (200 kW)"
+      "Batterie 65.28 kWh",
+      "Couple système 330 N.m",
+      "Recharge DC 90 kW / AC 7 kW"
     ],
     "specifications": {
       "engineCc": null,
@@ -393,7 +396,8 @@
       "100% électrique (160 kW)",
       "Autonomie 530 km (CLTC)",
       "Batterie LFP 60.2 kWh",
-      "Recharge DC 110 kW (30→80% ~ 0,3 h)"
+      "Recharge DC 110 kW (30→80% ~18 min)",
+      "couple système 320 Nm"
     ],
     "specifications": {
       "engineCc": null,
@@ -450,10 +454,11 @@
       "hero": "images/EVH9408609_BYD_gris_droit.webp"
     },
     "features": [
-      "Électrique (BEV)",
+      "100% électrique (BEV)",
       "Autonomie 520 km",
       "Batterie 71.8 kWh",
-      "Puissance moteur 150 kW (≈204 ch)"
+      "Puissance moteur 150 kW (≈204 ch)",
+      "Régulateur de vitesse adaptatif"
     ],
     "specifications": {
       "engineCc": null,
@@ -499,8 +504,8 @@
       "100% électrique (BEV)",
       "Autonomie 619 km (CLTC)",
       "Batterie 73,5 kWh (NCM)",
-      "Moteur 140 kW (190 ch)",
-      "Caméra 360° / ADAS"
+      "Moteur 140 kW (190 ch)/ 380 Nm",
+      "Assistante conduite niveau L2"
     ],
     "specifications": {
       "engineCc": null,
@@ -518,9 +523,12 @@
       "hero": "images/EVH9387237_BYDTANG_droit.webp"
     },
     "features": [
-      "100% électrique",
-      "Autonomie 600km",
-      "7 places"
+     "SUV 7 places 100% électrique",
+      "Autonomie 600 km (CLTC)",
+      "Puissancce 168 kW (228 ch)",
+      "Batterie LFP Blade 90.3 kWh",
+      "Charge rapide DC 30–80% en 30 min",
+      "Régulateur adaptatif & conduite semi-autonome L2"
     ],
     "specifications": {
       "engineCc": null,
@@ -541,7 +549,9 @@
     "features": [
       "100% électrique",
       "Autonomie 630km",
-      "Puissance Moteur 200 kW"
+      "Puissance Moteur 200 kW (272 ch)",
+      "Recharge rapide DC 90 kW (30–80% en 27 min)",
+       "Caméra 360° + ADAS complet"
     ],
     "specifications": {
       "engineCc": null,
@@ -562,13 +572,16 @@
     "features": [
       "100% électrique",
       "Autonomie 510km",
-      "Puissance Moteur 150 kW"
+      "Puissance Moteur 150 kW (204 ch)",
+      "Couple système 250 N.m",
+       "Batterie 66,45 kWh",
+      "Charge rapide DC 10–80% en 29 min"
     ],
     "specifications": {
       "engineCc": null,
       "transmission": "AT"
     },
-    "featuresCount": 3
+    "featuresCount": 6
   },
   {
     "id": "EVH9535838",
@@ -652,12 +665,12 @@
     "hero": "images/EVH9431983_ToyotaPrado_dev_gauche.webp"
   },
   "features": [
-    "Hybride rechargeable (HEV)",
+    "Hybride non rechargeable (HEV)",
     "Moteur 2.4L Turbo 282 ch",
+    "Moteur d'assistance hybride parallèle",
     "Puissance cumulée 243 kW (330 ch)",
      "Traction intégrale permanente 4WD",
-    "Technologie Toyota Safety Sense (ADAS L2)",
-    "Sièges 5 ou 6 places selon version"
+    "Technologie Toyota Safety Sense (ADAS L2)"
      ],
   "specifications": {
     "engineCc": 2393,
