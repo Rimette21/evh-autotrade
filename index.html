@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -23,7 +22,8 @@
     <div class="header-inner">
       <div class="logo-wrap">
         <div class="logo">
-<img src="images/EVH_logo-removebg-preview.png" alt="E.V.H. AUTOTRADE">        </div>
+          <img src="images/EVH_logo-removebg-preview.png" alt="E.V.H. AUTOTRADE">
+        </div>
         <div class="brand">
           <span class="evh">E.V.H.</span>
           <span class="Autotrade">Autotrade</span>
@@ -79,21 +79,22 @@
     </picture>
     <div class="bg-overlay"></div>
     <div class="hero-cta">
-      <h2 class="adv2-title" style="
-    /* font-size: 20px; */
-">Passez à l'éléctrique sereinement</h2><p class="maintext" style="
-    margin-bottom: 23px;
-    margin-top: 6px; padding-right: 15px;
-">Prix FCR, Livraison incluse, Assistance de A à Z jusqu’au port d'arrivée.</p><a href="#catalogue" class="btn">Découvrez nos modèles</a>
+      <h2 class="adv2-title">Passez à l'éléctrique sereinement</h2>
+      <p class="maintext" style="margin-bottom:23px;margin-top:6px;padding-right:15px;">
+        Prix FCR, Livraison incluse, Assistance de A à Z jusqu’au port d'arrivée.
+      </p>
+      <a href="#catalogue" class="btn">Découvrez nos modèles</a>
     </div>
   </section>
 
   <!-- AVANTAGES -->
-<section id="avantages" class="advantages-lovable">
+  <section id="avantages" class="advantages-lovable">
     <div class="adv2-head">
       <h2 class="adv2-title">Pourquoi choisir EVH AutoTrade ?</h2>
-      <p class="adv2-sub">Avec EVH Auto Trade, vous achetez directement à la source, sans intermédiaires.
-Un service complet, du choix du modèle à la livraison au port, avec un accompagnement personnalisé à chaque étape.</p>
+      <p class="adv2-sub">
+        Avec EVH Auto Trade, vous achetez directement à la source, sans intermédiaires.
+        Un service complet, du choix du modèle à la livraison au port, avec un accompagnement personnalisé à chaque étape.
+      </p>
     </div>
     <div class="adv2-grid">
       <article class="adv2-card">
@@ -110,332 +111,338 @@ Un service complet, du choix du modèle à la livraison au port, avec un accompa
           <p class="adv2-desc">Véhicules neufs ou récents, contrôlés et couverts par une garantie importateur de 2 ans (extension possible jusqu’à 5 ans, selon modèle).</p>
         </div>
       </article>
-      
-    <article class="adv2-card">
+      <article class="adv2-card">
         <div class="inner">
           <div class="adv2-badge">⚓</div>
           <div class="adv2-title-sm">Transport inclus au port</div>
-          
-        <p class="adv2-desc">Livraison sous 45 jours avec assistance au dédouanement.</p></div>
-      </article></div>
+          <p class="adv2-desc">Livraison sous 45 jours avec assistance au dédouanement.</p>
+        </div>
+      </article>
+    </div>
   </section>
 
   <!-- CATALOGUE -->
   <section id="catalogue" class="section--light">
-  <div class="adv2-head">
+    <div class="adv2-head">
       <h2 class="adv2-title">Découvrez <span class="accent">Nos Modèles</span></h2>
     </div>
-    
-<!-- FILTRES CATALOGUE (v2) -->
-<div id="filters" class="filters">
-  <div class="filters-row">
-    <!-- Recherche Marque/Modèle -->
-    <input id="f-q" type="search" placeholder="Rechercher : marque ou modèle…" aria-label="Rechercher par marque/modèle">
 
-    <!-- Motorisation -->
-    <select id="f-type" aria-label="Filtrer par motorisation">
-      <option value="">Motorisation</option>
-      <option value="BEV">Électrique (BEV)</option>
-      <option value="PHEV">Hybride rechargeable (PHEV)</option>
-      <option value="HEV">Hybride (HEV)</option>
-      <option value="ESSENCE">Essence</option>
-      <option value="DIESEL">Diesel</option>
-    </select>
+    <!-- FILTRES CATALOGUE (v2) -->
+    <div id="filters" class="filters">
+      <div class="filters-row">
+        <!-- Recherche Marque/Modèle -->
+        <input id="f-q" type="search" placeholder="Rechercher : marque ou modèle…" aria-label="Rechercher par marque/modèle">
 
-    <!-- Année (slider) -->
-    <div class="range-wrap">
-      <label for="f-year" class="range-label">
-        Année immat. : <span id="f-year-val">—</span>
-      </label>
-      <input id="f-year" type="range" min="2008" max="2026" step="1" value="2008" aria-label="Année d'immatriculation minimale">
+        <!-- Motorisation -->
+        <select id="f-type" aria-label="Filtrer par motorisation">
+          <option value="">Motorisation</option>
+          <option value="BEV">Électrique (BEV)</option>
+          <option value="PHEV">Hybride rechargeable (PHEV)</option>
+          <option value="HEV">Hybride (HEV)</option>
+          <option value="ESSENCE">Essence</option>
+          <option value="DIESEL">Diesel</option>
+        </select>
+
+        <!-- Année (slider) -->
+        <div class="range-wrap">
+          <label for="f-year" class="range-label">
+            Année immat. : <span id="f-year-val">—</span>
+          </label>
+          <input id="f-year" type="range" min="2008" max="2026" step="1" value="2008" aria-label="Année d'immatriculation minimale">
+        </div>
+
+        <!-- Kilométrage (slider) -->
+        <div class="range-wrap">
+          <label for="f-km" class="range-label">
+            Kilométrage max : <span id="f-km-val">—</span>
+          </label>
+          <input id="f-km" type="range" min="0" max="200000" step="1000" value="200000" aria-label="Kilométrage maximal">
+        </div>
+
+        <!-- Prix (slider) -->
+        <div class="range-wrap">
+          <label for="f-price" class="range-label">
+            Prix FCR max : <span id="f-price-val">—</span>
+          </label>
+          <input id="f-price" type="range" min="0" max="100000" step="500" value="100000" aria-label="Prix maximal">
+        </div>
+
+        <button id="f-reset" class="btn btn--ghost" type="button">Réinitialiser</button>
+      </div>
     </div>
-
-    <!-- Kilométrage (slider) -->
-    <div class="range-wrap">
-      <label for="f-km" class="range-label">
-        Kilométrage max : <span id="f-km-val">—</span>
-      </label>
-      <input id="f-km" type="range" min="0" max="200000" step="1000" value="200000" aria-label="Kilométrage maximal">
-    </div>
-
-    <!-- Prix (slider) -->
-    <div class="range-wrap">
-      <label for="f-price" class="range-label">
-        Prix FCR max : <span id="f-price-val">—</span>
-      </label>
-      <input id="f-price" type="range" min="0" max="100000" step="500" value="100000" aria-label="Prix maximal">
-    </div>
-
-    <button id="f-reset" class="btn btn--ghost" type="button">Réinitialiser</button>
-  </div>
-</div>
 
     <div id="vehicles-grid" class="grid">
       <p>Chargement du catalogue…</p>
     </div>
   </section>
-  
 
- <!-- ===== Helpers (quick-specs + puces fixes) ===== -->
-<script>
-  // Détermine l’énergie : PHEV si on détecte un hybride rechargeable, sinon BEV
-  function energyFrom(v){
-    const hay = [v.name, ...(v.features||[])].join(' ').toLowerCase();
-    if (/(phev|hybride\s*rechargeable|dm-i|plug[- ]?in)/i.test(hay)) return 'PHEV';
-    if (/\bbev\b|100%\s*électrique|fully electric/i.test(hay)) return 'BEV';
-    return 'BEV';
-  }
-  // Format immat YYYY-MM
-  function cleanReg(y){
-    if(!y) return '—';
-    const p=String(y).split('-');
-    return p.length===2?`${p[0]}-${p[1]}`:p[0];
-  }
-  // Cylindrée depuis specs
-  function engineCc(v){
-    const s=v.specifications||{};
-    return s.engineCc||s.enginecc||s.EngineCC||s.cylindree||'—';
-  }
-  // Sigle court transmission
-  function transmissionShort(v){
-    const t = (v.specifications && v.specifications.transmission) ? String(v.specifications.transmission) : '';
-    const m =
-      t.match(/\b(2?DHT)\b/i) ||
-      t.match(/\bE[-\s]?CVT\b/i) ||
-      t.match(/\bDCT\b/i) ||
-      t.match(/\bAT\b/i) ||
-      t.match(/\bMT\b/i) ||
-      t.match(/\bSingle[-\s]?speed\b/i);
-    return m ? m[0].toUpperCase().replace(/\s+/g,'-') : null;
-  }
-  // "Autonomie 110 km" à partir de specs → features → name
-  function autonomyLabel(v){
-    const s = v.specifications || {};
-    const candidates = [s.autonomieWLTP, s.autonomieCLTC, s.autonomieEPA, s.autonomieElectrique];
-    for (const c of candidates){
-      if (!c) continue;
-      const m = String(c).match(/(\d{2,4})\s*km/i);
-      if (m) return `Autonomie ${m[1]} km`;
+  <!-- ===== Helpers (quick-specs + puces dynamiques) ===== -->
+  <script>
+    // Détermine l’énergie : PHEV si on détecte un hybride rechargeable, sinon BEV
+    function energyFrom(v){
+      const hay = [v.name, ...(v.features||[])].join(' ').toLowerCase();
+      if (/(phev|hybride\s*rechargeable|dm-i|plug[- ]?in)/i.test(hay)) return 'PHEV';
+      if (/\bbev\b|100%\s*électrique|fully electric/i.test(hay)) return 'BEV';
+      return 'BEV';
     }
-    const pool = [v.name, ...(v.features||[])].join(' | ');
-    const m = pool.match(/(\d{2,4})\s*km/i);
-    return m ? `Autonomie ${m[1]} km` : 'Autonomie —';
-  }
-
-  // Ruban 5 infos sous l’image – version horizontale identique à la page 2
-  function quickSpecsHTML(v){
-    const reg = cleanReg(v.regyear);
-    const cc = engineCc(v);
-    const km = (v.mileage != null) ? new Intl.NumberFormat('fr-FR').format(v.mileage) : '—';
-    const fuel = energyFrom(v);
-    const tr = transmissionShort(v) || '—';
-    return `
-      <div class="quick-specs">
-        <div class="qs-col">
-          <span class="qs-label">Reg. Year</span>
-          <span class="qs-value">${reg}</span>
-        </div>
-        <div class="qs-col">
-          <span class="qs-label">Engine(cc)</span>
-          <span class="qs-value">${cc}</span>
-        </div>
-        <div class="qs-col">
-          <span class="qs-label">Mlg(km)</span>
-          <span class="qs-value">${km}</span>
-        </div>
-        <div class="qs-col">
-          <span class="qs-label">Fuel</span>
-          <span class="qs-value" style="color: #00aa00; font-weight: 700;">${fuel}</span>
-        </div>
-        <div class="qs-col">
-          <span class="qs-label">Transm.</span>
-          <span class="qs-value">${tr}</span>
-        </div>
-      </div>`;
-  }
-</script>
-       
-  <!-- ===== Catalogue : génération des cartes ===== -->
- <script>
-  // ===== Helpers additionnels =====
-  const EURO = new Intl.NumberFormat('fr-FR');
-  function parsePriceEUR(s){
-    if(!s) return null;
-    const n = String(s).replace(/[^\d]/g,''); // "25 340 €" -> "25340"
-    return n ? parseInt(n,10) : null;
-  }
-  function brandFromName(name){
-    if(!name) return '';
-    const t = name.split(/\s+/).filter(Boolean);
-    return /^\d{4}$/.test(t[0]) ? (t[1] || '') : t[0];
-  }
-  function yearFromReg(reg){
-    // "2025-10" -> 2025 ; "2023" -> 2023
-    if(!reg) return null;
-    const y = String(reg).slice(0,4);
-    return /^\d{4}$/.test(y) ? parseInt(y,10) : null;
-  }
-  function kmNum(v){
-    return (v.mileage != null) ? parseInt(String(v.mileage).replace(/[^\d]/g,''),10) : 0;
-  }
-  function energyNormalized(v){
-    const e = energyFrom(v).toUpperCase();
-    if (e.includes('PHEV')) return 'PHEV';
-    if (e.includes('BEV')) return 'BEV';
-    if (/(HEV|hybride(?!.*rechargeable))/i.test([v.name, ...(v.features||[])].join(' '))) return 'HEV';
-    if (/\bESSENCE\b|gasoline|petrol/i.test([v.name, ...(v.features||[])].join(' '))) return 'ESSENCE';
-    if (/\bDIESEL\b/i.test([v.name, ...(v.features||[])].join(' '))) return 'DIESEL';
-    return e || '';
-  }
-  // petite latence pour la recherche texte
-  function debounce(fn, ms=250){
-    let t; return (...args)=>{ clearTimeout(t); t=setTimeout(()=>fn(...args), ms); };
-  }
-
-  // ===== Rendu d'une carte =====
-  function cardHTML(v){
-    const energy = energyFrom(v);
-    const autoLbl = autonomyLabel(v);
-    const trShort = transmissionShort(v) || '—';
-    const newBadge = v.isNew ? `<span class="pill" style="position:absolute;left:10px;top:10px;z-index:2;background:#fef3c7;color:#92400e;border:1px solid #fde68a;">Neuf</span>` : '';
-    return `
-      <a class="card-link" href="vehicle.html?id=${encodeURIComponent(v.id)}">
-        <article class="card" style="position:relative">
-          ${newBadge}
-          <img class="thumb" src="${v.images?.hero || ''}" alt="${v.name}"
-               onerror="this.src='https://via.placeholder.com/400x300?text=Image+non+disponible'">
-          ${quickSpecsHTML(v)}
-          <div class="body">
-            <div class="name">${v.name}</div>
-            <div class="submeta">Réf : <strong>${v.id}</strong></div>
-            <div class="price">Prix FCR (HT) : ${v.priceFCR || '-'}</div>
-            <ul class="features">${
-              (energy === 'PHEV'
-                ? ['Hybride rechargeable (PHEV)', autoLbl, `Transmission auto ${trShort}`, 'Caméra 360°', 'Toit panoramique']
-                : ['100% électrique (BEV)', autoLbl, `Transmission auto ${trShort}`, 'Caméra 360°', 'Toit panoramique'])
-              .map(x=>`<li>• ${x}</li>`).join('')
-            }</ul>
+    // Format immat YYYY-MM
+    function cleanReg(y){
+      if(!y) return '—';
+      const p=String(y).split('-');
+      return p.length===2?`${p[0]}-${p[1]}`:p[0];
+    }
+    // Cylindrée depuis specs
+    function engineCc(v){
+      const s=v.specifications||{};
+      return s.engineCc||s.enginecc||s.EngineCC||s.cylindree||'—';
+    }
+    // Sigle court transmission
+    function transmissionShort(v){
+      const t = (v.specifications && v.specifications.transmission) ? String(v.specifications.transmission) : '';
+      const m =
+        t.match(/\b(2?DHT)\b/i) ||
+        t.match(/\bE[-\s]?CVT\b/i) ||
+        t.match(/\bDCT\b/i) ||
+        t.match(/\bAT\b/i) ||
+        t.match(/\bMT\b/i) ||
+        t.match(/\bSingle[-\s]?speed\b/i);
+      return m ? m[0].toUpperCase().replace(/\s+/g,'-') : null;
+    }
+    // "Autonomie 110 km" à partir de specs → features → name
+    function autonomyLabel(v){
+      const s = v.specifications || {};
+      const candidates = [s.autonomieWLTP, s.autonomieCLTC, s.autonomieEPA, s.autonomieElectrique];
+      for (const c of candidates){
+        if (!c) continue;
+        const m = String(c).match(/(\d{2,4})\s*km/i);
+        if (m) return `Autonomie ${m[1]} km`;
+      }
+      const pool = [v.name, ...(v.features||[])].join(' | ');
+      const m = pool.match(/(\d{2,4})\s*km/i);
+      return m ? `Autonomie ${m[1]} km` : 'Autonomie —';
+    }
+    // Ruban 5 infos sous l’image – version horizontale identique à la page 2
+    function quickSpecsHTML(v){
+      const reg = cleanReg(v.regyear);
+      const cc = engineCc(v);
+      const km = (v.mileage != null) ? new Intl.NumberFormat('fr-FR').format(v.mileage) : '—';
+      const fuel = energyFrom(v);
+      const tr = transmissionShort(v) || '—';
+      return `
+        <div class="quick-specs">
+          <div class="qs-col">
+            <span class="qs-label">Reg. Year</span>
+            <span class="qs-value">${reg}</span>
           </div>
-        </article>
-      </a>`;
-  }
-
-  function renderGrid(list){
-    const grid = document.getElementById('vehicles-grid');
-    if(!Array.isArray(list) || list.length === 0){
-      grid.innerHTML = '<p>Aucun véhicule ne correspond aux filtres.</p>';
-      return;
+          <div class="qs-col">
+            <span class="qs-label">Engine(cc)</span>
+            <span class="qs-value">${cc}</span>
+          </div>
+          <div class="qs-col">
+            <span class="qs-label">Mlg(km)</span>
+            <span class="qs-value">${km}</span>
+          </div>
+          <div class="qs-col">
+            <span class="qs-label">Fuel</span>
+            <span class="qs-value" style="color:#00aa00;font-weight:700;">${fuel}</span>
+          </div>
+          <div class="qs-col">
+            <span class="qs-label">Transm.</span>
+            <span class="qs-value">${tr}</span>
+          </div>
+        </div>`;
     }
-    grid.innerHTML = list.map(cardHTML).join('');
-  }
 
-  // ===== Filtrage principal =====
-  function applyFilters(){
-    const q = document.getElementById('f-q').value.trim().toLowerCase();
-    const type = document.getElementById('f-type').value;     // BEV/PHEV/HEV/ESSENCE/DIESEL/''
-    const yMin = parseInt(document.getElementById('f-year').value,10);
-    const kmMax = parseInt(document.getElementById('f-km').value,10);
-    const pMax = parseInt(document.getElementById('f-price').value,10);
+    // ===== Helpers additionnels =====
+    const EURO = new Intl.NumberFormat('fr-FR');
+    function parsePriceEUR(s){
+      if(!s) return null;
+      const n = String(s).replace(/[^\d]/g,''); // "25 340 €" -> "25340"
+      return n ? parseInt(n,10) : null;
+    }
+    function brandFromName(name){
+      if(!name) return '';
+      const t = name.split(/\s+/).filter(Boolean);
+      return /^\d{4}$/.test(t[0]) ? (t[1] || '') : t[0];
+    }
+    function yearFromReg(reg){
+      if(!reg) return null;
+      const y = String(reg).slice(0,4);
+      return /^\d{4}$/.test(y) ? parseInt(y,10) : null;
+    }
+    function kmNum(v){
+      return (v.mileage != null) ? parseInt(String(v.mileage).replace(/[^\d]/g,''),10) : 0;
+    }
+    function energyNormalized(v){
+      const e = energyFrom(v).toUpperCase();
+      if (e.includes('PHEV')) return 'PHEV';
+      if (e.includes('BEV')) return 'BEV';
+      if (/(HEV|hybride(?!.*rechargeable))/i.test([v.name, ...(v.features||[])].join(' '))) return 'HEV';
+      if (/\bESSENCE\b|gasoline|petrol/i.test([v.name, ...(v.features||[])].join(' '))) return 'ESSENCE';
+      if (/\bDIESEL\b/i.test([v.name, ...(v.features||[])].join(' '))) return 'DIESEL';
+      return e || '';
+    }
+    // petite latence pour la recherche texte
+    function debounce(fn, ms=250){
+      let t; return (...args)=>{ clearTimeout(t); t=setTimeout(()=>fn(...args), ms); };
+    }
 
-    const filtered = window.__VEHICLES__.filter(v => {
-      const name = (v.name||'').toLowerCase();
-      const brand = brandFromName(v.name).toLowerCase();
-      const hay = [name, brand, ...(v.features||[])].join(' ').toLowerCase();
-      const okQ = !q || hay.includes(q);
+    // >>> helper pour extraire les 4 caractéristiques du JSON (batterie, moteur élec, puissance système, recharge AC)
+    function pickSpecFeatures(v){
+      const feats = Array.isArray(v.features) ? v.features : [];
+      const find = (re) => feats.find(s => re.test(s));
 
-      const e = energyNormalized(v);           // normalisé
-      const okType = !type || e === type;
+      const battery   = find(/batterie|battery/i);
+      const motorElec = find(/moteur\s*(électrique)?\s*\d+(\.\d+)?\s*(kW|ch)/i) || find(/puissance\s*moteur/i);
+      const sysPower  = find(/puissance\s*(système|cumulée)/i);
+      const acCharge  = find(/recharge\s*ac.*\d/i) || find(/\bac\s*\d+(\.\d+)?\s*kW/i);
 
-      const y = yearFromReg(v.regyear) || 1900;
-      const okYear = y >= yMin;
+      return [battery, motorElec, sysPower, acCharge].filter(Boolean);
+    }
 
-      const km = kmNum(v);
-      const okKm = isFinite(kmMax) ? km <= kmMax : true;
+    // ===== Rendu d'une carte =====
+    function cardHTML(v){
+      const energy = energyFrom(v);
+      const autoLbl = autonomyLabel(v);
+      const trShort = transmissionShort(v) || '—';
+      const newBadge = v.isNew ? `<span class="pill" style="position:absolute;left:10px;top:10px;z-index:2;background:#fef3c7;color:#92400e;border:1px solid #fde68a;">Neuf</span>` : '';
 
-      const price = parsePriceEUR(v.priceFCR) || 0;
-      const okPrice = isFinite(pMax) ? price <= pMax : true;
+      // puce 1 : type énergie ; puce 2 : autonomie
+      const energyLabel = (energy === 'PHEV') ? 'Hybride rechargeable (PHEV)' : '100% électrique (BEV)';
+      const specLines = pickSpecFeatures(v);
 
-      return okQ && okType && okYear && okKm && okPrice;
-    });
+      // fallback si aucune des 4 n’est trouvée
+      const fallbacks = [`Transmission auto ${trShort}`, 'Caméra 360°', 'Toit panoramique'];
 
-    renderGrid(filtered);
-    // maj étiquettes sliders
-    document.getElementById('f-year-val').textContent = yMin;
-    document.getElementById('f-km-val').textContent = EURO.format(kmMax) + ' km';
-    document.getElementById('f-price-val').textContent = EURO.format(pMax) + ' €';
-  }
+      const items = [energyLabel, autoLbl, ...(specLines.length ? specLines : fallbacks)];
 
-  // ===== Initialisation =====
-  fetch('data/hero.json?v=12', { cache: 'no-store' })
-    .then(res => res.json())
-    .then(vehicles => {
-      window.__VEHICLES__ = vehicles || [];
+      return `
+        <a class="card-link" href="vehicle.html?id=${encodeURIComponent(v.id)}">
+          <article class="card" style="position:relative">
+            ${newBadge}
+            <img class="thumb" src="${v.images?.hero || ''}" alt="${v.name}"
+                 onerror="this.src='https://via.placeholder.com/400x300?text=Image+non+disponible'">
+            ${quickSpecsHTML(v)}
+            <div class="body">
+              <div class="name">${v.name}</div>
+              <div class="submeta">Réf : <strong>${v.id}</strong></div>
+              <div class="price">Prix FCR (HT) : ${v.priceFCR || '-'}</div>
+              <ul class="features">
+                ${items.map(x=>`<li>• ${x}</li>`).join('')}
+              </ul>
+            </div>
+          </article>
+        </a>`;
+    }
 
-      // bornes dynamiques
-      const years = window.__VEHICLES__.map(v => yearFromReg(v.regyear)).filter(Boolean);
-      const kms = window.__VEHICLES__.map(kmNum).filter(n => !isNaN(n));
-      const prices = window.__VEHICLES__.map(v => parsePriceEUR(v.priceFCR)).filter(n => !isNaN(n));
+    function renderGrid(list){
+      const grid = document.getElementById('vehicles-grid');
+      if(!Array.isArray(list) || list.length === 0){
+        grid.innerHTML = '<p>Aucun véhicule ne correspond aux filtres.</p>';
+        return;
+      }
+      grid.innerHTML = list.map(cardHTML).join('');
+    }
 
-      const yMin = Math.min(...(years.length?years:[2015]));
-      const yMax = Math.max(...(years.length?years:[(new Date()).getFullYear()]));
-      const kmMax = Math.max(...(kms.length?kms:[200000]));
-      const pMax = Math.max(...(prices.length?prices:[40000]));
+    // ===== Filtrage principal =====
+    function applyFilters(){
+      const q = document.getElementById('f-q').value.trim().toLowerCase();
+      const type = document.getElementById('f-type').value;     // BEV/PHEV/HEV/ESSENCE/DIESEL/''
+      const yMin = parseInt(document.getElementById('f-year').value,10);
+      const kmMax = parseInt(document.getElementById('f-km').value,10);
+      const pMax = parseInt(document.getElementById('f-price').value,10);
 
-      const elYear = document.getElementById('f-year');
-      elYear.min = yMin; elYear.max = yMax; elYear.value = yMin;
-      document.getElementById('f-year-val').textContent = yMin;
+      const filtered = window.__VEHICLES__.filter(v => {
+        const name = (v.name||'').toLowerCase();
+        const brand = brandFromName(v.name).toLowerCase();
+        const hay = [name, brand, ...(v.features||[])].join(' ').toLowerCase();
+        const okQ = !q || hay.includes(q);
 
-      const elKm = document.getElementById('f-km');
-      elKm.min = 0; elKm.max = kmMax; elKm.step = 1000; elKm.value = kmMax;
-      document.getElementById('f-km-val').textContent = EURO.format(kmMax) + ' km';
+        const e = energyNormalized(v);           // normalisé
+        const okType = !type || e === type;
 
-      const elPrice = document.getElementById('f-price');
-      elPrice.min = 0; elPrice.max = pMax; elPrice.step = 500; elPrice.value = pMax;
-      document.getElementById('f-price-val').textContent = EURO.format(pMax) + ' €';
+        const y = yearFromReg(v.regyear) || 1900;
+        const okYear = y >= yMin;
 
-      // Rendu initial
-      renderGrid(window.__VEHICLES__);
+        const km = kmNum(v);
+        const okKm = isFinite(kmMax) ? km <= kmMax : true;
 
-      // Listeners
-      const onInput = debounce(applyFilters, 200);
-      document.getElementById('f-q').addEventListener('input', onInput);
-      document.getElementById('f-type').addEventListener('change', applyFilters);
-      elYear.addEventListener('input', applyFilters);
-      elKm.addEventListener('input', applyFilters);
-      elPrice.addEventListener('input', applyFilters);
+        const price = parsePriceEUR(v.priceFCR) || 0;
+        const okPrice = isFinite(pMax) ? price <= pMax : true;
 
-      document.getElementById('f-reset').addEventListener('click', () => {
-        document.getElementById('f-q').value = '';
-        document.getElementById('f-type').value = '';
-        elYear.value = yMin;
-        elKm.value = kmMax;
-        elPrice.value = pMax;
-        applyFilters();
+        return okQ && okType && okYear && okKm && okPrice;
       });
-    })
-    .catch(err => {
-      console.error(err);
-      document.getElementById('vehicles-grid').innerHTML =
-        '<p style="color:red;">Erreur : impossible de charger le catalogue.</p>';
-    });
-</script>
 
+      renderGrid(filtered);
+      // maj étiquettes sliders
+      document.getElementById('f-year-val').textContent = yMin;
+      document.getElementById('f-km-val').textContent = EURO.format(kmMax) + ' km';
+      document.getElementById('f-price-val').textContent = EURO.format(pMax) + ' €';
+    }
+
+    // ===== Initialisation =====
+    fetch('data/hero.json?v=12', { cache: 'no-store' })
+      .then(res => res.json())
+      .then(vehicles => {
+        window.__VEHICLES__ = vehicles || [];
+
+        // bornes dynamiques
+        const years = window.__VEHICLES__.map(v => yearFromReg(v.regyear)).filter(Boolean);
+        const kms = window.__VEHICLES__.map(kmNum).filter(n => !isNaN(n));
+        const prices = window.__VEHICLES__.map(v => parsePriceEUR(v.priceFCR)).filter(n => !isNaN(n));
+
+        const yMin = Math.min(...(years.length?years:[2015]));
+        const yMax = Math.max(...(years.length?years:[(new Date()).getFullYear()]));
+        const kmMax = Math.max(...(kms.length?kms:[200000]));
+        const pMax = Math.max(...(prices.length?prices:[40000]));
+
+        const elYear = document.getElementById('f-year');
+        elYear.min = yMin; elYear.max = yMax; elYear.value = yMin;
+        document.getElementById('f-year-val').textContent = yMin;
+
+        const elKm = document.getElementById('f-km');
+        elKm.min = 0; elKm.max = kmMax; elKm.step = 1000; elKm.value = kmMax;
+        document.getElementById('f-km-val').textContent = EURO.format(kmMax) + ' km';
+
+        const elPrice = document.getElementById('f-price');
+        elPrice.min = 0; elPrice.max = pMax; elPrice.step = 500; elPrice.value = pMax;
+        document.getElementById('f-price-val').textContent = EURO.format(pMax) + ' €';
+
+        // Rendu initial
+        renderGrid(window.__VEHICLES__);
+
+        // Listeners
+        const onInput = debounce(applyFilters, 200);
+        document.getElementById('f-q').addEventListener('input', onInput);
+        document.getElementById('f-type').addEventListener('change', applyFilters);
+        elYear.addEventListener('input', applyFilters);
+        elKm.addEventListener('input', applyFilters);
+        elPrice.addEventListener('input', applyFilters);
+
+        document.getElementById('f-reset').addEventListener('click', () => {
+          document.getElementById('f-q').value = '';
+          document.getElementById('f-type').value = '';
+          elYear.value = yMin;
+          elKm.value = kmMax;
+          elPrice.value = pMax;
+          applyFilters();
+        });
+      })
+      .catch(err => {
+        console.error(err);
+        document.getElementById('vehicles-grid').innerHTML =
+          '<p style="color:red;">Erreur : impossible de charger le catalogue.</p>';
+      });
+  </script>
 
   <section id="avantages" class="advantages-lovable">
     <div class="adv2-head">
-      <h2 class="adv2-title">Besoin d’un conseil ou d’un devis rapide ?
-
-</h2>
-      <p class="adv2-sub">Notre équipe vous répond rapidement par mail, WhatsApp ou téléphone pour vous aider à choisir le bon SUV. </p><p class="adv2-sub" p="" style="
-    padding: 15px;
-"> 📩 Mail : contact@evhautotrade.com </p> <p class="adv2-sub">
-
-💬 WhatsApp : +33 6 50 44 74 00</p>
-<p></p><a href="mailto:contact@evhautotrade.com" class="btn contact" style="
-    margin-top: 23px;
-">Contactez Nous</a>
+      <h2 class="adv2-title">Besoin d’un conseil ou d’un devis rapide ?</h2>
+      <p class="adv2-sub">Notre équipe vous répond rapidement par mail, WhatsApp ou téléphone pour vous aider à choisir le bon SUV.</p>
+      <p class="adv2-sub" style="padding:15px;">📩 Mail : contact@evhautotrade.com</p>
+      <p class="adv2-sub">💬 WhatsApp : +33 6 50 44 74 00</p>
+      <a href="mailto:contact@evhautotrade.com" class="btn contact" style="margin-top:23px;">Contactez Nous</a>
     </div>
-    
   </section>
 
   <!-- FOOTER -->
