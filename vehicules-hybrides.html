@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Véhicules hybrides rechargeables (PHEV) – EVH Autotrade</title>
+  <link rel="stylesheet" href="styles.css?v=16">
+  <link rel="stylesheet" href="mobile-tighten.css">
+</head>
+<body data-mode="PHEV">
+  <!-- HEADER identique -->
+
+  <section class="hero-static">
+    <picture class="hero-bg">
+      <source media="(max-width:680px)" srcset="images/imagemobilemenu.webp" type="image/webp">
+      <source srcset="images/imagecomputermenu.webp" type="image/webp">
+      <img src="images/imagemobilemenu.webp" alt="Hybrides rechargeables – Tunisie">
+    </picture>
+    <div class="bg-overlay"></div>
+    <div class="hero-cta">
+      <h2 class="adv2-title">Hybrides rechargeables (PHEV)</h2>
+      <p class="maintext" style="margin:6px 0 23px;padding-right:15px;">
+        Page dédiée aux clients éligibles **RS/FCR**. Affichage en **prix FCR (HT)**.
+      </p>
+      <a href="#catalogue" class="btn">Voir les PHEV</a>
+    </div>
+  </section>
+
+  <section id="catalogue" class="section--light">
+    <div class="adv2-head">
+      <h2 class="adv2-title">Véhicules <span class="accent">Hybrides rechargeables</span></h2>
+      <p class="adv2-sub">Affichés au prix FCR (HT). Calcule TTC sur demande selon votre dossier RS.</p>
+    </div>
+
+    <!-- Filtres -->
+    <div id="filters" class="filters">
+      <div class="filters-row">
+        <input id="f-q" type="search" placeholder="Rechercher : marque ou modèle…">
+        <select id="f-type">
+          <option value="">Motorisation</option>
+          <option value="BEV">Électrique (BEV)</option>
+          <option value="PHEV">Hybride rechargeable (PHEV)</option>
+          <option value="HEV">Hybride (HEV)</option>
+          <option value="ESSENCE">Essence</option>
+          <option value="DIESEL">Diesel</option>
+        </select>
+        <div class="range-wrap">
+          <label for="f-year" class="range-label">Année immat. : <span id="f-year-val">—</span></label>
+          <input id="f-year" type="range" min="2008" max="2026" step="1" value="2008">
+        </div>
+        <div class="range-wrap">
+          <label for="f-km" class="range-label">Kilométrage max : <span id="f-km-val">—</span></label>
+          <input id="f-km" type="range" min="0" max="200000" step="1000" value="200000">
+        </div>
+        <div class="range-wrap">
+          <label for="f-price" class="range-label">Prix FCR max : <span id="f-price-val">—</span></label>
+          <input id="f-price" type="range" min="0" max="100000" step="500" value="100000">
+        </div>
+        <button id="f-reset" class="btn btn--ghost" type="button">Réinitialiser</button>
+      </div>
+    </div>
+
+    <div id="vehicles-grid" class="grid"><p>Chargement du catalogue…</p></div>
+  </section>
+
+  <!-- contact + footer -->
+
+  <script>
+    const PAGE_MODE = 'PHEV';
+
+    // colle le même <script> catalogue que sur index.html,
+    // puis ajoute ceci juste après l’initialisation des données :
+    // document.getElementById('f-type').value = 'PHEV';
+    // document.getElementById('f-type').disabled = true;
+
+    // Dans cardHTML(v), garde la ligne « Prix FCR (HT) » (via priceLine ci-dessous) :
+    // const priceLine = (PAGE_MODE === 'EV')
+    //   ? (v.priceTND ? `Prix TTC dédouané (TND) : <strong>${v.priceTND}</strong>` : `Prix TTC sur devis`)
+    //   : `Prix FCR (HT) : ${v.priceFCR || '-'}`;
+    //
+    // et <div class="price">${priceLine}</div>
+  </script>
+</body>
+</html>
