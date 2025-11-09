@@ -2,7 +2,7 @@
   {
     "id": "EVHBYDTANG2025009",
     "name": "BYD Tang L 2025 670 KM LiDAR Flagship Edition",
-    "priceFCR": "39 370 € (~134 040 TND)",
+    "priceTTC": "40 320 € (~137 490 tnd)",
     "mileage": 0,
     "regyear": "2025",
     "isNew": true,
@@ -65,7 +65,7 @@
    {
     "id": "EVHBYDSEAL6EV007",
     "name": "2025-BYD Seal 06 EV 545KM Flagship",
-    "priceFCR": "25 140 € (~85 730 Tnd)",
+    "priceTTC": "26 530 € (~90 440 Tnd)",
     "mileage": 0,
     "regyear": "2025-10",
     "isNew": true,
@@ -108,7 +108,7 @@
    {
     "id": "EVHBSPEV2025004",
     "name": "2025 BYD Song PLUS EV 520km Luxury",
-    "priceFCR": "26 790 € (~91 210 Tnd)",
+    "priceTTC": "28 240 € (~ 96 280 Tnd)",
     "mileage": 0,
     "regyear": "2025-10",
     "isNew": true,
@@ -132,7 +132,7 @@
   {
     "id": "EVHBSPEV2025005",
     "name": "2025 BYD Song PLUS EV 520km Premium",
-    "priceFCR": "27 480 € (~93 700 Tnd)",
+    "priceTTC": "29 950 € (~102 190 Tnd)",
     "mileage": 0,
     "regyear": "2025-10",
     "isNew": true,
@@ -156,7 +156,7 @@
   {
     "id": "EVHBSPEV2025006",
     "name": "2025 BYD Song PLUS EV 605km Flagship",
-    "priceFCR": "29 280 € (~99 845 Tnd)",
+    "priceTTC": "32 580 € (~112 000 Tnd)",
     "mileage": 0,
     "regyear": "2025-10",
     "isNew": true,
@@ -180,7 +180,7 @@
   {
     "id": "EVHBYDSEALION7008",
     "name": "2025 BYD SEALION 7 EV 610 km Smart Driving",
-    "priceFCR": "34 690 € (~118 290 Tnd)",
+    "priceTTC": "38 290 € (~130 580 Tnd)",
     "mileage": 0,
     "regyear": "2025",
     "isNew": true,
@@ -204,7 +204,7 @@
   {
     "id": "EVH2025003",
     "name": "2025 BYD Dolphin-Smart Driving",
-    "priceFCR": "19 670 € (~67 075 Tnd)",
+    "priceTTC": "19 990 € (~68 000 Tnd)",
     "mileage": 0,
     "regyear": "2025-10",
     "isNew": true,
@@ -246,7 +246,7 @@
    {
     "id": "EVH9382121",
     "name": "2025 Toyota bZ5 - BEV",
-    "priceFCR": "25 180 € (~85 865 Tnd)",
+    "priceTTC": "28 040 € (~95 620 Tnd)",
     "mileage": 50,
     "regyear": "2025-09",
     "isNew": true,
@@ -384,7 +384,7 @@
 {
     "id": "EVH9524551",
     "name": "2024 Geely Galaxy E5 BEV",
-    "priceFCR": "21 180 € (~72 225 Tnd)",
+    "priceTTC": "22 820 € (~77 800 Tnd)",
     "mileage": 27000,
     "regyear": "2024-07",
     "isNew": false,
@@ -445,7 +445,7 @@
     {
     "id": "EVH9408609",
     "name": "2025 BYD Song Plus BEV",
-    "priceFCR": "23 980 € (~81 645 Tnd)",
+    "priceTTC": "25 820 € (~88 000 Tnd)",
     "mileage": 5000,
     "regyear": "2025-08",
     "isNew": false,
@@ -492,7 +492,7 @@
   {
     "id": "EVH9496374",
     "name": "2025 Mercedes-Benz EQA Class",
-    "priceFCR": "25 870 € (~88 079 Tnd)",
+    "priceTTC": "28 450 € (~97 020 Tnd)",
     "mileage": 22000,
     "regyear": "2024-05",
     "isNew": false,
@@ -515,7 +515,7 @@
   {
     "id": "EVH9387237",
     "name": "2024 BYD Tang BEV 90.3kWh 600km",
-    "priceFCR": "29 130 € (~99 175 Tnd)",
+    "priceTTC": "32 110 € (~109 480 Tnd)",
     "mileage": 23000,
     "regyear": "2024-01",
     "isNew": false,
@@ -539,7 +539,7 @@
   {
     "id": "EVH9397463",
     "name": "2025 Toyota bZ5- BEV",
-    "priceFCR": "29 280 € (~99 690 Tnd)",
+    "pricTTC": "32 330 € (~110 250 Tnd)",
     "mileage": 1000,
     "regyear": "2025-09",
     "isNew": false,
@@ -562,7 +562,7 @@
   {
     "id": "EVH9330983",
     "name": "2023 BMW iX1 - BEV",
-    "priceFCR": "30 310 € (~103 190 Tnd)",
+    "priceTTC": "33 560 € (~114 430 Tnd)",
     "mileage": 4000,
     "regyear": "2025-06",
     "isNew": false,
@@ -586,7 +586,7 @@
   {
     "id": "EVH9535838",
     "name": "2023 Audi Q5 e-tron BEV 83.4KWH",
-    "priceFCR": "30 620 € (~104 249 Tnd)",
+    "priceTTC": "33 900 € (~115 650 Tnd)",
     "mileage": 28000,
     "regyear": "2023-09",
     "isNew": false,
