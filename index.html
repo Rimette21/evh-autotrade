@@ -334,7 +334,14 @@ Les prix affichés dépendent du type de motorisation :
             <div class="body">
               <div class="name">${v.name}</div>
               <div class="submeta">Réf : <strong>${v.id}</strong></div>
-              <div class="price">Prix FCR (HT) : ${v.priceFCR || '-'}</div>
+              <div class="price">
+            ${
+              energy === 'BEV'
+              ? `Prix TTC (dédouané) : ${v.priceTTC || '-'}`
+                : `Prix FCR (HT) : ${v.priceFCR || '-'}`
+          }
+          </div>
+          
               <ul class="features">
                 ${items.map(x=>`<li>• ${x}</li>`).join('')}
               </ul>
