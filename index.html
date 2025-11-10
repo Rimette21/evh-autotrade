@@ -82,7 +82,7 @@
     <div class="hero-cta">
       <h2 class="adv2-title">Passez à l'éléctrique sereinement</h2>
       <p class="maintext" style="margin-bottom:23px;margin-top:6px;padding-right:15px;">
-        Prix FCR, Livraison incluse, Assistance de A à Z jusqu’au port d'arrivée.
+       Livraison incluse, Assistance de A à Z jusqu’au port d'arrivée.
       </p>
       <a href="#catalogue" class="btn">Découvrez nos modèles</a>
     </div>
@@ -309,37 +309,46 @@ Les prix affichés dépendent du type de motorisation :
 
     // ===== Rendu d'une carte =====
     function cardHTML(v){
-      const energy = energyFrom(v);
-      const autoLbl = autonomyLabel(v);
-      const trShort = transmissionShort(v) || '—';
-      const newBadge = v.isNew ? `<span class="pill" style="position:absolute;left:10px;top:10px;z-index:2;background:#fef3c7;color:#92400e;border:1px solid #fde68a;">Neuf</span>` : '';
+  const energy = energyFrom(v);
+  const isBEV = (energy === 'BEV'); // détection du type
+  const autoLbl = autonomyLabel(v);
+  const trShort = transmissionShort(v) || '—';
+  const newBadge = v.isNew ? `<span class="pill" style="position:absolute;left:10px;top:10px;z-index:2;background:#fef3c7;color:#92400e;border:1px solid #fde68a;">Neuf</span>` : '';
 
-      // puce 1 : type énergie ; puce 2 : autonomie
-      const energyLabel = (energy === 'PHEV') ? 'Hybride rechargeable (PHEV)' : '100% électrique (BEV)';
-      const specLines = pickSpecFeatures(v);
+  // Etiquette dynamique du prix
+  const priceLabel = isBEV ? 'Prix TTC (dédouané)' : 'Prix FCR (HT)';
+  const priceValue = (isBEV ? v.priceTTC : v.priceFCR) || '-';
 
-      // fallback si aucune des 4 n’est trouvée
-      const fallbacks = [`Transmission auto ${trShort}`, 'Caméra 360°', 'Toit panoramique'];
+  // puces
+  const energyLabel = (energy === 'PHEV')
+    ? 'Hybride rechargeable (PHEV)'
+    : '100% électrique (BEV)';
 
-      const items = [energyLabel, autoLbl, ...(specLines.length ? specLines : fallbacks)];
+  const specLines = pickSpecFeatures(v);
+  const fallbacks = [`Transmission auto ${trShort}`, 'Caméra 360°', 'Toit panoramique'];
+  const items = [energyLabel, autoLbl, ...(specLines.length ? specLines : fallbacks)];
 
-      return `
-        <a class="card-link" href="vehicle.html?id=${encodeURIComponent(v.id)}">
-          <article class="card" style="position:relative">
-            ${newBadge}
-            <img class="thumb" src="${v.images?.hero || ''}" alt="${v.name}"
-                 onerror="this.src='https://via.placeholder.com/400x300?text=Image+non+disponible'">
-            ${quickSpecsHTML(v)}
-            <div class="body">
-              <div class="name">${v.name}</div>
-              <div class="submeta">Réf : <strong>${v.id}</strong></div>
-              <div class="price">Prix FCR (HT) : ${v.priceFCR || '-'}</div>
-              <ul class="features">
-                ${items.map(x=>`<li>• ${x}</li>`).join('')}
-              </ul>
-            </div>
-          </article>
-        </a>`;
+  return `
+    <a class="card-link" href="vehicle.html?id=${encodeURIComponent(v.id)}">
+      <article class="card" style="position:relative">
+        ${newBadge}
+        <img class="thumb" src="${v.images?.hero || ''}" alt="${v.name}"
+             onerror="this.src='https://via.placeholder.com/400x300?text=Image+non+disponible'">
+        ${quickSpecsHTML(v)}
+        <div class="body">
+          <div class="name">${v.name}</div>
+          <div class="submeta">Réf : <strong>${v.id}</strong></div>
+
+          <div class="price">${priceLabel} : ${priceValue}</div>
+
+          <ul class="features">
+            ${items.map(x=>`<li>• ${x}</li>`).join('')}
+          </ul>
+        </div>
+      </article>
+    </a>`;
+}
+
     }
 
     function renderGrid(list){
