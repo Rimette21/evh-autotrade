@@ -169,7 +169,7 @@
    {
     "id": "EVHBSPPHEV_75KM",
     "name": "2025 BYD Song PLUS DM-i 75KM 1.5L",
-    "priceFCR": "24 430 € (~83 310 Tnd)",
+    "priceFCR": "23 430 € (~79 890 Tnd)",
     "mileage": 0,
     "regyear": "2025-09",
     "isNew": true,
@@ -188,7 +188,7 @@
  {
     "id": "EVHBSPPHEV_112KM",
     "name": "2025 BYD Song PLUS DM-i 112KM 1.5L",
-    "priceFCR": "26 500 € (~90 365 Tnd)",
+    "priceFCR": "25 500 € (~86 955 Tnd)",
     "mileage": 0,
     "regyear": "2025-01",
     "isNew": true,
@@ -207,7 +207,7 @@
   {
     "id": "EVHBSPPHEV_160KM",
     "name": "2025 BYD Song Plus 1.5L DM-i",
-    "priceFCR": "28 300 € (~96 500 Tnd)",
+    "priceFCR": "27 300 € (~93 090 Tnd)",
     "mileage": 0,
     "regyear": "2025-01",
     "isNew": true,
@@ -343,7 +343,7 @@
  {
     "id": "EVH9403325",
     "name": "Haval Fierce DragonMAX 1.5L 116HP",
-    "priceFCR": "25 880 € (~88 250 Tnd)",
+    "priceFCR": "24 880 € (~84 840 Tnd)",
     "mileage": 900,
     "regyear": "2025-09",
     "isNew": false,
@@ -362,7 +362,7 @@
   {
     "id": "EVH9391855",
     "name": "Chery Tiggo7 C-DM 1.5T 156HP L4",
-    "priceFCR": "23 330 € (~79 555 Tnd)",
+    "priceFCR": "22 330 € (~76 150 Tnd)",
     "mileage": 1200,
     "regyear": "2024-01",
     "isNew": false,
@@ -381,7 +381,7 @@
     {
     "id": "EVH9433858",
     "name": "2024 Jetour X70 C-DM Long Range PRO",
-    "priceFCR": "23 690 € (~80 780 Tnd)",
+    "priceFCR": "22 690 € (~77 370 Tnd)",
     "mileage": 2000,
     "regyear": "2024-04",
     "isNew": false,
@@ -400,7 +400,7 @@
  {
     "id": "EVH9336933",
     "name": "2023 Jetour DASHING i-DM 1.5T 156HP",
-    "priceFCR": "21 010 € (~71 640 Tnd)",
+    "priceFCR": "20 010 € (~68 230 Tnd)",
     "mileage": 13000,
     "regyear": "2024-05",
     "isNew": false,
@@ -419,7 +419,7 @@
   {
     "id": "EVH9384241",
     "name": "2023 Haval H6 1.5T DCT 2WD",
-    "priceFCR": "21 140 € (~72 090 Tnd)",
+    "priceFCR": "20 140 € (~68 680 Tnd)",
     "mileage": 28800,
     "regyear": "2023-01",
     "isNew": false,
@@ -438,7 +438,7 @@
  {
     "id": "EVH9403367",
     "name": "2024 Jetour X70 C-DM Long Range",
-    "priceFCR": "21 140 € (~72 090 Tnd)",
+    "priceFCR": "20 140 € (~68 680 Tnd)",
     "mileage": 18000,
     "regyear": "2024-04",
     "isNew": false,
@@ -457,7 +457,7 @@
  {
     "id": "EVH9404921",
     "name": "2025 BYD Song Pro 1.5L 101HP L4",
-    "priceFCR": "22 040 € (~75 160 Tnd)",
+    "priceFCR": "21 040 € (~71 740 Tnd)",
     "mileage": 13000,
     "regyear": "2025-01",
     "isNew": false,
@@ -476,7 +476,7 @@
   {
     "id": "EVH9478503",
     "name": "2024 BYD Song Plus 1.5L 110HP L4",
-    "priceFCR": "22 940 € (~78 225 Tnd)",
+    "priceFCR": "21 940 € (~74 815 Tnd)",
     "mileage": 21000,
     "regyear": "2024-04",
     "isNew": false,
@@ -496,7 +496,7 @@
   {
     "id": "EVH9404943",
     "name": "2024 BYD Song Plus 1.5L 110HP L4",
-    "priceFCR": "24 360 € (~83 070 Tnd)",
+    "priceFCR": "23 360 € (~79 660 Tnd)",
     "mileage": 9000,
     "regyear": "2024-07",
     "isNew": false,
@@ -516,7 +516,7 @@
 {
     "id": "EVH9519205",
     "name": "2025 Chery Tiggo 9 C-DM 1.5T",
-    "priceFCR": "26 420 € (~90 090 Tnd)",
+    "priceFCR": "25 420 € (~86 680 Tnd)",
     "mileage": 3800,
     "regyear": "2025-05",
     "isNew": false,
@@ -610,7 +610,7 @@
   {
     "id": "EVH9552616",
     "name": "2023 BYD Tang 1.5T 139HP L4 E‑CVT",
-    "priceFCR": "25 400 € (~86 600 TND)",
+    "priceFCR": "24 400 € (~83 200 TND)",
     "mileage": 40000,
     "regyear": "2024-03",
     "isNew": false,
@@ -634,7 +634,7 @@
 {
   "id": "EVH9509448",
   "name": "2022 Toyota Highlander 2.5L 192HP",
-  "priceFCR": "40 550€ (~138 280 Tnd)",
+  "priceFCR": "39 550€ (~134 870 Tnd)",
   "mileage": 58000,
   "regyear": "2022-06",
   "isNew": false,
@@ -657,7 +657,7 @@
 {
   "id": "EVH9431983",
   "name": "2024 Toyota Land Cruiser Prado 2.4T",
-  "priceFCR": "68 880€ (~234 880 Tnd)",
+  "priceFCR": "67 880€ (~231 470 Tnd)",
   "mileage": 500,
   "regyear": "2025-04",
   "isNew": true,
@@ -680,3 +680,5 @@
  }
 
 ]
+
+
