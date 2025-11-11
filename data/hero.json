@@ -1,67 +1,27 @@
 [
   {
-    "id": "EVHBYDTANG2025009",
-    "name": "BYD Tang L 2025 670 KM LiDAR Flagship Edition",
-    "priceTTC": "40 510 € (~138 140 tnd)",
+    "id": "EVH2025003",
+    "name": "2025 BYD Dolphin-Smart Driving",
+    "priceTTC": "21 660 € (~73 840 Tnd)",
     "mileage": 0,
-    "regyear": "2025",
+    "regyear": "2025-10",
     "isNew": true,
-    "featuresCount": 6,
+    "featuresCount": 5,
     "images": {
-      "hero": "images/EVHBYDTANG2025009_facetroisquart.webp"
+      "hero": "images/EVH2025003_BydDolphin_dev_droit.webp"
     },
     "features": [
-      "SUV 100% électrique (BEV)",
-      "Autonomie 670 km (CLTC)",
-      "Batterie Blade LFP 100,53 kWh",
-      "Puissance moteur total 500 kW (680 ch)",
-      "Recharge rapide DC 30–80% en 1 heure",
-      "SUV 7 places  système LiDAR avancé-conduite semi-autonome niveau 2"
+      "100% électrique (BEV)",
+      "Autonomie 420km (CLTC)",
+      "Batterie LFP Blade 44.9 kWh",
+      "Moteur 70 kW (95 ch) / 180 Nm",
+      "Caméra 360° / ADAS (AEB, BSM)"
     ],
     "specifications": {
-      "engineCc": "",
-      "transmission": "Auto RWD"
+      "engineCc": null,
+      "transmission": "AT"
     }
   },
-   {
-    "id": "EVHBSPPHEV_75KM",
-    "name": "2025 BYD Song PLUS DM-i 75KM 1.5L",
-    "priceFCR": "23 490 € (~79 890 Tnd)",
-    "mileage": 0,
-    "regyear": "2025-09",
-    "isNew": true,
-    "images": { "hero": "images/EVHBSPPHEV_75KM_intdevant.webp" },
-    "features": [
-      "Hybride rechargeable (DM-i)",
-      "Autonomie électrique 75 km (WLTP)",
-      "Batterie LFP Blade 12,9 kWh",
-      "Moteur électrique 145 kW (197 ch)",
-      "Puissance système 203 ch",
-      "Régulateur de vitesse adaptatif L2"
-    ],
-    "specifications": { "engineCc": 1498, "transmission": "E-CVT" },
-    "featuresCount": 6
-  },
- {
-    "id": "EVHBSPPHEV_112KM",
-    "name": "2025 BYD Song PLUS DM-i 112KM 1.5L",
-    "priceFCR": "25 490 € (~86 780 Tnd)",
-    "mileage": 0,
-    "regyear": "2025-01",
-    "isNew": true,
-    "images": { "hero": "images/EVHBSP112KM_DEVGAUCHE.webp" },
-    "features": [
-      "Hybride rechargeable (DM-i)",
-      "Autonomie électrique 112 km (WLTP)",
-      "Batterie LFP Blade 18,3 kWh",
-      "Moteur électrique 145 kW (197 ch)",
-      "Puissance système 203 ch",
-     "Systèmes d'assistance avancée (L2)"
-    ],
-    "specifications": { "engineCc": 1498, "transmission": "E-CVT" },
-    "featuresCount": 6
-  },
-
    {
     "id": "EVHBYDSEAL6EV007",
     "name": "2025-BYD Seal 06 EV 545KM Flagship",
@@ -85,25 +45,6 @@
       "engineCc": null,
       "transmission": "Auto AT"
     }
-  },
-  {
-    "id": "EVHBSPPHEV_160KM",
-    "name": "2025 BYD Song Plus 1.5L DM-i",
-    "priceFCR": "27 300 € (~92 945 Tnd)",
-    "mileage": 0,
-    "regyear": "2025-01",
-    "isNew": true,
-    "images": { "hero": "images/EVH_BSPPHEV_160km_DEV.webp" },
-    "features": [
-      "Hybride rechargeable (DM-i)",
-      "Autonomie électrique 160 km (WLTP)",
-      "Batterie 26,6 kWh",
-      "Moteur électrique 160 kW (218 ch)",
-      "Recharge rapide DC 40 kW / AC 7 kW",
-      "Régulateur de vitesse adaptatif (ACC)"
-    ],
-    "specifications": { "engineCc": 1498, "transmission": "E-CVT" },
-    "featuresCount": 6
   },
    {
     "id": "EVHBSPEV2025004",
@@ -153,7 +94,7 @@
       "transmission": "AT"
     }
   },
-  {
+   {
     "id": "EVHBSPEV2025006",
     "name": "2025 BYD Song PLUS EV 605km Flagship",
     "priceTTC": "33 100 € (~112 870 Tnd)",
@@ -177,7 +118,7 @@
       "transmission": "AT"
     }
   },
-  {
+   {
     "id": "EVHBYDSEALION7008",
     "name": "2025 BYD SEALION 7 EV 610 km Smart Driving",
     "priceTTC": "39 140 € (~133 470 Tnd)",
@@ -202,45 +143,84 @@
     }
   },
   {
-    "id": "EVH2025003",
-    "name": "2025 BYD Dolphin-Smart Driving",
-    "priceTTC": "21 650 € (~73 830 Tnd)",
+    "id": "EVHBYDTANG2025009",
+    "name": "BYD Tang L 2025 670 KM LiDAR Flagship Edition",
+    "priceTTC": "43 510 € (~148 500 tnd)",
     "mileage": 0,
-    "regyear": "2025-10",
+    "regyear": "2025",
     "isNew": true,
-    "featuresCount": 5,
+    "featuresCount": 6,
     "images": {
-      "hero": "images/EVH2025003_BydDolphin_dev_droit.webp"
+      "hero": "images/EVHBYDTANG2025009_facetroisquart.webp"
     },
     "features": [
-      "100% électrique (BEV)",
-      "Autonomie 420km (CLTC)",
-      "Batterie LFP Blade 44.9 kWh",
-      "Moteur 70 kW (95 ch) / 180 Nm",
-      "Caméra 360° / ADAS (AEB, BSM)"
+      "SUV 100% électrique (BEV)",
+      "Autonomie 670 km (CLTC)",
+      "Batterie Blade LFP 100,53 kWh",
+      "Puissance moteur total 500 kW (680 ch)",
+      "Recharge rapide DC 30–80% en 1 heure",
+      "SUV 7 places  système LiDAR avancé-conduite semi-autonome niveau 2"
     ],
     "specifications": {
-      "engineCc": null,
-      "transmission": "AT"
+      "engineCc": "",
+      "transmission": "Auto RWD"
     }
   },
- {
-    "id": "EVH9403325",
-    "name": "Haval Fierce DragonMAX 1.5L 116HP",
-    "priceFCR": "24 880 € (~84 840 Tnd)",
-    "mileage": 900,
+   {
+    "id": "EVHBSPPHEV_75KM",
+    "name": "2025 BYD Song PLUS DM-i 75KM 1.5L",
+    "priceFCR": "24 430 € (~83 310 Tnd)",
+    "mileage": 0,
     "regyear": "2025-09",
-    "isNew": false,
-    "images": { "hero": "images/EVH9403325_HAVAL_DROIT.webp" },
+    "isNew": true,
+    "images": { "hero": "images/EVHBSPPHEV_75KM_intdevant.webp" },
     "features": [
-      "Hybride rechargeable (DHT)",
-      "Autonomie électrique 110 km",
-      "Batterie 19 kWh",
-      "Moteur électrique 156 ch",
-      "Puissance système 238 ch",
-       "Sièges chauffants et ventilés"
+      "Hybride rechargeable (DM-i)",
+      "Autonomie électrique 75 km (WLTP)",
+      "Batterie LFP Blade 12,9 kWh",
+      "Moteur électrique 145 kW (197 ch)",
+      "Puissance système 203 ch",
+      "Régulateur de vitesse adaptatif L2"
     ],
-    "specifications": { "engineCc": 1499, "transmission": "DHT" },
+    "specifications": { "engineCc": 1498, "transmission": "E-CVT" },
+    "featuresCount": 6
+  },
+ {
+    "id": "EVHBSPPHEV_112KM",
+    "name": "2025 BYD Song PLUS DM-i 112KM 1.5L",
+    "priceFCR": "26 500 € (~90 365 Tnd)",
+    "mileage": 0,
+    "regyear": "2025-01",
+    "isNew": true,
+    "images": { "hero": "images/EVHBSP112KM_DEVGAUCHE.webp" },
+    "features": [
+      "Hybride rechargeable (DM-i)",
+      "Autonomie électrique 112 km (WLTP)",
+      "Batterie LFP Blade 18,3 kWh",
+      "Moteur électrique 145 kW (197 ch)",
+      "Puissance système 203 ch",
+     "Systèmes d'assistance avancée (L2)"
+    ],
+    "specifications": { "engineCc": 1498, "transmission": "E-CVT" },
+    "featuresCount": 6
+  },
+  {
+    "id": "EVHBSPPHEV_160KM",
+    "name": "2025 BYD Song Plus 1.5L DM-i",
+    "priceFCR": "28 300 € (~96 500 Tnd)",
+    "mileage": 0,
+    "regyear": "2025-01",
+    "isNew": true,
+    "images": { "hero": "images/EVH_BSPPHEV_160km_DEV.webp" },
+    "features": [
+      "Hybride rechargeable (DM-i)",
+      "Autonomie électrique 160 km (WLTP)",
+      "Batterie 26,6 kWh",
+      "Moteur électrique 160 kW (218 ch)",
+      "Recharge rapide DC 40 kW / AC 7 kW",
+      "Régulateur de vitesse adaptatif (ACC)"
+    ],
+    "specifications": { "engineCc": 1498, "transmission": "E-CVT" },
     "featuresCount": 6
   },
    {
@@ -268,120 +248,6 @@
     "featuresCount": 3
   },
   {
-    "id": "EVH9391855",
-    "name": "Chery Tiggo7 C-DM 1.5T 156HP L4",
-    "priceFCR": "22 330 € (~76 140 Tnd)",
-    "mileage": 1200,
-    "regyear": "2024-01",
-    "isNew": false,
-    "images": { "hero": "images/EVH9391855_CHERRY_DEVANT.webp" },
-    "features": [
-      "Hybride rechargeable (C-DM)",
-      "Autonomie électrique 120 km",
-      "Batterie 20 kWh",
-       "Moteur électrique 136 ch",
-      "Puissance système 292 ch",
-      "Recharge AC 7 kW"
-        ],
-    "specifications": { "engineCc": 1499, "transmission": "DHT" },
-    "featuresCount": 6
-  },
-    {
-    "id": "EVH9433858",
-    "name": "2024 Jetour X70 C-DM Long Range PRO",
-    "priceFCR": "22 690 € (~77 370 Tnd)",
-    "mileage": 2000,
-    "regyear": "2024-04",
-    "isNew": false,
-    "featuresCount": 7,
-    "images": { "hero": "images/9433858_Jetour X70_DEV_gauche.webp" },
-    "features": [
-      "Hybride rechargeable (C-DM)",
-      "Autonomie électrique 110 km",
-      "Batterie 19 kWh",
-      "Moteur électrique 136 ch",
-      "Puissance système 292 ch",
-      "7 places"
-    ],
-    "specifications": { "engineCc": 1499, "transmission": "DHT" }
-  },
- {
-    "id": "EVH9336933",
-    "name": "2023 Jetour DASHING i-DM 1.5T 156HP",
-    "priceFCR": "20 010 € (~68 230 Tnd)",
-    "mileage": 13000,
-    "regyear": "2024-05",
-    "isNew": false,
-    "images": { "hero": "images/EVH9336933_JETOUR_DEVANT.webp" },
-    "features": [
-      "Hybride rechargeable (i-DM)",
-      "Autonomie électrique 100 km",
-      "Batterie 19 kWh",
-      "Moteur électrique 136 ch",
-      "Puissance système 292 ch",
-      "Recharge AC 6,6 kW"
-    ],
-    "specifications": { "engineCc": 1499, "transmission": "DHT" },
-    "featuresCount": 6
-  },
-  {
-    "id": "EVH9384241",
-    "name": "2023 Haval H6 1.5T DCT 2WD",
-    "priceFCR": "20 140 € (~68 670 Tnd)",
-    "mileage": 28800,
-    "regyear": "2023-01",
-    "isNew": false,
-    "images": { "hero": "images/EVH9384241_HAVALH6_devant.webp" },
-    "features": [
-      "Hybride rechargeable (DHT)",
-      "Autonomie électrique 110 km",
-      "Batterie 19 kWh",
-      "Moteur électrique 156 ch",
-      "Puissance système 238 ch",
-      "Recharge AC 6,6 kW"
-    ],
-    "specifications": { "engineCc": 1499, "transmission": "DHT" },
-    "featuresCount": 6
-  },
- {
-    "id": "EVH9403367",
-    "name": "2024 Jetour X70 C-DM Long Range",
-    "priceFCR": "20 140 € (~68 670 Tnd)",
-    "mileage": 18000,
-    "regyear": "2024-04",
-    "isNew": false,
-    "featuresCount": 6,
-    "images": { "hero": "images/9403367_Jetour X70_devdroit.webp" },
-    "features": [
-      "Hybride rechargeable (C-DM)",
-      "Autonomie électrique ~110 km",
-      "Batterie 19 kWh",
-       "Moteur électrique 136 ch",
-      "Puissance système 292 ch",
-      "7 places"
-    ],
-    "specifications": { "engineCc": 1499, "transmission": "DHT" }
-  },
- {
-    "id": "EVH9404921",
-    "name": "2025 BYD Song Pro 1.5L 101HP L4",
-    "priceFCR": "21 040 € (~71 740 Tnd)",
-    "mileage": 13000,
-    "regyear": "2025-01",
-    "isNew": false,
-    "images": { "hero": "images/EVH9404921_DEV_DROITE.webp" },
-    "features": [
-      "Hybride rechargeable (DM-i)",
-      "Autonomie électrique 115 km",
-      "Batterie Blade 18,3 kWh",
-      "Moteur électrique 145 kW (197 ch)",
-      "Puissance système 203 ch",
-      "Recharge AC 7 kW"
-    ],
-    "specifications": { "engineCc": 1498, "transmission": "E-CVT" },
-    "featuresCount": 6
-  },
-{
     "id": "EVH9524551",
     "name": "2024 Geely Galaxy E5 BEV",
     "priceTTC": "23 950 € (~81 670 Tnd)",
@@ -404,92 +270,7 @@
       "transmission": "AT"
     }
   },
-  {
-    "id": "EVH9478503",
-    "name": "2024 BYD Song Plus 1.5L 110HP L4",
-    "priceFCR": "21 940 € (~74 815 Tnd)",
-    "mileage": 21000,
-    "regyear": "2024-04",
-    "isNew": false,
-    "images": { "hero": "images/EVH9478503_DEV_DROITE.webp" },
-    "features": [
-      "Hybride rechargeable (DM-i)",
-      "Autonomie électrique 110 km",
-      "Batterie Blade 18,3 kWh",
-      "Moteur électrique 145 kW (197 ch)",
-      "Puissance système 203 ch",
-      "Recharge AC 7 kW"
-    ],
-    "specifications": { "engineCc": 1498, "transmission": "E-CVT" },
-    "featuresCount": 6
-  },
-  {
-    "id": "EVH9404943",
-    "name": "2024 BYD Song Plus 1.5L 110HP L4",
-    "priceFCR": "22 900 € (~77 965 Tnd)",
-    "mileage": 9000,
-    "regyear": "2024-07",
-    "isNew": false,
-    "images": { "hero": "images/EVH9404943_BYD_beige_devant.webp" },
-    "features": [
-      "Hybride rechargeable (DM-i)",
-      "Autonomie électrique 150 km",
-      "Batterie 26,6 kWh",
-      "Moteur électrique 160 kW (218 ch)",
-      "Puissance système 218 ch",
-      "Recharge DC 40 kW / AC 7 kW"
-    ],
-    "specifications": { "engineCc": 1498, "transmission": "E-CVT" },
-    "featuresCount": 6
-  },
-    {
-    "id": "EVH9408609",
-    "name": "2025 BYD Song Plus BEV",
-    "priceTTC": "27 270 € (~92 990 Tnd)",
-    "mileage": 5000,
-    "regyear": "2025-08",
-    "isNew": false,
-    "featuresCount": 4,
-    "images": {
-      "hero": "images/EVH9408609_BYD_gris_droit.webp"
-    },
-    "features": [
-      "100% électrique (BEV)",
-      "Autonomie 520 km",
-      "Batterie 71.8 kWh",
-      "Puissance moteur 150 kW (≈204 ch)",
-      "Régulateur de vitesse adaptatif"
-    ],
-    "specifications": {
-      "engineCc": null,
-      "transmission": "AT"
-    }
-  },
-{
-    "id": "EVH9519205",
-    "name": "2025 Chery Tiggo 9 C-DM 1.5T",
-    "priceFCR": "25 420 € (~86 545 Tnd)",
-    "mileage": 3800,
-    "regyear": "2025-05",
-    "isNew": false,
-    "images": {
-      "hero": "images/EVH9519205_CHERY_TIGO_devdroit.webp"
-    },
-    "features": [
-      "Hybride rechargeable (C-DM)",
-      "Autonomie électrique 110 km (WLTP)",
-      "Batterie 18,3 kWh",
-      "Moteur électrique 152 kW (206 ch)",
-      "Puissance système cumulée 381 ch",
-      "SUV 7 places"
-        ],
-    "specifications": {
-      "engineCc": 1499,
-      "transmission": "DHT"
-    },
-    "featuresCount": 6
-   },
-  {
+   {
     "id": "EVH9496374",
     "name": "2025 Mercedes-Benz EQA Class",
     "priceTTC": "29 560 € (~100 800 Tnd)",
@@ -512,6 +293,250 @@
       "transmission": "AT"
     }
   },
+  {
+    "id": "EVH9330983",
+    "name": "2023 BMW iX1 - BEV",
+    "priceTTC": "34 210 € (~116 660 Tnd)",
+    "mileage": 4000,
+    "regyear": "2025-06",
+    "isNew": false,
+    "images": {
+      "hero": "images/EVH9330983_BMW_DEVANT.webp"
+    },
+    "features": [
+      "100% électrique",
+      "Autonomie 510km",
+      "Puissance Moteur 150 kW (204 ch)",
+      "Couple système 250 N.m",
+       "Batterie 66,45 kWh",
+      "Charge rapide DC 10–80% en 29 min"
+    ],
+    "specifications": {
+      "engineCc": null,
+      "transmission": "AT"
+    },
+    "featuresCount": 6
+  },
+   {
+    "id": "EVH9408609",
+    "name": "2025 BYD Song Plus BEV",
+    "priceTTC": "27 270 € (~92 990 Tnd)",
+    "mileage": 5000,
+    "regyear": "2025-08",
+    "isNew": false,
+    "featuresCount": 4,
+    "images": {
+      "hero": "images/EVH9408609_BYD_gris_droit.webp"
+    },
+    "features": [
+      "100% électrique (BEV)",
+      "Autonomie 520 km",
+      "Batterie 71.8 kWh",
+      "Puissance moteur 150 kW (≈204 ch)",
+      "Régulateur de vitesse adaptatif"
+    ],
+    "specifications": {
+      "engineCc": null,
+      "transmission": "AT"
+    }
+  },
+ {
+    "id": "EVH9403325",
+    "name": "Haval Fierce DragonMAX 1.5L 116HP",
+    "priceFCR": "25 880 € (~88 250 Tnd)",
+    "mileage": 900,
+    "regyear": "2025-09",
+    "isNew": false,
+    "images": { "hero": "images/EVH9403325_HAVAL_DROIT.webp" },
+    "features": [
+      "Hybride rechargeable (DHT)",
+      "Autonomie électrique 110 km",
+      "Batterie 19 kWh",
+      "Moteur électrique 156 ch",
+      "Puissance système 238 ch",
+       "Sièges chauffants et ventilés"
+    ],
+    "specifications": { "engineCc": 1499, "transmission": "DHT" },
+    "featuresCount": 6
+  },
+  {
+    "id": "EVH9391855",
+    "name": "Chery Tiggo7 C-DM 1.5T 156HP L4",
+    "priceFCR": "23 330 € (~79 555 Tnd)",
+    "mileage": 1200,
+    "regyear": "2024-01",
+    "isNew": false,
+    "images": { "hero": "images/EVH9391855_CHERRY_DEVANT.webp" },
+    "features": [
+      "Hybride rechargeable (C-DM)",
+      "Autonomie électrique 120 km",
+      "Batterie 20 kWh",
+       "Moteur électrique 136 ch",
+      "Puissance système 292 ch",
+      "Recharge AC 7 kW"
+        ],
+    "specifications": { "engineCc": 1499, "transmission": "DHT" },
+    "featuresCount": 6
+  },
+    {
+    "id": "EVH9433858",
+    "name": "2024 Jetour X70 C-DM Long Range PRO",
+    "priceFCR": "23 690 € (~80 780 Tnd)",
+    "mileage": 2000,
+    "regyear": "2024-04",
+    "isNew": false,
+    "featuresCount": 7,
+    "images": { "hero": "images/9433858_Jetour X70_DEV_gauche.webp" },
+    "features": [
+      "Hybride rechargeable (C-DM)",
+      "Autonomie électrique 110 km",
+      "Batterie 19 kWh",
+      "Moteur électrique 136 ch",
+      "Puissance système 292 ch",
+      "7 places"
+    ],
+    "specifications": { "engineCc": 1499, "transmission": "DHT" }
+  },
+ {
+    "id": "EVH9336933",
+    "name": "2023 Jetour DASHING i-DM 1.5T 156HP",
+    "priceFCR": "21 010 € (~71 640 Tnd)",
+    "mileage": 13000,
+    "regyear": "2024-05",
+    "isNew": false,
+    "images": { "hero": "images/EVH9336933_JETOUR_DEVANT.webp" },
+    "features": [
+      "Hybride rechargeable (i-DM)",
+      "Autonomie électrique 100 km",
+      "Batterie 19 kWh",
+      "Moteur électrique 136 ch",
+      "Puissance système 292 ch",
+      "Recharge AC 6,6 kW"
+    ],
+    "specifications": { "engineCc": 1499, "transmission": "DHT" },
+    "featuresCount": 6
+  },
+  {
+    "id": "EVH9384241",
+    "name": "2023 Haval H6 1.5T DCT 2WD",
+    "priceFCR": "21 140 € (~72 090 Tnd)",
+    "mileage": 28800,
+    "regyear": "2023-01",
+    "isNew": false,
+    "images": { "hero": "images/EVH9384241_HAVALH6_devant.webp" },
+    "features": [
+      "Hybride rechargeable (DHT)",
+      "Autonomie électrique 110 km",
+      "Batterie 19 kWh",
+      "Moteur électrique 156 ch",
+      "Puissance système 238 ch",
+      "Recharge AC 6,6 kW"
+    ],
+    "specifications": { "engineCc": 1499, "transmission": "DHT" },
+    "featuresCount": 6
+  },
+ {
+    "id": "EVH9403367",
+    "name": "2024 Jetour X70 C-DM Long Range",
+    "priceFCR": "21 140 € (~72 090 Tnd)",
+    "mileage": 18000,
+    "regyear": "2024-04",
+    "isNew": false,
+    "featuresCount": 6,
+    "images": { "hero": "images/9403367_Jetour X70_devdroit.webp" },
+    "features": [
+      "Hybride rechargeable (C-DM)",
+      "Autonomie électrique ~110 km",
+      "Batterie 19 kWh",
+       "Moteur électrique 136 ch",
+      "Puissance système 292 ch",
+      "7 places"
+    ],
+    "specifications": { "engineCc": 1499, "transmission": "DHT" }
+  },
+ {
+    "id": "EVH9404921",
+    "name": "2025 BYD Song Pro 1.5L 101HP L4",
+    "priceFCR": "22 040 € (~75 160 Tnd)",
+    "mileage": 13000,
+    "regyear": "2025-01",
+    "isNew": false,
+    "images": { "hero": "images/EVH9404921_DEV_DROITE.webp" },
+    "features": [
+      "Hybride rechargeable (DM-i)",
+      "Autonomie électrique 115 km",
+      "Batterie Blade 18,3 kWh",
+      "Moteur électrique 145 kW (197 ch)",
+      "Puissance système 203 ch",
+      "Recharge AC 7 kW"
+    ],
+    "specifications": { "engineCc": 1498, "transmission": "E-CVT" },
+    "featuresCount": 6
+  },
+  {
+    "id": "EVH9478503",
+    "name": "2024 BYD Song Plus 1.5L 110HP L4",
+    "priceFCR": "22 940 € (~78 225 Tnd)",
+    "mileage": 21000,
+    "regyear": "2024-04",
+    "isNew": false,
+    "images": { "hero": "images/EVH9478503_DEV_DROITE.webp" },
+    "features": [
+      "Hybride rechargeable (DM-i)",
+      "Autonomie électrique 110 km",
+      "Batterie Blade 18,3 kWh",
+      "Moteur électrique 145 kW (197 ch)",
+      "Puissance système 203 ch",
+      "Recharge AC 7 kW"
+    ],
+    "specifications": { "engineCc": 1498, "transmission": "E-CVT" },
+    "featuresCount": 6
+  },
+
+  {
+    "id": "EVH9404943",
+    "name": "2024 BYD Song Plus 1.5L 110HP L4",
+    "priceFCR": "24 360 € (~83 070 Tnd)",
+    "mileage": 9000,
+    "regyear": "2024-07",
+    "isNew": false,
+    "images": { "hero": "images/EVH9404943_BYD_beige_devant.webp" },
+    "features": [
+      "Hybride rechargeable (DM-i)",
+      "Autonomie électrique 150 km",
+      "Batterie 26,6 kWh",
+      "Moteur électrique 160 kW (218 ch)",
+      "Puissance système 218 ch",
+      "Recharge DC 40 kW / AC 7 kW"
+    ],
+    "specifications": { "engineCc": 1498, "transmission": "E-CVT" },
+    "featuresCount": 6
+  },
+   
+{
+    "id": "EVH9519205",
+    "name": "2025 Chery Tiggo 9 C-DM 1.5T",
+    "priceFCR": "26 420 € (~90 090 Tnd)",
+    "mileage": 3800,
+    "regyear": "2025-05",
+    "isNew": false,
+    "images": {
+      "hero": "images/EVH9519205_CHERY_TIGO_devdroit.webp"
+    },
+    "features": [
+      "Hybride rechargeable (C-DM)",
+      "Autonomie électrique 110 km (WLTP)",
+      "Batterie 18,3 kWh",
+      "Moteur électrique 152 kW (206 ch)",
+      "Puissance système cumulée 381 ch",
+      "SUV 7 places"
+        ],
+    "specifications": {
+      "engineCc": 1499,
+      "transmission": "DHT"
+    },
+    "featuresCount": 6
+   },
   {
     "id": "EVH9387237",
     "name": "2024 BYD Tang BEV 90.3kWh 600km",
@@ -558,31 +583,7 @@
       "transmission": "AT"
     },
     "featuresCount": 3
-  },
-  {
-    "id": "EVH9330983",
-    "name": "2023 BMW iX1 - BEV",
-    "priceTTC": "34 210 € (~116 660 Tnd)",
-    "mileage": 4000,
-    "regyear": "2025-06",
-    "isNew": false,
-    "images": {
-      "hero": "images/EVH9330983_BMW_DEVANT.webp"
-    },
-    "features": [
-      "100% électrique",
-      "Autonomie 510km",
-      "Puissance Moteur 150 kW (204 ch)",
-      "Couple système 250 N.m",
-       "Batterie 66,45 kWh",
-      "Charge rapide DC 10–80% en 29 min"
-    ],
-    "specifications": {
-      "engineCc": null,
-      "transmission": "AT"
-    },
-    "featuresCount": 6
-  },
+  }, 
   {
     "id": "EVH9535838",
     "name": "2023 Audi Q5 e-tron BEV 83.4KWH",
@@ -609,7 +610,7 @@
   {
     "id": "EVH9552616",
     "name": "2023 BYD Tang 1.5T 139HP L4 E‑CVT",
-    "priceFCR": "24 360 € (~83 070 TND)",
+    "priceFCR": "25 400 € (~86 600 TND)",
     "mileage": 40000,
     "regyear": "2024-03",
     "isNew": false,
@@ -633,7 +634,7 @@
 {
   "id": "EVH9509448",
   "name": "2022 Toyota Highlander 2.5L 192HP",
-  "priceFCR": "39 550€ (~134 652 Tnd)",
+  "priceFCR": "40 550€ (~138 280 Tnd)",
   "mileage": 58000,
   "regyear": "2022-06",
   "isNew": false,
@@ -650,14 +651,13 @@
    ],
   "specifications": {
     "engineCc": 2487,
-    "transmission": "E-CVT"
-  },
+    "transmission": "E-CVT"},
   "featuresCount": 6
     },
 {
   "id": "EVH9431983",
   "name": "2024 Toyota Land Cruiser Prado 2.4T",
-  "priceFCR": "67 880€ (~231 104 Tnd)",
+  "priceFCR": "68 880€ (~234 880 Tnd)",
   "mileage": 500,
   "regyear": "2025-04",
   "isNew": true,
