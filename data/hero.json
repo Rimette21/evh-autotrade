@@ -118,7 +118,32 @@
       "transmission": "AT"
     }
   },
-   {
+  {
+  "id": "EVHxpeng25011",
+  "name": "2025 XPENG G7 602 Long Range Max",
+  "priceTTC": "37 120 € (~126 540 Tnd)",
+  "mileage": 0,
+  "regyear": "2026",
+  "isNew": true,
+  "featuresCount": 7,
+  "images": {
+    "hero": "images/EVHxpeng25011_devface.webp"
+  },
+  "features": [
+    "100% électrique (BEV)",
+    "Autonomie 602 km (CLTC)",
+    "Batterie LFP 80,8 kWh",
+    "Moteur 218 kW (296 ch) – propulsion (roues arrière)",
+    "Recharge DC 800 V, 12 min 10-80 %",
+    "Accélération 0-100 km/h en 6,6 s",
+    "Caméras 360° / ADAS niveau 3 (XNGP)"
+  ],
+  "specifications": {
+    "engineCc": null,
+    "transmission": "Propulsion auto"
+  }
+},
+  {
     "id": "EVHBYDSEALION7008",
     "name": "2025 BYD SEALION 7 EV 610 km Smart Driving",
     "priceTTC": "39 140 € (~133 470 Tnd)",
