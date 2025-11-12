@@ -5,9 +5,9 @@
   "mileage": 0,
   "regyear": "2025",
   "images": {
-    "hero": "images/EVHBYDSEALION7_devdroite.webp",
+    "hero": "images/EVHBYDSEALION7_face.webp",
     "gallery": [
-      "images/EVHBYDSEALION7_face.webp",
+      "images/EVHBYDSEALION7_devdroite.webp",      
       "images/EVHBYDSEALION7_noire.webp",
       "images/EVHBYDSEALION7_blanche.webp",
       "images/EVHBYDSEALION7_cotedroit.webp",
