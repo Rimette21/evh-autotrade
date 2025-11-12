@@ -1,0 +1,86 @@
+{
+  "id": "EVHxpeng25011",
+  "name": "2025 XPENG G7 602 Long Range Max",
+  "priceTTC": "37 120 €",
+  "mileage": 0,
+  "regyear": "2026",
+  "images": {
+    "hero": "images/EVHxpeng25011_devface.webp",
+    "gallery": [
+      "images/EVHxpeng25011_devgauche.webp",
+      "images/EVHxpeng25011_devdroit.webp",
+      "images/EVHxpeng25011_cote_droit.webp",
+      "images/EVHxpeng25011_arriere.webp",
+      "images/EVHxpeng25011_argauche.webp",
+      "images/EVHxpeng25011_intdev.webp"
+    ]
+  },
+  "caracteristiques": [
+    "SUV 5 portes 100% électrique (5 places)",
+    "Autonomie 602 km (CLTC)",
+    "Moteur électrique 218 kW (296 ch) – propulsion (roues arrière) 450 Nm",
+    "Batterie LFP 80,8 kWh",
+    "Recharge DC 800 V, 10-80% en 12 minutes",
+    "Accélération 0-100 km/h en 6,6 secondes",
+    "Caméras 360° / ADAS niveau 3 (XNGP)"
+  ],
+  "specifications": {
+    "engineCc": null,
+    "motorisation": {
+      "type": "Électrique (BEV)",
+      "moteurElectrique": "218 kW (296 ch) — 450 Nm",
+      "transmission": "Propulsion auto",
+      "traction": "Arrière (RWD)"
+    },
+    "performances": {
+      "vitesseMax": "202 km/h",
+      "acceleration": "0-100 km/h : 6,6 s",
+      "consommationElectrique": null
+    },
+    "batterie": {
+      "type": "LFP",
+      "capacite": "80,8 kWh",
+      "autonomieCLTC": "602 km",
+      "rechargeAC": null,
+      "rechargeDC": "10-80% ≈ 12 min"
+    },
+    "dimensions": "4892 × 1925 × 1655 mm",
+    "empattement": "2890 mm",
+    "poids": "2145 kg",
+    "volumeCoffre": null,
+    "pneus": "235/60 R18",
+    "chassis": {
+      "suspensionAvant": "Double triangulation",
+      "suspensionArriere": "Multibras cinq bras",
+      "freins": "ABS + ESP",
+      "freinStationnement": "Électrique (EPB)"
+    },
+    "plateforme": null
+  },
+  "equipements": {
+    "interieur": [
+      "Sièges cuir premium électriques",
+      "Climatisation automatique",
+      "Écran infotainment haut de gamme",
+      "AR-HUD panoramique (affichage tête haute en réalité augmentée)",
+      "Commandes vocales avancées"
+    ],
+    "securite": [
+      "5 étoiles au C-NCAP",
+      "7 airbags",
+      "AEB (freinage automatique d’urgence jusqu’à 130 km/h)",
+      "Surveillance des angles morts",
+      "Caméras 360°",
+      "Assistance au stationnement automatique",
+      "ADAS niveau 3 (XNGP)"
+    ],
+    "connectivite": [
+      "Bluetooth",
+      "CarPlay sans fil",
+      "USB / USB-C",
+      "Système connecté intelligent"
+    ]
+  },
+  "resume": "Le XPENG G7 602 Long Range Max 2025 est un SUV 100% électrique avec une batterie LFP de 80,8 kWh offrant une autonomie CLTC de 602 km, motorisation de propulsion de 218 kW, recharge ultra-rapide 800 V, performances dynamiques, et un ensemble d’aides à la conduite avancées jusqu’au niveau 3.",
+  "fichePDF": "data/fiche/EVHxpeng25011.pdf"
+}
