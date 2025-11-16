@@ -1,0 +1,85 @@
+ "id": "EVH_MercedesEQB2023013",
+  "name": "2023 Mercedes-Benz EQB 260",
+  "priceTTC": "33 820 €",
+  "mileage": 43300,
+  "regyear": "2023-03",
+  "images": {
+    "hero": "images/EVH_MercedesEQB_devgauche.webp",
+    "gallery": [
+      "images/EVH_MercedesEQB_devdroit.webp",
+      "images/EVH_MercedesEQB_arrieredroit.webp",
+      "images/EVH_MercedesEQB_intavant.webp",
+      "images/EVH_MercedesEQB_coffre.webp"
+    ]
+  },
+  "caracteristiques": [
+    "SUV 5 portes 100% électrique (5 ou 7 places)",
+    "Autonomie 600 km CLTC",
+    "Moteur synchrone 160 kW (218 ch) / 385 Nm",
+    "Batterie Lithium-ion 70,5 kWh (LFP)",
+    "Deux écrans 10,25",
+     "Sécurité : 7 airbags, AEB, maintien de ligne, ADAS avancé",
+    "Caméras 360°, stationnement automatique, capteurs multiples",
+    "Recharge DC 10-80% ≈ 32 min ; AC complet ≈ 6 h"
+  ],
+  "specifications": {
+    "engineCc": 0,
+    "motorisation": {
+      "type": "Électrique (BEV)",
+      "moteurElectrique": "160 kW (218 ch) — 385 Nm",
+      "transmission": "Automatique, rapport unique",
+      "traction": "Avant (FWD)"
+    },
+    "performances": {
+      "vitesseMax": "≈ 180 km/h",
+      "acceleration": "0–100 km/h : 8,9 s",
+      "consommationElectrique": "≈ 15,2 kWh/100 km"
+    },
+    "batterie": {
+      "type": "Lithium-ion (LFP)",
+      "capacite": "70,5 kWh",
+      "autonomieCLTC": "600 km",
+      "rechargeAC": "Charge AC complète ≈ 6 h",
+      "rechargeDC": "10-80% ≈ 32 min"
+    },
+    "dimensions": "4684 × 1834 × 1667 mm",
+    "empattement": "2829 mm",
+    "poids": "≈ 2155 kg",
+    "volumeCoffre": "495 litres (banquette en place), max 1710-1720 litres",
+    "pneus": "225/55 R18",
+    "chassis": {
+      "suspensionAvant": "Indépendante type McPherson",
+      "suspensionArriere": "Multibras indépendante",
+      "freins": "Disques ventilés à l’avant et à l’arrière",
+      "freinStationnement": "Électrique (EPB)"
+    },
+    "plateforme": "Mercedes Architecture EVA2"
+  },
+  "equipements": {
+    "interieur": [
+      "Sièges chauffants, finitions premium",
+      "Climatisation automatique bi-zone",
+      "MBUX double écran 10,25”",
+      "Affichage tête haute (HUD en option)",
+      "Multiples rangements, configuration 5 ou 7 places"
+    ],
+    "securite": [
+      "7 airbags",
+      "AEB (freinage automatique d’urgence)",
+      "Surveillance angles morts",
+      "Caméras 360°",
+      "Assistance stationnement automatique",
+      "TPMS",
+      "ABS + ESP",
+      "ADAS complet (aide maintien de voie, etc.)"
+    ],
+    "connectivite": [
+      "Bluetooth",
+      "CarPlay sans fil, Android Auto",
+      "USB / USB-C",
+      "Services connectés 4G/5G",
+      "Recharge smartphone sans fil"
+    ]
+  },
+  "resume": "Le Mercedes-Benz EQB 260 est un SUV familial 100% électrique, offrant jusqu’à 600 km d’autonomie, 218 ch et un volume de coffre modulable jusqu’à 1720 litres. Equipé d’un double écran MBUX, de fonctionnalités avancées de sécurité et de connectivité, il se distingue par sa polyvalence et son niveau de confort premium."
+}
