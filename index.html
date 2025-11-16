@@ -188,7 +188,7 @@ Les prix affichés dépendent du type de motorisation :
   <script>
     // Détermine l’énergie : PHEV si on détecte un hybride rechargeable, sinon BEV
     function energyFrom(v){
-  const hay = [v.name, ...(v.features||[])].join(' ').toLowerCase();
+      const hay = [v.name, ...(v.features||[]), ...(v.caracteristiques||[])].join(' ').toLowerCase();
 
   if (/(phev|hybride\s*rechargeable|dm-i|plug[- ]?in)/i.test(hay)) return 'PHEV';
   if (/(hev|hybride(?!.*rechargeable))/i.test(hay)) return 'HEV'; // Ajout pour détecter l'hybride non rechargeable
