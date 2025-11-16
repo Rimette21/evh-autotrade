@@ -83,5 +83,6 @@
       "Services connectés"
     ]
   },
-  "resume": "Le Mercedes-Benz EQA 260 est un SUV urbain 100% électrique puissant avec une autonomie remarquable de 619 km en cycle CLTC, offrant un moteur de 140 kW et une batterie de 73,5 kWh. Ce véhicule allie performances, technologie moderne et sécurité avancée pour une expérience de conduite confortable et sûre."
+  "resume": "Le Mercedes-Benz EQA 260 est un SUV urbain 100% électrique puissant avec une autonomie remarquable de 619 km en cycle CLTC, offrant un moteur de 140 kW et une batterie de 73,5 kWh. Ce véhicule allie performances, technologie moderne et sécurité avancée pour une expérience de conduite confortable et sûre.",
+"fichePDF": "data/fiche/FT_MercedesEQA260.pdf"
 }
