@@ -1,0 +1,87 @@
+{
+  "id": "EVH_AudiQ42022014",
+  "name": "2022 Audi Q4 e-tron 40 Boundary Edition",
+  "priceTTC": "32 160 €",
+  "mileage": 32900,
+  "regyear": "2022-11",
+  "images": {
+    "hero": "images/EVH_AudiQ4_devgauche.webp",
+    "gallery": [
+      "images/EVH_AudiQ4_devdroit.webp",
+      "images/EVH_AudiQ4_argauche.webp",
+      "images/EVH_AudiQ4_devface.webp",
+      "images/EVH_AudiQ4_arriere.webp",
+      "images/EVH_AudiQ4_interieurdev.webp"
+    ]
+  },
+  "caracteristiques": [
+    "SUV 5 portes 100% électrique (5 places)",
+    "Autonomie jusqu'à 545 km WLTP (environ 600 km CLTC Chine)",
+    "Moteur synchrone à aimants permanents 150 kW (204 ch) / 310 Nm",
+    "Batterie Lithium-ion 76,6 kWh (net, 82 kWh brut)",
+    "Double écran digital 10,25'' MMI touch + cockpit virtuel",
+    "Sécurité : 7 airbags, AEB, maintien de voie, ADAS avancé",
+    "Caméras 360°, stationnement automatique, capteurs multiples",
+    "Recharge DC 10-80 % ≈ 29 min ; AC complet ≈ 7,5 h"
+  ],
+  "specifications": {
+    "engineCc": 0,
+    "motorisation": {
+      "type": "Électrique (BEV)",
+      "moteurElectrique": "150 kW (204 ch) — 310 Nm",
+      "transmission": "Automatique, rapport unique",
+      "traction": "Arrière (RWD)"
+    },
+    "performances": {
+      "vitesseMax": "160 km/h",
+      "acceleration": "0–100 km/h : 8,5 s",
+      "consommationElectrique": "17,3 kWh/100 km WLTP"
+    },
+    "batterie": {
+      "type": "Lithium-ion (NMC)",
+      "capacite": "76,6 kWh net (82 kWh brut)",
+      "autonomieWLTP": "545 km",
+      "rechargeAC": "Charge AC complète ≈ 7,5 h (11 kW)",
+      "rechargeDC": "10-80 % ≈ 29 min (max 135 kW)"
+    },
+    "dimensions": "4588 × 1865 × 1632 mm",
+    "empattement": "2764 mm",
+    "poids": "2005 kg",
+    "volumeCoffre": "520 litres (banquette en place), max 1490 litres",
+    "pneus": "235/55 R19",
+    "chassis": {
+      "suspensionAvant": "Indépendante type McPherson",
+      "suspensionArriere": "Multibras indépendante",
+      "freins": "Disques ventilés à l'avant et à l'arrière",
+      "freinStationnement": "Électrique (EPB)"
+    },
+    "plateforme": "Volkswagen MEB"
+  },
+  "equipements": {
+    "interieur": [
+      "Sièges chauffants, sellerie premium",
+      "Climatisation automatique tri-zone",
+      "Système Audi MMI double écran tactile",
+      "Cockpit virtuel",
+      "Multiples rangements"
+    ],
+    "securite": [
+      "7 airbags",
+      "AEB (freinage automatique d'urgence)",
+      "Surveillance angles morts",
+      "Caméras 360°",
+      "Assistance stationnement automatique",
+      "TPMS",
+      "ABS + ESP",
+      "ADAS complet"
+    ],
+    "connectivite": [
+      "Bluetooth",
+      "Apple CarPlay sans fil, Android Auto",
+      "USB / USB-C",
+      "Services connectés",
+      "Recharge smartphone sans fil"
+    ]
+  },
+  "resume": "L'Audi Q4 e-tron 40 Boundary Edition 2022 est un SUV électrique premium offrant jusqu'à 545 km d'autonomie, un moteur de 204 ch, système double écran Audi MMI, toutes les aides à la conduite modernes et un grand volume de coffre modulable. Idéal pour la famille et le confort urbain haut de gamme."
+}
