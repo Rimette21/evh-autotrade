@@ -167,10 +167,8 @@
       /* ===== Données préparées ===== */
       const mileageStr = fmtKm(data.mileage);
       const year = (data.regyear || '').split('-')[0] || '—';
-      const isPHEV = (data.features || data.caracteristiques || [])
-        .some(f => /phev|hybride/i.test(f || ''));
-      const energie = isPHEV ? 'PHEV' : 'BEV';
-      const fuel = fuelLabel(data, isPHEV);
+      const energie = energyFrom(data);
+const fuel = fuelLabel(data, energie === 'PHEV');
 
       // ---------- Construction des spécifications (nouveau + ancien schéma) ----------
       const specs = data.specifications || {};
