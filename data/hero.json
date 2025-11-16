@@ -119,6 +119,30 @@
     }
   },
   {
+    "id": "EVHMercEQA_2025012",
+    "name": "2025 Mercedes-Benz EQA 260",
+    "priceTTC": "35 270 € (~120 220 Tnd)", 
+    "mileage": 100,
+    "regyear": "2025",
+    "isNew": true,
+    "featuresCount": 6,
+    "images": {
+      "hero": "images/EVH_MercedesEQA260_devdroit.webp"
+    },
+    "features": [
+      "100% électrique (BEV)",
+      "Autonomie 619  km (CLTC)",
+      "Batterie Lithium ternaire 73,5 kWh (Farasis)",
+      "Moteur 140 kW (190 ch) – 2 FWD",
+      "Recharge DC 10-80% ≈ 45 min",
+      "Affichage tête haute HUD / ADAS niveau 2+"
+    ],
+    "specifications": {
+      "engineCc": null,
+      "transmission": "Auto AT"
+    }
+  },
+  {
   "id": "EVHxpeng25011",
   "name": "2026 XPENG G7 602 Long Range Max",
   "priceTTC": "37 120 € (~126 540 Tnd)",
