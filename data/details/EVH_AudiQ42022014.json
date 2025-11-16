@@ -1,4 +1,4 @@
-{
+ {
   "id": "EVH_AudiQ42022014",
   "name": "2022 Audi Q4 e-tron 40 Boundary Edition",
   "priceTTC": "32 160 €",
@@ -16,7 +16,7 @@
   },
   "caracteristiques": [
     "SUV 5 portes 100% électrique (5 places)",
-    "Autonomie jusqu'à 545 km WLTP (environ 600 km CLTC Chine)",
+    "Autonomie  605 km CLTC",
     "Moteur synchrone à aimants permanents 150 kW (204 ch) / 310 Nm",
     "Batterie Lithium-ion 76,6 kWh (net, 82 kWh brut)",
     "Double écran digital 10,25'' MMI touch + cockpit virtuel",
@@ -83,5 +83,6 @@
       "Recharge smartphone sans fil"
     ]
   },
-  "resume": "L'Audi Q4 e-tron 40 Boundary Edition 2022 est un SUV électrique premium offrant jusqu'à 545 km d'autonomie, un moteur de 204 ch, système double écran Audi MMI, toutes les aides à la conduite modernes et un grand volume de coffre modulable. Idéal pour la famille et le confort urbain haut de gamme."
+  "resume": "L'Audi Q4 e-tron 40 Boundary Edition 2022 est un SUV électrique premium offrant jusqu'à 605 km d'autonomie, un moteur de 204 ch, système double écran Audi MMI, toutes les aides à la conduite modernes et un grand volume de coffre modulable. Idéal pour la famille et le confort urbain haut de gamme."
 }
+
