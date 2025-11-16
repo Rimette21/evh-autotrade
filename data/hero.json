@@ -298,6 +298,31 @@
     },
     "featuresCount": 3
   },
+   {
+    "id": "EVH_ToyotaBZ3_2025015",
+    "name": ""2025 Toyota BZ 3X 2025 430 Air+",
+    "priceTTC": "28 200 € (~96 130 Tnd)", 
+    "mileage":16000,
+    "regyear": "2025-04",
+    "isNew": false,
+    "featuresCount": 6,
+    "images": {
+      "hero": "images/EVH_ToyotaBZ3_devface.webp"
+    },
+    "features": [
+      "100% électrique (BEV)",
+      "Autonomie 430  km (CLTC)",
+      "Batterie LFP  58,3 kWh",
+      "Moteur 160 kW (218 ch) – 2 FWD",
+      "Recharge DC 30-80% ≈ 24 min",
+      "Double écran digital 10,25'' MMI touch + cockpit virtuel"
+    ],
+    "specifications": {
+      "engineCc": null,
+      "transmission": "Auto AT"
+    }
+  },
+
   {
     "id": "EVH9524551",
     "name": "2024 Geely Galaxy E5 BEV",
