@@ -337,23 +337,31 @@
       `;
 
       /* ===== Rendu ===== */
-      root.innerHTML =
+// Afficher la note douane uniquement pour les PHEV (FCR / HT)
+let customsNotice = '';
+if (energie === 'PHEV') {
+  customsNotice =
+    '<div class="price-sub"><span class="notice notice--customs">(Dédouanement possible sous conditions)</span></div>';
+}
+            root.innerHTML =
         '<div class="vehicle-header">'+
           '<div class="vehicle-title">'+
             '<h1>'+(data.name || 'Véhicule')+'</h1>'+
             '<div class="vehicle-meta">Modèle '+year+' — Réf : <strong>'+data.id+'</strong></div>'+
           '</div>'+
           '<div class="price-stack">'+
-        '<div class="price-big">'+
-  (energie === 'BEV'
-    ? 'Prix TTC (dédouané) : ' + (data.priceTTC || '-')
-    : 'Prix FCR (HT) : ' + (data.priceFCR || '-')
-  ) +
-'</div>'+
+            '<div class="price-big">'+
+              (
+                energie === 'BEV'
+                  ? 'Prix TTC (dédouané) : ' + (data.priceTTC || '-')
+                  : 'Prix FCR (HT) : ' + (data.priceFCR || '-')
+              ) +
+            '</div>'+
 
-            '<div class="price-sub"><span class="notice notice--customs">(Dédouanement possible sous conditions)</span></div>'+
+            customsNotice +
             '<div style="margin-top:.4rem"><span class="pill">'+energie+'</span></div>'+
           '</div>'+
+
         '</div>'+
         essentialsHTML +
         '<div class="content-grid">'+
