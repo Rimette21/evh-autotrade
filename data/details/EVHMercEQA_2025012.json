@@ -5,11 +5,10 @@
   "mileage": 100,
   "regyear": "2025",
   "images": {
-    "hero": "images/EVH_MercedesEQA260_face.webp",
+    "hero": "images/EVH_MercedesEQA260_devdroit.webp",
     "gallery": [
-      "images/EVH_MercedesEQA260_devdroit.webp",
       "images/EVH_MercedesEQA260_Devgauche.webp",
-      "images/EVH_MercedesEQA260_Ardroit.webp",
+      "images/EVH_MercedesEQA260_face.webp",
       "images/EVH_MercedesEQA260_Argauche.webp",
       "images/EVH_MercedesEQA260_intdevant.webp",
       "images/EVH_MercedesEQA260_intarriere.webp"
