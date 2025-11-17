@@ -754,55 +754,7 @@
       "engineCc": "1497 cc",
       "transmission": "Automatique E‑CVT"
     }
-  },
-{
-  "id": "EVH9509448",
-  "name": "2022 Toyota Highlander 2.5L 192HP",
-  "priceFCR": "39 550€ (~134 870 Tnd)",
-  "mileage": 58000,
-  "regyear": "2022-06",
-  "isNew": false,
-  "images": {
-    "hero": "images/EVH9509448_ToyotaHighlander_devgauche.webp"
-  },
-  "features": [
-    "Hybride auto-rechargeable (HEV)",
-    "Moteur 2.5L essence + 2 moteurs électriques",
-    "Puissance combinée 243 ch (179 kW)",
-    "Traction intégrale électrique (AWD-e)",
-     "Autonomie totale ~800 km",
-    "SUV 7 places"
-   ],
-  "specifications": {
-    "engineCc": 2487,
-    "transmission": "E-CVT"},
-  "featuresCount": 6
-    },
-{
-  "id": "EVH9431983",
-  "name": "2024 Toyota Land Cruiser Prado 2.4T",
-  "priceFCR": "67 880€ (~231 470 Tnd)",
-  "mileage": 500,
-  "regyear": "2025-04",
-  "isNew": true,
-  "images": {
-    "hero": "images/EVH9431983_ToyotaPrado_dev_gauche.webp"
-  },
-  "features": [
-    "Hybride non rechargeable",
-    "Moteur 2.4L Turbo 282 ch",
-    "Moteur d'assistance hybride parallèle",
-    "Puissance cumulée 243 kW (330 ch)",
-     "Traction intégrale permanente 4WD",
-    "Technologie Toyota Safety Sense (ADAS L2)"
-     ],
-  "specifications": {
-    "engineCc": 2393,
-    "transmission": "8AT"
-  },
-  "featuresCount": 6
- }
-
+  }
 ]
 
 
