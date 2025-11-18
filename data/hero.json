@@ -243,7 +243,7 @@
     "mileage": 0,
     "regyear": "2025-01",
     "isNew": true,
-    "images": { "hero": "images/EVHBSP112KM_DEVGAUCHE.webp" },
+    "images": { "hero":"images/EVHBSP112KM_DEVGAUCHE.webp"},
     "features": [
       "Hybride rechargeable (DM-i)",
       "Autonomie électrique 112 km (WLTP)",
@@ -281,22 +281,19 @@
     "mileage":0,
     "regyear": "2025-11",
     "isNew": true,
-    "featuresCount": 6,
-    "images": {
-      "hero": "images/EVH_bydfrigate07_cotegauche.webp"
-    },
+    "images": { "hero": "images/EVH_bydfrigate07_cotegauche.webp"},
     "features": [
-      "Hybride rechargeable  (PHEV)",
+      "Hybride rechargeable (PHEV)",
       "Autonomie 100  km (WLTP)",
       "Puissance combinée 145 kW (197 ch)",
       "Moteur électrique 43 kW",
-      "Affichage tête haute (HUD), ADAS complet",
-      “Caméras 360°, assistance conduite"
+      "Affichage tête haute (HUD) ADAS complet",
+      “Caméras 360° assistance conduite"
     ],
     "specifications": {
       "engineCc": 1500,
-      "transmission": "Auto AT"
-    }
+      "transmission": "Auto AT"},
+      "featuresCount": 6
   },
    {
     "id": "EVH9382121",
