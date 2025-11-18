@@ -1,0 +1,91 @@
+{
+  "id": "EVHBYDFRIGATE07_015",
+  "name": "2025 BYD Frigate 07 1.5 DM-i PHEV 100 km",
+  "priceTTC": "34 080 €",
+  "mileage": 0,
+  "regyear": "2025-11",
+  "images": {
+    "hero": "images/EVH_bydfrigate07_Devgauche.webp",
+    "gallery": [
+      "images//EVH_bydfrigate07_cotegauche.webp",
+      "images/EVH_bydfrigate07_troisquart.webp",
+      "images/EVH_bydfrigate07_facegauche.webp",
+      "images/EVH_bydfrigate07_face.webp",
+      "images/EVH_bydfrigate07_cotedroit.webp",
+      "images/EVH_bydfrigate07_arrieregauche.webp",
+      "images/EVH_bydfrigate07_intdevant.webp"
+    ]
+  },
+  "caracteristiques": [
+    "SUV 5 portes hybride rechargeable (5 places)",
+    "Autonomie électrique environ 100 km WLTP",
+    "Moteur thermique 1.5L turbo + moteur électrique avant 43 kW",
+    "Puissance combinée : 145 kW (197 ch)",
+    "Batterie lithium fer phosphate 18,3 kWh",
+    "Système hybride DM-i avec boîte E-CVT",
+    "Sécurité : 7 airbags, AEB, maintien de voie, ADAS complet",
+    "Caméras 360°, capteurs de stationnement, assistance conduite"
+  ],
+  "specifications": {
+    "engineCc": 1500,
+    "motorisation": {
+      "type": "Hybride rechargeable (PHEV)",
+      "moteurThermique": "1.5L turbo 102 kW (139 ch)",
+      "moteurElectrique": "43 kW (58 ch) avant",
+      "transmission": "Automatique E-CVT",
+      "traction": "Avant (FWD)"
+    },
+    "performances": {
+      "vitesseMax": "160 km/h",
+      "acceleration": "0–100 km/h : 8,5 à 8,9 s",
+      "consommationMixte": "5,5-5,8 L/100 km"
+    },
+    "batterie": {
+      "type": "Lithium fer phosphate (LiFePO4)",
+      "capacite": "18,3 kWh",
+      "autonomieWLTP": "100 km électrique",
+      "rechargeAC": "Charge AC complète environ 3,5 à 4 h",
+      "rechargeDC": "Charge rapide non standardisée (modérée)"
+    },
+    "dimensions": "4820 × 1920 × 1720 mm",
+    "empattement": "2712 mm",
+    "poids": "Environ 2000 kg",
+    "volumeCoffre": "Non précisé mais standard SUV 5 places",
+    "pneus": "235/55 R19",
+    "chassis": {
+      "suspensionAvant": "Type McPherson indépendante",
+      "suspensionArriere": "Multibras indépendante",
+      "freins": "Disques ventilés avant et arrière",
+      "freinStationnement": "Électrique (EPB)"
+    },
+    "plateforme": "BYD hybride rechargeable maison"
+  },
+  "equipements": {
+    "interieur": [
+      "Sièges chauffants, sellerie tissu ou cuir selon finition",
+      "Climatisation automatique bi-zone",
+      "Système multimédia avec écran tactile central",
+      "Tableau de bord digital",
+      "Rangements multiples et volume intérieur spacieux"
+    ],
+    "securite": [
+      "7 airbags",
+      "AEB (freinage automatique d'urgence)",
+      "Maintien de voie",
+      "Surveillance angles morts",
+      "Caméras 360°",
+      "Assistance stationnement automatique",
+      "TPMS, ABS, ESP",
+      "ADAS complet"
+    ],
+    "connectivite": [
+      "Bluetooth",
+      "Apple CarPlay sans fil, Android Auto",
+      "USB / USB-C",
+      "Services connectés BYD",
+      "Recharge smartphone sans fil"
+    ]
+  },
+  "resume": "Le BYD Frigate 07 DM-i FWD 2025 est un SUV hybride rechargeable offrant environ 100 km d'autonomie électrique, une puissance combinée de 197 ch, une consommation réduite grâce au système DM-i, une configuration traction avant avec boîte E-CVT, et un ensemble complet d’équipements technologiques, confort et sécurité, adapté pour un usage familial moderne."
+}
+
