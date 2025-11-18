@@ -275,6 +275,30 @@
     "featuresCount": 6
   },
    {
+    "id": "EVHBYDFRIGATE07_015",
+    "name": "2025 BYD Frigate 07 1.5 DM-i PHEV 100 km",
+    "priceTTC": "34 080 € (~116 190 Tnd)", 
+    "mileage":0,
+    "regyear": "2025-11",
+    "isNew": true,
+    "featuresCount": 6,
+    "images": {
+      "hero": "images/EVH_bydfrigate07_cotegauche.webp"
+    },
+    "features": [
+      "Hybride rechargeable  (PHEV)",
+      "Autonomie 100  km (WLTP)",
+      "Puissance combinée 145 kW (197 ch)",
+      "Moteur électrique 43 kW",
+      "Affichage tête haute (HUD), ADAS complet",
+      “Caméras 360°, assistance conduite"
+    ],
+    "specifications": {
+      "engineCc": 1500,
+      "transmission": "Auto AT"
+    }
+  },
+   {
     "id": "EVH9382121",
     "name": "2025 Toyota bZ5 - BEV",
     "priceTTC": "29 240 € (~99 700 Tnd)",
