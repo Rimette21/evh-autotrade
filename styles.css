@@ -1120,6 +1120,18 @@ body.page-vehicle { background:#F6F7FB; }
   font-size: 11px;
   opacity: 0.7;
 }
+.price-big .note {
+  font-size: 11px;
+  opacity: 0.7;
+  margin-left: 4px;
+}
+
+.price-note {
+  font-size: 12px;
+  opacity: 0.8;
+  line-height: 1.4;
+}
+
 
 /* Cartes déjà en grille : on garde tes breakpoints actuels */
 
