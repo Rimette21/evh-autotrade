@@ -337,64 +337,64 @@
         </div>
       `;
 
-      /* ===== Rendu ===== */
+    /* ===== Rendu ===== */
 // Afficher la note douane uniquement pour les PHEV (FCR / HT)
 let customsNotice = '';
 if (energie === 'PHEV') {
   customsNotice =
     '<div class="price-sub"><span class="notice notice--customs">(Dédouanement possible sous conditions)</span></div>';
 }
-            root.innerHTML =
-        '<div class="vehicle-header">'+
-          '<div class="vehicle-title">'+
-            '<h1>'+(data.name || 'Véhicule')+'</h1>'+
-            '<div class="vehicle-meta">Modèle '+year+' — Réf : <strong>'+data.id+'</strong></div>'+
-          '</div>'+
-        '<div class="price-stack">'+
-  '<div class="price-big">'+
-    'Prix HT (FCR) : ' + (data.priceHT || '-') +
+
+root.innerHTML =
+  '<div class="vehicle-header">'+
+    '<div class="vehicle-title">'+
+      '<h1>'+(data.name || 'Véhicule')+'</h1>'+
+      '<div class="vehicle-meta">Modèle '+year+' — Réf : <strong>'+data.id+'</strong></div>'+
+    '</div>'+
+    '<div class="price-stack">'+
+      '<div class="price-big">'+
+        'Prix HT (FCR) : ' + (data.priceHT || '-') +
+      '</div>'+
+      (
+        data.dutiesEstimate
+          ? '<div class="price-estimate">Droits de douane estimés (TVA incluse) : ' + data.dutiesEstimate + '</div>'
+          : ''
+      ) +
+    '</div>'+
+    customsNotice +
+    '<div style="margin-top:.4rem"><span class="pill">'+energie+'</span></div>'+
   '</div>'+
-  (
-    data.dutiesEstimate
-      ? '<div class="price-estimate">Droits de douane estimés (TVA incluse) : ' + data.dutiesEstimate + '</div>'
-      : ''
-  ) +
-'</div>'
 
-            customsNotice +
-            '<div style="margin-top:.4rem"><span class="pill">'+energie+'</span></div>'+
-          '</div>'+
+  essentialsHTML +
+  '<div class="content-grid">'+
+    '<div class="card-box image-card">'+
+      '<img src="'+(data.images && data.images.hero ? data.images.hero : '')+'" alt="'+(data.name || '')+'" class="hero-img" '+
+      'onerror="this.src=\'https://via.placeholder.com/800x500?text=Image+non+disponible\'">'+
+      '<div class="gallery" id="gallery">'+
+        ((data.images && Array.isArray(data.images.gallery) && data.images.gallery.length)
+          ? data.images.gallery.map((u,i)=>'<img data-idx="'+i+'" src="'+u+'" alt="Vue '+(i+1)+'">').join('')
+          : '<p>Aucune image supplémentaire disponible.</p>')+
+      '</div>'+
+    '</div>'+
+    '<div class="card-box specs-card">'+
+      '<div class="card-title">Caractéristiques Principales</div>'+
+      '<div class="specs-grid spec-compact">'+specsHTML+'</div>'+
+      resumeInline+ // résumé intégré
+    '</div>'+
+  '</div>' +
+  equipHtml +
+  bottomInfoHtml +
+  ctaHtml;
 
-        '</div>'+
-        essentialsHTML +
-        '<div class="content-grid">'+
-          '<div class="card-box image-card">'+
-            '<img src="'+(data.images && data.images.hero ? data.images.hero : '')+'" alt="'+(data.name || '')+'" class="hero-img" '+
-            'onerror="this.src=\'https://via.placeholder.com/800x500?text=Image+non+disponible\'">'+
-            '<div class="gallery" id="gallery">'+
-              ((data.images && Array.isArray(data.images.gallery) && data.images.gallery.length)
-                ? data.images.gallery.map((u,i)=>'<img data-idx="'+i+'" src="'+u+'" alt="Vue '+(i+1)+'">').join('')
-                : '<p>Aucune image supplémentaire disponible.</p>')+
-            '</div>'+
-          '</div>'+
-          '<div class="card-box specs-card">'+
-            '<div class="card-title">Caractéristiques Principales</div>'+
-            '<div class="specs-grid spec-compact">'+specsHTML+'</div>'+
-            resumeInline+  // résumé intégré
-          '</div>'+
-        '</div>' +
-        equipHtml +
-        bottomInfoHtml +
-        ctaHtml;
-      if (data.fichePDF) {
-  root.innerHTML += `
-    <div style="margin:2em 0; text-align:center;">
-      <a href="${data.fichePDF}" target="_blank" class="btn fiche-btn">
-        Télécharger la fiche technique PDF
-      </a>
-    </div>
-  `;
+if (data.fichePDF) {
+  root.innerHTML +=
+    '<div style="margin:2em 0; text-align:center;">'+
+      '<a href="'+data.fichePDF+'" target="_blank" class="btn fiche-btn">'+
+        'Télécharger la fiche technique PDF'+
+      '</a>'+
+    '</div>';
 }
+
       /* ===== Lightbox ===== */
       const galleryImgs = Array.from(document.querySelectorAll('#gallery img'));
       const lb = document.getElementById('lightbox');
