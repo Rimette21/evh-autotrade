@@ -349,14 +349,10 @@ if (energie === 'PHEV') {
             '<h1>'+(data.name || 'Véhicule')+'</h1>'+
             '<div class="vehicle-meta">Modèle '+year+' — Réf : <strong>'+data.id+'</strong></div>'+
           '</div>'+
-          '<div class="price-stack">'+
-            '<div class="price-big">'+
-              (
-                energie === 'BEV'
-                  ? 'Prix TTC : ' + (data.priceTTC || '-')
-                  : 'Prix FCR (HT) : ' + (data.priceFCR || '-')
-              ) +
-            '</div>'+
+         '<div class="price-stack">'+
+  '<div class="price-big">'+
+    'Prix HT (FCR) : ' + (data.priceHT || '-') +
+  '</div>'+
 
             customsNotice +
             '<div style="margin-top:.4rem"><span class="pill">'+energie+'</span></div>'+
