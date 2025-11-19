@@ -1132,7 +1132,13 @@ body.page-vehicle { background:#F6F7FB; }
   font-size: 0.86rem;
   opacity: 0.78;
 }
-
+/* Style global */
+.price-estimate {
+  margin-top: 6px;
+  font-size: 0.9rem;
+  color: #5b4a2c;
+  opacity: 0.80;
+}
 /* ✅ Responsive mobile */
 @media (max-width: 768px) {
   .catalogue-note {
