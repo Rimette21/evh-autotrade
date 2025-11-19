@@ -1116,6 +1116,11 @@ body.page-vehicle { background:#F6F7FB; }
   text-align: left;
 }
 
+.price .note {
+  font-size: 11px;
+  opacity: 0.7;
+}
+
 /* Cartes déjà en grille : on garde tes breakpoints actuels */
 
 
