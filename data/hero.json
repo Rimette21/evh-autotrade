@@ -121,7 +121,7 @@
   {
     "id": "EVHMercEQA_2025012",
     "name": "2025 Mercedes-Benz EQA 260",
-    "priceHT": "35 270 € (~120 220 Tnd)",
+    "priceHT": "31 770 € (~108 170 Tnd)",
     "mileage": 100,
     "regyear": "2025",
     "isNew": true,
@@ -145,7 +145,7 @@
   {
     "id": "EVHxpeng25011",
     "name": "2026 XPENG G7 602 Long Range Max",
-    "priceHT": "36 550 €  (~124 440 TND) *",
+    "priceHT": "33 450 €  (~113 890 TND) *",
     "mileage": 0,
     "regyear": "2026",
     "isNew": true,
@@ -194,7 +194,7 @@
   {
     "id": "EVHBYDTANG2025009",
     "name": "BYD Tang L 2025 670 KM LiDAR Flagship Edition",
-    "priceHT": "41 970 €  (~142 900 TND) *",
+    "priceHT": "39 310 €  (~133 840 TND) *",
     "mileage": 0,
     "regyear": "2025",
     "isNew": true,
@@ -290,7 +290,7 @@
   {
     "id": "EVHBYDFRIGATE07_015",
     "name": "2025 BYD Frigate 07 1.5 DM-i PHEV 100 km",
-    "priceHT": "34 080 € (~116 190 Tnd)",
+    "priceHT": "30 690 € (~104 490 Tnd)",
     "mileage": 0,
     "regyear": "2025-11",
     "isNew": true,
@@ -338,7 +338,7 @@
   {
     "id": "EVH_ToyotaBZ3_2025015",
     "name": "2025 Toyota BZ 3X 430 Air+",
-    "priceHT": "26 310 €  (~89 580 TND) *",
+    "priceHT": "25 350 €  (~86 310 TND) *",
     "mileage": 16000,
     "regyear": "2025-04",
     "isNew": false,
@@ -362,7 +362,7 @@
   {
     "id": "EVH9524551",
     "name": "2024 Geely Galaxy E5 BEV",
-    "priceHT": "22 090 €  (~75 200 TND) *",
+    "priceHT": "21 500 €  (~73 200 TND) *",
     "mileage": 27000,
     "regyear": "2024-07",
     "isNew": false,
@@ -385,7 +385,7 @@
   {
     "id": "EVH9496374",
     "name": "2024 Mercedes-Benz EQA Class",
-    "priceHT": "26 310 €  (~89 580 TND) *",
+    "priceHT": "26 590 €  (~90 530 TND) *",
     "mileage": 22000,
     "regyear": "2024-05",
     "isNew": false,
@@ -408,7 +408,7 @@
   {
     "id": "EVH_AudiQ42022014",
     "name": "2022 Audi Q4 e-tron Boundary Edition",
-    "priceHT": "28 400 €  (~96 850 TND) *",
+    "priceHT": "28 950 €  (~98 570 TND) *",
     "mileage": 32900,
     "regyear": "2022-11",
     "isNew": false,
@@ -432,7 +432,7 @@
   {
     "id": "EVH_MercedesEQB2023013",
     "name": "2023 Mercedes-Benz EQB 260",
-    "priceHT": "33 820 € (~115 290 Tnd)",
+    "priceHT": "30 460 € (~103 710 Tnd)",
     "mileage": 43300,
     "regyear": "2023-03",
     "isNew": false,
@@ -456,7 +456,7 @@
   {
     "id": "EVH9330983",
     "name": "2023 BMW iX1 - BEV",
-    "priceHT": "30 010 €  (~102 040 TND) *",
+    "priceHT": "30 830 €  (~104 970 TND) *",
     "mileage": 4000,
     "regyear": "2025-06",
     "isNew": false,
@@ -480,7 +480,7 @@
   {
     "id": "EVH9408609",
     "name": "2025 BYD Song Plus BEV",
-    "priceHT": "24 880 €  (~84 840 TND) *",
+    "priceHT": "24 510 €  (~83 450 TND) *",
     "mileage": 5000,
     "regyear": "2025-08",
     "isNew": false,
