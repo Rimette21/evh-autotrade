@@ -125,7 +125,14 @@
 
  <!-- CATALOGUE -->
 <section id="catalogue" class="section--light">
-
+  <p class="catalogue-note">
+    Les prix affichés dépendent du type de motorisation :
+    <br>• <strong>Véhicules 100% électriques (BEV)</strong> : prix TTC — dédouanement inclus — prêts à immatriculer en Tunisie. 
+    <br><em>Achat sur pré-commande, paiement en devises USD/EUR.</em>
+    <br>
+    <br>• <strong>Véhicules hybrides & hybrides rechargeables (PHEV / HEV)</strong> : prix régime FCR (HT) — hors taxes locales — import direct. 
+    <br><em>Achat sur pré-commande, paiement en devises uniquement.</em>
+  </p>
 
   <div class="adv2-head">
     <h2 class="adv2-title">Découvrez <span class="accent">Nos Modèles</span></h2>
@@ -324,26 +331,29 @@
       const items = [energyLabel, autoLbl, ...(specLines.length ? specLines : fallbacks)];
 
       return `
-  <a class="card-link" href="vehicle.html?id=${encodeURIComponent(v.id)}">
-    <article class="card" style="position:relative">
-      ${newBadge}
-      <img class="thumb" src="${v.images?.hero || ''}" alt="${v.name}"
-           onerror="this.src='https://via.placeholder.com/400x300?text=Image+non+disponible'">
-      ${quickSpecsHTML(v)}
-      <div class="body">
-        <div class="name">${v.name}</div>
-        <div class="submeta">Réf : <strong>${v.id}</strong></div>
-
-        <div class="price">
-          Prix HT (FCR) : ${v.priceHT || '-'} <span class="note">*</span>
-        </div>
-
-        <ul class="features">
-          ${items.map(x=>`<li>• ${x}</li>`).join('')}
-        </ul>
-      </div>
-    </article>
-  </a>`;
+        <a class="card-link" href="vehicle.html?id=${encodeURIComponent(v.id)}">
+          <article class="card" style="position:relative">
+            ${newBadge}
+            <img class="thumb" src="${v.images?.hero || ''}" alt="${v.name}"
+                 onerror="this.src='https://via.placeholder.com/400x300?text=Image+non+disponible'">
+            ${quickSpecsHTML(v)}
+            <div class="body">
+              <div class="name">${v.name}</div>
+              <div class="submeta">Réf : <strong>${v.id}</strong></div>
+              <div class="price">
+            ${
+              energy === 'BEV'
+              ? `Prix TTC : ${v.priceTTC || '-'}`
+                : `Prix FCR (HT) : ${v.priceFCR || '-'}`
+          }
+          </div>
+          
+              <ul class="features">
+                ${items.map(x=>`<li>• ${x}</li>`).join('')}
+              </ul>
+            </div>
+          </article>
+        </a>`;
     }
 
     function renderGrid(list){
