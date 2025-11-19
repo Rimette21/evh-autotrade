@@ -341,13 +341,9 @@
               <div class="name">${v.name}</div>
               <div class="submeta">Réf : <strong>${v.id}</strong></div>
               <div class="price">
-            ${
-              energy === 'BEV'
-              ? `Prix TTC : ${v.priceTTC || '-'}`
-                : `Prix FCR (HT) : ${v.priceFCR || '-'}`
-          }
-          </div>
-          
+              Prix HT (FCR) : ${v.priceHT || '-'} <span class="note">*</span>
+              </div>
+            
               <ul class="features">
                 ${items.map(x=>`<li>• ${x}</li>`).join('')}
               </ul>
