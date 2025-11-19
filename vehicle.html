@@ -350,12 +350,12 @@ if (energie === 'PHEV') {
             '<h1>'+(data.name || 'Véhicule')+'</h1>'+
             '<div class="vehicle-meta">Modèle '+year+' — Réf : <strong>'+data.id+'</strong></div>'+
           '</div>'+
-         '<div class="price-stack">'+
+        '<div class="price-stack">'+
   '<div class="price-big">'+
     'Prix HT (FCR) : ' + (data.priceHT || '-') +
   '</div>'+
   (
-    energie === 'BEV' && data.dutiesEstimate
+    data.dutiesEstimate
       ? '<div class="price-estimate">Droits de douane estimés (TVA incluse) : ' + data.dutiesEstimate + '</div>'
       : ''
   ) +
