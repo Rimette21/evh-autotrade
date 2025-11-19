@@ -1107,12 +1107,13 @@ body.page-vehicle { background:#F6F7FB; }
   max-width: 960px;
   margin: 1.4rem auto 2.4rem;
   padding: 1.1rem 1.3rem;
-  background: #fff6e3;
-  border: 1px solid #ffd9a4;
+  background: #f4f4f6;
+  border: 1px solid #d8d8dd;
   border-radius: 14px;
-  color: #6a4501;
-  font-size: 0.97rem;
+  color: #3e3e46;
+  font-size: 0.98rem;
   line-height: 1.6;
+   box-shadow: 0 1px 4px rgba(0,0,0,0.04);
   text-align: left;
 }
 
