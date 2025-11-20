@@ -2,7 +2,7 @@
   {
     "id": "EVH2025003",
     "name": "2025 BYD Dolphin-Smart Driving",
-    "priceHT": "18 950 €  (~64 520 TND)",
+    "priceHT": "18 950 €",
     "mileage": 0,
     "regyear": "2025-10",
     "isNew": true,
@@ -19,7 +19,8 @@
     "specifications": {
       "engineCc": null,
       "transmission": "AT"
-    }
+    },
+    "priceTND": "64520"
   },
   {
     "id": "EVHBYDSEAL6EV007",
@@ -43,7 +44,8 @@
     "specifications": {
       "engineCc": null,
       "transmission": "Auto AT"
-    }
+    },
+    "priceTND": "86960"
   },
   {
     "id": "EVHBSPEV2025004",
@@ -66,7 +68,8 @@
     "specifications": {
       "engineCc": null,
       "transmission": "AT"
-    }
+    },
+    "priceTND": "91040"
   },
   {
     "id": "EVHBSPEV2025005",
@@ -90,7 +93,8 @@
     "specifications": {
       "engineCc": null,
       "transmission": "AT"
-    }
+    },
+    "priceTND": "95100"
   },
   {
     "id": "EVHBSPEV2025006",
@@ -114,7 +118,8 @@
     "specifications": {
       "engineCc": null,
       "transmission": "AT"
-    }
+    },
+    "priceTND": "101360"
   },
   {
     "id": "EVHMercEQA_2025012",
@@ -138,7 +143,8 @@
     "specifications": {
       "engineCc": null,
       "transmission": "Auto AT"
-    }
+    },
+    "priceTND": "108170"
   },
   {
     "id": "EVHxpeng25011",
@@ -163,7 +169,8 @@
     "specifications": {
       "engineCc": null,
       "transmission": "Auto AT"
-    }
+    },
+    "priceTND": "113890"
   },
   {
     "id": "EVHBYDSEALION7008",
@@ -187,7 +194,8 @@
     "specifications": {
       "engineCc": null,
       "transmission": "Auto AT"
-    }
+    },
+    "priceTND": "120150"
   },
   {
     "id": "EVHBYDTANG2025009",
@@ -211,7 +219,8 @@
     "specifications": {
       "engineCc": "",
       "transmission": "Auto RWD"
-    }
+    },
+    "priceTND": "133840"
   },
   {
     "id": "EVHBSPPHEV_75KM",
@@ -234,7 +243,8 @@
     "specifications": {
       "engineCc": 1498,
       "transmission": "E-CVT"
-    }
+    },
+    "priceTND": "79890"
   },
   {
     "id": "EVHBSPPHEV_112KM",
@@ -257,7 +267,8 @@
     "specifications": {
       "engineCc": 1498,
       "transmission": "E-CVT"
-    }
+    },
+    "priceTND": "86955"
   },
   {
     "id": "EVHBSPPHEV_160KM",
@@ -280,7 +291,8 @@
     "specifications": {
       "engineCc": 1498,
       "transmission": "E-CVT"
-    }
+    },
+    "priceTND": "93090"
   },
   {
     "id": "EVHBYDFRIGATE07_015",
@@ -303,7 +315,8 @@
     "specifications": {
       "engineCc": 1500,
       "transmission": "Auto AT"
-    }
+    },
+    "priceTND": "104490"
   },
   {
     "id": "EVH9382121",
@@ -326,7 +339,8 @@
     "specifications": {
       "engineCc": null,
       "transmission": "AT"
-    }
+    },
+    "priceTND": "89580"
   },
   {
     "id": "EVH_ToyotaBZ3_2025015",
@@ -350,7 +364,8 @@
     "specifications": {
       "engineCc": null,
       "transmission": "Auto AT"
-    }
+    },
+    "priceTND": "86310"
   },
   {
     "id": "EVH9524551",
@@ -373,7 +388,8 @@
     "specifications": {
       "engineCc": null,
       "transmission": "AT"
-    }
+    },
+    "priceTND": "73200"
   },
   {
     "id": "EVH9496374",
@@ -396,7 +412,8 @@
     "specifications": {
       "engineCc": null,
       "transmission": "AT"
-    }
+    },
+    "priceTND": "90530"
   },
   {
     "id": "EVH_AudiQ42022014",
@@ -420,7 +437,8 @@
     "specifications": {
       "engineCc": null,
       "transmission": "Auto AT"
-    }
+    },
+    "priceTND": "98570"
   },
   {
     "id": "EVH_MercedesEQB2023013",
@@ -444,7 +462,8 @@
     "specifications": {
       "engineCc": null,
       "transmission": "Auto AT"
-    }
+    },
+    "priceTND": "103710"
   },
   {
     "id": "EVH9330983",
@@ -467,7 +486,8 @@
     "specifications": {
       "engineCc": null,
       "transmission": "AT"
-    }
+    },
+    "priceTND": "104970"
   },
   {
     "id": "EVH9408609",
@@ -490,7 +510,8 @@
     "specifications": {
       "engineCc": null,
       "transmission": "AT"
-    }
+    },
+    "priceTND": "83450"
   },
   {
     "id": "EVH9403325",
@@ -513,7 +534,8 @@
     "specifications": {
       "engineCc": 1499,
       "transmission": "Auto"
-    }
+    },
+    "priceTND": "84840"
   },
   {
     "id": "EVH9391855",
@@ -536,7 +558,8 @@
     "specifications": {
       "engineCc": 1499,
       "transmission": "Auto"
-    }
+    },
+    "priceTND": "76150"
   },
   {
     "id": "EVH9433858",
@@ -560,7 +583,8 @@
     "specifications": {
       "engineCc": 1499,
       "transmission": "Auto"
-    }
+    },
+    "priceTND": "77370"
   },
   {
     "id": "EVH9336933",
@@ -583,7 +607,8 @@
     "specifications": {
       "engineCc": 1499,
       "transmission": "Auto"
-    }
+    },
+    "priceTND": "68230"
   },
   {
     "id": "EVH9384241",
@@ -607,7 +632,8 @@
       "engineCc": 1499,
       "transmission": "Auto"
     },
-    "featuresCount": 6
+    "featuresCount": 6,
+    "priceTND": "68680"
   },
   {
     "id": "EVH9403367",
@@ -631,7 +657,8 @@
     "specifications": {
       "engineCc": 1499,
       "transmission": "Auto"
-    }
+    },
+    "priceTND": "68680"
   },
   {
     "id": "EVH9404921",
@@ -654,7 +681,8 @@
     "specifications": {
       "engineCc": 1498,
       "transmission": "E-CVT"
-    }
+    },
+    "priceTND": "71740"
   },
   {
     "id": "EVH9478503",
@@ -677,7 +705,8 @@
     "specifications": {
       "engineCc": 1498,
       "transmission": "E-CVT"
-    }
+    },
+    "priceTND": "74815"
   },
   {
     "id": "EVH9404943",
@@ -700,7 +729,8 @@
     "specifications": {
       "engineCc": 1498,
       "transmission": "E-CVT"
-    }
+    },
+    "priceTND": "79660"
   },
   {
     "id": "EVH9519205",
@@ -723,7 +753,8 @@
     "specifications": {
       "engineCc": 1499,
       "transmission": "Auto"
-    }
+    },
+    "priceTND": "86680"
   },
   {
     "id": "EVH9387237",
@@ -746,8 +777,9 @@
     "specifications": {
       "engineCc": null,
       "transmission": "AT"
-    }
     },
+    "priceTND": "100850"
+  },
   {
     "id": "EVH9397463",
     "name": "2025 Toyota bZ5- BEV",
@@ -768,8 +800,9 @@
     "specifications": {
       "engineCc": null,
       "transmission": "AT"
-       }
     },
+    "priceTND": "101360"
+  },
   {
     "id": "EVH9535838",
     "name": "2023 Audi Q5 e-tron BEV 83.4KWH",
@@ -791,7 +824,8 @@
     "specifications": {
       "engineCc": null,
       "transmission": "AT"
-    }
+    },
+    "priceTND": "105820"
   },
   {
     "id": "EVH9552616",
@@ -815,6 +849,7 @@
     "specifications": {
       "engineCc": "1497 cc",
       "transmission": "Automatique E-CVT"
-    }
+    },
+    "priceTND": "83200"
   }
 ]
