@@ -417,49 +417,48 @@
 
     // ===== Filtrage principal =====
   function applyFilters() {
+  // Si les véhicules ne sont pas encore chargés, on ne fait rien
+  if (!window.__VEHICLES__ || !Array.isArray(window.__VEHICLES__)) return;
+
   const q = document.getElementById('f-q').value.trim().toLowerCase();
   const type = document.getElementById('f-type').value;
   const yMin = parseInt(document.getElementById('f-year').value, 10);
   const kmMax = parseInt(document.getElementById('f-km').value, 10);
 
-  // Sécurisation du prix max
+  // Lecture du slider prix (sécurisée)
   const pRaw = parseInt(document.getElementById('f-price').value, 10);
-  const pMax = Number.isFinite(pRaw) ? pRaw : Infinity;
+  const pMax = Number.isFinite(pRaw) ? pRaw : null; // null = pas de filtre prix
 
   const filtered = window.__VEHICLES__.filter(v => {
-
-    // recherche marque + modèle
     const name = (v.name || '').toLowerCase();
     const brand = brandFromName(v.name).toLowerCase();
     const hay = [name, brand, ...(v.features || [])].join(' ').toLowerCase();
     const okQ = !q || hay.includes(q);
 
-    // type BEV/PHEV/HEV etc
-    const e = energyNormalized(v);
+    const e = energyNormalized(v); // BEV / PHEV / HEV / etc.
     const okType = !type || e === type;
 
-    // année min
     const y = yearFromReg(v.regyear) || 1900;
     const okYear = y >= yMin;
 
-    // kilométrage
     const km = kmNum(v);
     const okKm = isFinite(kmMax) ? km <= kmMax : true;
 
-    // prix — extraction sécurisée (priceHT en priorité)
+    // Prix : on prend priceHT en priorité, fallback sur anciens champs si besoin
     const price = parsePriceEUR(v.priceHT || v.priceFCR || v.priceTTC) || 0;
-    const okPrice = isFinite(pMax) ? price <= pMax : true;
+    const okPrice = pMax !== null ? price <= pMax : true;
 
     return okQ && okType && okYear && okKm && okPrice;
   });
 
-  // affichage résultats
+  // Rendu des cartes
   renderGrid(filtered);
 
-  // UI sliders
+  // Mise à jour des labels UI (sans crasher si pMax est invalide)
   document.getElementById('f-year-val').textContent = yMin;
   document.getElementById('f-km-val').textContent = EURO.format(kmMax) + ' km';
-  document.getElementById('f-price-val').textContent = EURO.format(pMax) + ' €';
+  document.getElementById('f-price-val').textContent =
+    pMax !== null ? EURO.format(pMax) + ' €' : '—';
 }
 
 
