@@ -416,42 +416,52 @@
     }
 
     // ===== Filtrage principal =====
-   function applyFilters(){
+  function applyFilters() {
   const q = document.getElementById('f-q').value.trim().toLowerCase();
-  const type = document.getElementById('f-type').value;     // BEV/PHEV/HEV/ESSENCE/DIESEL/''
-  const yMin = parseInt(document.getElementById('f-year').value,10);
-  const kmMax = parseInt(document.getElementById('f-km').value,10);
+  const type = document.getElementById('f-type').value;
+  const yMin = parseInt(document.getElementById('f-year').value, 10);
+  const kmMax = parseInt(document.getElementById('f-km').value, 10);
 
-  const pRaw = parseInt(document.getElementById('f-price').value,10);
+  // Sécurisation du prix max
+  const pRaw = parseInt(document.getElementById('f-price').value, 10);
   const pMax = Number.isFinite(pRaw) ? pRaw : Infinity;
 
-      const filtered = window.__VEHICLES__.filter(v => {
-        const name = (v.name||'').toLowerCase();
-        const brand = brandFromName(v.name).toLowerCase();
-        const hay = [name, brand, ...(v.features||[])].join(' ').toLowerCase();
-        const okQ = !q || hay.includes(q);
+  const filtered = window.__VEHICLES__.filter(v => {
 
-        const e = energyNormalized(v);           // normalisé
-        const okType = !type || e === type;
+    // recherche marque + modèle
+    const name = (v.name || '').toLowerCase();
+    const brand = brandFromName(v.name).toLowerCase();
+    const hay = [name, brand, ...(v.features || [])].join(' ').toLowerCase();
+    const okQ = !q || hay.includes(q);
 
-        const y = yearFromReg(v.regyear) || 1900;
-        const okYear = y >= yMin;
+    // type BEV/PHEV/HEV etc
+    const e = energyNormalized(v);
+    const okType = !type || e === type;
 
-        const km = kmNum(v);
-        const okKm = isFinite(kmMax) ? km <= kmMax : true;
+    // année min
+    const y = yearFromReg(v.regyear) || 1900;
+    const okYear = y >= yMin;
 
-        const price = parsePriceEUR(v.priceHT) || 0;
-        const okPrice = isFinite(pMax) ? price <= pMax : true;
+    // kilométrage
+    const km = kmNum(v);
+    const okKm = isFinite(kmMax) ? km <= kmMax : true;
 
-        return okQ && okType && okYear && okKm && okPrice;
-      });
+    // prix — extraction sécurisée (priceHT en priorité)
+    const price = parsePriceEUR(v.priceHT || v.priceFCR || v.priceTTC) || 0;
+    const okPrice = isFinite(pMax) ? price <= pMax : true;
 
-      renderGrid(filtered);
-      // maj étiquettes sliders
-      document.getElementById('f-year-val').textContent = yMin;
-      document.getElementById('f-km-val').textContent = EURO.format(kmMax) + ' km';
-      document.getElementById('f-price-val').textContent = EURO.format(pMax) + ' €';
-    }
+    return okQ && okType && okYear && okKm && okPrice;
+  });
+
+  // affichage résultats
+  renderGrid(filtered);
+
+  // UI sliders
+  document.getElementById('f-year-val').textContent = yMin;
+  document.getElementById('f-km-val').textContent = EURO.format(kmMax) + ' km';
+  document.getElementById('f-price-val').textContent = EURO.format(pMax) + ' €';
+}
+
 
     // ===== Initialisation =====
 fetch('data/hero.json?v=12', { cache: 'no-store' })
