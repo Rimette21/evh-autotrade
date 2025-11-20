@@ -323,11 +323,13 @@
 
     // ===== Helpers additionnels =====
     const EURO = new Intl.NumberFormat('fr-FR');
-    function parsePriceEUR(s){
-      if(!s) return null;
-      const n = String(s).replace(/[^\d]/g,''); // "25 340 €" -> "25340"
-      return n ? parseInt(n,10) : null;
-    }
+  function parsePriceEUR(s) {
+  if (!s) return null;
+  // Cherche le premier nombre avant un espace ou monnaie, ignore le reste
+  const match = String(s).match(/^ *(\d[\d\s]*)/);
+  return match ? parseInt(match[1].replace(/\s/g, ''), 10) : null;
+}
+
     function brandFromName(name){
       if(!name) return '';
       const t = name.split(/\s+/).filter(Boolean);
