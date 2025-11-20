@@ -416,12 +416,14 @@
     }
 
     // ===== Filtrage principal =====
-    function applyFilters(){
-      const q = document.getElementById('f-q').value.trim().toLowerCase();
-      const type = document.getElementById('f-type').value;     // BEV/PHEV/HEV/ESSENCE/DIESEL/''
-      const yMin = parseInt(document.getElementById('f-year').value,10);
-      const kmMax = parseInt(document.getElementById('f-km').value,10);
-      const pMax = parseInt(document.getElementById('f-price').value,10);
+   function applyFilters(){
+  const q = document.getElementById('f-q').value.trim().toLowerCase();
+  const type = document.getElementById('f-type').value;     // BEV/PHEV/HEV/ESSENCE/DIESEL/''
+  const yMin = parseInt(document.getElementById('f-year').value,10);
+  const kmMax = parseInt(document.getElementById('f-km').value,10);
+
+  const pRaw = parseInt(document.getElementById('f-price').value,10);
+  const pMax = Number.isFinite(pRaw) ? pRaw : Infinity;
 
       const filtered = window.__VEHICLES__.filter(v => {
         const name = (v.name||'').toLowerCase();
@@ -452,32 +454,48 @@
     }
 
     // ===== Initialisation =====
-    fetch('data/hero.json?v=12', { cache: 'no-store' })
-      .then(res => res.json())
-      .then(vehicles => {
-        window.__VEHICLES__ = vehicles || [];
+fetch('data/hero.json?v=12', { cache: 'no-store' })
+  .then(res => res.json())
+  .then(vehicles => {
+    window.__VEHICLES__ = vehicles || [];
 
-        // bornes dynamiques
-        const years = window.__VEHICLES__.map(v => yearFromReg(v.regyear)).filter(Boolean);
-        const kms = window.__VEHICLES__.map(kmNum).filter(n => !isNaN(n));
-        const prices = window.__VEHICLES__.map(v => parsePriceEUR(v.priceFCR)).filter(n => !isNaN(n));
+    // bornes dynamiques
+    const years = window.__VEHICLES__.map(v => yearFromReg(v.regyear)).filter(Boolean);
+    const kms = window.__VEHICLES__.map(kmNum).filter(n => !isNaN(n));
 
-        const yMin = Math.min(...(years.length?years:[2015]));
-        const yMax = Math.max(...(years.length?years:[(new Date()).getFullYear()]));
-        const kmMax = Math.max(...(kms.length?kms:[200000]));
-        const pMax = Math.max(...(prices.length?prices:[40000]));
+    // Nouveau : on utilise priceHT (et fallback sur autres champs)
+    const prices = window.__VEHICLES__
+      .map(v => parsePriceEUR(v.priceHT || v.priceFCR || v.priceTTC))
+      .filter(n => typeof n === 'number' && !isNaN(n) && n > 0);
 
-        const elYear = document.getElementById('f-year');
-        elYear.min = yMin; elYear.max = yMax; elYear.value = yMin;
-        document.getElementById('f-year-val').textContent = yMin;
+    const yMin = Math.min(...(years.length ? years : [2015]));
+    const yMax = Math.max(...(years.length ? years : [(new Date()).getFullYear()]));
+    const kmMax = Math.max(...(kms.length ? kms : [200000]));
+    const pMax = Math.max(...(prices.length ? prices : [40000]));
 
-        const elKm = document.getElementById('f-km');
-        elKm.min = 0; elKm.max = kmMax; elKm.step = 1000; elKm.value = kmMax;
-        document.getElementById('f-km-val').textContent = EURO.format(kmMax) + ' km';
+    // ===== Slider Année =====
+    const elYear = document.getElementById('f-year');
+    elYear.min = yMin; 
+    elYear.max = yMax; 
+    elYear.value = yMin;
+    document.getElementById('f-year-val').textContent = yMin;
 
-        const elPrice = document.getElementById('f-price');
-        elPrice.min = 0; elPrice.max = pMax; elPrice.step = 500; elPrice.value = pMax;
-        document.getElementById('f-price-val').textContent = EURO.format(pMax) + ' €';
+    // ===== Slider Kilométrage =====
+    const elKm = document.getElementById('f-km');
+    elKm.min = 0; 
+    elKm.max = kmMax; 
+    elKm.step = 1000; 
+    elKm.value = kmMax;
+    document.getElementById('f-km-val').textContent = EURO.format(kmMax) + ' km';
+
+    // ===== Slider Prix (corrigé) =====
+    const elPrice = document.getElementById('f-price');
+    elPrice.min = 0; 
+    elPrice.max = pMax; 
+    elPrice.step = 500; 
+    elPrice.value = pMax;
+    document.getElementById('f-price-val').textContent = EURO.format(pMax) + ' €';
+  });
 
         // Rendu initial
         renderGrid(window.__VEHICLES__);
