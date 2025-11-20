@@ -438,7 +438,7 @@
         const km = kmNum(v);
         const okKm = isFinite(kmMax) ? km <= kmMax : true;
 
-        const price = parsePriceEUR(v.priceFCR) || 0;
+        const price = parsePriceEUR(v.priceHT) || 0;
         const okPrice = isFinite(pMax) ? price <= pMax : true;
 
         return okQ && okType && okYear && okKm && okPrice;
