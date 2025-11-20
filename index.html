@@ -146,49 +146,94 @@
     <h2 class="adv2-title">Découvrez <span class="accent">Nos Modèles</span></h2>
   </div>
 
-    <!-- FILTRES CATALOGUE (v2) -->
-    <div id="filters" class="filters">
-      <div class="filters-row">
-        <!-- Recherche Marque/Modèle -->
-        <input id="f-q" type="search" placeholder="Rechercher : marque ou modèle…" aria-label="Rechercher par marque/modèle">
+   <!-- FILTRES CATALOGUE (v3) -->
+<div id="filters" class="filters">
 
-        <!-- Motorisation -->
-        <select id="f-type" aria-label="Filtrer par motorisation">
-          <option value="">Motorisation</option>
-          <option value="BEV">Électrique (BEV)</option>
-          <option value="PHEV">Hybride rechargeable (PHEV)</option>
-          <option value="HEV">Hybride (HEV)</option>
-          <option value="ESSENCE">Essence</option>
-          <option value="DIESEL">Diesel</option>
-        </select>
-
-        <!-- Année (slider) -->
-        <div class="range-wrap">
-          <label for="f-year" class="range-label">
-            Année immat. : <span id="f-year-val">—</span>
-          </label>
-          <input id="f-year" type="range" min="2008" max="2026" step="1" value="2008" aria-label="Année d'immatriculation minimale">
-        </div>
-
-        <!-- Kilométrage (slider) -->
-        <div class="range-wrap">
-          <label for="f-km" class="range-label">
-            Kilométrage max : <span id="f-km-val">—</span>
-          </label>
-          <input id="f-km" type="range" min="0" max="200000" step="1000" value="200000" aria-label="Kilométrage maximal">
-        </div>
-
-        <!-- Prix (slider) -->
-        <div class="range-wrap">
-          <label for="f-price" class="range-label">
-            Prix FCR max : <span id="f-price-val">—</span>
-          </label>
-          <input id="f-price" type="range" min="0" max="100000" step="500" value="100000" aria-label="Prix maximal">
-        </div>
-
-        <button id="f-reset" class="btn btn--ghost" type="button">Réinitialiser</button>
-      </div>
+  <!-- Ligne 1 : recherche -->
+  <div class="filters-row filters-row--top">
+    <div class="filter-item filter-item--full">
+      <label for="f-q" class="filter-label">Rechercher : marque ou modèle</label>
+      <input
+        id="f-q"
+        type="search"
+        placeholder="Ex : BYD, Mercedes, BMW…"
+        aria-label="Rechercher par marque ou modèle"
+      >
     </div>
+  </div>
+
+  <!-- Ligne 2 : motorisation / année / km / prix / reset -->
+  <div class="filters-row filters-row--bottom">
+
+    <!-- Motorisation -->
+    <div class="filter-item">
+      <label for="f-type" class="filter-label">Motorisation</label>
+      <select id="f-type" aria-label="Filtrer par motorisation">
+        <option value="">Toutes</option>
+        <option value="BEV">Électrique (BEV)</option>
+        <option value="PHEV">Hybride rechargeable (PHEV)</option>
+        <option value="HEV">Hybride (HEV)</option>
+        <option value="ESSENCE">Essence</option>
+        <option value="DIESEL">Diesel</option>
+      </select>
+    </div>
+
+    <!-- Année (slider) -->
+    <div class="filter-item">
+      <label for="f-year" class="filter-label">
+        Année immat. : <span id="f-year-val">—</span>
+      </label>
+      <input
+        id="f-year"
+        type="range"
+        min="2008"
+        max="2026"
+        step="1"
+        value="2008"
+        aria-label="Année d'immatriculation minimale"
+      >
+    </div>
+
+    <!-- Kilométrage (slider) -->
+    <div class="filter-item">
+      <label for="f-km" class="filter-label">
+        Kilométrage max : <span id="f-km-val">—</span>
+      </label>
+      <input
+        id="f-km"
+        type="range"
+        min="0"
+        max="200000"
+        step="1000"
+        value="200000"
+        aria-label="Kilométrage maximal"
+      >
+    </div>
+
+    <!-- Prix (slider) -->
+    <div class="filter-item">
+      <label for="f-price" class="filter-label">
+        Prix max : <span id="f-price-val">—</span>
+      </label>
+      <input
+        id="f-price"
+        type="range"
+        min="0"
+        max="100000"
+        step="500"
+        value="100000"
+        aria-label="Prix maximal"
+      >
+    </div>
+
+    <!-- Bouton reset -->
+    <div class="filter-item filter-item--compact">
+      <label class="filter-label">&nbsp;</label>
+      <button id="f-reset" class="btn btn--ghost" type="button">Réinitialiser</button>
+    </div>
+
+  </div>
+</div>
 
     <div id="vehicles-grid" class="grid">
       <p>Chargement du catalogue…</p>
