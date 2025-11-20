@@ -455,10 +455,6 @@
   document.getElementById('f-price-val').textContent =
     pMax !== null ? EURO.format(pMax) + ' €' : '—';
     
-    // 👉 IMPORTANT : rendre le catalogue au moins une fois
-    applyFilters();
-  });
-
 
 
     // ===== Initialisation =====
@@ -503,6 +499,9 @@ fetch('data/hero.json?v=12', { cache: 'no-store' })
     elPrice.step = 500; 
     elPrice.value = pMax;
     document.getElementById('f-price-val').textContent = EURO.format(pMax) + ' €';
+
+       // 👉 IMPORTANT : rendre le catalogue au moins une fois
+    applyFilters();
   });
 
         // Rendu initial
