@@ -455,33 +455,61 @@
       document.getElementById('f-price-val').textContent = EURO.format(pMax) + ' €';
     }
 
-    // ===== Initialisation =====
-    fetch('data/hero.json?v=12', { cache: 'no-store' })
-      .then(res => res.json())
-      .then(vehicles => {
-        window.__VEHICLES__ = vehicles || [];
+   // ===== Initialisation =====
+fetch('data/hero.json?v=12', { cache: 'no-store' })
+  .then(res => res.json())
+  .then(vehicles => {
+    window.__VEHICLES__ = vehicles || [];
 
-        // bornes dynamiques
-        const years = window.__VEHICLES__.map(v => yearFromReg(v.regyear)).filter(Boolean);
-        const kms = window.__VEHICLES__.map(kmNum).filter(n => !isNaN(n));
-        const prices = window.__VEHICLES__.map(v => parsePriceEUR(v.priceFCR)).filter(n => !isNaN(n));
+    // bornes dynamiques
+    const years = window.__VEHICLES__.map(v => yearFromReg(v.regyear)).filter(Boolean);
+    const kms = window.__VEHICLES__.map(kmNum).filter(n => !isNaN(n));
+    // UTILISE BIEN priceHT ET LE NOUVEAU PARSEUR :
+    const prices = window.__VEHICLES__
+      .map(v => parsePriceEUR(v.priceHT))
+      .filter(n => typeof n === 'number' && !isNaN(n) && n > 0);
 
-        const yMin = Math.min(...(years.length?years:[2015]));
-        const yMax = Math.max(...(years.length?years:[(new Date()).getFullYear()]));
-        const kmMax = Math.max(...(kms.length?kms:[200000]));
-        const pMax = Math.max(...(prices.length?prices:[40000]));
+    const yMin = Math.min(...(years.length ? years : [2015]));
+    const yMax = Math.max(...(years.length ? years : [(new Date()).getFullYear()]));
+    const kmMax = Math.max(...(kms.length ? kms : [200000]));
+    // Calcul du Maximum sur prices (EUROS) --- PAS sur un champ vide/erroné :
+    const pMax = prices.length ? Math.max(...prices) : 40000;
 
-        const elYear = document.getElementById('f-year');
-        elYear.min = yMin; elYear.max = yMax; elYear.value = yMin;
-        document.getElementById('f-year-val').textContent = yMin;
+    // Sliders Année
+    const elYear = document.getElementById('f-year');
+    elYear.min = yMin;
+    elYear.max = yMax;
+    elYear.value = yMin;
+    document.getElementById('f-year-val').textContent = yMin;
 
-        const elKm = document.getElementById('f-km');
-        elKm.min = 0; elKm.max = kmMax; elKm.step = 1000; elKm.value = kmMax;
-        document.getElementById('f-km-val').textContent = EURO.format(kmMax) + ' km';
+    // Sliders Kilométrage
+    const elKm = document.getElementById('f-km');
+    elKm.min = 0;
+    elKm.max = kmMax;
+    elKm.step = 1000;
+    elKm.value = kmMax;
+    document.getElementById('f-km-val').textContent = EURO.format(kmMax) + ' km';
 
-        const elPrice = document.getElementById('f-price');
-        elPrice.min = 0; elPrice.max = pMax; elPrice.step = 500; elPrice.value = pMax;
-        document.getElementById('f-price-val').textContent = EURO.format(pMax) + ' €';
+    // Slider Prix
+    const elPrice = document.getElementById('f-price');
+    elPrice.min = 0;
+    elPrice.max = pMax;
+    elPrice.step = 500;
+    elPrice.value = pMax;
+    document.getElementById('f-price-val').textContent = EURO.format(pMax) + ' €';
+
+    // Debug console pour vérifier les bornes :
+    console.log('Année min:', yMin, 'max:', yMax);
+    console.log('Km max:', kmMax);
+    console.log('Prix max (slider):', pMax);
+    console.log('Tableau prices pour slider:', prices);
+  })
+  .catch(err => {
+    console.error(err);
+    document.getElementById('vehicles-grid').innerHTML =
+      '<p style="color:red;">Erreur : impossible de charger le catalogue.</p>';
+  });
+
 
         // Rendu initial
         renderGrid(window.__VEHICLES__);
