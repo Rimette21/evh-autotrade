@@ -34,7 +34,6 @@
     "typeBatterie": "LFP Blade",
     "batterieKWh": "87,04 kWh",
     "autonomieCLTC": "605 km",
-    "autonomieWLTP": "≈ 500 km",
     "autonomieTotale": "605 km",
     "rechargeDCkW": "90 kW (0→80% ≈ 28 min)",
     "rechargeACkW": "7 kW (≈ 12,4 h 0→100%)",
