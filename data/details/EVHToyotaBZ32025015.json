@@ -1,85 +1,85 @@
 {
-"id": "EVHToyotaBZ32025015",
-"name": "2025 Toyota BZ3X2025430 Air+",
-"priceHT": "25 350 €",
-"mileage":16000,
-"regyear": "2025-04",
-"images": {
-"hero": "images/EVH_ToyotaBZ3_devface.webp",
-"gallery": [
-"images/EVH_ToyotaBZ3_devdroit.webp",
-"images/EVH_ToyotaBZ3_devgauche.webp",
-"images/EVH_ToyotaBZ3_ardroit.webp"
-]
-},
-"caracteristiques": [
-"SUV 100% électrique",
-"Autonomie 430 km CLTC,545 km WLTP",
-"Moteur 150 kW (204 ch) /200 Nm",
-"Batterie LFP 58,3 kWh",
-"Double écran digital 10,25'' MMI touch + cockpit virtuel",
-"Sécurité : 7 airbags, AEB, maintien de voie, ADAS avancé",
-"Caméras 360°, stationnement automatique, capteurs multiples",
-"Recharge DC 30-80 % ≈24 min ; AC complet ≈10 h"
-],
-"specifications": {
-"engineCc":0,
-"motorisation": {
-"type": "Électrique (BEV)",
-"moteurElectrique": "150 kW (204 ch) —200 Nm",
-"transmission": "Automatique, rapport unique",
-"traction": "Avant (FWD)"
-},
-"performances": {
-"vitesseMax": "160 km/h",
-"acceleration": "0–100 km/h :8,5 s",
-"consommationElectrique": "12,6 kWh/100 km WLTP"
-},
-"batterie": {
-"type": "Lithium fer phosphate (LFP)",
-"capacite": "50,03 kWh net (58,3 kWh brut)",
-"autonomieWLTP": "545 km",
-"rechargeAC": "Charge AC complète ≈10 h (7 kW)",
-"rechargeDC": "30-80 % ≈24 min (max135 kW)"
-},
-"dimensions": "4600 ×1850 ×1660 mm",
-"empattement": "2765 mm",
-"poids": "1690 kg",
-"volumeCoffre": "427 litres (banquette en place), max1490 litres",
-"pneus": "215/55 R18",
-"chassis": {
-"suspensionAvant": "Indépendante type McPherson",
-"suspensionArriere": "Essieu torsion (non indépendante)",
-"freins": "Disques ventilés à l'avant et à l'arrière",
-"freinStationnement": "Électrique (EPB)"
-},
-"plateforme": "e-TNGA"
-},
-"equipements": {
-"interieur": [
-"Sièges chauffants, sellerie premium",
-"Climatisation automatique tri-zone",
-"Système MMI double écran tactile",
-"Cockpit virtuel",
-"Multiples rangements"
-],
-"securite": [
-"7 airbags",
-"AEB (freinage automatique d'urgence)",
-"Surveillance angles morts",
-"Caméras360°",
-"Assistance stationnement automatique",
-"TPMS",
-"ABS + ESP",
-"ADAS complet"
-],
-"connectivite": [
-"Bluetooth",
-"Apple CarPlay sans fil, Android Auto",
-"USB / USB-C",
-"Services connectés",
-"Recharge smartphone sans fil"
-]
-},
-"resume": "Le Toyota BZ3X2025430 Air+ est un SUV électrique compact au design moderne, offrant une autonomie réelle, une batterie LFP fiable et une recharge rapide, idéal pour les trajets urbains et périurbains."
+  "id": "EVHToyotaBZ32025015",
+  "name": "2025 Toyota BZ3X2025430 Air+",
+  "priceHT": "25350 €",
+  "mileage": 16000,
+  "regyear": "2025-04",
+  "images": {
+    "hero": "images/EVH_ToyotaBZ3_devface.webp",
+    "gallery": [
+      "images/EVH_ToyotaBZ3_devdroit.webp",
+      "images/EVH_ToyotaBZ3_devgauche.webp",
+      "images/EVH_ToyotaBZ3_ardroit.webp"
+    ]
+  },
+  "caracteristiques": [
+    "SUV 100% électrique",
+    "Autonomie 430 km CLTC, 545 km WLTP",
+    "Moteur 150 kW (204 ch) / 200 Nm",
+    "Batterie LFP 58.3 kWh",
+    "Double écran digital 10.25'' MMI touch + cockpit virtuel",
+    "Sécurité : 7 airbags, AEB, maintien de voie, ADAS avancé",
+    "Caméras 360°, stationnement automatique, capteurs multiples",
+    "Recharge DC 30-80 % ≈ 24 min ; AC complet ≈ 10 h"
+  ],
+  "specifications": {
+    "engineCc": 0,
+    "motorisation": {
+      "type": "Électrique (BEV)",
+      "moteurElectrique": "150 kW (204 ch) — 200 Nm",
+      "transmission": "Automatique, rapport unique",
+      "traction": "Avant (FWD)"
+    },
+    "performances": {
+      "vitesseMax": "160 km/h",
+      "acceleration": "0–100 km/h : 8.5 s",
+      "consommationElectrique": "12.6 kWh/100 km WLTP"
+    },
+    "batterie": {
+      "type": "Lithium fer phosphate (LFP)",
+      "capacite": "50.03 kWh net (58.3 kWh brut)",
+      "autonomieWLTP": "545 km",
+      "rechargeAC": "Charge AC complète ≈ 10 h (7 kW)",
+      "rechargeDC": "30-80 % ≈ 24 min (max 135 kW)"
+    },
+    "dimensions": "4600 x 1850 x 1660 mm",
+    "empattement": "2765 mm",
+    "poids": "1690 kg",
+    "volumeCoffre": "427 litres (banquette en place), max 1490 litres",
+    "pneus": "215/55 R18",
+    "chassis": {
+      "suspensionAvant": "Indépendante type McPherson",
+      "suspensionArriere": "Essieu torsion (non indépendante)",
+      "freins": "Disques ventilés à l'avant et à l'arrière",
+      "freinStationnement": "Électrique (EPB)"
+    },
+    "plateforme": "e-TNGA"
+  },
+  "equipements": {
+    "interieur": [
+      "Sièges chauffants, sellerie premium",
+      "Climatisation automatique tri-zone",
+      "Système MMI double écran tactile",
+      "Cockpit virtuel",
+      "Multiples rangements"
+    ],
+    "securite": [
+      "7 airbags",
+      "AEB (freinage automatique d'urgence)",
+      "Surveillance angles morts",
+      "Caméras 360°",
+      "Assistance stationnement automatique",
+      "TPMS",
+      "ABS + ESP",
+      "ADAS complet"
+    ],
+    "connectivite": [
+      "Bluetooth",
+      "Apple CarPlay sans fil, Android Auto",
+      "USB / USB-C",
+      "Services connectés",
+      "Recharge smartphone sans fil"
+    ]
+  },
+  "resume": "Le Toyota BZ3X2025430 Air+ est un SUV électrique compact au design moderne, offrant une autonomie réelle, une batterie LFP fiable et une recharge rapide, idéal pour les trajets urbains et périurbains."
 }
