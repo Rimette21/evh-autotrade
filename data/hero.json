@@ -1,28 +1,5 @@
 [
   {
-    "id": "EVH2025003",
-    "name": "2025 BYD Dolphin-Smart Driving",
-    "priceHT": "18 950 € (~64 520 TND)",
-    "mileage": 0,
-    "regyear": "2025-10",
-    "isNew": true,
-    "images": {
-      "hero": "images/EVH2025003_BydDolphin_dev_droit.webp"
-    },
-    "features": [
-      "100% électrique (BEV)",
-      "Autonomie 420km (CLTC)",
-      "Batterie LFP Blade 44.9 kWh",
-      "Moteur 70 kW (95 ch) / 180 Nm",
-      "Caméra 360° / ADAS (AEB, BSM)"
-    ],
-    "specifications": {
-      "engineCc": null,
-      "transmission": "AT"
-    },
-    "priceTND": "64520"
-  },
-  {
     "id": "EVHBYDSEAL6EV007",
     "name": "2025-BYD Seal 06 EV 545KM Flagship",
     "priceHT": "25 540 €  (~86 960 TND) ",
