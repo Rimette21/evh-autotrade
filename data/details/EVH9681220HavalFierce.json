@@ -1,0 +1,86 @@
+{
+  "id": "EVH9681220HavalFierce",
+  "name": "2023 Haval Fierce Dragon MAX PHEV 105 km",
+  "priceTTC": "22 490 €",
+  "mileage": 18000,
+  "regyear": "2023-11",
+  "images": {
+    "hero": "images/EVH9681220HavalFierce_devgauche.webp",
+    "gallery": [
+      "images/EVH9681220HavalFierce_arrieredroit.webp",
+      "images/EVH9681220HavalFierce_arriere.webp",
+      "images/EVH9681220HavalFierce_intdeve.webp",
+      "images/EVH9681220HavalFierce_intdev.webp",
+      "images/EVH9681220HavalFierce_intar.webp",
+      "images/EVH9681220HavalFierce_tabbord.webp"
+    ]
+  },
+  "caracteristiques": [
+    "SUV 5 portes hybride rechargeable (PHEV)",
+    "Autonomie électrique 105 km",
+    "Moteur thermique 1.5L 116 ch + double moteur électrique avant/arrière",
+    "Puissance système : 205 kW (≈279 ch), couple 585 N·m",
+    "Batterie lithium-ion ternaires 19,27 kWh, refroidissement liquide",
+    "Système hybride Hi4 avec boîte DHT et transmission intégrale 4WD",
+    "Sécurité : multiples airbags, ACC, maintien de voie, L2 « Coffee intelligent drive »",
+    "Caméras 360°, radars AV/AR, ADAS complet"
+  ],
+  "specifications": {
+    "engineCc": 1498,
+    "motorisation": {
+      "type": "Hybride rechargeable (PHEV)",
+      "moteurThermique": "1.5L L4 atmosphérique 85 kW (116 ch)",
+      "moteurElectrique": "2 moteurs électriques AV/AR, 220 kW totaux",
+      "transmission": "Boîte DHT (hybride dédiée)",
+      "traction": "4WD (Hi4 intelligente, moteurs AV+AR)"
+    },
+    "performances": {
+      "vitesseMax": "180 km/h",
+      "acceleration": "0–50 km/h : 2,88 s",
+      "consommationMixte": "≈1,8–1,9 L/100 km (équiv. WLTC) + 16,4 kWh/100 km"
+    },
+    "batterie": {
+      "type": "Batterie lithium ternaires (NCM) refroidie liquide",
+      "capacite": "19,27 kWh",
+      "autonomieWLTP": "≈80–85 km (≈83 km WLTC, 105 km NEDC)",
+      "rechargeAC": "Charge AC standard (≈3h)",
+      "rechargeDC": "Charge rapide 0–80 % en ≈26 min (0,43 h)"
+    },
+    "dimensions": "4758 × 1895 × 1725 mm",
+    "empattement": "2800 mm",
+    "poids": "≈1980 kg (à vide)",
+    "volumeCoffre": "SUV 5 places, volume généreux",
+    "pneus": "18–19 pouces",
+    "chassis": {
+      "suspensionAvant": "McPherson indépendante",
+      "suspensionArriere": "Multibras indépendante",
+      "freins": "Disques ventilés avant et arrière",
+      "freinStationnement": "Électrique (EPB)"
+    },
+    "plateforme": "Système hybride Hi4 Great Wall (PHEV 4WD)"
+  },
+  "equipements": {
+    "interieur": [
+      "Sellerie similicuir, sièges avant réglables électriquement",
+      "Écran central tactile 12,3 pouces + combiné numérique 12,3 pouces",
+      "Climatisation automatique, sorties arrière",
+      "Éclairage d’ambiance 64 couleurs",
+      "Toit panoramique ouvrant selon version"
+    ],
+    "securite": [
+      "Airbags frontaux, latéraux et rideaux",
+      "TMS (surveillance pression pneus) avec affichage",
+      "AEB, avertisseur de collision, maintien de voie",
+      "Régulateur de vitesse adaptatif (ACC) tout range",
+      "Caméra 360° avec plusieurs caméras et radars AV/AR",
+      "ADAS niveau 2 « Coffee Intelligent Drive »"
+    ],
+    "connectivite": [
+      "Bluetooth, USB & Type‑C (2 AV + 2 AR)",
+      "Écran tactile 12,3\" compatible connectivité smartphone (HiCar / Carlink, etc.)",
+      "Commandes vocales multi‑zones",
+      "Télématique + contrôle à distance via application mobile (selon marché)"
+    ]
+  },
+  "resume": "Le Haval Fierce Dragon MAX 2023 1.5L Hi4 PHEV est un SUV hybride rechargeable 4WD combinant un moteur 1.5L de 116 ch avec deux moteurs électriques (205 kW / 585 N·m), une batterie de 19,27 kWh pour environ 105 km NEDC en électrique et un système ADAS L2 complet, idéal pour un usage familial polyvalent urbain/route."
+}
