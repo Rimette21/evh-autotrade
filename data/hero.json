@@ -99,6 +99,31 @@
     "priceTND": "101360"
   },
   {
+  "id": "EVH9677996MERCEQA",
+  "name": "2025 Mercedes-Benz EQA Class BEV 73.5KWH",
+  "priceHT": "31 610 € (~107 620 TND)",
+  "mileage": 100,
+  "regyear": "2025-11",
+  "isNew": true,
+  "images": {
+    "hero": "images/EVH9677996MERCEQA_devgauche.webp"
+  },
+  "features": [
+    "SUV compact 100% électrique (BEV)",
+    "Autonomie 619 km",
+    "Moteur électrique avant env. 140 kW (190 ch)",
+    "Batterie ~73,5 kWh, recharge AC 11 kW / DC 100 kW",
+    "Écran MBUX, aides à la conduite avancées",
+    "Caméra et radars de stationnement, confort premium"
+  ],
+  "specifications": {
+    "engineCc": 0,
+    "transmission": "Automatique"
+  },
+     "priceTND": "107620"
+},
+
+  {
     "id": "EVHMercEQA_2025012",
     "name": "2025 Mercedes-Benz EQA 260 - 619 km",
     "priceHT": "31 770 € (~108 170 Tnd)",
