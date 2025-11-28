@@ -1,0 +1,90 @@
+{
+  "id": "EVH5686663TOYOTABZ5",
+  "name": "2025 Toyota bZ5 BEV 550 km",
+  "priceTTC": "25 190 €",
+  "mileage": 2000,
+  "regyear": "2025-11",
+  "images": {
+    "hero": "images/EVH5686663TOYOTABZ5_devgauche.webp",
+    "gallery": [
+      "images/EVH5686663TOYOTABZ5_devface.webp",
+      "images/EVH5686663TOYOTABZ5_ardroit.webp",
+      "images/EVH5686663TOYOTABZ5_intdev.webp",
+      "images/EVH5686663TOYOTABZ5_intarriere.webp",
+      "images/EVH5686663TOYOTABZ5_tabbord2.webp",
+      "images/EVH5686663TOYOTABZ5_tabbord.webp"
+    ]
+  },
+  "caracteristiques": [
+    "SUV 5 portes 100% électrique (BEV)",
+    "Autonomie CLTC jusqu’à 550 km (version 65,28 kWh)",
+    "Moteur électrique avant 200 kW (272 ch), traction avant (FWD)",
+    "Couple maximal 330 Nm",
+    "Batterie LFP BYD Blade 65,28 kWh",
+    "Charge rapide DC 30–80% en ~45–50 minutes (valeur indicative)",
+    "Sécurité : ADAS de niveau L2 avec ACC adaptatif, maintien de voie, AEB",
+    "Caméras 360°, capteurs de stationnement, assistance à la conduite avancée"
+  ],
+  "specifications": {
+    "engineCc": 0,
+    "motorisation": {
+      "type": "100% électrique (BEV)",
+      "moteurThermique": null,
+      "moteurElectrique": "Moteur électrique avant 200 kW (272 ch), 330 Nm",
+      "transmission": "Automatique à un seul rapport",
+      "traction": "Avant (FWD)"
+    },
+    "performances": {
+      "vitesseMax": "160 km/h",
+      "acceleration": "0–50 km/h : ~3,4 s",
+      "consommationMixte": "≈ 1,6 L/100 km équivalent"
+    },
+    "batterie": {
+      "type": "Lithium fer phosphate (LFP) BYD Blade",
+      "capacite": "65,28 kWh",
+      "autonomieWLTP": "",
+      "autonomieCLTC": "550 km",
+      "rechargeAC": "Charge AC complète ≈ 8–10 h",
+      "rechargeDC": "Charge rapide DC 30–80% ≈ 45–50 min"
+    },
+    "dimensions": "4780 × 1866 × 1510 mm",
+    "empattement": "2880 mm",
+    "poids": "1 950 kg",
+    "volumeCoffre": "463 L",
+    "pneus": "225/45 R21",
+    "chassis": {
+      "suspensionAvant": "McPherson indépendante",
+      "suspensionArriere": "Multibras indépendante",
+      "freins": "Disques ventilés avant, disques arrière",
+      "freinStationnement": "Électrique (EPB)"
+    },
+    "plateforme": "Plateforme électrique dédiée avec batterie BYD Blade"
+  },
+  "equipements": {
+    "interieur": [
+      "Sellerie tissu ou similicuir selon finition",
+      "Sièges avant à réglages électriques (selon version)",
+      "Climatisation automatique",
+      "Tableau de bord digital + grand écran central tactile",
+      "Volant multifonction et rangements multiples"
+    ],
+    "securite": [
+      "Airbags frontaux, latéraux et rideaux",
+      "AEB (freinage automatique d’urgence)",
+      "Maintien de voie et assistant de centrage",
+      "Surveillance des angles morts (selon version)",
+      "Caméras 360°",
+      "Assistance stationnement",
+      "TPMS, ABS, ESP",
+      "ADAS L2 / L2+ selon finition"
+    ],
+    "connectivite": [
+      "Bluetooth",
+      "Apple CarPlay et Android Auto (selon marché et version)",
+      "Ports USB / USB-C",
+      "Services connectés Toyota (ou équivalent Chine)",
+      "Recharge smartphone sans fil (selon finition)"
+    ]
+  },
+  "resume": "Le Toyota bZ5 2025 est un SUV 100% électrique de taille moyenne, équipé d’un moteur avant de 200 kW (272 ch) et d’une batterie LFP BYD Blade offrant jusqu’à 550 km d’autonomie CLTC (ou 630 km avec la grande batterie), combinant grande efficience, systèmes ADAS de niveau L2 et un équipement moderne en confort et connectivité, idéal pour un usage familial et urbain/périurbain."
+}
