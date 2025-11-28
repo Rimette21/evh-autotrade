@@ -494,7 +494,6 @@ body.page-vehicle { background:#F6F7FB; }
 }
 @media (max-width: 420px){
   .hero-cta .btn{
-    padding: .55rem .8rem;
     min-height: 36px;
     font-size: .85rem;
     box-shadow: 0 3px 10px rgba(229,62,62,.2);
@@ -504,6 +503,7 @@ body.page-vehicle { background:#F6F7FB; }
 /* -------- Boutons globaux en mobile -------- */
 @media (max-width: 680px){
   .btn{
+    padding: .55rem .8rem;
     padding: .65rem 1rem;
     min-height: 38px;
     font-size: .9rem;
@@ -1230,8 +1230,38 @@ body.page-vehicle { background:#F6F7FB; }
     font-size: 0.8rem;
   }
 }
+/* ===== Badges "Vendu" ===== */
+.card-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  z-index: 3;
+}
 
+.card-badge--sold {
+  background: #b91c1c; /* rouge EVH */
+  color: #ffffff;
+}
 
+/* Carte visuellement sold-out */
+.card--sold {
+  opacity: 0.65;
+  pointer-events: none; /* empêche clic si tu veux */
+}
+
+/* Texte sous le prix */
+.sold-note {
+  margin-top: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #b91c1c;
+}
 
 /* Cartes déjà en grille : on garde tes breakpoints actuels */
 
