@@ -497,6 +497,7 @@
     "mileage": 900,
     "regyear": "2025-09",
     "isNew": false,
+    "sold": true,
     "images": {
       "hero": "images/EVH9403325_HAVAL_DROIT.webp"
     },
