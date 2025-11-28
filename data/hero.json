@@ -321,6 +321,30 @@
     "priceTND": "89580"
   },
   {
+  "id": "EVH5686663TOYOTABZ5",
+  "name": "2025 Toyota bZ5 BEV 550 km",
+  "priceTTC": "25 190 € (~85770 Tnd)",
+  "mileage": 2000,
+  "regyear": "2025-11",
+  "isNew": false,
+  "images": {
+    "hero": "images/EVH5686663TOYOTABZ5_devgauche.webp"
+  },
+  "features": [
+    "100% électrique (BEV)",
+    "Autonomie 550 km (CLTC)",
+    "Puissance 200 kW (272 ch)",
+    "Moteur électrique 200 kW avant",
+    "ADAS L2 complet",
+    "Caméras 360°, assistance conduite"
+  ],
+  "specifications": {
+    "engineCc": 0,
+    "transmission": "Auto AT"
+  },
+    "priceTND": "85770"
+},
+  {
     "id": "EVH_ToyotaBZ3_2025015",
     "name": "2025 Toyota BZ 3X Air+ BEV 430km",
     "priceHT": "25 350 €  (~86 310 TND) ",
