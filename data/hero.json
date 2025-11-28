@@ -323,7 +323,7 @@
   {
   "id": "EVH5686663TOYOTABZ5",
   "name": "2025 Toyota bZ5 BEV 550 km",
-  "priceTTC": "25 190 € (~85770 Tnd)",
+  "priceHT": "25 190 € (~85770 Tnd)",
   "mileage": 2000,
   "regyear": "2025-11",
   "isNew": false,
@@ -519,7 +519,7 @@
   {
   "id": "EVH9681220HavalFierce",
   "name": "2023 Haval Fierce Dragon MAX PHEV 105 km",
-  "priceTTC": "22 490 € (~76 570 TND)",
+  "priceHT": "22 490 € (~76 570 TND)",
   "mileage": 18000,
   "regyear": "2023-11",
   "isNew": false,
