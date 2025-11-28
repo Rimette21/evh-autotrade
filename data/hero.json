@@ -541,6 +541,30 @@
 "priceTND": "76570"
 },
   {
+  "id": "EVH9685367HAVALRAPTOR",
+  "name": "2023 Haval Raptor PHEV 145 km",
+  "priceHT": "25 090 € (~85430 TND)",
+  "mileage": 80000,
+  "regyear": "2023-11",
+  "isNew": false,
+  "images": {
+    "hero": "images/EVH9685367HavalRaptor_devgauche.webp"
+  },
+  "features": [
+    "Hybride rechargeable PHEV 4WD",
+    "Autonomie électrique 145 km (CLTC)",
+    "Moteur 1.5T 167 ch + moteurs électriques 220 kW",
+    "Puissance système 369 kW (502 ch)",
+    "Toit ouvrant, sièges cuir chauffants, caméra 360°",
+    "Transmission DHT, ADAS adaptatif ACC"
+  ],
+  "specifications": {
+    "engineCc": 1499,
+    "transmission": "DHT 2 vitesses, 4WD"
+  },
+     "priceTND": "85430"
+},
+  {
     "id": "EVH9403325",
     "name": "Haval Fierce DragonMAX 1.5L 116HP",
     "priceHT": "24 880 € (~84 840 Tnd)",
