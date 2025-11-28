@@ -2,7 +2,7 @@
   {
     "id": "EVHBYDSEAL6EV007",
     "name": "2025-BYD Seal 06 EV 545KM Flagship",
-    "priceHT": "25 540 €  (~86 960 TND) ",
+    "priceHT": "25 540 €  (~86 960 TND)",
     "mileage": 0,
     "regyear": "2025-10",
     "isNew": true,
@@ -516,6 +516,30 @@
     },
     "priceTND": "83450"
   },
+  {
+  "id": "EVH9681220HavalFierceDragon",
+  "name": "2023 Haval Fierce Dragon MAX PHEV 105 km",
+  "priceTTC": "22 490 € (~76 570 TND)",
+  "mileage": 18000,
+  "regyear": "2023-11",
+  "isNew": false,
+  "images": {
+    "hero": "images/EVH9681220HavalFierce_devgauche.webp"
+  },
+  "features": [
+    "Hybride rechargeable (PHEV) Hi4 4WD",
+    "Autonomie électrique 105 km",
+    "Moteur 1.5L 116 ch + double moteur électrique AV/AR",
+    "Puissance système 205 kW (≈279 ch), couple 585 N·m",
+    "Caméras 360°, ADAS L2 « Coffee intelligent drive »",
+    "Écran 12,3\" + combiné numérique, toit pano"
+  ],
+  "specifications": {
+    "engineCc": 1498,
+    "transmission": "Boîte hybride DHT, 4WD"
+  },
+"priceTND": "76570"
+},
   {
     "id": "EVH9403325",
     "name": "Haval Fierce DragonMAX 1.5L 116HP",
