@@ -369,43 +369,61 @@
     }
 
     // ===== Rendu d'une carte =====
-    function cardHTML(v){
-      const energy = energyFrom(v);
-      const autoLbl = autonomyLabel(v);
-      const trShort = transmissionShort(v) || '—';
-      const newBadge = v.isNew ? `<span class="pill" style="position:absolute;left:10px;top:10px;z-index:2;background:#fef3c7;color:#92400e;border:1px solid #fde68a;">Neuf</span>` : '';
+   function cardHTML(v){
+  const energy = energyFrom(v);
+  const autoLbl = autonomyLabel(v);
+  const trShort = transmissionShort(v) || '—';
+  const isSold = v.sold === true;
 
-      // puce 1 : type énergie ; puce 2 : autonomie
-      const energyLabel = (energy === 'PHEV') ? 'Hybride rechargeable (PHEV)' : '100% électrique (BEV)';
-      const specLines = pickSpecFeatures(v);
+  const newBadge = v.isNew
+    ? `<span class="pill" style="position:absolute;left:10px;top:10px;z-index:2;background:#fef3c7;color:#92400e;border:1px solid #fde68a;">Neuf</span>`
+    : '';
 
-      // fallback si aucune des 4 n’est trouvée
-      const fallbacks = [`Transmission auto ${trShort}`, 'Caméra 360°', 'Toit panoramique'];
+  const soldBadge = isSold
+    ? `<span class="card-badge card-badge--sold">Vendu</span>`
+    : '';
 
-      const items = [energyLabel, autoLbl, ...(specLines.length ? specLines : fallbacks)];
+  const energyLabel = (energy === 'PHEV')
+    ? 'Hybride rechargeable (PHEV)'
+    : '100% électrique (BEV)';
 
-      return `
-        <a class="card-link" href="vehicle.html?id=${encodeURIComponent(v.id)}">
-          <article class="card" style="position:relative">
-            ${newBadge}
-            <img class="thumb" src="${v.images?.hero || ''}" alt="${v.name}"
-                 onerror="this.src='https://via.placeholder.com/400x300?text=Image+non+disponible'">
-            ${quickSpecsHTML(v)}
-            <div class="body">
-              <div class="name">${v.name}</div>
-              <div class="submeta">Réf : <strong>${v.id}</strong></div>
-              <div class="price">
+  const specLines = pickSpecFeatures(v);
+  const fallbacks = [`Transmission auto ${trShort}`, 'Caméra 360°', 'Toit panoramique'];
+  const items = [energyLabel, autoLbl, ...(specLines.length ? specLines : fallbacks)];
+
+  return `
+    <a class="card-link" href="vehicle.html?id=${encodeURIComponent(v.id)}">
+      <article class="card ${isSold ? 'card--sold' : ''}" style="position:relative">
+        ${newBadge}
+        ${soldBadge}
+        <img
+          class="thumb"
+          src="${v.images?.hero || ''}"
+          alt="${v.name}"
+          onerror="this.src='https://via.placeholder.com/400x300?text=Image+non+disponible'">
+
+        ${quickSpecsHTML(v)}
+
+        <div class="body">
+          <div class="name">${v.name}</div>
+          <div class="submeta">Réf : <strong>${v.id}</strong></div>
+          <div class="price">
             Prix HT (FCR) : ${v.priceHT || '-'}
-            </div>
-        
-          
-              <ul class="features">
-                ${items.map(x=>`<li>• ${x}</li>`).join('')}
-              </ul>
-            </div>
-          </article>
-        </a>`;
-    }
+          </div>
+
+          ${isSold
+            ? '<div class="sold-note">Ce véhicule est déjà vendu</div>'
+            : ''
+          }
+
+          <ul class="features">
+            ${items.map(x=>`<li>• ${x}</li>`).join('')}
+          </ul>
+        </div>
+      </article>
+    </a>`;
+}
+
 
     function renderGrid(list){
       const grid = document.getElementById('vehicles-grid');
