@@ -302,6 +302,7 @@
     "mileage": 50,
     "regyear": "2025-09",
     "isNew": true,
+    "sold": true,
     "images": {
       "hero": "images/EVH9382121_TOYOTA_COTEDROIT.webp"
     },
@@ -351,7 +352,7 @@
     "mileage": 27000,
     "regyear": "2024-07",
     "isNew": false,
-    "featuresCount": 4,
+    "sold": true,
     "images": {
       "hero": "images/EVH9524551_GEELYGALAXY_devgauche.webp"
     },
@@ -375,7 +376,7 @@
     "mileage": 22000,
     "regyear": "2024-05",
     "isNew": false,
-    "featuresCount": 5,
+     "sold": true,
     "images": {
       "hero": "images/EVH9496374_Mercedesbenz_dev_gauche.webp"
     },
@@ -449,6 +450,7 @@
     "mileage": 4000,
     "regyear": "2025-06",
     "isNew": false,
+    "sold": true,
     "images": {
       "hero": "images/EVH9330983_BMW_DEVANT.webp"
     },
