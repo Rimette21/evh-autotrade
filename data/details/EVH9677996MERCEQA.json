@@ -1,9 +1,9 @@
 {
   "id": "EVH9677996MERCEQA",
-  "name": "2025 Mercedes-Benz EQA 250+ 540 km",
+  "name": "2025 Mercedes-Benz EQA Class BEV 73.5KWH",
   "priceHT": "31 610 € (~107 620 TND)",
-  "mileage": 25000,
-  "regyear": "2025-01",
+  "mileage": 100,
+  "regyear": "2025-11",
   "images": {
     "hero": "images/EVH9677996MERCEQA_devgauche.webp",
     "gallery": [
@@ -18,10 +18,10 @@
   "caracteristiques": [
     "SUV compact 5 portes 100% électrique (BEV)",
     "Version EQA 250+ avec grande batterie et autonomie étendue",
-    "Autonomie électrique env. 540 km CLTC",
+    "Autonomie 619 km",
     "Moteur électrique 140 kW (190 ch)",
-    "Batterie lithium-ion ~70,5 kWh utilisable",
-    "Transmission automatique 1 rapport, traction avant (FWD)",
+    "Batterie lithium-ion 73,5 kWh",
+    "Transmission automatique, traction avant (FWD)",
     "Équipements premium : sellerie haut de gamme, écran MBUX, ADAS complet",
     "Caméra 360°, radars de stationnement, assistant de maintien de voie"
   ],
@@ -41,8 +41,8 @@
     },
     "batterie": {
       "type": "Lithium-ion haute tension",
-      "capacite": "≈70,5 kWh utilisable",
-      "autonomieWLTP": 540 km CLTC",
+      "capacite": "≈73,5 kWh",
+      "autonomieWLTP": 619 km CLTC",
       "rechargeAC": "Charge AC jusqu'à 11 kW (≈7 h 0–100 %)",
       "rechargeDC": "Charge rapide DC jusqu'à 100 kW (10–80 % ≈30–35 min)"
     },
