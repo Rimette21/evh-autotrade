@@ -387,9 +387,17 @@
     ? 'Hybride rechargeable (PHEV)'
     : '100% électrique (BEV)';
 
-  const specLines = pickSpecFeatures(v);
-  const fallbacks = [`Transmission auto ${trShort}`, 'Caméra 360°', 'Toit panoramique'];
-  const items = [energyLabel, autoLbl, ...(specLines.length ? specLines : fallbacks)];
+ // On récupère toutes les features déclarées dans Hero.json
+const allFeats = Array.isArray(v.features) ? v.features : [];
+
+// On limite éventuellement le nombre affiché (ici 4, tu peux mettre 6, 8…)
+const specLines = allFeats.slice(0, 5);
+
+// Si pas de features, on garde un fallback propre
+const fallbacks = [`Transmission auto ${trShort}`, 'Caméra 360°', 'Toit panoramique'];
+
+// Items finaux envoyés à la liste <ul>
+const items = [energyLabel, autoLbl, ...(specLines.length ? specLines : fallbacks)];
 
   return `
     <a class="card-link" href="vehicle.html?id=${encodeURIComponent(v.id)}">
