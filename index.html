@@ -390,11 +390,11 @@
  // On récupère toutes les features déclarées dans Hero.json
 const allFeats = Array.isArray(v.features) ? v.features : [];
      
-     // On enlève les features qui répètent déjà le type d'énergie
+   // On enlève les features qui répètent déjà le type d'énergie OU l'autonomie
 const filteredFeats = allFeats.filter(f =>
-  !/100%\s*électrique|bev|hybride\s*rechargeable|phev|hev/i.test(f || '')
+  !/100%\s*électrique|bev|hybride\s*rechargeable|phev|hev|autonomie/i.test(f || '')
 );
-
+     
 // On garde 3 features max (avec energyLabel + autoLbl = 5 puces au total)
 const specLines = filteredFeats.slice(0, 3);
 
