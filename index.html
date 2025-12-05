@@ -389,9 +389,14 @@
 
  // On récupère toutes les features déclarées dans Hero.json
 const allFeats = Array.isArray(v.features) ? v.features : [];
+     
+     // On enlève les features qui répètent déjà le type d'énergie
+const filteredFeats = allFeats.filter(f =>
+  !/100%\s*électrique|bev|hybride\s*rechargeable|phev|hev/i.test(f || '')
+);
 
-// On limite éventuellement le nombre affiché (ici 4, tu peux mettre 6, 8…)
-const specLines = allFeats.slice(0, 5);
+// On garde 3 features max (avec energyLabel + autoLbl = 5 puces au total)
+const specLines = filteredFeats.slice(0, 3);
 
 // Si pas de features, on garde un fallback propre
 const fallbacks = [`Transmission auto ${trShort}`, 'Caméra 360°', 'Toit panoramique'];
