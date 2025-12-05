@@ -42,7 +42,7 @@
     "batterie": {
       "type": "Lithium-ion haute tension",
       "capacite": "≈73,5 kWh",
-      "autonomieWLTP": 619 km CLTC",
+      "autonomieWLTP": "619 km CLTC",
       "rechargeAC": "Charge AC jusqu'à 11 kW (≈7 h 0–100 %)",
       "rechargeDC": "Charge rapide DC jusqu'à 100 kW (10–80 % ≈30–35 min)"
     },
