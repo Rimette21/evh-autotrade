@@ -2,7 +2,7 @@
   {
     "id": "EVHBYDSEAL6EV007",
     "name": "2025-BYD Seal 06 EV 545KM Flagship",
-    "priceHT": "25 540 €  (~86 960 TND)",
+    "priceHT": "26 140 €  (~89140 TND)",
     "mileage": 0,
     "regyear": "2025-10",
     "isNew": true,
@@ -22,12 +22,12 @@
       "engineCc": null,
       "transmission": "Auto AT"
     },
-    "priceTND": "86960"
+    "priceTND": "89140"
   },
   {
     "id": "EVHBSPEV2025004",
     "name": "2025 BYD Song PLUS EV 520km Luxury",
-    "priceHT": "26 740 €  (~91 040 TND) ",
+    "priceHT": "27 310 €  (~93 130 TND) ",
     "mileage": 0,
     "regyear": "2025-10",
     "isNew": true,
@@ -46,12 +46,12 @@
       "engineCc": null,
       "transmission": "AT"
     },
-    "priceTND": "91040"
+    "priceTND": "93130"
   },
   {
     "id": "EVHBSPEV2025005",
     "name": "2025 BYD Song PLUS EV 520km Premium",
-    "priceHT": "27 930 €  (~95 100 TND) ",
+    "priceHT": "28 480 € (~97120 TND) ",
     "mileage": 0,
     "regyear": "2025-10",
     "isNew": true,
@@ -71,12 +71,12 @@
       "engineCc": null,
       "transmission": "AT"
     },
-    "priceTND": "95100"
+    "priceTND": "97120"
   },
   {
     "id": "EVHBSPEV2025006",
     "name": "2025 BYD Song PLUS EV 605km Flagship",
-    "priceHT": "29 770 €  (~101 360 TND) ",
+    "priceHT": "30 280 €  (~103260 TND) ",
     "mileage": 0,
     "regyear": "2025-10",
     "isNew": true,
@@ -96,12 +96,12 @@
       "engineCc": null,
       "transmission": "AT"
     },
-    "priceTND": "101360"
+    "priceTND": "103260"
   },
   {
   "id": "EVH9677996MERCEQA",
   "name": "2025 Mercedes-Benz EQA Class-619km",
-  "priceHT": "31 610 € (~107 620 TND)",
+  "priceHT": "32 230 € (~109910 TND)",
   "mileage": 100,
   "regyear": "2025-11",
   "isNew": true,
@@ -120,13 +120,13 @@
     "engineCc": 0,
     "transmission": "Automatique"
   },
-     "priceTND": "107620"
+     "priceTND": "109910"
 },
 
   {
     "id": "EVHMercEQA_2025012",
     "name": "2025 Mercedes-Benz EQA 260 - 619 km",
-    "priceHT": "31 770 € (~108 170 Tnd)",
+    "priceHT": "33 880 € (~115540 Tnd)",
     "mileage": 100,
     "regyear": "2025",
     "isNew": true,
@@ -146,7 +146,7 @@
       "engineCc": null,
       "transmission": "Auto AT"
     },
-    "priceTND": "108170"
+    "priceTND": "115540"
   },
   {
     "id": "EVHxpeng25011",
