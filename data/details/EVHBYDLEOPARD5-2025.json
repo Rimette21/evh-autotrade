@@ -1,0 +1,92 @@
+{
+  "id": "EVHBYDLEOPARD5-2025",
+  "name": "2025 Leopard 5 Max Edition 1.5T PHEV 125 km",
+  "priceHT": "39 220 € (~133 750 TND)",
+  "mileage": 100,
+  "regyear": "2025-04",
+  "images": {
+    "hero": "images/BYD_LEOPARD5_DEVGAUCHE.jpg",
+    "gallery": [
+      "images/BYD_LEOPARD5_DEVDROIT.jpg",
+      "images/BYD_LEOPARD5_ARRIERE.jpg",
+      "images/BYD_LEOPARD5_ARRDROIT.jpg",
+      "images/BYD_LEOPARD5_ECRAN.jpg",
+      "images/BYD_LEOPARD5_INTDEVANT.jpg",
+      "images/BYD_LEOPARD5_INTDEVANT2.jpg",
+      "images/BYD_LEOPARD5_MOTEUR.jpg"
+    ]
+  },
+  "caracteristiques": [
+    "SUV 5 portes hybride rechargeable (PHEV) 4WD, 5 places",
+    "Groupe motopropulseur 1.5T turbo essence + double moteurs électriques avant/arrière",
+    "Puissance totale 485 kW (≈660 ch), couple total 760 N·m",
+    "Batterie 31,8 kWh, autonomie électrique CLTC 125 km",
+    "Consommation mixte env. 1,3–1,5 L/100 km + 23,5 kWh/100 km (NEDC)",
+    "Dimensions 4890 × 1970 × 1920 mm, empattement 2800 mm, garde au sol 310 mm",
+    "Transmission automatique DHT, mode 4WD électrique avec blocage virtuel",
+    "ADAS avancé : régulateur adaptatif, maintien de voie, AEB, surveillance angle mort, 360°",
+    "Intérieur cuir avec sièges électriques, ventilation/chauffage, double écran 12,3\"+",
+    "Capacités tout‑terrain élevées (ponts électroniques, modes off‑road, pneus 265/65 R18)"
+  ],
+  "specifications": {
+    "engineCc": 1497,
+    "motorisation": {
+      "type": "Hybride rechargeable (PHEV)",
+      "moteurThermique": "1.5L turbo essence, env. 145 kW (≈197 ch)",
+      "moteurElectrique": "Moteur avant ≈200 kW + moteur arrière ≈285 kW, puissance totale 485 kW",
+      "transmission": "Boîte hybride DHT multi‑rapports (AT)",
+      "traction": "4WD électrique (moteurs AV + AR)"
+    },
+    "performances": {
+      "vitesseMax": "≈180 km/h",
+      "acceleration": "0–100 km/h : ≈4,8–5,0 s",
+      "consommationMixte": "≈1,3–1,5 L/100 km + 23,5 kWh/100 km (NEDC/CLTC)"
+    },
+    "batterie": {
+      "type": "Batterie lithium (NMC) refroidie liquide",
+      "capacite": "31,8 kWh",
+      "autonomieWLTP": "≈90–100 km (125 km CLTC)",
+      "rechargeAC": "Charge AC complète en ≈4,8 h (≈6,6–7 kW)",
+      "rechargeDC": "Charge rapide 0–80 % en ≈16–20 min (puissance max ≈100 kW)"
+    },
+    "dimensions": "4890 × 1970 × 1920 mm",
+    "empattement": "2800 mm",
+    "poids": "2890 kg (masse à vide)",
+    "volumeCoffre": "SUV mid‑size 5 places, coffre modulable (valeur constructeur non spécifiée)",
+    "pneus": "265/65 R18 (AV et AR)",
+    "chassis": {
+      "suspensionAvant": "Double triangles indépendants",
+      "suspensionArriere": "Double triangles indépendants",
+      "freins": "Disques ventilés avant et arrière",
+      "freinStationnement": "Électrique (EPB) avec Auto Hold"
+    },
+    "plateforme": "Plateforme DM-p / DMO BYD (PHEV tout‑terrain 4WD)"
+  },
+  "equipements": {
+    "interieur": [
+      "Sellerie cuir avec réglages électriques, mémoire, chauffage et ventilation",
+      "Double écran numérique (instrumentation + central) ≈12,3\"",
+      "Climatisation automatique multi‑zones avec bouches arrière",
+      "Éclairage d’ambiance, ciel de toit premium",
+      "Sièges arrière rabattables, nombreux rangements et prises 12V/USB"
+    ],
+    "securite": [
+      "10 airbags (frontaux, latéraux, rideaux, genoux selon version)",
+      "ABS, EBD, BA, ESP/Vehicle Stability Control, contrôle de traction",
+      "Hill Start Assist, Downhill Assist Control",
+      "Alerte collision + freinage autonome d’urgence (AEB)",
+      "Surveillance angle mort (BSD), alerte trafic arrière",
+      "Alerte franchissement de ligne + maintien de voie (LKA/LKAS)",
+      "Régulateur de vitesse adaptatif (ACC)",
+      "Surveillance pression pneus (TPMS), ISOFIX"
+    ],
+    "connectivite": [
+      "Écran central tactile Android avec navigation intégrée",
+      "Apple CarPlay et Android Auto",
+      "Bluetooth, USB/USB‑C, 18 haut‑parleurs (selon configuration)",
+      "Commandes vocales, services connectés en ligne",
+      "Chargeur smartphone sans fil"
+    ]
+  },
+  "resume": "Le Leopard 5 2025 TianShen Intelligent Driving Max Edition est un grand SUV PHEV 4WD ultra‑puissant (485 kW / ≈660 ch, 760 N·m) combinant un 1.5T turbo à deux moteurs électriques et une batterie de 31,8 kWh offrant 125 km CLTC en 100 % électrique. Conçu pour le tout‑terrain comme pour les longs trajets, il associe des capacités off‑road sérieuses (4x4 électrique, garde au sol 310 mm, pneus 265/65 R18) à un habitacle haut de gamme truffé d’ADAS et de technologies."
+}
