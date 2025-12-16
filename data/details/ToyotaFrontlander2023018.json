@@ -1,0 +1,89 @@
+{
+  "id": "ToyotaFrontlander_2023018",
+  "name": "2023 Toyota Frontlander 2.0L Hybrid Leading Edition",
+  "priceHT": "25 860 €",
+  "mileage": 4900,
+  "regyear": "2024-03",
+  "images": {
+    "hero": "images/ToyotaFrontlander_devgauche.jpg",
+    "gallery": [
+      "images/ToyotaFrontlander_devface.jpg",
+      "images/ToyotaFrontlander_argauche.jpg",
+      "images/ToyotaFrontlander_arriere.jpg",
+      "images/ToyotaFrontlander_ecran.jpg",
+      "images/ToyotaFrontlander_intdev.jpg",
+      "images/ToyotaFrontlander_coffre.jpg",
+      "images/ToyotaFrontlander_toitouvrant.jpg"
+    ]
+  },
+  "caracteristiques": [
+    "SUV compact 5 portes hybride non rechargeable (HEV) 5 places",
+    "Motorisation 2.0L essence + moteur électrique, système hybride Toyota",
+    "Puissance thermique 152 ch, puissance système env. 144 kW",
+    "Transmission E-CVT, traction avant (FWD)",
+    "Consommation WLTC env. 4,6–4,7 L/100 km",
+    "Dimensions 4485 × 1825 × 1620 mm, empattement 2640 mm",
+    "Toyota Safety Sense (L2) : ACC, maintien de voie, freinage d’urgence",
+    "Airbags multiples, contrôle de stabilité, surveillance pression pneus"
+  ],
+  "specifications": {
+    "engineCc": 1987,
+    "motorisation": {
+      "type": "Hybride essence auto-rechargeable (HEV)",
+      "moteurThermique": "2.0L L4 atmosphérique, 152 ch",
+      "moteurElectrique": "Moteur synchrone à aimant permanent ~83 kW, 206 N·m",
+      "transmission": "E-CVT (boîte automatique à variation continue)",
+      "traction": "Avant (FWD)"
+    },
+    "performances": {
+      "vitesseMax": "180 km/h",
+      "acceleration": "0–100 km/h : ≈9–10 s (donnée indicative pour ce groupe motopropulseur)",
+      "consommationMixte": "4,58 L/100 km WLTC"
+    },
+    "batterie": {
+      "type": "Batterie hybride (lithium-ion ou NiMH selon version, faible capacité)",
+      "capacite": "Capacité typique HEV",
+      "autonomieWLTP": "Utilisation électrique courte distance uniquement (HEV, non PHEV)",
+      "rechargeAC": "Recharge automatique par le moteur thermique et la récupération d’énergie",
+      "rechargeDC": "Non applicable (pas de recharge externe)"
+    },
+    "dimensions": "4485 × 1825 × 1620 mm",
+    "empattement": "2640 mm",
+    "poids": "≈1445–1500 kg (selon finition)",
+    "volumeCoffre": "SUV 5 places, volume coffre comparable à un Corolla Cross",
+    "pneus": "Jantes alliage 17 pouces (R17) selon Leading Edition",
+    "chassis": {
+      "suspensionAvant": "McPherson indépendante",
+      "suspensionArriere": "Multibras indépendante",
+      "freins": "Disques ventilés avant, disques arrière",
+      "freinStationnement": "Électrique (EPB)"
+    },
+    "plateforme": "Plateforme TNGA-C (SUV compact Toyota, dérivé Corolla Cross)"
+  },
+  "equipements": {
+    "interieur": [
+      "5 places, sellerie tissu (Leading Edition)",
+      "Siège conducteur réglable en hauteur",
+      "Climatisation automatique",
+      "Volant multifonction, écran central multimédia",
+      "Banquette arrière rabattable 60/40"
+    ],
+    "securite": [
+      "Airbags conducteur et passager",
+      "Airbags latéraux avant",
+      "Airbags rideaux avant et arrière",
+      "Système de surveillance de la pression des pneus (TPMS)",
+      "ABS, EBD, BA",
+      "Contrôle de traction (TRC)",
+      "Contrôle de stabilité (VSC/ESP)",
+      "Toyota Safety Sense (ACC, LDA, PCS, etc.)"
+    ],
+    "connectivite": [
+      "Bluetooth",
+      "Ports USB pour recharge et données",
+      "Système multimédia avec écran tactile central",
+      "Intégration smartphone possible selon marché (Apple CarPlay / Android Auto à vérifier)"
+    ]
+  },
+  "resume": "La Toyota Frontlander 2023 2.0L Smart Electric Hybrid Dual-Engine Leading Edition est un SUV compact hybride non rechargeable (HEV) à traction avant, combinant un moteur 2.0L de 152 ch avec un moteur électrique pour une consommation WLTC d’environ 4,6 L/100 km. Basée sur la plateforme TNGA, elle offre 5 places, un bon niveau de sécurité avec Toyota Safety Sense (ACC, maintien de voie, freinage d’urgence) et un équipement moderne adapté à un usage familial."
+}
