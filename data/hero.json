@@ -370,6 +370,30 @@
   },
     "priceTND": "80000"
 },
+  {
+  "id": "EVH2023TOYOTA_FRONTLANDER20HEV",
+  "name": "Toyota Frontlander 2023 2.0L Hybrid Leading",
+  "priceHT": "À renseigner",
+  "mileage": 0,
+  "regyear": "2023-01",
+  "isNew": false,
+  "images": {
+    "hero": "images/ToyotaFrontlander_devgauche.jpg"
+  },
+  "features": [
+    "SUV compact hybride (HEV) 2.0L 152 ch",
+    "Consommation env. 4,6 L/100 km WLTC",
+    "Transmission E-CVT, traction avant (FWD)",
+    "Toyota Safety Sense (ACC, maintien de voie, freinage d’urgence)",
+    "Airbags multiples, ESP, TPMS",
+    "Toit ouvrant panoramique et écran central multimédia"
+  ],
+  "specifications": {
+    "engineCc": 1987,
+    "transmission": "E-CVT automatique, FWD"
+  }
+}
+
 
   {
   "id": "EVH5686663TOYOTABZ5",
