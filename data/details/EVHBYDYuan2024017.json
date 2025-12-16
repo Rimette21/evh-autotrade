@@ -1,0 +1,91 @@
+{
+  "id": "EVHBYDYuan2024017",
+  "name": "BYD Yuan PLUS 2024 510KM Beyond Model",
+  "priceTTC": "23 470 €",
+  "mileage": 4300,
+  "regyear": "2024-08",
+  "images": {
+    "hero": "images/BYDYUAN_devgauche.webp",
+    "gallery": [
+      "images/BYDYUAN_ardroit.webp",
+      "images/BYDYUAN_cotegauche.webp",
+      "images/BYDYUAN_devface.webp",
+      "images/BYDYUAN_intdevant.webp",
+      "images/BYDYUAN_intarriere.webp",
+      "images/BYDYUAN_coffre.webp"
+    ]
+  },
+  "caracteristiques": [
+    "SUV 5 portes 100% électrique (BEV), 5 places",
+    "Autonomie NEDC 510 km (≈ 430–450 km WLTP estimés)",
+    "Moteur électrique avant 150 kW (204 ch), couple 310 N·m",
+    "Batterie Blade BYD lithium fer phosphate 60,48 kWh",
+    "Consommation NEDC 12,5 kWh/100 km",
+    "Transmission à 1 rapport, traction avant (FWD)",
+    "Sécurité : airbags frontaux, latéraux, rideaux, ESP, TPMS",
+    "ADAS : régulateur adaptatif, aide au maintien de voie, freinage d’urgence",
+    "Toit panoramique, accès et démarrage sans clé, hayon électrique selon version"
+  ],
+  "specifications": {
+    "engineCc": 0,
+    "motorisation": {
+      "type": "100% électrique (BEV)",
+      "moteurThermique": "",
+      "moteurElectrique": "Moteur avant 150 kW (204 ch), couple 310 N·m",
+      "transmission": "Boîte fixe 1 rapport (EV)",
+      "traction": "Avant (FWD)"
+    },
+    "performances": {
+      "vitesseMax": "160 km/h",
+      "acceleration": "0–100 km/h : ≈7,3–7,5 s (selon données constructeur)",
+      "consommationMixte": "12,5 kWh/100 km (NEDC)"
+    },
+    "batterie": {
+      "type": "Lithium fer phosphate (Blade BYD)",
+      "capacite": "60,48 kWh",
+      "autonomieWLTP": "≈430–450 km (510 km NEDC)",
+      "rechargeAC": "Charge lente AC (≈7 kW) : 0–100 % en ≈8–9 h",
+      "rechargeDC": "Charge rapide DC : 30–80 % en ≈30–35 min (puissance max ≈70–80 kW)"
+    },
+    "dimensions": "4455 × 1875 × 1615 mm",
+    "empattement": "2720 mm",
+    "poids": "≈1690 kg (masse à vide)",
+    "volumeCoffre": "Coffre arrière type SUV compact (valeur exacte non indiquée sur la fiche)",
+    "pneus": "Jantes alliage 17–18 pouces selon finition",
+    "chassis": {
+      "suspensionAvant": "McPherson indépendante",
+      "suspensionArriere": "Multibras indépendante",
+      "freins": "Disques ventilés avant, disques arrière",
+      "freinStationnement": "Électrique (EPB)"
+    },
+    "plateforme": "Plateforme BYD e-Platform 3.0 (SUV électrique compact)"
+  },
+  "equipements": {
+    "interieur": [
+      "5 places, 5 portes",
+      "Sièges avant réglables, sellerie tissu/similicuir selon version",
+      "Climatisation automatique",
+      "Tableau de bord digital + écran tactile central multimédia",
+      "Rangements multiples et habitabilité généreuse pour un SUV compact"
+    ],
+    "securite": [
+      "Airbag conducteur",
+      "Airbag passager",
+      "Airbags latéraux avant",
+      "Airbags rideaux avant",
+      "Système de surveillance de la pression des pneus (TPMS)",
+      "Rappel de ceinture",
+      "Répartition électronique de freinage (EBD/CBC, etc.)",
+      "Assistance de freinage (EBA/BAS/BA, etc.)",
+      "Contrôle de traction (ASR/TCS/TRC, etc.)",
+      "Contrôle de stabilité (ESC/ESP/DSC, etc.)"
+    ],
+    "connectivite": [
+      "Bluetooth",
+      "Ports USB / USB-C",
+      "Système multimédia avec écran tactile central",
+      "Fonctions smartphone et services connectés selon marché"
+    ]
+  },
+  "resume": "Le BYD Yuan PLUS 2024 510KM Beyond est un SUV compact 100% électrique basé sur l’e-Platform 3.0, avec un moteur avant de 150 kW (204 ch), une batterie Blade LFP de 60,48 kWh, une autonomie NEDC de 510 km (≈430–450 km WLTP) et une consommation de 12,5 kWh/100 km. Il offre 5 places, une bonne dotation de sécurité (airbags multiples, ESP, TPMS) et des équipements modernes (toit pano, accès sans clé, aides à la conduite) adaptés à un usage familial et urbain/route."
+}
