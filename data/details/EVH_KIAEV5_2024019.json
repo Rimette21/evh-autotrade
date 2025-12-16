@@ -1,0 +1,88 @@
+{
+  "id": "EVH_KIAEV5_2024019",
+  "name": "Kia EV5 2024 530 Light",
+  "priceHT": "24 680 €",
+  "mileage": 100,
+  "regyear": "2024-01",
+  "images": {
+    "hero": "images/KIA_EV5_devgauche.jpg",
+    "gallery": [
+      "images/KIA_EV5_devface.jpg",
+      "images/KIA_EV5_devface.arrierejpg.jpg",
+      "images/KIA_EV5_devdroit.jpg",
+      "images/KIA_EV5_arrdroit.jpg"
+    ]
+  },
+  "caracteristiques": [
+    "SUV 5 portes 100% électrique (BEV), 5 places, traction avant (2WD)",
+    "Autonomie CLTC 530 km (version 64,2 kWh LFP 160 kW)",
+    "Moteur électrique avant 160 kW (218 ch), couple 310 N·m",
+    "Batterie lithium fer phosphate (LFP) 64,2 kWh",
+    "Dimensions 4615 × 1875 × 1715 mm, empattement 2750 mm, poids env. 1870 kg",
+    "Plateforme 800 V E-GMP avec charge rapide DC et V2L",
+    "Sécurité avancée : airbags multiples, ESP, régulateur adaptatif, maintien de voie",
+    "Équipements modernes : écran double, clim auto, aides au stationnement"
+  ],
+  "specifications": {
+    "engineCc": 0,
+    "motorisation": {
+      "type": "100% électrique (BEV)",
+      "moteurThermique": "",
+      "moteurElectrique": "Moteur synchrone à aimant permanent avant 160 kW (218 ch), 310 N·m",
+      "transmission": "Automatique à 1 rapport (AT, single-speed)",
+      "traction": "Avant (2WD, FWD)"
+    },
+    "performances": {
+      "vitesseMax": "185 km/h",
+      "acceleration": "0–100 km/h : ≈8,5–8,9 s (selon finition Light)",
+      "consommationMixte": "≈16–18 kWh/100 km WLTP estimés"
+    },
+    "batterie": {
+      "type": "Lithium fer phosphate (LFP)",
+      "capacite": "64,2 kWh",
+      "autonomieWLTP": "≈400–430 km (530 km CLTC)",
+      "rechargeAC": "Charge AC jusqu'à 11 kW (0–100 % en ≈7 h)",
+      "rechargeDC": "Charge rapide DC jusqu'à ~120–150 kW (30–80 % en ≈30 min)"
+    },
+    "dimensions": "4615 × 1875 × 1715 mm",
+    "empattement": "2750 mm",
+    "poids": "≈1870 kg (masse à vide pour version 530)",
+    "volumeCoffre": "SUV familial 5 places, volume arrière comparable aux SUV compacts/moyens",
+    "pneus": "Jantes alliage 18 pouces (Light) ou 19 pouces selon marché",
+    "chassis": {
+      "suspensionAvant": "McPherson indépendante",
+      "suspensionArriere": "Multibras indépendante",
+      "freins": "Disques ventilés avant, disques arrière",
+      "freinStationnement": "Électrique (EPB)"
+    },
+    "plateforme": "Hyundai–Kia E-GMP 800 V (SUV électrique compact)"
+  },
+  "equipements": {
+    "interieur": [
+      "5 places, sellerie tissu/similicuir selon Light",
+      "Écran double (instrumentation + multimédia) panoramique",
+      "Climatisation automatique",
+      "Volant multifonction, console centrale flottante",
+      "Banquette arrière rabattable 60/40"
+    ],
+    "securite": [
+      "Airbags conducteur et passager",
+      "Airbags latéraux avant",
+      "Airbags rideaux",
+      "ABS, EBD, contrôle de stabilité (ESC)",
+      "Contrôle de traction (TCS)",
+      "Surveillance de pression des pneus (TPMS)",
+      "Assistance au maintien de voie (LKA)",
+      "Aide au freinage d’urgence (AEB)",
+      "Régulateur de vitesse adaptatif (ACC) selon marché"
+    ],
+    "connectivite": [
+      "Bluetooth",
+      "USB / USB-C",
+      "Système multimédia avec écran tactile central",
+      "Intégration smartphone (Apple CarPlay / Android Auto, selon région)",
+      "Fonction V2L (Vehicle-to-Load) sur certaines versions"
+    ]
+  },
+  "resume": "La Kia EV5 2024 530 Light est un SUV 100% électrique 2WD reposant sur la plateforme E-GMP, équipé d’un moteur avant de 160 kW (218 ch) et d’une batterie LFP de 64,2 kWh offrant 530 km d’autonomie CLTC. Avec ses dimensions de 4,62 m de long, un habitacle 5 places spacieux et des aides à la conduite modernes, elle vise un usage familial polyvalent tout en permettant la charge rapide DC et la fonction V2L."
+}
