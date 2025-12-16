@@ -5,11 +5,11 @@
   "mileage": 100,
   "regyear": "2024-01",
   "images": {
-    "hero": "images/KIA_EV5_devgauche.jpg",
+    "hero": "images/KIA_EV5_devdroit.jpg",
     "gallery": [
+      "images/KIA_EV5_devgauche.jpg",
       "images/KIA_EV5_devface.jpg",
-      "images/KIA_EV5_devface.arrierejpg.jpg",
-      "images/KIA_EV5_devdroit.jpg",
+      "images/KIA_EV5_arriere.jpg",
       "images/KIA_EV5_arrdroit.jpg"
     ]
   },
