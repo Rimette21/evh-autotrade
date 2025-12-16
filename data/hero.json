@@ -346,6 +346,32 @@
     "priceTND": "89580"
   },
   {
+  "id": "EVHBYDYuan2024017",
+  "name": "BYD Yuan PLUS 2024 510KM Beyond Model",
+  "priceHT": "23 470 € (~80 000 TND)",
+  "mileage": 4300,
+  "regyear": "2024-08",
+  "isNew": false,
+  "featuresCount": 6,
+  "images": {
+    "hero": "images/BYDYUAN_devgauche.webp"
+  },
+  "features": [
+    "SUV 100% électrique (BEV) 5 places",
+    "Autonomie 510 km NEDC (≈430–450 km WLTP estimés)",
+    "Moteur électrique avant 150 kW (204 ch), 310 N·m",
+    "Batterie Blade LFP 60,48 kWh, conso 12,5 kWh/100 km",
+    "ADAS avec maintien de voie, régulateur adaptatif, freinage d'urgence",
+    "Toit panoramique, accès/démarrage sans clé, aides au stationnement"
+  ],
+  "specifications": {
+    "engineCc": 0,
+    "transmission": "Boîte fixe 1 rapport (EV, FWD)"
+  },
+    "priceTND": "80000"
+},
+
+  {
   "id": "EVH5686663TOYOTABZ5",
   "name": "2025 Toyota bZ5 BEV 550 km",
   "priceHT": "25 190 € (~85770 Tnd)",
