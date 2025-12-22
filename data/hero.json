@@ -249,54 +249,7 @@
     },
     "priceTND": "133840"
   },
-  {
-    "id": "EVHBSPPHEV_75KM",
-    "name": "2025 BYD Song PLUS DM-i 75KM 1.5L",
-    "priceHT": "23 930 € (~81 600 Tnd)",
-    "mileage": 0,
-    "regyear": "2025-09",
-    "isNew": true,
-    "images": {
-      "hero": "images/EVHBSP75KM_DEVGAUCHE.webp"
-    },
-    "features": [
-      "Hybride rechargeable (DM-i)",
-      "Autonomie électrique 75 km (WLTP)",
-      "Batterie LFP Blade 12,9 kWh",
-      "Moteur électrique 145 kW (197 ch)",
-      "Puissance système 203 ch",
-      "Régulateur de vitesse adaptatif L2"
-    ],
-    "specifications": {
-      "engineCc": 1498,
-      "transmission": "E-CVT"
-    },
-    "priceTND": "79890"
-  },
-  {
-    "id": "EVHBSPPHEV_112KM",
-    "name": "2025 BYD Song PLUS DM-i 112KM 1.5L",
-    "priceHT": "25 690 € (~87 600 Tnd)",
-    "mileage": 0,
-    "regyear": "2025-01",
-    "isNew": true,
-    "images": {
-      "hero": "images/EVHBSP112KM_DEVGAUCHE.webp"
-    },
-    "features": [
-      "Hybride rechargeable (DM-i)",
-      "Autonomie électrique 112 km (WLTP)",
-      "Batterie LFP Blade 18,3 kWh",
-      "Moteur électrique 145 kW (197 ch)",
-      "Puissance système 203 ch",
-      "Systèmes d'assistance avancée (L2)"
-    ],
-    "specifications": {
-      "engineCc": 1498,
-      "transmission": "E-CVT"
-    },
-    "priceTND": "86955"
-  },
+ 
   {
     "id": "EVHBSPPHEV_160KM",
     "name": "2025 BYD Song Plus 1.5L DM-i",
@@ -344,6 +297,54 @@
       "transmission": "Auto AT"
     },
     "priceTND": "104490"
+  },
+   {
+    "id": "EVHBSPPHEV_75KM",
+    "name": "2025 BYD Song PLUS DM-i 75KM 1.5L",
+    "priceHT": "23 930 € (~81 600 Tnd)",
+    "mileage": 0,
+    "regyear": "2025-09",
+    "isNew": true,
+    "images": {
+      "hero": "images/EVHBSP75KM_DEVGAUCHE.webp"
+    },
+    "features": [
+      "Hybride rechargeable (DM-i)",
+      "Autonomie électrique 75 km (WLTP)",
+      "Batterie LFP Blade 12,9 kWh",
+      "Moteur électrique 145 kW (197 ch)",
+      "Puissance système 203 ch",
+      "Régulateur de vitesse adaptatif L2"
+    ],
+    "specifications": {
+      "engineCc": 1498,
+      "transmission": "E-CVT"
+    },
+    "priceTND": "79890"
+  },
+  {
+    "id": "EVHBSPPHEV_112KM",
+    "name": "2025 BYD Song PLUS DM-i 112KM 1.5L",
+    "priceHT": "25 690 € (~87 600 Tnd)",
+    "mileage": 0,
+    "regyear": "2025-01",
+    "isNew": true,
+    "images": {
+      "hero": "images/EVHBSP112KM_DEVGAUCHE.webp"
+    },
+    "features": [
+      "Hybride rechargeable (DM-i)",
+      "Autonomie électrique 112 km (WLTP)",
+      "Batterie LFP Blade 18,3 kWh",
+      "Moteur électrique 145 kW (197 ch)",
+      "Puissance système 203 ch",
+      "Systèmes d'assistance avancée (L2)"
+    ],
+    "specifications": {
+      "engineCc": 1498,
+      "transmission": "E-CVT"
+    },
+    "priceTND": "86955"
   },
     {
    "id": "EVHBYDLEOPARD5-2025_020",
