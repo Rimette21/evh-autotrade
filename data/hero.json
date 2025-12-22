@@ -369,31 +369,7 @@
     },
     "priceTND": "133750"
   },
-  {
-    "id": "EVH9382121",
-    "name": "2025 Toyota bZ5 - BEV",
-    "priceHT": "26 310 €  (~89 580 TND) ",
-    "mileage": 50,
-    "regyear": "2025-09",
-    "isNew": true,
-    "sold": true,
-    "images": {
-      "hero": "images/EVH9382121_TOYOTA_COTEDROIT.webp"
-    },
-    "features": [
-      "100% électrique",
-      "Autonomie 550km",
-      "Puissance système 272 ch (200 kW)",
-      "Batterie 65.28 kWh",
-      "Couple système 330 N.m",
-      "Recharge DC 90 kW / AC 7 kW"
-    ],
-    "specifications": {
-      "engineCc": null,
-      "transmission": "AT"
-    },
-    "priceTND": "89580"
-  },
+ 
   {
   "id": "EVHBYDYuan2024017",
   "name": "2024 BYD Yuan PLUS (Byd Atto3)",
@@ -493,54 +469,6 @@
     "priceTND": "86310"
   },
   {
-    "id": "EVH9524551",
-    "name": "2024 Geely Galaxy E5 BEV",
-    "priceHT": "21 500 €  (~73 200 TND) ",
-    "mileage": 27000,
-    "regyear": "2024-07",
-    "isNew": false,
-    "sold": true,
-    "images": {
-      "hero": "images/EVH9524551_GEELYGALAXY_devgauche.webp"
-    },
-    "features": [
-      "100% électrique (160 kW)",
-      "Autonomie 530 km (CLTC)",
-      "Batterie LFP 60.2 kWh",
-      "Recharge DC 110 kW (30→80% ~18 min)",
-      "couple système 320 Nm"
-    ],
-    "specifications": {
-      "engineCc": null,
-      "transmission": "AT"
-    },
-    "priceTND": "73200"
-  },
-  {
-    "id": "EVH9496374",
-    "name": "2024 Mercedes-Benz EQA Class",
-    "priceHT": "26 590 €  (~90 530 TND) ",
-    "mileage": 22000,
-    "regyear": "2024-05",
-    "isNew": false,
-     "sold": true,
-    "images": {
-      "hero": "images/EVH9496374_Mercedesbenz_dev_gauche.webp"
-    },
-    "features": [
-      "100% électrique (BEV)",
-      "Autonomie 619 km (CLTC)",
-      "Batterie 73,5 kWh (NCM)",
-      "Moteur 140 kW (190 ch)/ 380 Nm",
-      "Assistante conduite niveau L2"
-    ],
-    "specifications": {
-      "engineCc": null,
-      "transmission": "AT"
-    },
-    "priceTND": "90530"
-  },
-  {
   "id": "EVH_LEXUS_ES300H_2022_022",
   "name": "Lexus ES 300h 2.5 Executive CVT",
   "priceHT": "42 400 € (~144 590 Tnd)",
@@ -616,31 +544,7 @@
     },
     "priceTND": "103710"
   },
-  {
-    "id": "EVH9330983",
-    "name": "2023 BMW iX1 - BEV",
-    "priceHT": "30 830 €  (~104 970 TND) ",
-    "mileage": 4000,
-    "regyear": "2025-06",
-    "isNew": false,
-    "sold": true,
-    "images": {
-      "hero": "images/EVH9330983_BMW_DEVANT.webp"
-    },
-    "features": [
-      "100% électrique",
-      "Autonomie 510km",
-      "Puissance Moteur 150 kW (204 ch)",
-      "Couple système 250 N.m",
-      "Batterie 66,45 kWh",
-      "Charge rapide DC 10–80% en 29 min"
-    ],
-    "specifications": {
-      "engineCc": null,
-      "transmission": "AT"
-    },
-    "priceTND": "104970"
-  },
+  
   {
     "id": "EVH9408609",
     "name": "2025 BYD Song Plus BEV",
@@ -713,31 +617,6 @@
   },
      "priceTND": "85430"
 },
-  {
-    "id": "EVH9403325",
-    "name": "Haval Fierce DragonMAX 1.5L 116HP",
-    "priceHT": "24 880 € (~84 840 Tnd)",
-    "mileage": 900,
-    "regyear": "2025-09",
-    "isNew": false,
-    "sold": true,
-    "images": {
-      "hero": "images/EVH9403325_HAVAL_DROIT.webp"
-    },
-    "features": [
-      "Hybride rechargeable (D)",
-      "Autonomie électrique 110 km",
-      "Batterie 19 kWh",
-      "Moteur électrique 156 ch",
-      "Puissance système 238 ch",
-      "Sièges chauffants et ventilés"
-    ],
-    "specifications": {
-      "engineCc": 1499,
-      "transmission": "Auto"
-    },
-    "priceTND": "84840"
-  },
   {
     "id": "EVH9391855",
     "name": "Chery Tiggo7 C-DM 1.5T 156HP L4",
