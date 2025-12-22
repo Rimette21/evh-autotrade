@@ -1,0 +1,88 @@
+{
+  "id": "EVH_LEXUS_ES300H_2022_022",
+  "name": "Lexus ES 300h 2.5 Executive CVT",
+  "priceHT": "39 610 €",
+  "mileage": 65 100,
+  "regyear": "2022-07",
+  "images": {
+    "hero": "images/evh_LexusES300H_devgauche.webp",
+    "gallery": [
+      "images/evh_LexusES300H_devgauche.webp",
+      "images/evh_LexusES300H_ardroite.webp",
+      "images/evh_LexusES300H_argauche.webp",
+      "images/evh_LexusES300H_intdevant.webp",
+      "images/evh_LexusES300H_interdev.webp",
+      "images/evh_LexusES300H_intboitevitesse.webp",
+      "images/evh_LexusES300H_volant.webp"
+    ]
+  },
+  "caracteristiques": [
+    "Berline 4 portes hybride essence auto‑rechargeable (HEV), 5 places",
+    "Motorisation 2.5L Atkinson + moteur électrique, système hybride Lexus 4e génération",
+    "Puissance système : 160 kW (218 ch) environ",
+    "Transmission automatique e‑CVT, traction avant (FWD)",
+    "Consommation mixte WLTP ≈ 5,2–5,5 L/100 km",
+    "Dimensions 4975 × 1865 × 1445 mm, empattement 2870 mm",
+    "Sécurité Lexus Safety System+ : AEB, maintien de voie, régulateur adaptatif",
+    "Caméra de recul, capteurs de stationnement, aide à la reconnaissance panneaux"
+  ],
+  "specifications": {
+    "engineCc": 2487,
+    "motorisation": {
+      "type": "Hybride essence auto‑rechargeable (HEV)",
+      "moteurThermique": "2.5L 4 cylindres Atkinson, env. 131 kW (178 ch)",
+      "moteurElectrique": "Moteur synchrone à aimant permanent, puissance combinée système 160 kW (218 ch)",
+      "transmission": "e‑CVT (boîte automatique à variation continue)",
+      "traction": "Avant (FWD)"
+    },
+    "performances": {
+      "vitesseMax": "180 km/h",
+      "acceleration": "0–100 km/h : ≈8,9 s",
+      "consommationMixte": "≈5,2–5,5 L/100 km (WLTP, selon marché)"
+    },
+    "batterie": {
+      "type": "Batterie lithium‑ion haute tension",
+      "capacite": "≈1,6 kWh",
+      "autonomieWLTP": "Utilisation électrique courte distance (HEV, non rechargeable)",
+      "rechargeAC": "Non applicable (batterie auto‑rechargée par le moteur et le freinage régénératif)",
+      "rechargeDC": "Non applicable (pas de recharge externe)"
+    },
+    "dimensions": "4975 × 1865 × 1445 mm",
+    "empattement": "2870 mm",
+    "poids": "≈1 680–1 750 kg (selon finition)",
+    "volumeCoffre": "≈454 litres",
+    "pneus": "Jantes alliage 17–18 pouces selon finition Executive",
+    "chassis": {
+      "suspensionAvant": "McPherson indépendante",
+      "suspensionArriere": "Double triangles / multibras indépendante",
+      "freins": "Disques ventilés avant, disques arrière",
+      "freinStationnement": "Électrique (EPB) avec fonction Auto Hold"
+    },
+    "plateforme": "Plateforme GA‑K (Toyota/Lexus, traction avant)"
+  },
+  "equipements": {
+    "interieur": [
+      "Sellerie cuir (ou similicuir haut de gamme) avec réglages électriques et mémoire",
+      "Sièges chauffants avant (souvent aussi ventilés selon Executive)",
+      "Climatisation automatique bi‑zone avec capteurs de qualité d’air",
+      "Système multimédia avec écran central, commande vocale et navigation selon marché",
+      "Instrumentation numérique / combiné mixte, éclairage d’ambiance, finitions bois/alu"
+    ],
+    "securite": [
+      "Airbags frontaux, latéraux, rideaux et airbag genoux conducteur",
+      "Lexus Safety System+ : AEB (freinage pré‑collision) avec détection piétons/cyclistes",
+      "Aide au maintien dans la voie (LKA/LDA) et alerte franchissement de ligne",
+      "Régulateur de vitesse adaptatif (ACC) avec fonction stop & go selon marché",
+      "Surveillance des angles morts (BSM) et alerte trafic arrière (RCTA)",
+      "Caméra de recul, capteurs de stationnement avant/arrière",
+      "Surveillance pression pneus (TPMS), ABS, VSC, contrôle de traction"
+    ],
+    "connectivite": [
+      "Bluetooth, prises USB / USB‑C",
+      "Intégration smartphone Apple CarPlay / Android Auto (filaire ou sans fil selon année/marché)",
+      "Système audio premium (Lexus/Pioneer ou Mark Levinson selon option)",
+      "Services connectés Lexus Link / téléservices selon pays"
+    ]
+  },
+  "resume": "La Lexus ES 300h 2.5 Executive 2022 est une grande berline hybride auto‑rechargeable associant un 4 cylindres 2.5L Atkinson à un moteur électrique pour une puissance d’environ 218 ch (10 CV fiscaux en Tunisie), une consommation proche de 5,3 L/100 km et une conduite très confortable. Avec sa transmission e‑CVT, sa traction avant, son habitacle haut de gamme et le pack Lexus Safety System+, elle vise les usages routiers et autoroutiers premium à faible consommation."
+}
