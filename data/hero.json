@@ -469,31 +469,6 @@
     },
     "priceTND": "86310"
   },
-  {
-  "id": "EVH_LEXUS_ES300H_2022_022",
-  "name": "Lexus ES 300h 2.5 Executive CVT",
-  "priceHT": "42 400 € (~144 590 Tnd)",
-  "mileage": 65100,
-  "regyear": "2022-07",
-  "isNew": false,
-  "featuresCount": 6,
-  "images": {
-    "hero": "images/evh_LexusES300H_devgauche.webp"
-  },
-  "features": [
-    "Hybride (HEV)",
-    "Moteur 2.5L Atkinson + moteur électrique, puissance système ≈218 ch (10 CV fiscaux Tunisie)",
-    "Transmission e‑CVT, traction avant (FWD)",
-    "Consommation mixte ≈5,2–5,5 L/100 km (WLTP)",
-    "Pack Lexus Safety System+ (AEB, maintien de voie, régulateur adaptatif)",
-    "Confort premium : sellerie cuir, clim bi‑zone, écran multimédia avec CarPlay/Android Auto"
-  ],
-  "specifications": {
-    "engineCc": 2487,
-    "transmission": "e‑CVT automatique, traction avant (FWD)"
- },
-    "priceTND": "144 590"
-  },
 
   {
     "id": "EVH_AudiQ42022014",
