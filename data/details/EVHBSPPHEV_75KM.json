@@ -1,6 +1,6 @@
 {
   "id": "EVHBSPPHEV_75KM",
-  "name": "2025 BYD Song Plus DM-i 75KM PHEV",
+  "name": "2025 BYD Song Plus DM-i 75KM Luxury",
   "priceHT": "23 930 €",
   "mileage": 0,
   "regyear": "2025-09",
@@ -83,5 +83,5 @@
     ]
   },
   "resume": "Le BYD Song Plus DM-i 75KM est un SUV hybride rechargeable alliant moteur 1.5L essence et électrique 160 kW. Avec sa batterie Blade LFP de 12.9 kWh et jusqu’à 75 km d’autonomie électrique, il offre confort, sobriété et technologies modernes telles que caméra 540°, ADAS L2 et connectivité avancée.",
-  "fichePDF": "data/fiche/FT-Byd Song Plus DM-i.pdf"
+  "fichePDF": "data/fiche/FT-BydSongPlus.pdf"
 }
