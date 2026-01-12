@@ -1,16 +1,17 @@
 {
   "id": "EVHBSPPHEV_160KM",
-  "name": "2025 BYD Song Plus DM-i 160KM PHEV",
+  "name": "2025 BYD Song Plus DM-i 160KM Flagship",
   "priceHT": "27 800 €",
   "mileage": 0,
   "regyear": "2025-01",
   "images": {
-    "hero": "images/EVH_BSPPHEV_160km_DEV.webp",
+    "hero": "images/BSP160_devdroite.webp",
     "gallery": [
-      "images/EVH_BSPPHEV_160km_dev_droit.webp",
+      "images/BSP160_devgauche.webp",
       "images/EVH_BSPPHEV_160km_dev_gauche.webp",
       "images/EVH_BSPPHEV_160km_GAUCHE.webp",
-      "images/EVH_BSPPHEV_160km_int_devant.webp"
+      "images/BSP160_portiere.webp",
+      "images/BSP160_tabbord.webp"
     ]
   },
   "caracteristiques": [
