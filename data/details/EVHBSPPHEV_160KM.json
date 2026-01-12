@@ -1,6 +1,6 @@
 {
   "id": "EVHBSPPHEV_160KM",
-  "name": "2025 BYD Song Plus DM-i 160KM PHEV",
+  "name": "2025 BYD Song Plus DM-i 160KM "Flagship",
   "priceHT": "27 800 €",
   "mileage": 0,
   "regyear": "2025-01",
@@ -77,5 +77,5 @@
     ]
   },
   "resume": "Le BYD Song Plus DM-i 160KM associe batterie Blade LFP 26.6 kWh, autonomie électrique étendue (~160 km CLTC) et transmission e-CVT DHT pour une conduite fluide et économique. ADAS L2, caméra 360° et habitacle bien équipé en font un SUV PHEV confortable et très efficient.",
-   "fichePDF": "data/fiche/FT-EVHBSPPHEV_160KM.pdf"
+   "fichePDF": "data/fiche/FT-BydSongPlus.pdf"
 }
