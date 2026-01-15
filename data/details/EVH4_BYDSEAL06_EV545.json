@@ -1,21 +1,21 @@
 {
-  "id": "EVHBYDSEAL6EV007",
+  "id": "EVH4_BYDSEAL06_EV545",
   "name": "2025 BYD Seal 06 EV 545KM Flagship Model",
   "priceHT": "25 540 €",
   "dutiesEstimate": "",
   "mileage": 0,
   "regyear": "2025-10",
   "images": {
-    "hero": "images/EVHBYD_SEAL6_EV_FACE.webp",
+    "hero": "images/EVH4_BYDSEAL06_EV545/devantdroit.webp",
     "gallery": [
-      "images/EVHBYD_SEAL6_EV_COTE_DROIT.webp",
-      "images/EVHBYD_SEAL6_EV_ARDROITE.webp",
-      "images/EVHBYD_SEAL6_EV_DEVGAUCHE.webp",
-      "images/EVHBYD_SEAL6_EV_tabbord.webp",
-      "images/EVHBYD_SEAL6_EV_arriere.webp",
-       "images/EVHBYD_SEAL6_EV_tableaubord.webp",
-       "images/EVHBYD_SEAL6_EV_interieurgris.webp",
-      "images/EVHBYD_SEAL6_EV_interieurbeige.webp"
+      "images/EVH4_BYDSEAL06_EV545/devantgauche.webp",
+      "images/EVH4_BYDSEAL06_EV545/arrieregauche.webp",
+      "images/EVH4_BYDSEAL06_EV545/devantface.webp",
+      "images/EVH4_BYDSEAL06_EV545/arriere.webp",
+      "images/EVH4_BYDSEAL06_EV545/intdevant.webp",
+       "images/EVH4_BYDSEAL06_EV545/tableaubord.webp",
+       "images/EVH4_BYDSEAL06_EV545/interieurbeige.webp",
+      "images/EVH4_BYDSEAL06_EV545/interieurgris.webp"
     ]
   },
   "caracteristiques": [

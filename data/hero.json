@@ -74,7 +74,7 @@
     "priceTND": "103260"
   },
   {
-    "id": "EVHBYDSEAL6EV007",
+    "id": "EVH4_BYDSEAL06_EV545",
     "name": "2025-BYD Seal 06 EV 545KM Flagship",
     "priceHT": "26 140 €  (~89140 TND)",
     "mileage": 0,
@@ -82,7 +82,7 @@
     "isNew": true,
     "featuresCount": 6,
     "images": {
-      "hero": "images/BYDSEAL6_Devface.webp"
+      "hero": "images/EVH4_BYDSEAL06_EV545/devantgauche.webp"
     },
     "features": [
       "100% électrique (BEV)",
