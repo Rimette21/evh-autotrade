@@ -1,17 +1,22 @@
 {
-  "id": "EVHBSPEV2025006",
+  "id": "EVH3_BSP_EV605",
   "name": "2025 Song PLUS EV 605km Flagship Edition",
   "priceHT": "29 770 €",
   "dutiesEstimate": "",
   "mileage": 0,
   "regyear": "2025-10",
   "images": {
-    "hero": "images/EVHBSPEV2025006_Flagship_noirface.webp",
+    "hero": "images/EVH3_BSP_EV605/devantface.webp",
     "gallery": [
-      "images/EVH2025006_Flagship_ ARDROITE.webp",
-      "images/EVH2025006_FLAGSHIP_COTE.webp",
-      "images/EVH2025006_FLAGSHIP_INTDEVANT.webp",
-      "images/EVH2025006_Flagship_ARGAUCHE.webp"
+      "images/EVH3_BSP_EV605/devantdroit.webp",
+      "images/EVH3_BSP_EV605/cotegauche.webp",
+      "images/EVH3_BSP_EV605/arrieredroit.web",
+      "images/EVH3_BSP_EV605/interieurdevant.webp",
+      "images/EVH3_BSP_EV605/Ecran.webp",
+      "images/EVH3_BSP_EV605/moteurbatterie.webp",
+       "images/EVH3_BSP_EV605/portiere.webp",
+       "images/EVH3_BSP_EV605/siegesarriere.webp",
+       "images/EVH3_BSP_EV605/toitpano.webp"
     ]
   },
   "caracteristiques": [

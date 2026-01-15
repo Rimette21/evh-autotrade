@@ -24,7 +24,6 @@
     },
     "priceTND": "133840"
   },
-  
   {
     "id": "EVH2_BSP_EV520",
     "name": "2025 BYD Song PLUS EV 520km Luxury",
@@ -50,6 +49,31 @@
     "priceTND": "93130"
   },
   {
+    "id": "EVH3_BSP_EV605",
+    "name": "2025 BYD Song PLUS EV 605km Flagship",
+    "priceHT": "30 280 €  (~103260 TND) ",
+    "mileage": 0,
+    "regyear": "2025-10",
+    "isNew": true,
+    "featuresCount": 6,
+    "images": {
+      "hero": "images/EVH3_BSP_EV605/devantface.webp"
+    },
+    "features": [
+      "100% électrique (BEV)",
+      "Autonomie 605 km (CLTC)",
+      "Batterie LFP Blade 87,04 kWh",
+      "Moteur 160 kW (218 ch) – 2 FWD",
+      "Recharge DC 90 kW / AC 7 kW",
+      "Caméras 360° / ADAS niveau 2+"
+    ],
+    "specifications": {
+      "engineCc": null,
+      "transmission": "AT"
+    },
+    "priceTND": "103260"
+  },
+  {
     "id": "EVHBYDSEAL6EV007",
     "name": "2025-BYD Seal 06 EV 545KM Flagship",
     "priceHT": "26 140 €  (~89140 TND)",
@@ -73,57 +97,6 @@
       "transmission": "Auto AT"
     },
     "priceTND": "89140"
-  },
-  
-  {
-    "id": "EVHBSPEV2025005",
-    "name": "2025 BYD Song PLUS EV 520km Premium",
-    "priceHT": "28 480 € (~97120 TND) ",
-    "mileage": 0,
-    "regyear": "2025-10",
-    "isNew": true,
-    "featuresCount": 6,
-    "images": {
-      "hero": "images/EVHBSPEV2025005_dev_face.webp"
-    },
-    "features": [
-      "100% électrique (BEV)",
-      "Autonomie 520 km (CLTC)",
-      "Batterie LFP Blade 71,8 kWh",
-      "Moteur 150 kW (204 ch) – FWD",
-      "Recharge DC 90 kW / AC 7 kW",
-      "Caméras 360° / ADAS niveau 2+"
-    ],
-    "specifications": {
-      "engineCc": null,
-      "transmission": "AT"
-    },
-    "priceTND": "97120"
-  },
-  {
-    "id": "EVHBSPEV2025006",
-    "name": "2025 BYD Song PLUS EV 605km Flagship",
-    "priceHT": "30 280 €  (~103260 TND) ",
-    "mileage": 0,
-    "regyear": "2025-10",
-    "isNew": true,
-    "featuresCount": 6,
-    "images": {
-      "hero": "images/EVHBSPEV2025006_Flagship_noirface.webp"
-    },
-    "features": [
-      "100% électrique (BEV)",
-      "Autonomie 605 km (CLTC)",
-      "Batterie LFP Blade 87,04 kWh",
-      "Moteur 160 kW (218 ch) – 2 FWD",
-      "Recharge DC 90 kW / AC 7 kW",
-      "Caméras 360° / ADAS niveau 2+"
-    ],
-    "specifications": {
-      "engineCc": null,
-      "transmission": "AT"
-    },
-    "priceTND": "103260"
   },
   {
   "id": "EVH_KIAEV5_2024019",
