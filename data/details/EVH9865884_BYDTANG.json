@@ -1,20 +1,18 @@
 {
-  "id": "EVH1_BYDTANG",
-  "name": "2025 BYD Tang L 670 KM LiDAR Flagship",
-   "priceHT": "39 310 €",
+  "id": "EVH9865884_BYDTANG",
+  "name": "Used 2025 BYD TangL BEV",
+   "priceHT": "35 740 €",
   "dutiesEstimate": "",
-  "mileage": 0,
-  "regyear": "2025",
+  "mileage": 1500,
+  "regyear": "05-2025",
   "images": {
-    "hero": "images/EVH1_BYDTANG/devdroit.webp",
+    "hero": "images/EVH9865884_BYDTANG/devgauche.webp",
     "gallery": [
-      "images/EVH1_BYDTANG/devgauche.webp",
-      "images/EVH1_BYDTANG/devface.webp",
-      "images/EVH1_BYDTANG/argauche.webp",
-      "images/EVH1_BYDTANG/intdev.webp",
-      "images/EVH1_BYDTANG/intcotedev.webp",
-      "images/EVH1_BYDTANG/accoudoir_ar.webp",
-      "images/EVH1_BYDTANG/intarriere.webp"
+      "images/EVH9865884_BYDTANG/arrieredroit.webp",
+      "images/EVH9865884_BYDTANG/cotegauche.webp",
+      "images/EVH9865884_BYDTANG/interdev.webp",
+      "images/EVH9865884_BYDTANG/interdevconducteur.webp",
+      "images/EVH9865884_BYDTANG/tableaubord.webp"
     ]
   },
   "caracteristiques": [
