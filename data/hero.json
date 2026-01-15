@@ -33,7 +33,7 @@
     "isNew": false,
     "featuresCount": 6,
     "images": {
-      "hero": "images/EVH9865884_BYDTANG/interdev.webp"
+      "hero": "images/EVH9865884_BYDTANG/Devgauche.webp"
     },
     "features": [
       "SUV 100% électrique (BEV)",
@@ -48,6 +48,30 @@
       "transmission": "Auto RWD"
     },
     "priceTND": "121 890"
+  },
+  {
+    "id": "EVH2_BSP_EV520",
+    "name": "2025 BYD Song PLUS EV 520km Luxury",
+    "priceHT": "27 310 €  (~93 130 TND) ",
+    "mileage": 0,
+    "regyear": "2025-10",
+    "isNew": true,
+    "images": {
+      "hero": "images/EVH2_BSP_EV520/Devdroit.webp"
+    },
+    "features": [
+      "100% électrique (BEV)",
+      "Autonomie 520 km (CLTC)",
+      "Batterie LFP Blade 71,8 kWh",
+      "Moteur 150 kW (204 ch) – FWD",
+      "Recharge DC 90 kW / AC 7 kW",
+      "Caméras 360° / ADAS niveau 2+"
+    ],
+    "specifications": {
+      "engineCc": null,
+      "transmission": "AT"
+    },
+    "priceTND": "93130"
   },
   {
     "id": "EVHBYDSEAL6EV007",
@@ -74,30 +98,7 @@
     },
     "priceTND": "89140"
   },
-  {
-    "id": "EVHBSPEV2025004",
-    "name": "2025 BYD Song PLUS EV 520km Luxury",
-    "priceHT": "27 310 €  (~93 130 TND) ",
-    "mileage": 0,
-    "regyear": "2025-10",
-    "isNew": true,
-    "images": {
-      "hero": "images/EVHBSPEV2025004_DEVFACE.webp"
-    },
-    "features": [
-      "100% électrique (BEV)",
-      "Autonomie 520 km (CLTC)",
-      "Batterie LFP Blade 71,8 kWh",
-      "Moteur 150 kW (204 ch) – FWD",
-      "Recharge DC 90 kW / AC 7 kW",
-      "Caméras 360° / ADAS niveau 2+"
-    ],
-    "specifications": {
-      "engineCc": null,
-      "transmission": "AT"
-    },
-    "priceTND": "93130"
-  },
+  
   {
     "id": "EVHBSPEV2025005",
     "name": "2025 BYD Song PLUS EV 520km Premium",

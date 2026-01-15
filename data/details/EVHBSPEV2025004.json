@@ -1,16 +1,16 @@
 {
-  "id": "EVHBSPEV2025004",
+  "id": "EVH2_BSP_EV520",
   "name": "2025 Song PLUS EV Smart Driving Edition 520km Luxury",
   "priceHT": "26 740 €",
   "dutiesEstimate": "",
   "mileage": 0,
   "regyear": "2025-10",
   "images": {
-    "hero": "images/EVHBSPEV2025004_DEVFACE.webp",
+    "hero": "images/EVH2_BSP_EV520/Devdroit.webp",
     "gallery": [
-      "images/EVHBSPEV2025004_cote_gauche.webp",
-      "images/EVHBSPEV2025004_intdevant.webp",
-      "images/EVHBSPEV2025004_intarriere.webp"
+      "images/EVH2_BSP_EV520/arrieregauche.webp",
+      "images/EVH2_BSP_EV520/intarriere.webp",
+      "images/EVH2_BSP_EV520/intdevant.webp"
     ]
   },
   "caracteristiques": [
