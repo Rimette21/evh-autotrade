@@ -6,18 +6,15 @@
   "mileage": 0,
   "regyear": "2025",
   "images": {
-    "hero": "images/EVHBYDTANG2025009_facetroisquart.webp",
+    "hero": "images/EVH1_BYDTANG/devdroit.webp",
     "gallery": [
-      "images/EVH_BYDTANG_2025009_devdroit.webp",
-      "images/EVH_BYDTANG_2025009_facegrise.webp",
-      "images/EVH_BYDTANG_2025009_noire_argauche.webp",
-      "images/EVHBYDTANG2025009_ardrgrise.webp",
-      "images/EVHBYDTANG2025009_intcotedev.webp",
-      "images/EVHBYDTANG2025009_intdev.webp",
-      "images/EVHBYDTANG2025009_intar.webp",
-      "images/EVHBYDTANG2025009_accoud.webp",
-      "images/EVHBYDTANG2025009_facegauche.webp",
-      "images/EVHBYDTANG2025009_jantes.webp"
+      "images/EVH1_BYDTANG/devgauche.webp",
+      "images/EVH1_BYDTANG/devface.webp",
+      "images/EVH1_BYDTANG/argauche.webp",
+      "images/EVH1_BYDTANG/intdev.webp",
+      "images/EVH1_BYDTANG/intcotedev.webp",
+      "images/EVH1_BYDTANG/accoudoir_ar.webp",
+      "images/EVH1_BYDTANG/intarriere.webp"
     ]
   },
   "caracteristiques": [
