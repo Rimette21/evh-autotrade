@@ -24,31 +24,7 @@
     },
     "priceTND": "133840"
   },
-  {
-    "id": "EVH9865884_BYDTANG",
-    "name": "Used 2025 BYD TangL BEV",
-    "priceHT": "35 740 €  (~121 890 TND) ",
-    "mileage": 1500,
-    "regyear": "05-2025",
-    "isNew": false,
-    "featuresCount": 6,
-    "images": {
-      "hero": "images/EVH9865884_BYDTANG/devgauche.webp"
-    },
-    "features": [
-      "SUV 100% électrique (BEV)",
-      "Autonomie 670 km (CLTC)",
-      "Batterie Blade LFP 100,53 kWh",
-      "Puissance moteur total 500 kW (680 ch)",
-      "Affichage tête haute (HUD) ADAS complet",
-      "SUV 7 places  système LiDAR avancé-conduite semi-autonome niveau 2"
-    ],
-    "specifications": {
-      "engineCc": "",
-      "transmission": "Auto RWD"
-    },
-    "priceTND": "121 890"
-  },
+  
   {
     "id": "EVH2_BSP_EV520",
     "name": "2025 BYD Song PLUS EV 520km Luxury",
@@ -300,6 +276,31 @@
       "transmission": "E-CVT"
     },
     "priceTND": "93090"
+  },
+  {
+    "id": "EVH9865884_BYDTANG",
+    "name": "Used 2025 BYD TangL BEV",
+    "priceHT": "35 740 €  (~121 890 TND) ",
+    "mileage": 1500,
+    "regyear": "05-2025",
+    "isNew": false,
+    "featuresCount": 6,
+    "images": {
+      "hero": "images/EVH9865884_BYDTANG/devgauche.webp"
+    },
+    "features": [
+      "SUV 100% électrique (BEV)",
+      "Autonomie 670 km (CLTC)",
+      "Batterie Blade LFP 100,53 kWh",
+      "Puissance moteur total 500 kW (680 ch)",
+      "Affichage tête haute (HUD) ADAS complet",
+      "SUV 7 places  système LiDAR avancé-conduite semi-autonome niveau 2"
+    ],
+    "specifications": {
+      "engineCc": "",
+      "transmission": "Auto RWD"
+    },
+    "priceTND": "121 890"
   },
   {
     "id": "EVH988198_160KM",
