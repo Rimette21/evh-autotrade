@@ -752,6 +752,7 @@
     "mileage": 28800,
     "regyear": "2023-01",
     "isNew": false,
+    "sold": true,
     "images": {
       "hero": "images/EVH9384241_HAVALH6_devant.webp"
     },
