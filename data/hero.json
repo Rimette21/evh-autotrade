@@ -867,30 +867,5 @@
       "transmission": "AT"
     },
     "priceTND": "105820"
-  },
-  {
-    "id": "EVH9552616",
-    "name": "2023 BYD Tang 1.5T 139HP L4 E-CVT",
-    "priceHT": "24 400 € (~83 200 TND)",
-    "mileage": 40000,
-    "regyear": "2024-03",
-    "isNew": false,
-    "featuresCount": 6,
-    "images": {
-      "hero": "images/EVH9552616_BYDTANG_devgauche.webp"
-    },
-    "features": [
-      "Hybride rechargeable (PHEV)",
-      "Autonomie électrique 112 km",
-      "Batterie Blade LFP 21,5 kWh",
-      "Moteur électrique 160 kW (218 ch)",
-      "Recharge DC 40 kW (30→80% ≈ 30 min)",
-      "SUV 7 places-ADAS niveau2-écran rotatif 15,6″"
-    ],
-    "specifications": {
-      "engineCc": "1497 cc",
-      "transmission": "Automatique E-CVT"
-    },
-    "priceTND": "83200"
   }
 ]
