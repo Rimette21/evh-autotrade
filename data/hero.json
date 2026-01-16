@@ -251,6 +251,7 @@
   "mileage": 100,
   "regyear": "2025-11",
   "isNew": true,
+  "sold": true,
   "images": {
     "hero": "images/EVH9677996MERCEQA_devgauche.webp"
   },
