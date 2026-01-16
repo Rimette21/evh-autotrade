@@ -1,17 +1,19 @@
 {
-  "id": "EVHBSPPHEV_75KM",
+  "id": "EVH9-BSP-PHEV75",
   "name": "2025 BYD Song Plus DM-i 75KM Luxury",
   "priceHT": "23 930 €",
   "mileage": 0,
   "regyear": "2025-09",
   "images": {
-    "hero": "images/BYD75_blanche_devgauche.webp",
+    "hero": "images/EVH9-BSP-PHEV75/Herodevgauche.webp",
     "gallery": [
-      "images/BYD75_grise_arrieredroit.webp",
-      "images/EVHBSPPHEV_75KM_tabbord.webp",
-      "images/EVHBSPPHEV_75KM_arinterieur.webp",
-      "images/EVHBSPPHEV_75KM_intdev.webp",
-      "images/EVHBSPPHEV_75KM_intarriere.webp"
+      "images/EVH9-BSP-PHEV75/noire_devgauche.webp",
+      "images/EVH9-BSP-PHEV75/blanc_devgauche.webp",
+      "images/EVH9-BSP-PHEV75/arrieredroit.webp",
+      "images/EVH9-BSP-PHEV75/arrieregauche.webp",
+      "images/EVH9-BSP-PHEV75/intdev.webp",
+       "images/EVH9-BSP-PHEV75/intarriere.webp",
+      "images/EVH9-BSP-PHEV75/tabbord.webp"
     ]
   },
   "caracteristiques": [

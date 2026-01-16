@@ -196,6 +196,30 @@
     "priceTND": "104490"
   },
   {
+    "id": "EVH9-BSP-PHEV75",
+    "name": "2025 BYD Song PLUS DM-i 75KM 1.5L",
+    "priceHT": "23 930 € (~81 600 Tnd)",
+    "mileage": 0,
+    "regyear": "2025-09",
+    "isNew": true,
+    "images": {
+      "hero": "images/EVH9-BSP-PHEV75/Herodevgauche.webp"
+    },
+    "features": [
+      "Hybride rechargeable (DM-i)",
+      "Autonomie électrique 75 km (WLTP)",
+      "Batterie LFP Blade 12,9 kWh",
+      "Moteur électrique 145 kW (197 ch)",
+      "Puissance système 203 ch",
+      "Régulateur de vitesse adaptatif L2"
+    ],
+    "specifications": {
+      "engineCc": 1498,
+      "transmission": "E-CVT"
+    },
+    "priceTND": "81600"
+  },
+  {
   "id": "EVH_KIAEV5_2024019",
   "name": "2024 Kia EV5 530 Light",
   "priceHT": "24 680 € (~84 160 TND)",
@@ -352,14 +376,14 @@
   },
   
    {
-    "id": "EVHBSPPHEV_75KM",
+    "id": "EVH9-BSP-PHEV75",
     "name": "2025 BYD Song PLUS DM-i 75KM 1.5L",
     "priceHT": "23 930 € (~81 600 Tnd)",
     "mileage": 0,
     "regyear": "2025-09",
     "isNew": true,
     "images": {
-      "hero": "images/BYD75_blanche_devgauche.webp"
+      "hero": "images/EVH9-BSP-PHEV75/Herodevgauche.webp"
     },
     "features": [
       "Hybride rechargeable (DM-i)",
@@ -373,7 +397,7 @@
       "engineCc": 1498,
       "transmission": "E-CVT"
     },
-    "priceTND": "79890"
+    "priceTND": "81600"
   },
   {
     "id": "EVH7_BSP_PHEV112KM",
