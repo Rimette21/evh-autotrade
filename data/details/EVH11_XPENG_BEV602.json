@@ -1,19 +1,21 @@
 {
-  "id": "EVHxpeng25011",
+  "id": "EVH11_XPENG_BEV602",
   "name": "2026 XPENG G7 602 Long Range Max",
   "priceHT": "33 450 €",
   "dutiesEstimate": "",
   "mileage": 0,
   "regyear": "2026",
   "images": {
-    "hero": "images/EVHxpeng25011_devface.webp",
+    "hero": "images/EVH11_XPENG_BEV602/devgauche.webp",
     "gallery": [
-      "images/EVHxpeng25011_devgauche.webp",
-      "images/EVHxpeng25011_devdroit.webp",
-      "images/EVHxpeng25011_cote_droit.webp",
-      "images/EVHxpeng25011_arriere.webp",
-      "images/EVHxpeng25011_argauche.webp",
-      "images/EVHxpeng25011_intdev.webp"
+      "images/EVH11_XPENG_BEV602/devdroit.webp",
+      "images/EVH11_XPENG_BEV602/cotedroit.webp",
+      "images/EVH11_XPENG_BEV602/argauche.webp",
+      "images/EVH11_XPENG_BEV602/devface.webp",
+      "images/EVH11_XPENG_BEV602/cotedroit.webp",
+      "images/EVH11_XPENG_BEV602/arriere.webp",
+      "images/EVH11_XPENG_BEV602/intarriere.webp",
+      "images/EVH11_XPENG_BEV602/intdev.webp"
     ]
   },
   "caracteristiques": [

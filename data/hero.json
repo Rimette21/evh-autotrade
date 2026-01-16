@@ -244,6 +244,32 @@
     "priceTND": "133750"
   },
   {
+    "id": "EVH11_XPENG_BEV602",
+    "name": "2026 XPENG G7 602 Long Range Max",
+    "priceHT": "33 450 €  (~113 890 TND) ",
+    "mileage": 0,
+    "regyear": "2026",
+    "isNew": true,
+    "featuresCount": 7,
+    "images": {
+      "hero": "images/EVH11_XPENG_BEV602/devgauche.webp"
+    },
+    "features": [
+      "100% électrique (BEV)",
+      "Autonomie 602 km",
+      "Batterie LFP 80,8 kWh",
+      "Moteur 218 kW (296 ch) – propulsion",
+      "Recharge DC 800 V, 12 min 10-80 %",
+      "Accélération 0-100 km/h en 6,6 s",
+      "Caméras 360° / ADAS niveau 3 (XNGP)"
+    ],
+    "specifications": {
+      "engineCc": null,
+      "transmission": "Auto AT"
+    },
+    "priceTND": "113890"
+  },
+  {
     "id": "EVH9865884_BYDTANG",
     "name": "Used 2025 BYD TangL BEV",
     "priceHT": "35 740 €  (~121 890 TND) ",
@@ -293,7 +319,31 @@
 },
      "priceTND": "84160"
 },
-
+{
+    "id": "EVH9881981_BSP_PHEV160",
+    "name": "2025 BYD Song Plus 1.5L 101HP L4 E-CVT PHEV 26.6KWH",
+    "priceHT": "25 400 € (~86 650 Tnd)",
+    "mileage": 25000,
+    "regyear": "2025-02",
+    "isNew": false,
+    "images": {
+      "hero": "images/EVH9881981_BSP_PHEV160/devgauche.webp"
+    },
+    "features": [
+      "Hybride rechargeable (DM-i)",
+      "Autonomie électrique 160 km (WLTP)",
+      "Batterie 26,6 kWh",
+      "Moteur électrique 160 kW (218 ch)",
+      "Recharge rapide DC 40 kW / AC 7 kW",
+      "Régulateur de vitesse adaptatif (ACC)",
+      "Affichage tête haute (HUD) ADAS complet"
+    ],
+    "specifications": {
+      "engineCc": 1498,
+      "transmission": "AT"
+    },
+    "priceTND": "86650"
+  },
 {
   "id": "EVH5686663_TOYOTABZ5",
   "name": "2025 Toyota bZ5 BEV 550 km",
@@ -371,62 +421,13 @@
     },
     "priceTND": "115540"
   },
-  {
-    "id": "EVHxpeng25011",
-    "name": "2026 XPENG G7 602 Long Range Max",
-    "priceHT": "33 450 €  (~113 890 TND) ",
-    "mileage": 0,
-    "regyear": "2026",
-    "isNew": true,
-    "featuresCount": 7,
-    "images": {
-      "hero": "images/EVHxpeng25011_devface.webp"
-    },
-    "features": [
-      "100% électrique (BEV)",
-      "Autonomie 602 km (CLTC)",
-      "Batterie LFP 80,8 kWh",
-      "Moteur 218 kW (296 ch) – propulsion (roues arrière)",
-      "Recharge DC 800 V, 12 min 10-80 %",
-      "Accélération 0-100 km/h en 6,6 s",
-      "Caméras 360° / ADAS niveau 3 (XNGP)"
-    ],
-    "specifications": {
-      "engineCc": null,
-      "transmission": "Auto AT"
-    },
-    "priceTND": "113890"
-  },
+  
   
  
  
   
   
-  {
-    "id": "EVH988198_160KM",
-    "name": "2025 BYD Song Plus 1.5L 101HP L4 E-CVT PHEV 26.6KWH",
-    "priceHT": "25 400 € (~86 650 Tnd)",
-    "mileage": 25000,
-    "regyear": "2025-02",
-    "isNew": false,
-    "images": {
-      "hero": "images/EVH9881981_BSP160_devdroit.webp"
-    },
-    "features": [
-      "Hybride rechargeable (DM-i)",
-      "Autonomie électrique 160 km (WLTP)",
-      "Batterie 26,6 kWh",
-      "Moteur électrique 160 kW (218 ch)",
-      "Recharge rapide DC 40 kW / AC 7 kW",
-      "Régulateur de vitesse adaptatif (ACC)",
-      "Affichage tête haute (HUD) ADAS complet"
-    ],
-    "specifications": {
-      "engineCc": 1498,
-      "transmission": "E-CVT"
-    },
-    "priceTND": "86650"
-  },
+  
   
    
   
