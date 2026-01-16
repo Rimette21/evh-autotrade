@@ -377,54 +377,8 @@
     "priceTND": "86650"
   },
   
-   {
-    "id": "EVH9-BSP-PHEV75",
-    "name": "2025 BYD Song PLUS DM-i 75KM 1.5L",
-    "priceHT": "23 930 € (~81 600 Tnd)",
-    "mileage": 0,
-    "regyear": "2025-09",
-    "isNew": true,
-    "images": {
-      "hero": "images/EVH9-BSP-PHEV75/Herodevgauche.webp"
-    },
-    "features": [
-      "Hybride rechargeable (DM-i)",
-      "Autonomie électrique 75 km (WLTP)",
-      "Batterie LFP Blade 12,9 kWh",
-      "Moteur électrique 145 kW (197 ch)",
-      "Puissance système 203 ch",
-      "Régulateur de vitesse adaptatif L2"
-    ],
-    "specifications": {
-      "engineCc": 1498,
-      "transmission": "E-CVT"
-    },
-    "priceTND": "81600"
-  },
-  {
-    "id": "EVH7_BSP_PHEV112KM",
-    "name": "2025 BYD Song PLUS DM-i 112KM 1.5L",
-    "priceHT": "25 690 € (~87 600 Tnd)",
-    "mileage": 0,
-    "regyear": "2025",
-    "isNew": true,
-    "images": {
-      "hero": "images/EVHBSP112KM_DEVGAUCHE.webp"
-    },
-    "features": [
-      "Hybride rechargeable (DM-i)",
-      "Autonomie électrique 112 km (WLTP)",
-      "Batterie LFP Blade 18,3 kWh",
-      "Moteur électrique 145 kW (197 ch)",
-      "Puissance système 203 ch",
-      "Systèmes d'assistance avancée (L2)"
-    ],
-    "specifications": {
-      "engineCc": 1498,
-      "transmission": "E-CVT"
-    },
-    "priceTND": "87600"
-  },
+   
+  
     {
    "id": "EVHBYDLEOPARD5-2025_020",
   "name": "2025 Leopard 5 Max Edition 1.5T PHEV 125 km",
@@ -679,8 +633,9 @@
     "mileage": 1200,
     "regyear": "2024-01",
     "isNew": false,
+    "sold": true,
     "images": {
-      "hero": "images/EVH9391855_CHERRY_DEVANT.webp"
+      "hero": "images/Vendus/EVH9391855_CHERRY_DEVANT.webp"
     },
     "features": [
       "Hybride rechargeable (C-DM)",
@@ -728,8 +683,9 @@
     "mileage": 13000,
     "regyear": "2024-05",
     "isNew": false,
+    "sold": true,
     "images": {
-      "hero": "images/EVH9336933_JETOUR_DEVANT.webp"
+      "hero": "images/Vendus/EVH9336933_JETOUR_DEVANT.webp"
     },
     "features": [
       "Hybride rechargeable (i-DM)",
@@ -852,8 +808,9 @@
     "mileage": 9000,
     "regyear": "2024-07",
     "isNew": false,
+    "sold": true,
     "images": {
-      "hero": "images/EVH9404943_BYD_beige_devant.webp"
+      "hero": "images/Vendus/EVH9404943_BYD_beige_devant.webp"
     },
     "features": [
       "Hybride rechargeable (DM-i)",
@@ -900,8 +857,9 @@
     "mileage": 23000,
     "regyear": "2024-01",
     "isNew": false,
+    "sold": true,
     "images": {
-      "hero": "images/EVH9387237_BYDTANG_droit.webp"
+      "hero": "images/Vendus/EVH9387237_BYDTANG_droit.webp"
     },
     "features": [
       "SUV 7 places 100% électrique",
