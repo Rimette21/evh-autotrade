@@ -392,7 +392,30 @@
   },
     "priceTND": "85770"
 },
-
+{
+  "id": "EVH9681220_Haval_PHEV105",
+  "name": "2023 Haval Fierce Dragon MAX PHEV 105 km",
+  "priceHT": "22 490 € (~76 570 TND)",
+  "mileage": 18000,
+  "regyear": "2023-11",
+  "isNew": false,
+  "images": {
+    "hero": "images/EVH9681220_Haval_PHEV105/devgauche.webp"
+  },
+  "features": [
+    "Hybride rechargeable (PHEV) Hi4 4WD",
+    "Autonomie électrique 105 km",
+    "Moteur 1.5L 116 ch + double moteur électrique AV/AR",
+    "Puissance système 205 kW (≈279 ch), couple 585 N·m",
+    "Caméras 360°, ADAS L2 « Coffee intelligent drive »",
+    "Écran 12,3\" + combiné numérique, toit pano"
+  ],
+  "specifications": {
+    "engineCc": 1498,
+    "transmission": "Boîte hybride DHT, 4WD"
+  },
+"priceTND": "76570"
+},
   {
   "id": "EVH9677996MERCEQA",
   "name": "2025 Mercedes-Benz EQA Class-619km",
@@ -548,30 +571,7 @@
     },
     "priceTND": "103710"
   },
-  {
-  "id": "EVH9681220HavalFierce",
-  "name": "2023 Haval Fierce Dragon MAX PHEV 105 km",
-  "priceHT": "22 490 € (~76 570 TND)",
-  "mileage": 18000,
-  "regyear": "2023-11",
-  "isNew": false,
-  "images": {
-    "hero": "images/EVH9681220HavalFierce_devgauche.webp"
-  },
-  "features": [
-    "Hybride rechargeable (PHEV) Hi4 4WD",
-    "Autonomie électrique 105 km",
-    "Moteur 1.5L 116 ch + double moteur électrique AV/AR",
-    "Puissance système 205 kW (≈279 ch), couple 585 N·m",
-    "Caméras 360°, ADAS L2 « Coffee intelligent drive »",
-    "Écran 12,3\" + combiné numérique, toit pano"
-  ],
-  "specifications": {
-    "engineCc": 1498,
-    "transmission": "Boîte hybride DHT, 4WD"
-  },
-"priceTND": "76570"
-},
+  
   {
     "id": "EVH9391855",
     "name": "Chery Tiggo7 C-DM 1.5T 156HP L4",
@@ -674,40 +674,15 @@
     "priceTND": "68680"
   },
   {
-    "id": "EVH9403367",
-    "name": "2024 Jetour X70 C-DM Long Range",
-    "priceHT": "20 140 € (~68 680 Tnd)",
-    "mileage": 18000,
-    "regyear": "2024-04",
-    "isNew": false,
-    "sold": true,
-    "featuresCount": 6,
-    "images": {
-      "hero": "images/9403367_Jetour X70_devdroit.webp"
-    },
-    "features": [
-      "Hybride rechargeable (C-DM)",
-      "Autonomie électrique ~110 km",
-      "Batterie 19 kWh",
-      "Moteur électrique 136 ch",
-      "Puissance système 292 ch",
-      "7 places"
-    ],
-    "specifications": {
-      "engineCc": 1499,
-      "transmission": "Auto"
-    },
-    "priceTND": "68680"
-  },
-  {
     "id": "EVH9404921",
     "name": "2025 BYD Song Pro 1.5L 101HP L4",
     "priceHT": "21 040 € (~71 740 Tnd)",
     "mileage": 13000,
     "regyear": "2025-01",
     "isNew": false,
+    "sold": true,
     "images": {
-      "hero": "images/EVH9404921_DEV_DROITE.webp"
+      "hero": "images/Vendus/EVH9404921_DEV_DROITE.webp"
     },
     "features": [
       "Hybride rechargeable (DM-i)",
@@ -730,8 +705,9 @@
     "mileage": 21000,
     "regyear": "2024-04",
     "isNew": false,
+    "sold": true,
     "images": {
-      "hero": "images/EVH9478503_DEV_DROITE.webp"
+      "hero": "images/Vendus/EVH9478503_DEV_DROITE.webp"
     },
     "features": [
       "Hybride rechargeable (DM-i)",
@@ -779,8 +755,9 @@
     "mileage": 3800,
     "regyear": "2025-05",
     "isNew": false,
+     "sold": true,
     "images": {
-      "hero": "images/EVH9519205_CHERY_TIGO_devdroit.webp"
+      "hero": "images/Vendus/EVH9519205_CHERY_TIGO_devdroit.webp"
     },
     "features": [
       "Hybride rechargeable (C-DM)",
@@ -797,39 +774,15 @@
     "priceTND": "86680"
   },
   {
-    "id": "EVH9387237",
-    "name": "2024 BYD Tang BEV 90.3kWh 600km",
-    "priceHT": "29 620 €  (~100 850 TND) ",
-    "mileage": 23000,
-    "regyear": "2024-01",
-    "isNew": false,
-    "sold": true,
-    "images": {
-      "hero": "images/Vendus/EVH9387237_BYDTANG_droit.webp"
-    },
-    "features": [
-      "SUV 7 places 100% électrique",
-      "Autonomie 600 km (CLTC)",
-      "Puissancce 168 kW (228 ch)",
-      "Batterie LFP Blade 90.3 kWh",
-      "Charge rapide DC 30–80% en 30 min",
-      "Régulateur adaptatif & conduite semi-autonome L2"
-    ],
-    "specifications": {
-      "engineCc": null,
-      "transmission": "AT"
-    },
-    "priceTND": "100850"
-  },
-  {
     "id": "EVH9397463",
     "name": "2025 Toyota bZ5- BEV",
     "priceHT": "29 770 €  (~101 360 TND) ",
     "mileage": 1000,
     "regyear": "2025-09",
     "isNew": false,
+    "sold": true,
     "images": {
-      "hero": "images/EVH9397463_TOYOTA_DROIT.webp"
+      "hero": "images/Vendus/EVH9397463_TOYOTA_DEVANT.webp"
     },
     "features": [
       "100% électrique",
@@ -851,9 +804,10 @@
     "mileage": 28000,
     "regyear": "2023-09",
     "isNew": false,
+    "sold": true,
     "featuresCount": 5,
     "images": {
-      "hero": "images/EVH9535838-AUDIQ5_DEV-DROITE.webp"
+      "hero": "images/Vendus/EVH9535838-AUDIQ5_DEV-DROITE.webp"
     },
     "features": [
       "100% électrique (BEV)",

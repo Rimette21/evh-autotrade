@@ -1,18 +1,18 @@
 {
-  "id": "EVH9681220HavalFierce",
+  "id": "EVH9681220_Haval_PHEV105",
   "name": "2023 Haval Fierce Dragon MAX PHEV 105 km",
   "priceHT": "22 490 €",
   "mileage": 18000,
   "regyear": "2023-11",
   "images": {
-    "hero": "images/EVH9681220HavalFierce_devgauche.webp",
+    "hero": "images/EVH9681220_Haval_PHEV105/devgauche.webp",
     "gallery": [
-      "images/EVH9681220HavalFierce_arrieredroit.webp",
-      "images/EVH9681220HavalFierce_arriere.webp",
-      "images/EVH9681220HavalFierce_intdeve.webp",
-      "images/EVH9681220HavalFierce_intdev.webp",
-      "images/EVH9681220HavalFierce_intar.webp",
-      "images/EVH9681220HavalFierce_tabbord.webp"
+      "images/EVH9681220_Haval_PHEV105/arrieredroit.webp",
+      "images/EVH9681220_Haval_PHEV105/arriere.webp",
+      "images/EVH9681220_Haval_PHEV105/intdeve.webp",
+      "images/EVH9681220_Haval_PHEV105/intdev.webp",
+      "images/EVH9681220_Haval_PHEV105/intar.webp",
+      "images/EVH9681220_Haval_PHEV105/tabbord.webp"
     ]
   },
   "caracteristiques": [
