@@ -243,6 +243,31 @@
     },
     "priceTND": "133750"
   },
+  {
+    "id": "EVH9865884_BYDTANG",
+    "name": "Used 2025 BYD TangL BEV",
+    "priceHT": "35 740 €  (~121 890 TND) ",
+    "mileage": 1500,
+    "regyear": "05-2025",
+    "isNew": false,
+    "featuresCount": 6,
+    "images": {
+      "hero": "images/EVH9865884_BYDTANG/devgauche.webp"
+    },
+    "features": [
+      "SUV 100% électrique (BEV)",
+      "Autonomie 670 km (CLTC)",
+      "Batterie Blade LFP 100,53 kWh",
+      "Puissance moteur total 500 kW (680 ch)",
+      "Affichage tête haute (HUD) ADAS complet",
+      "SUV 7 places  système LiDAR avancé-conduite semi-autonome niveau 2"
+    ],
+    "specifications": {
+      "engineCc": "",
+      "transmission": "AT"
+    },
+    "priceTND": "121 890"
+  },
  
   {
   "id": "EVH_KIAEV5_2024019",
@@ -268,6 +293,7 @@
 },
      "priceTND": "84160"
 },
+
 {
   "id": "EVH5686663_TOYOTABZ5",
   "name": "2025 Toyota bZ5 BEV 550 km",
@@ -375,31 +401,7 @@
  
  
   
-  {
-    "id": "EVH9865884_BYDTANG",
-    "name": "Used 2025 BYD TangL BEV",
-    "priceHT": "35 740 €  (~121 890 TND) ",
-    "mileage": 1500,
-    "regyear": "05-2025",
-    "isNew": false,
-    "featuresCount": 6,
-    "images": {
-      "hero": "images/EVH9865884_BYDTANG/devgauche.webp"
-    },
-    "features": [
-      "SUV 100% électrique (BEV)",
-      "Autonomie 670 km (CLTC)",
-      "Batterie Blade LFP 100,53 kWh",
-      "Puissance moteur total 500 kW (680 ch)",
-      "Affichage tête haute (HUD) ADAS complet",
-      "SUV 7 places  système LiDAR avancé-conduite semi-autonome niveau 2"
-    ],
-    "specifications": {
-      "engineCc": "",
-      "transmission": "Auto RWD"
-    },
-    "priceTND": "121 890"
-  },
+  
   {
     "id": "EVH988198_160KM",
     "name": "2025 BYD Song Plus 1.5L 101HP L4 E-CVT PHEV 26.6KWH",
@@ -578,30 +580,6 @@
     "transmission": "Boîte hybride DHT, 4WD"
   },
 "priceTND": "76570"
-},
-  {
-  "id": "EVH9685367HAVALRAPTOR",
-  "name": "2023 Haval Raptor PHEV 145 km",
-  "priceHT": "25 090 € (~85430 TND)",
-  "mileage": 80000,
-  "regyear": "2023-11",
-  "isNew": false,
-  "images": {
-    "hero": "images/EVH9685367HavalRaptor_devgauche.webp"
-  },
-  "features": [
-    "Hybride rechargeable PHEV 4WD",
-    "Autonomie électrique 145 km (CLTC)",
-    "Moteur 1.5T 167 ch + moteurs électriques 220 kW",
-    "Puissance système 369 kW (502 ch)",
-    "Toit ouvrant, sièges cuir chauffants, caméra 360°",
-    "Transmission DHT, ADAS adaptatif ACC"
-  ],
-  "specifications": {
-    "engineCc": 1499,
-    "transmission": "DHT 2 vitesses, 4WD"
-  },
-     "priceTND": "85430"
 },
   {
     "id": "EVH9391855",
