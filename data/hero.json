@@ -99,6 +99,31 @@
     "priceTND": "89140"
   },
   {
+    "id": "EVH5_BYDSEALION7",
+    "name": "2025 BYD SEALION 7 EV 610 km Smart Driving",
+    "priceHT": "35 290 €  (~120 150 TND) ",
+    "mileage": 0,
+    "regyear": "2025",
+    "isNew": true,
+    "featuresCount": 6,
+    "images": {
+      "hero": "images/EVH5_BYDSEALION7/devdroite.webp"
+    },
+    "features": [
+      "100% électrique (BEV)",
+      "Autonomie 610 km (CLTC)",
+      "Batterie LFP Blade 80,64 kWh",
+      "Moteur 230 kW (313 ch) – RWD",
+      "Recharge DC 90 kW / AC 11 kW",
+      "Caméras 360° / ADAS niveau 2+"
+    ],
+    "specifications": {
+      "engineCc": null,
+      "transmission": "Auto AT"
+    },
+    "priceTND": "120150"
+  },
+  {
   "id": "EVH_KIAEV5_2024019",
   "name": "2024 Kia EV5 530 Light",
   "priceHT": "24 680 € (~84 160 TND)",
@@ -199,31 +224,7 @@
     },
     "priceTND": "113890"
   },
-  {
-    "id": "EVHBYDSEALION7008",
-    "name": "2025 BYD SEALION 7 EV 610 km Smart Driving",
-    "priceHT": "35 290 €  (~120 150 TND) ",
-    "mileage": 0,
-    "regyear": "2025",
-    "isNew": true,
-    "featuresCount": 6,
-    "images": {
-      "hero": "images/EVHBYDSEALION7_face.webp"
-    },
-    "features": [
-      "100% électrique (BEV)",
-      "Autonomie 610 km (CLTC)",
-      "Batterie LFP Blade 80,64 kWh",
-      "Moteur 230 kW (313 ch) – RWD",
-      "Recharge DC 90 kW / AC 11 kW",
-      "Caméras 360° / ADAS niveau 2+"
-    ],
-    "specifications": {
-      "engineCc": null,
-      "transmission": "Auto AT"
-    },
-    "priceTND": "120150"
-  },
+  
  
  
   {
