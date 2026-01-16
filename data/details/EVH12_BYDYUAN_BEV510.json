@@ -1,18 +1,17 @@
 {
-  "id": "EVHBYDYuan2024017",
+  "id": "EVH12_BYDYUAN_BEV510",
   "name": "BYD Yuan PLUS (Byd Atto3) 510KM Beyond Model",
   "priceHT": "23 470 €",
   "mileage": 4300,
   "regyear": "2024-08",
   "images": {
-    "hero": "images/BYDYUAN_devgauche.webp",
+    "hero": "images/EVH12_BYDYUAN_BEV510/devantgauche.webp",
     "gallery": [
-      "images/BYDYUAN_ardroit.webp",
-      "images/BYDYUAN_cotegauche.webp",
-      "images/BYDYUAN_devface.webp",
-      "images/BYDYUAN_intdevant.webp",
-      "images/BYDYUAN_intarriere.webp",
-      "images/BYDYUAN_coffre.webp"
+      "images/EVH12_BYDYUAN_BEV510/devantface.webp",
+      "images/EVH12_BYDYUAN_BEV510/arrieredroit.webp",
+      "images/EVH12_BYDYUAN_BEV510/cotegauche.webp",
+      "images/EVH12_BYDYUAN_BEV510/intdevant.webp",
+      "images/EVH12_BYDYUAN_BEV510/intarriere.webp"
     ]
   },
   "caracteristiques": [

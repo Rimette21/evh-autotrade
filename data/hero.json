@@ -421,27 +421,16 @@
     },
     "priceTND": "115540"
   },
-  
-  
- 
- 
-  
-  
-  
-  
-   
-  
-    
-  {
-  "id": "EVHBYDYuan2024017",
-  "name": "2024 BYD Yuan PLUS (Byd Atto3)",
+ {
+  "id": "EVH12_BYDYUAN_BEV510",
+  "name": "2024 BYD Atto3 BEV",
   "priceHT": "23 470 € (~80 000 TND)",
   "mileage": 4300,
   "regyear": "2024-08",
   "isNew": false,
   "featuresCount": 6,
   "images": {
-    "hero": "images/BYDYUAN_devgauche.webp"
+    "hero": "images/EVH12_BYDYUAN_BEV510/devantgauche.webp"
   },
   "features": [
     "SUV 100% électrique (BEV) 5 places",
