@@ -1,19 +1,19 @@
 {
-  "id": "EVHBYDFRIGATE07_015",
+  "id": "EVH8_BYDFRIGATE07_PHEV100",
   "name": "2025 BYD Frigate 07 1.5 DM-i PHEV 100 km",
   "priceHT": "34 080 €",
   "mileage": 0,
   "regyear": "2025-11",
   "images": {
-    "hero": "images/EVH_bydfrigate07_Devgauche.webp",
+    "hero": "images/EVH8_BYDFRIGATE07_PHEV100/cotegauche.webp",
     "gallery": [
-      "images//EVH_bydfrigate07_cotegauche.webp",
-      "images/EVH_bydfrigate07_troisquart.webp",
-      "images/EVH_bydfrigate07_facegauche.webp",
-      "images/EVH_bydfrigate07_face.webp",
-      "images/EVH_bydfrigate07_cotedroit.webp",
-      "images/EVH_bydfrigate07_arrieregauche.webp",
-      "images/EVH_bydfrigate07_intdevant.webp"
+      "images//EVH8_BYDFRIGATE07_PHEV100/Faceroute.webp",
+      "images/EVH8_BYDFRIGATE07_PHEV100/Devgauche.webp",
+      "images/EVH8_BYDFRIGATE07_PHEV100/Devface.webp",
+      "images/EVH8_BYDFRIGATE07_PHEV100/cotedroit.webp",
+      "images/EVH8_BYDFRIGATE07_PHEV100/facegauche.webp",
+      "images/EVH8_BYDFRIGATE07_PHEV100/interieurdevant.webp",
+      "images/EVH8_BYDFRIGATE07_PHEV100/interieurarriere.webp"
     ]
   },
   "caracteristiques": [
@@ -50,7 +50,7 @@
     "dimensions": "4820 × 1920 × 1720 mm",
     "empattement": "2712 mm",
     "poids": "Environ 2000 kg",
-    "volumeCoffre": "Non précisé mais standard SUV 5 places",
+    "volumeCoffre": "615-1800",
     "pneus": "235/55 R19",
     "chassis": {
       "suspensionAvant": "Type McPherson indépendante",
@@ -58,7 +58,7 @@
       "freins": "Disques ventilés avant et arrière",
       "freinStationnement": "Électrique (EPB)"
     },
-    "plateforme": "BYD hybride rechargeable maison"
+    "plateforme": "BYD hybride rechargeable"
   },
   "equipements": {
     "interieur": [
@@ -80,7 +80,6 @@
     ],
     "connectivite": [
       "Bluetooth",
-      "Apple CarPlay sans fil, Android Auto",
       "USB / USB-C",
       "Services connectés BYD",
       "Recharge smartphone sans fil"

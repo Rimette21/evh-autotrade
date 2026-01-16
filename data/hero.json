@@ -124,6 +124,78 @@
     "priceTND": "120150"
   },
   {
+    "id": "EVH6_BSP_PHEV160",
+    "name": "2026 BYD Song Plus 1.5L DM-i",
+    "priceHT": "27 800 € (~94 800 Tnd)",
+    "mileage": 0,
+    "regyear": "2026",
+    "isNew": true,
+    "images": {
+      "hero": "images/EVH6_BSP_PHEV160/devantface.webp"
+    },
+    "features": [
+      "Hybride rechargeable (DM-i)",
+      "Autonomie électrique 160 km (WLTP)",
+      "Batterie 26,6 kWh",
+      "Moteur électrique 160 kW (218 ch)",
+      "Recharge rapide DC 40 kW / AC 7 kW",
+      "Régulateur de vitesse adaptatif (ACC)"
+    ],
+    "specifications": {
+      "engineCc": 1498,
+      "transmission": "E-CVT"
+    },
+    "priceTND": "94800"
+  },
+  {
+    "id": "EVH7_BSP_PHEV112KM",
+    "name": "2025 BYD Song PLUS DM-i 112KM 1.5L",
+    "priceHT": "25 690 € (~87 600 Tnd)",
+    "mileage": 0,
+    "regyear": "2025",
+    "isNew": true,
+    "images": {
+      "hero": "images/EVH6_BSP_PHEV160/Devgauche.webp"
+    },
+    "features": [
+      "Hybride rechargeable (DM-i)",
+      "Autonomie électrique 112 km (WLTP)",
+      "Batterie LFP Blade 18,3 kWh",
+      "Moteur électrique 145 kW (197 ch)",
+      "Puissance système 203 ch",
+      "Systèmes d'assistance avancée (L2)"
+    ],
+    "specifications": {
+      "engineCc": 1498,
+      "transmission": "E-CVT"
+    },
+    "priceTND": "87600"
+  },
+  {
+    "id": "EVH8_BYDFRIGATE07_PHEV100",
+    "name": "2025 BYD Frigate 07 1.5 DM-i PHEV 100 km",
+    "priceHT": "30 690 € (~104 490 Tnd)",
+    "mileage": 0,
+    "regyear": "2025",
+    "isNew": true,
+    "images": {
+      "hero": "images/EVH8_BYDFRIGATE07_PHEV100/cotegauche.webp"
+    },
+    "features": [
+      "Hybride rechargeable (PHEV)",
+      "Autonomie 100 km (WLTP)",
+      "Puissance combinée 145 kW (197 ch)",
+      "Moteur électrique 43 kW",
+      "Affichage tête haute (HUD) ADAS complet",
+      "Caméras 360° assistance conduite"
+    ],
+    "specifications": {
+      "engineCc": 1500,
+      "transmission": "Auto AT"
+    },
+    "priceTND": "104490"
+  },
+  {
   "id": "EVH_KIAEV5_2024019",
   "name": "2024 Kia EV5 530 Light",
   "priceHT": "24 680 € (~84 160 TND)",
@@ -227,30 +299,7 @@
   
  
  
-  {
-    "id": "EVHBSPPHEV_160KM",
-    "name": "2025 BYD Song Plus 1.5L DM-i",
-    "priceHT": "27 800 € (~94 800 Tnd)",
-    "mileage": 0,
-    "regyear": "2025",
-    "isNew": true,
-    "images": {
-      "hero": "images/BYD160_DEVGAUCHE.webp"
-    },
-    "features": [
-      "Hybride rechargeable (DM-i)",
-      "Autonomie électrique 160 km (WLTP)",
-      "Batterie 26,6 kWh",
-      "Moteur électrique 160 kW (218 ch)",
-      "Recharge rapide DC 40 kW / AC 7 kW",
-      "Régulateur de vitesse adaptatif (ACC)"
-    ],
-    "specifications": {
-      "engineCc": 1498,
-      "transmission": "E-CVT"
-    },
-    "priceTND": "93090"
-  },
+  
   {
     "id": "EVH9865884_BYDTANG",
     "name": "Used 2025 BYD TangL BEV",
@@ -301,30 +350,7 @@
     },
     "priceTND": "86650"
   },
-  {
-    "id": "EVHBYDFRIGATE07_015",
-    "name": "2025 BYD Frigate 07 1.5 DM-i PHEV 100 km",
-    "priceHT": "30 690 € (~104 490 Tnd)",
-    "mileage": 0,
-    "regyear": "2025-11",
-    "isNew": true,
-    "images": {
-      "hero": "images/EVH_bydfrigate07_cotegauche.webp"
-    },
-    "features": [
-      "Hybride rechargeable (PHEV)",
-      "Autonomie 100 km (WLTP)",
-      "Puissance combinée 145 kW (197 ch)",
-      "Moteur électrique 43 kW",
-      "Affichage tête haute (HUD) ADAS complet",
-      "Caméras 360° assistance conduite"
-    ],
-    "specifications": {
-      "engineCc": 1500,
-      "transmission": "Auto AT"
-    },
-    "priceTND": "104490"
-  },
+  
    {
     "id": "EVHBSPPHEV_75KM",
     "name": "2025 BYD Song PLUS DM-i 75KM 1.5L",
@@ -350,11 +376,11 @@
     "priceTND": "79890"
   },
   {
-    "id": "EVHBSPPHEV_112KM",
+    "id": "EVH7_BSP_PHEV112KM",
     "name": "2025 BYD Song PLUS DM-i 112KM 1.5L",
     "priceHT": "25 690 € (~87 600 Tnd)",
     "mileage": 0,
-    "regyear": "2025-01",
+    "regyear": "2025",
     "isNew": true,
     "images": {
       "hero": "images/EVHBSP112KM_DEVGAUCHE.webp"
@@ -371,7 +397,7 @@
       "engineCc": 1498,
       "transmission": "E-CVT"
     },
-    "priceTND": "86955"
+    "priceTND": "87600"
   },
     {
    "id": "EVHBYDLEOPARD5-2025_020",

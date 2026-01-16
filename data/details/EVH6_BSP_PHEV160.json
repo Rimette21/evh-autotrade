@@ -5,13 +5,16 @@
   "mileage": 0,
   "regyear": "2025-01",
   "images": {
-    "hero": "images/BYD160_DEVGAUCHE.webp",
+    "hero": "images/EVH6_BSP_PHEV160/devantface.webp",
     "gallery": [
-      "images/BSP160_devgauche.webp",
-      "images/EVH_BSPPHEV_160km_dev_gauche.webp",
-      "images/BSP160_devdroite.webp",
-      "images/BSP160_portiere.webp",
-      "images/BSP160_tabbord.webp"
+      "images/EVH6_BSP_PHEV160/Devgauche.webp",
+      "images/EVH6_BSP_PHEV160/devantgauche.webp",
+      "images/EVH6_BSP_PHEV160/cotegauche.webp",
+      "images/EVH6_BSP_PHEV160/arrieredroit.webp",
+      "images/EVH6_BSP_PHEV160/interieurdev.webp",
+      "images/EVH6_BSP_PHEV160/tabbord.webp",
+      "images/EVH6_BSP_PHEV160/portiere.webp",
+      "images/EVH6_BSP_PHEV160/arriere.webp"
     ]
   },
   "caracteristiques": [
