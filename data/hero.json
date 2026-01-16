@@ -250,7 +250,7 @@
   "priceHT": "24 680 € (~84 160 TND)",
   "mileage": 100,
   "regyear": "2024-01",
-  "isNew": false,
+  "isNew": true,
   "images": {
     "hero": "images/KIA_EV5_devdroit.jpg"
   },
@@ -267,6 +267,30 @@
     "transmission": "Automatique 1 rapport (EV, FWD 2WD)"
 },
      "priceTND": "84160"
+},
+{
+  "id": "EVH5686663_TOYOTABZ5",
+  "name": "2025 Toyota bZ5 BEV 550 km",
+  "priceHT": "25 190 € (~85770 Tnd)",
+  "mileage": 2000,
+  "regyear": "2025-11",
+  "isNew": false,
+  "images": {
+    "hero": "images/EVH5686663_TOYOTABZ5/devgauche.webp"
+  },
+  "features": [
+    "100% électrique (BEV)",
+    "Autonomie 550 km (CLTC)",
+    "Puissance 200 kW (272 ch)",
+    "Moteur électrique 200 kW avant",
+    "ADAS L2 complet",
+    "Caméras 360°, assistance conduite"
+  ],
+  "specifications": {
+    "engineCc": 0,
+    "transmission": "Auto AT"
+  },
+    "priceTND": "85770"
 },
 
   {
@@ -454,30 +478,7 @@
  },
     "priceTND": "88190"
 },
-  {
-  "id": "EVH5686663TOYOTABZ5",
-  "name": "2025 Toyota bZ5 BEV 550 km",
-  "priceHT": "25 190 € (~85770 Tnd)",
-  "mileage": 2000,
-  "regyear": "2025-11",
-  "isNew": false,
-  "images": {
-    "hero": "images/EVH5686663TOYOTABZ5_devgauche.webp"
-  },
-  "features": [
-    "100% électrique (BEV)",
-    "Autonomie 550 km (CLTC)",
-    "Puissance 200 kW (272 ch)",
-    "Moteur électrique 200 kW avant",
-    "ADAS L2 complet",
-    "Caméras 360°, assistance conduite"
-  ],
-  "specifications": {
-    "engineCc": 0,
-    "transmission": "Auto AT"
-  },
-    "priceTND": "85770"
-},
+  
   {
     "id": "EVH_ToyotaBZ3_2025015",
     "name": "2025 Toyota BZ 3X Air+ BEV 430km",
@@ -553,31 +554,6 @@
       "transmission": "Auto AT"
     },
     "priceTND": "103710"
-  },
-  
-  {
-    "id": "EVH9408609",
-    "name": "2025 BYD Song Plus BEV",
-    "priceHT": "24 510 €  (~83 450 TND) ",
-    "mileage": 5000,
-    "regyear": "2025-08",
-    "isNew": false,
-    "featuresCount": 4,
-    "images": {
-      "hero": "images/EVH9408609_BYD_gris_droit.webp"
-    },
-    "features": [
-      "100% électrique (BEV)",
-      "Autonomie 520 km",
-      "Batterie 71.8 kWh",
-      "Puissance moteur 150 kW (≈204 ch)",
-      "Régulateur de vitesse adaptatif"
-    ],
-    "specifications": {
-      "engineCc": null,
-      "transmission": "AT"
-    },
-    "priceTND": "83450"
   },
   {
   "id": "EVH9681220HavalFierce",
