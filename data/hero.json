@@ -294,7 +294,31 @@
     },
     "priceTND": "121 890"
   },
- 
+  {
+  "id": "EVH12_BYDYUAN_BEV510",
+  "name": "2024 BYD Atto3 BEV",
+  "priceHT": "23 470 € (~80 000 TND)",
+  "mileage": 4300,
+  "regyear": "2024-08",
+  "isNew": false,
+  "featuresCount": 6,
+  "images": {
+    "hero": "images/EVH12_BYDYUAN_BEV510/devantgauche.webp"
+  },
+  "features": [
+    "SUV 100% électrique (BEV) 5 places",
+    "Autonomie 510 km NEDC (≈430–450 km WLTP estimés)",
+    "Moteur électrique avant 150 kW (204 ch), 310 N·m",
+    "Batterie Blade LFP 60,48 kWh, conso 12,5 kWh/100 km",
+    "ADAS avec maintien de voie, régulateur adaptatif, freinage d'urgence",
+    "Toit panoramique, accès/démarrage sans clé, aides au stationnement"
+  ],
+  "specifications": {
+    "engineCc": 0,
+    "transmission": "Boîte fixe 1 rapport (EV, FWD)"
+  },
+    "priceTND": "80000"
+},
   {
   "id": "EVH_KIAEV5_2024019",
   "name": "2024 Kia EV5 530 Light",
@@ -421,31 +445,7 @@
     },
     "priceTND": "115540"
   },
- {
-  "id": "EVH12_BYDYUAN_BEV510",
-  "name": "2024 BYD Atto3 BEV",
-  "priceHT": "23 470 € (~80 000 TND)",
-  "mileage": 4300,
-  "regyear": "2024-08",
-  "isNew": false,
-  "featuresCount": 6,
-  "images": {
-    "hero": "images/EVH12_BYDYUAN_BEV510/devantgauche.webp"
-  },
-  "features": [
-    "SUV 100% électrique (BEV) 5 places",
-    "Autonomie 510 km NEDC (≈430–450 km WLTP estimés)",
-    "Moteur électrique avant 150 kW (204 ch), 310 N·m",
-    "Batterie Blade LFP 60,48 kWh, conso 12,5 kWh/100 km",
-    "ADAS avec maintien de voie, régulateur adaptatif, freinage d'urgence",
-    "Toit panoramique, accès/démarrage sans clé, aides au stationnement"
-  ],
-  "specifications": {
-    "engineCc": 0,
-    "transmission": "Boîte fixe 1 rapport (EV, FWD)"
-  },
-    "priceTND": "80000"
-},
+ 
   {
   "id": "ToyotaFrontlander_2023018",
   "name": "2023 Toyota Frontlander 2.0L Hybrid Leading Edition",
@@ -453,6 +453,7 @@
   "mileage": 4900,
   "regyear": "2024-03",
   "isNew": false,
+  "sold": true,
   "images": {
     "hero": "images/ToyotaFrontlander_devgauche.webp"
   },
