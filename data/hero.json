@@ -220,6 +220,31 @@
     "priceTND": "81600"
   },
   {
+   "id": "EVH10_BYDLEOPARD_PHEV125",
+  "name": "2025 Leopard 5 Max Edition 1.5T PHEV 125 km",
+  "priceHT": "39 220 € (~133 750 TND)",
+  "mileage": 100,
+  "regyear": "2025-04",
+  "isNew": true,
+  "images": {
+    "hero": "images/EVH10_BYDLEOPARD_PHEV125/DEVGAUCHE.webp"
+  },
+  "features": [
+    "SUV PHEV 4WD 1.5T + double moteurs électriques",
+    "Puissance totale 485 kW (≈660 ch), couple 760 N·m",
+    "Batterie 31,8 kWh, autonomie 125 km CLTC",
+    "Boîte DHT automatique, capacités tout‑terrain avancées",
+    "10 airbags, ADAS complet (ACC, LKA, AEB, BSD, 360°)",
+    "Intérieur cuir luxe, double écran, CarPlay/Android Auto"
+  ],
+  "specifications": {
+    "engineCc": 1497,
+    "transmission": "Boîte hybride DHT automatique, 4WD"
+    },
+    "priceTND": "133750"
+  },
+ 
+  {
   "id": "EVH_KIAEV5_2024019",
   "name": "2024 Kia EV5 530 Light",
   "priceHT": "24 680 € (~84 160 TND)",
@@ -379,31 +404,7 @@
   
    
   
-    {
-   "id": "EVHBYDLEOPARD5-2025_020",
-  "name": "2025 Leopard 5 Max Edition 1.5T PHEV 125 km",
-  "priceHT": "39 220 € (~133 750 TND)",
-  "mileage": 100,
-  "regyear": "2025-04",
-  "isNew": true,
-  "images": {
-    "hero": "images/BYD_LEOPARD5_DEVGAUCHE.jpg"
-  },
-  "features": [
-    "SUV PHEV 4WD 1.5T + double moteurs électriques",
-    "Puissance totale 485 kW (≈660 ch), couple 760 N·m",
-    "Batterie 31,8 kWh, autonomie électrique 125 km CLTC",
-    "Boîte DHT automatique, capacités tout‑terrain avancées",
-    "10 airbags, ADAS complet (ACC, LKA, AEB, BSD, 360°)",
-    "Intérieur cuir luxe, double écran, CarPlay/Android Auto"
-  ],
-  "specifications": {
-    "engineCc": 1497,
-    "transmission": "Boîte hybride DHT automatique, 4WD"
-    },
-    "priceTND": "133750"
-  },
- 
+    
   {
   "id": "EVHBYDYuan2024017",
   "name": "2024 BYD Yuan PLUS (Byd Atto3)",

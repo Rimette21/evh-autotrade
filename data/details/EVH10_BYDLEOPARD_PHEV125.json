@@ -1,19 +1,19 @@
 {
-  "id": "EVHBYDLEOPARD5-2025_020",
+  "id": "EVH10_BYDLEOPARD_PHEV125",
   "name": "2025 Leopard 5 Max Edition 1.5T PHEV 125 km",
   "priceHT": "39 220 € (~133 750 TND)",
   "mileage": 100,
   "regyear": "2025-04",
   "images": {
-    "hero": "images/BYD_LEOPARD5_DEVGAUCHE.jpg",
+    "hero": "images/EVH10_BYDLEOPARD_PHEV125/Grise_devgauche.jpg",
     "gallery": [
-      "images/BYD_LEOPARD5_DEVDROIT.jpg",
-      "images/BYD_LEOPARD5_ARRIERE.jpg",
-      "images/BYD_LEOPARD5_ARRDROIT.jpg",
-      "images/BYD_LEOPARD5_ECRAN.jpg",
-      "images/BYD_LEOPARD5_INTDEVANT.jpg",
-      "images/BYD_LEOPARD5_INTDEVANT2.jpg",
-      "images/BYD_LEOPARD5_MOTEUR.jpg"
+      "images/EVH10_BYDLEOPARD_PHEV125/DEVGAUCHE.jpg",
+      "images/EVH10_BYDLEOPARD_PHEV125/Grise_devdroite.jpg",
+      "images/EVH10_BYDLEOPARD_PHEV125/noire_devdroite.jpg",
+      "images/EVH10_BYDLEOPARD_PHEV125/noire_devgauche.jpg",
+      "images/EVH10_BYDLEOPARD_PHEV125/Grise_arrieregauche.jpg",
+      "images/EVH10_BYDLEOPARD_PHEV125/intdevant.jpg",
+      "images/EVH10_BYDLEOPARD_PHEV125/Toitpanoramique.jpg"
     ]
   },
   "caracteristiques": [
