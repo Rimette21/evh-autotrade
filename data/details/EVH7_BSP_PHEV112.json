@@ -1,17 +1,19 @@
 {
-  "id": "EVHBSPPHEV_112KM",
+  "id": "EVH7_BSP_PHEV112",
   "name": "2025 BYD Song PLUS DM-i 112KM Prestige",
   "priceHT": "25 690 €",
   "mileage": 0,
   "regyear": "2025-01",
   "images": {
-    "hero": "images/EVHBSP112KM_DEVGAUCHE.webp",
+    "hero": "images/EVH7_BSP_PHEV112/Devgauche.webp",
     "gallery": [
-       "images/EVHBSP112KM_ARGAUCHE.webp",
-      "images/EVHBSPPHEV_75KM_tabbord.webp",
-      "images/EVHBSPPHEV_75KM_intarriere.webp",
-      "images/EVHBSPPHEV_75KM_intdevant.webp",
-      "images/EVHBSPPHEV_75KM_intdev.webp"
+       "images/EVH7_BSP_PHEV112/devantgauche.webp",
+      "images/EVH7_BSP_PHEV112/cotegauche.webp",
+      "images/EVH7_BSP_PHEV112/arrieredroit.webp",
+      "images/EVH7_BSP_PHEV112/arriere.webp",
+      "images/EVH7_BSP_PHEV112/interieurdev.webp"?
+      "images/EVH7_BSP_PHEV112/tabbord.webp"
+      "images/EVH7_BSP_PHEV112/interieur.webp"
     ]
   },
   "caracteristiques": [
