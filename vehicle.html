@@ -344,8 +344,8 @@ if (energie === 'PHEV') {
   customsNotice =
     '<div class="price-sub"><span class="notice notice--customs">(Dédouanement possible sous conditions)</span></div>';
 }
-
-root.innerHTML =
+/* ===== Rendu ===== */
+root.innerHTML = 
   '<div class="vehicle-header">'+
     '<div class="vehicle-title">'+
       '<h1>'+(data.name || 'Véhicule')+'</h1>'+
@@ -353,17 +353,17 @@ root.innerHTML =
     '</div>'+
     '<div class="price-stack">'+
       '<div class="price-big">'+
-        'Prix HT (FCR) : ' + (data.priceHT || '-') +
+        'Prix **H.T.** : ' + (data.priceHT || '-') +
       '</div>'+
       (
         data.dutiesEstimate
-          ? '<div class="price-estimate">Droits de douane estimés (TVA incluse) : ' + data.dutiesEstimate + '</div>'
+          ? '<div class="price-estimate">**Droits de douane estimés** (TVA incluse) : ' + data.dutiesEstimate + '</div>'
           : ''
       ) +
     '</div>'+
-    customsNotice +
     '<div style="margin-top:.4rem"><span class="pill">'+energie+'</span></div>'+
   '</div>'+
+  // ... reste du template inchangé
 
   essentialsHTML +
   '<div class="content-grid">'+

@@ -1262,6 +1262,109 @@ body.page-vehicle { background:#F6F7FB; }
   font-weight: 500;
   color: #b91c1c;
 }
+/* ===== CATALOGUE NOTE ENCADRÉ RESPONSIVE ===== */
+.catalogue-note-section { 
+  padding: 2rem 1rem; 
+  background: linear-gradient(135deg, #f8f9ff 0%, #e8f0ff 100%); 
+  border-radius: 16px; 
+  margin: 2rem 0; 
+  box-shadow: 0 8px 32px rgba(0,0,0,0.08); 
+  border: 1px solid rgba(59,130,246,0.1);
+}
+.note-container { max-width: 640px; margin: 0 auto; }
+.note-title { 
+  font-size: clamp(1.2rem, 4vw, 1.4rem); 
+  font-weight: 700; 
+  color: #1e3a8a; 
+  margin-bottom: 1.2rem; 
+  text-align: center; 
+  letter-spacing: -0.02em;
+}
+.note-intro { 
+  text-align: center; 
+  margin-bottom: 1.5rem; 
+  color: #4b5563; 
+  line-height: 1.5;
+}
+.accordion-item { 
+  border: 1px solid #e5e7eb; 
+  border-radius: 12px; 
+  margin-bottom: 0.75rem; 
+  overflow: hidden; 
+  background: white;
+}
+.accordion-header { 
+  width: 100%; 
+  padding: 1.25rem 1.5rem; 
+  border: none; 
+  text-align: left; 
+  font-weight: 600; 
+  font-size: 1rem; 
+  color: #1f2937; 
+  cursor: pointer; 
+  transition: all 0.3s ease; 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  background: #fafbfc;
+}
+.accordion-header:hover { background: #f1f5f9; }
+.accordion-header.active { 
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8); 
+  color: white; 
+}
+.icon { 
+  font-size: 0.8rem; 
+  transition: transform 0.3s ease; 
+}
+.accordion-header.active .icon { transform: rotate(180deg); }
+.accordion-content { 
+  max-height: 0; 
+  overflow: hidden; 
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); 
+  background: #f8fafc; 
+}
+.accordion-content.active { 
+  max-height: 200px; 
+  padding: 1.25rem 1.5rem; 
+}
+.calc-link { 
+  display: block; 
+  padding: 1rem 1.25rem; 
+  background: linear-gradient(135deg, #10b981, #059669); 
+  color: white !important; 
+  text-decoration: none; 
+  border-radius: 10px; 
+  font-weight: 500; 
+  text-align: center; 
+  transition: all 0.2s ease; 
+  box-shadow: 0 4px 12px rgba(16,185,129,0.3);
+}
+.calc-link:hover { 
+  transform: translateY(-3px); 
+  box-shadow: 0 8px 25px rgba(16,185,129,0.4); 
+  color: white !important;
+}
+.calc-grid { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); 
+  gap: 0.75rem; 
+}
+.note-footnote { 
+  text-align: center; 
+  font-size: 0.875rem; 
+  color: #6b7280; 
+  margin-top: 1.5rem; 
+  padding-top: 1rem; 
+  border-top: 1px solid #e5e7eb;
+}
+
+/* Mobile Optimisé */
+@media (max-width: 640px) { 
+  .catalogue-note-section { margin: 1.5rem -1rem; border-radius: 0; }
+  .calc-grid { grid-template-columns: 1fr; }
+}
+
 
 /* Cartes déjà en grille : on garde tes breakpoints actuels */
 
