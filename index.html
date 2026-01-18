@@ -121,71 +121,70 @@
     </div>
   </section>
 
- <!-- CATALOGUE -->
-<section id="catalogue" class="section--light">
-  <p class="catalogue-note"><!-- CATALOGUE -->
-<section id="catalogue" class="section--light">
-  <p class="catalogue-note">
-    <span class="catalogue-note__text">
-      Nos tarifs catalogue correspondent à des 
-      <strong>prix HT exprimés en euros.</strong>
-      <br><em>Les droits et taxes à l’importation varient selon le type de véhicule, la réglementation en vigueur et votre pays de résidence.</em>
-      <br><br>
-      Pour une estimation personnalisée des droits de douane et taxes (droits 15-30%, TVA 19%, exonérations EV possibles), consultez les outils officiels :
-      <table class="catalogue-table">
-        <thead>
-          <tr>
-            <th>Pays / Région</th>
-            <th>Outil Officiel</th>
-            <th>Lien Direct</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Tunisie</td>
-            <td>Calculatrice douanes véhicules</td>
-            <td><a href="https://www.douane.gov.tn/taxation-vehicules/" target="_blank" rel="noopener noreferrer">douane.gov.tn</a></td>
-          </tr>
-          <tr>
-            <td>Algérie</td>
-            <td>Simulateur droits/taxes véhicules (2025)</td>
-            <td><a href="https://www.douane.gov.dz/spip.php?article707" target="_blank" rel="noopener noreferrer">douane.gov.dz</a>[web:13]</td>
-          </tr>
-          <tr>
-            <td>Maroc</td>
-            <td>Barèmes douaniers (guide PDF)</td>
-            <td><a href="https://www.douane.gov.ma/" target="_blank" rel="noopener noreferrer">douane.gov.ma</a></td>
-          </tr>
-          <tr>
-            <td>Afrique Ouest (Sénégal, Côte d'Ivoire)</td>
-            <td>Portails douanes régionales</td>
-            <td><a href="https://trid-africa.org/" target="_blank" rel="noopener noreferrer">trid-africa.org</a></td>
-          </tr>
-        </tbody>
-      </table>
-      <br><span class="catalogue-note__footnote">
-        * Un rappel des estimations figure également en bas de chaque fiche véhicule. 
-        EVH Autotrade vous accompagne (FCR/RS Tunisie, imports personnels Algérie).[memory:18]
-      </span>
-    </span>
-  </p>
+<!-- CATALOGUE NOTE - ENCADRÉ RESPONSIVE -->
+<section id="catalogue-note" class="catalogue-note-section">
+  <div class="note-container">
+    <h3 class="note-title">💰 Prix HT • Estimation Taxes Import</h3>
+    <p class="note-intro">
+      Tarifs <strong>HT en €</strong>. Taxes varient par pays (droits de douane, TVA 19%, <em>exonérations EV</em>).
+    </p>
+    
+    <!-- Accordéon Responsive -->
+    <div class="accordion">
+      <div class="accordion-item">
+        <button class="accordion-header" data-target="tn">Tunisie <span class="icon">▼</span></button>
+        <div class="accordion-content" id="tn">
+          <a href="https://www.douane.gov.tn/taxation-vehicules/" target="_blank" rel="noopener noreferrer" class="calc-link">
+            🚀 Calculatrice officielle douanes TN (FCR/RS)
+          </a>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header active" data-target="dz">Algérie <span class="icon">▼</span></button>
+        <div class="accordion-content active" id="dz">
+          <a href="https://www.douane.gov.dz/spip.php?article707" target="_blank" rel="noopener noreferrer" class="calc-link">
+            📱 Simulateur DZ 2025 (1 véhicule/3 ans)
+          </a>[web:13]
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header" data-target="afrique">Maroc & Afrique <span class="icon">▼</span></button>
+        <div class="accordion-content" id="afrique">
+          <div class="calc-grid">
+            <a href="https://www.douane.gov.ma/" target="_blank" rel="noopener noreferrer" class="calc-link">🇲🇦 douane.ma</a>
+            <a href="https://trid-africa.org/" target="_blank" rel="noopener noreferrer" class="calc-link">🌍 TRID@frica</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <p class="note-footnote">
+      * Estimations par fiche véhicule. <strong>EVH guide FCR/RS + imports Afrique</strong>[memory:18]
+    </p>
+  </div>
 </section>
 
-  <span class="catalogue-note__text">
-    Nos tarifs catalogue correspondent à des
-    <strong>prix HT exprimés en euros.
-    <br><em>Les droits et taxes à l’importation varient selon le type de véhicule et la réglementation en vigueur.</em>
-    <br><br>
-    Pour obtenir une estimation des droits de douane, vous pouvez consulter la&nbsp;
-    <a href="https://www.douane.gov.tn/taxation-vehicules/" target="_blank">
-      calculatrice officielle des douanes tunisiennes
-    </a>.
-    <br><span class="catalogue-note__footnote">
-      * Un rappel des estimations figure également en bas de chaque fiche véhicule.
-    </span>
-  </span>
-</p>
-</section>
+<script>
+// JS Accordéon (léger, inline)
+document.querySelectorAll('.accordion-header').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const target = btn.getAttribute('data-target');
+    const content = document.getElementById(target);
+    const isActive = btn.classList.contains('active');
+    
+    // Fermer tous
+    document.querySelectorAll('.accordion-header').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.accordion-content').forEach(c => c.classList.remove('active'));
+    
+    // Ouvrir si pas déjà
+    if (!isActive) {
+      btn.classList.add('active');
+      content.classList.add('active');
+    }
+  });
+});
+</script>
+
 
   <div class="adv2-head">
     <h2 class="adv2-title">Découvrez <span class="accent">Nos Modèles</span></h2>
