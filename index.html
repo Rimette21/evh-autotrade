@@ -467,7 +467,7 @@ const items = [energyLabel, autoLbl, ...(specLines.length ? specLines : fallback
           <div class="name">${v.name}</div>
           <div class="submeta">Réf : <strong>${v.id}</strong></div>
           <div class="price">
-            Prix HT (FCR) : ${v.priceHT || '-'}
+          **Prix H.T. :** ${v.priceHT || '-'}
           </div>
 
           ${isSold
@@ -516,7 +516,7 @@ const items = [energyLabel, autoLbl, ...(specLines.length ? specLines : fallback
         const km = kmNum(v);
         const okKm = isFinite(kmMax) ? km <= kmMax : true;
 
-        const price = parsePriceEUR(v.priceFCR) || 0;
+        const price = **parsePriceEUR(v.priceHT)** || 0; 
         const okPrice = isFinite(pMax) ? price <= pMax : true;
 
         return okQ && okType && okYear && okKm && okPrice;
