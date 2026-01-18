@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Taxes Douanières - E.V.H. Autotrade</title>
+
+  <link rel="stylesheet" href="styles.css?v=16">
+  <link rel="stylesheet" href="mobile-tighten.css">
+
+  <style>
+    /* Section Douanes */
+    .customs-section {
+      padding: 60px 20px;
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #fff;
+    }
+
+    .customs-intro {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .customs-intro h1 {
+      font-size: 2rem;
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    .customs-intro p {
+      color: #666;
+      line-height: 1.6;
+    }
+
+    /* Style de l'Accordéon */
+    .accordion {
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .accordion-item {
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .accordion-item:last-child {
+      border-bottom: none;
+    }
+
+    .accordion-header {
+      width: 100%;
+      background: #f9fafb;
+      border: none;
+      padding: 20px;
+      text-align: left;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #1f2937;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background 0.3s;
+    }
+
+    .accordion-header:hover {
+      background: #f3f4f6;
+    }
+
+    .accordion-header .icon {
+      transition: transform 0.3s;
+      font-size: 0.8rem;
+    }
+
+    .accordion-header.active .icon {
+      transform: rotate(180deg);
+    }
+
+    .accordion-content {
+      display: none;
+      padding: 20px;
+      background: #fff;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    .accordion-content.active {
+      display: block;
+      animation: fadeIn 0.3s ease-in-out;
+    }
+
+    /* Liens calculatrices */
+    .calc-link {
+      display: block;
+      background-color: #eef2ff;
+      color: #4f46e5;
+      padding: 15px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+      margin-bottom: 10px;
+      transition: all 0.2s;
+      border: 1px solid #c7d2fe;
+    }
+
+    .calc-link:hover {
+      background-color: #4f46e5;
+      color: #fff;
+      border-color: #4f46e5;
+    }
+
+    .calc-grid {
+      display: grid;
+      gap: 10px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-5px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    /* Disclaimer légal */
+    .legal-disclaimer {
+        margin-top: 40px;
+        padding: 20px;
+        background: #fffbeb;
+        border-left: 4px solid #f59e0b;
+        color: #92400e;
+        font-size: 0.9rem;
+        border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div class="logo-wrap">
+        <a href="index.html" style="text-decoration:none; display:flex; align-items:center;">
+          <div class="logo">
+            <img src="images/EVH_logo.png" alt="E.V.H. AUTOTRADE">
+          </div>
+          <div class="brand">
+            <span class="evh">E.V.H.</span>
+            <span class="Autotrade">Autotrade</span>
+          </div>
+        </a>
+      </div>
+
+      <nav class="nav" aria-label="Navigation principale">
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="index.html#catalogue">Catalogue</a></li>
+          <li><a href="index.html#avantages">Avantages</a></li>
+          <li><a href="douanes.html" class="active-page">Douanes</a></li> <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <input type="checkbox" id="nav-toggle" aria-hidden="true" />
+      <label class="nav-btn" for="nav-toggle">
+        <span class="bar"></span>
+      </label>
+      <label for="nav-toggle" class="nav-overlay"></label>
+      <aside class="nav-drawer">
+        <div class="drawer-head">
+          <div class="drawer-title">Menu</div>
+          <label for="nav-toggle" class="drawer-close">✕</label>
+        </div>
+        <div class="drawer-body">
+          <nav class="drawer-nav">
+            <ul>
+              <li><a href="index.html">Accueil</a></li>
+              <li><a href="index.html#catalogue">Catalogue</a></li>
+              <li><a href="douanes.html">Simulateurs Douanes</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </aside>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-static" style="min-height: 40vh; align-items: center; display: flex; justify-content: center; text-align: center;">
+        <picture class="hero-bg">
+            <source media="(max-width: 680px)" srcset="images/imagemobilemenu.webp" type="image/webp">
+            <img src="images/imagecomputermenu.webp" alt="Douanes Importation" style="opacity: 0.6;">
+        </picture>
+        <div class="bg-overlay" style="opacity:0.7; background:#000;"></div>
+        <div class="hero-cta" style="position:relative; z-index:2;">
+            <h1 style="color:white; font-size:2.5rem; margin-bottom:10px;">Droits & Taxes Douanières</h1>
+            <p style="color:#e5e7eb; font-size:1.1rem;">Consultez les outils officiels selon votre pays de destination</p>
+        </div>
+    </section>
+
+    <section class="customs-section">
+      <div class="customs-intro">
+        <h2>Calculatrices Officielles</h2>
+        <p>EVH Autotrade vous facilite l'accès aux simulateurs officiels des douanes. Sélectionnez votre pays ci-dessous pour estimer vos droits et taxes.</p>
+      </div>
+
+      <div class="accordion">
+        
+        <div class="accordion-item">
+          <button class="accordion-header" data-target="tn">
+            🇹🇳 Tunisie (FCR / RS) <span class="icon">▼</span>
+          </button>
+          <div class="accordion-content" id="tn">
+            <p style="margin-bottom:10px; font-size:0.9rem;">Pour les régimes FCR (Retour définitif) ou RS.</p>
+            <a href="https://www.douane.gov.tn/taxation-vehicules/" target="_blank" rel="noopener noreferrer" class="calc-link">
+              🚀 Calculatrice officielle Douane Tunisienne
+            </a>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header active" data-target="dz">
+            🇩🇿 Algérie (Moins de 3 ans) <span class="icon">▼</span>
+          </button>
+          <div class="accordion-content active" id="dz">
+            <p style="margin-bottom:10px; font-size:0.9rem;">
+                Pour l'importation de véhicules de moins de 3 ans (Essence, Électrique, Hybride).
+                <br><em>Rappel : -80% de taxes sur l'électrique, -50% sur l'hybride (&lt;1.8L).</em>
+            </p>
+            <a href="https://alces.douane.gov.dz" target="_blank" rel="noopener noreferrer" class="calc-link">
+              📱 Simulateur Officiel Douane Algérienne (ALCES)
+            </a>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header" data-target="afrique">
+            🌍 Maroc & Autres Pays d'Afrique <span class="icon">▼</span>
+          </button>
+          <div class="accordion-content" id="afrique">
+            <div class="calc-grid">
+              <a href="https://www.douane.gov.ma/web/guest/mcv#http://www.douane.gov.ma/mcv/presentation.jsf" target="_blank" rel="noopener noreferrer" class="calc-link">
+                🇲🇦 Calculatrice Droits de Douane Maroc
+              </a>
+              <a href="https://trid-africa.org/" target="_blank" rel="noopener noreferrer" class="calc-link">
+                🌍 TRID@frica (Tarifs Douaniers Afrique)
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="legal-disclaimer">
+        <strong>⚠️ Avertissement Important :</strong>
+        <p>Ces liens redirigent vers des sites gouvernementaux officiels tiers. EVH Autotrade n'est pas responsable de l'exactitude des calculs fournis par ces outils. Les montants sont donnés à titre indicatif et le montant final sera déterminé par l'inspecteur des douanes le jour de l'importation.</p>
+      </div>
+
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-wrap">
+      <div class="f-brand">
+        <img src="images/EVH_logo.png" alt="EVH Autotrade" class="f-logo">
+        <div>
+          <strong>Eco Value Hub FZ-LLC</strong><br>
+          Ras Al Khaimah, United Arab Emirates
+        </div>
+      </div>
+      <div class="f-cols">
+        <div class="f-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:contact@evhautotrade.com">contact@evhautotrade.com</a></li>
+            <li><a href="https://wa.me/33662617058" rel="noopener" target="_blank">WhatsApp : +33662617058</a></li>
+          </ul>
+        </div>
+        <div class="f-col">
+          <h4>EVH Autotrade</h4>
+          <ul>
+            <li><a href="index.html#catalogue">Catalogue</a></li>
+            <li><a href="douanes.html">Taxes & Douanes</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <small>© <span id="y"></span> Eco Value Hub FZ-LLC — All rights reserved.</small>
+    </div>
+  </footer>
+
+  <script>
+    // Date Footer
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Script Accordéon
+    document.querySelectorAll('.accordion-header').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = btn.getAttribute('data-target');
+        const content = document.getElementById(target);
+        const isActive = btn.classList.contains('active');
+        
+        // Fermer tous les autres
+        document.querySelectorAll('.accordion-header').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.accordion-content').forEach(c => c.classList.remove('active'));
+        
+        // Ouvrir si c'était fermé
+        if (!isActive) {
+          btn.classList.add('active');
+          content.classList.add('active');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
