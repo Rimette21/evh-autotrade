@@ -433,7 +433,7 @@
     "sold": true,
     "featuresCount": 6,
     "images": {
-      "hero": "images/EVH_MercedesEQA260_devantgauche.webp"
+      "hero": "images/Vendus/EVH_MercedesEQA260_devantgauche.webp"
     },
     "features": [
       "100% électrique (BEV)",
@@ -457,7 +457,7 @@
     "isNew": false,
     "sold": true,
     "images": {
-      "hero": "images/ToyotaFrontlander_devgauche.webp"
+      "hero": "images/Vendus/ToyotaFrontlander_devgauche.webp"
     },
     "features": [
       "SUV compact hybride (HEV) 2.0L 152 ch",
@@ -575,9 +575,10 @@
     "mileage": 2000,
     "regyear": "2024-04",
     "isNew": false,
+    "sold": true,
     "featuresCount": 7,
     "images": {
-      "hero": "images/9433858_Jetour X70_DEV_gauche.webp"
+      "hero": "images/Vendus/9433858_Jetour X70_DEV_gauche.webp"
     },
     "features": [
       "Hybride rechargeable (C-DM)",
@@ -769,7 +770,7 @@
     "sold": true,
     "featuresCount": 5,
     "images": {
-      "hero": "images/Vendus/EVH9535838-AUDIQ5_DEV-DROITE.webp"
+      "hero": "images/Vendus/EVH9535838-AUDIQ5_DEV-FACE.webp"
     },
     "features": [
       "100% électrique (BEV)",
