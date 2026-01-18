@@ -1,5 +1,5 @@
 [
-   {
+  {
     "id": "EVH1_BYDTANG",
     "name": "BYD Tang L 2025 670 KM LiDAR Flagship",
     "priceHT": "39 310 €",
@@ -16,12 +16,13 @@
       "Batterie Blade LFP 100,53 kWh",
       "Puissance moteur total 500 kW (680 ch)",
       "Affichage tête haute (HUD) ADAS complet",
-      "SUV 7 places  système LiDAR avancé-conduite semi-autonome niveau 2"
+      "SUV 7 places système LiDAR avancé-conduite semi-autonome niveau 2"
     ],
     "specifications": {
       "engineCc": "",
       "transmission": "Auto RWD"
-    },
+    }
+  },
   {
     "id": "EVH2_BSP_EV520",
     "name": "2025 BYD Song PLUS EV 520km Luxury",
@@ -43,6 +44,7 @@
     "specifications": {
       "engineCc": null,
       "transmission": "AT"
+    }
   },
   {
     "id": "EVH3_BSP_EV605",
@@ -66,6 +68,7 @@
     "specifications": {
       "engineCc": null,
       "transmission": "AT"
+    }
   },
   {
     "id": "EVH4_BYDSEAL06_EV545",
@@ -89,6 +92,7 @@
     "specifications": {
       "engineCc": null,
       "transmission": "Auto AT"
+    }
   },
   {
     "id": "EVH5_BYDSEALION7",
@@ -112,6 +116,7 @@
     "specifications": {
       "engineCc": null,
       "transmission": "Auto AT"
+    }
   },
   {
     "id": "EVH6_BSP_PHEV160",
@@ -134,6 +139,7 @@
     "specifications": {
       "engineCc": 1498,
       "transmission": "E-CVT"
+    }
   },
   {
     "id": "EVH7_BSP_PHEV112",
@@ -156,6 +162,7 @@
     "specifications": {
       "engineCc": 1498,
       "transmission": "E-CVT"
+    }
   },
   {
     "id": "EVH8_BYDFRIGATE07_PHEV100",
@@ -178,6 +185,7 @@
     "specifications": {
       "engineCc": 1500,
       "transmission": "Auto AT"
+    }
   },
   {
     "id": "EVH9-BSP-PHEV75",
@@ -200,33 +208,35 @@
     "specifications": {
       "engineCc": 1498,
       "transmission": "E-CVT"
+    }
   },
   {
-   "id": "EVH10_BYDLEOPARD_PHEV125",
-  "name": "2025 Leopard5 Max Edition 1.5T PHEV",
-  "priceHT": "39 220 €",
-  "mileage": 100,
-  "regyear": "2025-04",
-  "isNew": true,
-  "images": {
-    "hero": "images/EVH10_BYDLEOPARD_PHEV125/DEVGAUCHE.webp"
-  },
-  "features": [
-    "SUV PHEV 4WD 1.5T + double moteurs électriques",
-    "Puissance totale 485 kW (≈660 ch), couple 760 N·m",
-    "Batterie 31,8 kWh, autonomie 125 km CLTC",
-    "Boîte DHT automatique, capacités tout‑terrain avancées",
-    "10 airbags, ADAS complet (ACC, LKA, AEB, BSD, 360°)",
-    "Intérieur cuir luxe, double écran, CarPlay/Android Auto"
-  ],
-  "specifications": {
-    "engineCc": 1497,
-    "transmission": "Boîte hybride DHT automatique, 4WD"
+    "id": "EVH10_BYDLEOPARD_PHEV125",
+    "name": "2025 Leopard5 Max Edition 1.5T PHEV",
+    "priceHT": "39 220 €",
+    "mileage": 100,
+    "regyear": "2025-04",
+    "isNew": true,
+    "images": {
+      "hero": "images/EVH10_BYDLEOPARD_PHEV125/DEVGAUCHE.webp"
+    },
+    "features": [
+      "SUV PHEV 4WD 1.5T + double moteurs électriques",
+      "Puissance totale 485 kW (≈660 ch), couple 760 N·m",
+      "Batterie 31,8 kWh, autonomie 125 km CLTC",
+      "Boîte DHT automatique, capacités tout‑terrain avancées",
+      "10 airbags, ADAS complet (ACC, LKA, AEB, BSD, 360°)",
+      "Intérieur cuir luxe, double écran, CarPlay/Android Auto"
+    ],
+    "specifications": {
+      "engineCc": 1497,
+      "transmission": "Boîte hybride DHT automatique, 4WD"
+    }
   },
   {
     "id": "EVH11_XPENG_BEV602",
     "name": "2026 XPENG G7 602 Long Range Max",
-    "priceHT": "33 450 €",
+    "priceHT": "33 450 €",
     "mileage": 0,
     "regyear": "2026",
     "isNew": true,
@@ -246,6 +256,7 @@
     "specifications": {
       "engineCc": null,
       "transmission": "Auto AT"
+    }
   },
   {
     "id": "EVH9865884_BYDTANG",
@@ -264,58 +275,61 @@
       "Batterie Blade LFP 100,53 kWh",
       "Puissance moteur total 500 kW (680 ch)",
       "Affichage tête haute (HUD) ADAS complet",
-      "SUV 7 places  système LiDAR avancé-conduite semi-autonome niveau 2"
+      "SUV 7 places système LiDAR avancé-conduite semi-autonome niveau 2"
     ],
     "specifications": {
       "engineCc": "",
       "transmission": "AT-2WD"
+    }
   },
   {
-  "id": "EVH12_BYDYUAN_BEV510",
-  "name": "2024 BYD Atto3 BEV",
-  "priceHT": "23 470 €",
-  "mileage": 4300,
-  "regyear": "2024-08",
-  "isNew": false,
-  "featuresCount": 6,
-  "images": {
-    "hero": "images/EVH12_BYDYUAN_BEV510/devantgauche.webp"
+    "id": "EVH12_BYDYUAN_BEV510",
+    "name": "2024 BYD Atto3 BEV",
+    "priceHT": "23 470 €",
+    "mileage": 4300,
+    "regyear": "2024-08",
+    "isNew": false,
+    "featuresCount": 6,
+    "images": {
+      "hero": "images/EVH12_BYDYUAN_BEV510/devantgauche.webp"
+    },
+    "features": [
+      "SUV 100% électrique (BEV) 5 places",
+      "Autonomie 510 km NEDC (≈430–450 km WLTP estimés)",
+      "Moteur électrique avant 150 kW (204 ch), 310 N·m",
+      "Batterie Blade LFP 60,48 kWh, conso 12,5 kWh/100 km",
+      "ADAS avec maintien de voie, régulateur adaptatif, freinage d'urgence",
+      "Toit panoramique, accès/démarrage sans clé, aides au stationnement"
+    ],
+    "specifications": {
+      "engineCc": 0,
+      "transmission": "Boîte fixe 1 rapport (EV, FWD)"
+    }
   },
-  "features": [
-    "SUV 100% électrique (BEV) 5 places",
-    "Autonomie 510 km NEDC (≈430–450 km WLTP estimés)",
-    "Moteur électrique avant 150 kW (204 ch), 310 N·m",
-    "Batterie Blade LFP 60,48 kWh, conso 12,5 kWh/100 km",
-    "ADAS avec maintien de voie, régulateur adaptatif, freinage d'urgence",
-    "Toit panoramique, accès/démarrage sans clé, aides au stationnement"
-  ],
-  "specifications": {
-    "engineCc": 0,
-    "transmission": "Boîte fixe 1 rapport (EV, FWD)"
-},
   {
-  "id": "EVH_KIAEV5_2024019",
-  "name": "2024 Kia EV5 530 Light",
-  "priceHT": "24 680 €",
-  "mileage": 100,
-  "regyear": "2024-01",
-  "isNew": true,
-  "images": {
-    "hero": "images/KIA_EV5_devdroit.jpg"
+    "id": "EVH_KIAEV5_2024019",
+    "name": "2024 Kia EV5 530 Light",
+    "priceHT": "24 680 €",
+    "mileage": 100,
+    "regyear": "2024-01",
+    "isNew": true,
+    "images": {
+      "hero": "images/KIA_EV5_devdroit.jpg"
+    },
+    "features": [
+      "SUV 100% électrique (BEV) 5 places, 2WD",
+      "Autonomie 530 km CLTC (≈400–430 km WLTP)",
+      "Moteur avant 160 kW (218 ch), 310 N·m",
+      "Batterie LFP 64,2 kWh, charge rapide DC jusqu'à ~150 kW",
+      "Plateforme 800 V E-GMP avec fonction V2L",
+      "Écran double, ADAS complet (LKA, AEB, ACC, etc.)"
+    ],
+    "specifications": {
+      "engineCc": 0,
+      "transmission": "Automatique 1 rapport (EV, FWD 2WD)"
+    }
   },
-  "features": [
-    "SUV 100% électrique (BEV) 5 places, 2WD",
-    "Autonomie 530 km CLTC (≈400–430 km WLTP)",
-    "Moteur avant 160 kW (218 ch), 310 N·m",
-    "Batterie LFP 64,2 kWh, charge rapide DC jusqu'à ~150 kW",
-    "Plateforme 800 V E-GMP avec fonction V2L",
-    "Écran double, ADAS complet (LKA, AEB, ACC, etc.)"
-  ],
-  "specifications": {
-    "engineCc": 0,
-    "transmission": "Automatique 1 rapport (EV, FWD 2WD)"
-},
-{
+  {
     "id": "EVH9881981_BSP_PHEV160",
     "name": "2025 BYD Song Plus 1.5L 101HP L4 E-CVT PHEV 26.6KWH",
     "priceHT": "25 400 €",
@@ -337,75 +351,78 @@
     "specifications": {
       "engineCc": 1498,
       "transmission": "AT"
+    }
   },
-{
-  "id": "EVH5686663_TOYOTABZ5",
-  "name": "2025 Toyota bZ5 BEV 550 km",
-  "priceHT": "25 190 €",
-  "mileage": 2000,
-  "regyear": "2025-11",
-  "isNew": false,
-  "images": {
-    "hero": "images/EVH5686663_TOYOTABZ5/devgauche.webp"
-  },
-  "features": [
-    "100% électrique (BEV)",
-    "Autonomie 550 km (CLTC)",
-    "Puissance 200 kW (272 ch)",
-    "Moteur électrique 200 kW avant",
-    "ADAS L2 complet",
-    "Caméras 360°, assistance conduite"
-  ],
-  "specifications": {
-    "engineCc": 0,
-    "transmission": "Auto AT"
-},
-{
-  "id": "EVH9681220_Haval_PHEV105",
-  "name": "2023 Haval Fierce Dragon MAX PHEV 105 km",
-  "priceHT": "22 490 €",
-  "mileage": 18000,
-  "regyear": "2023-11",
-  "isNew": false,
-  "images": {
-    "hero": "images/EVH9681220_Haval_PHEV105/devgauche.webp"
-  },
-  "features": [
-    "Hybride rechargeable (PHEV) Hi4 4WD",
-    "Autonomie électrique 105 km",
-    "Moteur 1.5L 116 ch + double moteur électrique AV/AR",
-    "Puissance système 205 kW (≈279 ch), couple 585 N·m",
-    "Caméras 360°, ADAS L2 « Coffee intelligent drive »",
-    "Écran 12,3\" + combiné numérique, toit pano"
-  ],
-  "specifications": {
-    "engineCc": 1498,
-    "transmission": "Boîte hybride DHT, 4WD"
-},
   {
-  "id": "EVH9677996MERCEQA",
-  "name": "2025 Mercedes-Benz EQA Class-619km",
-  "priceHT": "32 230 €",
-  "mileage": 100,
-  "regyear": "2025-11",
-  "isNew": true,
-  "sold": true,
-  "images": {
-    "hero": "images/EVH9677996MERCEQA_devgauche.webp"
+    "id": "EVH5686663_TOYOTABZ5",
+    "name": "2025 Toyota bZ5 BEV 550 km",
+    "priceHT": "25 190 €",
+    "mileage": 2000,
+    "regyear": "2025-11",
+    "isNew": false,
+    "images": {
+      "hero": "images/EVH5686663_TOYOTABZ5/devgauche.webp"
+    },
+    "features": [
+      "100% électrique (BEV)",
+      "Autonomie 550 km (CLTC)",
+      "Puissance 200 kW (272 ch)",
+      "Moteur électrique 200 kW avant",
+      "ADAS L2 complet",
+      "Caméras 360°, assistance conduite"
+    ],
+    "specifications": {
+      "engineCc": 0,
+      "transmission": "Auto AT"
+    }
   },
-  "features": [
-    "SUV compact 100% électrique (BEV)",
-    "Autonomie 619 km",
-    "Moteur électrique avant env. 140 kW (190 ch)",
-    "Batterie ~73,5 kWh, AC 11 kW / DC 100 kW",
-    "Écran MBUX, aides à la conduite avancées",
-    "Caméra et radars de stationnement, confort premium"
-  ],
-  "specifications": {
-    "engineCc": 0,
-    "transmission": "Automatique"
-},
-
+  {
+    "id": "EVH9681220_Haval_PHEV105",
+    "name": "2023 Haval Fierce Dragon MAX PHEV 105 km",
+    "priceHT": "22 490 €",
+    "mileage": 18000,
+    "regyear": "2023-11",
+    "isNew": false,
+    "images": {
+      "hero": "images/EVH9681220_Haval_PHEV105/devgauche.webp"
+    },
+    "features": [
+      "Hybride rechargeable (PHEV) Hi4 4WD",
+      "Autonomie électrique 105 km",
+      "Moteur 1.5L 116 ch + double moteur électrique AV/AR",
+      "Puissance système 205 kW (≈279 ch), couple 585 N·m",
+      "Caméras 360°, ADAS L2 « Coffee intelligent drive »",
+      "Écran 12,3\" + combiné numérique, toit pano"
+    ],
+    "specifications": {
+      "engineCc": 1498,
+      "transmission": "Boîte hybride DHT, 4WD"
+    }
+  },
+  {
+    "id": "EVH9677996MERCEQA",
+    "name": "2025 Mercedes-Benz EQA Class-619km",
+    "priceHT": "32 230 €",
+    "mileage": 100,
+    "regyear": "2025-11",
+    "isNew": true,
+    "sold": true,
+    "images": {
+      "hero": "images/EVH9677996MERCEQA_devgauche.webp"
+    },
+    "features": [
+      "SUV compact 100% électrique (BEV)",
+      "Autonomie 619 km",
+      "Moteur électrique avant env. 140 kW (190 ch)",
+      "Batterie ~73,5 kWh, AC 11 kW / DC 100 kW",
+      "Écran MBUX, aides à la conduite avancées",
+      "Caméra et radars de stationnement, confort premium"
+    ],
+    "specifications": {
+      "engineCc": 0,
+      "transmission": "Automatique"
+    }
+  },
   {
     "id": "EVHMercEQA_2025012",
     "name": "2025 Mercedes-Benz EQA 260 - 619 km",
@@ -420,7 +437,7 @@
     },
     "features": [
       "100% électrique (BEV)",
-      "Autonomie 619  km (CLTC)",
+      "Autonomie 619 km (CLTC)",
       "Batterie Lithium ternaire 73,5 kWh (Farasis)",
       "Moteur 140 kW (190 ch) – 2 FWD",
       "Recharge DC 10-80% ≈ 45 min",
@@ -429,31 +446,32 @@
     "specifications": {
       "engineCc": null,
       "transmission": "Auto AT"
+    }
   },
   {
-  "id": "ToyotaFrontlander_2023018",
-  "name": "2023 Toyota Frontlander 2.0L Hybrid Leading Edition",
-  "priceHT": "25 860 €",
-  "mileage": 4900,
-  "regyear": "2024-03",
-  "isNew": false,
-  "sold": true,
-  "images": {
-    "hero": "images/ToyotaFrontlander_devgauche.webp"
+    "id": "ToyotaFrontlander_2023018",
+    "name": "2023 Toyota Frontlander 2.0L Hybrid Leading Edition",
+    "priceHT": "25 860 €",
+    "mileage": 4900,
+    "regyear": "2024-03",
+    "isNew": false,
+    "sold": true,
+    "images": {
+      "hero": "images/ToyotaFrontlander_devgauche.webp"
+    },
+    "features": [
+      "SUV compact hybride (HEV) 2.0L 152 ch",
+      "Consommation env. 4,6 L/100 km WLTC",
+      "Transmission E-CVT, traction avant (FWD)",
+      "Toyota Safety Sense (ACC, maintien de voie, freinage d’urgence)",
+      "Airbags multiples, ESP, TPMS",
+      "Toit ouvrant panoramique et écran central multimédia"
+    ],
+    "specifications": {
+      "engineCc": 1987,
+      "transmission": "E-CVT automatique, FWD"
+    }
   },
-  "features": [
-    "SUV compact hybride (HEV) 2.0L 152 ch",
-    "Consommation env. 4,6 L/100 km WLTC",
-    "Transmission E-CVT, traction avant (FWD)",
-    "Toyota Safety Sense (ACC, maintien de voie, freinage d’urgence)",
-    "Airbags multiples, ESP, TPMS",
-    "Toit ouvrant panoramique et écran central multimédia"
-  ],
-  "specifications": {
-    "engineCc": 1987,
-    "transmission": "E-CVT automatique, FWD"
-},
-  
   {
     "id": "EVH_ToyotaBZ3_2025015",
     "name": "2025 Toyota BZ 3X Air+ BEV 430km",
@@ -467,8 +485,8 @@
     },
     "features": [
       "100% électrique (BEV)",
-      "Autonomie 430  km (CLTC)",
-      "Batterie LFP  58,3 kWh",
+      "Autonomie 430 km (CLTC)",
+      "Batterie LFP 58,3 kWh",
       "Moteur 160 kW (218 ch) – 2 FWD",
       "Recharge DC 30-80% ≈ 24 min",
       "Double écran digital 10,25'' MMI touch + cockpit virtuel"
@@ -476,6 +494,7 @@
     "specifications": {
       "engineCc": null,
       "transmission": "Auto AT"
+    }
   },
   {
     "id": "EVH_AudiQ42022014",
@@ -490,8 +509,8 @@
     },
     "features": [
       "100% électrique (BEV)",
-      "Autonomie 605  km (CLTC)",
-      "Batterie LFP  76,6 kWh",
+      "Autonomie 605 km (CLTC)",
+      "Batterie LFP 76,6 kWh",
       "Moteur 160 kW (218 ch) – 2 FWD",
       "Recharge DC 10-80% ≈ 29 min",
       "Double écran digital 10,25'' MMI touch + cockpit virtuel"
@@ -499,6 +518,7 @@
     "specifications": {
       "engineCc": null,
       "transmission": "Auto AT"
+    }
   },
   {
     "id": "EVH_MercedesEQB2023013",
@@ -513,8 +533,8 @@
     },
     "features": [
       "100% électrique (BEV)",
-      "Autonomie 600  km (CLTC)",
-      "Batterie LFP  70,5 kWh",
+      "Autonomie 600 km (CLTC)",
+      "Batterie LFP 70,5 kWh",
       "Moteur 160 kW (218 ch) – 2 FWD",
       "Recharge DC 10-80% ≈ 32 min",
       "Caméras 360°, stationnement automatique"
@@ -522,8 +542,8 @@
     "specifications": {
       "engineCc": null,
       "transmission": "Auto AT"
+    }
   },
-  
   {
     "id": "EVH9391855",
     "name": "Chery Tiggo7 C-DM 1.5T 156HP L4",
@@ -546,6 +566,7 @@
     "specifications": {
       "engineCc": 1499,
       "transmission": "Auto"
+    }
   },
   {
     "id": "EVH9433858",
@@ -569,6 +590,7 @@
     "specifications": {
       "engineCc": 1499,
       "transmission": "Auto"
+    }
   },
   {
     "id": "EVH9336933",
@@ -592,6 +614,7 @@
     "specifications": {
       "engineCc": 1499,
       "transmission": "Auto"
+    }
   },
   {
     "id": "EVH9384241",
@@ -615,6 +638,7 @@
     "specifications": {
       "engineCc": 1499,
       "transmission": "Auto"
+    }
   },
   {
     "id": "EVH9404921",
@@ -638,6 +662,7 @@
     "specifications": {
       "engineCc": 1498,
       "transmission": "E-CVT"
+    }
   },
   {
     "id": "EVH9478503",
@@ -661,6 +686,7 @@
     "specifications": {
       "engineCc": 1498,
       "transmission": "E-CVT"
+    }
   },
   {
     "id": "EVH9404943",
@@ -684,6 +710,7 @@
     "specifications": {
       "engineCc": 1498,
       "transmission": "E-CVT"
+    }
   },
   {
     "id": "EVH9519205",
@@ -692,7 +719,7 @@
     "mileage": 3800,
     "regyear": "2025-05",
     "isNew": false,
-     "sold": true,
+    "sold": true,
     "images": {
       "hero": "images/Vendus/EVH9519205_CHERY_TIGO_devdroit.webp"
     },
@@ -707,6 +734,7 @@
     "specifications": {
       "engineCc": 1499,
       "transmission": "Auto"
+    }
   },
   {
     "id": "EVH9397463",
@@ -729,6 +757,7 @@
     "specifications": {
       "engineCc": null,
       "transmission": "AT"
+    }
   },
   {
     "id": "EVH9535838",
@@ -752,5 +781,6 @@
     "specifications": {
       "engineCc": null,
       "transmission": "AT"
+    }
   }
 ]
