@@ -22,7 +22,7 @@
     <div class="header-inner">
       <div class="logo-wrap">
         <div class="logo">
-          <img src="images/EVH_logo-removebg-preview.png" alt="E.V.H. AUTOTRADE">
+          <img src="images/EVH_logo.png" alt="E.V.H. AUTOTRADE">
         </div>
         <div class="brand">
           <span class="evh">E.V.H.</span>
@@ -121,24 +121,70 @@
     </div>
   </section>
 
- <!-- CATALOGUE -->
-<section id="catalogue" class="section--light">
-  <p class="catalogue-note">
-  <span class="catalogue-note__text">
-    Nos tarifs catalogue correspondent à des
-    <strong>prix HT (régime FCR)</strong>, exprimés en devise étrangère.
-    <br><em>Les droits et taxes à l’importation en Tunisie varient selon le type de véhicule et la réglementation en vigueur.</em>
-    <br><br>
-    Pour obtenir une estimation des droits de douane, vous pouvez consulter la&nbsp;
-    <a href="https://www.douane.gov.tn/taxation-vehicules/" target="_blank">
-      calculatrice officielle des douanes tunisiennes
-    </a>.
-    <br><span class="catalogue-note__footnote">
-      * Un rappel des estimations figure également en bas de chaque fiche véhicule.
-    </span>
-  </span>
-</p>
+<!-- CATALOGUE NOTE - ENCADRÉ RESPONSIVE -->
+<section id="catalogue-note" class="catalogue-note-section">
+  <div class="note-container">
+    <h3 class="note-title">💰 Prix HT • Estimation Taxes Import</h3>
+    <p class="note-intro">
+      Tarifs <strong>HT en €</strong>. Taxes varient par pays (droits de douane, TVA 19%, <em>exonérations EV</em>).
+    </p>
+    
+    <!-- Accordéon Responsive -->
+    <div class="accordion">
+      <div class="accordion-item">
+        <button class="accordion-header" data-target="tn">Tunisie <span class="icon">▼</span></button>
+        <div class="accordion-content" id="tn">
+          <a href="https://www.douane.gov.tn/taxation-vehicules/" target="_blank" rel="noopener noreferrer" class="calc-link">
+            🚀 Calculatrice officielle douanes TN (FCR/RS)
+          </a>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header active" data-target="dz">Algérie <span class="icon">▼</span></button>
+        <div class="accordion-content active" id="dz">
+          <a href="https://www.douane.gov.dz/spip.php?article707" target="_blank" rel="noopener noreferrer" class="calc-link">
+            📱 Simulateur DZ 2025 (1 véhicule/3 ans)
+          </a>[web:13]
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header" data-target="afrique">Maroc & Afrique <span class="icon">▼</span></button>
+        <div class="accordion-content" id="afrique">
+          <div class="calc-grid">
+            <a href="https://www.douane.gov.ma/" target="_blank" rel="noopener noreferrer" class="calc-link">🇲🇦 douane.ma</a>
+            <a href="https://trid-africa.org/" target="_blank" rel="noopener noreferrer" class="calc-link">🌍 TRID@frica</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <p class="note-footnote">
+      * Estimations par fiche véhicule. <strong>EVH guide FCR/RS + imports Afrique</strong>[memory:18]
+    </p>
+  </div>
 </section>
+
+<script>
+// JS Accordéon (léger, inline)
+document.querySelectorAll('.accordion-header').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const target = btn.getAttribute('data-target');
+    const content = document.getElementById(target);
+    const isActive = btn.classList.contains('active');
+    
+    // Fermer tous
+    document.querySelectorAll('.accordion-header').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.accordion-content').forEach(c => c.classList.remove('active'));
+    
+    // Ouvrir si pas déjà
+    if (!isActive) {
+      btn.classList.add('active');
+      content.classList.add('active');
+    }
+  });
+});
+</script>
+
 
   <div class="adv2-head">
     <h2 class="adv2-title">Découvrez <span class="accent">Nos Modèles</span></h2>
@@ -238,17 +284,16 @@
     </div>
   </section>
 
-  <!-- ===== Helpers (quick-specs + puces dynamiques) ===== -->
-  <script>
+ <script>
     // Détermine l’énergie : PHEV si on détecte un hybride rechargeable, sinon BEV
     function energyFrom(v){
-  const hay = [v.name, ...(v.features||[])].join(' ').toLowerCase();
+      const hay = [v.name, ...(v.features||[])].join(' ').toLowerCase();
 
-  if (/(phev|hybride\s*rechargeable|dm-i|plug[- ]?in)/i.test(hay)) return 'PHEV';
-  if (/(hev|hybride(?!.*rechargeable))/i.test(hay)) return 'HEV'; // Ajout pour détecter l'hybride non rechargeable
-  if (/\bbev\b|100%\s*électrique|fully electric/i.test(hay)) return 'BEV';
-  return '—'; // Valeur neutre si aucun type reconnu
-}
+      if (/(phev|hybride\s*rechargeable|dm-i|plug[- ]?in)/i.test(hay)) return 'PHEV';
+      if (/(hev|hybride(?!.*rechargeable))/i.test(hay)) return 'HEV'; 
+      if (/\bbev\b|100%\s*électrique|fully electric/i.test(hay)) return 'BEV';
+      return '—'; 
+    }
 
     // Format immat YYYY-MM
     function cleanReg(y){
@@ -286,7 +331,7 @@
       const m = pool.match(/(\d{2,4})\s*km/i);
       return m ? `Autonomie ${m[1]} km` : 'Autonomie —';
     }
-    // Ruban 5 infos sous l’image – version horizontale identique à la page 2
+    // Ruban 5 infos sous l’image
     function quickSpecsHTML(v){
       const reg = cleanReg(v.regyear);
       const cc = engineCc(v);
@@ -320,13 +365,13 @@
 
     // ===== Helpers additionnels =====
     const EURO = new Intl.NumberFormat('fr-FR');
- function parsePriceEUR(s) {
-  if (!s) return null;
-  // Cherche le premier groupe de chiffres, potentiellement avec espaces, en tout début de chaîne
-  const match = String(s).trim().match(/^(\d{1,3}(?:\s?\d{3})*)/);
-  return match ? parseInt(match[1].replace(/\s/g, ''), 10) : null;
-}
-
+    
+    function parsePriceEUR(s) {
+      if (!s) return null;
+      // Cherche le premier groupe de chiffres
+      const match = String(s).trim().match(/^(\d{1,3}(?:\s?\d{3})*)/);
+      return match ? parseInt(match[1].replace(/\s/g, ''), 10) : null;
+    }
 
     function brandFromName(name){
       if(!name) return '';
@@ -355,87 +400,66 @@
       let t; return (...args)=>{ clearTimeout(t); t=setTimeout(()=>fn(...args), ms); };
     }
 
-    // >>> helper pour extraire les 4 caractéristiques du JSON (batterie, moteur élec, puissance système, recharge AC)
-    function pickSpecFeatures(v){
-      const feats = Array.isArray(v.features) ? v.features : [];
-      const find = (re) => feats.find(s => re.test(s));
-
-      const battery   = find(/batterie|battery/i);
-      const motorElec = find(/moteur\s*(électrique)?\s*\d+(\.\d+)?\s*(kW|ch)/i) || find(/puissance\s*moteur/i);
-      const sysPower  = find(/puissance\s*(système|cumulée)/i);
-      const acCharge  = find(/recharge\s*ac.*\d/i) || find(/\bac\s*\d+(\.\d+)?\s*kW/i);
-
-      return [battery, motorElec, sysPower, acCharge].filter(Boolean);
-    }
-
     // ===== Rendu d'une carte =====
    function cardHTML(v){
-  const energy = energyFrom(v);
-  const autoLbl = autonomyLabel(v);
-  const trShort = transmissionShort(v) || '—';
-  const isSold = v.sold === true;
+      const energy = energyFrom(v);
+      const autoLbl = autonomyLabel(v);
+      const trShort = transmissionShort(v) || '—';
+      const isSold = v.sold === true;
 
-  const newBadge = v.isNew
-    ? `<span class="pill" style="position:absolute;left:10px;top:10px;z-index:2;background:#fef3c7;color:#92400e;border:1px solid #fde68a;">Neuf</span>`
-    : '';
+      const newBadge = v.isNew
+        ? `<span class="pill" style="position:absolute;left:10px;top:10px;z-index:2;background:#fef3c7;color:#92400e;border:1px solid #fde68a;">Neuf</span>`
+        : '';
 
-  const soldBadge = isSold
-    ? `<span class="card-badge card-badge--sold">Vendu</span>`
-    : '';
+      const soldBadge = isSold
+        ? `<span class="card-badge card-badge--sold">Vendu</span>`
+        : '';
 
-  const energyLabel = (energy === 'PHEV')
-    ? 'Hybride rechargeable (PHEV)'
-    : '100% électrique (BEV)';
+      const energyLabel = (energy === 'PHEV')
+        ? 'Hybride rechargeable (PHEV)'
+        : '100% électrique (BEV)';
 
- // On récupère toutes les features déclarées dans Hero.json
-const allFeats = Array.isArray(v.features) ? v.features : [];
-     
-   // On enlève les features qui répètent déjà le type d'énergie OU l'autonomie
-const filteredFeats = allFeats.filter(f =>
-  !/100%\s*électrique|bev|hybride\s*rechargeable|phev|hev|autonomie/i.test(f || '')
-);
-     
-// On garde 3 features max (avec energyLabel + autoLbl = 5 puces au total)
-const specLines = filteredFeats.slice(0, 3);
+     // On nettoie les features
+    const allFeats = Array.isArray(v.features) ? v.features : [];
+    const filteredFeats = allFeats.filter(f =>
+      !/100%\s*électrique|bev|hybride\s*rechargeable|phev|hev|autonomie/i.test(f || '')
+    );
+    const specLines = filteredFeats.slice(0, 3);
+    const fallbacks = [`Transmission auto ${trShort}`, 'Caméra 360°', 'Toit panoramique'];
+    const items = [energyLabel, autoLbl, ...(specLines.length ? specLines : fallbacks)];
 
-// Si pas de features, on garde un fallback propre
-const fallbacks = [`Transmission auto ${trShort}`, 'Caméra 360°', 'Toit panoramique'];
+      return `
+        <a class="card-link" href="vehicle.html?id=${encodeURIComponent(v.id)}">
+          <article class="card ${isSold ? 'card--sold' : ''}" style="position:relative">
+            ${newBadge}
+            ${soldBadge}
+            <img
+              class="thumb"
+              src="${v.images?.hero || ''}"
+              alt="${v.name}"
+              onerror="this.src='https://via.placeholder.com/400x300?text=Image+non+disponible'">
 
-// Items finaux envoyés à la liste <ul>
-const items = [energyLabel, autoLbl, ...(specLines.length ? specLines : fallbacks)];
+            ${quickSpecsHTML(v)}
 
-  return `
-    <a class="card-link" href="vehicle.html?id=${encodeURIComponent(v.id)}">
-      <article class="card ${isSold ? 'card--sold' : ''}" style="position:relative">
-        ${newBadge}
-        ${soldBadge}
-        <img
-          class="thumb"
-          src="${v.images?.hero || ''}"
-          alt="${v.name}"
-          onerror="this.src='https://via.placeholder.com/400x300?text=Image+non+disponible'">
+            <div class="body">
+              <div class="name">${v.name}</div>
+              <div class="submeta">Réf : <strong>${v.id}</strong></div>
+              <div class="price">
+              <strong>Prix H.T. :</strong> ${v.priceHT || '-'}
+              </div>
 
-        ${quickSpecsHTML(v)}
+              ${isSold
+                ? '<div class="sold-note">Ce véhicule est déjà vendu</div>'
+                : ''
+              }
 
-        <div class="body">
-          <div class="name">${v.name}</div>
-          <div class="submeta">Réf : <strong>${v.id}</strong></div>
-          <div class="price">
-            Prix HT (FCR) : ${v.priceHT || '-'}
-          </div>
-
-          ${isSold
-            ? '<div class="sold-note">Ce véhicule est déjà vendu</div>'
-            : ''
-          }
-
-          <ul class="features">
-            ${items.map(x=>`<li>• ${x}</li>`).join('')}
-          </ul>
-        </div>
-      </article>
-    </a>`;
-}
+              <ul class="features">
+                ${items.map(x=>`<li>• ${x}</li>`).join('')}
+              </ul>
+            </div>
+          </article>
+        </a>`;
+    }
 
 
     function renderGrid(list){
@@ -450,7 +474,7 @@ const items = [energyLabel, autoLbl, ...(specLines.length ? specLines : fallback
     // ===== Filtrage principal =====
     function applyFilters(){
       const q = document.getElementById('f-q').value.trim().toLowerCase();
-      const type = document.getElementById('f-type').value;     // BEV/PHEV/HEV/ESSENCE/DIESEL/''
+      const type = document.getElementById('f-type').value;
       const yMin = parseInt(document.getElementById('f-year').value,10);
       const kmMax = parseInt(document.getElementById('f-km').value,10);
       const pMax = parseInt(document.getElementById('f-price').value,10);
@@ -461,7 +485,7 @@ const items = [energyLabel, autoLbl, ...(specLines.length ? specLines : fallback
         const hay = [name, brand, ...(v.features||[])].join(' ').toLowerCase();
         const okQ = !q || hay.includes(q);
 
-        const e = energyNormalized(v);           // normalisé
+        const e = energyNormalized(v);
         const okType = !type || e === type;
 
         const y = yearFromReg(v.regyear) || 1900;
@@ -470,26 +494,26 @@ const items = [energyLabel, autoLbl, ...(specLines.length ? specLines : fallback
         const km = kmNum(v);
         const okKm = isFinite(kmMax) ? km <= kmMax : true;
 
-        const price = parsePriceEUR(v.priceFCR) || 0;
+        // CORRECTION ICI : suppression des ** **
+        const price = parsePriceEUR(v.priceHT) || 0; 
         const okPrice = isFinite(pMax) ? price <= pMax : true;
 
         return okQ && okType && okYear && okKm && okPrice;
       });
 
       renderGrid(filtered);
-      // maj étiquettes sliders
+      
       document.getElementById('f-year-val').textContent = yMin;
       document.getElementById('f-km-val').textContent = EURO.format(kmMax) + ' km';
       document.getElementById('f-price-val').textContent = EURO.format(pMax) + ' €';
     }
 
     // ===== Initialisation =====
-    fetch('data/hero.json?v=12', { cache: 'no-store' })
+    fetch('data/hero.json?v=13', { cache: 'no-store' }) // v13 pour forcer le rafraichissement
       .then(res => res.json())
       .then(vehicles => {
         window.__VEHICLES__ = vehicles || [];
 
-        // bornes dynamiques
         const years = window.__VEHICLES__.map(v => yearFromReg(v.regyear)).filter(Boolean);
         const kms = window.__VEHICLES__.map(kmNum).filter(n => !isNaN(n));
         const prices = window.__VEHICLES__.map(v => parsePriceEUR(v.priceHT)).filter(n => !isNaN(n));
@@ -511,10 +535,8 @@ const items = [energyLabel, autoLbl, ...(specLines.length ? specLines : fallback
         elPrice.min = 0; elPrice.max = pMax; elPrice.step = 500; elPrice.value = pMax;
         document.getElementById('f-price-val').textContent = EURO.format(pMax) + ' €';
 
-        // Rendu initial
         renderGrid(window.__VEHICLES__);
 
-        // Listeners
         const onInput = debounce(applyFilters, 200);
         document.getElementById('f-q').addEventListener('input', onInput);
         document.getElementById('f-type').addEventListener('change', applyFilters);
