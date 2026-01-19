@@ -519,30 +519,6 @@
     }
   },
   {
-    "id": "EVH_AudiQ42022014",
-    "name": "2022 Audi Q4 e-tron Boundary Edition",
-    "priceHT": "28 950 €",
-    "mileage": 32900,
-    "regyear": "2022-11",
-    "isNew": false,
-    "featuresCount": 6,
-    "images": {
-      "hero": "images/EVH_AudiQ4_devgauche.webp"
-    },
-    "features": [
-      "100% électrique (BEV)",
-      "Autonomie 605 km (CLTC)",
-      "Batterie LFP 76,6 kWh",
-      "Moteur 160 kW (218 ch) – 2 FWD",
-      "Recharge DC 10-80% ≈ 29 min",
-      "Double écran digital 10,25'' MMI touch + cockpit virtuel"
-    ],
-    "specifications": {
-      "engineCc": null,
-      "transmission": "Auto AT"
-    }
-  },
-  {
     "id": "EVH_MercedesEQB2023013",
     "name": "2023 Mercedes-Benz EQB 260",
     "priceHT": "30 460 €",
