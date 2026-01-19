@@ -2,7 +2,6 @@
   "id": "EVH5_BYDSEALION7",
   "name": "2025 BYD SEALION 7 EV 610 km Smart Driving Edition",
   "priceHT": "35 290 €",
-  "dutiesEstimate": "",
   "mileage": 0,
   "regyear": "2025",
   "images": {
@@ -26,8 +25,6 @@
     "Caméras 360° + assistances ADAS niveau 2+"
   ],
   "specifications": {
-    "moteurThermique": null,
-    "puissanceThermique": null,
     "typeHybride": "100% électrique (BEV)",
     "puissanceSysteme": "313 ch (230 kW)",
     "coupleSysteme": "380 Nm",
@@ -52,7 +49,6 @@
       "largeur": "1925 mm",
       "hauteur": "1620 mm",
       "empattement": "2930 mm",
-      "gardeAuSol": "variable (non spécifié)",
       "rayonDeBraquage": "5,5 m"
     },
     "poids": "2210 kg (à vide)",
@@ -70,7 +66,7 @@
   "equipements": {
     "interieur": [
       "Écran central rotatif 15,6\" (DiLink OS)",
-      "Combiné conducteur 10,25\"",
+      "Combiné conducteur 10,25",
       "Affichage tête haute (HUD)",
       "Sellerie cuir, sièges AV ventilés/chauffants, sièges AR chauffants",
       "Climatisation automatique bi-zone",
