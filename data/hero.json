@@ -307,6 +307,28 @@
     }
   },
   {
+  "id": "EVH9875392_AUDIQ4_BEV543",
+  "name": "2022 Audi Q4 e-tron BEV 84.8kWh 543 km",
+  "priceHT": "23 000 €",
+  "mileage": 44000,
+  "regyear": "2022-10",
+  "images": {
+    "hero": "images/EVH9875392_AUDIQ4_BEV543/devgauche.webp"
+    },
+    "features": [
+      "100% électrique (BEV)",
+      "Autonomie 543 km (CLTC)",
+      "Batterie Lithium-ion 82 kWh",
+      "Moteur 150 kW (204 ch) / 310 Nm",
+      "Recharge DC 10-80 % ≈ 28 min ; AC complet ≈ 8 h",
+      "Double écran digital 10,25'' MMI touch + cockpit virtuel"
+    ],
+    "specifications": {
+      "engineCc": null,
+      "transmission": "4WD/AT"
+    }
+  },
+  {
     "id": "EVH_KIAEV5_2024019",
     "name": "2024 Kia EV5 530 Light",
     "priceHT": "24 680 €",
