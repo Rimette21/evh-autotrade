@@ -339,7 +339,6 @@
       "hero": "images/EVH5689373_ToyotaRAV4/Devgauche.webp"
     },
     "features": [
-      "fuelType": "Hybrid",
       "SUV hybride Toyota (2.5L + électrique 88kW)",
       "44 000 km, mileage faible Changsha Chine",
       "E-CVT 2WD, conso économique hybride",
@@ -348,6 +347,7 @@
       "Sécurité complète (ABS/ESP, airbags multiples)"
     ],
     "specifications": {
+       "fuelType": "Hybrid",
       "engineCc": "2487",
       "transmission": "E-CVT"
     }
