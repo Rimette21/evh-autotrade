@@ -300,7 +300,7 @@ function powertrainBadge(v){
       const reg = cleanReg(v.regyear);
       const cc = engineCc(v);
       const km = (v.mileage != null) ? new Intl.NumberFormat('fr-FR').format(v.mileage) : '—';
-      const fuel = powertrainBadge(v);
+      const fuel = energyFrom(v);
       const tr = transmissionShort(v) || '—';
       return `
         <div class="quick-specs">
