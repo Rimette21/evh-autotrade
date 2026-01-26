@@ -1,0 +1,38 @@
+{
+    "id": "EVH5689373_ToyotaRAV4",
+    "name": "2022 Toyota RAV4 2.5L 178HP L4 E-CVT Hybrid",
+    "priceHT": "29 060 €",
+    "mileage": 44000,
+    "regyear": "04-2023",
+    "isNew": false,
+    "images": {
+        "hero": "images/EVH5689373_ToyotaRAV4/Devgauche.webp",
+        "gallery": [
+            "images/EVH5689373_ToyotaRAV4/Arriere.webp",
+            "images/EVH5689373_ToyotaRAV4/Avant.webp",
+            "images/EVH5689373_ToyotaRAV4/Devdroit.webp",
+            "images/EVH5689373_ToyotaRAV4/Interieuravantdrole.webp",
+            "images/EVH5689373_ToyotaRAV4/Tableaudegauch.jpg",
+            "images/EVH5689373_ToyotaRAV4/Arrieredroitgauch.jpg"
+        ]
+    },
+    "features": [
+        "SUV hybride Toyota 2.5L 178HP + 88kW électrique",
+        "E-CVT 2WD traction avant, conso économique",
+        "Toit ouvrant pano, jantes alliage 18''",
+        "Caméra 360° + régulateur adaptatif Toyota Safety",
+        "Sécurité 5 étoiles : ABS/ESP + 6 airbags"
+    ],
+    "specifications": {
+        "engineCc": "2487",
+        "transmission": "E-CVT",
+        "powerHp": "178",
+        "fuelType": "Hybrid",
+        "drivetrain": "2WD",
+        "seats": "5",
+        "dimensions": "4600x1855x1680 mm",
+        "weightKg": "1670",
+        "cargoVolumeM3": "14.34"
+    },
+    "description": "Toyota RAV4 Hybrid 2022 d'occasion premium (44 000 km seulement), import Chine via AutoCango ref ACU5689373. Moteur 2.5L 178 ch essence + électrique 88 kW, transmission E-CVT fluide, 2WD, dimensions compactes 4.60m idéales routes tunisiennes. Équipements haut de gamme : toit ouvrant, sièges électriques, clim auto bi-zone, caméra 360°, ADAS adaptative cruise, sécurité complète (6 airbags, ESP, TPMS). Excellent rapport qualité/prix pour usage familial, conso hybride ~5L/100km mixte. Prêt export Tunisie (droits ~35% + TVA 19%)."
+}
