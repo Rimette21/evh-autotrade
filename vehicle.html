@@ -121,11 +121,22 @@
       if(/\bMT\b/.test(s)) return 'MT';
       return t;
     }
-    function fuelLabel(data, isPHEV){
-      const f = (data.fuel || data.specifications?.fuel || '').toUpperCase();
-      if(f) return f;
-      return isPHEV ? 'PHEV' : 'BEV';
-    }
+   function energyFrom(v){
+  const hay = [v.name, ...(v.features||[]), ...(v.specifications?.fuelType||'')].join(' ').toLowerCase();
+  if (/(phev|plug[- ]?in|hybride.*rechargeable|dm-i|prime)/i.test(hay)) return 'PHEV';
+  if (/(hev|hybrid|hybride)(?!.*(rechargeable|plug|prime))/i.test(hay) || /rav4.*hybrid/i.test(hay) || /toyota.*hybrid/i.test(hay)) return 'HEV';
+  if (/\b(bev|électrique.*100%|fully electric|ev\b)/i.test(hay)) return 'BEV';
+  return '—';
+}
+function powertrainBadge(v){
+  const energy = energyFrom(v);
+  const labels = {'PHEV': 'SUV hybride rechargeable (PHEV)', 'HEV': 'SUV hybride auto-rechargeable (HEV)', 'BEV': 'SUV 100% électrique (BEV)'};
+  return labels[energy] || energy;
+}
+function fuelLabel(data){
+  return powertrainBadge(data);
+}
+
 
     /* ===== Récupère l'ID via ?id= / ?rid= / ?ref= / ?veh= ===== */
     const qs = new URLSearchParams(location.search);
