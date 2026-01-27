@@ -328,6 +328,29 @@
       "transmission": "4WD/AT"
     }
   },
+   {
+    "id": "EVH9923496_ToyotaRAV4",
+    "name": "2022 Toyota RAV4 2.5L 178HP L4 E-CVT Hybrid",
+    "priceHT": "25 060 €",
+    "mileage": 10000,
+    "regyear": "06-2024",
+    "isNew": false,
+    "images": {
+      "hero": "images/EVH9923496_ToyotaRAV4/DEVGAUCHE.webp"
+    },
+    "features": [
+      "SUV hybride Toyota (2.5L + électrique 88kW)",
+      "E-CVT 2WD, conso économique hybride",
+      "Toit ouvrant, sièges électriques, clim auto",
+      "Caméra 360°, cruise adaptatif, ADAS Toyota",
+      "Sécurité complète (ABS/ESP, airbags multiples)"
+    ],
+    "specifications": {
+       "fuelType": "Hybrid",
+      "engineCc": "2487",
+      "transmission": "E-CVT"
+    }
+},
   {
     "id": "EVH5689373_ToyotaRAV4",
     "name": "2022 Toyota RAV4 2.5L 178HP L4 E-CVT Hybrid",
@@ -351,6 +374,7 @@
       "transmission": "E-CVT"
     }
 },
+  
   {
     "id": "EVH_KIAEV5_2024019",
     "name": "2024 Kia EV5 530 Light",
