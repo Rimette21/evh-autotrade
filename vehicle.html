@@ -355,13 +355,6 @@ function fuelLabel(data){
         </div>
       `;
 
-    /* ===== Rendu ===== */
-// Afficher la note douane uniquement pour les PHEV (FCR / HT)
-let customsNotice = '';
-if (energie === 'PHEV') {
-  customsNotice =
-    '<div class="price-sub"><span class="notice notice--customs">(Dédouanement possible sous conditions)</span></div>';
-}
 
 root.innerHTML =
   '<div class="vehicle-header">'+
