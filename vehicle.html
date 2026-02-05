@@ -72,14 +72,13 @@
   (function(){
     const root = document.getElementById('vehicle-detail');
 
-    /* ================== Helpers couleur ================== */
+    /* ================== Helpers Couleur ================== */
     function normalizeColor(str){
       if(!str) return null;
       const s = String(str).trim().toLowerCase();
       if(/^#([0-9a-f]{3}|[0-9a-f]{6})$/i.test(s)) return s;
       const map = {
-        "blanc":"#ffffff","blanc nacré":"#f7f7f7","noir":"#111111","noir métallisé":"#222222",
-        "gris":"#9aa0a6","gris clair":"#c7cbd1","gris foncé":"#5f666d","argent":"#c0c0c0",
+        "blanc":"#ffffff","noir":"#111111","gris":"#9aa0a6","argent":"#c0c0c0",
         "bleu":"#1e73be","rouge":"#d93025","vert":"#16a34a","beige":"#d8c6a0"
       };
       return map[s] || null;
@@ -90,35 +89,35 @@
       return col ? '<span class="color-dot" style="--swatch:'+col+'"></span>'+value : value;
     }
 
-    /* ================== Helpers génériques ================== */
+    /* ================== Helpers de formatage ================== */
     function clean(v){
       if (v == null) return null;
       const s = String(v).trim();
       return (s === '—' || s === '-' || /^n\/?a$/i.test(s)) ? null : s;
     }
-    function fmt(v, fallback='—'){ return (v===0 || v) ? String(v) : fallback; }
     function fmtKm(n){ try{ return new Intl.NumberFormat('fr-FR').format(n||0)+' km'; }catch(e){ return (n||0)+' km'; } }
     
     function shortTransm(t){
       if(!t) return '—';
       const s=String(t).toUpperCase();
       if(/DHT/.test(s)) return 'DHT';
-      if(/E[- ]?CVT/.test(s)) return 'e-CVT';
+      if(/CVT/.test(s)) return 'e-CVT';
       if(/DCT/.test(s)) return 'DCT';
-      if(/\bAT\b/.test(s)) return 'AT';
       return t;
     }
 
-    /* ================== Détection Énergie Harmonisée ================== */
+    /* ================== Détection Énergie (HEV/PHEV/BEV) ================== */
     function energyFrom(v){
+      // 1. Priorité au champ fuelType du JSON
       const fuel = (v.specifications?.fuelType || '').toLowerCase();
       if (fuel === 'phev' || fuel === 'hybride rechargeable') return 'PHEV';
       if (fuel === 'hev' || fuel === 'hybrid' || fuel === 'hybride') return 'HEV';
       if (fuel === 'bev' || fuel === 'électrique') return 'BEV';
 
+      // 2. Recherche par mots-clés dans le nom et les caractéristiques
       const hay = [v.name, ...(v.features||[])].join(' ').toLowerCase();
-      if (/(phev|plug[- ]?in|hybride.*rechargeable|dm-i|prime)/i.test(hay)) return 'PHEV';
-      if (/(hev|hybrid|hybride)(?!.*(rechargeable|plug|prime|phev))/i.test(hay) || 
+      if (/(phev|plug[- ]?in|hybride.*rechargeable|dm-i|prime|c-dm|i-dm)/i.test(hay)) return 'PHEV';
+      if (/(hev|hybrid|hybride)(?!.*(rechargeable|plug|phev))/i.test(hay) || 
           /toyota.*hybrid/i.test(hay) || /rav4.*hybrid/i.test(hay)) return 'HEV';
       if (/\b(bev|électrique.*100%|fully electric|ev\b)/i.test(hay)) return 'BEV';
       return '—';
@@ -134,11 +133,183 @@
       return labels[energy] || energy;
     }
 
-    /* ===== Chargement des données ===== */
+    /* ================== Chargement des données détaillées ================== */
     const qs = new URLSearchParams(location.search);
-    const vehicleId = (qs.get('id') || qs.get('rid') || '').trim();
+    const vehicleId = (qs.get('id') || '').trim();
 
     if(!vehicleId){
       root.innerHTML = '<div class="error-msg">Aucun identifiant fourni</div>';
       return;
     }
+
+    (async function load(){
+      let data = null;
+      try {
+        // Chargement forcé sans cache pour voir les modifs immédiatement
+        const res = await fetch('data/details/' + encodeURIComponent(vehicleId) + '.json?v=' + Date.now());
+        if(!res.ok) throw new Error();
+        data = await res.json();
+      } catch(e) {
+        root.innerHTML = '<div class="error-msg">Véhicule non trouvé (ID: '+vehicleId+')</div>';
+        return;
+      }
+
+      /* --- Données préparées --- */
+      const year = (data.regyear || '').split('-')[0] || '—';
+      const energyShort = energyFrom(data);
+      const energyFull = powertrainBadge(data);
+
+      const specs = data.specifications || {};
+      const items = [];
+      const add = (label, value) => {
+        const v = clean(value);
+        if (v || v === "0") items.push({ label, value: v });
+      };
+
+      // Construction dynamique de la liste des caractéristiques
+      const M = specs.motorisation || {};
+      const P = specs.performances || {};
+      const B = specs.batterie || {};
+      const C = specs.carrosserie || {};
+
+      add('Moteur', M.moteurThermique || specs.moteur);
+      add('Puissance système', specs.puissanceSysteme || M.puissanceCombinée);
+      add('Couple combiné', specs.coupleSysteme || P.couple || M.coupleCombiné);
+      add('Batterie', B.capacite || specs.capaciteBatterie || specs.batterieKWh);
+      add('Autonomie électrique', specs.autonomieElectrique || P.autonomieCLTC || specs.autonomieWLTP);
+      add('Transmission', M.transmission || specs.transmission);
+      add('Traction', M.traction || specs.traction);
+      add('Places', C.places || specs.places);
+      add('Volume coffre', specs.volumeCoffre || specs.coffre);
+      add('Couleur', swatchHTML(specs.couleur || data.couleur || C.couleur));
+
+      const specsHTML = items.map(it => `
+        <div class="spec-item"><span class="spec-label">${it.label}</span><span class="spec-value">${it.value}</span></div>
+      `).join('');
+
+      /* --- Équipements --- */
+      const eq = data.equipements || {};
+      const allEquip = [].concat(eq.interieur || [], eq.securite || [], eq.assistance || [], eq.connectivite || []);
+      const equipHtml = allEquip.length ? `
+        <div class="card-box equip-card">
+          <div class="card-title">Équipements & Accessoires</div>
+          <div class="equip-grid">
+            <ul class="equip-list">${allEquip.slice(0, Math.ceil(allEquip.length/2)).map(li=>`<li>${li}</li>`).join('')}</ul>
+            <ul class="equip-list">${allEquip.slice(Math.ceil(allEquip.length/2)).map(li=>`<li>${li}</li>`).join('')}</ul>
+          </div>
+        </div>` : '';
+
+      /* --- Infos bas de page --- */
+      const bottomInfoHtml = (data.disponibilite || data.garantie) ? `
+        <div class="card-box note-card">
+          ${data.disponibilite ? `<p><strong>Disponibilité :</strong> ${data.disponibilite}</p>` : ''}
+          ${data.garantie ? `<p><strong>Garantie :</strong> ${data.garantie}</p>` : ''}
+        </div>` : '';
+
+      const essentialsHTML = `
+        <div class="essentials">
+          <div class="ess-item"><span class="ess-label">Reg. Year</span><span class="ess-value">${year}</span></div>
+          <div class="ess-item"><span class="ess-label">Engine (cc)</span><span class="ess-value">${clean(specs.engineCc || data.engineCc) || '—'}</span></div>
+          <div class="ess-item"><span class="ess-label">Mlg (km)</span><span class="ess-value">${fmtKm(data.mileage)}</span></div>
+          <div class="ess-item"><span class="ess-label">Fuel</span><span class="ess-value">${energyFull}</span></div>
+          <div class="ess-item"><span class="ess-label">Transm.</span><span class="ess-value">${shortTransm(M.transmission || specs.transmission)}</span></div>
+        </div>`;
+
+      const resumeInline = data.resume ? `<div class="specs-resume"><p class="v-resume">${data.resume}</p></div>` : '';
+
+      /* --- Assemblage du Rendu --- */
+      root.innerHTML = `
+        <div class="vehicle-header">
+          <div class="vehicle-title">
+            <h1>${data.name || 'Véhicule'}</h1>
+            <div class="vehicle-meta">Modèle ${year} — Réf : <strong>${data.id}</strong></div>
+          </div>
+          <div class="price-stack">
+            <div class="price-big">Prix HT : ${data.priceHT || '-'}</div>
+            ${data.dutiesEstimate ? `<div class="price-estimate">Droits de douane estimés : ${data.dutiesEstimate}</div>` : ''}
+          </div>
+          <div style="margin-top:.4rem"><span class="pill">${energyShort}</span></div>
+        </div>
+        ${essentialsHTML}
+        <div class="content-grid">
+          <div class="card-box image-card">
+            <img src="${data.images?.hero || ''}" class="hero-img" onerror="this.src='https://via.placeholder.com/800x500'">
+            <div class="gallery" id="gallery">
+              ${(data.images?.gallery || []).map((u,i)=>`<img data-idx="${i}" src="${u}" alt="Vue ${i+1}">`).join('')}
+            </div>
+          </div>
+          <div class="card-box specs-card">
+            <div class="card-title">Caractéristiques Principales</div>
+            <div class="specs-grid spec-compact">${specsHTML}</div>
+            ${resumeInline}
+          </div>
+        </div>
+        ${equipHtml}
+        ${bottomInfoHtml}
+        <div class="card-box cta-card">
+          <a href="mailto:contact@evhautotrade.com?subject=Demande%20devis%20${encodeURIComponent(data.id)}" class="btn">Demander un devis pour ce véhicule</a>
+        </div>`;
+
+      /* --- Logique Lightbox --- */
+      const galleryImgs = Array.from(document.querySelectorAll('#gallery img'));
+      const lb = document.getElementById('lightbox');
+      const lbImg = document.getElementById('lbImg');
+      let idx = 0;
+      
+      galleryImgs.forEach(img => img.onclick = () => {
+        idx = parseInt(img.dataset.idx);
+        lbImg.src = data.images.gallery[idx];
+        lb.style.display = 'flex';
+      });
+
+      document.getElementById('close').onclick = () => lb.style.display = 'none';
+      document.getElementById('next').onclick = () => { idx = (idx+1)%galleryImgs.length; lbImg.src = data.images.gallery[idx]; };
+      document.getElementById('prev').onclick = () => { idx = (idx-1+galleryImgs.length)%galleryImgs.length; lbImg.src = data.images.gallery[idx]; };
+    })();
+  })();
+  </script>
+
+  <script>
+  (function(){
+    const root = document.getElementById('vehicle-detail');
+    if (!root) return;
+    function movePill(){
+      const imgCard = root.querySelector('.image-card');
+      const pill = root.querySelector('.vehicle-header .pill');
+      if (imgCard && pill){
+        let badge = root.querySelector('.energy-badge');
+        if (!badge){
+          badge = document.createElement('div');
+          badge.className = 'energy-badge';
+          imgCard.appendChild(badge);
+        }
+        badge.appendChild(pill);
+        return true;
+      }
+      return false;
+    }
+    const obs = new MutationObserver(() => { if (movePill()) obs.disconnect(); });
+    obs.observe(root, { childList: true, subtree: true });
+  })();
+  </script>
+
+  <footer class="site-footer" id="contact">
+    <div class="footer-wrap">
+      <div class="f-brand">
+        <img src="images/EVH_logo.png" alt="EVH Autotrade" class="f-logo">
+        <div>
+          <strong>Eco Value Hub FZ-LLC</strong><br>
+          Ras Al Khaimah, United Arab Emirates
+        </div>
+      </div>
+    </div>
+    <div class="f-bottom"><small>© <span id="y">2026</span> Eco Value Hub FZ-LLC — All rights reserved.</small></div>
+  </footer>
+
+  <style>
+    .specs-card .specs-resume { margin-top: 10px; padding-top: 10px; border-top: 1px dashed #e5e7eb; }
+    .specs-card .v-resume { font-size: .88rem; line-height: 1.4; color: #3f3f46; margin: 0; }
+    .note-card p { margin: .25rem 0; font-size: 0.95rem; }
+  </style>
+</body>
+</html>
