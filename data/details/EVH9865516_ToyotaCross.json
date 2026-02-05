@@ -31,7 +31,7 @@
   "specifications": {
     "engineCc": 1987,
     "motorisation": {
-      "type": "Hybride auto-rechargeable HEV",
+      "type": "Hybride HEV",
       "moteurThermique": "2.0L 4-cyl. Atkinson 152 ch (112 kW), 188 Nm",
       "moteurElectrique": "Moteur synchrone avant 83 kW (112 ch), 206 Nm",
       "transmission": "E-CVT (continûment variable)",
