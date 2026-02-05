@@ -355,7 +355,7 @@ function fuelLabel(data){
         </div>
       `;
 
-    /* ===== Rendu ===== */
+  /* ===== Rendu ===== */
 
 root.innerHTML =
   '<div class="vehicle-header">'+
@@ -373,7 +373,6 @@ root.innerHTML =
           : ''
       ) +
     '</div>'+
-    customsNotice +
     '<div style="margin-top:.4rem"><span class="pill">'+energie+'</span></div>'+
   '</div>'+
 
@@ -381,7 +380,7 @@ root.innerHTML =
   '<div class="content-grid">'+
     '<div class="card-box image-card">'+
       '<img src="'+(data.images && data.images.hero ? data.images.hero : '')+'" alt="'+(data.name || '')+'" class="hero-img" '+
-      'onerror="this.src=\'https://via.placeholder.com/800x500?text=Image+non+disponible\'">'+
+      'onerror="this.src=\\'https://via.placeholder.com/800x500?text=Image+non+disponible\\'">'+
       '<div class="gallery" id="gallery">'+
         ((data.images && Array.isArray(data.images.gallery) && data.images.gallery.length)
           ? data.images.gallery.map((u,i)=>'<img data-idx="'+i+'" src="'+u+'" alt="Vue '+(i+1)+'">').join('')
@@ -391,7 +390,7 @@ root.innerHTML =
     '<div class="card-box specs-card">'+
       '<div class="card-title">Caractéristiques Principales</div>'+
       '<div class="specs-grid spec-compact">'+specsHTML+'</div>'+
-      resumeInline+ // résumé intégré
+      resumeInline+
     '</div>'+
   '</div>' +
   equipHtml +
