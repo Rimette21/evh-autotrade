@@ -129,7 +129,7 @@
       "hero": "images/EVH6_BSP_PHEV160/devantface.webp"
     },
     "features": [
-      "Hybride rechargeable (DM-i)",
+      "Hybride rechargeable (PHEV)",
       "Autonomie électrique 160 km (WLTP)",
       "Batterie 26,6 kWh",
       "Moteur électrique 160 kW (218 ch)",
@@ -152,7 +152,7 @@
       "hero": "images/EVH6_BSP_PHEV160/Devgauche.webp"
     },
     "features": [
-      "Hybride rechargeable (DM-i)",
+      "Hybride rechargeable (PHEV)",
       "Autonomie électrique 112 km (WLTP)",
       "Batterie LFP Blade 18,3 kWh",
       "Moteur électrique 145 kW (197 ch)",
@@ -198,7 +198,7 @@
       "hero": "images/EVH9-BSP-PHEV75/Herodevgauche.webp"
     },
     "features": [
-      "Hybride rechargeable (DM-i)",
+      "Hybride rechargeable (PHEV)",
       "Autonomie électrique 75 km (WLTP)",
       "Batterie LFP Blade 12,9 kWh",
       "Moteur électrique 145 kW (197 ch)",
@@ -223,7 +223,7 @@
       "hero": "images/EVH10_BYDLEOPARD_PHEV125/DEVGAUCHE.webp"
     },
     "features": [
-      "SUV PHEV 4WD 1.5T + double moteurs électriques",
+      "Hybride rechargeable (PHEV)",
       "Puissance totale 485 kW (≈660 ch), couple 760 N·m",
       "Batterie 31,8 kWh, autonomie 125 km CLTC",
       "Boîte DHT automatique, capacités tout‑terrain avancées",
@@ -341,7 +341,7 @@
       "hero": "images/EVH9923496_ToyotaRAV4/DEVGAUCHE.webp"
     },
     "features": [
-      "SUV hybride Toyota (2.5L + électrique 88kW)",
+      "SUV hybride (HEV)",
       "E-CVT 2WD, conso économique hybride",
       "Toit ouvrant, sièges électriques, clim auto",
       "Caméra 360°, cruise adaptatif, ADAS Toyota",
@@ -364,7 +364,7 @@
       "hero": "images/EVH5689373_ToyotaRAV4/Devgauche.webp"
     },
     "features": [
-      "SUV hybride Toyota (2.5L + électrique 88kW)",
+      "SUV hybride (HEV)",
       "E-CVT 2WD, conso économique hybride",
       "Toit ouvrant, sièges électriques, clim auto",
       "Caméra 360°, cruise adaptatif, ADAS Toyota",
@@ -388,7 +388,7 @@
     "hero": "images/EVH9865516_ToyotaCross/devantgauche.webp"
   },
   "features": [
-    "Moteur électrique 83 kW (112 ch)",
+    "SUV hybride (HEV)",
     "Puissance système 196 ch (FWD 2WD)",
     "Consommation 5.4 L/100 km (mixte)",
     "E-CVT + 2WD",
@@ -434,7 +434,7 @@
       "hero": "images/EVH9881981_BSP_PHEV160/devgauche.webp"
     },
     "features": [
-      "Hybride rechargeable (DM-i)",
+      "Hybride rechargeable (PHEV)",
       "Autonomie électrique 160 km (WLTP)",
       "Batterie 26,6 kWh",
       "Moteur électrique 160 kW (218 ch)",
@@ -626,7 +626,7 @@
       "hero": "images/Vendus/EVH9391855_CHERRY_DEVANT.webp"
     },
     "features": [
-      "Hybride rechargeable (C-DM)",
+      "Hybride rechargeable (PHEV)",
       "Autonomie électrique 120 km",
       "Batterie 20 kWh",
       "Moteur électrique 136 ch",
@@ -651,7 +651,7 @@
       "hero": "images/Vendus/9433858_Jetour X70_DEV_gauche.webp"
     },
     "features": [
-      "Hybride rechargeable (C-DM)",
+      "Hybride rechargeable (PHEV)",
       "Autonomie électrique 110 km",
       "Batterie 19 kWh",
       "Moteur électrique 136 ch",
@@ -675,7 +675,7 @@
       "hero": "images/Vendus/EVH9336933_JETOUR_DEVANT.webp"
     },
     "features": [
-      "Hybride rechargeable (i-DM)",
+      "Hybride rechargeable (PHEV)",
       "Autonomie électrique 100 km",
       "Batterie 19 kWh",
       "Moteur électrique 136 ch",
@@ -699,7 +699,7 @@
       "hero": "images/Vendus/EVH9384241_HAVALH6_devant.webp"
     },
     "features": [
-      "Hybride rechargeable (D)",
+      "Hybride rechargeable (PHEV)",
       "Autonomie électrique 110 km",
       "Batterie 19 kWh",
       "Moteur électrique 156 ch",
@@ -723,7 +723,7 @@
       "hero": "images/Vendus/EVH9404921_DEV_DROITE.webp"
     },
     "features": [
-      "Hybride rechargeable (DM-i)",
+      "Hybride rechargeable (PHEV)",
       "Autonomie électrique 115 km",
       "Batterie Blade 18,3 kWh",
       "Moteur électrique 145 kW (197 ch)",
@@ -747,7 +747,7 @@
       "hero": "images/Vendus/EVH9478503_DEV_DROITE.webp"
     },
     "features": [
-      "Hybride rechargeable (DM-i)",
+      "Hybride rechargeable (PHEV)",
       "Autonomie électrique 110 km",
       "Batterie Blade 18,3 kWh",
       "Moteur électrique 145 kW (197 ch)",
@@ -771,7 +771,7 @@
       "hero": "images/Vendus/EVH9404943_BYD_beige_devant.webp"
     },
     "features": [
-      "Hybride rechargeable (DM-i)",
+      "Hybride rechargeable (PHEV)",
       "Autonomie électrique 150 km",
       "Batterie 26,6 kWh",
       "Moteur électrique 160 kW (218 ch)",
@@ -795,7 +795,7 @@
       "hero": "images/Vendus/EVH9519205_CHERY_TIGO_devdroit.webp"
     },
     "features": [
-      "Hybride rechargeable (C-DM)",
+      "Hybride rechargeable (PHEV)",
       "Autonomie électrique 110 km (WLTP)",
       "Batterie 18,3 kWh",
       "Moteur électrique 152 kW (206 ch)",
