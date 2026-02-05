@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -10,7 +8,6 @@
   <link rel="stylesheet" href="mobile-tighten.css">
 </head>
 <body class="page-vehicle">
-  <!-- HEADER -->
   <header>
     <div class="header-inner">
       <div class="logo-wrap">
@@ -33,7 +30,6 @@
         </ul>
       </nav>
 
-      <!-- Checkbox + bouton burger -->
       <input type="checkbox" id="nav-toggle" aria-hidden="true">
       <label class="nav-btn" for="nav-toggle" aria-label="Ouvrir le menu">
         <span class="bar"></span>
@@ -57,7 +53,6 @@
           </nav>
         </div>
       </aside>
-      <!-- fin des éléments qui doivent rester dans .header-inner -->
     </div>
   </header>
 
@@ -66,7 +61,6 @@
     <div id="vehicle-detail"><p>Chargement du véhicule…</p></div>
   </div>
 
-  <!-- LIGHTBOX -->
   <div id="lightbox" aria-hidden="true">
     <span id="close">✕</span>
     <span id="prev">‹</span>
@@ -74,7 +68,7 @@
     <span id="next">›</span>
   </div>
 
- <script>
+  <script>
   (function(){
     const root = document.getElementById('vehicle-detail');
 
@@ -84,8 +78,9 @@
       const s = String(str).trim().toLowerCase();
       if(/^#([0-9a-f]{3}|[0-9a-f]{6})$/i.test(s)) return s;
       const map = {
-        "blanc":"#ffffff","blanc nacré":"#f7f7f7","noir":"#111111","gris":"#9aa0a6",
-        "argent":"#c0c0c0","bleu":"#1e73be","rouge":"#d93025","vert":"#16a34a"
+        "blanc":"#ffffff","blanc nacré":"#f7f7f7","noir":"#111111","noir métallisé":"#222222",
+        "gris":"#9aa0a6","gris clair":"#c7cbd1","gris foncé":"#5f666d","argent":"#c0c0c0",
+        "bleu":"#1e73be","rouge":"#d93025","vert":"#16a34a","beige":"#d8c6a0"
       };
       return map[s] || null;
     }
@@ -95,18 +90,36 @@
       return col ? '<span class="color-dot" style="--swatch:'+col+'"></span>'+value : value;
     }
 
+    /* ================== Helpers génériques ================== */
+    function clean(v){
+      if (v == null) return null;
+      const s = String(v).trim();
+      return (s === '—' || s === '-' || /^n\/?a$/i.test(s)) ? null : s;
+    }
+    function fmt(v, fallback='—'){ return (v===0 || v) ? String(v) : fallback; }
+    function fmtKm(n){ try{ return new Intl.NumberFormat('fr-FR').format(n||0)+' km'; }catch(e){ return (n||0)+' km'; } }
+    
+    function shortTransm(t){
+      if(!t) return '—';
+      const s=String(t).toUpperCase();
+      if(/DHT/.test(s)) return 'DHT';
+      if(/E[- ]?CVT/.test(s)) return 'e-CVT';
+      if(/DCT/.test(s)) return 'DCT';
+      if(/\bAT\b/.test(s)) return 'AT';
+      return t;
+    }
+
     /* ================== Détection Énergie Harmonisée ================== */
     function energyFrom(v){
-      // 1. Priorité au champ spécifique du JSON
       const fuel = (v.specifications?.fuelType || '').toLowerCase();
       if (fuel === 'phev' || fuel === 'hybride rechargeable') return 'PHEV';
       if (fuel === 'hev' || fuel === 'hybrid' || fuel === 'hybride') return 'HEV';
       if (fuel === 'bev' || fuel === 'électrique') return 'BEV';
 
-      // 2. Fallback par mots-clés
       const hay = [v.name, ...(v.features||[])].join(' ').toLowerCase();
-      if (/(phev|plug[- ]?in|dm-i|prime)/i.test(hay)) return 'PHEV';
-      if (/(hev|hybride.*auto[- ]?rechargeable|toyota.*hybrid|rav4.*hybrid)/i.test(hay)) return 'HEV';
+      if (/(phev|plug[- ]?in|hybride.*rechargeable|dm-i|prime)/i.test(hay)) return 'PHEV';
+      if (/(hev|hybrid|hybride)(?!.*(rechargeable|plug|prime|phev))/i.test(hay) || 
+          /toyota.*hybrid/i.test(hay) || /rav4.*hybrid/i.test(hay)) return 'HEV';
       if (/\b(bev|électrique.*100%|fully electric|ev\b)/i.test(hay)) return 'BEV';
       return '—';
     }
@@ -121,227 +134,11 @@
       return labels[energy] || energy;
     }
 
-    /* ================== Helpers d'affichage ================== */
-    function clean(v){
-      if (v == null) return null;
-      const s = String(v).trim();
-      return (s === '—' || s === '-' || /^n\/?a$/i.test(s)) ? null : s;
-    }
-    function fmt(v, fallback='—'){ return (v===0 || v) ? String(v) : fallback; }
-    function fmtKm(n){ try{ return new Intl.NumberFormat('fr-FR').format(n||0)+' km'; }catch(e){ return (n||0)+' km'; } }
-    
-    function shortTransm(t){
-      if(!t) return '—';
-      const s=String(t).toUpperCase();
-      if(/DHT/.test(s)) return 'DHT';
-      if(/CVT/.test(s)) return 'e-CVT';
-      if(/DCT/.test(s)) return 'DCT';
-      return t;
-    }
-
-    /* ================== Chargement des données ================== */
+    /* ===== Chargement des données ===== */
     const qs = new URLSearchParams(location.search);
-    const vehicleId = (qs.get('id') || '').trim();
+    const vehicleId = (qs.get('id') || qs.get('rid') || '').trim();
 
     if(!vehicleId){
       root.innerHTML = '<div class="error-msg">Aucun identifiant fourni</div>';
       return;
     }
-
-    (async function load(){
-      try {
-        const res = await fetch('data/details/' + encodeURIComponent(vehicleId) + '.json?v=' + Date.now());
-        if(!res.ok) throw new Error();
-        const data = await res.json();
-
-        // Préparation des variables
-        const year = (data.regyear || '').split('-')[0] || '—';
-        const energyPill = energyFrom(data);
-        const energyFull = powertrainBadge(data);
-        const specs = data.specifications || {};
-        
-        // Construction des specs items
-        const items = [];
-        const add = (label, value) => {
-          const v = clean(value);
-          if (v || v === "0") items.push({ label, value: v });
-        };
-
-        add('Moteur', specs.motorisation?.moteurThermique || specs.moteur);
-        add('Puissance système', specs.puissanceSysteme || specs.motorisation?.puissanceCombinée);
-        add('Batterie', specs.batterie?.capacite || specs.capaciteBatterie);
-        add('Transmission', specs.motorisation?.transmission || specs.transmission);
-        add('Couleur', swatchHTML(specs.couleur || data.couleur));
-
-        const specsHTML = items.map(it => `
-          <div class="spec-item">
-            <span class="spec-label">${it.label}</span>
-            <span class="spec-value">${it.value}</span>
-          </div>`).join('');
-
-        const essentialsHTML = `
-          <div class="essentials">
-            <div class="ess-item"><span class="ess-label">Reg. Year</span><span class="ess-value">${year}</span></div>
-            <div class="ess-item"><span class="ess-label">Mlg (km)</span><span class="ess-value">${fmtKm(data.mileage)}</span></div>
-            <div class="ess-item"><span class="ess-label">Fuel</span><span class="ess-value">${energyFull}</span></div>
-          </div>`;
-
-        // Rendu Final
-        root.innerHTML = `
-          <div class="vehicle-header">
-            <div class="vehicle-title">
-              <h1>${data.name || 'Véhicule'}</h1>
-              <div class="vehicle-meta">Modèle ${year} — Réf : <strong>${data.id}</strong></div>
-            </div>
-            <div class="price-stack">
-              <div class="price-big">Prix HT : ${data.priceHT || '-'}</div>
-              ${data.dutiesEstimate ? `<div class="price-estimate">Douane estimée : ${data.dutiesEstimate}</div>` : ''}
-            </div>
-            <div style="margin-top:.4rem"><span class="pill">${energyPill}</span></div>
-          </div>
-          ${essentialsHTML}
-          <div class="content-grid">
-            <div class="card-box image-card">
-              <img src="${data.images?.hero || ''}" class="hero-img" onerror="this.src='https://via.placeholder.com/800x500'">
-              <div class="gallery" id="gallery">
-                ${(data.images?.gallery || []).map((u,i)=>`<img data-idx="${i}" src="${u}">`).join('')}
-              </div>
-            </div>
-            <div class="card-box specs-card">
-              <div class="card-title">Caractéristiques</div>
-              <div class="specs-grid spec-compact">${specsHTML}</div>
-              ${data.resume ? `<div class="specs-resume"><p class="v-resume">${data.resume}</p></div>` : ''}
-            </div>
-          </div>`;
-
-        /* Lightbox logic simple */
-        document.querySelectorAll('#gallery img').forEach(img => {
-          img.onclick = () => {
-            const lb = document.getElementById('lightbox');
-            document.getElementById('lbImg').src = img.src;
-            lb.style.display = 'flex';
-          };
-        });
-      } catch(e) {
-        root.innerHTML = '<div class="error-msg">Véhicule non trouvé</div>';
-      }
-    })();
-  })();
-  </script>
-
-  <!-- Déplace la pastille .pill (BEV/PHEV) dans la photo Hero -->
-  <script>
-  (function(){
-    const root = document.getElementById('vehicle-detail');
-    if (!root) return;
-    function movePill(){
-      const imgCard = root.querySelector('.image-card');
-      const pill = root.querySelector('.price-stack .pill');
-      if (imgCard && pill){
-        let badge = root.querySelector('.energy-badge');
-        if (!badge){
-          badge = document.createElement('div');
-          badge.className = 'energy-badge';
-          imgCard.appendChild(badge);
-        }
-        badge.appendChild(pill);
-        return true;
-      }
-      return false;
-    }
-    if (!movePill()){
-      const obs = new MutationObserver(() => { if (movePill()) obs.disconnect(); });
-      obs.observe(root, { childList: true, subtree: true });
-    }
-  })();
-  </script>
-
-  <footer class="site-footer" id="contact">
-    <div class="footer-wrap">
-      <div class="f-brand">
-        <img src="images/EVH_logo.png" alt="EVH Autotrade" class="f-logo">
-        <div>
-          <strong>Eco Value Hub FZ-LLC</strong><br>
-          Free Zone Limited Liability Company (FZ-LLC) – General Trading Licence<br>
-          VUNE1173, Compass building – Al Hulaila, AL Hulaila Industrial Zone-FZ,<br>
-          Ras Al Khaimah, United Arab Emirates
-        </div>
-      </div>
-      <div class="f-cols">
-        <div class="f-col">
-          <h4>Contact</h4>
-          <ul>
-            <li><a href="mailto:contact@evhautotrade.com">contact@evhautotrade.com</a></li>
-            <li><a href="https://wa.me/33662617058" rel="noopener" target="_blank">WhatsApp : +33662617058</a></li>
-          </ul>
-        </div>
-        <div class="f-col">
-          <h4>Informations légales</h4>
-          <ul>
-            <li><a href="mentions-legales.html">Mentions légales</a></li>
-            <li><a href="conditions-generales.html">Conditions générales</a></li>
-            <li><a href="confidentialite.html">Confidentialité</a></li>
-          </ul>
-        </div>
-        <div class="f-col">
-          <h4>EVH Autotrade</h4>
-          <ul>
-            <li><a href="index.html#catalogue">Catalogue</a></li>
-            <li><a href="index.html#avantages">Nos avantages</a></li>
-            <li><a href="mailto:contact@evhautotrade.com?subject=Demande%20devis">Demander un devis</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="f-bottom">
-      <small>© <span id="y">2025</span> Eco Value Hub FZ-LLC — All rights reserved.</small>
-    </div>
-  </footer>
-
-  <!-- Petits correctifs CSS "anti-débordement" + résumé inline -->
-  <style>
-/* 1) Base responsive */
-html { box-sizing: border-box; }
-*, *::before, *::after { box-sizing: inherit; }
-img, video { max-width: 100%; height: auto; display: block; }
-iframe { max-width: 100%; }
-
-/* 2) Empêcher les longs textes de déborder */
-:root { word-wrap: break-word; overflow-wrap: anywhere; }
-pre, code { white-space: pre-wrap; }
-
-/* 3) Flex/Grid : permettre le shrink */
-.flex, [class*="flex"] > * { min-width: 0; }
-.grid, [class*="grid"] > * { min-width: 0; }
-
-/* 4) Éviter le piège 100vw (préfère 100%) */
-.container { width: 100%; max-width: 1200px; margin: 0 auto; }
-
-/* 5) Tables responsives */
-.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
-
-/* 6) Iframe responsive avec ratio */
-.embed { position: relative; width: 100%; aspect-ratio: 16 / 9; }
-.embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; }
-
-/* Résumé intégré à la carte Spécifications */
-.specs-card .specs-resume {
-  margin-top: 10px;
-  padding-top: 10px;
-  border-top: 1px dashed #e5e7eb;
-}
-.specs-card .v-resume {
-  font-size: .88rem;
-  line-height: 1.4;
-  color: #3f3f46;
-  margin: 0;
-}
-@media (max-width: 900px) {
-  .specs-card .v-resume { font-size: .85rem; line-height: 1.35; }
-}
-
-/* Petites marges pour les notes bas de page */
-.note-card p { margin: .25rem 0; }
-  </style>
-</body>
-</html>
