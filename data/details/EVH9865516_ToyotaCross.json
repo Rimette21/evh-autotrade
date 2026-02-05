@@ -11,9 +11,12 @@
             "images/EVH9865516_ToyotaCross/devantdroit.webp",
             "images/EVH9865516_ToyotaCross/cotegauche.webp",
             "images/EVH9865516_ToyotaCross/arrieredroit.webp",
-            "images/EVH9865516_ToyotaCross/interieurdevant.webp",
-            "images/EVH9865516_ToyotaCross/tableaudebord.webp",
-            "images/EVH9865516_ToyotaCross/siegesarriere.webp"
+            "images/EVH9865516_ToyotaCross/arrieregauche.webp",
+           "images/EVH9865516_ToyotaCross/devface.webp", 
+            "images/EVH9865516_ToyotaCross/arriere.webp",
+            "images/EVH9865516_ToyotaCross/intdevant.webp",
+            "images/EVH9865516_ToyotaCross/tableaubord.webp",
+            "images/EVH9865516_ToyotaCross/intarriere.webp"
         ]
     },
     "features": [
