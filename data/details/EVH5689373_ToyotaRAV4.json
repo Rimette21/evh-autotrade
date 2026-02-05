@@ -8,16 +8,19 @@
     "images": {
         "hero": "images/EVH5689373_ToyotaRAV4/Devgauche.webp",
         "gallery": [
+            "images/EVH5689373_ToyotaRAV4/Devdroite.webp",
+             "images/EVH5689373_ToyotaRAV4/Arrieredroit.webp",
+             "images/EVH5689373_ToyotaRAV4/arrieregauche.webp",
             "images/EVH5689373_ToyotaRAV4/Arriere.webp",
-            "images/EVH5689373_ToyotaRAV4/Avant.webp",
-            "images/EVH5689373_ToyotaRAV4/Devdroit.webp",
-            "images/EVH5689373_ToyotaRAV4/Interieuravantdrole.webp",
-            "images/EVH5689373_ToyotaRAV4/Tableaudegauch.jpg",
-            "images/EVH5689373_ToyotaRAV4/Arrieredroitgauch.jpg"
+             "images/EVH5689373_ToyotaRAV4/Coffre.webp",
+            "images/EVH5689373_ToyotaRAV4/Tabbord.webp",
+            "images/EVH5689373_ToyotaRAV4/interieurdevant_gauche.jpg",
+             "images/EVH5689373_ToyotaRAV4/interieurdevant_droite.webp",
+             "images/EVH5689373_ToyotaRAV4/interieurarriere_droite.jpg"
         ]
     },
     "features": [
-         "fuelType": "Hybrid auto-rechargeable",
+         "fuelType": "Hybrid",
         "SUV hybride Toyota 2.5L 178HP + 88kW électrique",
         "E-CVT 2WD traction avant, conso économique",
         "Toit ouvrant pano, jantes alliage 18''",
