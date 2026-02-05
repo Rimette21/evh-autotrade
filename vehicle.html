@@ -356,7 +356,7 @@ function fuelLabel(data){
       `;
 
 
-root.innerHTML =
+  root.innerHTML =
   '<div class="vehicle-header">'+
     '<div class="vehicle-title">'+
       '<h1>'+(data.name || 'Véhicule')+'</h1>'+
@@ -372,7 +372,7 @@ root.innerHTML =
           : ''
       ) +
     '</div>'+
-    customsNotice +
+    // L'ancienne ligne "customsNotice +" a été supprimée d'ici
     '<div style="margin-top:.4rem"><span class="pill">'+energie+'</span></div>'+
   '</div>'+
 
@@ -390,22 +390,12 @@ root.innerHTML =
     '<div class="card-box specs-card">'+
       '<div class="card-title">Caractéristiques Principales</div>'+
       '<div class="specs-grid spec-compact">'+specsHTML+'</div>'+
-      resumeInline+ // résumé intégré
+      resumeInline+ 
     '</div>'+
   '</div>' +
   equipHtml +
   bottomInfoHtml +
   ctaHtml;
-
-if (data.fichePDF) {
-  root.innerHTML +=
-    '<div style="margin:2em 0; text-align:center;">'+
-      '<a href="'+data.fichePDF+'" target="_blank" class="btn fiche-btn">'+
-        'Télécharger la fiche technique PDF'+
-      '</a>'+
-    '</div>';
-}
-
       /* ===== Lightbox ===== */
       const galleryImgs = Array.from(document.querySelectorAll('#gallery img'));
       const lb = document.getElementById('lightbox');
