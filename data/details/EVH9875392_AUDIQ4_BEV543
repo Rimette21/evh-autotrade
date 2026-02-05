@@ -1,6 +1,6 @@
 {
   "id": "EVH9875392_AUDIQ4_BEV543",
-  "name": "2022 Audi Q4 e-tron BEV 84.8kWh 543 km",
+  "name": "2022 Audi Q4 e-tron 40 BEV 77kWh 519 km WLTP",
   "priceHT": "23 000 €",
   "mileage": 44000,
   "regyear": "2022-10",
@@ -16,14 +16,14 @@
     ]
   },
   "caracteristiques": [
-    "SUV 5 portes 100% électrique",
+    "SUV 5 portes 100% électrique (BEV)",
     "Autonomie 519 km WLTP",
-    "Moteur synchrone à aimants permanents 150 kW (204 ch) / 310 Nm",
-    "Batterie Lithium-ion 84.8 kWh",
+    "Moteur synchrone 150 kW (204 ch) / 310 Nm - RWD",
+    "Batterie Lithium-ion 77 kWh net (82 kWh brut)",
     "Double écran digital 10,25'' MMI touch + cockpit virtuel",
     "Sécurité : 7 airbags, AEB, maintien de voie, ADAS avancé",
     "Caméras 360°, stationnement automatique, capteurs multiples",
-    "Recharge DC 10-80 % ≈ 28 min ; AC complet ≈ 8 h"
+    "Recharge DC 10-80 % ≈ 28 min (125 kW) ; AC ≈ 8 h"
   ],
   "specifications": {
     "engineCc": 0,
@@ -31,7 +31,7 @@
       "type": "Électrique (BEV)",
       "moteurElectrique": "150 kW (204 ch) — 310 Nm",
       "transmission": "Automatique, rapport unique",
-      "traction": "4WD/AT"
+      "traction": "RWD"
     },
     "performances": {
       "vitesseMax": "160 km/h",
@@ -86,3 +86,5 @@
   },
   "resume": "L'Audi Q4 e-tron 40 2022 est un SUV électrique compact premium sur plateforme MEB, avec autonomie WLTP 519 km, moteur 204 ch RWD, double écran MMI, ADAS avancés et coffre modulable. Idéal pour usage urbain et familial."
 }
+
+
