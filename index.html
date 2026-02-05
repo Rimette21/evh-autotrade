@@ -240,11 +240,12 @@ function energyFrom(v){
   // 1. PHEV prioritaire (hybride rechargeable)
   if (/(phev|plug[- ]?in|hybride.*rechargeable|dm-i|prime)/i.test(hay)) return 'PHEV';
   
-  // 2. HEV (hybride auto-rechargeable) - Toyota RAV4 ✅
-  if (/(hev|hybrid|hybride)(?!.*(rechargeable|plug|prime))/i.test(hay) || 
-      /rav4.*hybrid/i.test(hay) || 
-      /toyota.*hybrid/i.test(hay)) return 'HEV';
-  
+ // 2. HEV (hybride auto-rechargeable) - TOUS les Toyota Hybrid + Corolla Cross ✅
+if (/(hev|hybrid|hybride)(?!.*(rechargeable|plug|prime|phev))/i.test(hay) || 
+    /(corollacross|corolla cross|rav4).*hybrid/i.test(hay) || 
+    /toyota.*hybrid/i.test(hay)) {
+    return 'HEV';
+}
   // 3. BEV (100% électrique)
   if (/\b(bev|électrique.*100%|fully electric|ev\b)/i.test(hay)) return 'BEV';
   
