@@ -20,7 +20,7 @@
         ]
     },
     "features": [
-        "SUV hybride Toyota 2.5L 178HP + 88kW électrique",
+        "SUV hybride (HEV) 2.5L 178HP + 88kW électrique",
         "E-CVT 2WD traction avant, conso économique",
         "Toit ouvrant pano, jantes alliage 18'",
         "Caméra 360° + régulateur adaptatif Toyota Safety",
@@ -30,7 +30,7 @@
         "engineCc": "2487",
         "transmission": "E-CVT",
         "powerHp": "178",
-        "fuelType": "Hybrid",
+        "fuelType": "HEV",
         "drivetrain": "2WD",
         "seats": "5",
         "dimensions": "4600x1855x1680 mm",
