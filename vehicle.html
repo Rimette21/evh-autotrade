@@ -355,8 +355,11 @@ function fuelLabel(data){
         </div>
       `;
 
+/* ===== Rendu ===== */
+// Note douane désactivée
+let customsNotice = ''; 
 
-  root.innerHTML =
+root.innerHTML =
   '<div class="vehicle-header">'+
     '<div class="vehicle-title">'+
       '<h1>'+(data.name || 'Véhicule')+'</h1>'+
@@ -372,8 +375,7 @@ function fuelLabel(data){
           : ''
       ) +
     '</div>'+
-    // L'ancienne ligne "customsNotice +" a été supprimée d'ici
-    '<div style="margin-top:.4rem"><span class="pill">'+energie+'</span></div>'+
+    '<div style="margin-top:.4rem"><span class="pill">'+(energie || 'N/A')+'</span></div>'+
   '</div>'+
 
   essentialsHTML +
@@ -390,12 +392,13 @@ function fuelLabel(data){
     '<div class="card-box specs-card">'+
       '<div class="card-title">Caractéristiques Principales</div>'+
       '<div class="specs-grid spec-compact">'+specsHTML+'</div>'+
-      resumeInline+ 
+      resumeInline+
     '</div>'+
   '</div>' +
   equipHtml +
   bottomInfoHtml +
   ctaHtml;
+      
       /* ===== Lightbox ===== */
       const galleryImgs = Array.from(document.querySelectorAll('#gallery img'));
       const lb = document.getElementById('lightbox');
