@@ -374,7 +374,31 @@
       "transmission": "E-CVT"
     }
 },
-  
+  {
+  "id": "EVH9865516_ToyotaCross",
+  "name": "2024 Toyota Corolla Cross 2.0L 152HP L4 E-CVT Hybrid",
+  "priceHT": "20 090 €",
+  "mileage": 7800,
+  "regyear": "2025-05",
+  "isNew": false,
+  "sold": false,
+  "images": {
+    "hero": "images/EVH9865516_ToyotaCross/devantgauche.webp"
+  },
+  "features": [
+    "Hybride auto-rechargeable HEV",
+    "Moteur 2.0L 4-cyl. 152 ch + moteur électrique 83 kW (112 ch)",
+    "Puissance système 196 ch (FWD 2WD)",
+    "Batterie Li-ion 222V (1.6 kWh)",
+    "Consommation 5.4 L/100 km (mixte)",
+    "E-CVT + 2WD",
+    "5 places SUV compact"
+  ],
+  "specifications": {
+    "engineCc": 1987,
+    "transmission": "E-CVT"
+  }
+},
   {
     "id": "EVH_KIAEV5_2024019",
     "name": "2024 Kia EV5 530 Light",
