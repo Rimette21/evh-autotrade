@@ -1,0 +1,39 @@
+{
+    "id": "EVH9865516_ToyotaCross",
+    "name": "2024 Toyota Corolla Cross 2.0L 152HP L4 E-CVT Hybrid",
+    "priceHT": "20 090 €",
+    "mileage": 7800,
+    "regyear": "2025-05",
+    "isNew": false,
+    "images": {
+        "hero": "images/EVH9865516_ToyotaCross/devantgauche.webp",
+        "gallery": [
+            "images/EVH9865516_ToyotaCross/devantdroit.webp",
+            "images/EVH9865516_ToyotaCross/cotegauche.webp",
+            "images/EVH9865516_ToyotaCross/arrieredroit.webp",
+            "images/EVH9865516_ToyotaCross/interieurdevant.webp",
+            "images/EVH9865516_ToyotaCross/tableaudebord.webp",
+            "images/EVH9865516_ToyotaCross/siegesarriere.webp"
+        ]
+    },
+    "features": [
+        "Hybride auto-rechargeable HEV",
+        "Moteur 2.0L 4-cyl. 152 ch + électrique 83 kW (112 ch)",
+        "Puissance système 196 ch FWD 2WD",
+        "E-CVT + traction avant économique 5.0-5.5 L/100km",
+        "Batterie Li-ion 222V auto-recharge régénérative",
+        "5 places SUV compact Toyota fiable"
+    ],
+    "specifications": {
+        "engineCc": 1987,
+        "transmission": "E-CVT",
+        "powerHp": "152 (thermique) + 112 (électrique)",
+        "fuelType": "Hybrid",
+        "drivetrain": "2WD",
+        "seats": "5",
+        "dimensions": "4460x1825x1620 mm",
+        "weightKg": "1560",
+        "cargoVolumeM3": "0.68"
+    },
+    "description": "Toyota Corolla Cross Hybrid 2024 faiblement kilométré (7800 km), moteur 2.0L 152 ch essence + électrique 83 kW (112 ch) pour 196 ch système, E-CVT fluide, traction avant 2WD. Consommation économique 5.0-5.5 L/100km mixte, batterie Li-ion 222V auto-recharge. Dimensions compactes 4.46m, coffre 680L, 5 places familiales. Fiabilité Toyota garantie, parfait usage urbain/régional."
+}
