@@ -386,7 +386,7 @@
     "hero": "images/EVH9865516_ToyotaCross/devantgauche.webp"
   },
   "features": [
-     "fuelType": "Hybrid",
+     "SUV hybride Toyota (2.0L + électrique 83kW)",
     "Moteur 2.0L 4-cyl. 152 ch + moteur électrique 83 kW (112 ch)",
     "Puissance système 196 ch (FWD 2WD)",
     "Batterie Li-ion 222V (1.6 kWh)",
@@ -395,6 +395,7 @@
     "5 places SUV compact"
   ],
   "specifications": {
+    "fuelType": "Hybrid",
     "engineCc": 1987,
     "transmission": "E-CVT"
   }
