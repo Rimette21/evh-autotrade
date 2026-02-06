@@ -2,7 +2,6 @@
   "id": "EVH3_BSP_EV605",
   "name": "2025 Song PLUS EV 605km Flagship Edition",
   "priceHT": "29 770 €",
-  "dutiesEstimate": "",
   "mileage": 0,
   "regyear": "2025-10",
   "images": {
@@ -25,7 +24,7 @@
     "Batterie Blade LFP 87,04 kWh",
     "Moteur 160 kW (218 ch) / 310 Nm – traction avant (FWD)",
     "Recharge DC 90 kW (0→80% ≈ 28 min) / AC 7 kW (≈ 12,4 h)",
-    "Écran central rotatif 15,6" (DiLink OS)",
+    "Écran central rotatif 15,6",
     "Caméras 360° + assistances ADAS niveau 2+"
   ],
   "specifications": {

@@ -1,0 +1,94 @@
+{
+  "id": "EVH9865516_ToyotaCross",
+  "name": "2024 Toyota Corolla Cross 2.0L Hybrid FWD",
+  "priceHT": "20 090 €",
+  "mileage": 7800,
+  "regyear": "2025-05",
+ "images": {
+        "hero": "images/EVH9865516_ToyotaCross/devantgauche.webp",
+        "gallery": [
+            "images/EVH9865516_ToyotaCross/devantdroit.webp",
+            "images/EVH9865516_ToyotaCross/cotegauche.webp",
+            "images/EVH9865516_ToyotaCross/arrieredroit.webp",
+            "images/EVH9865516_ToyotaCross/arrieregauche.webp",
+           "images/EVH9865516_ToyotaCross/devface.webp", 
+            "images/EVH9865516_ToyotaCross/arriere.webp",
+            "images/EVH9865516_ToyotaCross/intdevant.webp",
+            "images/EVH9865516_ToyotaCross/tableaubord.webp",
+            "images/EVH9865516_ToyotaCross/intarriere.webp"
+        ]
+    },
+  "caracteristiques": [
+    "SUV compact hybride auto-rechargeable HEV, 5 places, traction avant FWD 2WD",
+    "Moteur 2.0L 4-cyl. 152 ch + électrique 83 kW (112 ch), puissance système 196 ch",
+    "Transmission E-CVT fluide, consommation mixte 5.0-5.5 L/100 km",
+    "Batterie Li-ion haute tension 222V (1.6 kWh) auto-recharge régénérative",
+    "Dimensions 4460 × 1825 × 1620 mm, empattement 2640 mm, poids ≈1560 kg",
+    "Plateforme Toyota hybride TNGA-C, fiabilité reconnue Toyota Hybrid Synergy Drive",
+    "Sécurité Toyota Safety Sense : AEB, maintien de voie, régulateur adaptatif",
+    "Équipements : écran tactile 8\", clim auto, caméra recul, Apple CarPlay/Android Auto"
+  ],
+  "specifications": {
+    "engineCc": 1987,
+    "motorisation": {
+      "type": "Hybride HEV",
+      "moteurThermique": "2.0L 4-cyl. Atkinson 152 ch (112 kW), 188 Nm",
+      "moteurElectrique": "Moteur synchrone avant 83 kW (112 ch), 206 Nm",
+      "transmission": "E-CVT (continûment variable)",
+      "traction": "Avant (2WD, FWD)"
+    },
+    "performances": {
+      "vitesseMax": "170 km/h",
+      "acceleration": "0–100 km/h : ≈7,7 s",
+      "consommationMixte": "5.0-5.5 L/100 km WLTP (≈48-55 MPG)"
+    },
+    "batterie": {
+      "type": "Lithium-ion (Li-ion)",
+      "capacite": "≈1,6 kWh (222V haute tension)",
+      "autonomieElectrique": "Non rechargeable (HEV auto-recharge)",
+      "rechargeAC": "Auto-recharge par freinage régénératif",
+      "rechargeDC": "N/A (hybride non-plug-in)"
+    },
+    "dimensions": "4460 × 1825 × 1620 mm",
+    "empattement": "2640 mm",
+    "poids": "≈1560 kg (masse à vide FWD)",
+    "volumeCoffre": "680 litres (5 places), extensible 1339 litres",
+    "pneus": "215/65 R17 ou 225/60 R18 selon finition",
+    "chassis": {
+      "suspensionAvant": "McPherson indépendante",
+      "suspensionArriere": "Double wishbone indépendante",
+      "freins": "Disques ventilés avant, disques pleins arrière",
+      "freinStationnement": "Électrique (EPB)"
+    },
+    "plateforme": "Toyota New Global Architecture (TNGA-C) hybride"
+  },
+  "equipements": {
+    "interieur": [
+      "5 places, sellerie tissu premium ou cuir synthétique",
+      "Écran tactile 8-10,5\" Toyota Multimedia",
+      "Instrumentation digitale 7-12,3\"",
+      "Climatisation automatique bi-zone",
+      "Volant multifonction chauffant",
+      "Banquette arrière rabattable 60/40",
+      "Entrée sans clé, démarrage push-button"
+    ],
+    "securite": [
+      "Airbags frontaux, latéraux, rideaux, genoux conducteur",
+      "Toyota Safety Sense 3.0 complet",
+      "Freinage d'urgence autonome (AEB) avec détection piétons/vélos",
+      "Maintien de voie actif (LTA)",
+      "Régulateur adaptatif intelligent (Full-Speed DRCC)",
+      "Surveillance angles morts (BSM)",
+      "Alerte trafic transversal arrière (RCTA)",
+      "Caméra de recul + capteurs stationnement"
+    ],
+    "connectivite": [
+      "Bluetooth audio/téléphone",
+      "Apple CarPlay sans fil, Android Auto sans fil",
+      "USB-A/USB-C multiples",
+      "Chargeur sans fil Qi (smartphone)",
+      "Toyota Connected Services (télémaintenance)"
+    ]
+  },
+  "resume": "Le Toyota Corolla Cross Hybrid 2024 FWD est un SUV compact hybride auto-rechargeable (HEV) reposant sur la plateforme TNGA-C, équipé d'un système 2.0L 152 ch + électrique 83 kW (puissance système 196 ch) et transmission E-CVT. Avec sa consommation économique de 5L/100km, ses dimensions compactes de 4,46m et Toyota Safety Sense 3.0 complet, il offre un excellent compromis familial urbain/régional fiable et spacieux (coffre 680L)."
+}

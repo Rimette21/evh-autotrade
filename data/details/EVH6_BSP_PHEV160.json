@@ -18,68 +18,78 @@
     ]
   },
   "caracteristiques": [
-    "SUV hybride rechargeable (DM-i / PHEV)",
-    "Autonomie électrique ≈ 160 km (CLTC)",
+    "PHEV",
+    "Autonomie électrique 160 km (CLTC)",
     "Batterie LFP 26.6 kWh (Blade)",
     "Transmission e-CVT (DHT) traction avant",
-    "ADAS L2 : ACC, AEB, LKA",
-    "Caméra 360° + aide au stationnement",
-    "Sièges avant chauffants"
+    "ADAS L2 : DiPilot 100",
+    "Caméra 360° + Image châssis transparent (540°)",
+    "Sièges avant chauffants et ventilés"
   ],
   "specifications": {
-     "engineCc": 1498,
+    "engineCc": 1498,
     "motorisation": {
-      "type": "Hybride rechargeable (DM-i)",
-      "moteurThermique": "1.5 L essence + générateur",
-      
-      "moteurElectrique": "Synchrone à aimant permanent (avant)",
-      "transmission": "e-CVT (DHT) – traction avant (2WD)",
-      "puissanceSysteme": "—"
+      "type": "Hybride rechargeable (PHEV)",
+      "moteurThermique": "1.5L 4 cylindres (BYD472QC) - 101 ch (74 kW)",
+      "moteurElectrique": "Synchrone à aimant permanent (160 kW / 260 N.m)",
+      "transmission": "Traction avant",
+      "puissanceSysteme": "Combinée (Moteur élec. 160 kW + Thermique 74 kW)"
     },
     "performances": {
-      "autonomieCLTC": "≈ 160 km",
-      "consommationHybride": "Très basse (cycle mixte, selon version)",
-      "vitesseMax": "—",
-      "acceleration": "—"
+      "autonomieCLTC": "160 km",
+      "autonomieWLTC": "128 km",
+      "consommationElectrique": "16.8 kWh/100 km",
+      "vitesseMax": "Non spécifié",
+      "acceleration": "Non spécifié"
     },
     "batterie": {
-      "type": "LFP (Blade Battery BYD)",
+      "type": "LFP (Fudi Blade Battery)",
       "capacite": "26.6 kWh",
-      "rechargeDC": "—",
-      "rechargeAC": "—"
+      "rechargeDC": "Pris en charge (30-80% en 0.28h)",
+      "puissanceChargeDC": "54 kW",
+      "rechargeAC": "V2L (décharge vers l'extérieur) supporté"
     },
     "dimensions": "4775 × 1890 × 1670 mm",
     "empattement": "2765 mm",
+    "poids": {
+        "masseAVide": "1890 kg",
+        "masseEnChargeMax": "2265 kg"
+    },
     "carrosserie": {
-      "type": "SUV 5 portes",
+      "type": "SUV compact 5 portes",
       "couleur": "Gris",
-      "places": 5
+      "places": 5,
+      "volumeCoffre": "574-1440 L"
     }
   },
   "equipements": {
     "interieur": [
-      "Écran central tactile 12.8–15.6\" (rotatif selon version)",
+      "Écran central rotatif 15.6 pouces",
       "Tableau de bord numérique",
       "Climatisation automatique",
       "Sellerie similicuir",
-      "Sièges avant chauffants",
-      "Prises USB/12V (charge induction selon version)"
+      "Sièges avant électriques, chauffants et ventilés",
+      "Réglage électrique siège passager (4 voies)",
+      "Recharge téléphone sans fil (Rapide 50W)",
+      "Éclairage d'ambiance intérieur Multicolore"
     ],
     "securite": [
-      "Freinage d’urgence automatique (AEB)",
+      "Système DiPilot 100 (Niveau L2)",
+      "Freinage d’urgence actif",
       "Régulateur de vitesse adaptatif (ACC)",
-      "Maintien de voie (LKA)",
-      "Surveillance angles morts (BSD)",
-      "6 airbags",
-      "ESP / ABS"
+      "Aide au maintien de voie (LKA) et centrage",
+      "Reconnaissance des panneaux routiers",
+      "Avertisseur angle mort et sortie de voie",
+      "Avertisseur de collision avant et arrière",
+      "Avertisseur ouverture porte (DOW)"
     ],
     "connectivite": [
-      "Bluetooth / USB",
-      "Navigation & services connectés (selon marché)",
-      "Caméra 360°",
-      "Radars de stationnement"
+      "Système DiLink avec réseau 5G",
+      "Caméras panoramiques 360° / Châssis 540°",
+      "Radars de stationnement avant et arrière",
+      "Stationnement automatique et télécommandé",
+      "Bluetooth / USB"
     ]
   },
-  "resume": "Le BYD Song Plus DM-i 160KM associe batterie Blade LFP 26.6 kWh, autonomie électrique étendue (~160 km CLTC) et transmission e-CVT DHT pour une conduite fluide et économique. ADAS L2, caméra 360° et habitacle bien équipé en font un SUV PHEV confortable et très efficient.",
-   "fichePDF": "data/fiche/FT-BydSongPlus.pdf"
+  "resume": "Le BYD Song Plus DM-i 160KM Flagship est la version la plus haut de gamme, offrant une batterie Blade de 26.6 kWh pour une autonomie électrique de 160 km (CLTC). Il se distingue par son grand écran de 15.6\", sa recharge induction rapide 50W, ses sièges ventilés et ses aides à la conduite avancées DiPilot 100 incluant le stationnement automatique."
 }

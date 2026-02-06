@@ -1,19 +1,19 @@
 {
   "id": "EVH10_BYDLEOPARD_PHEV125",
   "name": "2025 Leopard5 Max Edition 1.5T PHEV",
-  "priceHT": "39 220 € (~133 750 TND)",
+  "priceHT": "39 220 €",
   "mileage": 100,
   "regyear": "2025-04",
   "images": {
-    "hero": "images/EVH10_BYDLEOPARD_PHEV125/Grise_devgauche.jpg",
+    "hero": "images/EVH10_BYDLEOPARD_PHEV125/Grise_devgauche.webp",
     "gallery": [
-      "images/EVH10_BYDLEOPARD_PHEV125/DEVGAUCHE.jpg",
-      "images/EVH10_BYDLEOPARD_PHEV125/Grise_devdroite.jpg",
-      "images/EVH10_BYDLEOPARD_PHEV125/noire_devdroite.jpg",
-      "images/EVH10_BYDLEOPARD_PHEV125/noire_devgauche.jpg",
-      "images/EVH10_BYDLEOPARD_PHEV125/Grise_arrieregauche.jpg",
-      "images/EVH10_BYDLEOPARD_PHEV125/intdevant.jpg",
-      "images/EVH10_BYDLEOPARD_PHEV125/Toitpanoramique.jpg"
+      "images/EVH10_BYDLEOPARD_PHEV125/DEVGAUCHE.webp",
+      "images/EVH10_BYDLEOPARD_PHEV125/Grise_devdroite.webp",
+      "images/EVH10_BYDLEOPARD_PHEV125/noire_devdroite.webp",
+      "images/EVH10_BYDLEOPARD_PHEV125/noire_devgauche.webp",
+      "images/EVH10_BYDLEOPARD_PHEV125/Grise_arrieregauche.webp",
+      "images/EVH10_BYDLEOPARD_PHEV125/intdevant.webp",
+      "images/EVH10_BYDLEOPARD_PHEV125/Toitpanoramique.webp"
     ]
   },
   "caracteristiques": [

@@ -233,17 +233,33 @@
   </section>
 
   <!-- ===== Helpers (quick-specs + puces dynamiques) ===== -->
-  <script>
-    // Détermine l’énergie : PHEV si on détecte un hybride rechargeable, sinon BEV
-    function energyFrom(v){
-  const hay = [v.name, ...(v.features||[])].join(' ').toLowerCase();
+<script>
+function energyFrom(v){
+  const hay = [v.name, ...(v.features||[]), ...(v.specifications?.fuelType||'')].join(' ').toLowerCase();
 
-  if (/(phev|hybride\s*rechargeable|dm-i|plug[- ]?in)/i.test(hay)) return 'PHEV';
-  if (/(hev|hybride(?!.*rechargeable))/i.test(hay)) return 'HEV'; // Ajout pour détecter l'hybride non rechargeable
-  if (/\bbev\b|100%\s*électrique|fully electric/i.test(hay)) return 'BEV';
-  return '—'; // Valeur neutre si aucun type reconnu
+  // 1. PHEV prioritaire (hybride rechargeable)
+  if (/(phev|plug[- ]?in|hybride.*rechargeable|dm-i|prime)/i.test(hay)) return 'PHEV';
+  
+ // 2. HEV (hybride auto-rechargeable) - TOUS les Toyota Hybrid + Corolla Cross ✅
+if (/(hev|hybrid|hybride)(?!.*(rechargeable|plug|prime|phev))/i.test(hay) || 
+    /(corollacross|corolla cross|rav4).*hybrid/i.test(hay) || 
+    /toyota.*hybrid/i.test(hay)) {
+    return 'HEV';
 }
-
+  // 3. BEV (100% électrique)
+  if (/\b(bev|électrique.*100%|fully electric|ev\b)/i.test(hay)) return 'BEV';
+  
+  return '—';
+}
+function powertrainBadge(v){
+  const energy = energyFrom(v);  // ✅ Appel CORRECT
+  const labels = {
+    'PHEV': 'SUV hybride rechargeable (PHEV)',
+    'HEV': 'SUV hybride auto-rechargeable (HEV)', 
+    'BEV': 'SUV 100% électrique (BEV)'
+  };
+  return labels[energy] || energy;  // ✅ 'energy' défini
+}  
     // Format immat YYYY-MM
     function cleanReg(y){
       if(!y) return '—';
@@ -377,9 +393,7 @@
     ? `<span class="card-badge card-badge--sold">Vendu</span>`
     : '';
 
-  const energyLabel = (energy === 'PHEV')
-    ? 'Hybride rechargeable (PHEV)'
-    : '100% électrique (BEV)';
+     const energyLabel = powertrainBadge(v);
 
  // On récupère toutes les features déclarées dans Hero.json
 const allFeats = Array.isArray(v.features) ? v.features : [];
