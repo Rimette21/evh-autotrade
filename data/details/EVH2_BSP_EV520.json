@@ -14,7 +14,7 @@
     ]
   },
   "caracteristiques": [
-    "SUV 100% électrique (BEV)",
+    "100% électrique (BEV)",
     "Autonomie 520 km (CLTC)",
     "Batterie Blade LFP 71,8 kWh (FinDreams/BYD)",
     "Moteur 150 kW (204 ch) / 310 Nm – FWD, mono-vitesse",
@@ -98,5 +98,6 @@
       "Fonction VTOL 3,3 kW"
     ]
   },
-  "resume": "SUV 100% électrique (LFP 71,8 kWh) offrant 520 km CLTC, moteur 150 kW (FWD) et recharge rapide DC 90 kW. Habitacle haut de gamme (écran rotatif 15,6”, sièges ventilés/chauffants) et ADAS niveau 2+ pour un usage quotidien confortable et efficient."
+  "resume": "SUV 100% électrique (LFP 71,8 kWh) offrant 520 km CLTC, moteur 150 kW (FWD) et recharge rapide DC 90 kW. Habitacle haut de gamme (écran rotatif 15,6”, sièges ventilés/chauffants) et ADAS niveau 2+ pour un usage quotidien confortable et efficient.",
+  "fichePDF": "data/fiche/FT_BSP_EV520.pdf"
 }
