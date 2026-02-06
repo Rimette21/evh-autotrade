@@ -18,7 +18,7 @@
     ]
   },
   "caracteristiques": [
-    "SUV hybride rechargeable (DM-i / PHEV)",
+    "PHEV",
     "Autonomie électrique ≈ 160 km (CLTC)",
     "Batterie LFP 26.6 kWh (Blade)",
     "Transmission e-CVT (DHT) traction avant",
@@ -29,9 +29,8 @@
   "specifications": {
      "engineCc": 1498,
     "motorisation": {
-      "type": "Hybride rechargeable (DM-i)",
+      "type": "Hybride rechargeable (PHEV)",
       "moteurThermique": "1.5 L essence + générateur",
-      
       "moteurElectrique": "Synchrone à aimant permanent (avant)",
       "transmission": "e-CVT (DHT) – traction avant (2WD)",
       "puissanceSysteme": "—"
