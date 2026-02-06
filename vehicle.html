@@ -1,6 +1,5 @@
 
 
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -125,13 +124,7 @@
    function energyFrom(v){
   const hay = [v.name, ...(v.features||[]), ...(v.specifications?.fuelType||'')].join(' ').toLowerCase();
   if (/(phev|plug[- ]?in|hybride.*rechargeable|dm-i|prime)/i.test(hay)) return 'PHEV';
- if (/(hev|hybrid|hybride)(?!.*(rechargeable|plug|prime|phev|phev))/i.test(hay) || 
-    /corollacross.*hybrid/i.test(hay) || 
-    /toyota.*(corollacross|corolla cross).*hybrid/i.test(hay) || 
-    /rav4.*hybrid/i.test(hay)) {
-    return 'HEV';
-}
-
+  if (/(hev|hybrid|hybride)(?!.*(rechargeable|plug|prime))/i.test(hay) || /rav4.*hybrid/i.test(hay) || /toyota.*hybrid/i.test(hay)) return 'HEV';
   if (/\b(bev|électrique.*100%|fully electric|ev\b)/i.test(hay)) return 'BEV';
   return '—';
 }
@@ -356,9 +349,13 @@ function fuelLabel(data){
         </div>
       `;
 
-/* ===== Rendu ===== */
-// Note douane désactivée
-let customsNotice = ''; 
+    /* ===== Rendu ===== */
+// Afficher la note douane uniquement pour les PHEV (FCR / HT)
+let customsNotice = '';
+if (energie === 'PHEV') {
+  customsNotice =
+    '<div class="price-sub"><span class="notice notice--customs">(Dédouanement possible sous conditions)</span></div>';
+}
 
 root.innerHTML =
   '<div class="vehicle-header">'+
@@ -376,7 +373,8 @@ root.innerHTML =
           : ''
       ) +
     '</div>'+
-    '<div style="margin-top:.4rem"><span class="pill">'+(energie || 'N/A')+'</span></div>'+
+    customsNotice +
+    '<div style="margin-top:.4rem"><span class="pill">'+energie+'</span></div>'+
   '</div>'+
 
   essentialsHTML +
@@ -393,13 +391,22 @@ root.innerHTML =
     '<div class="card-box specs-card">'+
       '<div class="card-title">Caractéristiques Principales</div>'+
       '<div class="specs-grid spec-compact">'+specsHTML+'</div>'+
-      resumeInline+
+      resumeInline+ // résumé intégré
     '</div>'+
   '</div>' +
   equipHtml +
   bottomInfoHtml +
   ctaHtml;
-      
+
+if (data.fichePDF) {
+  root.innerHTML +=
+    '<div style="margin:2em 0; text-align:center;">'+
+      '<a href="'+data.fichePDF+'" target="_blank" class="btn fiche-btn">'+
+        'Télécharger la fiche technique PDF'+
+      '</a>'+
+    '</div>';
+}
+
       /* ===== Lightbox ===== */
       const galleryImgs = Array.from(document.querySelectorAll('#gallery img'));
       const lb = document.getElementById('lightbox');
