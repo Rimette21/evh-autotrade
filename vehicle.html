@@ -175,13 +175,39 @@ function fuelLabel(data){
         return;
       }
 
-      /* ===== Données préparées ===== */
-      const mileageStr = fmtKm(data.mileage);
-      const year = (data.regyear || '').split('-')[0] || '—';
-      const isPHEV = (data.features || data.caracteristiques || [])
-        .some(f => /phev|hybride/i.test(f || ''));
-      const energie = isPHEV ? 'PHEV' : 'BEV';
-      const fuel = fuelLabel(data, isPHEV);
+    /* ===== Données préparées ===== */
+const mileageStr = fmtKm(data.mileage);
+const year = (data.regyear || '').split('-')[0] || '—';
+
+// Texte combiné pour analyse (features + caracteristiques)
+const featuresText = [
+  ...(data.features || []),
+  ...(data.caracteristiques || [])
+].join(' ').toLowerCase();
+
+// On regarde d'abord dans specifications.typeHybride / fuelType si dispo
+const typeHybride = (data.specifications?.typeHybride || data.specifications?.fuelType || '').toLowerCase();
+
+// Détection PHEV / HEV / BEV
+let energie = 'BEV'; // valeur par défaut
+
+if (typeHybride.includes('phev') || typeHybride.includes('plug-in')) {
+  energie = 'PHEV';
+} else if (typeHybride.includes('hev') || typeHybride.includes('hybride') && !typeHybride.includes('rechargeable') && !typeHybride.includes('plug-in')) {
+  energie = 'HEV';
+} else {
+  // Fallback si typeHybride n'est pas exploitable
+  if (/phev|plug[-\s]?in/i.test(featuresText)) {
+    energie = 'PHEV';
+  } else if (/hev|hybride(?!\s*rechargeable| plug-in)/i.test(featuresText)) {
+    energie = 'HEV';
+  } else if (/100% électrique|100 % électrique|bev/i.test(featuresText)) {
+    energie = 'BEV';
+  }
+}
+
+const fuel = fuelLabel(data, energie);
+
 
       // ---------- Construction des spécifications (nouveau + ancien schéma) ----------
       const specs = data.specifications || {};
