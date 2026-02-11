@@ -1,41 +1,110 @@
 {
-    "id": "EVH5689373_ToyotaRAV4",
-    "name": "2022 Toyota RAV4 2.5L 178HP L4 E-CVT Hybrid",
-    "priceHT": "29 060 €",
-    "mileage": 44000,
-    "regyear": "04-2023",
-    "isNew": false,
-    "images": {
-        "hero": "images/EVH5689373_ToyotaRAV4/Devgauche.webp",
-        "gallery": [
-            "images/EVH5689373_ToyotaRAV4/Devdroite.webp",
-             "images/EVH5689373_ToyotaRAV4/Arrieredroit.webp",
-             "images/EVH5689373_ToyotaRAV4/arrieregauche.webp",
-            "images/EVH5689373_ToyotaRAV4/Arriere.webp",
-             "images/EVH5689373_ToyotaRAV4/Coffre.webp",
-            "images/EVH5689373_ToyotaRAV4/Tabbord.webp",
-            "images/EVH5689373_ToyotaRAV4/interieurdevant_gauche.jpg",
-             "images/EVH5689373_ToyotaRAV4/interieurdevant_droite.webp",
-             "images/EVH5689373_ToyotaRAV4/interieurarriere_droite.jpg"
-        ]
+  "id": "EVH5689373_ToyotaRAV4",
+  "name": "2022 Toyota RAV4 2.5L 178HP L4 E-CVT Hybrid",
+  "priceHT": "29 060 €",
+  "mileage": 44000,
+  "regyear": "04-2023",
+  "isNew": false,
+  "images": {
+    "hero": "images/EVH5689373_ToyotaRAV4/Devgauche.webp",
+    "gallery": [
+      "images/EVH5689373_ToyotaRAV4/Devdroite.webp",
+      "images/EVH5689373_ToyotaRAV4/Arrieredroit.webp",
+      "images/EVH5689373_ToyotaRAV4/arrieregauche.webp",
+      "images/EVH5689373_ToyotaRAV4/Arriere.webp",
+      "images/EVH5689373_ToyotaRAV4/Coffre.webp",
+      "images/EVH5689373_ToyotaRAV4/Tabbord.webp",
+      "images/EVH5689373_ToyotaRAV4/interieurdevant_gauche.jpg",
+      "images/EVH5689373_ToyotaRAV4/interieurdevant_droite.webp",
+      "images/EVH5689373_ToyotaRAV4/interieurarriere_droite.jpg"
+    ]
+  },
+  "caracteristiques": [
+    "SUV hybride (HEV) 2.5L 178 ch + moteur électrique",
+    "Transmission E-CVT, traction avant (2WD)",
+    "Puissance système env. 218 ch, couple combiné élevé",
+    "Consommation mixte ≈ 5,0–5,5 L/100 km (cycle WLTP)",
+    "Dimensions compactes 4,60 m, 5 places",
+    "Caméra de recul / 360° selon version + Toyota Safety Sense",
+    "Sécurité renforcée : ABS, ESP, 6 airbags"
+  ],
+  "specifications": {
+    "moteurThermique": "2.5L 178HP L4 essence (cycle Atkinson)",
+    "puissanceThermique": "178 ch (131 kW)",
+    "typeHybride": "Hybride autorechargeable (HEV)",
+    "puissanceSysteme": "≈ 218 ch (160 kW)",
+    "coupleSysteme": "≈ 221 Nm thermique + assistance électrique",
+    "transmission": "E-CVT (boîte automatique à variation continue)",
+    "traction": "Avant (2WD)",
+    "typeBatterie": "Batterie Ni-MH ou lithium (selon marché, hybride haute tension)",
+    "batterieKWh": "≈ 1,6 kWh",
+    "autonomieCLTC": "Non applicable (HEV)",
+    "autonomieWLTP": "Non applicable (HEV)",
+    "autonomieTotale": "Dépend du réservoir et de l’usage (plus de 800 km typiquement)",
+    "rechargeDCkW": "Non rechargeable (HEV non plug-in)",
+    "rechargeACkW": "Non rechargeable sur secteur",
+    "tempsRechargeAC": "Non applicable",
+    "tempsRechargeDC": "Non applicable",
+    "refroidissementBatterie": "Refroidissement forcé/air géré par le véhicule",
+    "fonctionsBatterie": "Système hybride Toyota, récupération d’énergie au freinage",
+    "places": "5 places",
+    "portes": "5 portes",
+    "volumeCoffre": "≈ 580 L (banquette en place), > 1600 L (banquette rabattue)",
+    "dimensions": {
+      "longueur": "4600 mm",
+      "largeur": "1855 mm",
+      "hauteur": "1680 mm",
+      "empattement": "2690 mm",
+      "gardeAuSol": "≈ 190 mm",
+      "rayonDeBraquage": "≈ 5,5 m"
     },
-    "features": [
-        "SUV hybride (HEV) 2.5L 178HP + 88kW électrique",
-        "E-CVT 2WD traction avant, conso économique",
-        "Toit ouvrant pano, jantes alliage 18'",
-        "Caméra 360° + régulateur adaptatif Toyota Safety",
-        "Sécurité 5 étoiles : ABS/ESP + 6 airbags"
+    "poids": "≈ 1670–1760 kg (à vide, selon version)",
+    "ptac": "≈ 2230 kg",
+    "vitesseMax": "180 km/h",
+    "acceleration0100": "≈ 8,4 s",
+    "consommationElectrique": "Non applicable (HEV)",
+    "structure": "Monocoque (SUV)",
+    "suspension": "Indépendante, type MacPherson AV / multibras AR",
+    "freins": "Disques ventilés AV / disques AR, ABS, EBD, BA",
+    "direction": "Assistée électrique (EPS)",
+    "pneus": "En général 225/60 R18 (selon finition)",
+    "jantes": "Alliage aluminium 18 pouces"
+  },
+  "equipements": {
+    "interieur": [
+      "Sellerie tissu ou cuir (selon finition)",
+      "Sièges avant réglables électriquement (selon version)",
+      "Climatisation automatique bi-zone",
+      "Écran central multimédia avec Bluetooth et caméra de recul",
+      "Combiné d’instrumentation avec écran couleur",
+      "Volant multifonction gainé cuir",
+      "Toit ouvrant panoramique (selon finition)",
+      "Banquette arrière rabattable 60/40"
     ],
-    "specifications": {
-        "engineCc": "2487",
-        "transmission": "E-CVT",
-        "powerHp": "178",
-        "fuelType": "HEV",
-        "drivetrain": "2WD",
-        "seats": "5",
-        "dimensions": "4600x1855x1680 mm",
-        "weightKg": "1670",
-        "cargoVolumeM3": "14.34"
-    },
-    "description": "Toyota RAV4 Hybrid 2022 d'occasion premium, moteur 2.5L 178 ch essence + électrique 88 kW, transmission E-CVT fluide, 2WD, dimensions compactes 4.60m. Équipements haut de gamme : toit ouvrant, sièges électriques, clim auto bi-zone, caméra 360°, ADAS adaptative cruise, sécurité complète (6 airbags, ESP, TPMS). Excellent rapport qualité/prix pour usage familial, conso hybride ~5L/100km mixte."
+    "securite": [
+      "ABS, EBD, BA, ESP/VSC",
+      "6 airbags (frontaux, latéraux, rideaux)",
+      "Système Toyota Safety Sense (PCS, LDA, LTA, ACC, AHB) selon marché",
+      "Contrôle de traction (TRC)",
+      "Aide au démarrage en côte (HAC)",
+      "Surveillance de la pression des pneus (TPMS)",
+      "Ancrages ISOFIX aux places arrière"
+    ],
+    "assistance": [
+      "Régulateur de vitesse adaptatif (Adaptive Cruise Control)",
+      "Alerte de franchissement de ligne avec aide au maintien dans la voie (LDA/LTA)",
+      "Reconnaissance des panneaux de signalisation (RSA) selon version",
+      "Caméra de recul ou caméras 360° selon équipement",
+      "Capteurs de stationnement avant/arrière (selon finition)",
+      "Sélecteur de modes de conduite (Eco / Normal / Sport)"
+    ],
+    "connectivite": [
+      "Système multimédia avec écran tactile",
+      "Bluetooth et USB",
+      "Intégration smartphone (Apple CarPlay / Android Auto sur versions récentes)",
+      "Commande vocale (selon marché)",
+      "Services connectés Toyota / mises à jour via concession (selon pays)"
+    ]
+  },
+  "resume": "Toyota RAV4 Hybrid 2022, SUV familial 5 places avec moteur 2.5L essence 178 ch associé à un système hybride autorechargeable et une transmission E-CVT, offrant une consommation mixte autour de 5–5,5 L/100 km. Le véhicule propose un bon niveau de confort, de sécurité (Toyota Safety Sense, 6 airbags, ESP) et d’équipements (clim bi-zone, multimédia connecté, caméra de recul/360° selon version), idéal pour un usage quotidien polyvalent."
 }
