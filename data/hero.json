@@ -400,6 +400,30 @@
     }
   },
   {
+    "id": "EVH9978887_BSP_160",
+    "name": "2023 BYD Song Plus 1.5L 110HP L4 E-CVT PHEV 26.6KWH",
+    "priceHT": "23 970 €",
+    "mileage": 19000,
+    "regyear": "2023-10",
+    "isNew": false,
+    "images": {
+      "hero": "images/EVH9978887_BSP_160/DEVGAUCHE.webp"
+    },
+    "features": [
+      "Hybride rechargeable (PHEV)",
+      "Autonomie électrique 160 km (WLTP)",
+      "Batterie 26,6 kWh",
+      "Moteur électrique 160 kW (218 ch)",
+      "Recharge rapide DC 40 kW / AC 7 kW",
+      "Régulateur de vitesse adaptatif (ACC)",
+      "Affichage tête haute (HUD) ADAS complet"
+    ],
+    "specifications": {
+      "engineCc": 1498,
+      "transmission": "E-CVT"
+    }
+  },
+  {
     "id": "EVH9881981_BSP_PHEV160",
     "name": "2025 BYD Song Plus 1.5L 101HP L4 E-CVT PHEV 26.6KWH",
     "priceHT": "25 400 €",
