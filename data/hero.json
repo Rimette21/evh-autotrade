@@ -377,29 +377,6 @@
   }
 },
   {
-    "id": "EVH_KIAEV5_2024019",
-    "name": "2024 Kia EV5 530 Light",
-    "priceHT": "24 680 €",
-    "mileage": 100,
-    "regyear": "2024-01",
-    "isNew": true,
-    "images": {
-      "hero": "images/KIA_EV5_devdroit.jpg"
-    },
-    "features": [
-      "SUV 100% électrique (BEV) 5 places, 2WD",
-      "Autonomie 530 km CLTC (≈400–430 km WLTP)",
-      "Moteur avant 160 kW (218 ch), 310 N·m",
-      "Batterie LFP 64,2 kWh, charge rapide DC jusqu'à ~150 kW",
-      "Plateforme 800 V E-GMP avec fonction V2L",
-      "Écran double, ADAS complet (LKA, AEB, ACC, etc.)"
-    ],
-    "specifications": {
-      "engineCc": 0,
-      "transmission": "Automatique 1 rapport (EV, FWD 2WD)"
-    }
-  },
-  {
     "id": "EVH9978887_BSP_160",
     "name": "2023 BYD Song Plus 1.5L 110HP L4 E-CVT PHEV 26.6KWH",
     "priceHT": "23 970 €",
@@ -445,6 +422,29 @@
     "specifications": {
       "engineCc": 1498,
       "transmission": "AT"
+    }
+  },
+  {
+    "id": "EVH_KIAEV5_2024019",
+    "name": "2024 Kia EV5 530 Light",
+    "priceHT": "24 680 €",
+    "mileage": 100,
+    "regyear": "2024-01",
+    "isNew": true,
+    "images": {
+      "hero": "images/KIA_EV5_devdroit.jpg"
+    },
+    "features": [
+      "SUV 100% électrique (BEV) 5 places, 2WD",
+      "Autonomie 530 km CLTC (≈400–430 km WLTP)",
+      "Moteur avant 160 kW (218 ch), 310 N·m",
+      "Batterie LFP 64,2 kWh, charge rapide DC jusqu'à ~150 kW",
+      "Plateforme 800 V E-GMP avec fonction V2L",
+      "Écran double, ADAS complet (LKA, AEB, ACC, etc.)"
+    ],
+    "specifications": {
+      "engineCc": 0,
+      "transmission": "Automatique 1 rapport (EV, FWD 2WD)"
     }
   },
   {
