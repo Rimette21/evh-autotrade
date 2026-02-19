@@ -86,5 +86,6 @@
       "Bluetooth / USB"
     ]
   },
-  "resume": "Le BYD Song Plus DM-i 160KM Edition Champion est une version haut de gamme, offrant une batterie Blade de 26.6 kWh pour une autonomie électrique de 160 km (CLTC). Il se distingue par son grand écran de 15.6\", sa recharge induction rapide 50W, ses sièges ventilés et ses aides à la conduite avancées DiPilot 100 incluant le stationnement automatique."
-}
+  "resume": "Le BYD Song Plus DM-i 160KM Edition Champion est une version haut de gamme, offrant une batterie Blade de 26.6 kWh pour une autonomie électrique de 160 km (CLTC). Il se distingue par son grand écran de 15.6\", sa recharge induction rapide 50W, ses sièges ventilés et ses aides à la conduite avancées DiPilot 100 incluant le stationnement automatique.",
+ "fichePDF": "data/fiche/FT-BydSongPlus.pdf"
+ }
