@@ -1,0 +1,107 @@
+{
+  "id": "EVH9975433_BSP_PHEV112",
+  "name": "2025 BYD Song Plus 1.5L 101HP L4 E-CVT PHEV 18.3KWH",
+  "priceHT": "20 290 €",
+  "mileage": 6000,
+  "regyear": "2024-12",
+  "images": {
+    "hero": "images/EVH9975433_BSP_PHEV112/devantface.webp",
+    "gallery": [
+       "images/EVH9975433_BSP_PHEV112/devantgauche.webp",
+      "images/EVH9975433_BSP_PHEV112/devantdroite.webp",
+       "images/EVH9975433_BSP_PHEV112/arrieregauche.webp",
+      "images/EVH9975433_BSP_PHEV112/arrieredroit.webp",
+      "images/EVH9975433_BSP_PHEV112/Cockpit.webp",
+      "images/EVH9975433_BSP_PHEV112/interieurdevant.webp"
+    ]
+  },
+  "caracteristiques": [
+    "Hybride rechargeable (PHEV)",
+    "Autonomie électrique 112 km (CLTC) / 91 km (WLTC)",
+    "Batterie Blade LFP 18.3 kWh",
+    "Transmission e-CVT (EHS) traction avant",
+    "Caméra panoramique 360° + châssis transparent 540°",
+    "Régulateur adaptatif et maintien de voie (ADAS L2)"
+  ],
+  "specifications": {
+     "engineCc": 1498,
+    "motorisation": {
+      "type": "Hybride rechargeable (PHEV)",
+      "moteurThermique": "1.5 L L4 atmosphérique (BYD472QC) – 101 ch (74 kW) / 126 Nm",
+      
+      "moteurElectrique": "Avant, synchrone à aimant permanent – 160 kW / 260 Nm",
+      "puissanceCombinée": "≈ 230 ch",
+      "transmission": "e-CVT (EHS) – traction avant (2WD)"
+    },
+    "performances": {
+      "autonomieCLTC": "112 km",
+      "autonomieWLTC": "91 km",
+      "consommationElectrique": "≈ 15.9 kWh/100 km",
+      "vitesseMax": "≈ 170 km/h",
+      "acceleration": "≈ 8.5 s (0–100 km/h)"
+    },
+    "batterie": {
+      "type": "LFP (Blade Battery BYD)",
+      "capacite": "18.3 kWh",
+      "rechargeDC": "30→80% en ~23 min (26 kW)",
+      "rechargeAC": "≈ 3.5 h",
+      "fonctions": [
+        "Récupération d’énergie",
+        "Préchauffage batterie",
+        "V2L (décharge externe)"
+      ]
+    },
+    "dimensions": "4775 × 1890 × 1670 mm",
+    "empattement": "2765 mm",
+    "poids": "1830 kg",
+    "ptac": "2205 kg",
+    "volumeCoffre": "574–1440 L",
+    "reservoir": "60 L",
+    "carrosserie": {
+      "type": "SUV 5 portes",
+      "places": 5
+    },
+    "chassis": {
+      "suspensionAvant": "Indépendante MacPherson",
+      "suspensionArriere": "Indépendante multibras",
+      "direction": "Assistée électrique",
+      "freins": "Disques ventilés AV / disques AR",
+      "pneus": "235/50 R19",
+      "jantes": "Alliage aluminium"
+    }
+  },
+  "equipements": {
+    "interieur": [
+      "Climatisation automatique",
+      "Sellerie cuir",
+      "Sièges électriques",
+      "Écran tactile central 15,6’’ rotatif",
+      "Tableau de bord numérique",
+      "Toit ouvrant panoramique",
+      "Charge sans fil pour smartphone"
+    ],
+    "securite": [
+      "ABS / EBD / ESP / BA",
+      "Airbags frontaux, latéraux et rideaux",
+      "Aide au changement de voie et détection angle mort",
+      "Reconnaissance panneaux de signalisation",
+      "Aide maintien et centrage dans la voie (LKA/LCA)",
+      "Détection pression pneus (TPMS)",
+      "Ancrages ISOFIX"
+    ],
+    "assistance": [
+      "Régulateur de vitesse adaptatif (ACC)",
+      "Caméras panoramiques 360° + vision 540° châssis transparent",
+      "Radar AV/AR",
+      "Modes de conduite : Éco / Confort / Sport / Neige"
+    ],
+    "connectivite": [
+      "Bluetooth",
+      "GPS intégré",
+      "Apple CarPlay / Android Auto",
+      "Wi-Fi embarqué"
+    ]
+  },
+  "resume": "Le BYD Song PLUS DM-i 2025 associe un moteur essence 1.5L et un moteur électrique performant (160 kW) pour offrir jusqu’à 112 km d’autonomie électrique. Sa batterie Blade LFP fiable, son habitacle moderne et ses aides à la conduite L2 en font un SUV hybride haut de gamme, idéal pour les trajets urbains et longs déplacements.",
+  "fichePDF": "data/fiche/FT-BydSongPlus.pdf"
+}

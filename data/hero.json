@@ -164,6 +164,28 @@
       "transmission": "E-CVT"
     }
   },
+{
+  "id": "EVH9975433_BSP_PHEV112",
+  "name": "2025 BYD Song Plus 1.5L PHEV 18.3KWH",
+  "priceHT": "20 290 €",
+  "mileage": 6000,
+  "regyear": "2024-12",
+  "images": {
+    "hero": "images/EVH9975433_BSP_PHEV112/devantface.webp"
+},
+    "features": [
+      "Hybride rechargeable (PHEV)",
+      "Autonomie électrique 112 km (WLTP)",
+      "Batterie LFP Blade 18,3 kWh",
+      "Moteur électrique 145 kW (197 ch)",
+      "Puissance système 203 ch",
+      "Systèmes d'assistance avancée (L2)"
+    ],
+    "specifications": {
+      "engineCc": 1498,
+      "transmission": "E-CVT"
+    }
+  },
   {
     "id": "EVH8_BYDFRIGATE07_PHEV100",
     "name": "2025 BYD Frigate 07 1.5 DM-i PHEV 100 km",
