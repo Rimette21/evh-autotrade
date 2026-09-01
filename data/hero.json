@@ -1,5 +1,29 @@
 [
   {
+    "id": "EVH13_BYDSEALION06",
+    "name": "2026 BYD SEALION 06 DM-i 205 Navigator Pro",
+    "priceHT": "27 900 €",
+    "mileage": 0,
+    "regyear": "2026",
+    "isNew": true,
+    "featuresCount": 6,
+    "images": {
+      "hero": "images/EVH6_BYDSEALION06/devdroite.webp"
+    },
+    "features": [
+      "Hybride rechargeable (PHEV)",
+      "Autonomie électrique 205 km (CLTC)",
+      "Batterie LFP Blade 26,6 kWh",
+      "Puissance combinée 160 kW (218 ch)",
+      "Autonomie combinée 1 705 km",
+      "ADAS DiPilot 100 (niveau L2, 1 LiDAR)"
+    ],
+    "specifications": {
+      "engineCc": 1500,
+      "transmission": "E-CVT"
+    }
+  },
+  {
     "id": "EVH1_BYDTANG",
     "name": "BYD Tang L 2025 670 KM LiDAR Flagship",
     "priceHT": "39 310 €",

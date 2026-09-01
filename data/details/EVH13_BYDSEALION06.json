@@ -1,0 +1,110 @@
+{
+  "id": "EVH13_BYDSEALION06",
+  "name": "2026 BYD SEALION 06 DM-i 205 Navigator Pro Edition",
+  "priceHT": "27 900 €",
+  "mileage": 0,
+  "regyear": "2026",
+  "images": {
+    "hero": "images/EVH13_BYDSEALION06/devdroite.webp",
+    "gallery": [
+      "images/EVH13_BYDSEALION06/devface.webp",
+      "images/EVH13_BYDSEALION06/devgauche_ville.webp",
+      "images/EVH13_BYDSEALION06/devface_bleu.webp",
+      "images/EVH13_BYDSEALION06/interieurdevant.webp",
+      "images/EVH13_BYDSEALION06/intdev.webp",
+      "images/EVH13_BYDSEALION06/interdevantorange.webp",
+      "images/EVH13_BYDSEALION06/intarriere.webp"
+    ]
+  },
+  "caracteristiques": [
+    "SUV hybride rechargeable (PHEV)",
+    "Autonomie électrique 205 km (CLTC)",
+    "Batterie Blade LFP 26,6 kWh",
+    "Puissance combinée 218 ch (160 kW) / 260 Nm – FWD",
+    "Autonomie combinée totale 1 705 km",
+    "Système DiPilot 100 avec LIDAR",
+    "Caméras 360° + assistances ADAS niveau 2"
+  ],
+  "specifications": {
+    "typeHybride": "Hybride rechargeable (PHEV) – DM-i 5e génération",
+    "puissanceSysteme": "218 ch (160 kW)",
+    "coupleSysteme": "260 Nm",
+    "transmission": "E-CVT",
+    "traction": "Avant (FWD)",
+    "typeBatterie": "LFP Blade (BYD FinDreams)",
+    "batterieKWh": "26,6 kWh",
+    "autonomieCLTC": "205 km (électrique)",
+    "autonomieWLTP": "env. 140 km (électrique)",
+    "autonomieTotale": "1 705 km (essence + électrique, cycle MIIT)",
+    "moteurThermique": "1.5L 4 cyl. Atkinson, 101 ch (74 kW) / 126 Nm",
+    "consommationCarburantMixte": "0,8 L/100 km (WLTC)",
+    "carburant": "Essence 95 (92# RON chinois)",
+    "reservoirCarburant": "60 L",
+    "rechargeDCkW": "non communiqué par le constructeur pour cette finition",
+    "rechargeACkW": "recharge standard secteur/borne AC",
+    "refroidissementBatterie": "Gestion thermique intégrée",
+    "places": "5 places",
+    "portes": "5 portes",
+    "volumeCoffre": "695–1630 L",
+    "dimensions": {
+      "longueur": "4810 mm",
+      "largeur": "1920 mm",
+      "hauteur": "1675 mm",
+      "empattement": "2820 mm",
+      "rayonDeBraquage": "non communiqué"
+    },
+    "poids": "1990 kg (à vide)",
+    "ptac": "2445 kg",
+    "vitesseMax": "180 km/h",
+    "acceleration0100": "7,8 s",
+    "consommationElectrique": "16,4 kWh/100 km",
+    "structure": "Monocoque",
+    "suspension": "MacPherson indépendante AV / Multibras indépendante AR",
+    "freins": "Disques ventilés AV / disques AR, frein de stationnement électrique (EPB)",
+    "direction": "Assistée électrique (EPS)",
+    "pneus": "235/50 R19",
+    "jantes": "Alliage aluminium"
+  },
+  "equipements": {
+    "interieur": [
+      "Écran central tactile 15,6\" (DiLink OS)",
+      "Combiné conducteur numérique 10,2\"",
+      "Sellerie similicuir, siège conducteur à réglage électrique",
+      "Sièges avant chauffants",
+      "Climatisation automatique bi-zone",
+      "Toit panoramique",
+      "Hayon électrique avec fonction mémoire",
+      "Démarrage sans clé, télécommande intelligente",
+      "Charge à induction pour smartphone (50 W)"
+    ],
+    "securite": [
+      "Airbags frontaux, latéraux et rideaux",
+      "Freinage d'urgence autonome (AEB)",
+      "Aide au maintien/centrage de voie (LKA/LCA)",
+      "Reconnaissance panneaux de signalisation",
+      "Surveillance angle mort",
+      "Détection de fatigue du conducteur",
+      "TPMS (pression pneus)",
+      "Ancrages ISOFIX",
+      "Garantie constructeur 6 ans / 150 000 km"
+    ],
+    "assistance": [
+      "Conduite assistée niveau 2 (DiPilot 100) avec 1 LIDAR",
+      "Puce NVIDIA DRIVE Orin N",
+      "Régulateur de vitesse adaptatif",
+      "Caméras panoramiques 360° (12 caméras)",
+      "12 capteurs ultrasoniques, 5 radars ondes millimétriques",
+      "Stationnement automatique",
+      "Mode Sport"
+    ],
+    "connectivite": [
+      "Bluetooth, appels mains libres",
+      "5G, Wi-Fi embarqué",
+      "Reconnaissance vocale continue",
+      "Cartographie connectée HUAWEI HiCar",
+      "Mises à jour à distance (OTA)"
+    ]
+  },
+  "resume": "SUV hybride rechargeable de 5e génération DM-i, avec écran rotatif 15,6\", toit panoramique, sièges chauffants et système de conduite assistée DiPilot 100 avec LIDAR. Autonomie électrique de 205 km CLTC et autonomie combinée totale de 1 705 km, garantie constructeur 6 ans / 150 000 km.",
+  "fichePDF": "data/fiche/FT_EVHBYDSEALION06DMI013.pdf"
+}
