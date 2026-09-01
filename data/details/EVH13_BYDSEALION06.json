@@ -5,15 +5,16 @@
   "mileage": 0,
   "regyear": "2026",
   "images": {
-    "hero": "images/EVH13_BYDSEALION06/devdroite.webp",
+    "hero": "images/EVH13-FACEBEIGE.webp",
     "gallery": [
-      "images/EVH13_BYDSEALION06/devface.webp",
-      "images/EVH13_BYDSEALION06/devgauche_ville.webp",
-      "images/EVH13_BYDSEALION06/devface_bleu.webp",
-      "images/EVH13_BYDSEALION06/interieurdevant.webp",
-      "images/EVH13_BYDSEALION06/intdev.webp",
-      "images/EVH13_BYDSEALION06/interdevantorange.webp",
-      "images/EVH13_BYDSEALION06/intarriere.webp"
+      "images/EVH13-devgauche-gray.webp",
+      "images/EVH13-devgauche.webp",
+      "images/EVH13-face.webp",
+      "images/EVH13-DEVDROIT.webp",
+      "images/EVH13-ARRIEREDROIT.webp",
+      "images/EVH13-ARRIERE.webp",
+      "images/EVH13-INTDEVANT.webp",
+      "images/INTERIEURDEVANT.webp"
     ]
   },
   "caracteristiques": [
