@@ -261,28 +261,6 @@
     }
   },
  
-  {
-  "id": "EVH9875392_AUDIQ4_BEV543",
-  "name": "2022 Audi Q4 e-tron BEV 84.8kWh 543 km",
-  "priceHT": "23 000 €",
-  "mileage": 44000,
-  "regyear": "2022-10",
-  "images": {
-    "hero": "images/EVH9875392_AUDIQ4_BEV543/devgauche.webp"
-    },
-    "features": [
-      "100% électrique (BEV)",
-      "Autonomie 543 km (CLTC)",
-      "Batterie Lithium-ion 82 kWh",
-      "Moteur 150 kW (204 ch) / 310 Nm",
-      "Recharge DC 10-80 % ≈ 28 min ; AC complet ≈ 8 h",
-      "Double écran digital 10,25'' MMI touch + cockpit virtuel"
-    ],
-    "specifications": {
-      "engineCc": null,
-      "transmission": "4WD/AT"
-    }
-  },
    {
     "id": "EVH9923496_ToyotaRAV4",
     "name": "2022 Toyota RAV4 2.5L 178HP L4 E-CVT Hybrid",
@@ -460,6 +438,7 @@
     "mileage": 43300,
     "regyear": "2023-03",
     "isNew": false,
+    "sold": true,
     "featuresCount": 6,
     "images": {
       "hero": "images/EVH_MercedesEQB_devgauche.webp"
@@ -551,31 +530,7 @@
     }
   },
   
-  {
-    "id": "EVH9478503",
-    "name": "2024 BYD Song Plus 1.5L 110HP L4",
-    "priceHT": "21 940 €",
-    "mileage": 21000,
-    "regyear": "2024-04",
-    "isNew": false,
-    "sold": true,
-    "images": {
-      "hero": "images/Vendus/EVH9478503_DEV_DROITE.webp"
-    },
-    "features": [
-      "Hybride rechargeable (PHEV)",
-      "Autonomie électrique 110 km",
-      "Batterie Blade 18,3 kWh",
-      "Moteur électrique 145 kW (197 ch)",
-      "Puissance système 203 ch",
-      "Recharge AC 7 kW"
-    ],
-    "specifications": {
-      "engineCc": 1498,
-      "transmission": "E-CVT"
-    }
-  },
- 
+  
   {
     "id": "EVH9519205",
     "name": "2025 Chery Tiggo 9 C-DM 1.5T",
