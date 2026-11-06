@@ -1379,6 +1379,37 @@ body.page-vehicle { background:#F6F7FB; }
   .calc-grid { grid-template-columns: 1fr; }
 }
 
+/* Adaptation vidéo hero */
+.hero-static {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+}
+
+.bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-cta {
+  position: relative;
+  z-index: 2;
+}
+
 
 /* Cartes déjà en grille : on garde tes breakpoints actuels */
 
