@@ -283,54 +283,7 @@
       "transmission": "Auto AT"
     }
   },
-  {
-    "id": "EVH9865884_BYDTANG",
-    "name": "Used 2025 BYD TangL BEV",
-    "priceHT": "35 740 €",
-    "mileage": 1500,
-    "regyear": "05-2025",
-    "isNew": false,
-    "featuresCount": 6,
-    "images": {
-      "hero": "images/EVH9865884_BYDTANG/devgauche.webp"
-    },
-    "features": [
-      "SUV 100% électrique (BEV)",
-      "Autonomie 670 km (CLTC)",
-      "Batterie Blade LFP 100,53 kWh",
-      "Puissance moteur total 500 kW (680 ch)",
-      "Affichage tête haute (HUD) ADAS complet",
-      "SUV 7 places système LiDAR avancé-conduite semi-autonome niveau 2"
-    ],
-    "specifications": {
-      "engineCc": "",
-      "transmission": "AT-2WD"
-    }
-  },
-  {
-    "id": "EVH12_BYDYUAN_BEV510",
-    "name": "2024 BYD Atto3 BEV",
-    "priceHT": "23 470 €",
-    "mileage": 4300,
-    "regyear": "2024-08",
-    "isNew": false,
-    "featuresCount": 6,
-    "images": {
-      "hero": "images/EVH12_BYDYUAN_BEV510/devantgauche.webp"
-    },
-    "features": [
-      "SUV 100% électrique (BEV) 5 places",
-      "Autonomie 510 km NEDC (≈430–450 km WLTP estimés)",
-      "Moteur électrique avant 150 kW (204 ch), 310 N·m",
-      "Batterie Blade LFP 60,48 kWh, conso 12,5 kWh/100 km",
-      "ADAS avec maintien de voie, régulateur adaptatif, freinage d'urgence",
-      "Toit panoramique, accès/démarrage sans clé, aides au stationnement"
-    ],
-    "specifications": {
-      "engineCc": 0,
-      "transmission": "Boîte fixe 1 rapport (EV, FWD)"
-    }
-  },
+ 
   {
   "id": "EVH9875392_AUDIQ4_BEV543",
   "name": "2022 Audi Q4 e-tron BEV 84.8kWh 543 km",
@@ -377,29 +330,6 @@
     }
 },
   {
-    "id": "EVH5689373_ToyotaRAV4",
-    "name": "2022 Toyota RAV4 2.5L 178HP L4 E-CVT Hybrid",
-    "priceHT": "29 060 €",
-    "mileage": 44000,
-    "regyear": "04-2023",
-    "isNew": false,
-    "images": {
-      "hero": "images/EVH5689373_ToyotaRAV4/Devgauche.webp"
-    },
-    "features": [
-      "SUV hybride (HEV)",
-      "E-CVT 2WD, conso économique hybride",
-      "Toit ouvrant, sièges électriques, clim auto",
-      "Caméra 360°, cruise adaptatif, ADAS Toyota",
-      "Sécurité complète (ABS/ESP, airbags multiples)"
-    ],
-    "specifications": {
-       "fuelType": "Hybrid",
-      "engineCc": "2487",
-      "transmission": "E-CVT"
-    }
-},
-  {
   "id": "EVH9865516_ToyotaCross",
   "name": "2024 Toyota Corolla Cross 2.0L 152HP L4 E-CVT Hybrid",
   "priceHT": "20 090 €",
@@ -423,54 +353,7 @@
     "transmission": "E-CVT"
   }
 },
-  {
-    "id": "EVH9978887_BSP_160",
-    "name": "2023 BYD Song Plus 1.5L 110HP L4 E-CVT PHEV 26.6KWH",
-    "priceHT": "23 970 €",
-    "mileage": 19000,
-    "regyear": "2023-10",
-    "isNew": false,
-    "images": {
-      "hero": "images/EVH9978887_BSP_160/DEVGAUCHE.webp"
-    },
-    "features": [
-      "Hybride rechargeable (PHEV)",
-      "Autonomie électrique 160 km (WLTP)",
-      "Batterie 26,6 kWh",
-      "Moteur électrique 160 kW (218 ch)",
-      "Recharge rapide DC 40 kW / AC 7 kW",
-      "Régulateur de vitesse adaptatif (ACC)",
-      "Affichage tête haute (HUD) ADAS complet"
-    ],
-    "specifications": {
-      "engineCc": 1498,
-      "transmission": "E-CVT"
-    }
-  },
-  {
-    "id": "EVH9881981_BSP_PHEV160",
-    "name": "2025 BYD Song Plus 1.5L 101HP L4 E-CVT PHEV 26.6KWH",
-    "priceHT": "25 400 €",
-    "mileage": 25000,
-    "regyear": "2025-02",
-    "isNew": false,
-    "images": {
-      "hero": "images/EVH9881981_BSP_PHEV160/devantgauche.webp"
-    },
-    "features": [
-      "Hybride rechargeable (PHEV)",
-      "Autonomie électrique 160 km (WLTP)",
-      "Batterie 26,6 kWh",
-      "Moteur électrique 160 kW (218 ch)",
-      "Recharge rapide DC 40 kW / AC 7 kW",
-      "Régulateur de vitesse adaptatif (ACC)",
-      "Affichage tête haute (HUD) ADAS complet"
-    ],
-    "specifications": {
-      "engineCc": 1498,
-      "transmission": "AT"
-    }
-  },
+ 
   {
     "id": "EVH_KIAEV5_2024019",
     "name": "2024 Kia EV5 530 Light",
@@ -492,52 +375,6 @@
     "specifications": {
       "engineCc": 0,
       "transmission": "Automatique 1 rapport (EV, FWD 2WD)"
-    }
-  },
-  {
-    "id": "EVH5686663_TOYOTABZ5",
-    "name": "2025 Toyota bZ5 BEV 550 km",
-    "priceHT": "25 190 €",
-    "mileage": 2000,
-    "regyear": "2025-11",
-    "isNew": false,
-    "images": {
-      "hero": "images/EVH5686663_TOYOTABZ5/devgauche.webp"
-    },
-    "features": [
-      "100% électrique (BEV)",
-      "Autonomie 550 km (CLTC)",
-      "Puissance 200 kW (272 ch)",
-      "Moteur électrique 200 kW avant",
-      "ADAS L2 complet",
-      "Caméras 360°, assistance conduite"
-    ],
-    "specifications": {
-      "engineCc": 0,
-      "transmission": "Auto AT"
-    }
-  },
-  {
-    "id": "EVH9681220_Haval_PHEV105",
-    "name": "2023 Haval Fierce Dragon MAX PHEV 105 km",
-    "priceHT": "22 490 €",
-    "mileage": 18000,
-    "regyear": "2023-11",
-    "isNew": false,
-    "images": {
-      "hero": "images/EVH9681220_Haval_PHEV105/devgauche.webp"
-    },
-    "features": [
-      "Hybride rechargeable (PHEV) Hi4 4WD",
-      "Autonomie électrique 105 km",
-      "Moteur 1.5L 116 ch + double moteur électrique AV/AR",
-      "Puissance système 205 kW (≈279 ch), couple 585 N·m",
-      "Caméras 360°, ADAS L2 « Coffee intelligent drive »",
-      "Écran 12,3\" + combiné numérique, toit pano"
-    ],
-    "specifications": {
-      "engineCc": 1498,
-      "transmission": "Boîte hybride DHT, 4WD"
     }
   },
   {
@@ -638,30 +475,7 @@
       "transmission": "E-CVT automatique, FWD"
     }
   },
-  {
-    "id": "EVH_ToyotaBZ3_2025015",
-    "name": "2025 Toyota BZ 3X Air+ BEV 430km",
-    "priceHT": "25 350 €",
-    "mileage": 16000,
-    "regyear": "2025-04",
-    "isNew": false,
-    "featuresCount": 6,
-    "images": {
-      "hero": "images/EVH_ToyotaBZ3_devface.webp"
-    },
-    "features": [
-      "100% électrique (BEV)",
-      "Autonomie 430 km (CLTC)",
-      "Batterie LFP 58,3 kWh",
-      "Moteur 160 kW (218 ch) – 2 FWD",
-      "Recharge DC 30-80% ≈ 24 min",
-      "Double écran digital 10,25'' MMI touch + cockpit virtuel"
-    ],
-    "specifications": {
-      "engineCc": null,
-      "transmission": "Auto AT"
-    }
-  },
+ 
   {
     "id": "EVH_MercedesEQB2023013",
     "name": "2023 Mercedes-Benz EQB 260",
@@ -684,30 +498,6 @@
     "specifications": {
       "engineCc": null,
       "transmission": "Auto AT"
-    }
-  },
-  {
-    "id": "EVH9391855",
-    "name": "Chery Tiggo7 C-DM 1.5T 156HP L4",
-    "priceHT": "22 330 €",
-    "mileage": 1200,
-    "regyear": "2024-01",
-    "isNew": false,
-    "sold": true,
-    "images": {
-      "hero": "images/Vendus/EVH9391855_CHERRY_DEVANT.webp"
-    },
-    "features": [
-      "Hybride rechargeable (PHEV)",
-      "Autonomie électrique 120 km",
-      "Batterie 20 kWh",
-      "Moteur électrique 136 ch",
-      "Puissance système 292 ch",
-      "Recharge AC 7 kW"
-    ],
-    "specifications": {
-      "engineCc": 1499,
-      "transmission": "Auto"
     }
   },
   {
@@ -783,30 +573,7 @@
       "transmission": "Auto"
     }
   },
-  {
-    "id": "EVH9404921",
-    "name": "2025 BYD Song Pro 1.5L 101HP L4",
-    "priceHT": "21 040 €",
-    "mileage": 13000,
-    "regyear": "2025-01",
-    "isNew": false,
-    "sold": true,
-    "images": {
-      "hero": "images/Vendus/EVH9404921_DEV_DROITE.webp"
-    },
-    "features": [
-      "Hybride rechargeable (PHEV)",
-      "Autonomie électrique 115 km",
-      "Batterie Blade 18,3 kWh",
-      "Moteur électrique 145 kW (197 ch)",
-      "Puissance système 203 ch",
-      "Recharge AC 7 kW"
-    ],
-    "specifications": {
-      "engineCc": 1498,
-      "transmission": "E-CVT"
-    }
-  },
+  
   {
     "id": "EVH9478503",
     "name": "2024 BYD Song Plus 1.5L 110HP L4",
@@ -831,30 +598,7 @@
       "transmission": "E-CVT"
     }
   },
-  {
-    "id": "EVH9404943",
-    "name": "2024 BYD Song Plus 1.5L 110HP L4",
-    "priceHT": "23 360 €",
-    "mileage": 9000,
-    "regyear": "2024-07",
-    "isNew": false,
-    "sold": true,
-    "images": {
-      "hero": "images/Vendus/EVH9404943_BYD_beige_devant.webp"
-    },
-    "features": [
-      "Hybride rechargeable (PHEV)",
-      "Autonomie électrique 150 km",
-      "Batterie 26,6 kWh",
-      "Moteur électrique 160 kW (218 ch)",
-      "Puissance système 218 ch",
-      "Recharge DC 40 kW / AC 7 kW"
-    ],
-    "specifications": {
-      "engineCc": 1498,
-      "transmission": "E-CVT"
-    }
-  },
+ 
   {
     "id": "EVH9519205",
     "name": "2025 Chery Tiggo 9 C-DM 1.5T",
@@ -879,29 +623,7 @@
       "transmission": "Auto"
     }
   },
-  {
-    "id": "EVH9397463",
-    "name": "2025 Toyota bZ5- BEV",
-    "priceHT": "29 770 €",
-    "mileage": 1000,
-    "regyear": "2025-09",
-    "isNew": false,
-    "sold": true,
-    "images": {
-      "hero": "images/Vendus/EVH9397463_TOYOTA_DEVANT.webp"
-    },
-    "features": [
-      "100% électrique",
-      "Autonomie 630km",
-      "Puissance Moteur 200 kW (272 ch)",
-      "Recharge rapide DC 90 kW (30–80% en 27 min)",
-      "Caméra 360° + ADAS complet"
-    ],
-    "specifications": {
-      "engineCc": null,
-      "transmission": "AT"
-    }
-  },
+
   {
     "id": "EVH9535838",
     "name": "2023 Audi Q5 e-tron BEV 83.4KWH",
