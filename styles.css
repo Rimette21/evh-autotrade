@@ -64,7 +64,7 @@ header{
 .logo-wrap {
   display: flex;
   align-items: center;
-  margin-left: -25px; /* Déplace le logo vers la gauche ; ajustez entre -15px et -40px selon vos préférences */
+  margin-left: -50px; /* Déplace le logo vers la gauche ; ajustez entre -15px et -40px selon vos préférences */
 }
 .logo img {
   height: 58px;
@@ -181,8 +181,13 @@ header{
 /* =========================================================
    HÉRO / SECTIONS
    ========================================================= */
-.hero-static{
-  position:relative; height:800px; overflow:hidden; color:#fff; background:#0b0f14; max-height:600px;
+.hero-static {
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  background: #0b0f14;
+  height: 750px;      /* Hauteur augmentée (ajustez entre 700px et 800px selon vos goûts) */
+  max-height: none;   /* Supprime le plafond qui bloquait la hauteur à 600px */
 }
 .hero-static .bg-overlay{
   position:absolute; inset:0; z-index:2;
