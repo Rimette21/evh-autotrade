@@ -1383,7 +1383,23 @@ body.page-vehicle { background:#F6F7FB; }
   .catalogue-note-section { margin: 1.5rem -1rem; border-radius: 0; }
   .calc-grid { grid-template-columns: 1fr; }
 }
+.price-subtag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #10b981;
+  background: #ecfdf5;
+  padding: 2px 7px;
+  border-radius: 6px;
+  margin-left: 5px;
+  vertical-align: middle;
+}
 
+.price-detail {
+  font-size: 0.78rem;
+  color: #6b7280;
+  margin-top: -2px;
+  margin-bottom: 6px;
+}
 
 /* Cartes déjà en grille : on garde tes breakpoints actuels */
 
