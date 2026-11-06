@@ -60,23 +60,37 @@ header{
    margin-right:auto;
 }
 
-/* Logo (image + marque) */
-.logo-wrap{display:flex; align-items:center; gap:.55rem}
-.logo img{height:58px}
-.brand{display:flex; gap:.25rem; align-items:center}
-.brand .evh, .brand .autotrade{
-  font-weight:700; line-height:1;
-  font-size:clamp(1rem, .9vw + .85rem, 1.35rem);
-  letter-spacing:.3px;
+/* Logo (image seule) */
+.logo-wrap {
+  display: flex;
+  align-items: center;
+  margin-left: -25px; /* Déplace le logo vers la gauche ; ajustez entre -15px et -40px selon vos préférences */
 }
-.brand .autotrade{font-weight:800;color:var(--brand);margin-left:.2rem}
-
+.logo img {
+  height: 58px;
+  display: block;
+}
 /* Nav base (desktop) */
-.nav{ display:flex; align-items:center; gap:1rem; margin-left: auto;}
-.nav ul{list-style:none; display:flex; gap:1.1rem}
-.nav a{color:#fff; font-weight:500; padding:.3rem .4rem; border-radius:.375rem}
-.nav a:hover{background:rgba(255,255,255,.08)}
-
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-left: auto;
+}
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.1rem;
+}
+.nav a {
+  color: #fff;
+  font-weight: 500;
+  padding: .3rem .4rem;
+  border-radius: .375rem;
+}
+.nav a:hover {
+  background: rgba(255, 255, 255, .08);
+}
 /* Burger (CSS-only via checkbox) */
 #nav-toggle{display:none}
 .nav-btn{
