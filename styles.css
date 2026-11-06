@@ -1410,6 +1410,43 @@ body.page-vehicle { background:#F6F7FB; }
   z-index: 2;
 }
 
+/* 1. Augmentation de la hauteur de la bannière */
+.hero-static {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  min-height: 85vh; /* Augmente la hauteur (environ 85% de la hauteur de l'écran ; ajustez à 80vh ou 90vh selon votre préférence) */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Pousse automatiquement tout le contenu vers le bas */
+}
+
+/* 2. Positionnement du texte et du bouton en bas à gauche */
+.hero-cta {
+  position: relative;
+  z-index: 2;
+  padding: 0 0 50px 5%; /* 50px d'espace par rapport au bas, 5% par rapport à la marge gauche */
+  max-width: 650px;     /* Empêche le texte de s'étaler sur toute la largeur */
+  text-align: left;
+}
+
+/* Titre principal (s'il était masqué ou caché) */
+.hero-cta .adv2-title {
+  color: #ffffff;
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+/* Sous-titre "Livraison incluse..." */
+.hero-cta .maintext {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 25px;
+}
+
 
 /* Cartes déjà en grille : on garde tes breakpoints actuels */
 
