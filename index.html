@@ -414,13 +414,14 @@ const items = [energyLabel, autoLbl, ...(specLines.length ? specLines : fallback
 
         ${quickSpecsHTML(v)}
 
-        <div class="body">
-          <div class="name">${v.name}</div>
-          <div class="submeta">Réf : <strong>${v.id}</strong></div>
-          <div class="price">
-            Prix HT : ${v.priceHT || '-'}
-          </div>
-
+       <div class="body">
+            <div class="name">${v.name}</div>
+            <div class="submeta">Réf : <strong>${v.id}</strong></div>
+            <div class="price">
+              ${v.priceHT || '-'} <span class="price-subtag">Livré au port</span>
+            </div>
+            <div class="price-detail">Fret maritime & assurance inclus</div>
+            
           ${isSold
             ? '<div class="sold-note">Ce véhicule est déjà vendu</div>'
             : ''
