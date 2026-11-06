@@ -1,5 +1,6 @@
+
 /* =========================================================
-   EVH AUTOTRADE — v21 (full CSS)
+   EVH AUTOTRADE — v16.2 (full CSS)
    - Burger CSS-only
    - Mobile typographie réduite
    - Essentials bar + Energy badge
@@ -55,8 +56,8 @@ header{
   margin:0;
   padding:0 1rem;
   display:flex; align-items:center; justify-content:flex-start; gap:.75rem;
-  margin-left:auto;
-  margin-right:auto;
+   margin-left:auto;
+   margin-right:auto;
 }
 
 /* Logo (image seule) */
@@ -178,69 +179,36 @@ header{
 .container{max-width:var(--container); margin:2rem auto; padding:0 1.25rem}
 
 /* =========================================================
-   HÉRO / SECTIONS (Optimisé vidéo, hauteur 85vh & texte en bas à gauche)
+   HÉRO / SECTIONS
    ========================================================= */
 .hero-static{
-  position:relative;
-  width:100%;
-  min-height:85vh;
-  overflow:hidden;
-  color:#fff;
-  background:#0b0f14;
-  display:flex;
-  flex-direction:column;
-  justify-content:flex-end;
-}
-.hero-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  z-index: 0;
+  position:relative; height:800px; overflow:hidden; color:#fff; background:#0b0f14; max-height:600px;
 }
 .hero-static .bg-overlay{
-  position:absolute; inset:0; z-index:1;
-  background:linear-gradient(180deg, rgba(0,0,0,.15) 0%, rgba(0,0,0,.55) 100%);
+  position:absolute; inset:0; z-index:2;
+  background:linear-gradient(180deg, rgba(0,0,0,.06), rgba(0,0,0,.18));
 }
-.hero-bg{ position:absolute; inset:0; z-index:0; }
+.hero-bg{ position:absolute; inset:0; z-index:1; }
 .hero-bg img{
   width:100%; height:100%; object-fit:cover;
   filter:contrast(1.07) brightness(1.07) saturate(1.05);
   transform:translateZ(0); image-rendering:auto; backface-visibility:hidden; will-change:transform;
 }
 .hero-cta {
-  position: relative;
-  z-index: 2;
-  padding: 0 0 50px 5%;
-  max-width: 650px;
-  text-align: left;
-}
-
-.hero-cta .adv2-title {
-  color: #ffffff;
-  font-size: clamp(1.8rem, 3vw, 2.8rem);
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 12px;
-}
-
-.hero-cta .maintext {
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 1.1rem;
-  line-height: 1.5;
-  margin-bottom: 25px;
+    position: absolute;
+    left: 6%;
+    bottom: 10%;
+    z-index: 3;
+    max-width: var(--container);
 }
 
 .hero-cta .btn {
-  box-shadow: 0 6px 16px rgba(229, 62, 62, 0.2);
-  padding: 0.7rem 1.3rem;
-  font-size: 16px;
-  font-weight: 700;
+  box-shadow: 0 6px 16px rgba(229, 62, 62, 0.2); /* ombre un peu plus discrète */
+  padding: 0.7rem 1.3rem; /* ↓ réduit (avant : 0.9rem 1.5rem) */
+  font-size: 16px; /* ajout explicite pour contrôle */
+  font-weight: 700; /* un peu moins lourd que 800 → plus élégant */
   border-radius: 999px;
-  background-color: #ff0000;
+  background-color: #ff0000; /* assurez-vous que la couleur est bien définie */
   color: white;
   text-decoration: none;
 }
@@ -252,12 +220,12 @@ header{
 
 @media (max-width: 680px) {
   .hero-static {
-    min-height: 75vh;
+    height: 77%;
   }
-  .hero-cta {
-    padding: 0 1.25rem 35px 1.25rem;
-    max-width: 100%;
-  }
+          .hero-cta {
+            bottom: 35%;
+        }
+   
   .hero-cta .btn {
     padding: 0.65rem 1.1rem;
     font-size: 0.9rem;
@@ -354,6 +322,7 @@ header{
    ========================================================= */
 /* Fond des pages détail (toutes tailles) */
 body.page-vehicle { background:#F6F7FB; }
+/* (Option B possible) body.page-vehicle { background:#FFF7DF; } */
 
 /* Pastille de couleur dans les spécifications */
 .spec-value .color-dot{
@@ -392,7 +361,7 @@ body.page-vehicle { background:#F6F7FB; }
 /* Badge énergie (BEV/PHEV) dans la photo */
 .energy-badge{
   position:absolute; top:10px; right:10px; z-index:2;
-  transform:translateX(-6px);
+  transform:translateX(-6px); /* léger décalage vers la gauche, comme demandé */
 }
 .energy-badge .pill{ box-shadow:0 6px 14px rgba(0,0,0,.12) }
 
@@ -462,4 +431,957 @@ body.page-vehicle { background:#F6F7FB; }
   z-index:60;align-items:center;justify-content:center;flex-direction:column
 }
 #lightbox img{max-width:90%;max-height:80%;border-radius:10px}
-#close{position:absolute;top:20px;right:30px;font-size:2rem
+#close{position:absolute;top:20px;right:30px;font-size:2rem;color:#fff;cursor:pointer}
+#prev,#next{position:absolute;top:50%;transform:translateY(-50%);font-size:2rem;color:#fff;cursor:pointer}
+#prev{left:30px} #next{right:30px}
+
+/* =========================================================
+   FOOTER (compact, sans logo)
+   ========================================================= */
+.site-footer{background:#0f141a;color:#d6dde7;margin-top:2rem}
+.footer-wrap{
+  max-width:var(--container);margin:0 auto;padding:1.6rem 1rem;
+  display:grid;gap:1.25rem;grid-template-columns:1.2fr 2fr
+}
+.f-brand{display:flex;gap:1rem;align-items:flex-start}
+.f-logo{display:none !important} /* suppression logo footer */
+.f-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem}
+.f-col h4{font-size:.9rem;color:#fff;margin:0 0 .45rem;font-weight:800}
+.f-col ul{list-style:none;margin:0;padding:0}
+.f-col li{margin:.3rem 0; line-height:1.35}
+.f-col a{color:#d6dde7;text-decoration:none}
+.f-col a:hover{color:#fff;text-decoration:underline}
+.f-bottom{border-top:1px solid rgba(255,255,255,.08);text-align:center;padding:.75rem 1rem;color:#9fb0c7;font-size:.8rem}
+
+@media (max-width:900px){
+  .footer-wrap{grid-template-columns:1fr}
+  .f-cols{grid-template-columns:1fr 1fr}
+}
+@media (max-width:560px){
+  .f-cols{grid-template-columns:1fr}
+}
+
+/* =========================================================
+   TYPO MOBILE GLOBALE (réduction harmonisée)
+   ========================================================= */
+@media (max-width:680px){
+  html{ font-size:14px; }
+  .btn{ padding:.7rem 1.05rem; font-size:.95rem }
+}
+
+/* =========================================================
+   EVH AUTOTRADE — v16.1 OVERRIDES (mobile tighten)
+   (conservées ici pour compatibilité)
+   ========================================================= */
+
+/* -------- Header + Logo + Texte de marque (mobile) -------- */
+@media (max-width: 859.98px){
+  :root{ --hdr-h:54px }
+  .header-inner{ padding: 0 .8rem; }
+  .logo img{ height: 44px; }
+  .brand .evh, .brand .autotrade{
+    font-size: clamp(.88rem, 2.4vw, 1.02rem);
+    letter-spacing: .25px;
+  }
+  .brand{ gap: .2rem; }
+}
+
+/* Très petits écrans : afficher seulement “AUTOTRADE” si besoin */
+@media (max-width: 420px){
+  :root{ --hdr-h:50px }
+  .logo img{ height: 40px; }
+  .brand .evh{ display:none; }
+  .brand .autotrade{ font-size: .9rem; }
+}
+
+/* -------- Hero CTA “Découvrez notre catalogue” (mobile) -------- */
+@media (max-width: 680px){
+  .hero-cta{ left:4.5%; bottom:35%; }
+  .hero-cta .btn{
+    padding: .6rem .9rem;
+    min-height: 38px;
+    font-size: .9rem;
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(229,62,62,.22);
+    border-radius: 999px;
+  }
+}
+@media (max-width: 420px){
+  .hero-cta .btn{
+    min-height: 36px;
+    font-size: .85rem;
+    box-shadow: 0 3px 10px rgba(229,62,62,.2);
+  }
+}
+
+/* -------- Boutons globaux en mobile -------- */
+@media (max-width: 680px){
+  .btn{
+    padding: .55rem .8rem;
+    padding: .65rem 1rem;
+    min-height: 38px;
+    font-size: .9rem;
+    font-weight: 700;
+  }
+}
+
+/* -------- Menu : burger plus petit -------- */
+@media (max-width: 859.98px){
+  .nav-btn{ width: 36px; height: 36px; }
+  .nav-btn .bar, .nav-btn::before, .nav-btn::after{
+    width: 20px; left: 8px;
+  }
+  .nav-btn .bar{ top: 17px }
+  .nav-btn::before{ top: 11px }
+  .nav-btn::after{ top: 23px }
+}
+
+/* -------- Footer : encore plus discret en mobile -------- */
+@media (max-width: 680px){
+  .footer-wrap{ padding: 1.2rem .9rem; }
+  .f-cols{ gap: .6rem; }
+  .f-col h4{ font-size: .85rem; }
+  .site-footer{ font-size: .82rem; }
+  .f-bottom{ font-size: .78rem; padding: .65rem .9rem; }
+}
+/* ==== Barre d’infos rapides sous le titre du véhicule ==== */
+.facts-row{
+  display:flex; flex-wrap:wrap; gap:1rem 1.25rem;
+  margin:.35rem 0 .1rem; color:#0f172a; font-size:.92rem;
+}
+.fact strong{font-weight:800; margin-right:.35rem}
+@media (max-width:680px){
+  .facts-row{gap:.6rem 1rem; font-size:.9rem}
+}
+/* Nouveau format horizontal pour les specs sous l’image */
+.quick-specs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9f9f9;
+  padding: 10px 12px;
+  border-radius: 6px;
+  margin: 0px 0;
+  font-size: 12px;
+  gap: 8px;
+}
+
+.qs-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+  min-width: 0;
+}
+
+.qs-label {
+  font-size: 10px;
+  color: #777;
+  font-weight: 500;
+  margin-bottom: 2px;
+  letter-spacing: 0.4px;
+}
+
+.qs-value {
+  font-size: 13px;
+  font-weight: 600;
+  color: #000;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Fuel en vert */
+.qs-col:nth-child(4) .qs-value {
+  color: #00aa00;
+  font-weight: 700;
+}
+/* Nouveau format horizontal pour les specs sous l’image */
+.quick-specs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9f9f9;
+  padding: 10px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  gap: 8px;
+}
+
+.qs-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+  min-width: 0;
+}
+
+.qs-label {
+  font-size: 10px;
+  color: #777;
+  font-weight: 500;
+  margin-bottom: 2px;
+  letter-spacing: 0.4px;
+}
+
+.qs-value {
+  font-size: 13px;
+  font-weight: 700; /* plus gras */
+  color: #000;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* Forcer le résumé sous les specs à droite */
+.content-grid .in-grid-right { grid-column: 2; }
+
+/* Sur mobile, on laisse le flux naturel (une seule colonne) */
+@media (max-width: 900px) {
+  .content-grid .in-grid-right { grid-column: 1 / -1; }
+}
+
+/* Style + compacité du résumé */
+.resume-card { padding: .85rem 1rem; }
+.v-resume { font-size: .95rem; line-height: 1.45; margin: 0; }
+
+/* Résumé placé en bas de la carte "Spécifications" */
+.page-vehicle .specs-resume {
+  margin-top: 28px;         /* pousse le bloc plus bas */
+  padding-top: 12px;        /* respirations internes */
+  border-top: 1px solid #eee; /* séparateur léger */
+}
+
+.page-vehicle .specs-resume .v-resume {
+  margin: 0;
+  line-height: 1.25;
+}
+
+/* Option: un peu plus d'espace sur mobile */
+@media (max-width: 768px) {
+  .page-vehicle .specs-resume {
+    margin-top: 32px;
+    padding-top: 14px;
+  }
+}
+/* =========================================================
+   EVH — PAGES ABOUT & CONTACT (sans changement du Hero)
+   Non-destructive: peut être collé en bas de styles.css
+   ========================================================= */
+
+/* -------- À PROPOS -------- */
+.about{
+  background:#F9FBFF;
+  color:#0f172a;
+  padding: clamp(40px, 6vw, 72px) 0;
+}
+.about__container{
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+.about__header h1{
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 800;
+  margin: 0 0 .5rem;
+}
+.about__intro{
+  color: var(--muted);
+  font-size: clamp(.78rem, 1.2vw, 1.05rem);
+  max-width: 900px;
+}
+
+/* Cartes & grille */
+.about__grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 1.4rem;
+}
+@media (max-width:1100px){ .about__grid{ grid-template-columns: repeat(2,1fr); } }
+@media (max-width:680px){ .about__grid{ grid-template-columns: 1fr; } }
+
+.about__card{
+  background:#fff;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  padding: 1.1rem;
+  border: 1px solid #eef2f7;
+}
+.about__card h2{
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin: 0 0 .5rem;
+}
+.about__card p{ color:#374151; }
+
+.about__ticks{
+  list-style: none;
+  padding-left: 0;
+  margin: .5rem 0 0;
+}
+.about__ticks li{
+  margin: .28rem 0;
+  padding-left: 1.05rem;
+  position: relative;
+}
+.about__ticks li::before{
+  content: "•";
+  color: var(--brand);
+  font-weight: 900;
+  position: absolute;
+  left: 0; top: 0;
+}
+
+/* Bloc contact en bas de page */
+.about__contact{
+  background:#fff;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  padding: 1.1rem;
+  margin-top: 1.2rem;
+  border: 1px solid #eef2f7;
+}
+.about__contact h3{
+  font-size: 1.02rem;
+  font-weight: 800;
+  margin: 0 0 .5rem;
+}
+.about__contactGrid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: .6rem 1rem;
+}
+@media (max-width:680px){ .about__contactGrid{ grid-template-columns: 1fr; } }
+.about__contact a{
+  color: #0f172a;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* -------- CONTACT -------- */
+.contact-page{
+  background:#F9FBFF;
+  color:#0f172a;
+  padding: clamp(40px, 6vw, 72px) 0;
+}
+.contact-page h1{
+  text-align:center;
+  font-size: clamp(1.8rem, 3vw, 2.3rem);
+  font-weight: 800;
+  margin: 0 0 .5rem;
+}
+.contact-page p{
+  text-align:center;
+  color: var(--muted);
+  max-width: 860px;
+  margin: 0 auto 1.6rem;
+  font-size: clamp(.78rem);
+}
+
+/* Cartes de contact */
+.contact-grid{
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width:1100px){ .contact-grid{ grid-template-columns: repeat(2,1fr); } }
+@media (max-width:680px){ .contact-grid{ grid-template-columns: 1fr; } }
+
+.contact-card{
+  background:#fff;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  padding: 1.1rem;
+  border: 1px solid #eef2f7;
+}
+.contact-card h3{
+  font-size: 1.05rem;
+  font-weight: 800;
+  margin: 0 0 .5rem;
+  color:#0f172a;
+}
+.contact-card a{
+  color:#0f172a;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.contact-card a:hover{ opacity:.85; }
+/* ===== Processus d’importation ===== */
+.process-page { background:#F9FBFF; padding: 2.6rem 0 3rem; }
+.process-intro { max-width: var(--container); margin: 0 auto 1.6rem; padding: 0 1.25rem; text-align: center; }
+.process-intro h1 { font-size: clamp(1.6rem, 2.6vw, 2.2rem); font-weight: 800; margin-bottom: .6rem; }
+.process-intro .lead { color: var(--muted); max-width: 900px; margin: 0 auto; }
+
+.steps { max-width: var(--container); margin: 1.2rem auto; padding: 0 1.25rem; display: grid; gap: 1rem; grid-template-columns: repeat(3,1fr); }
+@media (max-width: 1100px){ .steps{ grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 680px){ .steps{ grid-template-columns: 1fr; } }
+
+.step-card { background:#fff; border-radius: var(--radius-lg); box-shadow: var(--shadow); padding: 1.1rem; }
+.step-no { width: 36px; height: 36px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 800; background:#111; color:#fff; margin-bottom:.4rem; }
+.step-card h3 { font-size:1.05rem; margin:.2rem 0 .4rem; font-weight:800; }
+.step-card p { color:#374151; margin-bottom:.4rem; }
+.step-card .bullets { margin:.2rem 0 0; padding-left:1.05rem; }
+.step-card .bullets li { margin:.22rem 0; }
+
+.inclusions { max-width: var(--container); margin: 1.6rem auto; padding: 0 1.25rem; display: grid; gap: 1rem; grid-template-columns: repeat(2,1fr); }
+@media (max-width:900px){ .inclusions{ grid-template-columns:1fr; } }
+.inc-card { background:#fff; border-radius: var(--radius-lg); box-shadow: var(--shadow); padding: 1.1rem; }
+.inc-card h3 { font-size:1.05rem; margin:0 0 .4rem; font-weight:800; }
+.inc-card ul { padding-left:1.05rem; margin:0; }
+.inc-card li { margin:.22rem 0; }
+.inc-card .note { margin-top:.5rem; color:#6b7280; }
+
+.faq { max-width: var(--container); margin: 1.2rem auto 1.6rem; padding: 0 1.25rem; }
+.faq h2 { font-size:1.2rem; font-weight:800; margin-bottom:.5rem; }
+.faq details { background:#fff; border-radius: var(--radius-sm); box-shadow: var(--shadow); padding:.75rem 1rem; margin:.5rem 0; }
+.faq summary { cursor:pointer; font-weight:700; }
+.faq p { margin-top:.4rem; color:#374151; }
+
+.cta-center { text-align:center; margin-top: .6rem; }
+.cta-center .btn { margin:.15rem; }
+
+/* =========================================================
+   Correctif mise en page — Page À propos
+   ========================================================= */
+.about {
+  padding-top: 80px;        /* espace sous le header */
+  padding-bottom: 60px;
+  background: #F9FBFF;
+}
+
+.about__container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  text-align: left;
+}
+
+/* Retrait horizontal global équivalent à ~2 cm */
+.about__container p,
+.about__container h1,
+.about__container h2,
+.about__container h3,
+.about__container ul,
+.about__container li {
+  margin-left: 2cm;
+}
+
+/* Optionnel : lisibilité renforcée du premier bloc */
+.about__container h1 {
+  margin-bottom: 1rem;
+  font-size: clamp(1.8rem, 3vw, 2.3rem);
+  font-weight: 800;
+}
+
+.about__container p {
+  color: #0f172a;
+  line-height: 1.6;
+  margin-bottom: .8rem;
+}
+/* =======================
+   CONTACT — alignement & lisibilité
+   ======================= */
+.contact-page{
+  background:#F9FBFF;
+  padding:80px 0 60px;           /* espace sous le header noir */
+  color:#0f172a;
+}
+
+/* Aligne h1, le paragraphe d’intro et la grille sur la même
+   largeur que le header/footer (var(--container)) */
+.contact-page > h1,
+.contact-page > p,
+.contact-grid{
+  max-width: var(--container);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;         /* même padding horizontal */
+  padding-right: 1.25rem;
+  text-align: left;              /* plus de centrage */
+}
+/* =======================
+   À PROPOS — alignement comme header/footer
+   ======================= */
+.about{
+  background:#F9FBFF;
+  padding:80px 0 60px;           /* espace sous le header noir */
+  color:#0f172a;
+}
+
+.about__container{
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  text-align: left;
+}
+
+/* Annule le retrait 2cm si tu l’avais ajouté */
+.about__container p,
+.about__container h1,
+.about__container h2,
+.about__container h3,
+.about__container ul,
+.about__container li{
+  margin-left: 0 !important;
+}
+/* =======================
+   FOOTER — version compacte et discrète
+   ======================= */
+.site-footer{
+  font-size: .9rem;              /* taille globale plus petite */
+}
+.footer-wrap{
+  padding: 1.4rem 1rem;          /* un peu moins haut */
+}
+.f-col h4{
+  font-size: .86rem;
+}
+.f-col li{
+  line-height: 1.3;
+}
+.f-bottom{
+  font-size: .78rem;             /* ligne © plus fine */
+}
+
+/* Mobile : encore un peu plus discret */
+@media (max-width:680px){
+  .site-footer{ font-size: .82rem; }
+  .f-bottom{ font-size: .74rem; }
+}
+/* ===== À PROPOS — version simple (paragraphe) ===== */
+.about.about--simple{
+  background:#F9FBFF;
+  padding:80px 0 60px;     /* espace sous le header */
+  color:#0f172a;
+}
+
+.about--simple .about__container{
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  text-align: left;
+}
+
+/* Titre sans bandeau ni fond */
+.about--simple h1{
+  margin: 0 0 1rem;
+  font-size: clamp(1.8rem, 3vw, 2.3rem);
+  font-weight: 800;
+  background: none !important;
+  box-shadow: none !important;
+  color:#0f172a;
+}
+
+/* Sous-titres sobres */
+.about--simple h2{
+  margin: 1.2rem 0 .4rem;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color:#0f172a;
+}
+
+/* Paragraphes lisibles */
+.about--simple p{
+  margin: .4rem 0 .8rem;
+  line-height: 1.6;
+  color:#111;
+}
+
+/* Neutralise l’ancienne grille/cartes si encore présentes */
+.about--simple .about__grid,
+.about--simple .about__card,
+.about--simple .about__ticks,
+.about--simple .about__contact{
+  all: unset;
+  display: revert;
+}
+/* =========================================================
+   PROCESSUS — harmonisation visuelle (alignements + hauteurs)
+   ========================================================= */
+
+/* Conteneurs */
+.process-page{ background:#F9FBFF; padding:72px 0 80px; }
+.process-intro{ max-width:var(--container); margin:0 auto 10px; padding:0 1.25rem; text-align:center; }
+.process-intro h1{ font-weight:800; font-size:clamp(1.7rem,2.6vw,2.2rem); margin:0 0 .35rem; }
+.process-intro .lead{ color:var(--muted); max-width:900px; margin:0 auto; }
+
+/* Étapes : 3 colonnes égales + cartes à hauteur identique */
+.steps{
+  max-width:var(--container);
+  margin:12px auto 16px; padding:0 1.25rem;
+  display:grid; gap:14px;
+  grid-template-columns:repeat(3,1fr);
+  align-items:stretch;
+  grid-auto-rows:1fr;               /* => hauteurs égales */
+}
+@media (max-width:1100px){ .steps{ grid-template-columns:repeat(2,1fr); } }
+@media (max-width:680px){  .steps{ grid-template-columns:1fr; } }
+
+.step-card{
+  background:#fff; border:1px solid #eef2f7;
+  border-radius:var(--radius-lg); box-shadow:var(--shadow);
+  padding:16px 16px 14px;
+  display:flex; flex-direction:column; gap:10px;
+  height:100%;
+}
+
+/* En-tête carte : pastille + titre bien alignés sur UNE ligne */
+.step-card .step-no{
+  width:34px;height:34px;border-radius:50%;
+  display:inline-flex; align-items:center; justify-content:center;
+  font-weight:800; background:#0f172a; color:#fff;
+  margin:0 .5rem 0 0; flex:0 0 auto;
+}
+.step-card h3{
+  display:inline-block; vertical-align:middle;
+  margin:0; font-size:1.05rem; font-weight:800; line-height:1.25;
+}
+.step-card p{ color:#374151; margin:0; }
+.step-card .bullets{ margin:.35rem 0 0; padding-left:1.05rem; }
+.step-card .bullets li{ margin:.22rem 0; }
+
+/* Inclusions : 2 colonnes égales + hauteurs identiques */
+.inclusions{
+  max-width:var(--container);
+  margin:16px auto; padding:0 1.25rem;
+  display:grid; gap:14px;
+  grid-template-columns:repeat(2,1fr);
+  align-items:stretch; grid-auto-rows:1fr;
+}
+@media (max-width:900px){ .inclusions{ grid-template-columns:1fr; } }
+
+.inc-card{
+  background:#fff; border:1px solid #eef2f7;
+  border-radius:var(--radius-lg); box-shadow:var(--shadow);
+  padding:16px;
+  display:flex; flex-direction:column; gap:8px; height:100%;
+}
+.inc-card h3{ font-size:1.05rem; font-weight:800; margin:0; }
+.inc-card ul{ margin:0; padding-left:1.05rem; }
+.inc-card li{ margin:.22rem 0; }
+.inc-card .note{ margin-top:auto; color:#6b7280; }
+
+/* FAQ : titres homogènes, espacement cohérent */
+.faq{ max-width:var(--container); margin:12px auto 6px; padding:0 1.25rem; }
+.faq h2{ font-size:1.15rem; font-weight:800; margin:0 0 .5rem; }
+.faq details{ background:#fff; border:1px solid #eef2f7; border-radius:var(--radius-sm); box-shadow:var(--shadow);
+              padding:.75rem 1rem; margin:.5rem 0; }
+.faq summary{ cursor:pointer; font-weight:700; }
+.faq p{ margin:.4rem 0 0; color:#374151; }
+
+/* CTA bas de page */
+.cta-center{ text-align:center; margin-top:10px; }
+
+.card { position: relative; }
+
+.tag-new{
+  position: absolute;
+  top: 12px; left: 12px;
+  background: linear-gradient(135deg, #2ecc71, #27ae60);
+  color: #fff;
+  font-size: 12px;          /* un poil plus petit pour ne pas gêner */
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.18);
+  text-transform: uppercase;
+  letter-spacing: .4px;
+}
+/* ====== Filtres catalogue v3 ====== */
+.filters {
+  max-width: var(--container);
+  margin: 0 auto 2rem;
+  padding: 0 1.25rem;
+}
+
+/* Lignes de filtres */
+.filters-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: flex-end;
+}
+
+.filters-row--top {
+  margin-bottom: 0.75rem;
+}
+
+/* Items */
+.filter-item {
+  flex: 1;
+  min-width: 180px;
+}
+
+.filter-item--full {
+  flex: 1 1 100%;
+}
+
+.filter-item--compact {
+  flex: 0 0 150px;
+}
+
+/* Labels */
+.filter-label,
+.range-label {
+  display: block;
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-bottom: 0.25rem;
+}
+
+/* Inputs texte + select */
+.filters input[type="search"],
+.filters select {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 999px;
+  padding: 0.6rem 0.9rem;
+  font-size: 0.95rem;
+  width: 100%;
+  box-shadow: var(--shadow);
+}
+
+/* Sliders */
+.range-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.filters input[type="range"] {
+  width: 100%;
+  accent-color: #e53e3e;
+}
+
+/* Bouton reset */
+.btn--ghost {
+  background: #fff;
+  color: #111;
+  border: 1px solid #e5e7eb;
+  box-shadow: var(--shadow);
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.btn--ghost:hover {
+  filter: brightness(0.98);
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+  .filters {
+    padding: 0 1rem;
+  }
+
+  .filters-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-item,
+  .filter-item--full,
+  .filter-item--compact {
+    flex: 1 1 100%;
+    min-width: 100%;
+  }
+}
+
+.catalogue-note {
+  max-width: 960px;
+  margin: 1.4rem auto 2.4rem;
+  padding: 1.1rem 1.3rem;
+  background: #f4f4f6;
+  border: 1px solid #d8d8dd;
+  border-radius: 14px;
+  color: #3e3e46;
+  font-size: 0.98rem;
+  line-height: 1.6;
+   box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  text-align: left;
+}
+
+.catalogue-note__text {
+  display: block;
+}
+
+.catalogue-note a {
+  color: #a86800;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.catalogue-note__footnote {
+  display: inline-block;
+  margin-top: 0.35rem;
+  font-size: 0.86rem;
+  opacity: 0.78;
+}
+/* Style global */
+.price-estimate {
+  margin-top: 6px;
+  font-size: 0.9rem;
+  color: #5b4a2c;
+  opacity: 0.80;
+}
+/* ✅ Responsive mobile */
+@media (max-width: 768px) {
+  .catalogue-note {
+    margin: 1rem 1rem 1.8rem;
+    padding: 0.9rem 1rem;
+    font-size: 0.9rem;
+    border-radius: 12px;
+  }
+
+  .catalogue-note__footnote {
+    font-size: 0.8rem;
+  }
+}
+/* ===== Badges "Vendu" ===== */
+.card-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  z-index: 3;
+}
+
+.card-badge--sold {
+  background: #b91c1c; /* rouge EVH */
+  color: #ffffff;
+}
+
+/* Carte visuellement sold-out */
+.card--sold {
+  opacity: 0.65;
+  pointer-events: none; /* empêche clic si tu veux */
+}
+
+/* Texte sous le prix */
+.sold-note {
+  margin-top: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #b91c1c;
+}
+/* ===== CATALOGUE NOTE ENCADRÉ RESPONSIVE ===== */
+.catalogue-note-section { 
+  padding: 2rem 1rem; 
+  background: linear-gradient(135deg, #f8f9ff 0%, #e8f0ff 100%); 
+  border-radius: 16px; 
+  margin: 2rem 0; 
+  box-shadow: 0 8px 32px rgba(0,0,0,0.08); 
+  border: 1px solid rgba(59,130,246,0.1);
+}
+.note-container { max-width: 640px; margin: 0 auto; }
+.note-title { 
+  font-size: clamp(1.2rem, 4vw, 1.4rem); 
+  font-weight: 700; 
+  color: #1e3a8a; 
+  margin-bottom: 1.2rem; 
+  text-align: center; 
+  letter-spacing: -0.02em;
+}
+.note-intro { 
+  text-align: center; 
+  margin-bottom: 1.5rem; 
+  color: #4b5563; 
+  line-height: 1.5;
+}
+.accordion-item { 
+  border: 1px solid #e5e7eb; 
+  border-radius: 12px; 
+  margin-bottom: 0.75rem; 
+  overflow: hidden; 
+  background: white;
+}
+.accordion-header { 
+  width: 100%; 
+  padding: 1.25rem 1.5rem; 
+  border: none; 
+  text-align: left; 
+  font-weight: 600; 
+  font-size: 1rem; 
+  color: #1f2937; 
+  cursor: pointer; 
+  transition: all 0.3s ease; 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  background: #fafbfc;
+}
+.accordion-header:hover { background: #f1f5f9; }
+.accordion-header.active { 
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8); 
+  color: white; 
+}
+.icon { 
+  font-size: 0.8rem; 
+  transition: transform 0.3s ease; 
+}
+.accordion-header.active .icon { transform: rotate(180deg); }
+.accordion-content { 
+  max-height: 0; 
+  overflow: hidden; 
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); 
+  background: #f8fafc; 
+}
+.accordion-content.active { 
+  max-height: 200px; 
+  padding: 1.25rem 1.5rem; 
+}
+.calc-link { 
+  display: block; 
+  padding: 1rem 1.25rem; 
+  background: linear-gradient(135deg, #10b981, #059669); 
+  color: white !important; 
+  text-decoration: none; 
+  border-radius: 10px; 
+  font-weight: 500; 
+  text-align: center; 
+  transition: all 0.2s ease; 
+  box-shadow: 0 4px 12px rgba(16,185,129,0.3);
+}
+.calc-link:hover { 
+  transform: translateY(-3px); 
+  box-shadow: 0 8px 25px rgba(16,185,129,0.4); 
+  color: white !important;
+}
+.calc-grid { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); 
+  gap: 0.75rem; 
+}
+.note-footnote { 
+  text-align: center; 
+  font-size: 0.875rem; 
+  color: #6b7280; 
+  margin-top: 1.5rem; 
+  padding-top: 1rem; 
+  border-top: 1px solid #e5e7eb;
+}
+
+/* Mobile Optimisé */
+@media (max-width: 640px) { 
+  .catalogue-note-section { margin: 1.5rem -1rem; border-radius: 0; }
+  .calc-grid { grid-template-columns: 1fr; }
+}
+
+
+/* Cartes déjà en grille : on garde tes breakpoints actuels */
+
+
+
+/* Fuel en vert — déjà défini dans le HTML avec style="color: #00aa00" */
