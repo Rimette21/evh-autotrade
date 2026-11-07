@@ -1430,7 +1430,7 @@ body.page-vehicle { background:#F6F7FB; }
   width: 100%;
   height: 100%;
   object-fit: cover !important;
-  object-position: center bottom !important;
+  object-position: center calc(100% - 30px) !important;
 }
 
   /* 3. Ajustement du texte et du bouton en bas de vidéo */
