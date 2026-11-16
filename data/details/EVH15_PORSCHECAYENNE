@@ -7,7 +7,6 @@
 "images": {
 "hero": "images/EVH15_PORSCHECAYENNE/devdroit.webp",
 "gallery": [
-
 "images/EVH15_PORSCHECAYENNE/devgauche.webp",
 "images/EVH15_PORSCHECAYENNE/face.webp",
 "images/EVH15_PORSCHECAYENNE/cotegauche.webp",
@@ -19,10 +18,8 @@
 },
   "caracteristiques": [
     "SUV hybride rechargeable (PHEV)",
-    "Motorisation V6 3.0 turbo essence + moteur électrique",
+    "V6 3.0 turbo essence + moteur électrique",
     "Puissance combinée 462 ch (340 kW) / 700 Nm",
-    "Batterie lithium-ion 17,9 kWh bruts — à confirmer par VIN",
-    "Autonomie électrique jusqu’à 48 km (WLTP urbain EAER)",
     "Transmission intégrale Porsche Traction Management (PTM)",
     "Boîte automatique Tiptronic S à 8 rapports"
   ],
@@ -33,64 +30,42 @@
     "transmission": "Automatique Tiptronic S à 8 rapports",
     "traction": "Intégrale — Porsche Traction Management (PTM)",
     "typeBatterie": "Lithium-ion",
-    "batterieKWh": "17,9 kWh bruts / environ 14,3 kWh utiles — à confirmer par VIN",
-    "autonomieCLTC": "Non applicable",
-    "autonomieWLTP": "Jusqu’à 48 km en cycle urbain WLTP EAER ; autonomie actuelle non vérifiée",
-    "autonomieTotale": "Non renseignée",
+    "batterieKWh": "17,9 kWh",
+    "autonomieCLTC": "48 km",
     "moteurThermique": "V6 3.0 turbo essence, 2 995 cm³, 340 ch (250 kW) / 450 Nm",
-    "consommationCarburantMixte": "À renseigner selon le certificat de conformité du véhicule",
+    "consommationCarburantMixte": "",
     "carburant": "Essence",
-    "reservoirCarburant": "À confirmer selon la configuration du véhicule",
-    "rechargeDCkW": "Pas de recharge rapide en courant continu (DC)",
-    "rechargeACkW": "3,6 kW de série ou 7,2 kW en option — équipement à confirmer",
+    "reservoirCarburant": "",
+    "rechargeDCkW": "Pas de recharge rapide DC",
     "refroidissementBatterie": "Refroidissement par liquide",
     "places": "5 places",
     "portes": "5 portes",
-    "volumeCoffre": "À confirmer sur la fiche technique du véhicule",
+    "volumeCoffre": "",
     "dimensions": {
       "longueur": "4918 mm",
       "largeur": "1983 mm hors rétroviseurs",
       "hauteur": "1696 mm",
-      "empattement": "À confirmer sur la fiche technique du véhicule",
-      "rayonDeBraquage": "À confirmer selon la présence de roues arrière directrices"
+      "empattement": "",
+      "rayonDeBraquage": ""
     },
-    "poids": "À renseigner selon les documents du véhicule",
-    "ptac": "À renseigner selon les documents du véhicule",
+    "poids": "",
+    "ptac": "",
     "vitesseMax": "253 km/h",
-    "acceleration0100": "5,0 s avec Pack Sport Chrono",
-    "consommationElectrique": "À renseigner selon le certificat de conformité du véhicule",
+    "acceleration0100": "",
+    "consommationElectrique": "",
     "structure": "Monocoque",
-    "suspension": "Configuration à confirmer ; suspension pneumatique non vérifiée",
-    "freins": "Configuration à confirmer selon les équipements du véhicule",
+    "suspension": "",
+    "freins": "",
     "direction": "Assistée électromécanique",
-    "pneus": "Dimensions avant et arrière à vérifier sur les flancs des pneus",
-    "jantes": "Jantes alliage ; modèle et diamètre à confirmer"
+    "pneus": "",
+    "jantes": "Alliage aluminium"
   },
   "equipements": {
-    "interieur": [
-      "Sellerie, matériaux et coloris à confirmer",
-      "Réglages électriques, chauffage et ventilation des sièges à confirmer",
-      "Configuration de la climatisation à confirmer",
-      "Présence du toit panoramique à confirmer",
-      "Équipements de confort à vérifier sur la liste d’options Porsche"
-    ],
-    "securite": [
-      "Équipements de sécurité à vérifier sur la fiche de configuration",
-      "Présence des aides au maintien de voie et de surveillance des angles morts à confirmer",
-      "Garantie restante ou couverture Porsche Approved à vérifier"
-    ],
-    "assistance": [
-      "Capteurs de stationnement et caméra de recul à confirmer",
-      "Présence de caméras panoramiques 360° à confirmer",
-      "Régulateur de vitesse adaptatif à confirmer",
-      "Présence du Pack Sport Chrono à confirmer"
-    ],
-    "connectivite": [
-      "Système multimédia Porsche Communication Management (PCM) — configuration à vérifier",
-      "Compatibilité smartphone et services connectés à vérifier selon le marché d’origine",
-      "Navigation et cartographie disponibles à confirmer"
-    ]
+    "interieur": [],
+    "securite": [],
+    "assistance": [],
+    "connectivite": []
   },
-  "resume": "Porsche Cayenne 3.0 E-Hybrid de 2021, affichant 64 200 km, proposé à 76 200 € HT. Motorisation hybride rechargeable associant un V6 3.0 turbo essence à un moteur électrique, pour une puissance combinée de 462 ch et un couple de 700 Nm. Transmission intégrale et boîte automatique Tiptronic S à 8 rapports. Batterie de 17,9 kWh bruts et autonomie électrique homologuée jusqu’à 48 km en cycle urbain WLTP EAER pour le millésime 2021, à confirmer sur cet exemplaire. Options, état de la batterie et garantie à vérifier.",
-  "fichePDF": ""
+  "resume": "SUV hybride rechargeable associant un V6 3.0 turbo essence à un moteur électrique, pour une puissance combinée de 462 ch et un couple de 700 Nm. Transmission intégrale et boîte automatique Tiptronic S à 8 rapports.",
+  "fichePDF": "data/fiche/FT_EVH15_PORSCHECAYENNE.pdf"
 }
