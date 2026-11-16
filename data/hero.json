@@ -269,7 +269,7 @@
   "isNew": false,
   "featuresCount": 6,
   "images": {
-    "hero": "images/EVH15_PORSCHECAYENNE/devdroit.webp"
+    "hero": "images/EVH15_PORSCHECAYENNE/devgauche.webp"
   },
   "features": [
     "Hybride rechargeable (PHEV) — V6 3.0 turbo",
@@ -457,31 +457,7 @@
       "transmission": "Auto AT"
     }
   },
-  {
-    "id": "EVH9433858",
-    "name": "2024 Jetour X70 C-DM Long Range PRO",
-    "priceHT": "22 690 €",
-    "mileage": 2000,
-    "regyear": "2024-04",
-    "isNew": false,
-    "sold": true,
-    "featuresCount": 7,
-    "images": {
-      "hero": "images/Vendus/9433858_Jetour X70_DEV_gauche.webp"
-    },
-    "features": [
-      "Hybride rechargeable (PHEV)",
-      "Autonomie électrique 110 km",
-      "Batterie 19 kWh",
-      "Moteur électrique 136 ch",
-      "Puissance système 292 ch",
-      "7 places"
-    ],
-    "specifications": {
-      "engineCc": 1499,
-      "transmission": "Auto"
-    }
-  },
+
   {
     "id": "EVH9336933",
     "name": "2023 Jetour DASHING i-DM 1.5T 156HP",
