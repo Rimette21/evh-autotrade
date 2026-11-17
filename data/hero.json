@@ -1,5 +1,29 @@
 [
    {
+  "id": "EVH16_BYD_Ti7",
+  "name": "BYD Bao7 2026 190KM 4WD Ultra Edition",
+  "priceHT": "39 390 €",
+  "mileage": 0,
+  "regyear": "2026",
+  "isNew": true,
+  "featuresCount": 6,
+  "images": {
+    "hero": "images/EVH16_BYD_Ti7/dev_gauche.webp"
+  },
+  "features": [
+    "Hybride Rechargeable (PHEV) 4 roues motrices (AWD)",
+    "Autonomie 100% électrique 190 km (CLTC) / 130 km (WLTC)",
+    "Batterie LFP 35,6 kWh (Recharge DC 30-80% en 17,5 min)",
+    "Puissance combinée 475 kW (646 ch) - 0 à 100 km/h en 4,5s",
+    "Affichage tête haute HUD 26\" et DiPilot 300 avec LiDAR",
+    "SUV 5 places avec réfrigérateur embarqué et prise V2L 6 kW"
+  ],
+  "specifications": {
+    "engineCc": "1498",
+    "transmission": "E-CVT 4WD (AWD)"
+  }
+},
+   {
     "id": "EVH1_BYDTANG",
     "name": "BYD Tang L 2025 670 KM LiDAR Flagship",
     "priceHT": "39 310 €",
