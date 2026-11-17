@@ -1,0 +1,65 @@
+{
+  "id": "EVH16_XPENG_680AWD_Max",
+  "name": "Xpeng G9 680 ultra-long-range four-wheel drive Max",
+  "priceHT": "45 190 €",
+  "mileage": 0,
+  "regyear": "2026",
+  "isNew": true,
+  "images": {
+    "hero": "images/EVH16_XPENG_680AWD_Max/devdroit.webp",
+    "gallery": [
+      "images/EVH16_XPENG_680AWD_Max/devdroit.webp",
+      "images/EVH16_XPENG_680AWD_Max/devgauche.webp",
+      "images/EVH16_XPENG_680AWD_Max/arrieredroit.webp",
+      "images/EVH16_XPENG_680AWD_Max/Tabord.webp",
+      "images/EVH16_XPENG_680AWD_Max/interieur_dev.webp",
+      "images/EVH16_XPENG_680AWD_Max/interieur_ar.webp",
+      "images/EVH16_XPENG_680AWD_Max/inter_ar_beige.webp"
+    ]
+  },
+  "caracteristiques": [
+    "SUV 100% électrique (BEV), 5 portes et 5 places",
+    "Autonomie jusqu’à 680 km (CLTC)",
+    "Batterie LFP 93,1 kWh, technologie de recharge 5C",
+    "Deux moteurs électriques : 423 kW (575 ch) et 695 Nm",
+    "Transmission intégrale électrique (AWD)",
+    "Architecture 800 V, recharge DC jusqu’à 530 kW",
+    "Recharge de 10 à 80 % annoncée en 12 minutes",
+    "Accélération de 0 à 100 km/h en 4,2 secondes",
+    "Suspension pneumatique à double chambre",
+    "Caméras 360° et assistance XNGP de niveau 2"
+  ],
+    "specifications": {
+    "energie": "100% électrique",
+    "puissanceSysteme": "575 ch (423 kW)",
+    "coupleSysteme": "695 Nm",
+    "transmission": "Automatique à rapport unique",
+    "traction": "Intégrale (AWD)",
+    "typeBatterie": "LFP",
+    "batterieKWh": "93,1 kWh",
+    "autonomieCLTC": "680 km",
+    "rechargeDCkW": "530 kW maximum",
+    "tempsRechargeDC": "10 à 80 % en environ 12 min",
+    "places": "5 places",
+    "volumeCoffre": "754 à 1 795 L",
+    "acceleration0100": "4,2 s"
+  },
+  "equipements": {
+    "interieur": [
+      "Sellerie cuir Nappa",
+      "Sièges avant chauffants, ventilés et massants",
+      "Toit panoramique fixe"
+    ],
+    "assistance": [
+      "Suspension pneumatique à double chambre",
+      "Caméras 360°",
+      "Assistance à la conduite XNGP niveau 2"
+    ],
+    "connectivite": [
+      "Deux écrans de 14,96 pouces",
+      "Audio Dolby Atmos à 20 haut-parleurs"
+    ]
+  },
+  "resume": "SUV 100% électrique à transmission intégrale, développant 575 ch. Batterie LFP de 93,1 kWh, autonomie annoncée de 680 km CLTC et recharge rapide sur architecture 800 V. Habitacle 5 places avec sellerie Nappa et suspension pneumatique.",
+  "fichePDF": "FT_XPENG_G9_680_AWD_Max.pdf"
+}
