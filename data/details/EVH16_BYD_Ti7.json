@@ -1,0 +1,64 @@
+{
+  "id": "EVH17_BYD_Ti7",
+  "name": "BYD Bao7 2026 190KM 4WD Ultra Edition",
+  "priceHT": "39 390 €",
+  "mileage": 0,
+  "regyear": "2026",
+  "isNew": true,
+  "images": {
+    "hero": "images/EVH16_BYD_Ti7/dev_gauche.webp",
+    "gallery": [
+      "images/EVH16_BYD_Ti7/cotegauche.webp",
+      "images/EVH16_BYD_Ti7/arr_droit.webp",
+      "images/EVH16_BYD_Ti7/inter_dev.webp",
+      "images/EVH16_BYD_Ti7/inter_dev2.webp",
+      "images/EVH16_BYD_Ti7/toit_panoramique.webp"
+    ]
+  },
+  "caracteristiques": [
+    "Hybride Rechargeable (PHEV), 5 portes et 5 places",
+    "Autonomie 100% électrique : 190 km CLTC (130 km WLTC)",
+    "Batterie Blade LFP 35,6 kWh avec gestion thermique active",
+    "Bimoteur électrique 360 kW (490 ch) + 1.5T Turbo 115 kW",
+    "Transmission intégrale électrique intelligente (AWD)",
+    "Puissance cumulée maxi : 475 kW (~646 ch) et couple de 845 Nm",
+    "Recharge rapide DC 30 à 80 % en 17,5 minutes (72 kW)",
+    "Accélération 0 à 100 km/h en 4,5 secondes (Vmax 190 km/h)",
+    "Suspension indépendante à amortissement variable piloté",
+    "Conduite autonome DiPilot 300 niveau 2 avec capteur LiDAR"
+  ],
+  "specifications": {
+    "energie": "Hybride Rechargeable (PHEV)",
+    "puissanceSysteme": "646 ch (475 kW)",
+    "coupleSysteme": "845 Nm",
+    "transmission": "E-CVT à variation continue",
+    "traction": "Intégrale électrique (AWD)",
+    "typeBatterie": "Blade LFP (Fudi)",
+    "batterieKWh": "35,6 kWh",
+    "autonomieCLTC": "190 km (électrique)",
+    "rechargeDCkW": "72 kW maximum",
+    "tempsRechargeDC": "30 à 80 % en 17,5 min",
+    "places": "5 places",
+    "volumeCoffre": "970 à 1 880 L",
+    "acceleration0100": "4,5 s"
+  },
+  "equipements": {
+    "interieur": [
+      "Sellerie cuir véritable avec sièges avant électriques chauffants, ventilés et à mémoire",
+      "Réfrigérateur de bord multifonction (froid, chaud et congélation)",
+      "Toit panoramique vitré ouvrant électriquement avec rideau d'occultation"
+    ],
+    "assistance": [
+      "Système DiPilot 300 L2 avec 1 LiDAR, 5 radars et 13 caméras",
+      "Caméras 360° panoramiques avec châssis transparent et stationnement automatique",
+      "Suspension variable pilotée, mode rampage et demi-tour sur place (Compass U-turn)"
+    ],
+    "connectivite": [
+      "Écran central rotatif 15,6 pouces DiLink 5G, combiné 10,25 pouces et HUD 26 pouces",
+      "Système audio Hi-Fi 20 haut-parleurs avec appuis-tête intégrés",
+      "Chargeur sans fil induction 50W, clé NFC/Bluetooth et alimentation externe V2L 6 kW"
+    ]
+  },
+  "resume": "SUV hybride rechargeable premium à transmission intégrale 4WD développant 646 ch cumulés. Équipé d'une batterie Blade LFP de 35,6 kWh offrant 190 km d'autonomie électrique CLTC et recharge rapide en 17,5 min. Habitacle 5 places haut de gamme avec HUD 26 pouces, réfrigérateur intégré et conduite autonome DiPilot 300 avec LiDAR.",
+  "fichePDF": "FT_Titanium_7_PHEV.pdf"
+}
