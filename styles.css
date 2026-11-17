@@ -1461,6 +1461,13 @@ body.page-vehicle { background:#F6F7FB; }
     min-height: 38px;
   }
 }
+.card .thumb {
+  width: 100%;
+  aspect-ratio: 4 / 3;      /* Force toutes les photos au même ratio rectangulaire */
+  object-fit: cover;        /* Remplit le cadre sans déformer la voiture */
+  object-position: center;  /* Garde la voiture bien centrée */
+  display: block;
+}
 
 
 /* Cartes déjà en grille : on garde tes breakpoints actuels */
