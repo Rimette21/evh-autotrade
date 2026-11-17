@@ -95,30 +95,29 @@
     }
   },
   {
-    "id": "EVH3_BSP_EV605",
-    "name": "2025 BYD Song PLUS EV 605km Flagship",
-    "priceHT": "30 280 €",
-    "mileage": 0,
-    "regyear": "2025-10",
-    "isNew": true,
-    "featuresCount": 6,
-    "images": {
-      "hero": "images/EVH3_BSP_EV605/devantface.webp"
-    },
-    "features": [
-      "100% électrique (BEV)",
-      "Autonomie 605 km (CLTC)",
-      "Batterie LFP Blade 87,04 kWh",
-      "Moteur 160 kW (218 ch) – 2 FWD",
-      "Recharge DC 90 kW / AC 7 kW",
-      "Caméras 360° / ADAS niveau 2+"
-    ],
-    "specifications": {
-      "engineCc": null,
-      "transmission": "AT"
-    }
+  "id": "EVH15_PORSCHECAYENNE",
+  "name": "2021 Porsche Cayenne 3.0 E-Hybrid",
+  "priceHT": "76 200 €",
+  "mileage": 64200,
+  "regyear": "2021",
+  "isNew": false,
+  "featuresCount": 6,
+  "images": {
+    "hero": "images/EVH15_PORSCHECAYENNE/devdroit.webp"
   },
-  
+  "features": [
+    "Hybride rechargeable (PHEV) — V6 3.0 turbo",
+    "Puissance combinée 340 kW (462 ch)",
+    "Batterie lithium-ion 17,9 kWh",
+    "Autonomie électrique jusqu’à 48 km (WLTP urbain)",
+    "Transmission intégrale Porsche Traction Management",
+    "Boîte automatique Tiptronic S à 8 rapports"
+  ],
+  "specifications": {
+    "engineCc": 2995,
+    "transmission": "Automatique Tiptronic S — 8 rapports"
+  }
+},  
   {
     "id": "EVH5_BYDSEALION7",
     "name": "2025 BYD SEALION 7 EV 610 km",
@@ -141,6 +140,30 @@
     "specifications": {
       "engineCc": null,
       "transmission": "Auto AT"
+    }
+  },
+   {
+    "id": "EVH3_BSP_EV605",
+    "name": "2025 BYD Song PLUS EV 605km Flagship",
+    "priceHT": "30 280 €",
+    "mileage": 0,
+    "regyear": "2025-10",
+    "isNew": true,
+    "featuresCount": 6,
+    "images": {
+      "hero": "images/EVH3_BSP_EV605/devantface.webp"
+    },
+    "features": [
+      "100% électrique (BEV)",
+      "Autonomie 605 km (CLTC)",
+      "Batterie LFP Blade 87,04 kWh",
+      "Moteur 160 kW (218 ch) – 2 FWD",
+      "Recharge DC 90 kW / AC 7 kW",
+      "Caméras 360° / ADAS niveau 2+"
+    ],
+    "specifications": {
+      "engineCc": null,
+      "transmission": "AT"
     }
   },
   {
@@ -166,31 +189,7 @@
       "transmission": "E-CVT"
     }
   },
-  {
-  "id": "EVH15_PORSCHECAYENNE",
-  "name": "2021 Porsche Cayenne 3.0 E-Hybrid",
-  "priceHT": "76 200 €",
-  "mileage": 64200,
-  "regyear": "2021",
-  "isNew": false,
-  "featuresCount": 6,
-  "images": {
-    "hero": "images/EVH15_PORSCHECAYENNE/devdroit.webp"
-  },
-  "features": [
-    "Hybride rechargeable (PHEV) — V6 3.0 turbo",
-    "Puissance combinée 340 kW (462 ch)",
-    "Batterie lithium-ion 17,9 kWh",
-    "Autonomie électrique jusqu’à 48 km (WLTP urbain)",
-    "Transmission intégrale Porsche Traction Management",
-    "Boîte automatique Tiptronic S à 8 rapports"
-  ],
-  "specifications": {
-    "engineCc": 2995,
-    "transmission": "Automatique Tiptronic S — 8 rapports"
-  }
-},
- 
+  
   {
     "id": "EVH8_BYDFRIGATE07_PHEV100",
     "name": "2025 BYD Frigate 07 1.5 DM-i PHEV 100 km",
@@ -238,6 +237,31 @@
     }
   },
   {
+    "id": "EVH11_XPENG_BEV602",
+    "name": "2026 XPENG G7 602 Long Range Max",
+    "priceHT": "33 450 €",
+    "mileage": 0,
+    "regyear": "2026",
+    "isNew": true,
+    "featuresCount": 7,
+    "images": {
+      "hero": "images/EVH11_XPENG_BEV602/devgauche.webp"
+    },
+    "features": [
+      "100% électrique (BEV)",
+      "Autonomie 602 km",
+      "Batterie LFP 80,8 kWh",
+      "Moteur 218 kW (296 ch) – propulsion",
+      "Recharge DC 800 V, 12 min 10-80 %",
+      "Accélération 0-100 km/h en 6,6 s",
+      "Caméras 360° / ADAS niveau 3 (XNGP)"
+    ],
+    "specifications": {
+      "engineCc": null,
+      "transmission": "Auto AT"
+    }
+  },
+  {
     "id": "EVH4_BYDSEAL06_EV545",
     "name": "2025-BYD Seal 06 EV 545KM Flagship",
     "priceHT": "26 140 €",
@@ -282,32 +306,6 @@
     "specifications": {
       "engineCc": 1498,
       "transmission": "E-CVT"
-    }
-  },
- 
-  {
-    "id": "EVH11_XPENG_BEV602",
-    "name": "2026 XPENG G7 602 Long Range Max",
-    "priceHT": "33 450 €",
-    "mileage": 0,
-    "regyear": "2026",
-    "isNew": true,
-    "featuresCount": 7,
-    "images": {
-      "hero": "images/EVH11_XPENG_BEV602/devgauche.webp"
-    },
-    "features": [
-      "100% électrique (BEV)",
-      "Autonomie 602 km",
-      "Batterie LFP 80,8 kWh",
-      "Moteur 218 kW (296 ch) – propulsion",
-      "Recharge DC 800 V, 12 min 10-80 %",
-      "Accélération 0-100 km/h en 6,6 s",
-      "Caméras 360° / ADAS niveau 3 (XNGP)"
-    ],
-    "specifications": {
-      "engineCc": null,
-      "transmission": "Auto AT"
     }
   },
   
