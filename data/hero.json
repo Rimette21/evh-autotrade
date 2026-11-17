@@ -118,30 +118,7 @@
       "transmission": "AT"
     }
   },
-  {
-    "id": "EVH4_BYDSEAL06_EV545",
-    "name": "2025-BYD Seal 06 EV 545KM Flagship",
-    "priceHT": "26 140 €",
-    "mileage": 0,
-    "regyear": "2025-10",
-    "isNew": true,
-    "featuresCount": 6,
-    "images": {
-      "hero": "images/EVH4_BYDSEAL06_EV545/devantgauche.webp"
-    },
-    "features": [
-      "100% électrique (BEV)",
-      "Autonomie 545 km (CLTC)",
-      "Batterie LFP Blade 87,04 kWh",
-      "Moteur 160 kW (218 ch) – 2 FWD",
-      "Recharge DC 90 kW / AC 7 kW",
-      "Caméras 360° / ADAS niveau 2+"
-    ],
-    "specifications": {
-      "engineCc": null,
-      "transmission": "Auto AT"
-    }
-  },
+  
   {
     "id": "EVH5_BYDSEALION7",
     "name": "2025 BYD SEALION 7 EV 610 km",
@@ -189,7 +166,6 @@
       "transmission": "E-CVT"
     }
   },
- 
   {
   "id": "EVH15_PORSCHECAYENNE",
   "name": "2021 Porsche Cayenne 3.0 E-Hybrid",
@@ -259,6 +235,30 @@
     "specifications": {
       "engineCc": 1498,
       "transmission": "E-CVT"
+    }
+  },
+  {
+    "id": "EVH4_BYDSEAL06_EV545",
+    "name": "2025-BYD Seal 06 EV 545KM Flagship",
+    "priceHT": "26 140 €",
+    "mileage": 0,
+    "regyear": "2025-10",
+    "isNew": true,
+    "featuresCount": 6,
+    "images": {
+      "hero": "images/EVH4_BYDSEAL06_EV545/devantgauche.webp"
+    },
+    "features": [
+      "100% électrique (BEV)",
+      "Autonomie 545 km (CLTC)",
+      "Batterie LFP Blade 87,04 kWh",
+      "Moteur 160 kW (218 ch) – 2 FWD",
+      "Recharge DC 90 kW / AC 7 kW",
+      "Caméras 360° / ADAS niveau 2+"
+    ],
+    "specifications": {
+      "engineCc": null,
+      "transmission": "Auto AT"
     }
   },
   {
