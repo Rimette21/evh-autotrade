@@ -6,13 +6,13 @@
   "regyear": "2026",
   "isNew": true,
   "images": {
-    "hero": "images/EVH16_BYD_Ti7/dev_gauche.webp",
+    "hero": "images/EVH17_BYD_Ti7/dev_gauche.webp",
     "gallery": [
-      "images/EVH16_BYD_Ti7/cotegauche.webp",
-      "images/EVH16_BYD_Ti7/arr_droit.webp",
-      "images/EVH16_BYD_Ti7/inter_dev.webp",
-      "images/EVH16_BYD_Ti7/inter_dev2.webp",
-      "images/EVH16_BYD_Ti7/toit_panoramique.webp"
+      "images/EVH17_BYD_Ti7/cotegauche.webp",
+      "images/EVH17_BYD_Ti7/arr_droit.webp",
+      "images/EVH17_BYD_Ti7/inter_dev.webp",
+      "images/EVH17_BYD_Ti7/inter_dev2.webp",
+      "images/EVH17_BYD_Ti7/toit_panoramique.webp"
     ]
   },
   "caracteristiques": [
