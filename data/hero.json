@@ -48,6 +48,31 @@
     }
   },
   {
+  "id": "EVH16_XPENG_680 AWD Max",
+  "name": "Xpeng G9 680 ultra-long-range 4WD Max",
+  "priceHT": "45 190 €",
+  "mileage": 0,
+  "regyear": "2026",
+  "isNew": true,
+  "featuresCount": 7,
+  "images": {
+    "hero": "images/EVH16_XPENG_680AWD_Max/devdroit.webp"
+  },
+  "features": [
+    "100% électrique (BEV)",
+    "Autonomie jusqu’à 680 km (CLTC)",
+    "Batterie LFP 93,1 kWh",
+    "Deux moteurs 423 kW (575 ch) – transmission intégrale",
+    "Architecture 800 V, recharge DC 10–80 % en 12 min",
+    "Accélération 0–100 km/h en 4,2 s",
+    "Caméras 360° / ADAS niveau 2 (XNGP)"
+  ],
+  "specifications": {
+    "engineCc": null,
+    "transmission": "Automatique à rapport unique"
+  }
+},
+  {
     "id": "EVH2_BSP_EV520",
     "name": "2025 BYD Song PLUS EV 520km Luxury",
     "priceHT": "27 310 €",
