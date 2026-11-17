@@ -1,4 +1,28 @@
 [
+   {
+    "id": "EVH1_BYDTANG",
+    "name": "BYD Tang L 2025 670 KM LiDAR Flagship",
+    "priceHT": "39 310 €",
+    "mileage": 0,
+    "regyear": "2025",
+    "isNew": true,
+    "featuresCount": 6,
+    "images": {
+      "hero": "images/EVH1_BYDTANG/devdroit.webp"
+    },
+    "features": [
+      "SUV 100% électrique (BEV)",
+      "Autonomie 670 km (CLTC)",
+      "Batterie Blade LFP 100,53 kWh",
+      "Puissance moteur total 500 kW (680 ch)",
+      "Affichage tête haute (HUD) ADAS complet",
+      "SUV 7 places système LiDAR avancé-conduite semi-autonome niveau 2"
+    ],
+    "specifications": {
+      "engineCc": "",
+      "transmission": "Auto RWD"
+    }
+  },
   {
     "id": "EVH13_BYDSEALION06",
     "name": "2026 BYD SEALION 06 DM-i 205",
@@ -23,30 +47,7 @@
       "transmission": "E-CVT"
     }
   },
-  {
-    "id": "EVH1_BYDTANG",
-    "name": "BYD Tang L 2025 670 KM LiDAR Flagship",
-    "priceHT": "39 310 €",
-    "mileage": 0,
-    "regyear": "2025",
-    "isNew": true,
-    "featuresCount": 6,
-    "images": {
-      "hero": "images/EVH1_BYDTANG/devdroit.webp"
-    },
-    "features": [
-      "SUV 100% électrique (BEV)",
-      "Autonomie 670 km (CLTC)",
-      "Batterie Blade LFP 100,53 kWh",
-      "Puissance moteur total 500 kW (680 ch)",
-      "Affichage tête haute (HUD) ADAS complet",
-      "SUV 7 places système LiDAR avancé-conduite semi-autonome niveau 2"
-    ],
-    "specifications": {
-      "engineCc": "",
-      "transmission": "Auto RWD"
-    }
-  },
+ 
   {
   "id": "EVH16_XPENG_680 AWD Max",
   "name": "Xpeng G9 680 4WD Max",
