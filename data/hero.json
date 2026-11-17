@@ -1,14 +1,14 @@
 [
   {
     "id": "EVH13_BYDSEALION06",
-    "name": "2026 BYD SEALION 06 DM-i 205 Navigator Pro",
+    "name": "2026 BYD SEALION 06 DM-i 205",
     "priceHT": "27 900 €",
     "mileage": 0,
     "regyear": "2026",
     "isNew": true,
     "featuresCount": 6,
     "images": {
-      "hero": "images/EVH13_BYDSEALION6/devgauche.webp"
+      "hero": "images/EVH13_BYDSEALION6/DEVDROI.webp"
     },
     "features": [
       "Hybride rechargeable (PHEV)",
