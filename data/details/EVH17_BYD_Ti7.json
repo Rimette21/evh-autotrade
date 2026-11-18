@@ -27,22 +27,29 @@
     "Suspension indépendante à amortissement variable piloté",
     "Conduite autonome DiPilot 300 niveau 2 avec capteur LiDAR"
   ],
-  "specifications": {
-     "engineCc": "1498",
-    "fuelType": "PHEV",
-    "energie": "Hybride Rechargeable (PHEV)",
-    "puissanceSysteme": "646 ch (475 kW)",
-    "coupleSysteme": "845 Nm",
-    "transmission": "E-CVT",
-    "traction": "Intégrale électrique (AWD)",
-    "typeBatterie": "Blade LFP (Fudi)",
-    "batterieKWh": "35,6 kWh",
-    "autonomieCLTC": "190 km (électrique)",
-    "rechargeDCkW": "72 kW maximum",
-    "tempsRechargeDC": "30 à 80 % en 17,5 min",
-    "places": "5 places",
-    "volumeCoffre": "970 à 1 880 L",
-    "acceleration0100": "4,5 s"
+    "specifications": {
+    "engineCc": 1498,
+    "fuel": "PHEV",
+    "motorisation": {
+      "type": "Hybride rechargeable",
+      "moteurThermique": "1.5L Turbo 4 cylindres, 156 ch (115 kW)",
+      "moteurElectrique": "Bimoteur électrique synchrone 360 kW (490 ch), 620 N·m",
+      "puissanceSysteme": "646 ch (475 kW) / 845 N·m",
+      "transmission": "E-CVT",
+      "traction": "Intégrale électrique (AWD)"
+    },
+    "batterie": {
+      "type": "Blade LFP (Fudi)",
+      "capacite": "35,6 kWh",
+      "autonomieElectrique": "190 km CLTC (130 km WLTC)",
+      "rechargeDC": "72 kW max (30 à 80 % en 17,5 min)"
+    },
+    "dimensions": {
+      "places": "5 places",
+      "volumeCoffre": "970 à 1 880 L",
+      "acceleration0100": "4,5 s",
+      "vitesseMax": "190 km/h"
+    }
   },
   "equipements": {
     "interieur": [
