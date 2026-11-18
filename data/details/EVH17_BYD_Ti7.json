@@ -28,6 +28,8 @@
     "Conduite autonome DiPilot 300 niveau 2 avec capteur LiDAR"
   ],
   "specifications": {
+     "engineCc": "1498",
+    "fuelType": "PHEV",
     "energie": "Hybride Rechargeable (PHEV)",
     "puissanceSysteme": "646 ch (475 kW)",
     "coupleSysteme": "845 Nm",
