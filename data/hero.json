@@ -578,30 +578,5 @@
       "engineCc": 1499,
       "transmission": "Auto"
     }
-  },
-
-  {
-    "id": "EVH9535838",
-    "name": "2023 Audi Q5 e-tron BEV 83.4KWH",
-    "priceHT": "31 080 €",
-    "mileage": 28000,
-    "regyear": "2023-09",
-    "isNew": false,
-    "sold": true,
-    "featuresCount": 5,
-    "images": {
-      "hero": "images/Vendus/EVH9535838-AUDIQ5_DEV-FACE.webp"
-    },
-    "features": [
-      "100% électrique (BEV)",
-      "Autonomie 560 km",
-      "Batterie LFP Blade 83,4 kWh",
-      "Moteur 150 kW (204 ch)",
-      "7 places"
-    ],
-    "specifications": {
-      "engineCc": null,
-      "transmission": "AT"
-    }
   }
 ]
