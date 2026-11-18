@@ -336,13 +336,35 @@ const fuel = fuelLabel(data, energie);
            </div>`
         : '';
 
-      const ctaHtml = `
-        <div class="card-box cta-card">
-          <a href="mailto:contact@evhautotrade.com?subject=Demande%20devis%20${encodeURIComponent(data.name || data.id)}" class="btn">
-            Demander un devis pour ce véhicule
-          </a>
-        </div>
-      `;
+      const vehicleName = encodeURIComponent(data.name || data.id);
+const vehicleId = encodeURIComponent(data.id || '');
+
+const ctaHtml = `
+  <div class="card-box cta-card" style="display: flex; flex-direction: column; gap: 12px; align-items: center; margin-top: 20px;">
+    
+    <!-- Bouton Devis par Email -->
+    <a href="mailto:contact@evhautotrade.com?subject=Demande%20devis%20${vehicleName}%20(${vehicleId})" 
+       class="btn" 
+       style="width: 100%; max-width: 380px; text-align: center;">
+      Demander un devis par e-mail
+    </a>
+
+    <!-- Bouton Devis direct WhatsApp -->
+    <a href="https://wa.me/33662617058?text=Bonjour,%20je%20souhaite%20recevoir%20un%20devis%20pour%20ce%20véhicule%20:%20${vehicleName}%20(Réf:%20${vehicleId})" 
+       class="btn btn--whatsapp" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       style="width: 100%; max-width: 380px; text-align: center; background-color: #25D366; color: #ffffff; text-decoration: none; font-weight: 700; border-radius: 9999px; padding: 14px 24px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: none; box-shadow: 0 4px 6px -1px rgba(37, 211, 102, 0.25);">
+      
+      <!-- Icône officielle WhatsApp en SVG -->
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.075-2.022-.472-1.688-.696-2.772-2.42-2.855-2.533-.084-.114-.683-.909-.683-1.733 0-.825.433-1.23.587-1.396.154-.165.337-.207.45-.207.113 0 .225.001.323.007.103.005.241-.039.377.288.144.348.492 1.2.535 1.288.043.088.072.19.014.305-.058.115-.087.187-.173.288l-.26.307c-.085.099-.176.208-.076.381.1.173.444.733.953 1.186.655.583 1.208.764 1.381.849.173.085.274.072.375-.043.101-.116.433-.504.549-.677.116-.173.231-.144.39-.086.159.058 1.009.476 1.182.563.173.086.289.13.332.202.043.073.043.421-.101.826z"/>
+      </svg>
+      Demander un devis via WhatsApp
+    </a>
+
+  </div>
+`;
 
       /* ===== Essentials (Reg. Year / cc / km / fuel / transm.) ===== */
       function pick(...vals){
