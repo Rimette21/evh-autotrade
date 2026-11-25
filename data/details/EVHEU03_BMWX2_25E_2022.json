@@ -1,0 +1,42 @@
+{
+  "id": "EVHEU03_BMWX2_25E_2022",
+  "name": "2022 BMW X2 xDrive25e",
+  "priceHT": "21 290 €",
+  "mileage": 46768,
+  "regyear": "2022-10",
+  "isNew": false,
+  "origin": "Europe",
+  "energy": "PHEV",
+  "images": {
+    "hero": "images/europe/EVHEU03_BMWX2_DEVGAUCHE.webp",
+   
+    "gallery": [
+      "images/europe/EVHEU03_BMWX2_FACE.webp",
+       "images/europe/EVHEU03_BMWX2_ARDROIT.webp",
+      "images/europe/EVHEU03_BMWX2_ARGAUCHE.webp",
+      "images/europe/EVHEU03_BMWX2_ARRIERE.webp",
+      "images/europe/EVHEU03_BMWX2_INTDEVANT.webp",
+       "images/europe/EVHEU03_BMWX2_TABBORD.webp"
+    ]
+  },
+  "caracteristiques": [
+    "Hybride rechargeable (PHEV)",
+    "Autonomie électrique 53 km (WLTP)",
+    "Moteur 1.5 essence + moteur électrique arrière",
+    "Puissance cumulée 220 ch (162 kW)",
+    "Transmission intégrale xDrive",
+    "Boîte automatique Steptronic"
+  ],
+  "specifications": {
+    "fuelType": "PHEV",
+    "engineCc": 1499,
+    "puissanceSysteme": "220 ch (162 kW) cumulés",
+    "transmission": "Automatique Steptronic 6 rapports",
+    "traction": "Intégrale (xDrive)",
+    "batterieKWh": "≈ 10 kWh",
+    "autonomieWLTP": "53 km (WLTP)"
+  },
+  "resume": "SUV compact premium hybride rechargeable à transmission intégrale xDrive, 46 768 km. Environ 53 km en 100 % électrique (WLTP).",
+  "disponibilite": "Exemple de véhicule disponible en Europe (Belgique). Le stock change chaque semaine : prix, kilométrage et disponibilité sont confirmés sur WhatsApp, avec photos réelles et VIN, avant toute commande."
+
+}
