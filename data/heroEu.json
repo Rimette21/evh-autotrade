@@ -1,0 +1,170 @@
+[
+  {
+    "id": "EVHEU02_AUDIQ3SB_45TFSIE_2022",
+    "name": "2022 Audi Q3 Sportback 45 TFSI e S tronic",
+    "priceHT": "27 390 €",
+    "mileage": 41572,
+    "regyear": "2022-11",
+    "isNew": false,
+    "energy": "PHEV",
+    "images": {
+      "hero": "images/europe/EVHEU02_AUDIQ3SB_45TFSIE_2022.svg"
+    },
+    "features": [
+      "Hybride rechargeable (PHEV)",
+      "Autonomie électrique 50 km (WLTP)",
+      "Moteur 1.4 TFSI 150 ch + moteur électrique",
+      "Puissance cumulée 245 ch (180 kW)",
+      "Silhouette coupé Sportback"
+    ],
+    "specifications": {
+      "engineCc": 1395,
+      "transmission": "S tronic 6 rapports",
+      "autonomieWLTP": "50 km"
+    }
+  },
+  {
+    "id": "EVHEU03_BMWX2_25E_2022",
+    "name": "2022 BMW X2 xDrive25e",
+    "priceHT": "21 290 €",
+    "mileage": 46768,
+    "regyear": "2022-10",
+    "isNew": false,
+    "energy": "PHEV",
+    "images": {
+      "hero": "images/europe/EVHEU03_BMWX2_25E_2022.svg"
+    },
+    "features": [
+      "Hybride rechargeable (PHEV)",
+      "Autonomie électrique 53 km (WLTP)",
+      "Moteur 1.5 essence + moteur électrique arrière",
+      "Puissance cumulée 220 ch (162 kW)",
+      "Transmission intégrale xDrive"
+    ],
+    "specifications": {
+      "engineCc": 1499,
+      "transmission": "Automatique Steptronic 6 rapports",
+      "autonomieWLTP": "53 km"
+    }
+  },
+  {
+    "id": "EVHEU04_HYUNDAITUCSON_PHEV_2023",
+    "name": "2023 Hyundai Tucson 1.6 T-GDi Plug-in Hybrid 4x4 Shine",
+    "priceHT": "28 890 €",
+    "mileage": 49880,
+    "regyear": "2023-08",
+    "isNew": false,
+    "energy": "PHEV",
+    "images": {
+      "hero": "images/europe/EVHEU04_HYUNDAITUCSON_PHEV_2023.svg"
+    },
+    "features": [
+      "Hybride rechargeable (PHEV)",
+      "Autonomie électrique 62 km (WLTP)",
+      "Moteur 1.6 T-GDi + moteur électrique",
+      "Puissance cumulée 265 ch (195 kW)",
+      "Transmission intégrale 4x4"
+    ],
+    "specifications": {
+      "engineCc": 1598,
+      "transmission": "Automatique 6 rapports",
+      "autonomieWLTP": "62 km"
+    }
+  },
+  {
+    "id": "EVHEU05_KIAXCEED_PHEV_2023",
+    "name": "2023 Kia XCeed 1.6 GDi PHEV DCT",
+    "priceHT": "20 090 €",
+    "mileage": 20444,
+    "regyear": "2023-06",
+    "isNew": false,
+    "energy": "PHEV",
+    "images": {
+      "hero": "images/europe/EVHEU05_KIAXCEED_PHEV_2023.svg"
+    },
+    "features": [
+      "Hybride rechargeable (PHEV)",
+      "Autonomie électrique 48 km (WLTP)",
+      "Moteur 1.6 GDi + moteur électrique",
+      "Puissance cumulée 141 ch (104 kW)",
+      "Boîte automatique double embrayage DCT"
+    ],
+    "specifications": {
+      "engineCc": 1580,
+      "transmission": "Automatique DCT 6 rapports",
+      "autonomieWLTP": "48 km"
+    }
+  },
+  {
+    "id": "EVHEU06_AUDIQ4SB_ETRON45_2024",
+    "name": "2024 Audi Q4 Sportback e-tron 45",
+    "priceHT": "38 990 €",
+    "mileage": 28844,
+    "regyear": "2024-10",
+    "isNew": false,
+    "energy": "BEV",
+    "images": {
+      "hero": "images/europe/EVHEU06_AUDIQ4SB_ETRON45_2024.svg"
+    },
+    "features": [
+      "100% électrique (BEV)",
+      "Autonomie 520 km (WLTP)",
+      "Moteur électrique 286 ch (210 kW)",
+      "Batterie ≈ 77 kWh utiles (SOH 99 %)",
+      "Recharge rapide DC jusqu'à 175 kW"
+    ],
+    "specifications": {
+      "engineCc": null,
+      "transmission": "Automatique à rapport unique",
+      "autonomieWLTP": "520 km"
+    }
+  },
+  {
+    "id": "EVHEU07_BMWIX_XDRIVE40_2023",
+    "name": "2023 BMW iX xDrive40",
+    "priceHT": "39 690 €",
+    "mileage": 66320,
+    "regyear": "2023-05",
+    "isNew": false,
+    "energy": "BEV",
+    "images": {
+      "hero": "images/europe/EVHEU07_BMWIX_XDRIVE40_2023.svg"
+    },
+    "features": [
+      "100% électrique (BEV)",
+      "Autonomie 425 km (WLTP)",
+      "Deux moteurs électriques : 326 ch (240 kW)",
+      "Transmission intégrale xDrive",
+      "Batterie ≈ 71 kWh utiles"
+    ],
+    "specifications": {
+      "engineCc": null,
+      "transmission": "Automatique à rapport unique",
+      "autonomieWLTP": "425 km"
+    }
+  },
+  {
+    "id": "EVHEU08_BMWIX3_2024",
+    "name": "2024 BMW iX3",
+    "priceHT": "44 190 €",
+    "mileage": 43137,
+    "regyear": "2024-07",
+    "isNew": false,
+    "energy": "BEV",
+    "images": {
+      "hero": "images/europe/EVHEU08_BMWIX3_2024.svg"
+    },
+    "features": [
+      "100% électrique (BEV)",
+      "Autonomie 460 km (WLTP)",
+      "Moteur électrique 286 ch (210 kW)",
+      "Batterie ≈ 74 kWh utiles",
+      "Recharge rapide DC jusqu'à 150 kW"
+    ],
+    "specifications": {
+      "engineCc": null,
+      "transmission": "Automatique à rapport unique",
+      "autonomieWLTP": "460 km"
+    }
+  }
+]
