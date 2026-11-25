@@ -1,0 +1,42 @@
+{
+  "id": "EVHEU02_AUDIQ3SB",
+  "name": "2022 Audi Q3 Sportback 45 TFSI e S tronic",
+  "priceHT": "28 090 €",
+  "mileage": 41572,
+  "regyear": "2022-11",
+  "isNew": false,
+  "origin": "Europe",
+  "energy": "PHEV",
+  "images": {
+    "hero": "images/europe/EVHEU02_AUDIQ3SB_devgauche.webp",
+    
+    "gallery": [
+      "images/europe/EVHEU02_AUDIQ3SB_devdroit.webp",
+      "images/europe/EVHEU02_AUDIQ3SB_face.webp",
+      "images/europe/EVHEU02_AUDIQ3SB_ardroit.webp",
+      "images/europe/EVHEU02_AUDIQ3SB_argauche.webp",
+       "images/europe/EVHEU02_AUDIQ3SB_indevant.webp",
+       "images/europe/EVHEU02_AUDIQ3SB_tabbord.webp"
+    ]
+  },
+  "caracteristiques": [
+    "Hybride rechargeable (PHEV)",
+    "Autonomie électrique 50 km (WLTP)",
+    "Moteur 1.4 TFSI 150 ch + moteur électrique",
+    "Puissance cumulée 245 ch (180 kW)",
+    "Silhouette coupé Sportback",
+    "Boîte automatique S tronic 6"
+  ],
+  "specifications": {
+    "fuelType": "PHEV",
+    "engineCc": 1395,
+    "puissanceSysteme": "245 ch (180 kW) cumulés",
+    "transmission": "S tronic 6 rapports",
+    "traction": "Traction avant",
+    "batterieKWh": "≈ 13 kWh",
+    "autonomieWLTP": "50 km (WLTP)"
+  },
+  "resume": "SUV coupé premium hybride rechargeable de 2022, 41 572 km. 245 ch cumulés et environ 50 km en 100 % électrique (WLTP).",
+  "disponibilite": "Exemple de véhicule disponible en Europe (Belgique). Le stock change chaque semaine : prix, kilométrage et disponibilité sont confirmés sur WhatsApp, avec photos réelles et VIN, avant toute commande."
+  
+}
