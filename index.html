@@ -447,12 +447,25 @@ const items = [energyLabel, autoLbl, ...(specLines.length ? specLines : fallback
       document.getElementById('f-price-val').textContent = EURO.format(pMax) + ' €';
     }
 
-    // ===== Initialisation =====
-    fetch('data/hero.json?v=12', { cache: 'no-store' })
-      .then(res => res.json())
+     // ===== Initialisation =====
+    // Deux catalogues : hero.json (Chine) et heroEu.json (Europe).
+    // Chaque véhicule reçoit sa provenance selon son fichier ; si un fichier
+    // manque ou contient une erreur, l'autre s'affiche quand même.
+    const loadCatalog = (url, origin) =>
+      fetch(url, { cache: 'no-store' })
+        .then(r => r.ok ? r.json() : [])
+        .then(list => (Array.isArray(list) ? list : []).map(v => ({ origin, ...v })))
+        .catch(err => { console.error('Catalogue illisible : ' + url, err); return []; });
+
+    Promise.all([
+      loadCatalog('data/hero.json?v=14',  'Chine'),
+      loadCatalog('data/heroEu.json?v=3', 'Europe')
+    ])
+      // disponibles d'abord (Chine puis Europe), véhicules vendus en dernier
+      .then(([cn, eu]) => [...cn, ...eu].sort((a, b) => (a.sold === true) - (b.sold === true)))
       .then(vehicles => {
         window.__VEHICLES__ = vehicles || [];
-
+        
         // bornes dynamiques
         const years = window.__VEHICLES__.map(v => yearFromReg(v.regyear)).filter(Boolean);
         const kms = window.__VEHICLES__.map(kmNum).filter(n => !isNaN(n));
